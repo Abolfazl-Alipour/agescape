@@ -1,0 +1,6 @@
+cell_type,human_cell_type,tissue,n_1to1_orthologs,n_mouse_de_genes,direction_conservation_rho,rho_ci_low,rho_ci_high,strict_replication_fraction,lenient_same_dir_fraction,replication_frac_no_rpl_rps,permutation_null_rho,delta_rho_observed_minus_null,status,power_flag
+adventitial cell,adventitial cell,Lung,7792,37,0.007,-0.015,0.026,0.405,0.486,0.405,0.001,0.006,Divergent,Low-Powered (<6 donors or SD<12y)
+fibroblast of lung,alveolar fibroblast,Lung,8659,27,0.01,-0.016,0.031,0.259,0.333,0.259,0.0,0.01,Divergent,Low-Powered (<6 donors or SD<12y)
+alveolar macrophage,macrophage,Lung,7286,20,0.095,0.073,0.122,0.4,0.55,0.4,-0.001,0.096,Divergent,Low-Powered (<6 donors or SD<12y)
+classical monocyte,classical monocyte,Lung,7980,5,-0.056,-0.078,-0.036,0.2,0.2,0.2,-0.001,-0.055,Divergent,Low-Powered (<6 donors or SD<12y)
+non-classical monocyte,non-classical monocyte,Lung,6329,4,0.049,0.024,0.073,0.5,0.5,0.5,0.001,0.048,Divergent,Low-Powered (<6 donors or SD<12y)

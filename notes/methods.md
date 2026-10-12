@@ -48,3 +48,10 @@ Binding methodological parameter records across all project milestones.
 - **Correlation Guard:** DPT vs chronological age Spearman rho = 0.016 (p = 1.18e-03), Pearson r = 0.046.
 - **Root Sensitivity:** Primary vs alternative root DPT Spearman rho = 0.970.
 - **TMS Literature Concordance:** 14/26 (53.8%) directional agreement against published TMS aging markers (Binomial p = 4.2251e-01).
+
+## 5. Milestone M5 Cross-Species Conservation & Divergence Parameters
+- **Orthology Standard:** Strict Ensembl BioMart 1:1 mouse-human orthologs (`data/interim/orthologs-mouse-human.csv`).
+- **Primary Axis (Direction-Conservation):** Spearman rank correlation rho over expressed 1:1 orthologs with 100-fold block bootstrap CIs.
+- **Secondary Axis (Replication Fraction):** Strict fraction requiring same direction and |log2FC| >= 0.25; lenient column reports directional concordance fraction.
+- **Housekeeping Guard:** Recomputed replication fractions excluding RPL, RPS, and MT- genes.
+- **Power Stratification:** Human cell types with <6 donors or donor-age SD < 12 years explicitly flagged as `Low-Powered` per `m4-human-power.csv` and PLAN.md §4.5.
