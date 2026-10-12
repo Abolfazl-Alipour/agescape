@@ -1,0 +1,11 @@
+{
+  "filename": "tms_facs_brain_nonmyeloid.h5ad",
+  "url": "https://cellxgene.cziscience.com/collections/0b9d8a04-bb9d-44da-aa27-405c9245e770",
+  "collection_id": "0b9d8a04-bb9d-44da-aa27-405c9245e770",
+  "dataset_version_id": "pending_M4_confirmation",
+  "schema_version": "3.0.0",
+  "size_bytes": 318721054,
+  "sha256": "31ee7ffe9fd11fd128925c2dae862399f5c54f27aef9c026dbeaa077ea143339",
+  "downloaded": "2026-10-11T00:00:00Z",
+  "notes": "Local origin: /home/reza/projects/aging_hypothalamus/data/tms_brain.h5ad. TMS FACS Brain_Non-Myeloid subset (7,249 cells x 22,966 genes, ages 3m/18m/24m, 14 mice, 17 cell types). OS: Ubuntu 24.04.3 LTS (noble), glibc 2.39."
+}
