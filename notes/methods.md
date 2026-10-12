@@ -40,3 +40,11 @@ Binding methodological parameter records across all project milestones.
 - **Calibration Trio Results:** Top aging unit (Lung::adventitial cell): Observed DE = 55, Shuffled Age Permutation Null = 4.6 DE genes, Sex-Effect Floor (3m) = 0 DE genes.
 - **Pseudobulk vs Wilcoxon Consistency:** Spearman correlation rho = 0.331 across eligible cell types.
 - **Sensitivity Tests:** Extended bins (young=1m+3m, old=18m+21m+24m+30m) = 120 DE genes; male-only (18m vs 24m) = 757 DE genes.
+
+## 4. Milestone M3 Trajectory & Literature Agreement Parameters
+- **Continuum Tissue:** 'Marrow' selected per written rule (graded hematopoietic differentiation continuum from precursor to mature lineages).
+- **Root Identification:** Root cell selected based on maximal stem marker expression (Kit, Cd34) within 3m young hematopoietic precursor cells.
+- **Diffusion Pseudotime (DPT):** `sc.tl.diffmap` + `sc.tl.dpt(n_dcs=10)`. Graph built on young cells and projected.
+- **Correlation Guard:** DPT vs chronological age Spearman rho = 0.016 (p = 1.18e-03), Pearson r = 0.046.
+- **Root Sensitivity:** Primary vs alternative root DPT Spearman rho = 0.970.
+- **TMS Literature Concordance:** 14/26 (53.8%) directional agreement against published TMS aging markers (Binomial p = 4.2251e-01).
