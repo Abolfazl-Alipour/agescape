@@ -1,0 +1,32 @@
+# Tabula Muris Senis Droplet QC Decisions and Thresholds
+
+Binding thresholds established in Milestone M1 prior to DE computation.
+
+## 1. Global Thresholds & Rationale
+- **Mitochondrial Genes:** 0 genes found in `var_names` in official TMS raw droplet object (MT transcripts excluded during original cellranger alignment/filtering). MT threshold N/A.
+- **Minimum Genes per Cell:** 500 genes (eliminates low-quality droplets and debris without biasing against quiescent or small cell types).
+- **Maximum Genes per Cell:** 5,000 genes (removes obvious multiplets and technical artifacts).
+- **Minimum UMI Counts:** 1,000 counts.
+- **Doublet Scoring & Removal:** Executed per tissue using `sc.pp.scrublet` (expected doublet rate = 0.06, random_state=42). Doublets excluded.
+
+## 2. Per-Tissue Filtering Summary
+
+| tissue | n_initial | min_genes | max_genes | min_counts | n_after_gene_umi_qc | n_doublets_removed | n_final_cells | pct_retained |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Bladder | 8945 | 500 | 5000 | 1000 | 8702 | 33 | 8669 | 96.91 |
+| Fat | 6777 | 500 | 5000 | 1000 | 6398 | 15 | 6383 | 94.19 |
+| Heart_and_Aorta | 8613 | 500 | 5000 | 1000 | 8350 | 15 | 8335 | 96.77 |
+| Kidney | 21647 | 500 | 5000 | 1000 | 20997 | 75 | 20922 | 96.65 |
+| Large_Intestine | 1887 | 500 | 5000 | 1000 | 1778 | 3 | 1775 | 94.06 |
+| Limb_Muscle | 28867 | 500 | 5000 | 1000 | 28862 | 102 | 28760 | 99.63 |
+| Liver | 7294 | 500 | 5000 | 1000 | 7090 | 6 | 7084 | 97.12 |
+| Lung | 24540 | 500 | 5000 | 1000 | 24531 | 73 | 24458 | 99.67 |
+| Mammary_Gland | 12295 | 500 | 5000 | 1000 | 12103 | 39 | 12064 | 98.12 |
+| Marrow | 40220 | 500 | 5000 | 1000 | 39619 | 148 | 39471 | 98.14 |
+| Pancreas | 6201 | 500 | 5000 | 1000 | 4214 | 2 | 4212 | 67.92 |
+| Skin | 4454 | 500 | 5000 | 1000 | 3963 | 1 | 3962 | 88.95 |
+| Spleen | 35718 | 500 | 5000 | 1000 | 35168 | 179 | 34989 | 97.96 |
+| Thymus | 9275 | 500 | 5000 | 1000 | 9225 | 52 | 9173 | 98.9 |
+| Tongue | 20680 | 500 | 5000 | 1000 | 20048 | 17 | 20031 | 96.86 |
+| Trachea | 7976 | 500 | 5000 | 1000 | 7932 | 34 | 7898 | 99.02 |
+
