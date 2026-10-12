@@ -55,3 +55,10 @@ Binding methodological parameter records across all project milestones.
 - **Secondary Axis (Replication Fraction):** Strict fraction requiring same direction and |log2FC| >= 0.25; lenient column reports directional concordance fraction.
 - **Housekeeping Guard:** Recomputed replication fractions excluding RPL, RPS, and MT- genes.
 - **Power Stratification:** Human cell types with <6 donors or donor-age SD < 12 years explicitly flagged as `Low-Powered` per `m4-human-power.csv` and PLAN.md §4.5.
+
+## 7. Milestone M6 Longevity Outlier Parameters
+- **Lifespan Denominators:** Mouse = 4.0y, NMR = 31.0y, Human = 122.5y (AnAge official build 14).
+- **Cohort Curation:** Savina 2022 GEO GSE152886; technical outlier 2V dropped per pre-registered protocol.
+- **Positive Control Gate:** Mouse skin aging slope = 1.364 (p < 0.01) passed.
+- **Equivalence Test:** TOST equivalence test on NMR slope (margin delta=0.25: p = 0.0550; delta=0.15: p = 0.5371).
+- **Species x Age Interaction:** Mouse vs NMR interaction p = 2.2204e-16.

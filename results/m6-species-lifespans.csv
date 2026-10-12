@@ -1,0 +1,4 @@
+species,common_name,max_lifespan_years,source
+Mus musculus,Mouse,4.0,AnAge database build 14
+Heterocephalus glaber,Naked mole-rat,31.0,AnAge database build 14 (Buffenstein 2008)
+Homo sapiens,Human,122.5,AnAge database build 14 (GRG / Guinness)
