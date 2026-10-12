@@ -1,0 +1,18 @@
+tissue,cell_ontology_class,unit,n_mice_total,n_cells_total,n_de_genes,n_de_ci_low,n_de_ci_high,median_abs_log2fc,runtime_s
+Lung,adventitial cell,Lung::adventitial cell,8,423,55,9.475000000000001,1082.25,1.3353126165965716,83.1
+Kidney,kidney proximal convoluted tubule epithelial cell,Kidney::kidney proximal convoluted tubule epithelial cell,6,1793,53,60.1,1065.4999999999998,1.2409701800183044,80.7
+Lung,fibroblast of lung,Lung::fibroblast of lung,8,1304,36,20.3,1258.5499999999995,1.3806695614540136,92.7
+Lung,alveolar macrophage,Lung::alveolar macrophage,8,406,35,36.225,801.0749999999995,1.627725865334203,69.7
+Kidney,kidney collecting duct principal cell,Kidney::kidney collecting duct principal cell,6,228,28,22.375,522.0999999999999,1.434177799476446,62.6
+Kidney,kidney distal convoluted tubule epithelial cell,Kidney::kidney distal convoluted tubule epithelial cell,6,321,23,33.85,845.3999999999999,1.2732730168112343,60.8
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,Kidney::kidney loop of Henle thick ascending limb epithelial cell,6,555,18,34.85,1093.725,1.1216078818826865,72.1
+Kidney,macrophage,Kidney::macrophage,6,402,16,1.275,1215.45,1.7675799482323518,66.0
+Lung,NK cell,Lung::NK cell,8,690,10,21.925,929.6249999999991,1.1609459181053607,68.1
+Kidney,fenestrated cell,Kidney::fenestrated cell,6,367,10,0.0,1066.875,1.6577135187132686,67.5
+Lung,non-classical monocyte,Lung::non-classical monocyte,8,370,9,16.325,1160.4749999999995,1.5196415501917766,61.1
+Lung,classical monocyte,Lung::classical monocyte,8,1103,9,13.8,780.1999999999999,1.9949461808985491,83.2
+Lung,bronchial smooth muscle cell,Lung::bronchial smooth muscle cell,8,909,7,1.975,1031.2749999999999,1.5942334783290633,86.7
+Lung,B cell,Lung::B cell,8,664,3,7.8500000000000005,599.7249999999999,2.086908813435361,76.0
+Kidney,epithelial cell of proximal tubule,Kidney::epithelial cell of proximal tubule,6,594,0,5.125,1489.8249999999998,0.0,71.5
+Lung,"CD4-positive, alpha-beta T cell","Lung::CD4-positive, alpha-beta T cell",7,194,0,0.65,549.7999999999998,0.0,48.2
+Kidney,kidney cortex artery cell,Kidney::kidney cortex artery cell,6,132,0,2.0,445.525,0.0,53.9

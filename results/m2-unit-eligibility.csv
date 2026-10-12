@@ -1,0 +1,164 @@
+tissue,cell_ontology_class,unit,n_cells_3m,n_cells_18m,n_mice_3m,n_mice_18m,eligible
+Lung,fibroblast of lung,Lung::fibroblast of lung,1138,166,4,4,True
+Kidney,kidney proximal convoluted tubule epithelial cell,Kidney::kidney proximal convoluted tubule epithelial cell,680,1113,3,3,True
+Lung,NK cell,Lung::NK cell,532,158,4,4,True
+Lung,adventitial cell,Lung::adventitial cell,367,56,4,4,True
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,Kidney::kidney loop of Henle thick ascending limb epithelial cell,310,245,3,3,True
+Lung,alveolar macrophage,Lung::alveolar macrophage,207,199,4,4,True
+Kidney,epithelial cell of proximal tubule,Kidney::epithelial cell of proximal tubule,195,399,3,3,True
+Lung,non-classical monocyte,Lung::non-classical monocyte,184,186,4,4,True
+Kidney,fenestrated cell,Kidney::fenestrated cell,180,187,3,3,True
+Lung,B cell,Lung::B cell,167,497,4,4,True
+Lung,bronchial smooth muscle cell,Lung::bronchial smooth muscle cell,156,753,4,4,True
+Kidney,macrophage,Kidney::macrophage,139,263,3,3,True
+Kidney,kidney distal convoluted tubule epithelial cell,Kidney::kidney distal convoluted tubule epithelial cell,125,196,3,3,True
+Lung,classical monocyte,Lung::classical monocyte,125,978,4,4,True
+Lung,"CD4-positive, alpha-beta T cell","Lung::CD4-positive, alpha-beta T cell",122,72,3,4,True
+Kidney,kidney collecting duct principal cell,Kidney::kidney collecting duct principal cell,111,117,3,3,True
+Kidney,kidney cortex artery cell,Kidney::kidney cortex artery cell,61,71,3,3,True
+Spleen,B cell,Spleen::B cell,4664,4563,2,2,False
+Tongue,basal cell of epidermis,Tongue::basal cell of epidermis,3914,1830,3,1,False
+Tongue,keratinocyte,Tongue::keratinocyte,3415,1816,3,1,False
+Mammary_Gland,T cell,Mammary_Gland::T cell,1823,475,2,2,False
+Trachea,mesenchymal progenitor cell,Trachea::mesenchymal progenitor cell,1671,0,2,0,False
+Trachea,fibroblast,Trachea::fibroblast,1641,0,2,0,False
+Trachea,chondrocyte,Trachea::chondrocyte,1619,0,2,0,False
+Limb_Muscle,mesenchymal stem cell,Limb_Muscle::mesenchymal stem cell,1461,2943,2,4,False
+Spleen,T cell,Spleen::T cell,1424,585,2,2,False
+Bladder,bladder cell,Bladder::bladder cell,1219,536,3,1,False
+Bladder,bladder urothelial cell,Bladder::bladder urothelial cell,1027,1381,3,1,False
+Liver,hepatocyte,Liver::hepatocyte,985,267,3,1,False
+Trachea,mesenchymal cell,Trachea::mesenchymal cell,879,0,2,0,False
+Mammary_Gland,B cell,Mammary_Gland::B cell,725,233,2,2,False
+Marrow,granulocytopoietic cell,Marrow::granulocytopoietic cell,714,1271,2,4,False
+Marrow,granulocyte,Marrow::granulocyte,704,1573,2,4,False
+Limb_Muscle,endothelial cell,Limb_Muscle::endothelial cell,686,1081,2,4,False
+Mammary_Gland,stromal cell,Mammary_Gland::stromal cell,632,553,2,2,False
+Thymus,thymocyte,Thymus::thymocyte,516,531,1,2,False
+Marrow,monocyte,Marrow::monocyte,484,409,2,4,False
+Trachea,basal epithelial cell of tracheobronchial tree,Trachea::basal epithelial cell of tracheobronchial tree,474,0,2,0,False
+Trachea,endothelial cell,Trachea::endothelial cell,419,0,2,0,False
+Mammary_Gland,luminal epithelial cell of mammary gland,Mammary_Gland::luminal epithelial cell of mammary gland,415,919,2,2,False
+Thymus,immature T cell,Thymus::immature T cell,395,675,1,2,False
+Mammary_Gland,basal cell,Mammary_Gland::basal cell,394,472,2,2,False
+Trachea,granulocyte,Trachea::granulocyte,383,0,2,0,False
+Trachea,macrophage,Trachea::macrophage,356,0,2,0,False
+Limb_Muscle,B cell,Limb_Muscle::B cell,343,13,2,3,False
+Limb_Muscle,skeletal muscle satellite cell,Limb_Muscle::skeletal muscle satellite cell,336,423,2,4,False
+Spleen,mature NK T cell,Spleen::mature NK T cell,319,410,2,2,False
+Limb_Muscle,T cell,Limb_Muscle::T cell,298,39,2,3,False
+Limb_Muscle,macrophage,Limb_Muscle::macrophage,275,733,2,4,False
+Marrow,hematopoietic precursor cell,Marrow::hematopoietic precursor cell,263,325,2,4,False
+Mammary_Gland,endothelial cell,Mammary_Gland::endothelial cell,254,173,2,2,False
+Thymus,DN4 thymocyte,Thymus::DN4 thymocyte,253,343,1,2,False
+Spleen,macrophage,Spleen::macrophage,252,164,2,2,False
+Marrow,precursor B cell,Marrow::precursor B cell,250,176,2,4,False
+Marrow,promonocyte,Marrow::promonocyte,224,527,2,4,False
+Heart_and_Aorta,fibroblast of cardiac tissue,Heart_and_Aorta::fibroblast of cardiac tissue,209,416,1,3,False
+Trachea,epithelial cell,Trachea::epithelial cell,193,0,1,0,False
+Thymus,double negative T cell,Thymus::double negative T cell,188,339,1,2,False
+Lung,pulmonary interstitial fibroblast,Lung::pulmonary interstitial fibroblast,179,9,4,4,False
+Marrow,proerythroblast,Marrow::proerythroblast,177,905,2,4,False
+Mammary_Gland,macrophage,Mammary_Gland::macrophage,165,134,2,2,False
+Spleen,NK cell,Spleen::NK cell,150,77,2,2,False
+Marrow,megakaryocyte-erythroid progenitor cell,Marrow::megakaryocyte-erythroid progenitor cell,133,422,2,4,False
+Trachea,smooth muscle cell of trachea,Trachea::smooth muscle cell of trachea,127,0,2,0,False
+Spleen,proerythroblast,Spleen::proerythroblast,123,108,2,2,False
+Heart_and_Aorta,endothelial cell of coronary artery,Heart_and_Aorta::endothelial cell of coronary artery,122,288,1,3,False
+Limb_Muscle,smooth muscle cell,Limb_Muscle::smooth muscle cell,102,242,2,4,False
+Marrow,naive T cell,Marrow::naive T cell,98,397,2,4,False
+Kidney,kidney proximal straight tubule epithelial cell,Kidney::kidney proximal straight tubule epithelial cell,95,0,3,0,False
+Trachea,blood cell,Trachea::blood cell,88,0,2,0,False
+Kidney,podocyte,Kidney::podocyte,82,48,3,3,False
+Kidney,kidney capillary endothelial cell,Kidney::kidney capillary endothelial cell,79,19,3,3,False
+Marrow,macrophage,Marrow::macrophage,72,200,2,4,False
+Lung,"CD8-positive, alpha-beta T cell","Lung::CD8-positive, alpha-beta T cell",70,233,2,4,False
+Bladder,leukocyte,Bladder::leukocyte,67,83,3,1,False
+Marrow,erythroblast,Marrow::erythroblast,66,148,2,4,False
+Marrow,naive B cell,Marrow::naive B cell,62,52,2,4,False
+Heart_and_Aorta,endocardial cell,Heart_and_Aorta::endocardial cell,60,128,1,3,False
+Bladder,endothelial cell,Bladder::endothelial cell,57,40,3,1,False
+Kidney,kidney mesangial cell,Kidney::kidney mesangial cell,55,27,3,3,False
+Heart_and_Aorta,leukocyte,Heart_and_Aorta::leukocyte,54,140,1,3,False
+Lung,type II pneumocyte,Lung::type II pneumocyte,54,35,4,3,False
+Kidney,kidney loop of Henle ascending limb epithelial cell,Kidney::kidney loop of Henle ascending limb epithelial cell,48,38,3,3,False
+Trachea,neuroendocrine cell,Trachea::neuroendocrine cell,48,0,2,0,False
+Heart_and_Aorta,cardiomyocyte,Heart_and_Aorta::cardiomyocyte,47,52,1,2,False
+Spleen,macrophage dendritic cell progenitor,Spleen::macrophage dendritic cell progenitor,42,16,2,2,False
+Marrow,plasma cell,Marrow::plasma cell,39,27,2,3,False
+Lung,myeloid dendritic cell,Lung::myeloid dendritic cell,38,47,3,4,False
+Tongue,Langerhans cell,Tongue::Langerhans cell,37,17,3,1,False
+Lung,pericyte cell,Lung::pericyte cell,33,7,4,4,False
+Thymus,DN3 thymocyte,Thymus::DN3 thymocyte,33,60,1,2,False
+Kidney,lymphocyte,Kidney::lymphocyte,32,85,3,3,False
+Marrow,late pro-B cell,Marrow::late pro-B cell,31,113,2,4,False
+Lung,ciliated columnar cell of tracheobronchial tree,Lung::ciliated columnar cell of tracheobronchial tree,30,9,2,3,False
+Lung,intermediate monocyte,Lung::intermediate monocyte,29,95,2,4,False
+Thymus,professional antigen presenting cell,Thymus::professional antigen presenting cell,29,73,1,2,False
+Lung,vein endothelial cell,Lung::vein endothelial cell,28,93,2,4,False
+Marrow,NK cell,Marrow::NK cell,26,24,2,3,False
+Spleen,plasma cell,Spleen::plasma cell,26,120,2,2,False
+Kidney,kidney collecting duct epithelial cell,Kidney::kidney collecting duct epithelial cell,25,0,3,0,False
+Lung,neutrophil,Lung::neutrophil,24,410,3,4,False
+Heart_and_Aorta,smooth muscle cell,Heart_and_Aorta::smooth muscle cell,23,34,1,3,False
+Limb_Muscle,Schwann cell,Limb_Muscle::Schwann cell,21,46,2,4,False
+Liver,endothelial cell of hepatic sinusoid,Liver::endothelial cell of hepatic sinusoid,19,27,3,1,False
+Kidney,T cell,Kidney::T cell,18,65,3,3,False
+Kidney,brush cell,Kidney::brush cell,16,86,3,3,False
+Lung,basophil,Lung::basophil,16,19,4,4,False
+Lung,smooth muscle cell of the pulmonary artery,Lung::smooth muscle cell of the pulmonary artery,16,32,2,4,False
+Marrow,immature B cell,Marrow::immature B cell,16,37,2,4,False
+Limb_Muscle,skeletal muscle cell,Limb_Muscle::skeletal muscle cell,15,29,2,4,False
+Lung,lung macrophage,Lung::lung macrophage,15,16,3,2,False
+Lung,plasmacytoid dendritic cell,Lung::plasmacytoid dendritic cell,15,15,3,3,False
+Kidney,fibroblast,Kidney::fibroblast,13,35,3,3,False
+Liver,Kupffer cell,Liver::Kupffer cell,13,221,2,1,False
+Lung,regulatory T cell,Lung::regulatory T cell,12,28,3,4,False
+Spleen,immature NKT cell,Spleen::immature NKT cell,12,14,2,2,False
+Lung,T cell,Lung::T cell,11,64,3,4,False
+Spleen,megakaryocyte-erythroid progenitor cell,Spleen::megakaryocyte-erythroid progenitor cell,10,12,2,2,False
+Kidney,B cell,Kidney::B cell,9,51,3,3,False
+Lung,mature NK T cell,Lung::mature NK T cell,7,151,2,4,False
+Kidney,leukocyte,Kidney::leukocyte,5,0,3,0,False
+Lung,dendritic cell,Lung::dendritic cell,5,9,2,4,False
+Spleen,granulocyte,Spleen::granulocyte,5,15,1,2,False
+Kidney,NK cell,Kidney::NK cell,4,8,2,2,False
+Lung,lung neuroendocrine cell,Lung::lung neuroendocrine cell,4,0,2,0,False
+Kidney,kidney cell,Kidney::kidney cell,3,0,1,0,False
+Heart_and_Aorta,cardiac neuron,Heart_and_Aorta::cardiac neuron,2,19,1,3,False
+Liver,NK cell,Liver::NK cell,2,109,1,1,False
+Liver,duct epithelial cell,Liver::duct epithelial cell,2,0,1,0,False
+Lung,endothelial cell of lymphatic vessel,Lung::endothelial cell of lymphatic vessel,2,11,1,3,False
+Liver,hepatic stellate cell,Liver::hepatic stellate cell,1,2,1,1,False
+Lung,club cell of bronchiole,Lung::club cell of bronchiole,1,4,1,3,False
+Marrow,basophil,Marrow::basophil,1,3,1,2,False
+Fat,B cell,Fat::B cell,0,330,0,3,False
+Fat,T cell,Fat::T cell,0,338,0,3,False
+Fat,endothelial cell,Fat::endothelial cell,0,630,0,3,False
+Fat,epithelial cell,Fat::epithelial cell,0,69,0,2,False
+Fat,erythroblast,Fat::erythroblast,0,31,0,2,False
+Fat,lymphocyte,Fat::lymphocyte,0,17,0,2,False
+Fat,mesenchymal stem cell of adipose,Fat::mesenchymal stem cell of adipose,0,829,0,3,False
+Fat,myeloid cell,Fat::myeloid cell,0,1384,0,3,False
+Heart_and_Aorta,erythrocyte,Heart_and_Aorta::erythrocyte,0,13,0,2,False
+Heart_and_Aorta,mast cell,Heart_and_Aorta::mast cell,0,25,0,2,False
+Kidney,plasma cell,Kidney::plasma cell,0,11,0,3,False
+Liver,B cell,Liver::B cell,0,22,0,1,False
+Liver,myeloid leukocyte,Liver::myeloid leukocyte,0,40,0,1,False
+Liver,plasmacytoid dendritic cell,Liver::plasmacytoid dendritic cell,0,8,0,1,False
+Lung,plasma cell,Lung::plasma cell,0,4,0,2,False
+Marrow,erythroid progenitor,Marrow::erythroid progenitor,0,1,0,1,False
+Pancreas,endothelial cell,Pancreas::endothelial cell,0,50,0,2,False
+Pancreas,leukocyte,Pancreas::leukocyte,0,44,0,2,False
+Pancreas,pancreatic A cell,Pancreas::pancreatic A cell,0,155,0,2,False
+Pancreas,pancreatic B cell,Pancreas::pancreatic B cell,0,1462,0,2,False
+Pancreas,pancreatic D cell,Pancreas::pancreatic D cell,0,141,0,2,False
+Pancreas,pancreatic PP cell,Pancreas::pancreatic PP cell,0,125,0,2,False
+Pancreas,pancreatic acinar cell,Pancreas::pancreatic acinar cell,0,4,0,2,False
+Pancreas,pancreatic ductal cel,Pancreas::pancreatic ductal cel,0,34,0,2,False
+Pancreas,pancreatic stellate cell,Pancreas::pancreatic stellate cell,0,6,0,1,False
+Skin,T cell,Skin::T cell,0,5,0,1,False
+Skin,basal cell of epidermis,Skin::basal cell of epidermis,0,40,0,1,False
+Skin,epidermal cell,Skin::epidermal cell,0,23,0,1,False
+Skin,keratinocyte stem cell,Skin::keratinocyte stem cell,0,20,0,1,False
+Skin,stem cell of epidermis,Skin::stem cell of epidermis,0,3,0,1,False

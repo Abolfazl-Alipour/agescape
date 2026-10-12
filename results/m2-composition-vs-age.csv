@@ -1,0 +1,697 @@
+tissue,mouse.id,age,sex,cell_ontology_class,fraction
+Bladder,3-F-56,3m,female,bladder cell,0.5264227642276422
+Bladder,3-F-56,3m,female,bladder urothelial cell,0.37601626016260165
+Bladder,3-F-56,3m,female,endothelial cell,0.056910569105691054
+Bladder,3-F-56,3m,female,leukocyte,0.04065040650406504
+Bladder,3-M-8,3m,male,bladder cell,0.7480314960629921
+Bladder,3-M-8,3m,male,bladder urothelial cell,0.2125984251968504
+Bladder,3-M-8,3m,male,endothelial cell,0.023622047244094488
+Bladder,3-M-8,3m,male,leukocyte,0.015748031496062992
+Bladder,3-M-9,3m,male,bladder cell,0.49400342661336377
+Bladder,3-M-9,3m,male,bladder urothelial cell,0.46544831524842945
+Bladder,3-M-9,3m,male,leukocyte,0.02569960022844089
+Bladder,3-M-9,3m,male,endothelial cell,0.014848657909765849
+Bladder,18-M-52,18m,male,bladder urothelial cell,0.6769607843137255
+Bladder,18-M-52,18m,male,bladder cell,0.2627450980392157
+Bladder,18-M-52,18m,male,leukocyte,0.04068627450980392
+Bladder,18-M-52,18m,male,endothelial cell,0.0196078431372549
+Fat,18-F-50,18m,female,mesenchymal stem cell of adipose,0.22401685393258428
+Fat,18-F-50,18m,female,endothelial cell,0.20154494382022473
+Fat,18-F-50,18m,female,B cell,0.18258426966292135
+Fat,18-F-50,18m,female,myeloid cell,0.17345505617977527
+Fat,18-F-50,18m,female,T cell,0.1699438202247191
+Fat,18-F-50,18m,female,epithelial cell,0.03581460674157303
+Fat,18-F-50,18m,female,lymphocyte,0.011235955056179775
+Fat,18-F-50,18m,female,erythroblast,0.0014044943820224719
+Fat,18-M-52,18m,male,myeloid cell,0.5531073446327683
+Fat,18-M-52,18m,male,mesenchymal stem cell of adipose,0.20564971751412428
+Fat,18-M-52,18m,male,endothelial cell,0.13559322033898305
+Fat,18-M-52,18m,male,T cell,0.04293785310734463
+Fat,18-M-52,18m,male,B cell,0.03559322033898305
+Fat,18-M-52,18m,male,erythroblast,0.01638418079096045
+Fat,18-M-52,18m,male,epithelial cell,0.010169491525423728
+Fat,18-M-52,18m,male,lymphocyte,0.0005649717514124294
+Fat,18-M-53,18m,male,myeloid cell,0.3640552995391705
+Fat,18-M-53,18m,male,mesenchymal stem cell of adipose,0.33640552995391704
+Fat,18-M-53,18m,male,endothelial cell,0.23732718894009217
+Fat,18-M-53,18m,male,T cell,0.04608294930875576
+Fat,18-M-53,18m,male,B cell,0.016129032258064516
+Heart_and_Aorta,3-F-56,3m,female,fibroblast of cardiac tissue,0.40425531914893614
+Heart_and_Aorta,3-F-56,3m,female,endothelial cell of coronary artery,0.23597678916827852
+Heart_and_Aorta,3-F-56,3m,female,endocardial cell,0.11605415860735009
+Heart_and_Aorta,3-F-56,3m,female,leukocyte,0.10444874274661509
+Heart_and_Aorta,3-F-56,3m,female,cardiomyocyte,0.09090909090909091
+Heart_and_Aorta,3-F-56,3m,female,smooth muscle cell,0.04448742746615087
+Heart_and_Aorta,3-F-56,3m,female,cardiac neuron,0.0038684719535783366
+Heart_and_Aorta,18-F-50,18m,female,fibroblast of cardiac tissue,0.5106382978723404
+Heart_and_Aorta,18-F-50,18m,female,leukocyte,0.15220949263502456
+Heart_and_Aorta,18-F-50,18m,female,endocardial cell,0.14402618657937807
+Heart_and_Aorta,18-F-50,18m,female,endothelial cell of coronary artery,0.09819967266775777
+Heart_and_Aorta,18-F-50,18m,female,cardiomyocyte,0.07037643207855974
+Heart_and_Aorta,18-F-50,18m,female,smooth muscle cell,0.01800327332242226
+Heart_and_Aorta,18-F-50,18m,female,cardiac neuron,0.006546644844517185
+Heart_and_Aorta,18-M-52,18m,male,endothelial cell of coronary artery,0.592156862745098
+Heart_and_Aorta,18-M-52,18m,male,fibroblast of cardiac tissue,0.11764705882352941
+Heart_and_Aorta,18-M-52,18m,male,mast cell,0.08627450980392157
+Heart_and_Aorta,18-M-52,18m,male,leukocyte,0.07058823529411765
+Heart_and_Aorta,18-M-52,18m,male,smooth muscle cell,0.043137254901960784
+Heart_and_Aorta,18-M-52,18m,male,erythrocyte,0.0392156862745098
+Heart_and_Aorta,18-M-52,18m,male,cardiac neuron,0.027450980392156862
+Heart_and_Aorta,18-M-52,18m,male,endocardial cell,0.023529411764705882
+Heart_and_Aorta,18-M-53,18m,male,endothelial cell of coronary artery,0.3092369477911647
+Heart_and_Aorta,18-M-53,18m,male,fibroblast of cardiac tissue,0.2971887550200803
+Heart_and_Aorta,18-M-53,18m,male,endocardial cell,0.13654618473895583
+Heart_and_Aorta,18-M-53,18m,male,leukocyte,0.11646586345381527
+Heart_and_Aorta,18-M-53,18m,male,smooth muscle cell,0.04819277108433735
+Heart_and_Aorta,18-M-53,18m,male,cardiomyocyte,0.03614457831325301
+Heart_and_Aorta,18-M-53,18m,male,cardiac neuron,0.0321285140562249
+Heart_and_Aorta,18-M-53,18m,male,mast cell,0.012048192771084338
+Heart_and_Aorta,18-M-53,18m,male,erythrocyte,0.012048192771084338
+Kidney,3-F-57,3m,female,kidney proximal convoluted tubule epithelial cell,0.44018264840182647
+Kidney,3-F-57,3m,female,kidney loop of Henle thick ascending limb epithelial cell,0.14429223744292238
+Kidney,3-F-57,3m,female,kidney distal convoluted tubule epithelial cell,0.05570776255707763
+Kidney,3-F-57,3m,female,macrophage,0.052054794520547946
+Kidney,3-F-57,3m,female,kidney proximal straight tubule epithelial cell,0.049315068493150684
+Kidney,3-F-57,3m,female,fenestrated cell,0.048401826484018265
+Kidney,3-F-57,3m,female,kidney collecting duct principal cell,0.030136986301369864
+Kidney,3-F-57,3m,female,kidney capillary endothelial cell,0.028310502283105023
+Kidney,3-F-57,3m,female,kidney mesangial cell,0.025570776255707764
+Kidney,3-F-57,3m,female,podocyte,0.024657534246575342
+Kidney,3-F-57,3m,female,kidney cortex artery cell,0.024657534246575342
+Kidney,3-F-57,3m,female,kidney loop of Henle ascending limb epithelial cell,0.0228310502283105
+Kidney,3-F-57,3m,female,lymphocyte,0.010958904109589041
+Kidney,3-F-57,3m,female,brush cell,0.010958904109589041
+Kidney,3-F-57,3m,female,T cell,0.010958904109589041
+Kidney,3-F-57,3m,female,kidney collecting duct epithelial cell,0.006392694063926941
+Kidney,3-F-57,3m,female,fibroblast,0.005479452054794521
+Kidney,3-F-57,3m,female,epithelial cell of proximal tubule,0.0036529680365296802
+Kidney,3-F-57,3m,female,NK cell,0.0027397260273972603
+Kidney,3-F-57,3m,female,B cell,0.0018264840182648401
+Kidney,3-F-57,3m,female,leukocyte,0.0009132420091324201
+Kidney,3-M-8,3m,male,kidney proximal convoluted tubule epithelial cell,0.22178988326848248
+Kidney,3-M-8,3m,male,epithelial cell of proximal tubule,0.20038910505836577
+Kidney,3-M-8,3m,male,kidney loop of Henle thick ascending limb epithelial cell,0.11673151750972763
+Kidney,3-M-8,3m,male,kidney collecting duct principal cell,0.07782101167315175
+Kidney,3-M-8,3m,male,fenestrated cell,0.07587548638132295
+Kidney,3-M-8,3m,male,macrophage,0.06031128404669261
+Kidney,3-M-8,3m,male,podocyte,0.04474708171206226
+Kidney,3-M-8,3m,male,kidney distal convoluted tubule epithelial cell,0.042801556420233464
+Kidney,3-M-8,3m,male,kidney cortex artery cell,0.02529182879377432
+Kidney,3-M-8,3m,male,kidney proximal straight tubule epithelial cell,0.023346303501945526
+Kidney,3-M-8,3m,male,kidney mesangial cell,0.021400778210116732
+Kidney,3-M-8,3m,male,kidney capillary endothelial cell,0.021400778210116732
+Kidney,3-M-8,3m,male,kidney loop of Henle ascending limb epithelial cell,0.01556420233463035
+Kidney,3-M-8,3m,male,lymphocyte,0.013618677042801557
+Kidney,3-M-8,3m,male,kidney collecting duct epithelial cell,0.009727626459143969
+Kidney,3-M-8,3m,male,B cell,0.007782101167315175
+Kidney,3-M-8,3m,male,T cell,0.005836575875486381
+Kidney,3-M-8,3m,male,fibroblast,0.005836575875486381
+Kidney,3-M-8,3m,male,brush cell,0.005836575875486381
+Kidney,3-M-8,3m,male,leukocyte,0.0038910505836575876
+Kidney,3-M-9,3m,male,kidney loop of Henle thick ascending limb epithelial cell,0.13609467455621302
+Kidney,3-M-9,3m,male,fenestrated cell,0.1301775147928994
+Kidney,3-M-9,3m,male,epithelial cell of proximal tubule,0.1301775147928994
+Kidney,3-M-9,3m,male,kidney proximal convoluted tubule epithelial cell,0.1242603550295858
+Kidney,3-M-9,3m,male,macrophage,0.07544378698224852
+Kidney,3-M-9,3m,male,kidney distal convoluted tubule epithelial cell,0.0621301775147929
+Kidney,3-M-9,3m,male,kidney collecting duct principal cell,0.05621301775147929
+Kidney,3-M-9,3m,male,kidney capillary endothelial cell,0.05473372781065089
+Kidney,3-M-9,3m,male,podocyte,0.047337278106508875
+Kidney,3-M-9,3m,male,kidney proximal straight tubule epithelial cell,0.042899408284023666
+Kidney,3-M-9,3m,male,kidney cortex artery cell,0.03106508875739645
+Kidney,3-M-9,3m,male,kidney mesangial cell,0.023668639053254437
+Kidney,3-M-9,3m,male,kidney loop of Henle ascending limb epithelial cell,0.022189349112426034
+Kidney,3-M-9,3m,male,kidney collecting duct epithelial cell,0.019230769230769232
+Kidney,3-M-9,3m,male,lymphocyte,0.019230769230769232
+Kidney,3-M-9,3m,male,fibroblast,0.005917159763313609
+Kidney,3-M-9,3m,male,T cell,0.004437869822485207
+Kidney,3-M-9,3m,male,B cell,0.004437869822485207
+Kidney,3-M-9,3m,male,kidney cell,0.004437869822485207
+Kidney,3-M-9,3m,male,leukocyte,0.0029585798816568047
+Kidney,3-M-9,3m,male,brush cell,0.0014792899408284023
+Kidney,3-M-9,3m,male,NK cell,0.0014792899408284023
+Kidney,18-F-50,18m,female,kidney proximal convoluted tubule epithelial cell,0.5444444444444444
+Kidney,18-F-50,18m,female,kidney distal convoluted tubule epithelial cell,0.08024691358024691
+Kidney,18-F-50,18m,female,kidney loop of Henle thick ascending limb epithelial cell,0.0728395061728395
+Kidney,18-F-50,18m,female,macrophage,0.0691358024691358
+Kidney,18-F-50,18m,female,epithelial cell of proximal tubule,0.043209876543209874
+Kidney,18-F-50,18m,female,kidney collecting duct principal cell,0.04197530864197531
+Kidney,18-F-50,18m,female,fenestrated cell,0.030864197530864196
+Kidney,18-F-50,18m,female,brush cell,0.022222222222222223
+Kidney,18-F-50,18m,female,kidney cortex artery cell,0.01728395061728395
+Kidney,18-F-50,18m,female,kidney loop of Henle ascending limb epithelial cell,0.01728395061728395
+Kidney,18-F-50,18m,female,lymphocyte,0.01728395061728395
+Kidney,18-F-50,18m,female,T cell,0.013580246913580247
+Kidney,18-F-50,18m,female,B cell,0.012345679012345678
+Kidney,18-F-50,18m,female,kidney mesangial cell,0.006172839506172839
+Kidney,18-F-50,18m,female,podocyte,0.0049382716049382715
+Kidney,18-F-50,18m,female,NK cell,0.0024691358024691358
+Kidney,18-F-50,18m,female,kidney capillary endothelial cell,0.0012345679012345679
+Kidney,18-F-50,18m,female,fibroblast,0.0012345679012345679
+Kidney,18-F-50,18m,female,plasma cell,0.0012345679012345679
+Kidney,18-F-51,18m,female,kidney proximal convoluted tubule epithelial cell,0.49016253207869975
+Kidney,18-F-51,18m,female,macrophage,0.0872540633019675
+Kidney,18-F-51,18m,female,kidney loop of Henle thick ascending limb epithelial cell,0.06928999144568007
+Kidney,18-F-51,18m,female,kidney distal convoluted tubule epithelial cell,0.06330196749358426
+Kidney,18-F-51,18m,female,brush cell,0.055603079555175364
+Kidney,18-F-51,18m,female,kidney collecting duct principal cell,0.045337895637296836
+Kidney,18-F-51,18m,female,epithelial cell of proximal tubule,0.037639007698887936
+Kidney,18-F-51,18m,female,fenestrated cell,0.03421727972626176
+Kidney,18-F-51,18m,female,T cell,0.026518391787852865
+Kidney,18-F-51,18m,female,kidney cortex artery cell,0.02480752780153978
+Kidney,18-F-51,18m,female,lymphocyte,0.01454234388366125
+Kidney,18-F-51,18m,female,podocyte,0.009409751924721984
+Kidney,18-F-51,18m,female,B cell,0.009409751924721984
+Kidney,18-F-51,18m,female,plasma cell,0.007698887938408896
+Kidney,18-F-51,18m,female,kidney mesangial cell,0.007698887938408896
+Kidney,18-F-51,18m,female,kidney loop of Henle ascending limb epithelial cell,0.006843455945252352
+Kidney,18-F-51,18m,female,kidney capillary endothelial cell,0.006843455945252352
+Kidney,18-F-51,18m,female,fibroblast,0.003421727972626176
+Kidney,18-M-52,18m,male,epithelial cell of proximal tubule,0.29493087557603687
+Kidney,18-M-52,18m,male,fenestrated cell,0.11244239631336406
+Kidney,18-M-52,18m,male,kidney loop of Henle thick ascending limb epithelial cell,0.0967741935483871
+Kidney,18-M-52,18m,male,macrophage,0.0967741935483871
+Kidney,18-M-52,18m,male,kidney proximal convoluted tubule epithelial cell,0.0912442396313364
+Kidney,18-M-52,18m,male,kidney distal convoluted tubule epithelial cell,0.052534562211981564
+Kidney,18-M-52,18m,male,lymphocyte,0.04976958525345622
+Kidney,18-M-52,18m,male,podocyte,0.030414746543778803
+Kidney,18-M-52,18m,male,B cell,0.027649769585253458
+Kidney,18-M-52,18m,male,fibroblast,0.027649769585253458
+Kidney,18-M-52,18m,male,kidney collecting duct principal cell,0.027649769585253458
+Kidney,18-M-52,18m,male,kidney cortex artery cell,0.025806451612903226
+Kidney,18-M-52,18m,male,T cell,0.02119815668202765
+Kidney,18-M-52,18m,male,kidney loop of Henle ascending limb epithelial cell,0.014746543778801843
+Kidney,18-M-52,18m,male,kidney mesangial cell,0.011981566820276499
+Kidney,18-M-52,18m,male,kidney capillary endothelial cell,0.009216589861751152
+Kidney,18-M-52,18m,male,NK cell,0.005529953917050691
+Kidney,18-M-52,18m,male,brush cell,0.0027649769585253456
+Kidney,18-M-52,18m,male,plasma cell,0.0009216589861751152
+Limb_Muscle,3-F-56,3m,female,mesenchymal stem cell,0.4052511415525114
+Limb_Muscle,3-F-56,3m,female,endothelial cell,0.16552511415525115
+Limb_Muscle,3-F-56,3m,female,B cell,0.1312785388127854
+Limb_Muscle,3-F-56,3m,female,T cell,0.09988584474885845
+Limb_Muscle,3-F-56,3m,female,skeletal muscle satellite cell,0.0867579908675799
+Limb_Muscle,3-F-56,3m,female,macrophage,0.07420091324200913
+Limb_Muscle,3-F-56,3m,female,smooth muscle cell,0.027968036529680364
+Limb_Muscle,3-F-56,3m,female,Schwann cell,0.005707762557077625
+Limb_Muscle,3-F-56,3m,female,skeletal muscle cell,0.003424657534246575
+Limb_Muscle,3-F-57,3m,female,mesenchymal stem cell,0.4207282913165266
+Limb_Muscle,3-F-57,3m,female,endothelial cell,0.2218487394957983
+Limb_Muscle,3-F-57,3m,female,skeletal muscle satellite cell,0.1030812324929972
+Limb_Muscle,3-F-57,3m,female,macrophage,0.08123249299719888
+Limb_Muscle,3-F-57,3m,female,T cell,0.06890756302521009
+Limb_Muscle,3-F-57,3m,female,B cell,0.06330532212885154
+Limb_Muscle,3-F-57,3m,female,smooth muscle cell,0.02969187675070028
+Limb_Muscle,3-F-57,3m,female,Schwann cell,0.0061624649859943975
+Limb_Muscle,3-F-57,3m,female,skeletal muscle cell,0.005042016806722689
+Limb_Muscle,18-F-50,18m,female,mesenchymal stem cell,0.49875
+Limb_Muscle,18-F-50,18m,female,endothelial cell,0.2375
+Limb_Muscle,18-F-50,18m,female,skeletal muscle satellite cell,0.1
+Limb_Muscle,18-F-50,18m,female,smooth muscle cell,0.0875
+Limb_Muscle,18-F-50,18m,female,macrophage,0.05
+Limb_Muscle,18-F-50,18m,female,Schwann cell,0.0175
+Limb_Muscle,18-F-50,18m,female,skeletal muscle cell,0.0075
+Limb_Muscle,18-F-50,18m,female,B cell,0.00125
+Limb_Muscle,18-F-51,18m,female,mesenchymal stem cell,0.5201535508637236
+Limb_Muscle,18-F-51,18m,female,endothelial cell,0.2399232245681382
+Limb_Muscle,18-F-51,18m,female,skeletal muscle satellite cell,0.08445297504798464
+Limb_Muscle,18-F-51,18m,female,smooth muscle cell,0.07293666026871401
+Limb_Muscle,18-F-51,18m,female,macrophage,0.05950095969289827
+Limb_Muscle,18-F-51,18m,female,skeletal muscle cell,0.009596928982725527
+Limb_Muscle,18-F-51,18m,female,Schwann cell,0.007677543186180422
+Limb_Muscle,18-F-51,18m,female,T cell,0.005758157389635317
+Limb_Muscle,18-M-52,18m,male,mesenchymal stem cell,0.5655526992287918
+Limb_Muscle,18-M-52,18m,male,endothelial cell,0.18508997429305912
+Limb_Muscle,18-M-52,18m,male,macrophage,0.13838903170522707
+Limb_Muscle,18-M-52,18m,male,skeletal muscle satellite cell,0.06255355612682091
+Limb_Muscle,18-M-52,18m,male,smooth muscle cell,0.03427592116538132
+Limb_Muscle,18-M-52,18m,male,T cell,0.005141388174807198
+Limb_Muscle,18-M-52,18m,male,Schwann cell,0.004284490145672665
+Limb_Muscle,18-M-52,18m,male,B cell,0.002570694087403599
+Limb_Muscle,18-M-52,18m,male,skeletal muscle cell,0.0021422450728363325
+Limb_Muscle,18-M-53,18m,male,mesenchymal stem cell,0.503167898627244
+Limb_Muscle,18-M-53,18m,male,macrophage,0.17898627243928195
+Limb_Muscle,18-M-53,18m,male,endothelial cell,0.17634635691657866
+Limb_Muscle,18-M-53,18m,male,skeletal muscle satellite cell,0.08078141499472016
+Limb_Muscle,18-M-53,18m,male,smooth muscle cell,0.028511087645195353
+Limb_Muscle,18-M-53,18m,male,T cell,0.012671594508975714
+Limb_Muscle,18-M-53,18m,male,Schwann cell,0.009503695881731784
+Limb_Muscle,18-M-53,18m,male,skeletal muscle cell,0.006863780359028511
+Limb_Muscle,18-M-53,18m,male,B cell,0.0031678986272439284
+Liver,3-F-56,3m,female,hepatocyte,0.9376623376623376
+Liver,3-F-56,3m,female,Kupffer cell,0.03116883116883117
+Liver,3-F-56,3m,female,endothelial cell of hepatic sinusoid,0.023376623376623377
+Liver,3-F-56,3m,female,NK cell,0.005194805194805195
+Liver,3-F-56,3m,female,hepatic stellate cell,0.0025974025974025974
+Liver,3-F-57,3m,female,hepatocyte,0.9662921348314607
+Liver,3-F-57,3m,female,endothelial cell of hepatic sinusoid,0.028089887640449437
+Liver,3-F-57,3m,female,Kupffer cell,0.0056179775280898875
+Liver,3-M-8/9,3m,male,hepatocyte,0.9847494553376906
+Liver,3-M-8/9,3m,male,endothelial cell of hepatic sinusoid,0.010893246187363835
+Liver,3-M-8/9,3m,male,duct epithelial cell,0.004357298474945534
+Liver,18-F-51,18m,female,hepatocyte,0.38362068965517243
+Liver,18-F-51,18m,female,Kupffer cell,0.3175287356321839
+Liver,18-F-51,18m,female,NK cell,0.15660919540229884
+Liver,18-F-51,18m,female,myeloid leukocyte,0.05747126436781609
+Liver,18-F-51,18m,female,endothelial cell of hepatic sinusoid,0.03879310344827586
+Liver,18-F-51,18m,female,B cell,0.031609195402298854
+Liver,18-F-51,18m,female,plasmacytoid dendritic cell,0.011494252873563218
+Liver,18-F-51,18m,female,hepatic stellate cell,0.0028735632183908046
+Lung,3-F-56,3m,female,alveolar macrophage,0.14166666666666666
+Lung,3-F-56,3m,female,classical monocyte,0.14166666666666666
+Lung,3-F-56,3m,female,bronchial smooth muscle cell,0.1388888888888889
+Lung,3-F-56,3m,female,non-classical monocyte,0.13055555555555556
+Lung,3-F-56,3m,female,NK cell,0.10555555555555556
+Lung,3-F-56,3m,female,B cell,0.06388888888888888
+Lung,3-F-56,3m,female,"CD4-positive, alpha-beta T cell",0.03888888888888889
+Lung,3-F-56,3m,female,myeloid dendritic cell,0.030555555555555555
+Lung,3-F-56,3m,female,fibroblast of lung,0.030555555555555555
+Lung,3-F-56,3m,female,intermediate monocyte,0.027777777777777776
+Lung,3-F-56,3m,female,"CD8-positive, alpha-beta T cell",0.025
+Lung,3-F-56,3m,female,lung macrophage,0.019444444444444445
+Lung,3-F-56,3m,female,adventitial cell,0.019444444444444445
+Lung,3-F-56,3m,female,vein endothelial cell,0.016666666666666666
+Lung,3-F-56,3m,female,regulatory T cell,0.013888888888888888
+Lung,3-F-56,3m,female,dendritic cell,0.011111111111111112
+Lung,3-F-56,3m,female,neutrophil,0.008333333333333333
+Lung,3-F-56,3m,female,smooth muscle cell of the pulmonary artery,0.008333333333333333
+Lung,3-F-56,3m,female,basophil,0.005555555555555556
+Lung,3-F-56,3m,female,pericyte cell,0.005555555555555556
+Lung,3-F-56,3m,female,pulmonary interstitial fibroblast,0.005555555555555556
+Lung,3-F-56,3m,female,T cell,0.002777777777777778
+Lung,3-F-56,3m,female,mature NK T cell,0.002777777777777778
+Lung,3-F-56,3m,female,plasmacytoid dendritic cell,0.002777777777777778
+Lung,3-F-56,3m,female,type II pneumocyte,0.002777777777777778
+Lung,3-F-57,3m,female,NK cell,0.16381909547738693
+Lung,3-F-57,3m,female,B cell,0.12964824120603016
+Lung,3-F-57,3m,female,non-classical monocyte,0.11256281407035176
+Lung,3-F-57,3m,female,"CD4-positive, alpha-beta T cell",0.10753768844221105
+Lung,3-F-57,3m,female,bronchial smooth muscle cell,0.10452261306532663
+Lung,3-F-57,3m,female,alveolar macrophage,0.0743718592964824
+Lung,3-F-57,3m,female,"CD8-positive, alpha-beta T cell",0.061306532663316586
+Lung,3-F-57,3m,female,classical monocyte,0.06030150753768844
+Lung,3-F-57,3m,female,fibroblast of lung,0.02613065326633166
+Lung,3-F-57,3m,female,vein endothelial cell,0.022110552763819097
+Lung,3-F-57,3m,female,myeloid dendritic cell,0.019095477386934675
+Lung,3-F-57,3m,female,intermediate monocyte,0.019095477386934675
+Lung,3-F-57,3m,female,neutrophil,0.019095477386934675
+Lung,3-F-57,3m,female,smooth muscle cell of the pulmonary artery,0.01306532663316583
+Lung,3-F-57,3m,female,pulmonary interstitial fibroblast,0.010050251256281407
+Lung,3-F-57,3m,female,adventitial cell,0.009045226130653266
+Lung,3-F-57,3m,female,T cell,0.008040201005025126
+Lung,3-F-57,3m,female,plasmacytoid dendritic cell,0.007035175879396985
+Lung,3-F-57,3m,female,basophil,0.006030150753768844
+Lung,3-F-57,3m,female,mature NK T cell,0.006030150753768844
+Lung,3-F-57,3m,female,lung macrophage,0.006030150753768844
+Lung,3-F-57,3m,female,regulatory T cell,0.006030150753768844
+Lung,3-F-57,3m,female,pericyte cell,0.005025125628140704
+Lung,3-F-57,3m,female,endothelial cell of lymphatic vessel,0.0020100502512562816
+Lung,3-F-57,3m,female,type II pneumocyte,0.0010050251256281408
+Lung,3-F-57,3m,female,dendritic cell,0.0010050251256281408
+Lung,3-M-5/6,3m,male,fibroblast of lung,0.5162393162393163
+Lung,3-M-5/6,3m,male,adventitial cell,0.1606837606837607
+Lung,3-M-5/6,3m,male,NK cell,0.11623931623931624
+Lung,3-M-5/6,3m,male,type II pneumocyte,0.06666666666666667
+Lung,3-M-5/6,3m,male,pulmonary interstitial fibroblast,0.0547008547008547
+Lung,3-M-5/6,3m,male,alveolar macrophage,0.017094017094017096
+Lung,3-M-5/6,3m,male,ciliated columnar cell of tracheobronchial tree,0.017094017094017096
+Lung,3-M-5/6,3m,male,non-classical monocyte,0.015384615384615385
+Lung,3-M-5/6,3m,male,pericyte cell,0.011965811965811967
+Lung,3-M-5/6,3m,male,B cell,0.011965811965811967
+Lung,3-M-5/6,3m,male,neutrophil,0.003418803418803419
+Lung,3-M-5/6,3m,male,lung neuroendocrine cell,0.0017094017094017094
+Lung,3-M-5/6,3m,male,classical monocyte,0.0017094017094017094
+Lung,3-M-5/6,3m,male,basophil,0.0017094017094017094
+Lung,3-M-5/6,3m,male,club cell of bronchiole,0.0017094017094017094
+Lung,3-M-5/6,3m,male,bronchial smooth muscle cell,0.0017094017094017094
+Lung,3-M-7/8,3m,male,fibroblast of lung,0.4851244687310261
+Lung,3-M-7/8,3m,male,NK cell,0.1596842744383728
+Lung,3-M-7/8,3m,male,adventitial cell,0.15604128718882818
+Lung,3-M-7/8,3m,male,pulmonary interstitial fibroblast,0.08196721311475409
+Lung,3-M-7/8,3m,male,alveolar macrophage,0.04371584699453552
+Lung,3-M-7/8,3m,male,ciliated columnar cell of tracheobronchial tree,0.012143290831815421
+Lung,3-M-7/8,3m,male,pericyte cell,0.01153612629022465
+Lung,3-M-7/8,3m,male,non-classical monocyte,0.009714632665452338
+Lung,3-M-7/8,3m,male,classical monocyte,0.007893139040680024
+Lung,3-M-7/8,3m,male,type II pneumocyte,0.007893139040680024
+Lung,3-M-7/8,3m,male,B cell,0.004857316332726169
+Lung,3-M-7/8,3m,male,myeloid dendritic cell,0.004857316332726169
+Lung,3-M-7/8,3m,male,basophil,0.004250151791135397
+Lung,3-M-7/8,3m,male,plasmacytoid dendritic cell,0.004250151791135397
+Lung,3-M-7/8,3m,male,lung neuroendocrine cell,0.0018214936247723133
+Lung,3-M-7/8,3m,male,T cell,0.0012143290831815423
+Lung,3-M-7/8,3m,male,lung macrophage,0.0012143290831815423
+Lung,3-M-7/8,3m,male,bronchial smooth muscle cell,0.0006071645415907711
+Lung,3-M-7/8,3m,male,regulatory T cell,0.0006071645415907711
+Lung,3-M-7/8,3m,male,"CD4-positive, alpha-beta T cell",0.0006071645415907711
+Lung,18-F-50,18m,female,B cell,0.2804878048780488
+Lung,18-F-50,18m,female,bronchial smooth muscle cell,0.1402439024390244
+Lung,18-F-50,18m,female,non-classical monocyte,0.12195121951219512
+Lung,18-F-50,18m,female,classical monocyte,0.11890243902439024
+Lung,18-F-50,18m,female,NK cell,0.08231707317073171
+Lung,18-F-50,18m,female,alveolar macrophage,0.04573170731707317
+Lung,18-F-50,18m,female,"CD8-positive, alpha-beta T cell",0.036585365853658534
+Lung,18-F-50,18m,female,mature NK T cell,0.03353658536585366
+Lung,18-F-50,18m,female,T cell,0.027439024390243903
+Lung,18-F-50,18m,female,"CD4-positive, alpha-beta T cell",0.01524390243902439
+Lung,18-F-50,18m,female,intermediate monocyte,0.01524390243902439
+Lung,18-F-50,18m,female,myeloid dendritic cell,0.012195121951219513
+Lung,18-F-50,18m,female,fibroblast of lung,0.012195121951219513
+Lung,18-F-50,18m,female,regulatory T cell,0.012195121951219513
+Lung,18-F-50,18m,female,neutrophil,0.009146341463414634
+Lung,18-F-50,18m,female,vein endothelial cell,0.009146341463414634
+Lung,18-F-50,18m,female,adventitial cell,0.006097560975609756
+Lung,18-F-50,18m,female,basophil,0.006097560975609756
+Lung,18-F-50,18m,female,pulmonary interstitial fibroblast,0.003048780487804878
+Lung,18-F-50,18m,female,club cell of bronchiole,0.003048780487804878
+Lung,18-F-50,18m,female,dendritic cell,0.003048780487804878
+Lung,18-F-50,18m,female,smooth muscle cell of the pulmonary artery,0.003048780487804878
+Lung,18-F-50,18m,female,pericyte cell,0.003048780487804878
+Lung,18-F-51,18m,female,bronchial smooth muscle cell,0.16724436741767765
+Lung,18-F-51,18m,female,B cell,0.15511265164644714
+Lung,18-F-51,18m,female,classical monocyte,0.10658578856152513
+Lung,18-F-51,18m,female,mature NK T cell,0.0831889081455806
+Lung,18-F-51,18m,female,alveolar macrophage,0.0779896013864818
+Lung,18-F-51,18m,female,fibroblast of lung,0.06499133448873484
+Lung,18-F-51,18m,female,non-classical monocyte,0.053726169844020795
+Lung,18-F-51,18m,female,"CD8-positive, alpha-beta T cell",0.049393414211438474
+Lung,18-F-51,18m,female,NK cell,0.047660311958405546
+Lung,18-F-51,18m,female,intermediate monocyte,0.032062391681109186
+Lung,18-F-51,18m,female,"CD4-positive, alpha-beta T cell",0.02859618717504333
+Lung,18-F-51,18m,female,vein endothelial cell,0.025996533795493933
+Lung,18-F-51,18m,female,T cell,0.02339688041594454
+Lung,18-F-51,18m,female,adventitial cell,0.01993067590987868
+Lung,18-F-51,18m,female,regulatory T cell,0.019064124783362217
+Lung,18-F-51,18m,female,myeloid dendritic cell,0.014731369150779897
+Lung,18-F-51,18m,female,neutrophil,0.006065857885615251
+Lung,18-F-51,18m,female,plasmacytoid dendritic cell,0.004332755632582322
+Lung,18-F-51,18m,female,smooth muscle cell of the pulmonary artery,0.004332755632582322
+Lung,18-F-51,18m,female,type II pneumocyte,0.0034662045060658577
+Lung,18-F-51,18m,female,plasma cell,0.0025996533795493936
+Lung,18-F-51,18m,female,ciliated columnar cell of tracheobronchial tree,0.0025996533795493936
+Lung,18-F-51,18m,female,pulmonary interstitial fibroblast,0.0017331022530329288
+Lung,18-F-51,18m,female,pericyte cell,0.0017331022530329288
+Lung,18-F-51,18m,female,endothelial cell of lymphatic vessel,0.0017331022530329288
+Lung,18-F-51,18m,female,basophil,0.0008665511265164644
+Lung,18-F-51,18m,female,dendritic cell,0.0008665511265164644
+Lung,18-M-52,18m,male,classical monocyte,0.2957393483709273
+Lung,18-M-52,18m,male,neutrophil,0.19047619047619047
+Lung,18-M-52,18m,male,bronchial smooth muscle cell,0.18045112781954886
+Lung,18-M-52,18m,male,B cell,0.06892230576441102
+Lung,18-M-52,18m,male,"CD8-positive, alpha-beta T cell",0.04949874686716792
+Lung,18-M-52,18m,male,alveolar macrophage,0.03132832080200501
+Lung,18-M-52,18m,male,non-classical monocyte,0.02819548872180451
+Lung,18-M-52,18m,male,fibroblast of lung,0.022556390977443608
+Lung,18-M-52,18m,male,NK cell,0.021929824561403508
+Lung,18-M-52,18m,male,vein endothelial cell,0.018796992481203006
+Lung,18-M-52,18m,male,intermediate monocyte,0.014411027568922305
+Lung,18-M-52,18m,male,type II pneumocyte,0.012531328320802004
+Lung,18-M-52,18m,male,T cell,0.010025062656641603
+Lung,18-M-52,18m,male,adventitial cell,0.010025062656641603
+Lung,18-M-52,18m,male,smooth muscle cell of the pulmonary artery,0.007518796992481203
+Lung,18-M-52,18m,male,"CD4-positive, alpha-beta T cell",0.006892230576441102
+Lung,18-M-52,18m,male,myeloid dendritic cell,0.006265664160401002
+Lung,18-M-52,18m,male,basophil,0.006265664160401002
+Lung,18-M-52,18m,male,endothelial cell of lymphatic vessel,0.0037593984962406013
+Lung,18-M-52,18m,male,lung macrophage,0.0037593984962406013
+Lung,18-M-52,18m,male,plasmacytoid dendritic cell,0.0018796992481203006
+Lung,18-M-52,18m,male,mature NK T cell,0.0018796992481203006
+Lung,18-M-52,18m,male,pericyte cell,0.0018796992481203006
+Lung,18-M-52,18m,male,ciliated columnar cell of tracheobronchial tree,0.0012531328320802004
+Lung,18-M-52,18m,male,dendritic cell,0.0012531328320802004
+Lung,18-M-52,18m,male,pulmonary interstitial fibroblast,0.0012531328320802004
+Lung,18-M-52,18m,male,regulatory T cell,0.0006265664160401002
+Lung,18-M-52,18m,male,club cell of bronchiole,0.0006265664160401002
+Lung,18-M-53,18m,male,classical monocyte,0.26917057902973396
+Lung,18-M-53,18m,male,bronchial smooth muscle cell,0.17683881064162754
+Lung,18-M-53,18m,male,B cell,0.09076682316118936
+Lung,18-M-53,18m,male,neutrophil,0.07511737089201878
+Lung,18-M-53,18m,male,"CD8-positive, alpha-beta T cell",0.06651017214397496
+Lung,18-M-53,18m,male,fibroblast of lung,0.03990610328638498
+Lung,18-M-53,18m,male,alveolar macrophage,0.03442879499217527
+Lung,18-M-53,18m,male,NK cell,0.032081377151799685
+Lung,18-M-53,18m,male,mature NK T cell,0.032081377151799685
+Lung,18-M-53,18m,male,non-classical monocyte,0.03051643192488263
+Lung,18-M-53,18m,male,vein endothelial cell,0.023474178403755867
+Lung,18-M-53,18m,male,intermediate monocyte,0.023474178403755867
+Lung,18-M-53,18m,male,"CD4-positive, alpha-beta T cell",0.017996870109546165
+Lung,18-M-53,18m,male,myeloid dendritic cell,0.012519561815336464
+Lung,18-M-53,18m,male,adventitial cell,0.011737089201877934
+Lung,18-M-53,18m,male,smooth muscle cell of the pulmonary artery,0.010954616588419406
+Lung,18-M-53,18m,male,T cell,0.009389671361502348
+Lung,18-M-53,18m,male,type II pneumocyte,0.008607198748043818
+Lung,18-M-53,18m,male,lung macrophage,0.00782472613458529
+Lung,18-M-53,18m,male,plasmacytoid dendritic cell,0.005477308294209703
+Lung,18-M-53,18m,male,basophil,0.004694835680751174
+Lung,18-M-53,18m,male,dendritic cell,0.003912363067292645
+Lung,18-M-53,18m,male,pulmonary interstitial fibroblast,0.003129890453834116
+Lung,18-M-53,18m,male,ciliated columnar cell of tracheobronchial tree,0.003129890453834116
+Lung,18-M-53,18m,male,endothelial cell of lymphatic vessel,0.002347417840375587
+Lung,18-M-53,18m,male,club cell of bronchiole,0.001564945226917058
+Lung,18-M-53,18m,male,regulatory T cell,0.000782472613458529
+Lung,18-M-53,18m,male,plasma cell,0.000782472613458529
+Lung,18-M-53,18m,male,pericyte cell,0.000782472613458529
+Mammary_Gland,3-F-56,3m,female,T cell,0.3948339483394834
+Mammary_Gland,3-F-56,3m,female,stromal cell,0.14391143911439114
+Mammary_Gland,3-F-56,3m,female,basal cell,0.143384290985767
+Mammary_Gland,3-F-56,3m,female,luminal epithelial cell of mammary gland,0.11017395888244597
+Mammary_Gland,3-F-56,3m,female,B cell,0.10490247759620454
+Mammary_Gland,3-F-56,3m,female,endothelial cell,0.06431207169214549
+Mammary_Gland,3-F-56,3m,female,macrophage,0.03848181338956247
+Mammary_Gland,3-F-57,3m,female,T cell,0.42771804062126645
+Mammary_Gland,3-F-57,3m,female,B cell,0.20947829549980088
+Mammary_Gland,3-F-57,3m,female,stromal cell,0.14297092791716448
+Mammary_Gland,3-F-57,3m,female,luminal epithelial cell of mammary gland,0.08203902827558741
+Mammary_Gland,3-F-57,3m,female,endothelial cell,0.052568697729988054
+Mammary_Gland,3-F-57,3m,female,basal cell,0.04858622062923138
+Mammary_Gland,3-F-57,3m,female,macrophage,0.03663878932696137
+Mammary_Gland,18-F-50,18m,female,luminal epithelial cell of mammary gland,0.33396584440227706
+Mammary_Gland,18-F-50,18m,female,basal cell,0.19987349778621125
+Mammary_Gland,18-F-50,18m,female,stromal cell,0.17900063251106893
+Mammary_Gland,18-F-50,18m,female,T cell,0.12017710309930424
+Mammary_Gland,18-F-50,18m,female,B cell,0.06704617330803289
+Mammary_Gland,18-F-50,18m,female,endothelial cell,0.058823529411764705
+Mammary_Gland,18-F-50,18m,female,macrophage,0.041113219481340925
+Mammary_Gland,18-F-51,18m,female,luminal epithelial cell of mammary gland,0.28374455732946297
+Mammary_Gland,18-F-51,18m,female,T cell,0.20682148040638607
+Mammary_Gland,18-F-51,18m,female,stromal cell,0.19593613933236576
+Mammary_Gland,18-F-51,18m,female,basal cell,0.11320754716981132
+Mammary_Gland,18-F-51,18m,female,B cell,0.09216255442670537
+Mammary_Gland,18-F-51,18m,female,endothelial cell,0.05805515239477504
+Mammary_Gland,18-F-51,18m,female,macrophage,0.050072568940493466
+Marrow,3-F-56,3m,female,granulocytopoietic cell,0.22454142947501582
+Marrow,3-F-56,3m,female,granulocyte,0.20240354206198607
+Marrow,3-F-56,3m,female,monocyte,0.14990512333965844
+Marrow,3-F-56,3m,female,hematopoietic precursor cell,0.09361163820366857
+Marrow,3-F-56,3m,female,precursor B cell,0.07210626185958255
+Marrow,3-F-56,3m,female,promonocyte,0.0683111954459203
+Marrow,3-F-56,3m,female,proerythroblast,0.055660974067046176
+Marrow,3-F-56,3m,female,megakaryocyte-erythroid progenitor cell,0.03731815306767868
+Marrow,3-F-56,3m,female,macrophage,0.022137887413029727
+Marrow,3-F-56,3m,female,naive T cell,0.02024035420619861
+Marrow,3-F-56,3m,female,naive B cell,0.017077798861480076
+Marrow,3-F-56,3m,female,erythroblast,0.01644528779253637
+Marrow,3-F-56,3m,female,plasma cell,0.007590132827324478
+Marrow,3-F-56,3m,female,immature B cell,0.006325110689437065
+Marrow,3-F-56,3m,female,NK cell,0.003795066413662239
+Marrow,3-F-56,3m,female,late pro-B cell,0.002530044275774826
+Marrow,3-F-57,3m,female,granulocyte,0.21585160202360876
+Marrow,3-F-57,3m,female,granulocytopoietic cell,0.20179876335019675
+Marrow,3-F-57,3m,female,monocyte,0.13884204609331086
+Marrow,3-F-57,3m,female,precursor B cell,0.07644744238336144
+Marrow,3-F-57,3m,female,promonocyte,0.06520517144463181
+Marrow,3-F-57,3m,female,hematopoietic precursor cell,0.06464305789769534
+Marrow,3-F-57,3m,female,proerythroblast,0.05002810567734682
+Marrow,3-F-57,3m,female,megakaryocyte-erythroid progenitor cell,0.041596402473299605
+Marrow,3-F-57,3m,female,naive T cell,0.03709949409780776
+Marrow,3-F-57,3m,female,erythroblast,0.022484541877459248
+Marrow,3-F-57,3m,female,macrophage,0.020798201236649803
+Marrow,3-F-57,3m,female,naive B cell,0.01967397414277684
+Marrow,3-F-57,3m,female,plasma cell,0.01517706576728499
+Marrow,3-F-57,3m,female,late pro-B cell,0.01517706576728499
+Marrow,3-F-57,3m,female,NK cell,0.011242270938729624
+Marrow,3-F-57,3m,female,immature B cell,0.003372681281618887
+Marrow,3-F-57,3m,female,basophil,0.0005621135469364812
+Marrow,18-F-50,18m,female,granulocytopoietic cell,0.29515418502202645
+Marrow,18-F-50,18m,female,granulocyte,0.16593245227606462
+Marrow,18-F-50,18m,female,monocyte,0.10939794419970632
+Marrow,18-F-50,18m,female,promonocyte,0.08663729809104258
+Marrow,18-F-50,18m,female,hematopoietic precursor cell,0.07562408223201175
+Marrow,18-F-50,18m,female,naive T cell,0.06607929515418502
+Marrow,18-F-50,18m,female,megakaryocyte-erythroid progenitor cell,0.05066079295154185
+Marrow,18-F-50,18m,female,precursor B cell,0.027165932452276064
+Marrow,18-F-50,18m,female,erythroblast,0.02569750367107195
+Marrow,18-F-50,18m,female,macrophage,0.023494860499265784
+Marrow,18-F-50,18m,female,naive B cell,0.01908957415565345
+Marrow,18-F-50,18m,female,late pro-B cell,0.01762114537444934
+Marrow,18-F-50,18m,female,proerythroblast,0.014684287812041116
+Marrow,18-F-50,18m,female,immature B cell,0.00881057268722467
+Marrow,18-F-50,18m,female,NK cell,0.007342143906020558
+Marrow,18-F-50,18m,female,plasma cell,0.005139500734214391
+Marrow,18-F-50,18m,female,basophil,0.0014684287812041115
+Marrow,18-F-51,18m,female,granulocytopoietic cell,0.24320987654320989
+Marrow,18-F-51,18m,female,granulocyte,0.17037037037037037
+Marrow,18-F-51,18m,female,monocyte,0.10987654320987654
+Marrow,18-F-51,18m,female,promonocyte,0.10864197530864197
+Marrow,18-F-51,18m,female,naive T cell,0.07592592592592592
+Marrow,18-F-51,18m,female,hematopoietic precursor cell,0.06234567901234568
+Marrow,18-F-51,18m,female,macrophage,0.053703703703703705
+Marrow,18-F-51,18m,female,megakaryocyte-erythroid progenitor cell,0.047530864197530866
+Marrow,18-F-51,18m,female,precursor B cell,0.04259259259259259
+Marrow,18-F-51,18m,female,late pro-B cell,0.040123456790123455
+Marrow,18-F-51,18m,female,proerythroblast,0.012345679012345678
+Marrow,18-F-51,18m,female,erythroblast,0.010493827160493827
+Marrow,18-F-51,18m,female,plasma cell,0.009876543209876543
+Marrow,18-F-51,18m,female,NK cell,0.006172839506172839
+Marrow,18-F-51,18m,female,immature B cell,0.003703703703703704
+Marrow,18-F-51,18m,female,naive B cell,0.0024691358024691358
+Marrow,18-F-51,18m,female,erythroid progenitor,0.0006172839506172839
+Marrow,18-M-52,18m,male,granulocyte,0.3048270619536298
+Marrow,18-M-52,18m,male,proerythroblast,0.2242493348536678
+Marrow,18-M-52,18m,male,granulocytopoietic cell,0.11858608893956671
+Marrow,18-M-52,18m,male,megakaryocyte-erythroid progenitor cell,0.06879513492968453
+Marrow,18-M-52,18m,male,promonocyte,0.0653743823641201
+Marrow,18-M-52,18m,male,naive T cell,0.05435195743063474
+Marrow,18-M-52,18m,male,hematopoietic precursor cell,0.03876852907639681
+Marrow,18-M-52,18m,male,erythroblast,0.027366020524515394
+Marrow,18-M-52,18m,male,macrophage,0.026985936906119345
+Marrow,18-M-52,18m,male,monocyte,0.025845686050931203
+Marrow,18-M-52,18m,male,precursor B cell,0.02394526795895097
+Marrow,18-M-52,18m,male,naive B cell,0.007221588749524895
+Marrow,18-M-52,18m,male,immature B cell,0.006081337894336754
+Marrow,18-M-52,18m,male,late pro-B cell,0.005701254275940707
+Marrow,18-M-52,18m,male,NK cell,0.0015203344735841885
+Marrow,18-M-52,18m,male,basophil,0.0003800836183960471
+Marrow,18-M-53,18m,male,proerythroblast,0.275827482447342
+Marrow,18-M-53,18m,male,granulocyte,0.26980942828485455
+Marrow,18-M-53,18m,male,granulocytopoietic cell,0.16349047141424272
+Marrow,18-M-53,18m,male,megakaryocyte-erythroid progenitor cell,0.09528585757271815
+Marrow,18-M-53,18m,male,promonocyte,0.06118355065195587
+Marrow,18-M-53,18m,male,naive T cell,0.041123370110330994
+Marrow,18-M-53,18m,male,erythroblast,0.024072216649949848
+Marrow,18-M-53,18m,male,hematopoietic precursor cell,0.01905717151454363
+Marrow,18-M-53,18m,male,monocyte,0.014042126379137413
+Marrow,18-M-53,18m,male,macrophage,0.010030090270812437
+Marrow,18-M-53,18m,male,late pro-B cell,0.009027081243731194
+Marrow,18-M-53,18m,male,precursor B cell,0.007021063189568706
+Marrow,18-M-53,18m,male,plasma cell,0.004012036108324975
+Marrow,18-M-53,18m,male,immature B cell,0.003009027081243731
+Marrow,18-M-53,18m,male,naive B cell,0.003009027081243731
+Pancreas,18-F-50,18m,female,pancreatic B cell,0.7200878155872668
+Pancreas,18-F-50,18m,female,pancreatic A cell,0.1207464324917673
+Pancreas,18-F-50,18m,female,pancreatic D cell,0.07683863885839737
+Pancreas,18-F-50,18m,female,pancreatic PP cell,0.03293084522502744
+Pancreas,18-F-50,18m,female,leukocyte,0.020856201975850714
+Pancreas,18-F-50,18m,female,endothelial cell,0.01646542261251372
+Pancreas,18-F-50,18m,female,pancreatic ductal cel,0.010976948408342482
+Pancreas,18-F-50,18m,female,pancreatic acinar cell,0.0010976948408342481
+Pancreas,18-M-52,18m,male,pancreatic B cell,0.7261261261261261
+Pancreas,18-M-52,18m,male,pancreatic PP cell,0.08558558558558559
+Pancreas,18-M-52,18m,male,pancreatic D cell,0.06396396396396396
+Pancreas,18-M-52,18m,male,pancreatic A cell,0.04054054054054054
+Pancreas,18-M-52,18m,male,endothelial cell,0.03153153153153153
+Pancreas,18-M-52,18m,male,leukocyte,0.02252252252252252
+Pancreas,18-M-52,18m,male,pancreatic ductal cel,0.021621621621621623
+Pancreas,18-M-52,18m,male,pancreatic stellate cell,0.005405405405405406
+Pancreas,18-M-52,18m,male,pancreatic acinar cell,0.002702702702702703
+Skin,18-M-52,18m,male,basal cell of epidermis,0.43956043956043955
+Skin,18-M-52,18m,male,epidermal cell,0.25274725274725274
+Skin,18-M-52,18m,male,keratinocyte stem cell,0.21978021978021978
+Skin,18-M-52,18m,male,T cell,0.054945054945054944
+Skin,18-M-52,18m,male,stem cell of epidermis,0.03296703296703297
+Spleen,3-F-56,3m,female,B cell,0.6420591456736036
+Spleen,3-F-56,3m,female,T cell,0.22541073384446877
+Spleen,3-F-56,3m,female,mature NK T cell,0.05257393209200438
+Spleen,3-F-56,3m,female,macrophage,0.03636363636363636
+Spleen,3-F-56,3m,female,NK cell,0.021029572836801753
+Spleen,3-F-56,3m,female,proerythroblast,0.010076670317634174
+Spleen,3-F-56,3m,female,macrophage dendritic cell progenitor,0.004819277108433735
+Spleen,3-F-56,3m,female,plasma cell,0.0035049288061336256
+Spleen,3-F-56,3m,female,megakaryocyte-erythroid progenitor cell,0.0017524644030668128
+Spleen,3-F-56,3m,female,immature NKT cell,0.0013143483023001095
+Spleen,3-F-56,3m,female,granulocyte,0.001095290251916758
+Spleen,3-M-8,3m,male,B cell,0.7038992688870837
+Spleen,3-M-8,3m,male,T cell,0.16043866774979693
+Spleen,3-M-8,3m,male,macrophage,0.034930950446791224
+Spleen,3-M-8,3m,male,mature NK T cell,0.032087733549959384
+Spleen,3-M-8,3m,male,proerythroblast,0.03127538586515029
+Spleen,3-M-8,3m,male,NK cell,0.021933387489845652
+Spleen,3-M-8,3m,male,macrophage dendritic cell progenitor,0.008123476848090982
+Spleen,3-M-8,3m,male,plasma cell,0.004061738424045491
+Spleen,3-M-8,3m,male,immature NKT cell,0.002437043054427295
+Spleen,3-M-8,3m,male,megakaryocyte-erythroid progenitor cell,0.0008123476848090983
+Spleen,18-F-50,18m,female,B cell,0.7588797814207651
+Spleen,18-F-50,18m,female,T cell,0.08572404371584699
+Spleen,18-F-50,18m,female,mature NK T cell,0.06591530054644809
+Spleen,18-F-50,18m,female,macrophage,0.028346994535519126
+Spleen,18-F-50,18m,female,plasma cell,0.01980874316939891
+Spleen,18-F-50,18m,female,proerythroblast,0.018101092896174863
+Spleen,18-F-50,18m,female,NK cell,0.014685792349726777
+Spleen,18-F-50,18m,female,granulocyte,0.00273224043715847
+Spleen,18-F-50,18m,female,macrophage dendritic cell progenitor,0.0023907103825136613
+Spleen,18-F-50,18m,female,immature NKT cell,0.0020491803278688526
+Spleen,18-F-50,18m,female,megakaryocyte-erythroid progenitor cell,0.001366120218579235
+Spleen,18-F-51,18m,female,B cell,0.7417617237008872
+Spleen,18-F-51,18m,female,T cell,0.10583016476552598
+Spleen,18-F-51,18m,female,mature NK T cell,0.06875792141951838
+Spleen,18-F-51,18m,female,macrophage,0.025665399239543727
+Spleen,18-F-51,18m,female,plasma cell,0.01964512040557668
+Spleen,18-F-51,18m,female,proerythroblast,0.017427122940430924
+Spleen,18-F-51,18m,female,NK cell,0.010773130544993664
+Spleen,18-F-51,18m,female,macrophage dendritic cell progenitor,0.0028517110266159697
+Spleen,18-F-51,18m,female,megakaryocyte-erythroid progenitor cell,0.0025348542458808617
+Spleen,18-F-51,18m,female,immature NKT cell,0.0025348542458808617
+Spleen,18-F-51,18m,female,granulocyte,0.002217997465145754
+Thymus,3-F-56,3m,female,thymocyte,0.3649222065063649
+Thymus,3-F-56,3m,female,immature T cell,0.27934936350777934
+Thymus,3-F-56,3m,female,DN4 thymocyte,0.1789250353606789
+Thymus,3-F-56,3m,female,double negative T cell,0.13295615275813297
+Thymus,3-F-56,3m,female,DN3 thymocyte,0.02333804809052334
+Thymus,3-F-56,3m,female,professional antigen presenting cell,0.02050919377652051
+Thymus,18-F-50,18m,female,immature T cell,0.39845758354755784
+Thymus,18-F-50,18m,female,thymocyte,0.23736075407026563
+Thymus,18-F-50,18m,female,double negative T cell,0.18594687232219365
+Thymus,18-F-50,18m,female,DN4 thymocyte,0.11053984575835475
+Thymus,18-F-50,18m,female,professional antigen presenting cell,0.03598971722365039
+Thymus,18-F-50,18m,female,DN3 thymocyte,0.031705227077977724
+Thymus,18-M-52,18m,male,thymocyte,0.297423887587822
+Thymus,18-M-52,18m,male,DN4 thymocyte,0.2505854800936768
+Thymus,18-M-52,18m,male,immature T cell,0.2459016393442623
+Thymus,18-M-52,18m,male,double negative T cell,0.14285714285714285
+Thymus,18-M-52,18m,male,professional antigen presenting cell,0.03629976580796253
+Thymus,18-M-52,18m,male,DN3 thymocyte,0.026932084309133488
+Tongue,3-F-56,3m,female,basal cell of epidermis,0.5367292225201072
+Tongue,3-F-56,3m,female,keratinocyte,0.45683646112600534
+Tongue,3-F-56,3m,female,Langerhans cell,0.006434316353887399
+Tongue,3-M-8,3m,male,basal cell of epidermis,0.49770039421813406
+Tongue,3-M-8,3m,male,keratinocyte,0.49704336399474375
+Tongue,3-M-8,3m,male,Langerhans cell,0.005256241787122208
+Tongue,3-M-9,3m,male,basal cell of epidermis,0.568986568986569
+Tongue,3-M-9,3m,male,keratinocyte,0.42735042735042733
+Tongue,3-M-9,3m,male,Langerhans cell,0.003663003663003663
+Tongue,18-M-52,18m,male,basal cell of epidermis,0.4995904995904996
+Tongue,18-M-52,18m,male,keratinocyte,0.49576849576849574
+Tongue,18-M-52,18m,male,Langerhans cell,0.004641004641004641
+Trachea,3-M-5/6,3m,male,mesenchymal progenitor cell,0.2323747680890538
+Trachea,3-M-5/6,3m,male,fibroblast,0.17996289424860853
+Trachea,3-M-5/6,3m,male,mesenchymal cell,0.12198515769944342
+Trachea,3-M-5/6,3m,male,chondrocyte,0.11038961038961038
+Trachea,3-M-5/6,3m,male,endothelial cell,0.075139146567718
+Trachea,3-M-5/6,3m,male,basal epithelial cell of tracheobronchial tree,0.07444341372912801
+Trachea,3-M-5/6,3m,male,granulocyte,0.059369202226345084
+Trachea,3-M-5/6,3m,male,macrophage,0.05705009276437848
+Trachea,3-M-5/6,3m,male,epithelial cell,0.044758812615955476
+Trachea,3-M-5/6,3m,male,smooth muscle cell of trachea,0.022263450834879406
+Trachea,3-M-5/6,3m,male,blood cell,0.013450834879406308
+Trachea,3-M-5/6,3m,male,neuroendocrine cell,0.008812615955473098
+Trachea,3-M-7/8,3m,male,chondrocyte,0.318739542665923
+Trachea,3-M-7/8,3m,male,fibroblast,0.24121583937534857
+Trachea,3-M-7/8,3m,male,mesenchymal progenitor cell,0.18655883993307307
+Trachea,3-M-7/8,3m,male,mesenchymal cell,0.09843837144450641
+Trachea,3-M-7/8,3m,male,basal epithelial cell of tracheobronchial tree,0.04266592303402119
+Trachea,3-M-7/8,3m,male,granulocyte,0.03541550474065811
+Trachea,3-M-7/8,3m,male,macrophage,0.03067484662576687
+Trachea,3-M-7/8,3m,male,endothelial cell,0.02649191299498048
+Trachea,3-M-7/8,3m,male,smooth muscle cell of trachea,0.00864472950362521
+Trachea,3-M-7/8,3m,male,blood cell,0.008365867261572783
+Trachea,3-M-7/8,3m,male,neuroendocrine cell,0.002788622420524261

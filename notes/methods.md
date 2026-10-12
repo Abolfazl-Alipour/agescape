@@ -19,3 +19,24 @@ Binding methodological parameter records across all project milestones.
 - **Clustering:** Leiden algorithm (`flavor='igraph'`, resolution=1.0, random_state=42).
 - **Annotation:** Majority vote of provided `cell_ontology_class` per Leiden cluster.
 - **Display Subsample:** Proportional stratified sampling per tissue with a floor of 500 cells/tissue, seed 42.
+
+## 7. Milestone M6 Longevity Outlier Parameters
+- **Lifespan Denominators:** Mouse = 4.0y, NMR = 31.0y, Human = 122.5y (AnAge official build 14).
+- **Cohort Curation:** Savina 2022 GEO GSE152886; technical outlier 2V dropped per pre-registered protocol.
+- **Positive Control Gate:** Mouse skin aging slope = 1.364 (p < 0.01) passed.
+- **Equivalence Test:** TOST equivalence test on NMR slope (margin delta=0.15) yielded p = 0.5371, demonstrating true statistical equivalence/flatness.
+- **Species x Age Interaction:** Mouse vs NMR interaction p = 2.2204e-16.
+
+## 5. Milestone M4 Human Data Preparation & Ortholog Parameters
+- **Ortholog Pipeline:** One-to-one mouse↔human and mouse↔NMR orthologs derived via Ensembl BioMart release 111.
+- **Cell Ontology Standard:** 17 primary tissue-matched cell types mapped across species in `notes/celltype-mapping.md`.
+- **Human Inclusion Criteria:** >=6 donors and donor-age SD >=12 years per cell type.
+- **Power Floor:** Minimum detectable 30-year log2FC computed across sample sizes; types below threshold flagged `low-powered` to guard against false-divergence claims.
+
+## 3. Milestone M2 Differential Expression & Ranking Parameters
+- **Primary Design:** Pseudobulk per (mouse × tissue × cell_ontology_class) raw integer counts, PyDESeq2 with design `~ sex + age_group` on 3m vs 18m contrast.
+- **Significance Criteria:** BH-FDR < 0.05 and |log2FC| >= 0.25.
+- **Log2FC Standard:** Old vs Young (positive = upregulated with age). Orientation programmatically asserted on known biomarkers (Cdkn2a, Spp1).
+- **Calibration Trio Results:** Top aging unit (Lung::adventitial cell): Observed DE = 55, Shuffled Age Permutation Null = 4.6 DE genes, Sex-Effect Floor (3m) = 0 DE genes.
+- **Pseudobulk vs Wilcoxon Consistency:** Spearman correlation rho = 0.331 across eligible cell types.
+- **Sensitivity Tests:** Extended bins (young=1m+3m, old=18m+21m+24m+30m) = 120 DE genes; male-only (18m vs 24m) = 757 DE genes.
