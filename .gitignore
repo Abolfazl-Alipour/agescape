@@ -1,0 +1,11 @@
+data/
+!data/manifest/
+*.h5ad
+.env
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+report/_build/
+app/node_modules/
+app/dist/

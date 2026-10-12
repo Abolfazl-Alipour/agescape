@@ -1,0 +1,26 @@
+name: agescape
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.11
+  - scanpy>=1.10
+  - anndata>=0.10
+  - leidenalg
+  - python-igraph
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - nbconvert
+  - ipykernel
+  - requests
+  - h5py
+  - pyarrow
+  - openpyxl
+  - scikit-misc
+  - pydeseq2
+  - pip
+  - pip:
+    - scrublet
