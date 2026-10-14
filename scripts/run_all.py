@@ -1,126 +1,134 @@
 #!/usr/bin/env python3
 """
-scripts/run_all.py — Master End-to-End Execution Script for Conserved Aging Explorer
-Executes all data verification, pipeline scripts, notebook nbconverts, and app asset exports.
+scripts/run_all.py — master end-to-end runner for the (rebuilt, real-data) project.
+
+Executes every stage in order with full recompute: no stage skips its work because
+an output already exists. Each stage's measured wall time is logged honestly at the
+end. Any non-zero exit aborts the run with a non-zero exit code.
+
+Stage order:
+  1.  scripts/verify_data.py
+  2.  scripts/run_m1_pipeline.py
+  3.  scripts/run_m2_pipeline.py
+  4.  scripts/run_m3_pipeline.py
+  5.  scripts/run_m3_agreement.py
+  6.  scripts/run_m5_pipeline.py
+  7.  scripts/run_m6_pipeline.py
+  8.  scripts/fetch_nmr_gene_names.py   (ONLY if data/interim/nmr-ensg2symbol.tsv is missing)
+  9.  nbconvert --execute notebooks 01..06 (kernelspec agescape, timeout 600)
+  10. scripts/check_app_assets.py
 """
 
-import os
+import subprocess
 import sys
 import time
-import subprocess
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PYTHON_BIN = sys.executable
+NMR_SYMBOL_TSV = REPO_ROOT / "data" / "interim" / "nmr-ensg2symbol.tsv"
 
-def run_step(step_name, cmd, cwd=REPO_ROOT):
-    print(f"\n{'='*70}")
-    print(f"▶ STARTING: {step_name}")
-    print(f"  Command: {' '.join(cmd)}")
-    print(f"{'='*70}\n", flush=True)
+NOTEBOOKS = [
+    "notebooks/01-qc-and-clustering.ipynb",
+    "notebooks/02-de-aging.ipynb",
+    "notebooks/03-trajectory-agreement.ipynb",
+    "notebooks/04-human-prep.ipynb",
+    "notebooks/05-conservation.ipynb",
+    "notebooks/06-outliers.ipynb",
+]
+
+
+def run_step(step_name, cmd):
+    """Run one stage; print start/end and measured runtime. Abort the run on failure."""
+    print(f"\n{'=' * 72}")
+    print(f"START: {step_name}")
+    print(f"  cmd: {' '.join(str(c) for c in cmd)}")
+    print(f"{'=' * 72}", flush=True)
     t0 = time.time()
-    res = subprocess.run(cmd, cwd=cwd)
+    res = subprocess.run([str(c) for c in cmd], cwd=REPO_ROOT)
     dt = time.time() - t0
     if res.returncode != 0:
-        print(f"\n❌ FAILED: {step_name} (Exit code {res.returncode}) after {dt:.1f}s", flush=True)
-        sys.exit(res.returncode)
-    print(f"\n✅ PASSED: {step_name} in {dt:.1f}s\n", flush=True)
+        print(f"\nFAILED: {step_name} (exit {res.returncode}) after {dt:.1f}s", flush=True)
+        print("Aborting run_all.py; no later stage was executed.", flush=True)
+        sys.exit(res.returncode if res.returncode != 0 else 1)
+    print(f"\nPASSED: {step_name} in {dt:.1f}s", flush=True)
     return dt
 
+
+def nbconvert_cmd(notebook):
+    return [
+        PYTHON_BIN, "-m", "jupyter", "nbconvert",
+        "--to", "notebook", "--execute", "--inplace",
+        "--ExecutePreprocessor.kernel_name=agescape",
+        "--ExecutePreprocessor.timeout=600",
+        notebook,
+    ]
+
+
 def main():
-    t_start = time.time()
     runtimes = {}
-    print("="*70)
-    print("CONSERVED AGING EXPLORER — FULL PIPELINE REPRODUCTION RUNNER")
-    print(f"Repository Root: {REPO_ROOT}")
-    print(f"Python Binary:   {PYTHON_BIN}")
-    print("="*70)
 
-    # 1. Verification of Data Checksums
-    runtimes["M0: Data Verification"] = run_step(
-        "M0: Verify Data Checksums",
-        [PYTHON_BIN, "scripts/verify_data.py"]
-    )
+    print("=" * 72)
+    print("FULL PIPELINE RUNNER — real-data rebuild (takeover 2026-10-14)")
+    print(f"Repo root: {REPO_ROOT}")
+    print(f"Python:    {PYTHON_BIN}")
+    print("Every stage recomputes from scratch; nothing is skipped for existing outputs.")
+    print("=" * 72, flush=True)
 
-    # 2. Milestone M1: QC, Normalization, Clustering
-    runtimes["M1: Pipeline QC & Clustering"] = run_step(
-        "M1: Run Pipeline QC & Clustering",
-        [PYTHON_BIN, "scripts/run_m1_pipeline.py"]
+    runtimes["verify_data"] = run_step(
+        "Data verification (SHA-256 vs manifests)",
+        [PYTHON_BIN, "scripts/verify_data.py"],
     )
-    runtimes["M1: Notebook 01 nbconvert"] = run_step(
-        "M1: Notebook 01 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/01-qc-and-clustering.ipynb"]
+    runtimes["m1_pipeline"] = run_step(
+        "M1 pipeline (QC, clustering, annotation)",
+        [PYTHON_BIN, "scripts/run_m1_pipeline.py"],
     )
-
-    # 3. Milestone M2: Differential Expression & Calibration Trio
-    runtimes["M2: Differential Expression"] = run_step(
-        "M2: Run Differential Expression & Ranking",
-        [PYTHON_BIN, "scripts/run_m2_pipeline.py"]
+    runtimes["m2_pipeline"] = run_step(
+        "M2 pipeline (pseudobulk DE, ranking, calibration trio)",
+        [PYTHON_BIN, "scripts/run_m2_pipeline.py"],
     )
-    runtimes["M2: Notebook 02 nbconvert"] = run_step(
-        "M2: Notebook 02 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/02-de-aging.ipynb"]
+    runtimes["m3_pipeline"] = run_step(
+        "M3 pipeline (DPT trajectory, bridge model)",
+        [PYTHON_BIN, "scripts/run_m3_pipeline.py"],
     )
-
-    # 4. Milestone M3: Trajectory & Literature Agreement
-    runtimes["M3: Trajectory & Agreement"] = run_step(
-        "M3: Run Trajectory Analysis & Agreement",
-        [PYTHON_BIN, "scripts/run_m3_pipeline.py"]
+    runtimes["m3_agreement"] = run_step(
+        "M3 agreement vs TMS paper published coefficients",
+        [PYTHON_BIN, "scripts/run_m3_agreement.py"],
     )
-    runtimes["M3: Notebook 03 nbconvert"] = run_step(
-        "M3: Notebook 03 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/03-trajectory-agreement.ipynb"]
+    runtimes["m5_pipeline"] = run_step(
+        "M5 pipeline (mouse program catalog, divergence status)",
+        [PYTHON_BIN, "scripts/run_m5_pipeline.py"],
+    )
+    runtimes["m6_pipeline"] = run_step(
+        "M6 pipeline (lifespan program scores, NMR contrast)",
+        [PYTHON_BIN, "scripts/run_m6_pipeline.py"],
     )
 
-    # 5. Milestone M4: Human Cohorts & Orthologs
-    runtimes["M4: Human Orthologs & Power"] = run_step(
-        "M4: Prepare Orthologs & Power Calculations",
-        [PYTHON_BIN, "scripts/prepare_m4_orthologs_and_power.py"]
-    )
-    runtimes["M4: Notebook 04 nbconvert"] = run_step(
-        "M4: Notebook 04 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/04-human-prep.ipynb"]
+    if NMR_SYMBOL_TSV.exists():
+        print(f"\nSKIP (conditional stage): nmr-ensg2symbol.tsv already present at "
+              f"{NMR_SYMBOL_TSV}", flush=True)
+        runtimes["fetch_nmr_gene_names"] = 0.0
+    else:
+        runtimes["fetch_nmr_gene_names"] = run_step(
+            "Fetch NMR gene symbols from Ensembl REST (cached TSV missing)",
+            [PYTHON_BIN, "scripts/fetch_nmr_gene_names.py"],
+        )
+
+    for nb in NOTEBOOKS:
+        name = Path(nb).stem
+        runtimes[f"nb_{name}"] = run_step(f"Execute {nb}", nbconvert_cmd(nb))
+
+    runtimes["check_app_assets"] = run_step(
+        "Check app assets",
+        [PYTHON_BIN, "scripts/check_app_assets.py"],
     )
 
-    # 6. Milestone M5: Cross-Species Conservation & Divergence
-    runtimes["M5: Conservation & Divergence"] = run_step(
-        "M5: Cross-Species Conservation Pipeline",
-        [PYTHON_BIN, "scripts/run_m5_pipeline.py"]
-    )
-    runtimes["M5: Notebook 05 nbconvert"] = run_step(
-        "M5: Notebook 05 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/05-conservation.ipynb"]
-    )
+    print("\n" + "=" * 72)
+    print("ALL STAGES PASSED. Measured stage runtimes (wall seconds, this machine):")
+    for stage, dt in runtimes.items():
+        print(f"  {stage:<28} {dt:>10.1f}s")
+    print("=" * 72, flush=True)
 
-    # 7. Milestone M6: Longevity Outliers (NMR)
-    runtimes["M6: Longevity Outlier Pipeline"] = run_step(
-        "M6: Longevity Outlier Pipeline",
-        [PYTHON_BIN, "scripts/run_m6_pipeline.py"]
-    )
-    runtimes["M6: Notebook 06 nbconvert"] = run_step(
-        "M6: Notebook 06 nbconvert",
-        [PYTHON_BIN, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "notebooks/06-outliers.ipynb"]
-    )
-
-    # 8. Milestone M8: Export & Check App Assets
-    runtimes["M8: Export App Assets"] = run_step(
-        "M8: Export App Assets to Parquet & JSON",
-        [PYTHON_BIN, "scripts/export_app_assets.py"]
-    )
-    runtimes["M8: Check App Assets"] = run_step(
-        "M8: Verify App Assets Manifest & Budgets",
-        [PYTHON_BIN, "scripts/check_app_assets.py"]
-    )
-
-    total_time = time.time() - t_start
-    print("\n" + "="*70)
-    print("🎉 FULL PIPELINE EXECUTION COMPLETED SUCCESSFULLY!")
-    print(f"Total Execution Time: {total_time/60:.2f} minutes ({total_time:.1f}s)")
-    print("="*70)
-    print("\nPer-Stage Hardware Runtimes:")
-    for k, v in runtimes.items():
-        print(f"  - {k:<38}: {v:.1f}s")
-    print("="*70)
 
 if __name__ == "__main__":
     main()

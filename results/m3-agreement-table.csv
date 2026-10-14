@@ -1,27 +1,18 @@
-gene,literature_direction,model_slope_per_month,model_pvalue,model_direction,concordant
-Spp1,UP,-0.000674831545917088,0.7366297735337584,DOWN,False
-Apoe,UP,0.004319171156515598,0.5557424477576062,UP,True
-Igfbp3,UP,0.011812883258826163,0.22885129329565096,UP,True
-Lgals3,UP,-0.0072507188752962345,0.3273964097531233,DOWN,False
-Ccl2,UP,0.005169320725101734,0.5792169126309967,UP,True
-Il6,UP,0.0010425910440469705,0.5799671657376719,UP,True
-Col1a1,UP,-0.03775648846450692,0.0008130594991556159,DOWN,False
-Col3a1,UP,-0.05315831876322371,0.0004997089142116728,DOWN,False
-Fn1,UP,0.005266502173778239,0.38570424637949074,UP,True
-B2m,UP,0.003136226305067197,0.5612449630056626,UP,True
-H2-K1,UP,0.012569267092694899,0.02547719376288109,UP,True
-H2-D1,UP,0.025231556527496625,0.0007681290349406058,UP,True
-Tyrobp,UP,0.0038591356620072494,0.6765805098069853,UP,True
-Rpl3,DOWN,-0.001467577950177999,0.5894017724164727,DOWN,True
-Rpl4,DOWN,0.002750979811467565,0.49681506516855345,UP,False
-Rpl5,DOWN,0.0006654860989819741,0.8700807783825999,UP,False
-Rpl6,DOWN,-0.003159870829763292,0.23135000165174263,DOWN,True
-Rps3,DOWN,0.0007650087425706033,0.8192274433150126,UP,False
-Rps4x,DOWN,0.0004732150614467407,0.929001179647992,UP,False
-Rps5,DOWN,0.0012584206561361828,0.7677170223807683,UP,False
-Rps6,DOWN,-0.0007959976020698855,0.8394232036093245,DOWN,True
-Eif4e,DOWN,-0.010863205943132299,0.0636517114703055,DOWN,True
-Eif3a,DOWN,-0.00025969814033310743,0.9511648056953282,DOWN,True
-Cox4i1,DOWN,0.007951167085228361,0.08548514862004016,UP,False
-Atp5b,DOWN,0.004386021915321657,0.22378807248830251,UP,False
-Ndufa1,DOWN,0.005257134299009388,0.3273608486643394,UP,False
+unit,paper_column,n_shared,n_paper_sig_bh0.01,spearman_rho,sign_concordance_paper_sig,our_nominal_recovery_in_paper_sig,verdict,reason
+Lung::adventitial cell,Lung.adventitial cell,10128,971,0.352,0.77,0.187,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney.kidney proximal convoluted tubule epithelial cell,13019,2491,0.866,0.977,0.526,agree,paper continuous-age coef vs our continuous bridge slope
+Lung::fibroblast of lung,Lung.fibroblast of lung,11521,1810,0.369,0.728,0.187,agree,paper continuous-age coef vs our continuous bridge slope
+Lung::alveolar macrophage,Lung.alveolar macrophage,9379,1350,0.309,0.633,0.164,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::kidney collecting duct principal cell,Kidney.kidney collecting duct principal cell,9817,3076,0.127,0.555,0.036,partial,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney.kidney distal convoluted tubule epithelial cell,9287,255,0.409,0.925,0.247,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney.kidney loop of Henle thick ascending limb epithelial cell,10414,1419,0.376,0.801,0.08,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::macrophage,Kidney.macrophage,9704,491,0.358,0.833,0.196,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Lung::NK cell,Lung.NK cell,9095,158,0.464,0.943,0.405,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::fenestrated cell,Kidney.fenestrated cell,9549,298,0.26,0.792,0.107,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Lung::non-classical monocyte,Lung.non-classical monocyte,8071,110,0.346,0.827,0.327,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Lung::classical monocyte,Lung.classical monocyte,10656,9659,0.183,0.578,0.065,partial,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Lung::bronchial smooth muscle cell,Lung.bronchial smooth muscle cell,10578,1388,0.195,0.646,0.09,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Lung::B cell,Lung.B cell,8856,283,0.244,0.597,0.138,partial,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::epithelial cell of proximal tubule,Kidney.epithelial cell of proximal tubule,10214,1570,0.146,0.577,0.074,partial,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+"Lung::CD4-positive, alpha-beta T cell","Lung.CD4-positive, alpha-beta T cell",6043,332,0.342,0.672,0.087,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)
+Kidney::kidney cortex artery cell,Kidney.kidney cortex artery cell,8046,73,0.326,0.781,0.164,agree,paper continuous-age coef vs our M2 dichotomous log2FC (3m vs 18m)

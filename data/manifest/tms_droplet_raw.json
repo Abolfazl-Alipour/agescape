@@ -1,11 +1,13 @@
 {
   "filename": "tms_droplet_raw.h5ad",
-  "url": "https://cellxgene.cziscience.com/collections/0b9d8a04-bb9d-44da-aa27-405c9245e770",
-  "collection_id": "0b9d8a04-bb9d-44da-aa27-405c9245e770",
-  "dataset_version_id": "pending_M4_confirmation",
-  "schema_version": "3.0.0",
+  "url": "https://cellxgene.cziscience.com/collections/0b9d8a04-bb9d-44da-aa27-705bb65b54eb",
+  "collection_id": "0b9d8a04-bb9d-44da-aa27-705bb65b54eb",
+  "dataset_version_id": "084058cc-4f17-43ce-b14e-1278df074013",
+  "schema_version": "7.1.0",
   "size_bytes": 4056529818,
   "sha256": "86e45e88f9c475253792f1bbcdf5851a5be0ef35da72fced607ed261aebc099d",
   "downloaded": "2026-10-11T00:00:00Z",
-  "notes": "Local origin: /home/reza/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad. Apparent source: CZ CELLxGENE Tabula Muris Senis droplet raw object. Collection/dataset UUID and version confirmation scheduled for M4 CELLxGENE query. OS: Ubuntu 24.04.3 LTS (noble), glibc 2.39."
+  "notes": "Local origin: /home/reza/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad. Apparent source: CZ CELLxGENE Tabula Muris Senis droplet raw object. Collection/dataset UUID and version confirmation scheduled for M4 CELLxGENE query. OS: Ubuntu 24.04.3 LTS (noble), glibc 2.39.",
+  "dataset_id": "48b37086-25f7-4ecd-be66-f5bb378e3aea",
+  "ids_confirmed": "2026-10-14 via curation API"
 }

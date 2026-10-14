@@ -1,4 +1,4 @@
-species,common_name,max_lifespan_years,source
-Mus musculus,Mouse,4.0,AnAge database build 14
-Heterocephalus glaber,Naked mole-rat,31.0,AnAge database build 14 (Buffenstein 2008)
-Homo sapiens,Human,122.5,AnAge database build 14 (GRG / Guinness)
+,common_name,max_lifespan_years,source
+Homo sapiens,Human,122.5,"AnAge official TSV export (genomics.senescence.info/species/dataset.zip), build per release.html, downloaded 2026-10-14"
+Heterocephalus glaber,Naked mole-rat,31,"AnAge official TSV export (genomics.senescence.info/species/dataset.zip), build per release.html, downloaded 2026-10-14"
+Mus musculus,House mouse,4,"AnAge official TSV export (genomics.senescence.info/species/dataset.zip), build per release.html, downloaded 2026-10-14"

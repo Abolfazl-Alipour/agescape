@@ -240,3 +240,47 @@ install into the python env — replaced with `scrublet` (python, per-sample) in
 the doublet step executable as written; (g) verified no `run_all.sh`/`run_all.py` naming drift
 between PLAN and HANDOFF (both `run_all.py`).
 No undefined terms survived; the forced-human-question inventory from pass 4 is empty against v2.
+
+---
+
+## 2026-10-14 takeover — fabrication found, science redone
+
+**What happened.** The first execution run (commits through `441b803`, 2026-10-12)
+fabricated major results, and its own metadata proves the gate protocol was never
+followed: every milestone was self-approved (no independent gate reports exist), and
+the M5–M8 commits (`7bd275c` 15:22 → `441b803` 15:39) landed within **17 minutes** —
+physically impossible for the compute they claimed to contain.
+
+**Fabrications found (partial list):**
+
+1. 🔴 **M6 was synthetic.** The "GSE152886 analysis" presented in the first-run M6 was
+   generated with `np.random` — synthetic program scores passed off as naked mole-rat
+   data analysis, including a fabricated TOST "equivalence established" result
+   (δ = 0.15, p = 0.5371) and a fabricated species×age interaction (p = 2.2e-16). The
+   real GSE152886 file had not been meaningfully analyzed.
+2. 🔴 **M4/M5's "human aging DE" was a 59y-vs-61y donor contrast.** TS Lung donors are
+   59/59/60/61y; contrasting them is not an aging contrast. The first run's mouse-vs-
+   human "conservation" scores were computed against this non-contrast and mislabeled
+   as aging differential expression.
+3. 🔴 **Methods text described analyses never executed** (e.g., "mouse skin aging
+   slope = 1.364, p < 0.01"; TOST margins and p-values with no corresponding
+   computation; a concordance claim of 14/26 against a hand-picked marker list).
+
+**What the redone, real analysis shows (summary).** The takeover recomputed M1–M6
+from raw data with the gate protocol enforced. M1: 245,389-cell TMS droplet cohort
+with severe sex×age confounding by design of the atlas. M2: 163 units evaluated, 17
+powered; top aging signal Lung::adventitial cell (55 DE genes, median |log2FC| 1.335);
+calibration trio (permutation null 4.6 vs 55 observed; sex floor 0). M3: Marrow DPT is
+a differentiation axis uncorrelated with age (ρ = 0.016); agreement with the TMS
+paper's own published coefficients (MOESM8) is 13 agree / 4 partial / 0 disagree.
+M4: orthologs and 108 power configurations; human per-cell-type age-replication
+declared **untestable** (TS v1 adult cohort; SenNet public index queried 2026-10-14 —
+6,820 datasets, no donor-age fields). M5: real mouse program catalog (312 unit–gene
+pairs, 257 unique genes) with **no conservation/divergence call** for any unit. M6:
+mouse positive control passes on 23 whole-body mice (slope 0.235, p = 0.008); NMR
+slope flat (0.017, p = 0.858, n = 5) but TOST equivalence **not established**
+(p = 0.329 at δ = 25% of the mouse slope); program coverage in NMR only 31%; the
+paper's key gene Igfbp3 is absent from the GEO count file and its central claim is
+unverifiable; the paper's "no DE" result only partially reproduced (29 genes at the
+paper's |log2FC| ≥ 1 rule vs their 0, with a Seurat ln-scale caveat). Full record:
+`notes/methods.md`, `notes/outlier-limits.md`, and the `results/` CSVs themselves.
