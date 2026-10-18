@@ -118,8 +118,13 @@ def main():
         name = Path(nb).stem
         runtimes[f"nb_{name}"] = run_step(f"Execute {nb}", nbconvert_cmd(nb))
 
+    runtimes["export_app_data"] = run_step(
+        "Export app data (Spec v2)",
+        [PYTHON_BIN, "scripts/export_app_data.py"],
+    )
+
     runtimes["check_app_assets"] = run_step(
-        "Check app assets",
+        "Check app assets (Spec v2 105 anchors)",
         [PYTHON_BIN, "scripts/check_app_assets.py"],
     )
 

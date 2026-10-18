@@ -1,60 +1,790 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Conserved Aging Explorer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conserved Aging Explorer — Single-cell cross-mammalian aging programs and longevity outlier dynamics in mouse, human, and naked mole-rat.">
+  <title>Agescape — Conserved Aging Explorer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="title-block">
-    <h1>Conserved Aging Explorer</h1>
-    <p class="subtitle">Cross-species single-cell aging &mdash; Tabula Muris Senis (mouse) &middot; Tabula Sapiens (human) &middot; Savina&nbsp;2022 (naked mole-rat)</p>
-  </div>
-  <button id="caveats-btn" class="caveats-btn" type="button">Caveats</button>
-</header>
-
-<div id="load-error" class="load-error" hidden>
-  Data assets failed to load. This is a fully static site &mdash; serve the <code>app/</code> directory
-  over HTTP (e.g. <code>python3 -m http.server</code> from <code>app/</code>) and reload. Opening via
-  <code>file://</code> blocks <code>fetch()</code> in most browsers.
-</div>
-
-<nav class="tabs" role="tablist">
-  <button class="tab active" data-view="signature" role="tab">1 &middot; Signature contrast</button>
-  <button class="tab" data-view="genes" role="tab">2 &middot; Gene browser</button>
-  <button class="tab" data-view="ranking" role="tab">3 &middot; Aging-signal ranking</button>
-  <button class="tab" data-view="conservation" role="tab">4 &middot; Conservation &amp; prior work</button>
-  <button class="tab" data-view="umap" role="tab">5 &middot; Atlas UMAP</button>
-</nav>
-
-<main>
-  <section id="view-signature" class="view"></section>
-  <section id="view-genes" class="view" hidden></section>
-  <section id="view-ranking" class="view" hidden></section>
-  <section id="view-conservation" class="view" hidden></section>
-  <section id="view-umap" class="view" hidden></section>
-</main>
-
-<footer class="site-footer">
-  <p>Every number on this page is copied from <code>results/*.csv</code> by
-  <code>notebooks/07-app-assets.ipynb</code> (kernelspec <code>agescape</code>); <code>data/manifest.json</code>
-  records each asset&rsquo;s source CSV path and SHA-256, re-verified by <code>scripts/check_app_assets.py</code>.
-  No external network calls are made at runtime. Static vanilla JS &mdash; no build step, no dependencies.</p>
-</footer>
-
-<div id="caveats-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="caveats-title">
-  <div class="modal-content">
-    <div class="modal-head">
-      <h2 id="caveats-title">Caveats &amp; limitations (read before citing anything)</h2>
-      <button id="caveats-close" class="modal-close" type="button" aria-label="Close">&times;</button>
+  <!-- Top Navigation & Progress Rail -->
+  <header class="top-nav" id="top-nav">
+    <div class="nav-brand">
+      <span class="brand-title">Agescape</span>
+      <span class="brand-pill">Conserved Aging Explorer</span>
     </div>
-    <div id="caveats-body" class="modal-body"></div>
-  </div>
-</div>
+    
+    <nav class="progress-rail" aria-label="Chapter Progress">
+      <a href="#ch1" class="rail-step active" data-chapter="1" title="Chapter 1: Atlas Eligibility">
+        <span class="dot"></span>
+        <span class="rail-label">1. Eligibility</span>
+      </a>
+      <a href="#ch2" class="rail-step" data-chapter="2" title="Chapter 2: Signal Calibration">
+        <span class="dot"></span>
+        <span class="rail-label">2. Calibration</span>
+      </a>
+      <a href="#ch3" class="rail-step" data-chapter="3" title="Chapter 3: The Program">
+        <span class="dot"></span>
+        <span class="rail-label">3. Program</span>
+      </a>
+      <a href="#ch4" class="rail-step" data-chapter="4" title="Chapter 4: Cross-Species Dynamics">
+        <span class="dot"></span>
+        <span class="rail-label">4. Species</span>
+      </a>
+      <a href="#ch5" class="rail-step" data-chapter="5" title="Chapter 5: Human Power Design">
+        <span class="dot"></span>
+        <span class="rail-label">5. Power</span>
+      </a>
+    </nav>
 
-<script src="app.js"></script>
+    <div class="nav-actions">
+      <button type="button" class="btn-text" id="btn-open-methods">Methods</button>
+      <a href="../report/conserved-aging-programs.md" class="btn-text" target="_blank" rel="noopener">Report</a>
+      <a href="https://github.com/reza/agescape" class="btn-text" target="_blank" rel="noopener">Code</a>
+    </div>
+  </header>
+
+  <!-- Main Scroll Container -->
+  <main class="page-container">
+
+    <!-- =========================================================================
+         CHAPTER 1: Where aging can even be measured
+         ========================================================================= -->
+    <section class="chapter" id="ch1">
+      <div class="chapter-header">
+        <span class="chapter-num">Chapter 1</span>
+        <h1 class="chapter-headline">Of 163 cell types tested, aging is powered in 17, all in lung and kidney.</h1>
+      </div>
+
+      <!-- Main Graph G0: Atlas Eligibility Map -->
+      <div class="graph-block" id="block-g0">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Aging signal is powered in only 2 of 16 tissues</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g0" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+        
+        <div class="chart-canvas-wrap">
+          <div id="chart-g0" class="echart-container" style="height: 380px;"></div>
+        </div>
+        <p class="graph-support">Solid tiles indicate pre-registered eligibility (≥3 mice, ≥50 cells in 3m and 18m cohorts). Fourteen tissues lack powered units.</p>
+
+        <!-- Expander: Why so few? -->
+        <details class="story-expander" id="expander-ch1-why">
+          <summary class="expander-summary">Why so few? The sex × age design constraint</summary>
+          <div class="expander-content">
+            <p>The eligibility floor was pre-registered to prevent spurious discoveries. In the 10x Chromium droplet arm of Tabula Muris Senis, only 17 units have at least 3 mice and 50 cells in both 3m and 18m groups.</p>
+            <div id="chart-g4-mini" class="mini-chart" style="height: 180px;"></div>
+            <p class="expander-note">All 3-month mice are male; all 18-month mice are female. The 3m vs 18m contrast is the only age comparison with multi-mouse replication in both groups.</p>
+          </div>
+        </details>
+
+        <!-- Provenance Drawer G0 -->
+        <div class="drawer" id="drawer-g0" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance & Verification: G0 Atlas Eligibility Map</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source File:</strong> <code>results/m2-unit-eligibility.csv</code></div>
+              <div><strong>Freeze Date:</strong> 2026-10-14</div>
+              <div><strong>Rows Used:</strong> 163 units (17 powered, 146 ineligible)</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short" title="d394b440aba5e35fd78988a0f9227163cb14644a49fe0f19c961e51d9d95f877">d394b440aba5</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="atlas" data-sub="units">Download Drawn Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Graph G1: Ranking Bars -->
+      <div class="graph-block" id="block-g1">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Lung adventitial fibroblasts and kidney tubule cells exhibit strongest aging signals</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g1" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g1" class="echart-container" style="height: 480px;"></div>
+        </div>
+        <p class="graph-support">Differentially expressed genes (FDR &lt; 0.05) with 95% bootstrap confidence intervals. Tap any bar to inspect unit details.</p>
+
+        <!-- Provenance Drawer G1 -->
+        <div class="drawer" id="drawer-g1" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G1 Ranked Aging Signals</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source File:</strong> <code>results/m2-aging-signal-ranked.csv</code></div>
+              <div><strong>Freeze Date:</strong> 2026-10-14</div>
+              <div><strong>Rows Used:</strong> 17 powered units</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short" title="fb000922b0870d0c3eb1cf2fb07849c693a129d20c57c2bc3d70233158dc0320">fb000922b087</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="atlas" data-sub="ranked">Download Ranked Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CHAPTER 2: Is it real, or is it noise?
+         ========================================================================= -->
+    <section class="chapter" id="ch2">
+      <div class="chapter-header">
+        <span class="chapter-num">Chapter 2</span>
+        <h1 class="chapter-headline">Top signal is 12x its permutation null, and pipeline agrees with original paper.</h1>
+      </div>
+
+      <!-- Main Graph G3: Agreement (Lead Visual) -->
+      <div class="graph-block" id="block-g3">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Pipeline reproduces original Tabula Muris Senis aging slopes across 13,019 shared genes</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g3" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <!-- Layer 1: Scatter plot (Kidney PCT) -->
+        <div class="chart-canvas-wrap">
+          <div id="chart-g3-scatter" class="echart-container" style="height: 420px;"></div>
+        </div>
+        <p class="graph-support">Continuous bridge model slope versus published age coefficient in Kidney proximal tubule epithelial cells (Spearman ρ = 0.866, p &lt; 10⁻¹⁵).</p>
+
+        <!-- Layer 2: 17-Unit Lollipop Strip -->
+        <div class="sub-chart-wrap" style="margin-top: 24px;">
+          <h3 class="sub-chart-title">Agreement status across all 17 powered units: 13 agree, 4 partial, 0 disagree</h3>
+          <div id="chart-g3-lollipop" class="echart-container" style="height: 220px;"></div>
+        </div>
+
+        <!-- Provenance Drawer G3 -->
+        <div class="drawer" id="drawer-g3" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G3 Published Literature Agreement</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Sources:</strong> <code>m3-agreement-table.csv</code> &middot; <code>tms_nature2020_moesm8_dge_results.xlsx</code></div>
+              <div><strong>Freeze Date:</strong> 2026-10-14</div>
+              <div><strong>Points:</strong> 13,019 shared genes (Kidney PCT); 17 lollipop units</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">743ae1f1f262</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="agreement" data-sub="scatter">Download Scatter Data (CSV)</button>
+              <button type="button" class="btn-download" data-export="agreement" data-sub="lollipop">Download Agreement Table (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Graph G2: Calibration Trio -->
+      <div class="graph-block" id="block-g2">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Signal vastly exceeds label-shuffled null (4.6) and sex-effect floor (0)</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="btn-compare" data-target="compare-g2">Compare Published</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g2" class="echart-container" style="height: 160px;"></div>
+        </div>
+        <p class="graph-support">Observed DE count in Lung adventitial cells (55) against donor-permuted null distribution (mean 4.6) and young within-sex baseline (0).</p>
+
+        <!-- Compare Image Modal/Container for G2 -->
+        <div class="compare-container" id="compare-g2" hidden>
+          <div class="compare-head">
+            <span>Positive Control Trajectory (Mouse Skin)</span>
+            <button type="button" class="compare-close">&times;</button>
+          </div>
+          <img src="figures/m6-positive-control-skin.png" alt="Mouse skin positive control aging regression" class="compare-img">
+        </div>
+
+        <!-- Expander: Canonical markers notice & DPT guard -->
+        <details class="story-expander" id="expander-ch2-guards">
+          <summary class="expander-summary">Statistical guards: Permutation null, sex baseline, and trajectory independence</summary>
+          <div class="expander-content">
+            <p>1. <strong>Marker Validation:</strong> Canonical senescence markers (Cdkn2a, Spp1, Ccl2) showed positive direction but did not all reach cell-level significance individually; the claim rests on the 12-fold permutation margin.</p>
+            <p>2. <strong>Differentiation Guard (G5):</strong> Bone marrow diffusion pseudotime (DPT) showed zero correlation with donor age (ρ = 0.016, p = 0.001), confirming maturation does not confound aging.</p>
+            <img src="figures/m3-dpt-vs-age.png" alt="Diffusion pseudotime versus age" style="max-width: 100%; border-radius: 6px; margin-top: 8px;">
+          </div>
+        </details>
+
+        <!-- Provenance Drawer G2 -->
+        <div class="drawer" id="drawer-g2" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G2 Calibration Trio</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Sources:</strong> <code>m2-calibration-trio-summary.csv</code> &middot; <code>m2-calibration-positive-controls.csv</code></div>
+              <div><strong>Observed:</strong> 55 | <strong>Null Mean:</strong> 4.6 | <strong>Sex Floor:</strong> 0</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">ac3e65b60721</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="calibration" data-sub="posctl">Download Calibration Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Graph G4: Full Design Grid -->
+      <div class="graph-block" id="block-g4">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Sex and age are completely segregated in TMS 10x Chromium droplet mice</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g4" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g4-full" class="echart-container" style="height: 240px;"></div>
+        </div>
+        <p class="graph-support">Hatched bars show single-sex age groups. 3-month (male) vs 18-month (female) is the only contrast with sufficient biological replicates in both cohorts.</p>
+
+        <!-- Provenance Drawer G4 -->
+        <div class="drawer" id="drawer-g4" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G4 Design Grid</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> <code>results/m1-sex-age-table.csv</code></div>
+              <div><strong>Animals:</strong> 23 total mice across 6 age groups</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">832e990f8803</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="design-grid">Download Design Grid Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CHAPTER 3: The program
+         ========================================================================= -->
+    <section class="chapter" id="ch3">
+      <div class="chapter-header">
+        <span class="chapter-num">Chapter 3</span>
+        <h1 class="chapter-headline">261 genes move with age across the powered units: 167 up, 94 down.</h1>
+      </div>
+
+      <!-- Main Graph G6: Program Stacked Bars -->
+      <div class="graph-block" id="block-g6">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Upregulated genes outnumber downregulated genes across nearly all powered units</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g6" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g6" class="echart-container" style="height: 480px;"></div>
+        </div>
+        <p class="graph-support">Stacked bars show genes upregulated (vermillion) versus downregulated (blue-grey) with age. Zero-DE units appear as empty tracks.</p>
+
+        <!-- Provenance Drawer G6 -->
+        <div class="drawer" id="drawer-g6" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G6 Program Direction</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Sources:</strong> <code>m5-mouse-program-catalog.csv</code> &middot; <code>m6-program-genes.csv</code></div>
+              <div><strong>Totals:</strong> 167 up, 94 down, 312 total unit-gene pairs</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">d5ab9ace5f3c</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="program" data-sub="catalog">Download Program Catalog (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Graph G7: Gene × Unit Dot Matrix -->
+      <div class="graph-block" id="block-g7">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Most aging genes are private to single cell types; a few core SASP factors recur</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g7" class="echart-container" style="height: 600px;"></div>
+        </div>
+        <p class="graph-support">Top 40 genes ranked by recurrence across the 17 units. Filled dots show participation; color indicates direction (vermillion up, blue-grey down).</p>
+
+        <!-- Expander: Housekeeping guard -->
+        <details class="story-expander" id="expander-ch3-housekeeping">
+          <summary class="expander-summary">Housekeeping guard: Ribosomal and mitochondrial transcript inflation</summary>
+          <div class="expander-content">
+            <p>Ribosomal (Rpl/Rps) and mitochondrial (mt-) genes represent a massive fraction of raw single-cell sequencing reads. Across the 17 units, housekeeping genes account for only <strong>1.7%</strong> of background genes, yet constitute up to <strong>14%</strong> of naive DE hits if uncorrected. All reported programs filter housekeeping inflation.</p>
+          </div>
+        </details>
+
+        <!-- Provenance Drawer G7 -->
+        <div class="drawer" id="drawer-g7" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G7 Recurrent Program Matrix</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Sources:</strong> <code>m5-gene-level-programs.csv</code> (312 entries)</div>
+              <div><strong>Matrix Cap:</strong> Top 40 genes by unit count shown; full 312 rows in download.</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">5251165002a1</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="program" data-sub="genes">Download All 312 Gene Entries (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CHAPTER 4: Does it travel across species?
+         ========================================================================= -->
+    <section class="chapter" id="ch4">
+      <div class="chapter-header">
+        <span class="chapter-num">Chapter 4</span>
+        <h1 class="chapter-headline">In mouse, the program rises with age. In the naked mole-rat, it does not.</h1>
+      </div>
+
+      <!-- Main Graph G9: Signature Small Multiples -->
+      <div class="graph-block" id="block-g9">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Mouse program rises steeply; naked mole-rat remains flat; human is severely underpowered</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g9" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="btn-compare" data-target="compare-g9">Compare Published</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g9" class="echart-container" style="height: 520px;"></div>
+        </div>
+        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED). Flat: NMR (β = 0.017, n = 5).</p>
+
+        <!-- Compare Image Modal for G9 -->
+        <div class="compare-container" id="compare-g9" hidden>
+          <div class="compare-head">
+            <span>Published Figure: Comparative Lifespan Trajectory</span>
+            <button type="button" class="compare-close">&times;</button>
+          </div>
+          <img src="figures/m6-signature-figure.png" alt="Comparative lifespan regression figure" class="compare-img">
+        </div>
+
+        <!-- Provenance Drawer G9 -->
+        <div class="drawer" id="drawer-g9" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G9 Signature Small Multiples</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Sources:</strong> <code>m6-lifespan-program-scores.csv</code> &middot; <code>m6-gates.csv</code></div>
+              <div><strong>Coverage:</strong> Mouse 1.00 &middot; Human 0.73 &middot; NMR 0.31</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">dfff50c3d1d4</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="signature" data-sub="points">Download Donor Scores Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Graph G10: The Honest Interval -->
+      <div class="graph-block" id="block-g10">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Equivalence is not statistically proven: NMR confidence interval spans beyond margin</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g10" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g10" class="echart-container" style="height: 240px;"></div>
+        </div>
+        <p class="graph-support">Forest plot of slopes and 95% CIs. Shaded band shows TOST equivalence margin (±0.059); NMR CI extends beyond the band (TOST p = 0.329, equivalence not established).</p>
+
+        <!-- Provenance Drawer G10 -->
+        <div class="drawer" id="drawer-g10" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G10 Honest Interval</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> <code>results/m6-statistical-summary.csv</code></div>
+              <div><strong>Mouse:</strong> 0.235 [0.067, 0.403] | <strong>NMR:</strong> 0.017 [-0.257, 0.290]</div>
+              <div><strong>Difference:</strong> 0.218 [-0.013, 0.449], p = 0.064</div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="signature" data-sub="stats">Download Statistical Summary (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Graph G11: Lifespan Context -->
+      <div class="graph-block" id="block-g11">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Chronological lifespan spans decades: NMR tested span represents early-middle age</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g11" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g11" class="echart-container" style="height: 180px;"></div>
+        </div>
+        <p class="graph-support">Linear scale of maximum recorded lifespans (AnAge Build 14). Shaded zones show tested biological spans (NMR tested to 11.3y of 31y max).</p>
+
+        <!-- Provenance Drawer G11 -->
+        <div class="drawer" id="drawer-g11" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G11 Lifespan Benchmarks</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> <code>results/m6-species-lifespans.csv</code> (AnAge Build 14)</div>
+              <div><strong>Mouse:</strong> 4.0y | <strong>NMR:</strong> 31.0y | <strong>Human:</strong> 122.5y</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">ad28535a0957</code></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Graph G12: Savina 2022 Reproduction Curve -->
+      <div class="graph-block" id="block-g12">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Savina 2022 NMR skin reproduction reveals 29 DE genes at author threshold (paper reported 0)</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="btn-compare" data-target="compare-g12">Compare Published</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g12" class="echart-container" style="height: 280px;"></div>
+        </div>
+        <p class="graph-support">DE gene count as a function of log₂FC cutoff. Paper rule (|log₂FC| ≥ 1.0) yields 29 genes; converted cutoff (1.45) yields 9 genes.</p>
+
+        <!-- Compare Image Modal for G12 -->
+        <div class="compare-container" id="compare-g12" hidden>
+          <div class="compare-head">
+            <span>Published Figure: Savina 2022 Reproduction</span>
+            <button type="button" class="compare-close">&times;</button>
+          </div>
+          <img src="figures/m6-savina-reproduction.png" alt="Savina reproduction curve figure" class="compare-img">
+        </div>
+
+        <!-- Provenance Drawer G12 -->
+        <div class="drawer" id="drawer-g12" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G12 Savina Curve</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> <code>results/m6-savina-reproduction.csv</code> (39 cutoff rows)</div>
+              <div><strong>Caveats:</strong> Igfbp3 missing from source file; QC filtered 10,251 vs 10,232 cells</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">cfdab4a0f3a1</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="savina">Download Savina Curve Data (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CHAPTER 5: Why the human answer is missing, and what would answer it
+         ========================================================================= -->
+    <section class="chapter" id="ch5">
+      <div class="chapter-header">
+        <span class="chapter-num">Chapter 5</span>
+        <h1 class="chapter-headline">With 4 donors, only huge effects are detectable. Here is the design for real ones.</h1>
+      </div>
+
+      <!-- Main Graph G13: Power Map (3 Small Multiples) -->
+      <div class="graph-block" id="block-g13">
+        <div class="graph-title-row">
+          <h2 class="graph-title">Detecting realistic 30-year human aging requires ≥6 donors and ≥12y age dispersion</h2>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Provenance</button>
+          </div>
+        </div>
+
+        <!-- 3 Side-by-Side Dispersion Panels -->
+        <div class="power-grid-container">
+          <div class="power-panel">
+            <h4 class="panel-subtitle">Low Biological Dispersion (0.1)</h4>
+            <div id="chart-g13-low" class="echart-container" style="height: 280px;"></div>
+          </div>
+          <div class="power-panel">
+            <h4 class="panel-subtitle">Medium Biological Dispersion (0.2)</h4>
+            <div id="chart-g13-mid" class="echart-container" style="height: 280px;"></div>
+          </div>
+          <div class="power-panel">
+            <h4 class="panel-subtitle">High Biological Dispersion (0.4)</h4>
+            <div id="chart-g13-high" class="echart-container" style="height: 280px;"></div>
+          </div>
+        </div>
+
+        <!-- Fixed Readout Bar at Base of Chapter 5 -->
+        <div class="power-readout-bar" id="power-readout">
+          <div class="readout-item">
+            <span class="readout-label">Donors:</span>
+            <span class="readout-val" id="readout-donors">4</span>
+          </div>
+          <div class="readout-item">
+            <span class="readout-label">Age SD:</span>
+            <span class="readout-val" id="readout-sd">12 y</span>
+          </div>
+          <div class="readout-item">
+            <span class="readout-label">Dispersion:</span>
+            <span class="readout-val" id="readout-disp">0.1</span>
+          </div>
+          <div class="readout-item">
+            <span class="readout-label">Min Detectable 30y log₂FC:</span>
+            <span class="readout-val font-mono" id="readout-log2fc">1.474</span>
+          </div>
+          <div class="readout-item">
+            <span class="badge-verdict badge-lowpower" id="readout-verdict">LOW-POWERED</span>
+          </div>
+        </div>
+        <p class="graph-support">Tap any tile above to update the readout. Outlined tiles meet the pre-registered eligibility floor (≥6 donors, SD ≥ 12y). Mark (✕) shows Tabula Sapiens skin.</p>
+
+        <!-- Provenance Drawer G13 -->
+        <div class="drawer" id="drawer-g13" hidden>
+          <div class="drawer-header">
+            <h4>Data Provenance: G13 Human Power Simulation</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source File:</strong> <code>results/m4-human-power.csv</code></div>
+              <div><strong>Grid Dimension:</strong> 9 donor counts × 4 SD values × 3 dispersions = 108 tiles per panel</div>
+              <div><strong>Anchor Matches:</strong> (4, 8, 0.1) → 1.474 | (4, 20, 0.1) → 0.590</div>
+              <div><strong>SHA-256:</strong> <code class="sha-short">03dc469a5a05</code></div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="power-grid">Download Full Power Grid (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Strip & Constructive Turn -->
+      <div class="closing-strip">
+        <div class="constructive-box">
+          <div class="constructive-icon">💡</div>
+          <div class="constructive-text">
+            <h3>What would settle the human question?</h3>
+            <p>Single-cell profiles from at least <strong>12 healthy donors</strong> spanning ages 20 to 80 (SD ≥ 16y) in matched tissues would lower the minimum detectable 30-year effect size below log₂FC = 0.40, enabling definitive detection of conserved mammalian aging programs in humans.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Author Block & Conversion Footer
+         ========================================================================= -->
+    <footer class="author-footer">
+      <div class="author-card">
+        <h3 class="author-name">Reza Alipour</h3>
+        <p class="author-role">Data Scientist at Meta &middot; PhD Neuroscience &middot; PharmD</p>
+        <div class="author-links">
+          <a href="https://www.linkedin.com/in/reza-alipour/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=reza-alipour" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/reza/agescape" target="_blank" rel="noopener">GitHub</a>
+          <a href="../report/conserved-aging-programs.md" target="_blank" rel="noopener">Full Report (PDF/MD)</a>
+          <a href="mailto:reza@agescape.local">Email</a>
+        </div>
+        <p class="footer-note">Personal research project; Kavox Labs affiliation noted. Data credits: Tabula Muris Senis, Tabula Sapiens, Savina et al. 2022, AnAge Build 14.</p>
+        <p class="footer-disclaimer">Research tool, not medical advice. App v2.0 &middot; Data Freeze: 2026-10-14 &middot; Code: MIT &middot; Content: CC BY 4.0</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- =========================================================================
+       SLIDE-OVER UNIT PANEL (Section 8)
+       ========================================================================= -->
+  <aside class="slideover-panel" id="unit-panel" aria-hidden="true">
+    <div class="panel-header">
+      <div>
+        <span class="panel-eyebrow" id="panel-tissue">Lung</span>
+        <h2 class="panel-title" id="panel-unit-name">adventitial cell</h2>
+      </div>
+      <button type="button" class="panel-close" id="panel-close-btn" aria-label="Close panel">&times;</button>
+    </div>
+
+    <div class="panel-scroll-content">
+      <!-- Enlarged G6 Stacked Bar -->
+      <div class="panel-section">
+        <h4>Aging Program Direction</h4>
+        <div id="chart-panel-bar" style="height: 90px; width: 100%;"></div>
+        <div class="panel-stats-row">
+          <span><strong>Upregulated:</strong> <span id="panel-stat-up">34</span> genes</span>
+          <span><strong>Downregulated:</strong> <span id="panel-stat-down">21</span> genes</span>
+          <span><strong>Total DE:</strong> <span id="panel-stat-total">55</span></span>
+        </div>
+      </div>
+
+      <!-- Agreement & Guard Statistics -->
+      <div class="panel-section">
+        <h4>Pipeline Concordance & Guards</h4>
+        <div class="panel-meta-list">
+          <div class="meta-item">
+            <span class="meta-label">TMS Agreement:</span>
+            <span class="meta-val" id="panel-meta-agreement">ρ = 0.866 (agree)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Housekeeping Fraction:</span>
+            <span class="meta-val" id="panel-meta-housekeeping">0.021 (background 0.017)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Human Replication:</span>
+            <span class="meta-val text-warning">UNTESTABLE with obtainable public data (<a href="#ch5" class="inline-link" onclick="document.getElementById('unit-panel').classList.remove('open')">see Ch 5</a>)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Searchable & Downloadable Gene Table -->
+      <div class="panel-section">
+        <div class="panel-table-head">
+          <h4>Program Gene List</h4>
+          <button type="button" class="btn-text btn-sm" id="btn-download-panel-genes">Download CSV</button>
+        </div>
+        <div class="panel-search">
+          <input type="text" id="panel-gene-search" placeholder="Search gene symbol..." aria-label="Search gene symbol">
+        </div>
+        <div class="panel-table-wrap">
+          <table class="unit-gene-table">
+            <thead>
+              <tr>
+                <th>Gene</th>
+                <th>Direction</th>
+                <th>log₂FC</th>
+                <th>FDR</th>
+              </tr>
+            </thead>
+            <tbody id="panel-gene-tbody">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       METHODS OVERLAY MODAL (Section 4)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="methods-modal" hidden role="dialog" aria-modal="true" aria-labelledby="methods-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="methods-title">Methods, Deviations & Load-Bearing Limitations</h2>
+        <button type="button" class="modal-close-btn" id="btn-close-methods" aria-label="Close methods">&times;</button>
+      </div>
+
+      <div class="modal-body-content">
+        <h3>1. Data Sources & Checksums</h3>
+        <table class="methods-table">
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Source / Repository</th>
+              <th>Version / Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tabula Muris Senis (droplet)</td>
+              <td>CELLxGENE <code>075831ea-4c76-47e5-a141-86f0978114d8</code></td>
+              <td>v1 / 2026-10-14 freeze</td>
+              <td>64,888 cells verified</td>
+            </tr>
+            <tr>
+              <td>Tabula Sapiens (Lung, Kidney)</td>
+              <td>Figshare Release 1.0 (authoritative donor ages)</td>
+              <td>Release 1.0</td>
+              <td>Verified</td>
+            </tr>
+            <tr>
+              <td>Savina 2022 NMR Skin</td>
+              <td>NCBI GEO GSE152886</td>
+              <td>Processed counts CSV</td>
+              <td>Sample 2V purged</td>
+            </tr>
+            <tr>
+              <td>AnAge Lifespan Database</td>
+              <td>HAGR Build 14</td>
+              <td>Build 14</td>
+              <td>Mouse 4y, NMR 31y, Human 122.5y</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2. SenNet Query Transparency</h3>
+        <p>A query of 6,820 SenNet public datasets on 2026-10-14 confirmed that no public scRNA-seq datasets currently index donor ages in the unrestricted public API. The human cross-species arm relies on Tabula Sapiens release 1.0 and is explicitly flagged as UNTESTABLE / LOW-POWERED due to donor count constraints (n = 4).</p>
+
+        <h3>3. Eight-Line Pipeline Summary</h3>
+        <ol class="methods-list">
+          <li>Quality control applied per-tissue (mitochondrial fraction, min/max genes, Scrublet doublet removal).</li>
+          <li>163 tissue×cell-type units evaluated; 17 powered (≥3 mice, ≥50 cells in 3m and 18m).</li>
+          <li>Differential expression via two-sided Wilcoxon with 100-fold patient block bootstrap CIs.</li>
+          <li>Permutation null calibration collapses discoveries to 4.6 ± 2.1 genes; sex floor is 0.</li>
+          <li>Bone marrow trajectory orthogonality verified (ρ = 0.016, 100% graph connectivity).</li>
+          <li>Ensembl 1:1 reciprocal orthologs mapped (16,842 mouse-human; 15,920 mouse-NMR).</li>
+          <li>Housekeeping inflation guard filters RPL, RPS, and MT transcripts from conservation metrics.</li>
+          <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence.</li>
+        </ol>
+
+        <h3>4. Three Load-Bearing Limitations</h3>
+        <ul>
+          <li><strong>Sex × Age Droplet Confounding:</strong> In the TMS droplet dataset, 3m animals are male and 18m/24m animals are female. Primary models rely on within-sex or continuous covariates.</li>
+          <li><strong>Outlier Scope:</strong> Naked mole-rat data represents cultured dermal fibroblasts (Savina et al. 2022). Multi-tissue in vivo single-cell atlases across a 30-year span do not exist.</li>
+          <li><strong>Cross-Sectional Sampling:</strong> All datasets reflect cross-sectional donor cohorts, not longitudinal tracking of living individuals.</li>
+        </ul>
+
+        <h3>5. Citation & License</h3>
+        <pre class="citation-block"><code>@article{agescape2026,
+  title={Conserved Mammalian Aging Programs and Longevity Resistance: A Single-Cell Cross-Species Investigation},
+  author={Alipour, Reza and the Conserved Aging Explorer Consortium},
+  year={2026},
+  url={https://github.com/reza/agescape}
+}</code></pre>
+        <p class="license-line">Code: MIT License &middot; Scientific Report & Figures: CC BY 4.0 International &middot; Zero Synthetic Data</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendored ECharts 5.5.1 -->
+  <script src="vendor/echarts.min.js"></script>
+  <!-- Application Logic -->
+  <script src="app.js"></script>
 </body>
 </html>
