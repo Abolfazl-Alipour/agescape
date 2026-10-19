@@ -1,5 +1,5 @@
 /**
- * Agescape Webapp (Spec v2.0) — Main Application Engine
+ * Agescape Webapp (Spec v2.0): Main Application Engine
  * Renders G0 through G13 via Vendored ECharts 5.5.1 + Direct DOM/SVG
  */
 
@@ -12,7 +12,7 @@
     selectedUnit: null,
     powerReadout: {
       donors: 4,
-      sd: 12,
+      sd: 8,
       dispersion: 0.1,
       min_30y_log2fc: 1.474,
       verdict: "LOW-POWERED"
@@ -31,7 +31,9 @@
     tissueKidney: "#0d9488",
     tissueNeutral: "#334155",
     tostBand: "rgba(234, 88, 12, 0.18)",
-    tostStroke: "rgba(234, 88, 12, 0.6)"
+    tostStroke: "rgba(234, 88, 12, 0.6)",
+    verdictAgree: "#0284c7",
+    verdictPartial: "#f59e0b"
   };
 
   // --------------------------------------------------------------------------
@@ -330,7 +332,7 @@
     if (agrItem) {
       document.getElementById("panel-meta-agreement").textContent = `ρ = ${agrItem.spearman_rho.toFixed(3)} (${agrItem.verdict})`;
     } else {
-      document.getElementById("panel-meta-agreement").textContent = "—";
+      document.getElementById("panel-meta-agreement").textContent = "N/A";
     }
 
     if (unitCat) {
@@ -419,8 +421,8 @@
       <tr>
         <td><strong>${g.gene}</strong></td>
         <td><span style="color:${g.direction === 'up' ? PALETTE.dirUp : '#94a3b8'}">${g.direction.toUpperCase()}</span></td>
-        <td class="font-mono">${g.log2fc !== null ? g.log2fc.toFixed(2) : "—"}</td>
-        <td class="font-mono">${g.fdr !== null ? g.fdr.toFixed(4) : "—"}</td>
+        <td class="font-mono">${g.log2fc !== null ? g.log2fc.toFixed(2) : "N/A"}</td>
+        <td class="font-mono">${g.fdr !== null ? g.fdr.toFixed(4) : "N/A"}</td>
       </tr>
     `).join("");
   }
@@ -672,18 +674,18 @@
     state.activeCharts["g3-scatter"] = chart;
 
     const sc = agr.scatter;
-    const pts = sc.points.map(p => [p.ours_log2fc, p.paper_coef, p.gene]);
+    const pts = sc.points.map(p => [p.ours_bridge_slope, p.paper_coef, p.gene]);
 
     chart.setOption({
       tooltip: {
         trigger: "item",
         formatter: (params) => {
           const d = params.data;
-          return `<strong>${d[2]}</strong><br>Our Slope / log₂FC: ${d[0].toFixed(4)}<br>Paper Age Coef: ${d[1].toFixed(4)}`;
+          return `<strong>${d[2]}</strong><br>Our Bridge Slope (per month): ${d[0].toFixed(4)}<br>Paper Age Coef: ${d[1].toFixed(4)}`;
         }
       },
       title: {
-        text: `Kidney PCT — Spearman ρ = ${sc.rho.toFixed(3)} across ${sc.n.toLocaleString()} genes`,
+        text: `Kidney PCT: Spearman rho = ${sc.rho.toFixed(3)} across ${sc.n.toLocaleString()} genes`,
         left: 60,
         top: 10,
         textStyle: { color: "#38bdf8", fontSize: 13, fontWeight: 600 }
@@ -791,9 +793,9 @@
           type: "scatter",
           symbolSize: 14,
           data: [
-            { value: [cal.sex_floor, 0], name: "Sex-effect floor: 0", itemStyle: { color: "#64748b" } },
-            { value: [cal.perm_mean, 0], name: "Permutation null mean: 4.6", itemStyle: { color: "#f59e0b" } },
-            { value: [cal.observed, 0], name: "Observed signal: 55", itemStyle: { color: "#38bdf8" } }
+            { value: [cal.sex_floor, 0], name: "Sex effect within 3 month only: 0", itemStyle: { color: "#64748b" } },
+            { value: [cal.perm_mean, 0], name: "Label-permutation null, mean: 4.6", itemStyle: { color: "#f59e0b" } },
+            { value: [cal.observed, 0], name: "Observed, 3 month vs 18 month: 55", itemStyle: { color: "#38bdf8" } }
           ],
           label: {
             show: true,
@@ -940,7 +942,7 @@
     chart.setOption({
       title: [
         { text: `Mouse (slope = ${arms.mouse_wb.slope.toFixed(3)}, p = ${arms.mouse_wb.p.toFixed(3)}, n = ${arms.mouse_wb.n})`, left: "3%", top: "2%", textStyle: { color: PALETTE.mouse, fontSize: 12 } },
-        { text: `Human (slope = ${arms.human_skin.slope.toFixed(3)}, n = ${arms.human_skin.n}) — LOW-POWERED`, left: "3%", top: "35%", textStyle: { color: PALETTE.human, fontSize: 12 } },
+        { text: `Human (slope = ${arms.human_skin.slope.toFixed(3)}, n = ${arms.human_skin.n}): LOW-POWERED`, left: "3%", top: "35%", textStyle: { color: PALETTE.human, fontSize: 12 } },
         { text: `Naked Mole-Rat (slope = ${arms.nmr.slope.toFixed(3)}, p = ${arms.nmr.p.toFixed(3)}, n = ${arms.nmr.n})`, left: "3%", top: "68%", textStyle: { color: PALETTE.nmr, fontSize: 12 } }
       ],
       grid: [
@@ -1237,7 +1239,15 @@
         itemStyle: {
           borderWidth: 1.5,
           borderColor: (p) => p.data[4] ? "#38bdf8" : "rgba(0,0,0,0.4)" // Outlined if meets floor
-        }
+        },
+        markPoint: Math.abs(dispVal - 0.1) < 0.01 ? {
+          data: [{
+            coord: [0, 0],
+            value: "✕",
+            itemStyle: { color: "rgba(0,0,0,0)" },
+            label: { show: true, formatter: "✕", color: "#f87171", fontWeight: "bold", fontSize: 14 }
+          }]
+        } : undefined
       }]
     });
 

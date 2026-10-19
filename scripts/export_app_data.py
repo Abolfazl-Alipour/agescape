@@ -11,7 +11,7 @@ previous app version. Run:
 
 Source-of-truth rule: committed files win over contract guesses. Two contract
 corrections are applied here and recorded (dated) in app/DATA_CONTRACT.md:
-  1. agreement.json scatter `ours_log2fc` is sourced from the M3 continuous bridge
+  1. agreement.json scatter `ours_bridge_slope` is sourced from the M3 continuous bridge
      slope (results/m3-continuous-bridge-model.csv) joined to the paper age
      coefficient — that is the join that produces the pinned anchor (n=13,019,
      rho=0.866; see scripts/run_m3_agreement.py, which prefers the bridge slope
@@ -66,6 +66,7 @@ NEW_DATA_FILES = [
     "savina.json",
     "power-grid.json",
     "provenance.json",
+    "ranking.json",
 ]
 
 # ---------------------------------------------------------------- helpers
@@ -227,11 +228,11 @@ def export_agreement(s, prov, paper_coef):
     n = len(m)
     rho = float(spearmanr(m["paper_coef"], m["slope_per_month"]).statistic)
     m3row = ag[ag["unit"] == PCT_UNIT].iloc[0]
-    points = [{"gene": g, "ours_log2fc": fnum(round(float(v["slope_per_month"]), 5)),
+    points = [{"gene": g, "ours_bridge_slope": fnum(round(float(v["slope_per_month"]), 5)),
                "paper_coef": fnum(round(float(v["paper_coef"]), 5))}
               for g, v in m.sort_index().iterrows()]
     rho = float(spearmanr([p["paper_coef"] for p in points],
-                          [p["ours_log2fc"] for p in points]).statistic)
+                          [p["ours_bridge_slope"] for p in points]).statistic)
     assert abs(rho - 0.866) < 0.01, rho
     assert round(rho, 3) == fnum(m3row["spearman_rho"]) == 0.866, (rho, m3row["spearman_rho"])
 
@@ -453,7 +454,7 @@ def export_power_grid(s, prov):
         "sds": sds,
         "dispersions": disps,
         "tiles": tiles,
-        "ts_marker": {"donors": 4, "sd": 12, "label": "Tabula Sapiens skin: 4 donors"},
+        "ts_marker": {"dispersion": 0.1, "donors": 4, "label": "Tabula Sapiens skin: 4 donors, SD 8y", "min_30y_log2fc": 1.474, "sd": 8, "tile_x": 0, "tile_y": 0},
         "anchors": {"4_8_low": anchors["4_8_low"], "4_20_low": anchors["4_20_low"]},
     }
 
@@ -478,8 +479,16 @@ def main():
 
     prov: dict[str, list] = {}
     sizes = {}
-    sizes["atlas.json"] = write_json("atlas.json", export_atlas(s, prov))
-    sizes["calibration.json"] = write_json("calibration.json", export_calibration(s, prov))
+    atlas_payload = export_atlas(s, prov)
+    cal_payload = export_calibration(s, prov)
+    sizes["atlas.json"] = write_json("atlas.json", atlas_payload)
+    sizes["ranking.json"] = write_json("ranking.json", {
+        "ranked": atlas_payload["ranked"],
+        "calibration": cal_payload,
+        "n_units_evaluated": len(atlas_payload["units"]),
+        "n_units_powered": len(atlas_payload["ranked"]),
+    })
+    sizes["calibration.json"] = write_json("calibration.json", cal_payload)
     sizes["agreement.json"] = write_json("agreement.json", export_agreement(s, prov, paper_coef))
     sizes["design-grid.json"] = write_json("design-grid.json", export_design_grid(s, prov))
     sizes["program.json"] = write_json("program.json", export_program(s, prov))

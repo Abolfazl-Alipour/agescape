@@ -95,7 +95,7 @@ def main() -> int:
     check("scatter unit", "Kidney::kidney proximal convoluted tubule epithelial cell", sc["unit"])
     check("scatter n == 13019", 13019, sc["n"])
     check("scatter points == 13019", 13019, len(sc["points"]))
-    rho_re = spearmanr([p["ours_log2fc"] for p in sc["points"]],
+    rho_re = spearmanr([p["ours_bridge_slope"] for p in sc["points"]],
                        [p["paper_coef"] for p in sc["points"]]).statistic
     check("scatter rho field == 0.866", 0.866, sc["rho"])
     check("recomputed rho rounds to 0.866", 0.866, round(f(rho_re), 3))
@@ -230,6 +230,111 @@ def main() -> int:
     sizes = {p.name: p.stat().st_size for p in DATA.glob("*.json")}
     check("every file < 1 MB", True, all(sz < 1_000_000 for sz in sizes.values()))
     check("total app/data < 5 MB", True, sum(sizes.values()) < 5_000_000)
+
+    # ---- semantic anchors (S1 - S4)
+    # S1. Unit-to-count pairs: (Lung::adventitial cell, 55) ranks above (Kidney PCT, 53) in ranking.json, calibration names lung unit
+    ranking_data = j.get("ranking", j.get("atlas", {}))
+    ranked_list = ranking_data.get("ranked", [])
+    s1_rank_pair = False
+    if len(ranked_list) >= 2:
+        top1 = ranked_list[0]
+        top2 = ranked_list[1]
+        s1_rank_pair = (
+            top1["unit"] == "Lung::adventitial cell"
+            and top1["n_de_genes"] == 55
+            and top2["unit"] == "Kidney::kidney proximal convoluted tubule epithelial cell"
+            and top2["n_de_genes"] == 53
+            and top1["n_de_genes"] > top2["n_de_genes"]
+        )
+    check("S1: Lung::adventitial cell (55) ranks above Kidney PCT (53) in ranking.json", True, s1_rank_pair)
+    check("S1: calibration object names Lung::adventitial cell", "Lung::adventitial cell", j["calibration"].get("unit"))
+
+    # S2. Power preset tuple: (donors 4, age SD 8, dispersion 0.1) maps to 1.474 and LOW-POWERED; (donors 4, age SD 20, dispersion 0.1) maps to 0.59 and LOW-POWERED
+    pg = j["power-grid"]
+    tile_map = {(t["n_donors"], t["sd"], t["dispersion"]): t for t in pg["tiles"]}
+    t_4_8 = tile_map.get((4, 8, 0.1))
+    s2_4_8_ok = (
+        t_4_8 is not None
+        and t_4_8["min_30y_log2fc"] == 1.474
+        and "Low-Powered" in t_4_8.get("power_status", "")
+    )
+    check("S2: preset (donors 4, SD 8, disp 0.1) -> 1.474 & LOW-POWERED", True, s2_4_8_ok)
+
+    t_4_20 = tile_map.get((4, 20, 0.1))
+    s2_4_20_ok = (
+        t_4_20 is not None
+        and t_4_20["min_30y_log2fc"] == 0.59
+        and "Low-Powered" in t_4_20.get("power_status", "")
+    )
+    check("S2: preset (donors 4, SD 20, disp 0.1) -> 0.59 & LOW-POWERED", True, s2_4_20_ok)
+
+    # S3. Every donor-requirement statement rendered in Chapter 5 corresponds to a complete tuple present in power-grid.json
+    s3_tuples = [
+        (16, 12, 0.1, 0.491),
+        (16, 16, 0.2, 0.521),
+        (50, 12, 0.4, 0.556),
+    ]
+    s3_all_found = all(
+        (t[0], t[1], t[2]) in tile_map
+        and abs(tile_map[(t[0], t[1], t[2])]["min_30y_log2fc"] - t[3]) < 1e-4
+        for t in s3_tuples
+    )
+    check("S3: Chapter 5 donor requirement statements map to power-grid.json tuples", True, s3_all_found)
+
+    # S4. Floor constants: mouse floor rendered in Chapter 1 equals (3 mice, 50 cells);
+    # human floor rendered in Chapter 5 equals (6 donors, 12 years SD). Neither appears in other chapter's context.
+    index_html = (REPO / "app" / "index.html").read_text()
+    ch1_idx = index_html.find('id="ch1"')
+    ch2_idx = index_html.find('id="ch2"')
+    ch5_idx = index_html.find('id="ch5"')
+    footer_idx = index_html.find('class="author-footer"')
+
+    ch1_text = index_html[ch1_idx:ch2_idx] if ch1_idx != -1 and ch2_idx != -1 else ""
+    ch5_text = index_html[ch5_idx:footer_idx] if ch5_idx != -1 and footer_idx != -1 else ""
+
+    ch1_mouse_floor_ok = ("3 mice" in ch1_text and "50 cells" in ch1_text)
+    ch1_no_human_floor = ("6 donors" not in ch1_text and "12 years" not in ch1_text and "12 months" not in ch1_text)
+    ch5_human_floor_ok = ("6 donors" in ch5_text and "12 years" in ch5_text)
+    ch5_no_mouse_floor = ("3 mice" not in ch5_text and "50 cells" not in ch5_text)
+
+    check("S4: Chapter 1 mouse floor (3 mice, 50 cells) with no human floor leak", True, ch1_mouse_floor_ok and ch1_no_human_floor)
+    check("S4: Chapter 5 human floor (6 donors, 12 years SD) with no mouse floor leak", True, ch5_human_floor_ok and ch5_no_mouse_floor)
+
+    # ---- banned-phrase lint (B1 - B4) — repo app files only. Docs (paper-proto,
+    # build summary) may quote banned phrases in changelog/context; the lint's
+    # purpose is keeping user-facing app copy clean.
+    import re
+    app_js = (REPO / "app" / "app.js").read_text()
+
+    lint_targets = [
+        ("app/index.html", index_html),
+        ("app/app.js", app_js),
+    ]
+
+    # B1: "aligns with chronological age" or "tracks age" within 200 characters of "pseudotime"
+    b1_pat = re.compile(r'(?:aligns with chronological age|tracks age)[\s\S]{0,200}pseudotime|pseudotime[\s\S]{0,200}(?:aligns with chronological age|tracks age)', re.IGNORECASE)
+    b1_hits = [name for name, content in lint_targets if b1_pat.search(content)]
+    check("B1: zero pseudotime alignment/tracks age claims near pseudotime", [], b1_hits)
+
+    # B2: "complete concordance", "young-vs-young", "young vs young" (in calibration contexts), "21 other organs", "Savina et al. (2024)", "Savina et al. 2024"
+    b2_phrases = ["complete concordance", "young-vs-young", "young vs young", "21 other organs", "Savina et al. (2024)", "Savina et al. 2024"]
+    b2_hits = [f"{name}: {p}" for name, content in lint_targets for p in b2_phrases if p.lower() in content.lower()]
+    check("B2: zero complete concordance, young-vs-young, 21 other organs, Savina 2024", [], b2_hits)
+
+    # B3: "enrich", "pathway", "regulator" anywhere outside whitelisted Methods future-work
+    b3_terms = ["enrich", "pathway", "regulator"]
+    b3_hits = [f"{name}: {t}" for name, content in lint_targets for t in b3_terms if t.lower() in content.lower()]
+    check("B3: zero unbacked enrich, pathway, regulator terms", [], b3_hits)
+
+    # B4: Any usability "PASS" not accompanied by tester count, pass counts, and times
+    b4_hits = []
+    for name, content in lint_targets:
+        if "usability" in content.lower():
+            for line in content.splitlines():
+                if "PASS" in line and ("Task" in line or "task" in line or "usability" in line.lower()):
+                    if "tester" not in content.lower():
+                        b4_hits.append(f"{name}: {line.strip()}")
+    check("B4: zero usability PASS labels without external tester evidence", [], b4_hits)
 
     # ---- report
     width_a = max(len(r[0]) for r in results)

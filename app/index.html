@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Conserved Aging Explorer — Single-cell cross-mammalian aging programs and longevity outlier dynamics in mouse, human, and naked mole-rat.">
-  <title>Agescape — Conserved Aging Explorer</title>
+  <meta name="description" content="Conserved Aging Explorer: Single-cell cross-mammalian aging programs and longevity outlier dynamics in mouse, human, and naked mole-rat.">
+  <title>Agescape: Conserved Aging Explorer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,13 +70,13 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g0" class="echart-container" style="height: 380px;"></div>
         </div>
-        <p class="graph-support">Solid tiles indicate pre-registered eligibility (≥3 mice, ≥50 cells in 3m and 18m cohorts). Fourteen tissues lack powered units.</p>
+        <p class="graph-support">Of 163 tissue by cell-type units evaluated, 17 met the pre-registered mouse eligibility floor of at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast. All 17 are in Lung or Kidney. The other 146 units, spread across the other 14 tissues, did not meet the floor, so this atlas cannot support an aging call for them.</p>
 
         <!-- Expander: Why so few? -->
         <details class="story-expander" id="expander-ch1-why">
-          <summary class="expander-summary">Why so few? The sex × age design constraint</summary>
+          <summary class="expander-summary">Why so few? The sex by age design constraint</summary>
           <div class="expander-content">
-            <p>The eligibility floor was pre-registered to prevent spurious discoveries. In the 10x Chromium droplet arm of Tabula Muris Senis, only 17 units have at least 3 mice and 50 cells in both 3m and 18m groups.</p>
+            <p>The eligibility floor was pre-registered to prevent spurious discoveries. In the 10x Chromium droplet arm of Tabula Muris Senis, only 17 units have at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast.</p>
             <div id="chart-g4-mini" class="mini-chart" style="height: 180px;"></div>
             <p class="expander-note">All 3-month mice are male; all 18-month mice are female. The 3m vs 18m contrast is the only age comparison with multi-mouse replication in both groups.</p>
           </div>
@@ -92,7 +92,7 @@
             <div class="provenance-grid">
               <div><strong>Source File:</strong> <code>results/m2-unit-eligibility.csv</code></div>
               <div><strong>Freeze Date:</strong> 2026-10-14</div>
-              <div><strong>Rows Used:</strong> 163 units (17 powered, 146 ineligible)</div>
+              <div><strong>Rows Used:</strong> 163 units (17 powered, 146 ineligible across 14 other tissues)</div>
               <div><strong>SHA-256:</strong> <code class="sha-short" title="d394b440aba5e35fd78988a0f9227163cb14644a49fe0f19c961e51d9d95f877">d394b440aba5</code></div>
             </div>
             <div class="drawer-actions">
@@ -105,7 +105,7 @@
       <!-- Supporting Graph G1: Ranking Bars -->
       <div class="graph-block" id="block-g1">
         <div class="graph-title-row">
-          <h2 class="graph-title">Lung adventitial fibroblasts and kidney tubule cells exhibit strongest aging signals</h2>
+          <h2 class="graph-title">Lung adventitial cells and kidney tubule cells exhibit strongest aging signals</h2>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g1" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -114,7 +114,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g1" class="echart-container" style="height: 480px;"></div>
         </div>
-        <p class="graph-support">Differentially expressed genes (FDR &lt; 0.05) with 95% bootstrap confidence intervals. Tap any bar to inspect unit details.</p>
+        <p class="graph-support">Differentially expressed genes (FDR &lt; 0.05) with 95% bootstrap confidence intervals. Rank 1: Lung::adventitial cell (55 DE genes); Rank 2: Kidney::kidney proximal convoluted tubule epithelial cell (53 DE genes). Tap any bar to inspect unit details.</p>
 
         <!-- Provenance Drawer G1 -->
         <div class="drawer" id="drawer-g1" hidden>
@@ -159,7 +159,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g3-scatter" class="echart-container" style="height: 420px;"></div>
         </div>
-        <p class="graph-support">Continuous bridge model slope versus published age coefficient in Kidney proximal tubule epithelial cells (Spearman ρ = 0.866, p &lt; 10⁻¹⁵).</p>
+        <p class="graph-support">Agreement with the TMS paper's published age coefficients across the 17 powered units: 13 agree, 4 partial, 0 disagree. The strongest unit, Kidney proximal convoluted tubule, shows Spearman rho 0.866 over 13,019 shared genes, with sign concordance 0.977 among the paper's significant genes. For 15 of 17 units the comparison is between our dichotomous 3 month vs 18 month effects and the paper's continuous-age coefficients; a continuous-age bridge model was fit for 2 units, and the agreement table states which comparator applies per unit.</p>
 
         <!-- Layer 2: 17-Unit Lollipop Strip -->
         <div class="sub-chart-wrap" style="margin-top: 24px;">
@@ -191,7 +191,7 @@
       <!-- Supporting Graph G2: Calibration Trio -->
       <div class="graph-block" id="block-g2">
         <div class="graph-title-row">
-          <h2 class="graph-title">Signal vastly exceeds label-shuffled null (4.6) and sex-effect floor (0)</h2>
+          <h2 class="graph-title">Calibration on the top unit, Lung::adventitial cell: 55 observed DE genes vs a label-permutation null mean of 4.6 and a sex-effect floor of 0</h2>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Provenance</button>
             <button type="button" class="btn-compare" data-target="compare-g2">Compare Published</button>
@@ -201,7 +201,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g2" class="echart-container" style="height: 160px;"></div>
         </div>
-        <p class="graph-support">Observed DE count in Lung adventitial cells (55) against donor-permuted null distribution (mean 4.6) and young within-sex baseline (0).</p>
+        <p class="graph-support">Observed, 3 month vs 18 month: 55. Label-permutation null, mean: 4.6. Sex effect within 3 month only: 0.</p>
 
         <!-- Compare Image Modal/Container for G2 -->
         <div class="compare-container" id="compare-g2" hidden>
@@ -217,7 +217,7 @@
           <summary class="expander-summary">Statistical guards: Permutation null, sex baseline, and trajectory independence</summary>
           <div class="expander-content">
             <p>1. <strong>Marker Validation:</strong> Canonical senescence markers (Cdkn2a, Spp1, Ccl2) showed positive direction but did not all reach cell-level significance individually; the claim rests on the 12-fold permutation margin.</p>
-            <p>2. <strong>Differentiation Guard (G5):</strong> Bone marrow diffusion pseudotime (DPT) showed zero correlation with donor age (ρ = 0.016, p = 0.001), confirming maturation does not confound aging.</p>
+            <p>2. <strong>Differentiation Guard (G5):</strong> Guard check, Marrow: diffusion pseudotime vs chronological age, Spearman rho 0.016. Pseudotime here tracks cell maturation, not age, so maturation structure does not confound the age comparisons. No trajectory-based aging claim is made.</p>
             <img src="figures/m3-dpt-vs-age.png" alt="Diffusion pseudotime versus age" style="max-width: 100%; border-radius: 6px; margin-top: 8px;">
           </div>
         </details>
@@ -320,7 +320,7 @@
       <!-- Main Graph G7: Gene × Unit Dot Matrix -->
       <div class="graph-block" id="block-g7">
         <div class="graph-title-row">
-          <h2 class="graph-title">Most aging genes are private to single cell types; a few core SASP factors recur</h2>
+          <h2 class="graph-title">Most aging genes are private to single cell types; 261 non-redundant genes change with age</h2>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -329,7 +329,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g7" class="echart-container" style="height: 600px;"></div>
         </div>
-        <p class="graph-support">Top 40 genes ranked by recurrence across the 17 units. Filled dots show participation; color indicates direction (vermillion up, blue-grey down).</p>
+        <p class="graph-support">Top 40 genes ranked by recurrence across the 17 powered units. Filled dots show program membership; color indicates direction (vermillion up, blue-grey down). Gene Ccl2 recurs in 2 of the 17 powered units; gene Spp1 recurs in 2 of the 17 powered units.</p>
 
         <!-- Expander: Housekeeping guard -->
         <details class="story-expander" id="expander-ch3-housekeeping">
@@ -477,7 +477,7 @@
       <!-- Supporting Graph G12: Savina 2022 Reproduction Curve -->
       <div class="graph-block" id="block-g12">
         <div class="graph-title-row">
-          <h2 class="graph-title">Savina 2022 NMR skin reproduction reveals 29 DE genes at author threshold (paper reported 0)</h2>
+          <h2 class="graph-title">Savina et al. 2022 (Aging) reproduction: 29 DE genes at author threshold (paper reported 0)</h2>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Provenance</button>
             <button type="button" class="btn-compare" data-target="compare-g12">Compare Published</button>
@@ -487,7 +487,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g12" class="echart-container" style="height: 280px;"></div>
         </div>
-        <p class="graph-support">DE gene count as a function of log₂FC cutoff. Paper rule (|log₂FC| ≥ 1.0) yields 29 genes; converted cutoff (1.45) yields 9 genes.</p>
+        <p class="graph-support">Savina et al. 2022 (Aging) reported zero global DE genes between young and aged naked mole-rat epidermis at their stated rule. We do not reproduce the literal zero: at p less than 0.05 and absolute log2FC at least 1.0 we find 29 genes. The most parsimonious explanation is a units ambiguity, since the paper's threshold appears to be in natural-log units, equivalent to about absolute log2FC 1.44; at cutoff 1.45 we find 9 genes (p rule) and 6 (FDR rule). The paper's broader claim, that naked mole-rat epidermis is unusually stable with age, is partially reproduced. Two caveats: Igfbp3, the paper's key gene, is absent from the GEO count file and could not be checked; our QC retained 10,251 cells vs the paper's 10,232.</p>
 
         <!-- Compare Image Modal for G12 -->
         <div class="compare-container" id="compare-g12" hidden>
@@ -530,7 +530,7 @@
       <!-- Main Graph G13: Power Map (3 Small Multiples) -->
       <div class="graph-block" id="block-g13">
         <div class="graph-title-row">
-          <h2 class="graph-title">Detecting realistic 30-year human aging requires ≥6 donors and ≥12y age dispersion</h2>
+          <h2 class="graph-title">Human eligibility floor used in this analysis: at least 6 donors and a donor-age standard deviation of at least 12 years per cell type</h2>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -560,7 +560,7 @@
           </div>
           <div class="readout-item">
             <span class="readout-label">Age SD:</span>
-            <span class="readout-val" id="readout-sd">12 y</span>
+            <span class="readout-val" id="readout-sd">8 y</span>
           </div>
           <div class="readout-item">
             <span class="readout-label">Dispersion:</span>
@@ -574,7 +574,7 @@
             <span class="badge-verdict badge-lowpower" id="readout-verdict">LOW-POWERED</span>
           </div>
         </div>
-        <p class="graph-support">Tap any tile above to update the readout. Outlined tiles meet the pre-registered eligibility floor (≥6 donors, SD ≥ 12y). Mark (✕) shows Tabula Sapiens skin.</p>
+        <p class="graph-support">Tap any tile above to update the readout. Outlined tiles meet the human eligibility floor (at least 6 donors, donor-age SD at least 12 years). Mark (✕) shows Tabula Sapiens skin: 4 donors, age SD 8 years, dispersion 0.1, min detectable 30-year log2FC 1.474, LOW-POWERED.</p>
 
         <!-- Provenance Drawer G13 -->
         <div class="drawer" id="drawer-g13" hidden>
@@ -602,7 +602,7 @@
           <div class="constructive-icon">💡</div>
           <div class="constructive-text">
             <h3>What would settle the human question?</h3>
-            <p>Single-cell profiles from at least <strong>12 healthy donors</strong> spanning ages 20 to 80 (SD ≥ 16y) in matched tissues would lower the minimum detectable 30-year effect size below log₂FC = 0.40, enabling definitive detection of conserved mammalian aging programs in humans.</p>
+            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (source: <code>results/m4-human-power.csv</code>). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years.</p>
           </div>
         </div>
       </div>
@@ -725,7 +725,7 @@
               <td>Tabula Muris Senis (droplet)</td>
               <td>CELLxGENE <code>075831ea-4c76-47e5-a141-86f0978114d8</code></td>
               <td>v1 / 2026-10-14 freeze</td>
-              <td>64,888 cells verified</td>
+              <td>238,186 cells verified (QC of 245,389 raw)</td>
             </tr>
             <tr>
               <td>Tabula Sapiens (Lung, Kidney)</td>
@@ -754,19 +754,19 @@
         <h3>3. Eight-Line Pipeline Summary</h3>
         <ol class="methods-list">
           <li>Quality control applied per-tissue (mitochondrial fraction, min/max genes, Scrublet doublet removal).</li>
-          <li>163 tissue×cell-type units evaluated; 17 powered (≥3 mice, ≥50 cells in 3m and 18m).</li>
-          <li>Differential expression via two-sided Wilcoxon with 100-fold patient block bootstrap CIs.</li>
-          <li>Permutation null calibration collapses discoveries to 4.6 ± 2.1 genes; sex floor is 0.</li>
-          <li>Bone marrow trajectory orthogonality verified (ρ = 0.016, 100% graph connectivity).</li>
-          <li>Ensembl 1:1 reciprocal orthologs mapped (16,842 mouse-human; 15,920 mouse-NMR).</li>
-          <li>Housekeeping inflation guard filters RPL, RPS, and MT transcripts from conservation metrics.</li>
-          <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence.</li>
+          <li>163 tissue by cell-type units evaluated; 17 met the mouse eligibility floor (at least 3 mice and at least 50 cells in 3m and 18m, all in Lung or Kidney; 146 ineligible across the other 14 tissues).</li>
+          <li>Pseudobulk differential expression per tissue by cell-type unit (PyDESeq2, 3m vs 18m, design ~ sex + age_group) with patient block bootstrap CIs.</li>
+          <li>Permutation null calibration on the top unit (Lung adventitial cell) yields 4.6 genes vs 55 observed; sex effect within 3 month only is 0.</li>
+          <li>Guard check on Marrow: diffusion pseudotime vs chronological age shows Spearman rho 0.016. Pseudotime tracks cell maturation, not age; no trajectory-based aging claim is made.</li>
+          <li>Ensembl 1:1 reciprocal orthologs mapped for mouse-human and mouse-NMR.</li>
+          <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background.</li>
+          <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence (not established, p = 0.329).</li>
         </ol>
 
         <h3>4. Three Load-Bearing Limitations</h3>
         <ul>
-          <li><strong>Sex × Age Droplet Confounding:</strong> In the TMS droplet dataset, 3m animals are male and 18m/24m animals are female. Primary models rely on within-sex or continuous covariates.</li>
-          <li><strong>Outlier Scope:</strong> Naked mole-rat data represents cultured dermal fibroblasts (Savina et al. 2022). Multi-tissue in vivo single-cell atlases across a 30-year span do not exist.</li>
+          <li><strong>Sex by Age Droplet Confounding:</strong> In the TMS droplet dataset, 1m, 24m, and 30m animals are male-only and 21m animals are female-only. Primary models rely on the balanced 3m vs 18m contrast or continuous covariates.</li>
+          <li><strong>Outlier Scope:</strong> Naked mole-rat skin data represents young and aged animals (Savina et al. 2022, Aging). Multi-tissue in vivo single-cell atlases across a 30-year span do not exist.</li>
           <li><strong>Cross-Sectional Sampling:</strong> All datasets reflect cross-sectional donor cohorts, not longitudinal tracking of living individuals.</li>
         </ul>
 

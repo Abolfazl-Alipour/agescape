@@ -32,7 +32,8 @@
 
 - **C1 permutation replicates: NOT AVAILABLE.** No committed file retains per-replicate DE counts (pipeline stored only the mean 4.6 ± 2.1). Producing them requires an analysis re-run — **deferred to Reza** per spec default. → **G2 ships in fallback dot-plot form.**
 - **C2 per-gene DE for Lung::adventitial cell: EXISTS** — `results/m2_de_Lung__adventitial_cell.csv` (10,150 genes; index, baseMean, log2FC, lfcSE, stat, pvalue, FDR, CIs). Pure transcription. → **G8 volcano unlocked.**
-- **C3 paired effect sizes for Kidney::PCT: PRODUCIBLE BY PURE EXPORT** — our log2FC (`results/m2_de_Kidney__kidney_proximal_convoluted_tubule_epithelial_cell.csv`) joined to the paper's published age coefficient (`data/raw/tms_nature2020_moesm8_dge_results.xlsx`, sheet `DGE_result.tissue_cell.age_coef`, column `Kidney.kidney proximal convoluted tubule epithelial cell`; bh_p from the sibling sheet). Both committed; the join is a reshape, no new analysis. → **G3 scatter unlocked as chapter lead.**
+- **C3 paired effect sizes for Kidney::PCT: PRODUCIBLE BY PURE EXPORT** — our **continuous bridge slope per month** (`results/m3-continuous-bridge-model.csv`, the M3 comparator that `scripts/run_m3_agreement.py` prefers when >200 bridge genes exist) joined to the paper's published age coefficient (`data/raw/tms_nature2020_moesm8_dge_results.xlsx`, sheet `DGE_result.tissue_cell.age_coef`, column `Kidney.kidney proximal convoluted tubule epithelial cell`; bh_p from the sibling sheet). Both committed; the join is a reshape, no new analysis. → **G3 scatter unlocked as chapter lead.**
+  - **Correction (2026-10-19, file wins):** this contract originally named the m2 dichotomous log2FC file as the "ours" side. The literal m2_de join gives n=11,836, rho=0.309 and does NOT reproduce the pinned anchor (n=13,019, rho=0.866). The anchor is defined by the bridge-slope join; the export prints the literal join to stdout as a diagnostic only. Export field renamed `ours_log2fc` → `ours_bridge_slope` to match what the values actually are.
 
 ## Stack & licence decisions (Step 0, per spec authority)
 
@@ -50,7 +51,7 @@ All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON
 2. **`calibration.json`** ← m2-calibration-trio-summary.csv (ac3e65b60721) + m2-calibration-positive-controls.csv (0c78f4ae25f6)
    `{observed: 55, perm_mean: 4.6, sex_floor: 0, unit: "Lung::adventitial cell", positive_controls: [...]}` — powers G2 fallback dot-plot. (Histogram form blocked on C1 — deferred.)
 3. **`agreement.json`** ← m3-agreement-table.csv (743ae1f1f262) + C3 join
-   `{lollipop: [{unit, spearman_rho, verdict}], counts: {agree: 13, partial: 4, disagree: 0}, scatter: {unit: "Kidney::kidney proximal convoluted tubule epithelial cell", n: 13019, rho: 0.866, points: [{gene, ours_log2fc, paper_coef}]}}` — scatter points only for genes present in BOTH sources; rho asserted = 0.866 (recomputed at export for verification only). Powers G3 both layers.
+   `{lollipop: [{unit, spearman_rho, verdict}], counts: {agree: 13, partial: 4, disagree: 0}, scatter: {unit: "Kidney::kidney proximal convoluted tubule epithelial cell", n: 13019, rho: 0.866, points: [{gene, ours_bridge_slope, paper_coef}]}}` — scatter points only for genes present in BOTH sources; `ours_bridge_slope` is the M3 continuous bridge slope per month (NOT the dichotomous m2 log2FC; see C3 correction above); rho asserted = 0.866 (recomputed at export for verification only). Powers G3 both layers.
 4. **`design-grid.json`** ← m1-sex-age-table.csv (832e990f8803)
    `{age_groups: ["1m","3m","18m","21m","24m","30m"], cells: {female: [...6], male: [...6]}, mice: {female: [...6], male: [...6]}}` — powers G4; hatch rule: female-only columns (21m), male-only (1m, 24m, 30m); outline 3m & 18m as "the only fair fight".
 5. **`program.json`** ← m5-mouse-program-catalog.csv (d5ab9ace5f3c) + m5-gene-level-programs.csv (5251165002a1) + m6-program-genes.csv (941766a85207)
@@ -59,8 +60,8 @@ All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON
    `{arms: {mouse_wb: {points: [{donor, age_years, age_normalized, score, n_cells}], n: 23, slope, ci, p}, mouse_skin: {...n:3, underpowered: true}, human_skin: {...n:4, low_powered: true}, human_fibroblast: {...}, nmr: {..., tested_span_years: [1.1, 11.3]}}, stats: {diff: {...}, tost: {delta: 0.05874, p: 0.32894, established: false}, perm_p: 0.81818}, coverage: {mouse: 1.0, human: 0.73180, nmr: 0.31414}, lifespans: {mouse: 4.0, nmr: 31.0, human: 122.5}}` — powers G9, G10, G11.
 7. **`savina.json`** ← m6-savina-reproduction.csv (cfdab4a0f3a1)
    `{curve: [{log2fc_cutoff, n_de_pval05, n_de_fdr05}], markers: {paper_rule: {cutoff: 1.0, n_pval: 29}, converted_rule: {cutoff: 1.45, n_pval: 9, n_fdr: 6}, loose_rule: {cutoff: 0.25, n_fdr: 560}}, caveats: ["Igfbp3 absent from source file", "QC 10,251 vs paper 10,232"]}` — powers G12.
-8. **`power-grid.json`** ← m4-human-power.csv (03dc469a5a05)
-   `{donors: [4,6,8,10,12,16,20,30,50], sds: [8,12,16,20], dispersions: [0.1,0.2,0.4], tiles: [{n_donors, sd, dispersion, min_30y_log2fc, power_status, eligible_cohort}], ts_marker: {donors: 4, sd: 12, label: "Tabula Sapiens skin: 4 donors"}, anchors: {"4_8_low": 1.474, "4_20_low": 0.59}}` — powers G13. Readout may display only grid values.
+8. **`power-grid.json`** <- m4-human-power.csv (03dc469a5a05)
+   `{donors: [4,6,8,10,12,16,20,30,50], sds: [8,12,16,20], dispersions: [0.1,0.2,0.4], tiles: [{n_donors, sd, dispersion, min_30y_log2fc, power_status, eligible_cohort}], ts_marker: {donors: 4, sd: 8, label: "Tabula Sapiens skin: 4 donors"}, anchors: {"4_8_low": 1.474, "4_20_low": 0.59}}` : powers G13. Readout may display only grid values.
 9. **`provenance.json`** ← computed at export
    `{freeze_date: "2026-10-14", export_date, sources: {per-export: {file, sha256 (full), rows}}, assets: {per-file: {bytes}}}` — feeds every provenance drawer. SHA-256 short forms in drawers = first 12 hex chars of these.
 
@@ -71,5 +72,5 @@ Copied verbatim from `figures/` (no re-rendering): `m3-dpt-vs-age.png` (17e50141
 ## Hard gates
 
 - `scripts/check_app_data.py` asserts every anchor in the table above against the exports and exits non-zero on any miss. Run after every export; the page build consumes only checked exports.
-- No export may contain a value not derivable from the listed sources. The C3 join is the only multi-source export and is a pure inner join on gene symbol.
+- No export may contain a value not derivable from the listed sources. The C3 scatter is the only multi-source export: an inner join on gene symbol between the M3 continuous bridge slope (per month) and the paper's age coefficient, mirroring `scripts/run_m3_agreement.py`.
 - Word/encoding budget enforcement (Section 5 text ≤700 words, ≥70% graph area) is a Step-5 checklist item, not an export concern.
