@@ -110,6 +110,21 @@
     }, { rootMargin: "-20% 0px -60% 0px" });
 
     chapters.forEach(c => observer.observe(c));
+
+    // Intro hero: activate the "Start" rail dot while the hero is in view
+    const intro = document.getElementById("intro");
+    if (intro) {
+      const introObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            railSteps.forEach(s => {
+              s.classList.toggle("active", s.dataset.chapter === "0");
+            });
+          }
+        });
+      }, { rootMargin: "-20% 0px -60% 0px" });
+      introObserver.observe(intro);
+    }
   }
 
   // --------------------------------------------------------------------------

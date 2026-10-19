@@ -20,7 +20,11 @@
     </div>
     
     <nav class="progress-rail" aria-label="Chapter Progress">
-      <a href="#ch1" class="rail-step active" data-chapter="1" title="Chapter 1: Atlas Eligibility">
+      <a href="#intro" class="rail-step" data-chapter="0" title="Start: About this explorer">
+        <span class="dot"></span>
+        <span class="rail-label">Start</span>
+      </a>
+      <a href="#ch1" class="rail-step" data-chapter="1" title="Chapter 1: Atlas Eligibility">
         <span class="dot"></span>
         <span class="rail-label">1. Eligibility</span>
       </a>
@@ -44,13 +48,29 @@
 
     <div class="nav-actions">
       <button type="button" class="btn-text" id="btn-open-methods">Methods</button>
-      <a href="../report/conserved-aging-programs.md" class="btn-text" target="_blank" rel="noopener">Report</a>
-      <a href="https://github.com/reza/agescape" class="btn-text" target="_blank" rel="noopener">Code</a>
     </div>
   </header>
 
   <!-- Main Scroll Container -->
   <main class="page-container">
+
+    <!-- =========================================================================
+         INTRO: Product hero — what this is and what you can do here
+         ========================================================================= -->
+    <section class="hero-intro" id="intro">
+      <div class="hero-inner">
+        <span class="hero-eyebrow">Interactive single-cell aging atlas</span>
+        <h1 class="hero-headline">How aging works, cell by cell, across species.</h1>
+        <p class="hero-sub">Agescape is an interactive exploration of mammalian aging at single-cell resolution: where aging signal is statistically real, which genes change with age, and whether the pattern holds from mouse to human to the naked mole-rat.</p>
+        <div class="hero-chips" aria-label="Key numbers">
+          <span class="chip"><strong>163</strong> cell types tested</span>
+          <span class="chip"><strong>17</strong> powered aging signals</span>
+          <span class="chip"><strong>261</strong> aging genes</span>
+          <span class="chip"><strong>3</strong> species</span>
+        </div>
+        <a href="#ch1" class="hero-cta">Start exploring</a>
+      </div>
+    </section>
 
     <!-- =========================================================================
          CHAPTER 1: Where aging can even be measured
@@ -621,8 +641,6 @@
         <div class="author-links">
           <a href="https://www.linkedin.com/in/reza-alipour/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://scholar.google.com/citations?user=reza-alipour" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="https://github.com/reza/agescape" target="_blank" rel="noopener">GitHub</a>
-          <a href="../report/conserved-aging-programs.md" target="_blank" rel="noopener">Full Report (PDF/MD)</a>
           <a href="mailto:reza@agescape.local">Email</a>
         </div>
         <p class="footer-note">Personal research project; Kavox Labs affiliation noted. Data credits: Tabula Muris Senis, Tabula Sapiens, Savina et al. 2022, AnAge Build 14.</p>
@@ -777,10 +795,9 @@
         <pre class="citation-block"><code>@article{agescape2026,
   title={Conserved Mammalian Aging Programs and Longevity Resistance: A Single-Cell Cross-Species Investigation},
   author={Alipour, Reza and the Conserved Aging Explorer Consortium},
-  year={2026},
-  url={https://github.com/reza/agescape}
+  year={2026}
 }</code></pre>
-        <p class="license-line">Code: MIT License &middot; Scientific Report & Figures: CC BY 4.0 International &middot; Zero Synthetic Data</p>
+        <p class="license-line">Code: MIT License &middot; Content: CC BY 4.0 International &middot; Zero Synthetic Data</p>
       </div>
     </div>
   </div>
