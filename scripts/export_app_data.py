@@ -289,11 +289,29 @@ def export_design_grid(s, prov):
 def export_program(s, prov):
     cat, glp, pg = s["catalog"], s["genelevel"], s["programgenes"]
     assert len(cat) == 17 and len(glp) == 312
+    # The m5 catalog stores m2-DE-filename slugs ("Lung::adventitial_cell"); every
+    # other export uses display unit names ("Lung::adventitial cell"). Map back via
+    # the same filename derivation the m2 pipeline used; assert it reproduces every
+    # committed m2_de_*.csv stem so no unit can be mistranslated (2026-10-19 fix).
+    import re
+    display_names = list(s["ranked"]["unit"])
+    slug_to_display = {}
+    for d in display_names:
+        stem = re.sub(r"[^A-Za-z0-9_]+", "_", d.replace("::", "__"))
+        assert (RESULTS / f"m2_de_{stem}.csv").exists(), (d, stem)
+        # catalog keys are filename stems with the tissue separator restored ("::")
+        slug_to_display[stem.replace("__", "::")] = d
+    untranslated = set(cat["unit"]) - set(slug_to_display)
+    assert not untranslated, untranslated
+
+    def disp(u):
+        return slug_to_display.get(u, u)
+
     n_up = int(pg["program_up"].notna().sum())
     n_down = int(pg["program_down"].notna().sum())
     assert (n_up, n_down) == (167, 94), (n_up, n_down)
     units = [{
-        "unit": r["unit"],
+        "unit": disp(r["unit"]),
         "n_up": inum(r["n_up"]),
         "n_down": inum(r["n_down"]),
         "frac_ribo_mito": fnum(r["frac_ribo_mito"]),
@@ -301,13 +319,13 @@ def export_program(s, prov):
     } for _, r in cat.iterrows()]
     genes = [{
         "gene": r["gene"],
-        "unit": r["unit"],
+        "unit": disp(r["unit"]),
         "direction": "up" if r["log2FC"] > 0 else "down",
         "log2fc": fnum(r["log2FC"]),
         "fdr": fnum(r["FDR"]),
     } for _, r in glp.iterrows()]
     # top-40 recurrence matrix (stated sampling rule, contract schema 5)
-    columns = list(cat["unit"])
+    columns = [disp(u) for u in list(cat["unit"])]
     recurrence = glp.groupby("gene")["unit"].agg(["count", "first"]).reset_index()
     top40 = recurrence.sort_values(["count", "gene"], ascending=[False, True]).head(40)["gene"]
     by_gene = glp.groupby("gene")
@@ -317,7 +335,7 @@ def export_program(s, prov):
         rows.append({
             "gene": g,
             "n_units": int(gg["unit"].nunique()),
-            "log2fc": {r["unit"]: fnum(r["log2FC"]) for _, r in gg.iterrows()},
+            "log2fc": {disp(r["unit"]): fnum(r["log2FC"]) for _, r in gg.iterrows()},
         })
     assert len(rows) == 40 and len(columns) == 17
     prov["program.json"] = [

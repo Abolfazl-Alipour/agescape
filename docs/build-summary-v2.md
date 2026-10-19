@@ -171,3 +171,17 @@ An independent review pass re-verified every claim in this document against disk
 4. **Gate re-run after all fixes: 116 of 116 anchors PASS** (export + `check_app_data.py` on 2026-10-19).
 
 Known deviations from spec, recorded for Reza's sign-off: G1 ranking bars show bootstrap CIs in the tooltip, not as whiskers (the source CI for the top unit runs to 1,082 genes and a whisker would be chart junk; spec permits "where the source provides one" and the tooltip is the disclosure); support-sentence prose in `index.html` contains numbers that duplicate the JSON exports (values match the checked anchors today; the S-anchors in `check_app_data.py` bind the JSON side, and the B-lint guards phrasing drift).
+
+---
+
+## Addendum: 2026-10-19 live-deployment review pass
+
+Published to https://rezaalipour.com/agescape/ (synced from `app/` via `scripts/sync_to_website.sh`). A headless-browser review of the live site (playwright + chromium, zero console errors, zero failed requests) found and fixed five defects:
+
+1. **Blocking overlay on load (user-reported).** `.modal-backdrop` sets `display: flex`, which overrides the `hidden` attribute's UA style, so the Methods modal rendered open on every load and intercepted every click. Fixed with a global `[hidden] { display: none !important; }` rule (also covers drawers and compare containers).
+2. **Theme mismatch with rezaalipour.com (user-reported).** Full reskin from dark glassmorphism to the site's light editorial system: `#fafaf9` page, white cards, slate borders, sky-700 accents, Newsreader serif headlines + Plus Jakarta Sans body + JetBrains Mono (same Google Fonts stack as the main site). All ECharts chrome remapped (splitlines, axis labels, tooltips, hollow-tile borders visible on white). Spec-pinned data colors (species, direction, tissue) unchanged.
+3. **G10 drew only dots.** The spec's "Honest Interval" now actually draws the three CI whiskers, the shaded TOST band on the NMR row, the bold zero line, and the direct "equivalence not established" label (custom ECharts render layer; first attempt mis-encoded the label item as a whisker and coerced colors from data dims — both caught by screenshot review and corrected).
+4. **Unit panel showed 0 genes for every unit.** Root cause: `results/m5-mouse-program-catalog.csv` stores m2-DE-filename slugs (`Lung::adventitial_cell`) while every other export uses display names, so the panel's exact-match lookup failed. The exporter now translates slugs back to display names, asserted 1:1 against the 17 committed `m2_de_*.csv` stems (dated correction in `app/DATA_CONTRACT.md`). Panel now shows the true 29 up / 26 down / 55 DE for Lung::adventitial cell with the full gene table.
+5. **Mobile horizontal scroll** (spec violation at 360px) eliminated; G1 ranking-bar labels were clipped by the canvas edge and are now truncated at 38 characters with the full name in the tooltip; G11 "Naked Mole-Rat" label no longer clipped.
+
+Gate status after all changes: export + `check_app_data.py` = **116/116 anchors PASS**. The usability gate (5 testers) remains the one unchecked launch item, per spec.

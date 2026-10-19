@@ -29,7 +29,7 @@
     dirDown: "#475569",
     tissueLung: "#0284c7",
     tissueKidney: "#0d9488",
-    tissueNeutral: "#334155",
+    tissueNeutral: "#94a3b8",
     tostBand: "rgba(234, 88, 12, 0.18)",
     tostStroke: "rgba(234, 88, 12, 0.6)",
     verdictAgree: "#0284c7",
@@ -420,7 +420,7 @@
     tbody.innerHTML = genes.map(g => `
       <tr>
         <td><strong>${g.gene}</strong></td>
-        <td><span style="color:${g.direction === 'up' ? PALETTE.dirUp : '#94a3b8'}">${g.direction.toUpperCase()}</span></td>
+        <td><span style="color:${g.direction === 'up' ? PALETTE.dirUp : '#64748b'}">${g.direction.toUpperCase()}</span></td>
         <td class="font-mono">${g.log2fc !== null ? g.log2fc.toFixed(2) : "N/A"}</td>
         <td class="font-mono">${g.fdr !== null ? g.fdr.toFixed(4) : "N/A"}</td>
       </tr>
@@ -486,7 +486,7 @@
         formatter: (params) => {
           const d = params.data;
           const status = d.powered ? "POWERED (Eligible)" : "Ineligible (&lt;3 mice or &lt;50 cells)";
-          return `<strong>${d.tissue}</strong><br>${d.ct}<br><span style="color:${d.powered ? '#38bdf8' : '#94a3b8'}">${status}</span>`;
+          return `<strong>${d.tissue}</strong><br>${d.ct}<br><span style="color:${d.powered ? '#0369a1' : '#64748b'}">${status}</span>`;
         }
       },
       grid: { left: 160, right: 30, top: 10, bottom: 20 },
@@ -499,8 +499,8 @@
         type: "category",
         data: yAxisLabels,
         inverse: true,
-        axisLine: { lineStyle: { color: "rgba(255,255,255,0.15)" } },
-        axisLabel: { color: "#94a3b8", fontSize: 11 }
+        axisLine: { lineStyle: { color: "rgba(15,23,42,0.2)" } },
+        axisLabel: { color: "#64748b", fontSize: 11 }
       },
       series: [{
         type: "scatter",
@@ -516,7 +516,7 @@
             if (p.data.powered) {
               return p.data.tissue === "Lung" ? PALETTE.tissueLung : PALETTE.tissueKidney;
             }
-            return "rgba(255,255,255,0.2)";
+            return "rgba(15,23,42,0.3)";
           },
           borderWidth: 1.5
         }
@@ -542,7 +542,10 @@
     state.activeCharts["g1"] = chart;
 
     const ranked = [...atlas.ranked].reverse(); // Ascending for horizontal bar
-    const categories = ranked.map(r => r.unit.replace("::", " · "));
+    const categories = ranked.map(r => {
+      const full = r.unit.replace("::", " · ");
+      return full.length > 38 ? full.slice(0, 37) + "…" : full;
+    });
     const values = ranked.map(r => r.n_de_genes);
 
     chart.setOption({
@@ -559,12 +562,12 @@
       xAxis: {
         type: "value",
         axisLabel: { color: "#64748b", fontSize: 11 },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: categories,
-        axisLabel: { color: "#94a3b8", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: 11 }
       },
       series: [{
         type: "bar",
@@ -623,12 +626,12 @@
       xAxis: {
         type: "category",
         data: dg.age_groups,
-        axisLabel: { color: "#94a3b8" }
+        axisLabel: { color: "#64748b" }
       },
       yAxis: {
         type: "category",
         data: ["Female", "Male"],
-        axisLabel: { color: "#94a3b8" }
+        axisLabel: { color: "#64748b" }
       },
       series: [{
         type: "heatmap",
@@ -647,11 +650,11 @@
           color: (p) => {
             const cnt = p.data[2];
             const isFairFight = p.data[0] === 1 || p.data[0] === 2; // 3m and 18m
-            if (cnt === 0) return "rgba(255,255,255,0.03)";
+            if (cnt === 0) return "rgba(15,23,42,0.04)";
             return isFairFight ? "#0284c7" : "rgba(2, 132, 199, 0.35)";
           },
           borderWidth: 2,
-          borderColor: (p) => (p.data[0] === 1 || p.data[0] === 2) ? "#38bdf8" : "rgba(255,255,255,0.08)"
+          borderColor: (p) => (p.data[0] === 1 || p.data[0] === 2) ? "#0369a1" : "rgba(15,23,42,0.25)"
         }
       }]
     });
@@ -688,7 +691,7 @@
         text: `Kidney PCT: Spearman rho = ${sc.rho.toFixed(3)} across ${sc.n.toLocaleString()} genes`,
         left: 60,
         top: 10,
-        textStyle: { color: "#38bdf8", fontSize: 13, fontWeight: 600 }
+        textStyle: { color: "#0369a1", fontSize: 13, fontWeight: 600 }
       },
       grid: { left: 60, right: 30, top: 45, bottom: 40 },
       xAxis: {
@@ -698,7 +701,7 @@
         nameGap: 24,
         nameTextStyle: { color: "#64748b" },
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "value",
@@ -707,13 +710,13 @@
         nameGap: 36,
         nameTextStyle: { color: "#64748b" },
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       series: [{
         type: "scatter",
         symbolSize: 3,
         data: pts,
-        itemStyle: { color: "#38bdf8", opacity: 0.4 }
+        itemStyle: { color: "#0369a1", opacity: 0.4 }
       }]
     });
   }
@@ -745,12 +748,12 @@
         min: 0,
         max: 1.0,
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: categories,
-        axisLabel: { color: "#94a3b8", fontSize: 10 }
+        axisLabel: { color: "#64748b", fontSize: 10 }
       },
       series: [{
         type: "scatter",
@@ -781,7 +784,7 @@
         min: -2,
         max: 60,
         axisLabel: { color: "#64748b", fontFamily: "monospace" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
@@ -795,13 +798,13 @@
           data: [
             { value: [cal.sex_floor, 0], name: "Sex effect within 3 month only: 0", itemStyle: { color: "#64748b" } },
             { value: [cal.perm_mean, 0], name: "Label-permutation null, mean: 4.6", itemStyle: { color: "#f59e0b" } },
-            { value: [cal.observed, 0], name: "Observed, 3 month vs 18 month: 55", itemStyle: { color: "#38bdf8" } }
+            { value: [cal.observed, 0], name: "Observed, 3 month vs 18 month: 55", itemStyle: { color: "#0369a1" } }
           ],
           label: {
             show: true,
             position: "top",
             formatter: (p) => p.data.name,
-            color: "#e2e8f0",
+            color: "#475569",
             fontSize: 11
           }
         }
@@ -837,12 +840,12 @@
       xAxis: {
         type: "value",
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: categories,
-        axisLabel: { color: "#94a3b8", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: 11 }
       },
       series: [
         {
@@ -904,13 +907,13 @@
       xAxis: {
         type: "category",
         data: unitNames,
-        axisLabel: { color: "#94a3b8", rotate: 55, fontSize: 10 }
+        axisLabel: { color: "#64748b", rotate: 55, fontSize: 10 }
       },
       yAxis: {
         type: "category",
         data: geneNames,
         inverse: true,
-        axisLabel: { color: "#94a3b8", fontSize: 10, fontFamily: "monospace" }
+        axisLabel: { color: "#64748b", fontSize: 10, fontFamily: "monospace" }
       },
       series: [{
         type: "scatter",
@@ -1030,12 +1033,12 @@
         min: -0.4,
         max: 0.6,
         axisLabel: { color: "#64748b", fontFamily: "monospace" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: ["Slope Difference", "NMR Slope", "Mouse Slope"],
-        axisLabel: { color: "#94a3b8", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: 11 }
       },
       series: [
         // Bold line at 0
@@ -1044,31 +1047,72 @@
           markLine: {
             silent: true,
             symbol: "none",
-            data: [{ xAxis: 0, lineStyle: { color: "rgba(255,255,255,0.4)", width: 2 } }]
+            data: [{ xAxis: 0, lineStyle: { color: "rgba(15,23,42,0.6)", width: 2 } }]
           }
         },
-        // Equivalence band for NMR row
+        // TOST equivalence band (NMR row) + CI whiskers + direct label (custom layer)
         {
-          type: "line",
-          markArea: {
-            silent: true,
-            data: [[
-              { xAxis: -delta, yAxis: "NMR Slope", itemStyle: { color: PALETTE.tostBand } },
-              { xAxis: delta, yAxis: "NMR Slope" }
-            ]]
-          }
+          type: "custom",
+          z: 1,
+          renderItem: (params, api) => {
+            const kind = api.value(4);
+            if (kind === 2) { // band
+              const p1 = api.coord([api.value(0), api.value(2)]);
+              const p2 = api.coord([api.value(1), api.value(2)]);
+              const h = 16;
+              return {
+                type: "rect",
+                shape: { x: p1[0], y: p1[1] - h, width: p2[0] - p1[0], height: 2 * h },
+                style: { fill: PALETTE.tostBand, stroke: PALETTE.tostStroke, lineWidth: 1 }
+              };
+            }
+            if (kind === 3) { // direct label
+              const p = api.coord([api.value(0), api.value(2)]);
+              return {
+                type: "text",
+                style: {
+                  x: p[0], y: p[1], text: "equivalence not established",
+                  fill: "#9a3412", fontSize: 11, fontWeight: 600,
+                  align: "left", verticalAlign: "middle"
+                }
+              };
+            }
+            // kind 1: CI whisker with end caps (row color from closure, not data dims)
+            const p1 = api.coord([api.value(0), api.value(2)]);
+            const p2 = api.coord([api.value(1), api.value(2)]);
+            const y = p1[1];
+            const c = api.value(2) === 2 ? PALETTE.mouse : (api.value(2) === 1 ? PALETTE.nmr : "#0369a1");
+            return {
+              type: "group",
+              children: [
+                { type: "line", shape: { x1: p1[0], y1: y, x2: p2[0], y2: y }, style: { stroke: c, lineWidth: 2 } },
+                { type: "line", shape: { x1: p1[0], y1: y - 6, x2: p1[0], y2: y + 6 }, style: { stroke: c, lineWidth: 2 } },
+                { type: "line", shape: { x1: p2[0], y1: y - 6, x2: p2[0], y2: y + 6 }, style: { stroke: c, lineWidth: 2 } }
+              ]
+            };
+          },
+          data: [
+            { value: [-delta, delta, 1, 0, 2] },
+            { value: [sig.stats.diff.ci[0], sig.stats.diff.ci[1], 0, 0, 1] },
+            { value: [sig.arms.nmr.ci[0], sig.arms.nmr.ci[1], 1, 0, 1] },
+            { value: [sig.arms.mouse_wb.ci[0], sig.arms.mouse_wb.ci[1], 2, 0, 1] },
+            { value: [delta + 0.015, 1, 1, 0, 3] }
+          ],
+          tooltip: { show: false },
+          silent: true
         },
-        // Intervals
+        // Point estimates
         {
           type: "scatter",
           symbolSize: 10,
+          z: 3,
           data: [
             [sig.stats.diff.slope, 0],
             [sig.arms.nmr.slope, 1],
             [sig.arms.mouse_wb.slope, 2]
           ],
           itemStyle: {
-            color: (p) => p.dataIndex === 2 ? PALETTE.mouse : (p.dataIndex === 1 ? PALETTE.nmr : "#38bdf8")
+            color: (p) => p.dataIndex === 2 ? PALETTE.mouse : (p.dataIndex === 1 ? PALETTE.nmr : "#0369a1")
           }
         }
       ]
@@ -1087,17 +1131,17 @@
     state.activeCharts["g11"] = chart;
 
     chart.setOption({
-      grid: { left: 80, right: 60, top: 15, bottom: 25 },
+      grid: { left: 120, right: 60, top: 15, bottom: 25 },
       xAxis: {
         type: "value",
         max: 130,
         axisLabel: { color: "#64748b", formatter: "{value} y" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: ["Human", "Naked Mole-Rat", "Mouse"],
-        axisLabel: { color: "#94a3b8" }
+        axisLabel: { color: "#64748b" }
       },
       series: [
         {
@@ -1111,7 +1155,7 @@
           label: {
             show: true,
             position: "right",
-            color: "#94a3b8",
+            color: "#64748b",
             formatter: (p) => `${p.value}y max`
           }
         }
@@ -1145,7 +1189,7 @@
         nameGap: 22,
         nameTextStyle: { color: "#64748b" },
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "log",
@@ -1154,7 +1198,7 @@
         nameGap: 36,
         nameTextStyle: { color: "#64748b" },
         axisLabel: { color: "#64748b" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,0.06)" } }
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       series: [
         {
@@ -1217,12 +1261,12 @@
       xAxis: {
         type: "category",
         data: donorCats,
-        axisLabel: { color: "#94a3b8", fontSize: 10 }
+        axisLabel: { color: "#64748b", fontSize: 10 }
       },
       yAxis: {
         type: "category",
         data: sdCats,
-        axisLabel: { color: "#94a3b8", fontSize: 10 }
+        axisLabel: { color: "#64748b", fontSize: 10 }
       },
       visualMap: {
         min: 0.2,
@@ -1238,14 +1282,14 @@
         data: data,
         itemStyle: {
           borderWidth: 1.5,
-          borderColor: (p) => p.data[4] ? "#38bdf8" : "rgba(0,0,0,0.4)" // Outlined if meets floor
+          borderColor: (p) => p.data[4] ? "#0369a1" : "rgba(0,0,0,0.4)" // Outlined if meets floor
         },
         markPoint: Math.abs(dispVal - 0.1) < 0.01 ? {
           data: [{
             coord: [0, 0],
             value: "✕",
             itemStyle: { color: "rgba(0,0,0,0)" },
-            label: { show: true, formatter: "✕", color: "#f87171", fontWeight: "bold", fontSize: 14 }
+            label: { show: true, formatter: "✕", color: "#b91c1c", fontWeight: "bold", fontSize: 14 }
           }]
         } : undefined
       }]
