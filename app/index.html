@@ -4,6 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Conserved Aging Explorer: Single-cell cross-mammalian aging programs and longevity outlier dynamics in mouse, human, and naked mole-rat.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rezaalipour.com/agescape/">
+  <meta property="og:title" content="Agescape: Conserved Aging Explorer">
+  <meta property="og:description" content="An interactive single-cell atlas of mammalian aging: where aging signal is statistically real, which genes change with age, and whether the pattern holds across species.">
+  <meta property="og:image" content="https://rezaalipour.com/agescape/figures/m6-signature-figure.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agescape: Conserved Aging Explorer">
+  <meta name="twitter:description" content="An interactive single-cell atlas of mammalian aging: where aging signal is statistically real, which genes change with age, and whether the pattern holds across species.">
+  <meta name="twitter:image" content="https://rezaalipour.com/agescape/figures/m6-signature-figure.png">
+  <meta name="theme-color" content="#fafaf9">
   <title>Agescape: Conserved Aging Explorer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,15 +70,15 @@
     <section class="hero-intro" id="intro">
       <div class="hero-inner">
         <span class="hero-eyebrow">Interactive single-cell aging atlas</span>
-        <h1 class="hero-headline">How aging works, cell by cell, across species.</h1>
+        <h1 class="hero-headline">Where aging shows up cell by cell, and where it doesn't.</h1>
         <p class="hero-sub">Agescape is an interactive exploration of mammalian aging at single-cell resolution: where aging signal is statistically real, which genes change with age, and whether the pattern holds from mouse to human to the naked mole-rat.</p>
         <div class="hero-chips" aria-label="Key numbers">
-          <span class="chip"><strong>163</strong> cell types tested</span>
+          <span class="chip"><strong>163</strong> units tested</span>
           <span class="chip"><strong>17</strong> powered aging signals</span>
           <span class="chip"><strong>261</strong> aging genes</span>
           <span class="chip"><strong>3</strong> species</span>
         </div>
-        <a href="#ch1" class="hero-cta">Start exploring</a>
+        <a href="#ch1" class="hero-cta">Open the atlas</a>
       </div>
     </section>
 
@@ -78,13 +88,13 @@
     <section class="chapter" id="ch1">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 1</span>
-        <h1 class="chapter-headline">Of 163 cell types tested, aging is powered in 17, all in lung and kidney.</h1>
+        <h2 class="chapter-headline">Of 163 tissue-cell-type units tested, aging is powered in 17, all in lung and kidney.</h2>
       </div>
 
       <!-- Main Graph G0: Atlas Eligibility Map -->
       <div class="graph-block" id="block-g0">
         <div class="graph-title-row">
-          <h2 class="graph-title">Aging signal is powered in only 2 of 16 tissues</h2>
+          <h3 class="graph-title">Aging signal is powered in only 2 of 16 tissues</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g0" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -128,7 +138,7 @@
       <!-- Supporting Graph G1: Ranking Bars -->
       <div class="graph-block" id="block-g1">
         <div class="graph-title-row">
-          <h2 class="graph-title">Lung adventitial cells and kidney tubule cells exhibit strongest aging signals</h2>
+          <h3 class="graph-title">Lung adventitial cells and kidney tubule cells exhibit strongest aging signals</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g1" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -166,13 +176,13 @@
     <section class="chapter" id="ch2">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 2</span>
-        <h1 class="chapter-headline">Top signal is 12x its permutation null, and pipeline agrees with original paper.</h1>
+        <h2 class="chapter-headline">Top signal is 12x its permutation null, and pipeline agrees with original paper.</h2>
       </div>
 
       <!-- Main Graph G3: Agreement (Lead Visual) -->
       <div class="graph-block" id="block-g3">
         <div class="graph-title-row">
-          <h2 class="graph-title">Pipeline reproduces original Tabula Muris Senis aging slopes across 13,019 shared genes</h2>
+          <h3 class="graph-title">Pipeline reproduces original Tabula Muris Senis aging slopes across 13,019 shared genes</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g3" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -214,7 +224,7 @@
       <!-- Supporting Graph G2: Calibration Trio -->
       <div class="graph-block" id="block-g2">
         <div class="graph-title-row">
-          <h2 class="graph-title">Calibration on the top unit, Lung::adventitial cell: 55 observed DE genes vs a label-permutation null mean of 4.6 and a sex-effect floor of 0</h2>
+          <h3 class="graph-title">Calibration on Lung::adventitial cell: 55 observed DE genes vs a permutation null mean of 4.6; the within-3m sex control is unestimable (structural 0)</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Provenance</button>
             <button type="button" class="btn-compare" data-target="compare-g2">Compare Published</button>
@@ -224,7 +234,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g2" class="echart-container" style="height: 160px;"></div>
         </div>
-        <p class="graph-support">Observed, 3 month vs 18 month: 55. Label-permutation null, mean: 4.6. Sex effect within 3 month only: 0.</p>
+        <p class="graph-support">Observed, 3 month vs 18 month: 55. Label-permutation null, mean: 4.6. Within-3m sex control: not estimable, because every 3m mouse is male; the arm contributes a structural 0.</p>
 
         <!-- Compare Image Modal/Container for G2 -->
         <div class="compare-container" id="compare-g2" hidden>
@@ -237,11 +247,12 @@
 
         <!-- Expander: Canonical markers notice & DPT guard -->
         <details class="story-expander" id="expander-ch2-guards">
-          <summary class="expander-summary">Statistical guards: Permutation null, sex baseline, and trajectory independence</summary>
+          <summary class="expander-summary">Statistical guards: Permutation null, sex-confound caveat, and trajectory independence</summary>
           <div class="expander-content">
+            <p>0. <strong>Sex Confound (structural):</strong> The 3m vs 18m contrast compares male-young against female-old mice; age and sex are fully confounded by design in the droplet arm (G4). The permutation null bounds the false-positive rate but cannot deconfound sex, so every aging call on this page is conditional on the TMS design.</p>
             <p>1. <strong>Marker Validation:</strong> Canonical senescence markers (Cdkn2a, Spp1, Ccl2) showed positive direction but did not all reach cell-level significance individually; the claim rests on the 12-fold permutation margin.</p>
             <p>2. <strong>Differentiation Guard (G5):</strong> Guard check, Marrow: diffusion pseudotime vs chronological age, Spearman rho 0.016. Pseudotime here tracks cell maturation, not age, so maturation structure does not confound the age comparisons. No trajectory-based aging claim is made.</p>
-            <img src="figures/m3-dpt-vs-age.png" alt="Diffusion pseudotime versus age" style="max-width: 100%; border-radius: 6px; margin-top: 8px;">
+            <img src="figures/m3-dpt-vs-age.png" alt="Diffusion pseudotime versus age" loading="lazy" decoding="async" style="max-width: 100%; border-radius: 6px; margin-top: 8px;">
           </div>
         </details>
 
@@ -254,7 +265,7 @@
           <div class="drawer-body">
             <div class="provenance-grid">
               <div><strong>Sources:</strong> <code>m2-calibration-trio-summary.csv</code> &middot; <code>m2-calibration-positive-controls.csv</code></div>
-              <div><strong>Observed:</strong> 55 | <strong>Null Mean:</strong> 4.6 | <strong>Sex Floor:</strong> 0</div>
+              <div><strong>Observed:</strong> 55 | <strong>Null Mean:</strong> 4.6 | <strong>Sex Control:</strong> 0 (not estimable, all-male 3m)</div>
               <div><strong>SHA-256:</strong> <code class="sha-short">ac3e65b60721</code></div>
             </div>
             <div class="drawer-actions">
@@ -267,7 +278,7 @@
       <!-- Supporting Graph G4: Full Design Grid -->
       <div class="graph-block" id="block-g4">
         <div class="graph-title-row">
-          <h2 class="graph-title">Sex and age are completely segregated in TMS 10x Chromium droplet mice</h2>
+          <h3 class="graph-title">Sex and age are completely segregated in TMS 10x Chromium droplet mice</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g4" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -304,13 +315,13 @@
     <section class="chapter" id="ch3">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 3</span>
-        <h1 class="chapter-headline">261 genes move with age across the powered units: 167 up, 94 down.</h1>
+        <h2 class="chapter-headline">261 genes move with age across the powered units: 167 up, 94 down.</h2>
       </div>
 
       <!-- Main Graph G6: Program Stacked Bars -->
       <div class="graph-block" id="block-g6">
         <div class="graph-title-row">
-          <h2 class="graph-title">Upregulated genes outnumber downregulated genes across nearly all powered units</h2>
+          <h3 class="graph-title">Upregulated genes outnumber downregulated genes across nearly all powered units</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g6" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -343,7 +354,7 @@
       <!-- Main Graph G7: Gene × Unit Dot Matrix -->
       <div class="graph-block" id="block-g7">
         <div class="graph-title-row">
-          <h2 class="graph-title">Most aging genes are private to single cell types; 261 non-redundant genes change with age</h2>
+          <h3 class="graph-title">Most aging genes are private to single cell types; 261 non-redundant genes change with age</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -388,13 +399,13 @@
     <section class="chapter" id="ch4">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 4</span>
-        <h1 class="chapter-headline">In mouse, the program rises with age. In the naked mole-rat, it does not.</h1>
+        <h2 class="chapter-headline">In mouse, the program rises with age. In the naked mole-rat, it does not.</h2>
       </div>
 
       <!-- Main Graph G9: Signature Small Multiples -->
       <div class="graph-block" id="block-g9">
         <div class="graph-title-row">
-          <h2 class="graph-title">Mouse program rises steeply; naked mole-rat remains flat; human is severely underpowered</h2>
+          <h3 class="graph-title">Mouse program rises steeply; naked mole-rat remains flat; human is severely underpowered</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g9" aria-expanded="false" title="Provenance & Data">Provenance</button>
             <button type="button" class="btn-compare" data-target="compare-g9">Compare Published</button>
@@ -437,7 +448,7 @@
       <!-- Main Graph G10: The Honest Interval -->
       <div class="graph-block" id="block-g10">
         <div class="graph-title-row">
-          <h2 class="graph-title">Equivalence is not statistically proven: NMR confidence interval spans beyond margin</h2>
+          <h3 class="graph-title">Equivalence is not statistically proven: NMR confidence interval spans beyond margin</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g10" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -470,7 +481,7 @@
       <!-- Supporting Graph G11: Lifespan Context -->
       <div class="graph-block" id="block-g11">
         <div class="graph-title-row">
-          <h2 class="graph-title">Chronological lifespan spans decades: NMR tested span represents early-middle age</h2>
+          <h3 class="graph-title">Chronological lifespan spans decades: NMR tested span represents early-middle age</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g11" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -500,7 +511,7 @@
       <!-- Supporting Graph G12: Savina 2022 Reproduction Curve -->
       <div class="graph-block" id="block-g12">
         <div class="graph-title-row">
-          <h2 class="graph-title">Savina et al. 2022 (Aging) reproduction: 29 DE genes at author threshold (paper reported 0)</h2>
+          <h3 class="graph-title">Savina et al. 2022 (Aging) reproduction: 29 DE genes at author threshold (paper reported 0)</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Provenance</button>
             <button type="button" class="btn-compare" data-target="compare-g12">Compare Published</button>
@@ -547,13 +558,13 @@
     <section class="chapter" id="ch5">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 5</span>
-        <h1 class="chapter-headline">With 4 donors, only huge effects are detectable. Here is the design for real ones.</h1>
+        <h2 class="chapter-headline">With 4 donors, only huge effects are detectable. Here is the design for real ones.</h2>
       </div>
 
       <!-- Main Graph G13: Power Map (3 Small Multiples) -->
       <div class="graph-block" id="block-g13">
         <div class="graph-title-row">
-          <h2 class="graph-title">Human eligibility floor used in this analysis: at least 6 donors and a donor-age standard deviation of at least 12 years per cell type</h2>
+          <h3 class="graph-title">Human eligibility floor used in this analysis: at least 6 donors and a donor-age standard deviation of at least 12 years per cell type</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Provenance</button>
           </div>
@@ -639,9 +650,7 @@
         <h3 class="author-name">Reza Alipour</h3>
         <p class="author-role">Data Scientist at Meta &middot; PhD Neuroscience &middot; PharmD</p>
         <div class="author-links">
-          <a href="https://www.linkedin.com/in/reza-alipour/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=reza-alipour" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="mailto:reza@agescape.local">Email</a>
+          <a href="https://www.linkedin.com/in/rez4/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <p class="footer-note">Personal research project; Kavox Labs affiliation noted. Data credits: Tabula Muris Senis, Tabula Sapiens, Savina et al. 2022, AnAge Build 14.</p>
         <p class="footer-disclaimer">Research tool, not medical advice. App v2.0 &middot; Data Freeze: 2026-10-14 &middot; Code: MIT &middot; Content: CC BY 4.0</p>
@@ -777,7 +786,7 @@
           <li>Quality control applied per-tissue (mitochondrial fraction, min/max genes, Scrublet doublet removal).</li>
           <li>163 tissue by cell-type units evaluated; 17 met the mouse eligibility floor (at least 3 mice and at least 50 cells in 3m and 18m, all in Lung or Kidney; 146 ineligible across the other 14 tissues).</li>
           <li>Pseudobulk differential expression per tissue by cell-type unit (PyDESeq2, 3m vs 18m, design ~ sex + age_group) with patient block bootstrap CIs.</li>
-          <li>Permutation null calibration on the top unit (Lung adventitial cell) yields 4.6 genes vs 55 observed; sex effect within 3 month only is 0.</li>
+          <li>Permutation null calibration on the top unit (Lung adventitial cell) yields 4.6 genes vs 55 observed; the within-3m sex control is not estimable (all-male cohort) and contributes a structural 0.</li>
           <li>Guard check on Marrow: diffusion pseudotime vs chronological age shows Spearman rho 0.016. Pseudotime tracks cell maturation, not age; no trajectory-based aging claim is made.</li>
           <li>Ensembl 1:1 reciprocal orthologs mapped for mouse-human and mouse-NMR.</li>
           <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background.</li>
@@ -786,17 +795,13 @@
 
         <h3>4. Three Load-Bearing Limitations</h3>
         <ul>
-          <li><strong>Sex by Age Droplet Confounding:</strong> In the TMS droplet dataset, 1m, 24m, and 30m animals are male-only and 21m animals are female-only. Primary models rely on the balanced 3m vs 18m contrast or continuous covariates.</li>
+          <li><strong>Sex by Age Droplet Confounding:</strong> In the TMS droplet dataset, 1m, 24m, and 30m animals are male-only and 21m animals are female-only, so the 3m vs 18m contrast is sex-confounded (male-young vs female-old). Primary models rely on that replicated contrast or continuous covariates, and no analysis here can deconfound sex from age in this arm.</li>
           <li><strong>Outlier Scope:</strong> Naked mole-rat skin data represents young and aged animals (Savina et al. 2022, Aging). Multi-tissue in vivo single-cell atlases across a 30-year span do not exist.</li>
           <li><strong>Cross-Sectional Sampling:</strong> All datasets reflect cross-sectional donor cohorts, not longitudinal tracking of living individuals.</li>
         </ul>
 
         <h3>5. Citation & License</h3>
-        <pre class="citation-block"><code>@article{agescape2026,
-  title={Conserved Mammalian Aging Programs and Longevity Resistance: A Single-Cell Cross-Species Investigation},
-  author={Alipour, Reza and the Conserved Aging Explorer Consortium},
-  year={2026}
-}</code></pre>
+        <p class="citation-block">Alipour R. Agescape: Conserved Aging Explorer. Independent research project, 2026. https://rezaalipour.com/agescape/</p>
         <p class="license-line">Code: MIT License &middot; Content: CC BY 4.0 International &middot; Zero Synthetic Data</p>
       </div>
     </div>

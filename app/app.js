@@ -75,6 +75,7 @@
       renderG11LifespanContext();
       renderG12SavinaCurve();
       renderG13PowerMap();
+      setupAccessibilityEnhancements();
 
       // Check URL hash for initial unit panel open
       handleUrlHash();
@@ -270,6 +271,32 @@
     link.download = filename;
     link.click();
     URL.revokeObjectURL(url);
+  }
+
+  // --------------------------------------------------------------------------
+  // Accessibility: chart text twins & Escape-to-close
+  // --------------------------------------------------------------------------
+  function setupAccessibilityEnhancements() {
+    document.querySelectorAll(".echart-container, .mini-chart").forEach(dom => {
+      if (dom.getAttribute("role")) return;
+      const block = dom.closest(".graph-block") || dom.closest(".expander-content") || dom.closest("section");
+      const titleEl = block ? block.querySelector(".graph-title, .sub-chart-title") : null;
+      const label = titleEl ? titleEl.textContent.trim() : "Aging data chart";
+      dom.setAttribute("role", "img");
+      dom.setAttribute("aria-label", `Chart: ${label}`);
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const modal = document.getElementById("methods-modal");
+      if (modal && !modal.hidden) { modal.hidden = true; return; }
+      const panel = document.getElementById("unit-panel");
+      if (panel && panel.classList.contains("open")) { closeUnitPanel(); return; }
+      const openDrawer = document.querySelector(".drawer:not([hidden])");
+      if (openDrawer) { openDrawer.hidden = true; return; }
+      const openCompare = document.querySelector(".compare-container:not([hidden])");
+      if (openCompare) { openCompare.hidden = true; }
+    });
   }
 
   // --------------------------------------------------------------------------
@@ -811,7 +838,7 @@
           type: "scatter",
           symbolSize: 14,
           data: [
-            { value: [cal.sex_floor, 0], name: "Sex effect within 3 month only: 0", itemStyle: { color: "#64748b" } },
+            { value: [cal.sex_floor, 0], name: "Within-3m sex control: not estimable (all-male cohort), structural 0", itemStyle: { color: "#64748b" } },
             { value: [cal.perm_mean, 0], name: "Label-permutation null, mean: 4.6", itemStyle: { color: "#f59e0b" } },
             { value: [cal.observed, 0], name: "Observed, 3 month vs 18 month: 55", itemStyle: { color: "#0369a1" } }
           ],

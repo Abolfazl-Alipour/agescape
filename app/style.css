@@ -360,6 +360,8 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 6px;
 }
 
 .graph-title {
@@ -475,7 +477,7 @@ body {
 }
 
 .expander-note {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   font-style: italic;
 }
@@ -523,7 +525,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 8px 16px;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-sub);
   margin-bottom: 12px;
 }
@@ -733,7 +735,7 @@ body {
 .panel-stats-row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-sub);
   margin-top: 6px;
 }
@@ -805,7 +807,7 @@ body {
   padding: 8px 10px;
   position: sticky;
   top: 0;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
 }
 
@@ -918,13 +920,13 @@ body {
   border: 1px solid var(--border-subtle);
   padding: 12px;
   border-radius: var(--radius-sm);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: #475569;
   overflow-x: auto;
 }
 
 .license-line {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
@@ -988,14 +990,55 @@ body {
 }
 
 .footer-note {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-sub);
   max-width: 600px;
 }
 
 .footer-disclaimer {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+/* Tap-target floor (44px minimum) & mobile navigation */
+.rail-step {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.drawer-toggle, .btn-compare, .btn-download {
+  min-height: 44px;
+}
+
+.drawer-close, .compare-close, .panel-close, .modal-close-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.expander-summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    flex-wrap: wrap;
+    row-gap: 0;
+    padding: 8px 12px;
+    height: auto;
+    min-height: 58px;
+  }
+  .progress-rail {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .chapter, .hero-intro {
+    scroll-margin-top: 112px;
+  }
 }
 
 /* ==========================================================================
