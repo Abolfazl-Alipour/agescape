@@ -110,7 +110,7 @@
         <li>
           <a href="#ch4" class="story-step-link">
             <span class="story-step-num">4</span>
-            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat over the years tested, but equivalence is not proven. Human: undecidable, only 4 donors exist.</span>
+            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat, unproven. Human: tested in 621 donors now, and the mouse program does not travel: brain glia rise with age while brain neurons fall.</span>
           </a>
         </li>
         <li>
@@ -442,7 +442,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g9" class="echart-container" style="height: 520px;"></div>
         </div>
-        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED). Flat: NMR (β = 0.017, n = 5).</p>
+        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED, Tabula Sapiens skin only). Flat: NMR (β = 0.017, n = 5). The human panel is superseded by G15 below, which tests 621 control donors from public cohorts.</p>
 
         <!-- Compare Image Modal for G9 -->
         <div class="compare-container" id="compare-g9" hidden>
@@ -496,6 +496,59 @@
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="signature" data-sub="stats">Download Statistical Summary (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Graph G15: Human cohort arm (M9) -->
+      <div class="graph-block" id="block-g15">
+        <div class="graph-title-row">
+          <h3 class="graph-title">Tested in 621 human donors: the mouse program does not travel; direction flips by cell type</h3>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g15" aria-expanded="false" title="Source & Data">Source</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g15" class="echart-container" style="height: 340px;"></div>
+        </div>
+        <p class="graph-support">The 261-gene mouse program was scored in 621 control donors across 11 public cohorts (brain, kidney, lung). Whole-donor score does not rise with age in any cohort; in the largest brain cohort it significantly falls. Cell-level direction is private: brain glia and lung secretory cells rise, brain excitatory neurons fall.</p>
+
+        <div class="species-browser">
+          <h4 class="panel-subtitle">Strongest cell-type signals (score slope per year, control donors only)</h4>
+          <div class="species-table-wrap">
+            <table class="unit-gene-table species-table">
+              <thead>
+                <tr>
+                  <th>Cohort</th>
+                  <th>Cell type</th>
+                  <th>Donors</th>
+                  <th>Slope per year (x10&#179;)</th>
+                  <th>p</th>
+                  <th>Floor</th>
+                </tr>
+              </thead>
+              <tbody id="g15-tbody">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Source Drawer G15 -->
+        <div class="drawer" id="drawer-g15" hidden>
+          <div class="drawer-header">
+            <h4>Source: G15 Human Cohort Arm</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> this analysis of public CELLxGENE cohorts (MSSM, HBCC, RADC, SEA-AD, healthy kidney and lung cohorts, immune-aging BAL); control donors with recorded ages only; 98.4% program-gene coverage in every cohort.</div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="humancohorts" data-sub="cohorts">Download Cohort Summary (CSV)</button>
+              <button type="button" class="btn-download" data-export="humancohorts" data-sub="celltypes">Download Cell-Type Regressions (CSV)</button>
             </div>
           </div>
         </div>
@@ -861,6 +914,7 @@
           <li>Ensembl 1:1 reciprocal orthologs mapped for mouse-human and mouse-NMR.</li>
           <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background.</li>
           <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence (not established, p = 0.329).</li>
+          <li>M9 human cohort arm: the 261-gene program scored in 621 control donors across 11 public CELLxGENE cohorts (brain, kidney, lung); program score does not rise with age, and direction flips by cell type (brain glia up, excitatory neurons down).</li>
         </ol>
 
         <h3>4. Three Load-Bearing Limitations</h3>

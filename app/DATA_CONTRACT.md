@@ -70,6 +70,11 @@ All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON
 
 Copied verbatim from `figures/` (no re-rendering): `m3-dpt-vs-age.png` (17e50141a309), `m6-signature-figure.png` (d37d0ef831c4), `m6-positive-control-skin.png` (9371628bf60e), `m6-savina-reproduction.png` (ddc8ccee4034).
 
+10. **`anage.json`** <- data/raw/anage_dataset.zip (official AnAge Build 14 export, e3ddb66e32e9)
+   `[{n, latin, cls, long, kg, q, sc}]` — 4,141 species with recorded maximum longevity; `sc` flags the only 3 species with public single-cell aging data (mouse, human, naked mole-rat), verified at export. Powers G14 (species browser scatter + table). Added 2026-10-21.
+11. **`humancohorts.json`** <- m9-cohort-summary.csv + m9-regressions.csv (scripts/run_m9_pipeline.py, 2026-10-21)
+   `{cohorts: [{cohort, group, n_donors, age_min/max/sd, slope_per_year, se, ci_lo, ci_hi, p, rho, verdict}] (11 cohorts, 621 scored control donors), celltypes: [top 40 powered hits], total_control_donors: 624, program_human_genes: 188}` — powers G15 (human cohort arm). Headline asserted at export: MSSM n=213 slope/yr -0.00019 with CI below zero. Added 2026-10-21.
+
 ## Hard gates
 
 - `scripts/check_app_data.py` asserts every anchor in the table above against the exports and exits non-zero on any miss. Run after every export; the page build consumes only checked exports.

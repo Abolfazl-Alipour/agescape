@@ -47,7 +47,7 @@ def fchk(anchor: str, expected: float, observed: float, ndigits: int) -> bool:
 def main() -> int:
     j = {p.stem: json.loads(p.read_text()) for p in sorted(DATA.glob("*.json"))}
     for name in ["atlas", "calibration", "agreement", "design-grid", "program",
-                 "signature", "savina", "power-grid", "provenance", "anage"]:
+                 "signature", "savina", "power-grid", "provenance", "anage", "humancohorts"]:
         check(f"export exists: {name}.json", True, name in j)
 
     # ---- atlas: 163 units / 17 powered, confined to Lung & Kidney
@@ -190,6 +190,20 @@ def main() -> int:
           sorted(d["latin"] for d in an if d["sc"] == "yes")
           == ["Heterocephalus glaber", "Homo sapiens", "Mus musculus"])
 
+    # ---- M9 human cohort arm anchors
+    hc = j["humancohorts"]
+    check("humancohorts cohorts == 11", 11, len(hc["cohorts"]))
+    check("humancohorts total scored donors == 621", 621, sum(c["n_donors"] for c in hc["cohorts"]))
+    mssm = next(c for c in hc["cohorts"] if c["cohort"] == "MSSM_DLPFC")
+    check("M9 MSSM n_donors 213, verdict POWERED-FLOOR", (213, "POWERED-FLOOR"),
+          (mssm["n_donors"], mssm["verdict"]))
+    check("M9 MSSM slope negative with CI below zero", True,
+          mssm["slope_per_year"] < 0 and mssm["ci_hi"] < 0)
+    fchk("M9 MSSM slope_per_year -0.00019", -0.00019, mssm["slope_per_year"], 5)
+    check("M9 cell-type hits present (>=10 rows)", True, len(hc["celltypes"]) >= 10)
+    groups = {c["group"] for c in hc["cohorts"]}
+    check("M9 cohorts span brain/kidney/lung", {"brain", "kidney", "lung"}, groups)
+
     # ---- savina markers
     sav = j["savina"]
     check("savina curve == 39 rows", 39, len(sav["curve"]))
@@ -233,7 +247,7 @@ def main() -> int:
             if actual != e["sha256"]:
                 ok_sha = False
     check("all provenance SHA-256 values match files on disk", True, ok_sha)
-    check("every export has provenance sources", 10, len(pv["sources"]))
+    check("every export has provenance sources", 11, len(pv["sources"]))
     check("figure assets recorded == 4", 4, len(pv["assets"]))
     fig_ok = all((REPO / "app" / "figures" / name).stat().st_size == meta["bytes"]
                  for name, meta in pv["assets"].items())

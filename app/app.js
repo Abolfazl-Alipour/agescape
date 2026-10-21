@@ -43,7 +43,7 @@
     try {
       const files = [
         "atlas", "calibration", "agreement", "design-grid",
-        "program", "signature", "savina", "power-grid", "anage"
+        "program", "signature", "savina", "power-grid", "anage", "humancohorts"
       ];
       const fetches = files.map(f => fetch(`data/${f}.json`).then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status} on ${f}.json`);
@@ -74,6 +74,7 @@
       renderG10HonestInterval();
       renderG11LifespanContext();
       renderG14AnAge();
+      renderG15HumanCohorts();
       renderG12SavinaCurve();
       renderG13PowerMap();
       setupAccessibilityEnhancements();
@@ -244,6 +245,9 @@
     } else if (exportName === "anage") {
       rows = Array.isArray(rawData) ? rawData : [];
       filename = `anage-species-longevity.csv`;
+    } else if (exportName === "humancohorts") {
+      rows = subKey === "celltypes" ? (rawData.celltypes || []) : (rawData.cohorts || []);
+      filename = subKey === "celltypes" ? `human-cohort-celltype-regressions.csv` : `human-cohort-summary.csv`;
     } else if (exportName === "design-grid") {
       const dg = rawData;
       rows = dg.age_groups.map((ag, i) => ({
@@ -1057,6 +1061,108 @@
         }
       ]
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // CHAPTER 4: G15 Human cohort arm (M9) — forest plot of program slopes
+  // --------------------------------------------------------------------------
+  function renderG15HumanCohorts() {
+    const dom = document.getElementById("chart-g15");
+    const hc = state.data.humancohorts;
+    if (!dom || !hc) return;
+
+    const chart = echarts.init(dom);
+    state.activeCharts["g15"] = chart;
+
+    const GROUP_COLOR = { brain: "#7c3aed", kidney: "#0d9488", lung: "#0284c7" };
+    const rows = hc.cohorts.map((c, i) => ({
+      name: c.cohort.replace(/_/g, " "),
+      value: [c.slope_per_year * 1000, i],
+      ci: [c.ci_lo * 1000, c.ci_hi * 1000],
+      n: c.n_donors, p: c.p, group: c.group, verdict: c.verdict,
+      significant: c.ci_hi < 0 || c.ci_lo > 0,
+    }));
+    const rowH = 1;
+    const xPad = 0.001;
+
+    chart.setOption({
+      tooltip: {
+        trigger: "item",
+        formatter: (p) => {
+          const d = p.data;
+          return `<strong>${d.name}</strong> (${d.group})<br>donors: ${d.n}, slope: ${d.value[0].toFixed(3)}x10^-3/yr<br>95% CI: [${d.ci[0].toFixed(3)}, ${d.ci[1].toFixed(3)}]<br>p = ${d.p.toExponential(2)}${d.significant ? " (CI excludes 0)" : ""}`;
+        }
+      },
+      grid: { left: 150, right: 60, top: 30, bottom: 40 },
+      xAxis: {
+        type: "value",
+        name: "program score slope per year (x10^-3)",
+        nameLocation: "middle",
+        nameGap: 28,
+        min: -0.5, max: 1.1,
+        axisLabel: { color: "#64748b" },
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
+      },
+      yAxis: {
+        type: "category",
+        data: rows.map(r => r.name),
+        axisLabel: { color: "#334155", fontSize: 11 },
+        axisTick: { show: false }, axisLine: { show: false }
+      },
+      series: [
+        {
+          type: "custom",
+          data: rows,
+          renderItem: (params, api) => {
+            const d = rows[params.dataIndex];
+            const y = api.coord([0, d.value[1]])[1];
+            const x1 = api.coord([d.ci[0], d.value[1]])[0];
+            const x2 = api.coord([d.ci[1], d.value[1]])[0];
+            const xm = api.coord([d.value[0], d.value[1]])[0];
+            const color = GROUP_COLOR[d.group] || "#64748b";
+            const children = [
+              { type: "line", shape: { x1, y1: y, x2, y2: y }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
+              { type: "line", shape: { x1, y1: y - 5, x2, y2: y + 5 }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
+              { type: "line", shape: { x1: x2, y1: y - 5, x2: x2, y2: y + 5 }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
+            ];
+            children.push(d.significant
+              ? { type: "circle", shape: { cx: xm, cy: y, r: 6 }, style: { fill: color, stroke: "#0f172a", lineWidth: 1 } }
+              : { type: "circle", shape: { cx: xm, cy: y, r: 5 }, style: { fill: "rgba(0,0,0,0)", stroke: color, lineWidth: 2, opacity: 0.6 } });
+            if (d.significant) {
+              children.push({ type: "text", style: { x: xm, y: y - 14, text: `p=${d.p.toFixed(3)}`, textAlign: "center", fontSize: 10, fontWeight: 700, fill: "#0f172a" } });
+            }
+            return { type: "group", children };
+          }
+        },
+        {
+          type: "scatter",
+          data: [],
+          markLine: {
+            silent: true, symbol: "none",
+            lineStyle: { color: "#0f172a", width: 2, type: "solid" },
+            data: [{ xAxis: 0 }],
+            label: { show: true, formatter: "no change", position: "insideEndTop", color: "#0f172a", fontWeight: 600 }
+          }
+        }
+      ]
+    });
+
+    // top cell-type hits table
+    const tbody = document.getElementById("g15-tbody");
+    if (tbody) {
+      const fmt = v => (v * 1000).toFixed(2);
+      tbody.innerHTML = hc.celltypes.slice(0, 10).map(r => `
+        <tr>
+          <td>${r.cohort.replace(/_/g, " ")}</td>
+          <td>${r.cell_type}</td>
+          <td class="font-mono">${r.n_donors}</td>
+          <td class="font-mono">${r.slope_per_year >= 0 ? "+" : ""}${fmt(r.slope_per_year)}</td>
+          <td class="font-mono">${r.p.toExponential(2)}</td>
+          <td>${r.verdict === "POWERED-FLOOR"
+            ? `<span class="badge-sc">meets floor</span>`
+            : `<span class="species-none">low power</span>`}</td>
+        </tr>`).join("");
+    }
   }
 
   // --------------------------------------------------------------------------

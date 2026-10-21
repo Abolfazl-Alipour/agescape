@@ -2,7 +2,7 @@
 """
 export_app_data.py — Step 1 plot-data exports for the Agescape webapp.
 
-Produces the 9 exports pinned by app/DATA_CONTRACT.md (schemas 1-9) in app/data/
+Produces the 11 exports pinned by app/DATA_CONTRACT.md (schemas 1-11) in app/data/
 as deterministic JSON (sorted keys, shortest round-trip-safe float repr), copies the
 4 contracted figure PNGs into app/figures/, and wipes every stale file from the
 previous app version. Run:
@@ -152,7 +152,7 @@ def read_paper_age_coef() -> pd.DataFrame:
 # ---------------------------------------------------------------- exports
 
 def export_anage(prov):
-    """AnAge species browser export: every species with a recorded maximum longevity.
+    """AnAge species browser export: every species with a recorded maximum longevity..
 
     Single-cell flags are scoped strictly to this explorer's own data (mouse,
     human, naked mole-rat); every other species is flagged 'no' because no
@@ -198,6 +198,47 @@ def export_anage(prov):
     assert sum(1 for d in out if d["sc"] == "yes") == 3
     prov["anage.json"] = [{"file": "data/raw/anage_dataset.zip", "sha256": sha256_full(zpath), "rows": len(out)}]
     return out
+
+
+def export_human_cohorts(prov):
+    """M9 human cohort arm: program score vs donor age across public CELLxGENE cohorts.
+
+    Whole-cohort regressions plus the powered cell-type hits. Values transcribe the
+    committed M9 outputs (scripts/run_m9_pipeline.py); no new statistical decisions here.
+    """
+    summ = pd.read_csv(RESULTS / "m9-cohort-summary.csv")
+    regs = pd.read_csv(RESULTS / "m9-regressions.csv")
+
+    assert len(summ) == 11, f"expected 11 cohorts, got {len(summ)}"
+    assert int(summ["n_donors"].sum()) == 621, summ["n_donors"].sum()
+    mssm = summ[summ["cohort"] == "MSSM_DLPFC"].iloc[0]
+    assert mssm["n_donors"] == 213 and mssm["ci_hi"] < 0, "MSSM headline changed"
+
+    cohorts = []
+    for _, r in summ.iterrows():
+        cohorts.append({
+            "cohort": r["cohort"], "group": r["group"], "n_donors": int(r["n_donors"]),
+            "age_min": fnum(r["age_min"]), "age_max": fnum(r["age_max"]),
+            "age_sd": fnum(r["age_sd"]),
+            "slope_per_year": fnum(r["slope_per_year"]), "se": fnum(r["se"]),
+            "ci_lo": fnum(r["ci_lo"]), "ci_hi": fnum(r["ci_hi"]), "p": fnum(r["p"]),
+            "rho": fnum(r["rho"]), "verdict": r["verdict"],
+        })
+
+    hits = regs[regs["n_donors"] >= 6].sort_values("p").head(40)
+    celltypes = [{
+        "cohort": r["cohort"], "group": r["group"], "cell_type": r["cell_type"],
+        "n_donors": int(r["n_donors"]), "age_sd": fnum(r["age_sd"]),
+        "slope_per_year": fnum(r["slope_per_year"]), "ci_lo": fnum(r["ci_lo"]),
+        "ci_hi": fnum(r["ci_hi"]), "p": fnum(r["p"]), "verdict": r["verdict"],
+    } for _, r in hits.iterrows()]
+
+    prov["humancohorts.json"] = [
+        {"file": "results/m9-cohort-summary.csv", "sha256": sha256_full(RESULTS / "m9-cohort-summary.csv"), "rows": len(summ)},
+        {"file": "results/m9-regressions.csv", "sha256": sha256_full(RESULTS / "m9-regressions.csv"), "rows": len(regs)},
+    ]
+    return {"cohorts": cohorts, "celltypes": celltypes,
+            "total_control_donors": 624, "program_human_genes": 188}
 
 
 def export_atlas(s, prov):
@@ -566,6 +607,7 @@ def main():
     sizes["savina.json"] = write_json("savina.json", export_savina(s, prov))
     sizes["power-grid.json"] = write_json("power-grid.json", export_power_grid(s, prov))
     sizes["anage.json"] = write_json("anage.json", export_anage(prov))
+    sizes["humancohorts.json"] = write_json("humancohorts.json", export_human_cohorts(prov))
 
     prov["provenance.json"] = [
         {"file": "app/DATA_CONTRACT.md", "sha256": sha256_full(REPO / "app" / "DATA_CONTRACT.md"), "rows": 76},
