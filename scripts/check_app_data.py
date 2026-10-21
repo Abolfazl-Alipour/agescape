@@ -47,7 +47,7 @@ def fchk(anchor: str, expected: float, observed: float, ndigits: int) -> bool:
 def main() -> int:
     j = {p.stem: json.loads(p.read_text()) for p in sorted(DATA.glob("*.json"))}
     for name in ["atlas", "calibration", "agreement", "design-grid", "program",
-                 "signature", "savina", "power-grid", "provenance"]:
+                 "signature", "savina", "power-grid", "provenance", "anage"]:
         check(f"export exists: {name}.json", True, name in j)
 
     # ---- atlas: 163 units / 17 powered, confined to Lung & Kidney
@@ -177,6 +177,19 @@ def main() -> int:
     check("anchor 0.59 @ (4 donors, SD 20, disp 0.1)", 0.59, tile[(4, 20, 0.1)])
     check("anchors dict mirrors tiles", {"4_8_low": 1.474, "4_20_low": 0.59}, pg["anchors"])
 
+    # ---- anage species browser anchors
+    an = j["anage"]
+    check("anage species == 4141", 4141, len(an))
+    latin = {d["latin"]: d for d in an}
+    check("anage mouse 4.0 / nmr 31.0 / human 122.5 / bowhead 211.0 / quahog 507.0",
+          {"Mus musculus": 4.0, "Heterocephalus glaber": 31.0,
+           "Homo sapiens": 122.5, "Balaena mysticetus": 211.0, "Arctica islandica": 507.0},
+          {k: latin[k]["long"] for k in
+           ["Mus musculus", "Heterocephalus glaber", "Homo sapiens", "Balaena mysticetus", "Arctica islandica"]})
+    check("anage single-cell flags: exactly mouse/human/nmr", True,
+          sorted(d["latin"] for d in an if d["sc"] == "yes")
+          == ["Heterocephalus glaber", "Homo sapiens", "Mus musculus"])
+
     # ---- savina markers
     sav = j["savina"]
     check("savina curve == 39 rows", 39, len(sav["curve"]))
@@ -220,7 +233,7 @@ def main() -> int:
             if actual != e["sha256"]:
                 ok_sha = False
     check("all provenance SHA-256 values match files on disk", True, ok_sha)
-    check("every export has provenance sources", 9, len(pv["sources"]))
+    check("every export has provenance sources", 10, len(pv["sources"]))
     check("figure assets recorded == 4", 4, len(pv["assets"]))
     fig_ok = all((REPO / "app" / "figures" / name).stat().st_size == meta["bytes"]
                  for name, meta in pv["assets"].items())

@@ -1075,6 +1075,60 @@ body {
   max-width: 720px;
 }
 
+/* Species browser (G14) */
+.species-browser {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.species-search {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 14px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-main);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  outline: none;
+  min-height: 44px;
+}
+
+.species-search:focus {
+  border-color: var(--border-highlight);
+}
+
+.species-table-wrap {
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.species-latin {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.badge-sc {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(3, 105, 161, 0.1);
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.species-none {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
 @media (max-width: 480px) {
   .story-strip {
     padding: 28px 16px 4px;

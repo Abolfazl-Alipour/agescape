@@ -23,10 +23,13 @@ corrections are applied here and recorded (dated) in app/DATA_CONTRACT.md:
 """
 from __future__ import annotations
 
+import csv
 import hashlib
+import io
 import json
 import shutil
 import sys
+import zipfile
 from datetime import date
 from pathlib import Path
 
@@ -147,6 +150,55 @@ def read_paper_age_coef() -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------- exports
+
+def export_anage(prov):
+    """AnAge species browser export: every species with a recorded maximum longevity.
+
+    Single-cell flags are scoped strictly to this explorer's own data (mouse,
+    human, naked mole-rat); every other species is flagged 'no' because no
+    public single-cell aging data exists for it (verified claim, not inferred).
+    """
+    zpath = REPO / "data" / "raw" / "anage_dataset.zip"
+    sc_species = {"Mus musculus", "Homo sapiens", "Heterocephalus glaber"}
+
+    def fnum_or_none(x):
+        try:
+            v = float(x)
+            return v if np.isfinite(v) else None
+        except (TypeError, ValueError):
+            return None
+
+    with zipfile.ZipFile(zpath) as zf:
+        rows = list(csv.DictReader(io.TextIOWrapper(zf.open("anage_data.txt"), encoding="latin1"), delimiter="\t"))
+
+    out, seen = [], set()
+    for r in rows:
+        latin = f"{r['Genus']} {r['Species']}".strip()
+        lon = fnum_or_none(r["Maximum longevity (yrs)"])
+        if not latin or latin in seen or lon is None:
+            continue
+        seen.add(latin)
+        mass_g = fnum_or_none(r["Adult weight (g)"])
+        out.append({
+            "n": r.get("Common name") or latin,
+            "latin": latin,
+            "cls": r["Class"] or "Other",
+            "long": lon,
+            "kg": round(mass_g / 1000, 3) if mass_g else None,
+            "q": (r.get("Data quality") or "").lower() or None,
+            "sc": "yes" if latin in sc_species else "no",
+        })
+
+    assert len(out) == 4141, f"anage species count changed: {len(out)}"
+    by_latin = {d["latin"]: d["long"] for d in out}
+    assert by_latin["Mus musculus"] == 4.0
+    assert by_latin["Homo sapiens"] == 122.5
+    assert by_latin["Heterocephalus glaber"] == 31.0
+    assert by_latin["Balaena mysticetus"] == 211.0
+    assert sum(1 for d in out if d["sc"] == "yes") == 3
+    prov["anage.json"] = [{"file": "data/raw/anage_dataset.zip", "sha256": sha256_full(zpath), "rows": len(out)}]
+    return out
+
 
 def export_atlas(s, prov):
     el, rk = s["eligibility"], s["ranked"]
@@ -513,6 +565,7 @@ def main():
     sizes["signature.json"] = write_json("signature.json", export_signature(s, prov))
     sizes["savina.json"] = write_json("savina.json", export_savina(s, prov))
     sizes["power-grid.json"] = write_json("power-grid.json", export_power_grid(s, prov))
+    sizes["anage.json"] = write_json("anage.json", export_anage(prov))
 
     prov["provenance.json"] = [
         {"file": "app/DATA_CONTRACT.md", "sha256": sha256_full(REPO / "app" / "DATA_CONTRACT.md"), "rows": 76},

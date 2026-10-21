@@ -58,6 +58,7 @@
 
     <div class="nav-actions">
       <button type="button" class="btn-text" id="btn-open-methods">Methods</button>
+      <a href="https://github.com/Abolfazl-Alipour/agescape" class="btn-text" target="_blank" rel="noopener">Code</a>
     </div>
   </header>
 
@@ -528,6 +529,58 @@
         </div>
       </div>
 
+      <!-- Supporting Graph G14: AnAge Species Browser -->
+      <div class="graph-block" id="block-g14">
+        <div class="graph-title-row">
+          <h3 class="graph-title">Of 4,141 species with measured longevity, only 3 have single-cell aging data</h3>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g14" aria-expanded="false" title="Source & Data">Source</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g14" class="echart-container" style="height: 360px;"></div>
+        </div>
+        <p class="graph-support">Each dot is a species: adult body mass against maximum recorded lifespan (AnAge). Blue: mammals. Colored and labeled: the only three species with public single-cell aging data, which is everything this explorer can analyze. Every other dot, however long-lived, has none.</p>
+
+        <div class="species-browser">
+          <input type="search" id="species-search" class="species-search" placeholder="Search 4,141 species by name..." aria-label="Search species">
+          <div class="species-table-wrap">
+            <table class="unit-gene-table species-table">
+              <thead>
+                <tr>
+                  <th>Species</th>
+                  <th>Class</th>
+                  <th>Max longevity (yrs)</th>
+                  <th>Adult mass (kg)</th>
+                  <th>Single-cell aging data</th>
+                </tr>
+              </thead>
+              <tbody id="species-tbody">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <p class="expander-note" id="species-count-note"></p>
+        </div>
+
+        <!-- Source Drawer G14 -->
+        <div class="drawer" id="drawer-g14" hidden>
+          <div class="drawer-header">
+            <h4>Source: G14 Species Browser</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> AnAge Animal Ageing and Longevity Database (Build 14), 4,141 species with recorded maximum longevity. Single-cell availability flags reflect this explorer's own data only.</div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="anage">Download Full Species Table (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Supporting Graph G12: Savina 2022 Reproduction Curve -->
       <div class="graph-block" id="block-g12">
         <div class="graph-title-row">
@@ -667,6 +720,7 @@
         <p class="author-role">Data Scientist at Meta &middot; PhD Neuroscience &middot; PharmD</p>
         <div class="author-links">
           <a href="https://www.linkedin.com/in/rez4/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Abolfazl-Alipour/agescape" target="_blank" rel="noopener">Code</a>
         </div>
         <p class="footer-note">Personal research project; Kavox Labs affiliation noted. Data credits: Tabula Muris Senis, Tabula Sapiens, Savina et al. 2022, AnAge Build 14.</p>
         <p class="footer-disclaimer">Research tool, not medical advice. Code: MIT &middot; Content: CC BY 4.0</p>

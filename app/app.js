@@ -43,7 +43,7 @@
     try {
       const files = [
         "atlas", "calibration", "agreement", "design-grid",
-        "program", "signature", "savina", "power-grid"
+        "program", "signature", "savina", "power-grid", "anage"
       ];
       const fetches = files.map(f => fetch(`data/${f}.json`).then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status} on ${f}.json`);
@@ -73,6 +73,7 @@
       renderG9SignatureMultiples();
       renderG10HonestInterval();
       renderG11LifespanContext();
+      renderG14AnAge();
       renderG12SavinaCurve();
       renderG13PowerMap();
       setupAccessibilityEnhancements();
@@ -240,6 +241,9 @@
     } else if (exportName === "power-grid") {
       rows = rawData.tiles;
       filename = `human-power-simulation-grid.csv`;
+    } else if (exportName === "anage") {
+      rows = Array.isArray(rawData) ? rawData : [];
+      filename = `anage-species-longevity.csv`;
     } else if (exportName === "design-grid") {
       const dg = rawData;
       rows = dg.age_groups.map((ag, i) => ({
@@ -1203,6 +1207,138 @@
         }
       ]
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // CHAPTER 4: G14 AnAge Species Browser
+  // --------------------------------------------------------------------------
+  const SC_SPECIES = {
+    "Homo sapiens": { color: "#7c3aed", label: "Human" },
+    "Heterocephalus glaber": { color: "#ea580c", label: "Naked mole-rat" },
+    "Mus musculus": { color: "#2563eb", label: "Mouse" }
+  };
+
+  function renderG14AnAge() {
+    const dom = document.getElementById("chart-g14");
+    const data = state.data.anage;
+    if (!dom || !Array.isArray(data)) return;
+
+    const chart = echarts.init(dom);
+    state.activeCharts["g14"] = chart;
+
+    const scatterPts = data.filter(d => d.kg && d.long).map(d => ({
+      value: [d.kg, d.long],
+      name: d.n,
+      cls: d.cls,
+      ref: d,
+      itemStyle: d.sc === "yes" ? { color: SC_SPECIES[d.latin].color, borderColor: "#0f172a", borderWidth: 1.5 } : undefined
+    }));
+
+    const mammals = scatterPts.filter(p => p.cls === "Mammalia" && !p.itemStyle);
+    const others = scatterPts.filter(p => p.cls !== "Mammalia" && !p.itemStyle);
+    const featured = scatterPts.filter(p => p.itemStyle);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "item",
+        formatter: (p) => {
+          const d = p.data.ref;
+          const latin = d ? `<br><em>${d.latin}</em>` : "";
+          const mass = p.value[0] < 0.01 ? `${(p.value[0] * 1000).toFixed(0)} g` : `${p.value[0]} kg`;
+          return `<strong>${p.data.name}</strong>${latin}<br>Class: ${p.data.cls}<br>Max longevity: <strong>${p.value[1]} yrs</strong><br>Adult mass: ${mass}`;
+        }
+      },
+      grid: { left: 85, right: 30, top: 30, bottom: 55 },
+      xAxis: {
+        type: "log",
+        name: "Adult body mass (kg, log scale)",
+        nameLocation: "middle",
+        nameGap: 30,
+        axisLabel: { color: "#64748b" },
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
+      },
+      yAxis: {
+        type: "log",
+        name: "Max longevity (yrs, log)",
+        nameGap: 15,
+        axisLabel: { color: "#64748b" },
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
+      },
+      series: [
+        {
+          type: "scatter",
+          name: "Other classes",
+          data: others,
+          symbolSize: 5,
+          itemStyle: { color: "rgba(100,116,139,0.35)" },
+          emphasis: { scale: 1.5 }
+        },
+        {
+          type: "scatter",
+          name: "Mammals",
+          data: mammals,
+          symbolSize: 6,
+          itemStyle: { color: "rgba(3,105,161,0.55)" },
+          emphasis: { scale: 1.5 }
+        },
+        {
+          type: "scatter",
+          name: "Single-cell data available",
+          data: featured,
+          symbolSize: 15,
+          label: {
+            show: true,
+            position: "top",
+            color: "#0f172a",
+            fontWeight: 700,
+            formatter: (p) => {
+              const d = p.data.ref;
+              return (d && SC_SPECIES[d.latin] && SC_SPECIES[d.latin].label) || p.data.name;
+            }
+          },
+          z: 10
+        }
+      ]
+    });
+
+    // Table with search
+    const tbody = document.getElementById("species-tbody");
+    const search = document.getElementById("species-search");
+    const note = document.getElementById("species-count-note");
+    if (!tbody) return;
+
+    const sorted = [...data].sort((a, b) => b.long - a.long);
+    const PAGE = 50;
+
+    function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+    function renderRows(filter) {
+      const q = (filter || "").trim().toLowerCase();
+      const hits = q
+        ? sorted.filter(d => d.n.toLowerCase().includes(q) || d.latin.toLowerCase().includes(q))
+        : sorted;
+      const shown = hits.slice(0, PAGE);
+      tbody.innerHTML = shown.map(d => `
+        <tr>
+          <td><strong>${esc(d.n)}</strong><br><span class="species-latin">${esc(d.latin)}</span></td>
+          <td>${esc(d.cls)}</td>
+          <td class="font-mono">${d.long}</td>
+          <td class="font-mono">${d.kg != null ? d.kg.toLocaleString("en-US") : "n/a"}</td>
+          <td>${d.sc === "yes"
+            ? `<span class="badge-sc">In this explorer</span>`
+            : `<span class="species-none">None public</span>`}</td>
+        </tr>`).join("");
+      if (note) {
+        note.textContent = q
+          ? `${hits.length} matching species. Showing the first ${shown.length} by longevity.`
+          : `Showing ${shown.length} of ${hits.length} species, sorted by maximum longevity. Search to filter; the CSV download holds the full table.`;
+      }
+    }
+
+    renderRows("");
+    if (search) {
+      search.addEventListener("input", () => renderRows(search.value));
+    }
   }
 
   // --------------------------------------------------------------------------
