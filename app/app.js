@@ -43,7 +43,7 @@
     try {
       const files = [
         "atlas", "calibration", "agreement", "design-grid",
-        "program", "signature", "savina", "power-grid", "provenance"
+        "program", "signature", "savina", "power-grid"
       ];
       const fetches = files.map(f => fetch(`data/${f}.json`).then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status} on ${f}.json`);

@@ -96,7 +96,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Aging signal is powered in only 2 of 16 tissues</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g0" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g0" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
         
@@ -118,15 +118,12 @@
         <!-- Provenance Drawer G0 -->
         <div class="drawer" id="drawer-g0" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance & Verification: G0 Atlas Eligibility Map</h4>
+            <h4>Source: G0 Atlas Eligibility Map</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source File:</strong> <code>results/m2-unit-eligibility.csv</code></div>
-              <div><strong>Freeze Date:</strong> 2026-10-14</div>
-              <div><strong>Rows Used:</strong> 163 units (17 powered, 146 ineligible across 14 other tissues)</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short" title="d394b440aba5e35fd78988a0f9227163cb14644a49fe0f19c961e51d9d95f877">d394b440aba5</code></div>
+              <div><strong>Source:</strong> Tabula Muris Senis 10x droplet atlas, young (3m) vs old (18m) mice, via CZ CELLxGENE.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="atlas" data-sub="units">Download Drawn Data (CSV)</button>
@@ -140,7 +137,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Lung adventitial cells and kidney tubule cells exhibit strongest aging signals</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g1" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g1" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -152,15 +149,12 @@
         <!-- Provenance Drawer G1 -->
         <div class="drawer" id="drawer-g1" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G1 Ranked Aging Signals</h4>
+            <h4>Source: G1 Ranked Aging Signals</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source File:</strong> <code>results/m2-aging-signal-ranked.csv</code></div>
-              <div><strong>Freeze Date:</strong> 2026-10-14</div>
-              <div><strong>Rows Used:</strong> 17 powered units</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short" title="fb000922b0870d0c3eb1cf2fb07849c693a129d20c57c2bc3d70233158dc0320">fb000922b087</code></div>
+              <div><strong>Source:</strong> same Tabula Muris Senis analysis; units ranked by differential-expression gene count with bootstrap intervals.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="atlas" data-sub="ranked">Download Ranked Data (CSV)</button>
@@ -184,7 +178,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Pipeline reproduces original Tabula Muris Senis aging slopes across 13,019 shared genes</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g3" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g3" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -203,15 +197,12 @@
         <!-- Provenance Drawer G3 -->
         <div class="drawer" id="drawer-g3" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G3 Published Literature Agreement</h4>
+            <h4>Source: G3 Published Literature Agreement</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Sources:</strong> <code>m3-agreement-table.csv</code> &middot; <code>tms_nature2020_moesm8_dge_results.xlsx</code></div>
-              <div><strong>Freeze Date:</strong> 2026-10-14</div>
-              <div><strong>Points:</strong> 13,019 shared genes (Kidney PCT); 17 lollipop units</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">743ae1f1f262</code></div>
+              <div><strong>Source:</strong> this pipeline compared against the published Tabula Muris Senis aging coefficients (Nature 2020 supplementary data).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="agreement" data-sub="scatter">Download Scatter Data (CSV)</button>
@@ -226,7 +217,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Calibration on Lung::adventitial cell: 55 observed DE genes vs a permutation null mean of 4.6; the within-3m sex control is unestimable (structural 0)</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Source</button>
             <button type="button" class="btn-compare" data-target="compare-g2">Compare Published</button>
           </div>
         </div>
@@ -259,14 +250,12 @@
         <!-- Provenance Drawer G2 -->
         <div class="drawer" id="drawer-g2" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G2 Calibration Trio</h4>
+            <h4>Source: G2 Calibration Trio</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Sources:</strong> <code>m2-calibration-trio-summary.csv</code> &middot; <code>m2-calibration-positive-controls.csv</code></div>
-              <div><strong>Observed:</strong> 55 | <strong>Null Mean:</strong> 4.6 | <strong>Sex Control:</strong> 0 (not estimable, all-male 3m)</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">ac3e65b60721</code></div>
+              <div><strong>Source:</strong> label-permutation nulls, sex-control check, and positive controls computed for this analysis.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="calibration" data-sub="posctl">Download Calibration Data (CSV)</button>
@@ -280,7 +269,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Sex and age are completely segregated in TMS 10x Chromium droplet mice</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g4" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g4" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -292,14 +281,12 @@
         <!-- Provenance Drawer G4 -->
         <div class="drawer" id="drawer-g4" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G4 Design Grid</h4>
+            <h4>Source: G4 Design Grid</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> <code>results/m1-sex-age-table.csv</code></div>
-              <div><strong>Animals:</strong> 23 total mice across 6 age groups</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">832e990f8803</code></div>
+              <div><strong>Source:</strong> Tabula Muris Senis droplet cohort: 23 mice across six age groups, both sexes.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="design-grid">Download Design Grid Data (CSV)</button>
@@ -323,7 +310,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Upregulated genes outnumber downregulated genes across nearly all powered units</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g6" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g6" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -335,14 +322,12 @@
         <!-- Provenance Drawer G6 -->
         <div class="drawer" id="drawer-g6" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G6 Program Direction</h4>
+            <h4>Source: G6 Program Direction</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Sources:</strong> <code>m5-mouse-program-catalog.csv</code> &middot; <code>m6-program-genes.csv</code></div>
-              <div><strong>Totals:</strong> 167 up, 94 down, 312 total unit-gene pairs</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">d5ab9ace5f3c</code></div>
+              <div><strong>Source:</strong> aging program catalog across the 17 powered units (this analysis).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="program" data-sub="catalog">Download Program Catalog (CSV)</button>
@@ -356,7 +341,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Most aging genes are private to single cell types; 261 non-redundant genes change with age</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -376,14 +361,12 @@
         <!-- Provenance Drawer G7 -->
         <div class="drawer" id="drawer-g7" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G7 Recurrent Program Matrix</h4>
+            <h4>Source: G7 Recurrent Program Matrix</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Sources:</strong> <code>m5-gene-level-programs.csv</code> (312 entries)</div>
-              <div><strong>Matrix Cap:</strong> Top 40 genes by unit count shown; full 312 rows in download.</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">5251165002a1</code></div>
+              <div><strong>Source:</strong> gene by unit program membership, 312 entries across the 17 powered units (this analysis).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="program" data-sub="genes">Download All 312 Gene Entries (CSV)</button>
@@ -407,7 +390,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Mouse program rises steeply; naked mole-rat remains flat; human is severely underpowered</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g9" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g9" aria-expanded="false" title="Provenance & Data">Source</button>
             <button type="button" class="btn-compare" data-target="compare-g9">Compare Published</button>
           </div>
         </div>
@@ -429,14 +412,12 @@
         <!-- Provenance Drawer G9 -->
         <div class="drawer" id="drawer-g9" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G9 Signature Small Multiples</h4>
+            <h4>Source: G9 Signature Small Multiples</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Sources:</strong> <code>m6-lifespan-program-scores.csv</code> &middot; <code>m6-gates.csv</code></div>
-              <div><strong>Coverage:</strong> Mouse 1.00 &middot; Human 0.73 &middot; NMR 0.31</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">dfff50c3d1d4</code></div>
+              <div><strong>Source:</strong> program scores per donor: 23 mouse, 4 human, 5 naked mole-rat, normalized by species lifespan.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="signature" data-sub="points">Download Donor Scores Data (CSV)</button>
@@ -450,7 +431,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Equivalence is not statistically proven: NMR confidence interval spans beyond margin</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g10" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g10" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -462,14 +443,12 @@
         <!-- Provenance Drawer G10 -->
         <div class="drawer" id="drawer-g10" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G10 Honest Interval</h4>
+            <h4>Source: G10 Honest Interval</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> <code>results/m6-statistical-summary.csv</code></div>
-              <div><strong>Mouse:</strong> 0.235 [0.067, 0.403] | <strong>NMR:</strong> 0.017 [-0.257, 0.290]</div>
-              <div><strong>Difference:</strong> 0.218 [-0.013, 0.449], p = 0.064</div>
+              <div><strong>Source:</strong> slope and equivalence statistics from the same regressions shown in G9.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="signature" data-sub="stats">Download Statistical Summary (CSV)</button>
@@ -483,7 +462,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Chronological lifespan spans decades: NMR tested span represents early-middle age</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g11" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g11" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -495,14 +474,12 @@
         <!-- Provenance Drawer G11 -->
         <div class="drawer" id="drawer-g11" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G11 Lifespan Benchmarks</h4>
+            <h4>Source: G11 Lifespan Benchmarks</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> <code>results/m6-species-lifespans.csv</code> (AnAge Build 14)</div>
-              <div><strong>Mouse:</strong> 4.0y | <strong>NMR:</strong> 31.0y | <strong>Human:</strong> 122.5y</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">ad28535a0957</code></div>
+              <div><strong>Source:</strong> AnAge longevity database (Build 14), maximum recorded lifespan per species.</div>
             </div>
           </div>
         </div>
@@ -513,7 +490,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Savina et al. 2022 (Aging) reproduction: 29 DE genes at author threshold (paper reported 0)</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Source</button>
             <button type="button" class="btn-compare" data-target="compare-g12">Compare Published</button>
           </div>
         </div>
@@ -535,14 +512,12 @@
         <!-- Provenance Drawer G12 -->
         <div class="drawer" id="drawer-g12" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G12 Savina Curve</h4>
+            <h4>Source: G12 Savina Curve</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> <code>results/m6-savina-reproduction.csv</code> (39 cutoff rows)</div>
-              <div><strong>Caveats:</strong> Igfbp3 missing from source file; QC filtered 10,251 vs 10,232 cells</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">cfdab4a0f3a1</code></div>
+              <div><strong>Source:</strong> re-analysis of Savina et al. 2022 naked mole-rat skin counts (NCBI GEO GSE152886).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="savina">Download Savina Curve Data (CSV)</button>
@@ -566,7 +541,7 @@
         <div class="graph-title-row">
           <h3 class="graph-title">Human eligibility floor used in this analysis: at least 6 donors and a donor-age standard deviation of at least 12 years per cell type</h3>
           <div class="graph-controls">
-            <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Provenance</button>
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Source</button>
           </div>
         </div>
 
@@ -613,15 +588,12 @@
         <!-- Provenance Drawer G13 -->
         <div class="drawer" id="drawer-g13" hidden>
           <div class="drawer-header">
-            <h4>Data Provenance: G13 Human Power Simulation</h4>
+            <h4>Source: G13 Human Power Simulation</h4>
             <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source File:</strong> <code>results/m4-human-power.csv</code></div>
-              <div><strong>Grid Dimension:</strong> 9 donor counts × 4 SD values × 3 dispersions = 108 tiles per panel</div>
-              <div><strong>Anchor Matches:</strong> (4, 8, 0.1) → 1.474 | (4, 20, 0.1) → 0.590</div>
-              <div><strong>SHA-256:</strong> <code class="sha-short">03dc469a5a05</code></div>
+              <div><strong>Source:</strong> power simulation across 110 study designs varying donors, age spread, and dispersion (this analysis).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="power-grid">Download Full Power Grid (CSV)</button>
@@ -636,7 +608,7 @@
           <div class="constructive-icon">💡</div>
           <div class="constructive-text">
             <h3>What would settle the human question?</h3>
-            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (source: <code>results/m4-human-power.csv</code>). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years.</p>
+            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (values from the power simulation shown in G13). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years.</p>
           </div>
         </div>
       </div>
@@ -653,7 +625,7 @@
           <a href="https://www.linkedin.com/in/rez4/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <p class="footer-note">Personal research project; Kavox Labs affiliation noted. Data credits: Tabula Muris Senis, Tabula Sapiens, Savina et al. 2022, AnAge Build 14.</p>
-        <p class="footer-disclaimer">Research tool, not medical advice. App v2.0 &middot; Data Freeze: 2026-10-14 &middot; Code: MIT &middot; Content: CC BY 4.0</p>
+        <p class="footer-disclaimer">Research tool, not medical advice. Code: MIT &middot; Content: CC BY 4.0</p>
       </div>
     </footer>
   </main>
@@ -740,34 +712,34 @@
       </div>
 
       <div class="modal-body-content">
-        <h3>1. Data Sources & Checksums</h3>
+        <h3>1. Data Sources</h3>
         <table class="methods-table">
           <thead>
             <tr>
               <th>Dataset</th>
               <th>Source / Repository</th>
-              <th>Version / Date</th>
-              <th>Status</th>
+              <th>Release</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Tabula Muris Senis (droplet)</td>
-              <td>CELLxGENE <code>075831ea-4c76-47e5-a141-86f0978114d8</code></td>
-              <td>v1 / 2026-10-14 freeze</td>
-              <td>238,186 cells verified (QC of 245,389 raw)</td>
+              <td>CZ CELLxGENE, Tabula Muris Senis collection</td>
+              <td>Public release</td>
+              <td>245,389 cells; 238,186 after quality control</td>
             </tr>
             <tr>
               <td>Tabula Sapiens (Lung, Kidney)</td>
               <td>Figshare Release 1.0 (authoritative donor ages)</td>
               <td>Release 1.0</td>
-              <td>Verified</td>
+              <td>Lung and kidney used for the human arm</td>
             </tr>
             <tr>
               <td>Savina 2022 NMR Skin</td>
               <td>NCBI GEO GSE152886</td>
-              <td>Processed counts CSV</td>
-              <td>Sample 2V purged</td>
+              <td>Public processed counts</td>
+              <td>One sample excluded as a technical outlier</td>
             </tr>
             <tr>
               <td>AnAge Lifespan Database</td>
