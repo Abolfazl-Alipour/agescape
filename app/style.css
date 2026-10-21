@@ -1000,6 +1000,91 @@ body {
   color: var(--text-muted);
 }
 
+/* ==========================================================================
+   Story strip & chapter sub-lines (zero-jargon narrative layer)
+   ========================================================================== */
+.story-strip {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 8px;
+}
+
+.story-strip-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-highlight);
+  letter-spacing: -0.015em;
+  margin-bottom: 16px;
+}
+
+.story-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: step;
+}
+
+.story-step-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.story-step-link:hover {
+  border-color: var(--border-highlight);
+  box-shadow: 0 4px 16px rgba(3, 105, 161, 0.12);
+}
+
+.story-step-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 105, 161, 0.1);
+  color: #0369a1;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.story-step-body strong {
+  color: var(--text-highlight);
+}
+
+.chapter-sub {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-sub);
+  margin-top: 8px;
+  max-width: 720px;
+}
+
+@media (max-width: 480px) {
+  .story-strip {
+    padding: 28px 16px 4px;
+  }
+  .story-step-link {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Tap-target floor (44px minimum) & mobile navigation */
 .rail-step {
   min-width: 44px;

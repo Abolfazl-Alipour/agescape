@@ -70,16 +70,55 @@
     <section class="hero-intro" id="intro">
       <div class="hero-inner">
         <span class="hero-eyebrow">Interactive single-cell aging atlas</span>
-        <h1 class="hero-headline">Where aging shows up cell by cell, and where it doesn't.</h1>
-        <p class="hero-sub">Agescape is an interactive exploration of mammalian aging at single-cell resolution: where aging signal is statistically real, which genes change with age, and whether the pattern holds from mouse to human to the naked mole-rat.</p>
+        <h1 class="hero-headline">Aging is not one program. Here is the evidence.</h1>
+        <p class="hero-sub">We searched every cell type in the aging mouse atlas for genes that change with age. The signal is real but rare: only 17 of 163 cell-type units, all in lung and kidney, age detectably, and each does so through largely its own genes. Whether the same happens in humans is unanswerable with public data today. This page shows the evidence, and the exact study that would settle it.</p>
         <div class="hero-chips" aria-label="Key numbers">
           <span class="chip"><strong>163</strong> units tested</span>
-          <span class="chip"><strong>17</strong> powered aging signals</span>
+          <span class="chip"><strong>17</strong> where aging is measurable</span>
           <span class="chip"><strong>261</strong> aging genes</span>
           <span class="chip"><strong>3</strong> species</span>
         </div>
-        <a href="#ch1" class="hero-cta">Open the atlas</a>
+        <a href="#story" class="hero-cta">Read the story</a>
       </div>
+    </section>
+
+    <!-- =========================================================================
+         STORY STRIP: the whole finding in 30 seconds, zero jargon
+         ========================================================================= -->
+    <section class="story-strip" id="story" aria-label="The story in 30 seconds">
+      <h2 class="story-strip-title">The story in 30 seconds</h2>
+      <ol class="story-steps">
+        <li>
+          <a href="#ch1" class="story-step-link">
+            <span class="story-step-num">1</span>
+            <span class="story-step-body"><strong>Where can aging even be measured?</strong> Only 17 of 163 mouse cell-type units have enough mice and cells to test. All 17 are in lung and kidney.</span>
+          </a>
+        </li>
+        <li>
+          <a href="#ch2" class="story-step-link">
+            <span class="story-step-num">2</span>
+            <span class="story-step-body"><strong>Is the signal real?</strong> Yes. The top unit shows 55 aging genes against about 5 expected by chance, and the results match the original published atlas.</span>
+          </a>
+        </li>
+        <li>
+          <a href="#ch3" class="story-step-link">
+            <span class="story-step-num">3</span>
+            <span class="story-step-body"><strong>What is the aging program?</strong> 261 genes change with age, but most act in only one cell type. Aging looks private, not universal.</span>
+          </a>
+        </li>
+        <li>
+          <a href="#ch4" class="story-step-link">
+            <span class="story-step-num">4</span>
+            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat over the years tested, but equivalence is not proven. Human: undecidable, only 4 donors exist.</span>
+          </a>
+        </li>
+        <li>
+          <a href="#ch5" class="story-step-link">
+            <span class="story-step-num">5</span>
+            <span class="story-step-body"><strong>What would answer the human question?</strong> A cohort with enough donors spread across ages. The power map shows exactly how many are needed.</span>
+          </a>
+        </li>
+      </ol>
     </section>
 
     <!-- =========================================================================
@@ -89,6 +128,7 @@
       <div class="chapter-header">
         <span class="chapter-num">Chapter 1</span>
         <h2 class="chapter-headline">Of 163 tissue-cell-type units tested, aging is powered in 17, all in lung and kidney.</h2>
+        <p class="chapter-sub">&ldquo;Powered&rdquo; means at least 3 mice and at least 50 cells in both the young and old groups: the minimum needed to detect aging without fooling ourselves.</p>
       </div>
 
       <!-- Main Graph G0: Atlas Eligibility Map -->
@@ -171,6 +211,7 @@
       <div class="chapter-header">
         <span class="chapter-num">Chapter 2</span>
         <h2 class="chapter-headline">Top signal is 12x its permutation null, and pipeline agrees with original paper.</h2>
+        <p class="chapter-sub">Three sanity checks before believing any number: the signal must beat a shuffled-label null, match the published paper, and be independent of cell maturity.</p>
       </div>
 
       <!-- Main Graph G3: Agreement (Lead Visual) -->
@@ -303,6 +344,7 @@
       <div class="chapter-header">
         <span class="chapter-num">Chapter 3</span>
         <h2 class="chapter-headline">261 genes move with age across the powered units: 167 up, 94 down.</h2>
+        <p class="chapter-sub">A program is the set of genes that significantly change with age in one cell type. The matrix below shows whether aging is shared across units or private to each.</p>
       </div>
 
       <!-- Main Graph G6: Program Stacked Bars -->
@@ -383,6 +425,7 @@
       <div class="chapter-header">
         <span class="chapter-num">Chapter 4</span>
         <h2 class="chapter-headline">In mouse, the program rises with age. In the naked mole-rat, it does not.</h2>
+        <p class="chapter-sub">Each animal is scored by how strongly its cells express the mouse aging program. The question is simple: does that score rise as the animal gets older?</p>
       </div>
 
       <!-- Main Graph G9: Signature Small Multiples -->
@@ -534,6 +577,7 @@
       <div class="chapter-header">
         <span class="chapter-num">Chapter 5</span>
         <h2 class="chapter-headline">With 4 donors, only huge effects are detectable. Here is the design for real ones.</h2>
+        <p class="chapter-sub">Power asks one question: what size of effect could this study design actually detect? Studies that are too small miss real aging completely.</p>
       </div>
 
       <!-- Main Graph G13: Power Map (3 Small Multiples) -->
