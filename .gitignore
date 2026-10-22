@@ -10,3 +10,6 @@ __pycache__/
 report/_build/
 app/node_modules/
 app/dist/
+
+# Controlled-access DUA data (Synapse DLPFC atlas) - never commit
+data/external/
