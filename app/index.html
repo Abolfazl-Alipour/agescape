@@ -110,13 +110,13 @@
         <li>
           <a href="#ch4" class="story-step-link">
             <span class="story-step-num">4</span>
-            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat, unproven. Human: tested in 621 donors now, and the mouse program does not travel: brain glia rise with age while brain neurons fall.</span>
+            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat, unproven. Human: tested in 621 donors, the program does not rise as a whole; in the 284-donor lifespan atlas, glia rise and immune cells fall.</span>
           </a>
         </li>
         <li>
           <a href="#ch5" class="story-step-link">
             <span class="story-step-num">5</span>
-            <span class="story-step-body"><strong>What would answer the human question?</strong> A cohort with enough donors spread across ages. The power map shows exactly how many are needed.</span>
+            <span class="story-step-body"><strong>What would answer the human question?</strong> A cohort with enough donors spread across ages. The power map shows how many, and the last graph shows the 284-donor lifespan cohort that already ran it.</span>
           </a>
         </li>
       </ol>
@@ -442,7 +442,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g9" class="echart-container" style="height: 520px;"></div>
         </div>
-        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED, Tabula Sapiens skin only). Flat: NMR (β = 0.017, n = 5). The human panel is superseded by G15 below, which tests 621 control donors from public cohorts.</p>
+        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED, Tabula Sapiens skin only). Flat: NMR (β = 0.017, n = 5). The human panel is superseded by G15 (621 public-cohort donors) and G16 (284-donor lifespan atlas, Chapter 5) below.</p>
 
         <!-- Compare Image Modal for G9 -->
         <div class="compare-container" id="compare-g9" hidden>
@@ -513,7 +513,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g15" class="echart-container" style="height: 340px;"></div>
         </div>
-        <p class="graph-support">The 261-gene mouse program was scored in 621 control donors across 11 public cohorts (brain, kidney, lung). Whole-donor score does not rise with age in any cohort; in the largest brain cohort it significantly falls. Cell-level direction is private: brain glia and lung secretory cells rise, brain excitatory neurons fall.</p>
+        <p class="graph-support">The 261-gene mouse program was scored in 621 control donors across 11 public cohorts (brain, kidney, lung). Whole-donor score does not rise with age in any cohort; in the largest brain cohort it significantly falls. Cell-level direction is private: brain glia and lung secretory cells rise. The "brain neurons fall" arm does not replicate in the 284-donor lifespan atlas (G16, Chapter 5), where neuronal slopes are flat or normalization-dependent.</p>
 
         <div class="species-browser">
           <h4 class="panel-subtitle">Strongest cell-type signals (score slope per year, control donors only)</h4>
@@ -682,8 +682,8 @@
     <section class="chapter" id="ch5">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 5</span>
-        <h2 class="chapter-headline">With 4 donors, only huge effects are detectable. Here is the design for real ones.</h2>
-        <p class="chapter-sub">Power asks one question: what size of effect could this study design actually detect? Studies that are too small miss real aging completely.</p>
+        <h2 class="chapter-headline">With 4 donors only huge effects show. With 284 donors across 0 to 97 years, the real pattern shows.</h2>
+        <p class="chapter-sub">Power asks one question: what size of effect could this study design actually detect? Small studies miss aging entirely. The last graph shows the design that works, already run.</p>
       </div>
 
       <!-- Main Graph G13: Power Map (3 Small Multiples) -->
@@ -752,13 +752,44 @@
         </div>
       </div>
 
+      <!-- Main Graph G16: DLPFC Lifespan Atlas (M10) -->
+      <div class="graph-block" id="block-g16">
+        <div class="graph-title-row">
+          <h3 class="graph-title">In the one lifespan cohort with full power, glia rise and immune cells fall; most neurons stay flat</h3>
+          <div class="graph-controls">
+            <button type="button" class="drawer-toggle" data-drawer="drawer-g16" aria-expanded="false" title="Source & Data">Source</button>
+          </div>
+        </div>
+
+        <div class="chart-canvas-wrap">
+          <div id="chart-g16" class="echart-container" style="height: 640px;"></div>
+        </div>
+        <p class="graph-support">284 control donors aged 0.2 to 97 years, 27 prefrontal cortex cell types, mouse 261-gene program scored per donor per cell type. Large purple dot: raw-sum pseudobulk slope with its 95% interval. Small light dot below: the same score after per-donor CPM normalization. Solid = direction holds in both schemes (7 cell types); hollow = direction depends on normalization, so no direction is claimed. The cortex-wide average is flat (p = 0.19): the program moves cell by cell, not everywhere at once.</p>
+
+        <!-- Source Drawer G16 -->
+        <div class="drawer" id="drawer-g16" hidden>
+          <div class="drawer-header">
+            <h4>Source: G16 DLPFC Lifespan Atlas</h4>
+            <button type="button" class="drawer-close" aria-label="Close drawer">&times;</button>
+          </div>
+          <div class="drawer-body">
+            <div class="provenance-grid">
+              <div><strong>Source:</strong> DLPFC Lifespan Atlas (Synapse syn52396927, AD Knowledge Portal data use agreement), folder DLPFC_lifespan_snRNAseq: the authors' donor x cell-type pseudobulk (284 control donors, age 0.2 to 97, SD 24.0) plus this project's program scoring and regression. Program coverage in this atlas: 178 of 191 human program gene slots measured (0.93). Robustness arms shown or committed: CPM normalization, sex-adjusted OLS, adults-only (age at least 18), Spearman rank. Regression aggregates only; per-donor values are controlled data and are not distributed.</div>
+            </div>
+            <div class="drawer-actions">
+              <button type="button" class="btn-download" data-export="dlpfc">Download Cell-Type Regressions (CSV)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Closing Strip & Constructive Turn -->
       <div class="closing-strip">
         <div class="constructive-box">
           <div class="constructive-icon">💡</div>
           <div class="constructive-text">
             <h3>What would settle the human question?</h3>
-            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (values from the power simulation shown in G13). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years.</p>
+            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (values from the power simulation shown in G13). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years. The DLPFC Lifespan Atlas in G16 is that design, already run: 284 donors, age SD 24.</p>
           </div>
         </div>
       </div>
@@ -915,6 +946,7 @@
           <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background.</li>
           <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence (not established, p = 0.329).</li>
           <li>M9 human cohort arm: the 261-gene program scored in 621 control donors across 11 public CELLxGENE cohorts (brain, kidney, lung); program score does not rise with age, and direction flips by cell type (brain glia up, excitatory neurons down).</li>
+          <li>M10 lifespan-atlas arm (G16): the same program scored in the DLPFC Lifespan Atlas (284 control donors aged 0.2 to 97, SD 24, under AD Knowledge Portal data use agreement) using the authors' donor x cell-type pseudobulk. Cortex-wide average is flat (p = 0.19); astrocytes and oligodendrocytes rise and perivascular macrophages fall at Bonferroni level in both raw-sum and CPM schemes (7 cell types concordant total); normalization-dependent cell types are drawn hollow and claimed as no direction. Regression aggregates only; per-donor values are controlled data.</li>
         </ol>
 
         <h3>4. Three Load-Bearing Limitations</h3>

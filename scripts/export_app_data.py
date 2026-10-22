@@ -70,6 +70,9 @@ NEW_DATA_FILES = [
     "power-grid.json",
     "provenance.json",
     "ranking.json",
+    "anage.json",
+    "humancohorts.json",
+    "dlpfc.json",
 ]
 
 # ---------------------------------------------------------------- helpers
@@ -239,6 +242,74 @@ def export_human_cohorts(prov):
     ]
     return {"cohorts": cohorts, "celltypes": celltypes,
             "total_control_donors": 624, "program_human_genes": 188}
+
+
+def export_dlpfc(prov):
+    """M10 gold-standard arm: DLPFC Lifespan Atlas (284 control donors 0.2-97y,
+    27 cell types, authors' donor x cell-type pseudobulk; Synapse syn62064535,
+    AD Knowledge Portal DUA). Values transcribe committed M10 aggregates only;
+    per-donor values are DUA-controlled and never exported. Concordant flag is
+    a pure transcription of the two committed model columns (both p<0.05, same
+    sign); no new statistical decisions here."""
+    summ = pd.read_csv(RESULTS / "m10-cohort-summary.csv").iloc[0]
+    regs = pd.read_csv(RESULTS / "m10-celltype-regressions.csv")
+
+    assert summ["n_donors"] == 284 and len(regs) == 27
+    assert float(summ["age_min"]) == 0.2 and float(summ["age_max"]) == 97.0
+    assert abs(float(summ["age_sd"]) - 24.0) < 0.1
+    assert float(summ["p"]) > 0.1 and float(summ["ci_lo"]) < 0 < float(summ["ci_hi"])
+
+    rows = []
+    for _, r in regs.iterrows():
+        conc = bool(r["p"] < 0.05 and r["p_cpm"] < 0.05 and r["slope"] * r["slope_cpm"] > 0)
+        if conc:
+            direction = "up" if r["slope"] > 0 else "down"
+        elif r["p"] < 0.05 or r["p_cpm"] < 0.05:
+            direction = "normalization-dependent"
+        else:
+            direction = "not significant"
+        rows.append({
+            "cell_type": r["cell_type"], "n_donors": inum(r["n_donors"]),
+            "n_zero_donors": inum(r["n_zero_donors"]),
+            "slope_per_year": fnum(r["slope"]), "se": fnum(r["se"]),
+            "ci_lo": fnum(r["ci_lo"]), "ci_hi": fnum(r["ci_hi"]),
+            "p": fnum(r["p"]), "q_bh": fnum(r["q_bh"]), "rho": fnum(r["rho"]),
+            "slope_cpm": fnum(r["slope_cpm"]), "ci_lo_cpm": fnum(r["ci_lo_cpm"]),
+            "ci_hi_cpm": fnum(r["ci_hi_cpm"]), "p_cpm": fnum(r["p_cpm"]),
+            "q_bh_cpm": fnum(r["q_bh_cpm"]),
+            "slope_sex_adj": fnum(r["slope_sex_adj"]), "p_sex_adj": fnum(r["p_sex_adj"]),
+            "slope_adult": fnum(r["slope_adult"]), "p_adult": fnum(r["p_adult"]),
+            "concordant": conc, "direction": direction,
+        })
+    n_conc = sum(1 for x in rows if x["concordant"])
+    assert n_conc == 7, f"expected 7 concordant cell types, got {n_conc}"
+
+    prov["dlpfc.json"] = [
+        {"file": "results/m10-cohort-summary.csv",
+         "sha256": sha256_full(RESULTS / "m10-cohort-summary.csv"), "rows": 1},
+        {"file": "results/m10-celltype-regressions.csv",
+         "sha256": sha256_full(RESULTS / "m10-celltype-regressions.csv"), "rows": len(regs)},
+    ]
+    return {
+        "cohort": {
+            "name": "DLPFC_Lifespan_Atlas",
+            "source": "Synapse syn52396927 (AD Knowledge Portal DUA), folder syn62064535",
+            "n_donors": inum(summ["n_donors"]),
+            "age_min": fnum(summ["age_min"]), "age_max": fnum(summ["age_max"]),
+            "age_sd": fnum(summ["age_sd"]), "n_cell_types": inum(summ["n_cell_types"]),
+            "whole_cortex": {
+                "slope_per_year": fnum(summ["slope"]), "se": fnum(summ["se"]),
+                "ci_lo": fnum(summ["ci_lo"]), "ci_hi": fnum(summ["ci_hi"]),
+                "p": fnum(summ["p"]), "rho": fnum(summ["rho"]),
+                "slope_sex_adj": fnum(summ["slope_sex_adj"]),
+                "p_sex_adj": fnum(summ["p_sex_adj"]),
+            },
+        },
+        "program": {"up_slots": 121, "down_slots": 70, "measured_unique": 178,
+                    "coverage": 0.9319},
+        "n_concordant": n_conc,
+        "celltypes": rows,
+    }
 
 
 def export_atlas(s, prov):
@@ -608,6 +679,7 @@ def main():
     sizes["power-grid.json"] = write_json("power-grid.json", export_power_grid(s, prov))
     sizes["anage.json"] = write_json("anage.json", export_anage(prov))
     sizes["humancohorts.json"] = write_json("humancohorts.json", export_human_cohorts(prov))
+    sizes["dlpfc.json"] = write_json("dlpfc.json", export_dlpfc(prov))
 
     prov["provenance.json"] = [
         {"file": "app/DATA_CONTRACT.md", "sha256": sha256_full(REPO / "app" / "DATA_CONTRACT.md"), "rows": 76},

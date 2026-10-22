@@ -47,7 +47,8 @@ def fchk(anchor: str, expected: float, observed: float, ndigits: int) -> bool:
 def main() -> int:
     j = {p.stem: json.loads(p.read_text()) for p in sorted(DATA.glob("*.json"))}
     for name in ["atlas", "calibration", "agreement", "design-grid", "program",
-                 "signature", "savina", "power-grid", "provenance", "anage", "humancohorts"]:
+                 "signature", "savina", "power-grid", "provenance", "anage", "humancohorts",
+                 "dlpfc"]:
         check(f"export exists: {name}.json", True, name in j)
 
     # ---- atlas: 163 units / 17 powered, confined to Lung & Kidney
@@ -204,6 +205,43 @@ def main() -> int:
     groups = {c["group"] for c in hc["cohorts"]}
     check("M9 cohorts span brain/kidney/lung", {"brain", "kidney", "lung"}, groups)
 
+    # ---- M10 DLPFC Lifespan Atlas (gold-standard human arm, G16)
+    dl = j["dlpfc"]
+    co = dl["cohort"]
+    check("M10 n_donors 284, 27 cell types, age 0.2-97",
+          (284, 27, 0.2, 97.0),
+          (co["n_donors"], co["n_cell_types"], co["age_min"], co["age_max"]))
+    fchk("M10 age_sd 24.0", 24.0, co["age_sd"], 1)
+    wc = co["whole_cortex"]
+    check("M10 whole cortex CI spans zero, p > 0.1", True,
+          wc["ci_lo"] < 0 < wc["ci_hi"] and wc["p"] > 0.1)
+    fchk("M10 whole cortex slope +0.00026", 0.00026, wc["slope_per_year"], 5)
+    check("M10 celltypes == 27 rows", 27, len(dl["celltypes"]))
+    check("M10 concordant == 7", 7, dl["n_concordant"])
+    ol = next(c for c in dl["celltypes"] if c["cell_type"] == "Oligo")
+    ast = next(c for c in dl["celltypes"] if c["cell_type"] == "Astro")
+    pvm = next(c for c in dl["celltypes"] if c["cell_type"] == "PVM")
+    fchk("M10 Oligo slope +0.00177", 0.00177, ol["slope_per_year"], 5)
+    check("M10 Oligo p < 1e-8, concordant up", True,
+          ol["p"] < 1e-8 and ol["concordant"] and ol["direction"] == "up")
+    check("M10 Astro p in (1e-8, 1.5e-8)", True, 1e-8 < ast["p"] < 1.5e-8)
+    check("M10 Astro concordant up", True,
+          ast["concordant"] and ast["direction"] == "up")
+    fchk("M10 PVM slope -0.00224", -0.00224, pvm["slope_per_year"], 5)
+    check("M10 PVM concordant down", True,
+          pvm["concordant"] and pvm["direction"] == "down")
+    en = next(c for c in dl["celltypes"] if c["cell_type"] == "Endo")
+    check("M10 Endo flagged normalization-dependent, not concordant", True,
+          (not en["concordant"]) and en["direction"] == "normalization-dependent")
+    check("M10 program coverage 0.9319, 178 measured orthologs", True,
+          abs(dl["program"]["coverage"] - 0.9319) < 1e-9
+          and dl["program"]["measured_unique"] == 178)
+    sig_cts = [c for c in dl["celltypes"] if c["q_bh"] < 0.05]
+    check("M10 BH-FDR q<0.05 set is the 9 committed cell types", True,
+          len(sig_cts) == 9 and {"Oligo", "Astro", "PVM", "IN_LAMP5_LHX6", "Endo",
+                                 "EN_L2_3_IT", "PC", "Adaptive", "IN_VIP"}
+          == {c["cell_type"] for c in sig_cts})
+
     # ---- savina markers
     sav = j["savina"]
     check("savina curve == 39 rows", 39, len(sav["curve"]))
@@ -247,7 +285,7 @@ def main() -> int:
             if actual != e["sha256"]:
                 ok_sha = False
     check("all provenance SHA-256 values match files on disk", True, ok_sha)
-    check("every export has provenance sources", 11, len(pv["sources"]))
+    check("every export has provenance sources", 12, len(pv["sources"]))
     check("figure assets recorded == 4", 4, len(pv["assets"]))
     fig_ok = all((REPO / "app" / "figures" / name).stat().st_size == meta["bytes"]
                  for name, meta in pv["assets"].items())

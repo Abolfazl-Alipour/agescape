@@ -43,7 +43,7 @@
     try {
       const files = [
         "atlas", "calibration", "agreement", "design-grid",
-        "program", "signature", "savina", "power-grid", "anage", "humancohorts"
+        "program", "signature", "savina", "power-grid", "anage", "humancohorts", "dlpfc"
       ];
       const fetches = files.map(f => fetch(`data/${f}.json`).then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status} on ${f}.json`);
@@ -75,6 +75,7 @@
       renderG11LifespanContext();
       renderG14AnAge();
       renderG15HumanCohorts();
+      renderG16LifespanAtlas();
       renderG12SavinaCurve();
       renderG13PowerMap();
       setupAccessibilityEnhancements();
@@ -248,6 +249,9 @@
     } else if (exportName === "humancohorts") {
       rows = subKey === "celltypes" ? (rawData.celltypes || []) : (rawData.cohorts || []);
       filename = subKey === "celltypes" ? `human-cohort-celltype-regressions.csv` : `human-cohort-summary.csv`;
+    } else if (exportName === "dlpfc") {
+      rows = rawData.celltypes || [];
+      filename = `dlpfc-lifespan-atlas-celltype-regressions.csv`;
     } else if (exportName === "design-grid") {
       const dg = rawData;
       rows = dg.age_groups.map((ag, i) => ({
@@ -1163,6 +1167,117 @@
             : `<span class="species-none">low power</span>`}</td>
         </tr>`).join("");
     }
+  }
+
+  // --------------------------------------------------------------------------
+  // CHAPTER 5: G16 DLPFC Lifespan Atlas (M10 gold-standard arm)
+  // --------------------------------------------------------------------------
+  function renderG16LifespanAtlas() {
+    const dom = document.getElementById("chart-g16");
+    const dl = state.data.dlpfc;
+    if (!dom || !dl) return;
+
+    const chart = echarts.init(dom);
+    state.activeCharts["g16"] = chart;
+
+    const PURPLE = "#7c3aed";       // human cohort colour family (matches G15 brain)
+    const PURPLE_SOFT = "#b39ddb";  // CPM robustness arm
+    const x = v => v * 1000;        // slopes shown x10^-3/yr
+    const isMobile = dom.clientWidth < 560;
+
+    // sort by primary slope descending; glia rise, immune fall
+    const rows = [...dl.celltypes].sort((a, b) => b.slope_per_year - a.slope_per_year)
+      .map((c, i) => ({ ...c, row: i }));
+
+    chart.setOption({
+      title: {
+        text: "", left: "center", top: 2,
+        subtext: `whole cortex average: flat (${x(dl.cohort.whole_cortex.slope_per_year).toFixed(2)}x10^-3/yr, p = ${dl.cohort.whole_cortex.p.toFixed(2)})`,
+        subtextStyle: { fontSize: 12, fontWeight: 700, color: "#0f172a" }
+      },
+      tooltip: {
+        trigger: "item",
+        formatter: (p) => {
+          const d = rows[p.dataIndex];
+          const verdict = d.concordant ? "concordant across both normalization schemes"
+            : d.direction === "normalization-dependent" ? "direction depends on normalization: not claimed"
+            : "not significant";
+          return `<strong>${d.cell_type}</strong> (${d.n_donors} donors)<br>` +
+            `raw-sum: ${x(d.slope_per_year).toFixed(2)}x10^-3/yr, p = ${d.p.toExponential(2)}<br>` +
+            `CPM-normalized: ${x(d.slope_cpm).toFixed(2)}x10^-3/yr, p = ${d.p_cpm.toExponential(2)}<br>` +
+            verdict;
+        }
+      },
+      grid: isMobile
+        ? { left: 92, right: 16, top: 42, bottom: 40 }
+        : { left: 118, right: 110, top: 42, bottom: 40 },
+      xAxis: {
+        type: "value",
+        name: "program score slope per year (x10^-3)",
+        nameLocation: "middle",
+        nameGap: 28,
+        min: -3.5, max: 3.5, interval: 1,
+        axisLabel: { color: "#64748b", fontSize: isMobile ? 10 : 11 },
+        splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
+      },
+      yAxis: {
+        type: "category",
+        data: rows.map(r => r.cell_type),
+        axisLabel: { color: "#334155", fontSize: isMobile ? 10 : 11 },
+        axisTick: { show: false }, axisLine: { show: false }
+      },
+      series: [
+        {
+          type: "custom",
+          data: rows,
+          renderItem: (params, api) => {
+            const d = rows[params.dataIndex];
+            const y = api.coord([0, d.row])[1];
+            const xLo = api.coord([x(d.ci_lo), d.row])[0];
+            const xHi = api.coord([x(d.ci_hi), d.row])[0];
+            const xM = api.coord([x(d.slope_per_year), d.row])[0];
+            const xC = api.coord([x(d.slope_cpm), d.row])[0];
+            const children = [];
+            // raw-sum CI whisker + dot (primary)
+            children.push({ type: "line", shape: { x1: xLo, y1: y, x2: xHi, y2: y },
+              style: { stroke: PURPLE, lineWidth: d.concordant ? 3 : 2, opacity: d.concordant ? 1 : 0.5 } });
+            children.push(d.concordant
+              ? { type: "circle", shape: { cx: xM, cy: y, r: 6 },
+                  style: { fill: PURPLE, stroke: "#0f172a", lineWidth: 1 } }
+              : { type: "circle", shape: { cx: xM, cy: y, r: 5 },
+                  style: { fill: "rgba(0,0,0,0)", stroke: PURPLE, lineWidth: 2, opacity: 0.65 } });
+            // CPM robustness dot, smaller, nudged below the row center
+            children.push(d.concordant
+              ? { type: "circle", shape: { cx: xC, cy: y + 9, r: 4 }, style: { fill: PURPLE_SOFT } }
+              : { type: "circle", shape: { cx: xC, cy: y + 9, r: 3.5 },
+                  style: { fill: "rgba(0,0,0,0)", stroke: PURPLE_SOFT, lineWidth: 1.6, opacity: 0.7 } });
+            // direct direction label for concordant rows (desktop only; on mobile the tooltip carries it)
+            if (d.concordant && !isMobile) {
+              const label = d.direction === "up" ? "rises" : "falls";
+              const gridLeft = isMobile ? 92 : 118;
+              let lx, align;
+              if (d.slope_per_year >= 0) { lx = xHi + 8; align = "left"; }
+              else if (xLo - 46 > gridLeft) { lx = xLo - 8; align = "right"; }
+              else { lx = xM + 12; align = "left"; }
+              children.push({ type: "text", style: {
+                x: lx, y: y - 6,
+                text: label, textAlign: align,
+                fontSize: 11, fontWeight: 700, fill: "#0f172a" } });
+            }
+            return { type: "group", children };
+          }
+        },
+        {
+          type: "scatter", data: [],
+          markLine: {
+            silent: true, symbol: "none",
+            lineStyle: { color: "#0f172a", width: 2 },
+            data: [{ xAxis: 0 }],
+            label: { show: true, formatter: "no change", position: "insideEndTop", color: "#0f172a", fontWeight: 600 }
+          }
+        }
+      ]
+    });
   }
 
   // --------------------------------------------------------------------------
