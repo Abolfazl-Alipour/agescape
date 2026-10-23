@@ -1699,17 +1699,35 @@
     const donorCats = pw.donors.map(String);
     const sdCats = pw.sds.map(String);
 
+    // Color on a log scale: minimum detectable effect is multiplicative
+    // (2.0 means twice as large an effect needed). One shared transform and
+    // ramp across all three panels, so colours compare honestly panel to panel.
+    const RAMP = ["#fef9c3", "#fde047", "#fbbf24", "#fb923c", "#ea580c", "#b91c1c", "#7f1d1d"];
+    const hex = h => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+    const rampColor = t => {
+      const tt = Math.min(Math.max(t, 0), 1) * (RAMP.length - 1);
+      const i = Math.min(Math.floor(tt), RAMP.length - 2);
+      const f = tt - i;
+      const a = hex(RAMP[i]), b = hex(RAMP[i + 1]);
+      return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * f)).join(",")})`;
+    };
+    const norm = v => (Math.log10(v) + 0.85) / 1.35; // 0.14 -> 0, 3.16 -> 1 (covers committed 0.167-2.949)
+
     const data = tiles.map(t => {
       const xIdx = pw.donors.indexOf(t.n_donors);
       const yIdx = pw.sds.indexOf(t.sd);
-      return [xIdx, yIdx, t.min_30y_log2fc, t.power_status, t.eligible_cohort, t.n_donors, t.sd, t.dispersion];
+      return {
+        value: [xIdx, yIdx, t.min_30y_log2fc, t.power_status, t.eligible_cohort, t.n_donors, t.sd, t.dispersion],
+        itemStyle: { color: rampColor(norm(t.min_30y_log2fc)) },
+        label: { color: t.min_30y_log2fc >= 1.35 ? "#ffffff" : "#3f3f46" }
+      };
     });
 
     chart.setOption({
       tooltip: {
         trigger: "item",
         formatter: (p) => {
-          const d = p.data;
+          const d = p.value;
           return `Donors: <strong>${d[5]}</strong> | SD: <strong>${d[6]}y</strong><br>Min 30y log₂FC: <strong>${d[2].toFixed(3)}</strong><br>Status: <strong>${d[3]}</strong>`;
         }
       },
@@ -1717,42 +1735,45 @@
       xAxis: {
         type: "category",
         data: donorCats,
+        name: "donors",
+        nameLocation: "middle",
+        nameGap: 22,
+        nameTextStyle: { color: "#64748b", fontSize: 10 },
         axisLabel: { color: "#64748b", fontSize: 10 }
       },
       yAxis: {
         type: "category",
         data: sdCats,
+        name: "age SD (years)",
+        nameTextStyle: { color: "#64748b", fontSize: 10, align: "left" },
         axisLabel: { color: "#64748b", fontSize: 10 }
-      },
-      visualMap: {
-        min: 0.2,
-        max: 2.0,
-        calculable: false,
-        show: false,
-        inRange: {
-          color: ["#fef08a", "#f97316", "#991b1b", "#450a0a"] // Light = sensitive, dark = huge effect
-        }
       },
       series: [{
         type: "heatmap",
         data: data,
+        label: {
+          show: true,
+          fontSize: 9,
+          fontFamily: "monospace",
+          formatter: (p) => p.value[2].toFixed(2).replace(/^0/, "")
+        },
         itemStyle: {
           borderWidth: 1.5,
-          borderColor: (p) => p.data[4] ? "#0369a1" : "rgba(0,0,0,0.4)" // Outlined if meets floor
+          borderColor: (p) => p.value[4] ? "#0369a1" : "rgba(0,0,0,0.4)" // Outlined if meets floor
         },
         markPoint: Math.abs(dispVal - 0.1) < 0.01 ? {
           data: [{
             coord: [0, 0],
             value: "✕",
             itemStyle: { color: "rgba(0,0,0,0)" },
-            label: { show: true, formatter: "✕", color: "#b91c1c", fontWeight: "bold", fontSize: 14 }
+            label: { show: true, formatter: "✕", color: "#b91c1c", fontWeight: "bold", fontSize: 14, textBorderColor: "#ffffff", textBorderWidth: 2 }
           }]
         } : undefined
       }]
     });
 
     chart.on("click", (params) => {
-      const d = params.data;
+      const d = params.value;
       updatePowerReadout({
         donors: d[5],
         sd: d[6],
