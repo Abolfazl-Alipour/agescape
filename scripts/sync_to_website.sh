@@ -15,7 +15,7 @@ SUBPATH="${2:-agescape}"
 [ -f app/index.html ] || { echo "error: run from the agescape repo root"; exit 1; }
 
 mkdir -p "$DEST_ROOT/$SUBPATH"
-rsync -a --delete --exclude 'DATA_CONTRACT.md' \
+rsync -a --delete --exclude 'DATA_CONTRACT.md' --exclude 'provenance.json' \
   app/index.html app/app.js app/style.css app/vendor app/data app/figures \
   "$DEST_ROOT/$SUBPATH/"
 

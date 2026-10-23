@@ -374,6 +374,7 @@ def export_agreement(s, prov, paper_coef):
     lollipop = [{
         "unit": r["unit"],
         "spearman_rho": fnum(r["spearman_rho"]),
+        "sign_concordance": fnum(r["sign_concordance_paper_sig"]),
         "verdict": r["verdict"],
     } for _, r in ag.iterrows()]
     vc = ag["verdict"].value_counts()

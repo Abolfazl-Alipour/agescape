@@ -143,9 +143,12 @@
     if (methodsBtn && methodsModal && methodsClose) {
       methodsBtn.addEventListener("click", () => {
         methodsModal.hidden = false;
+        document.getElementById("btn-close-methods").focus();
+        Object.values(state.activeCharts).forEach(c => c.dispatchAction && c.dispatchAction({ type: "hideTip" }));
       });
       methodsClose.addEventListener("click", () => {
         methodsModal.hidden = true;
+        document.getElementById("btn-open-methods").focus();
       });
       methodsModal.addEventListener("click", (e) => {
         if (e.target === methodsModal) methodsModal.hidden = true;
@@ -196,6 +199,7 @@
 
     // CSV Download handlers
     document.querySelectorAll(".btn-download").forEach(btn => {
+      btn.setAttribute("aria-label", btn.textContent.trim() + " (CSV)");
       btn.addEventListener("click", () => {
         handleCsvDownload(btn.dataset.export, btn.dataset.sub);
       });
@@ -301,7 +305,7 @@
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
       const modal = document.getElementById("methods-modal");
-      if (modal && !modal.hidden) { modal.hidden = true; return; }
+      if (modal && !modal.hidden) { modal.hidden = true; document.getElementById("btn-open-methods").focus(); return; }
       const panel = document.getElementById("unit-panel");
       if (panel && panel.classList.contains("open")) { closeUnitPanel(); return; }
       const openDrawer = document.querySelector(".drawer:not([hidden])");
@@ -361,6 +365,9 @@
 
     panel.classList.add("open");
     panel.setAttribute("aria-hidden", "false");
+
+    const pcb = document.getElementById("panel-close-btn");
+    if (pcb) pcb.focus();
 
     const parts = unitName.split("::");
     const tissue = parts[0];
@@ -528,10 +535,11 @@
       });
     });
 
+    const humanize = s => s.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()).replace(/ And /g, " and ");
     const yAxisLabels = tissues.map(t => {
       const powCount = tissueMap[t].filter(u => u.powered).length;
       const totCount = tissueMap[t].length;
-      return `${t} (${powCount}/${totCount})`;
+      return `${humanize(t)} (${powCount}/${totCount})`;
     });
 
     chart.setOption({
@@ -596,9 +604,12 @@
     state.activeCharts["g1"] = chart;
 
     const ranked = [...atlas.ranked].reverse(); // Ascending for horizontal bar
+    const isMobile = dom.clientWidth < 560;
     const categories = ranked.map(r => {
       const full = r.unit.replace("::", " · ");
-      return full.length > 38 ? full.slice(0, 37) + "…" : full;
+      if (isMobile) return full.length > 38 ? full.slice(0, 37) + "…" : full;
+      const sep = full.indexOf(" · ");
+      return sep > 0 ? full.slice(0, sep) + " ·\n" + full.slice(sep + 3) : full;
     });
     const values = ranked.map(r => r.n_de_genes);
 
@@ -609,10 +620,12 @@
         formatter: (params) => {
           const idx = params[0].dataIndex;
           const r = ranked[idx];
-          return `<strong>${r.unit}</strong><br>DE Genes: <strong>${r.n_de_genes}</strong><br>Bootstrap 95% CI: [${r.n_de_ci_low}, ${r.n_de_ci_high}]<br>Median |log₂FC|: ${r.median_abs_log2fc.toFixed(3)}`;
+          return `<strong>${r.unit.replace("::", " · ")}</strong><br>Aging genes: <strong>${r.n_de_genes}</strong><br>Median |log₂FC|: ${r.median_abs_log2fc.toFixed(3)}`;
         }
       },
-      grid: { left: 240, right: 60, top: 15, bottom: 25 },
+      grid: isMobile
+        ? { left: 110, right: 46, top: 15, bottom: 25 }
+        : { left: 300, right: 60, top: 15, bottom: 25 },
       xAxis: {
         type: "value",
         axisLabel: { color: "#64748b", fontSize: 11 },
@@ -629,7 +642,7 @@
         label: {
           show: true,
           position: "right",
-          color: "#cbd5e1",
+          color: "#475569",
           fontFamily: "monospace",
           fontSize: 11
         },
@@ -742,7 +755,7 @@
         }
       },
       title: {
-        text: `Kidney PCT: Spearman rho = ${sc.rho.toFixed(3)} across ${sc.n.toLocaleString()} genes`,
+        text: `Kidney proximal convoluted tubule: Spearman rho = ${sc.rho.toFixed(3)} across ${sc.n.toLocaleString()} genes`,
         left: 60,
         top: 10,
         textStyle: { color: "#0369a1", fontSize: 13, fontWeight: 600 }
@@ -784,7 +797,13 @@
     state.activeCharts["g3-lollipop"] = chart;
 
     const units = [...agr.lollipop].reverse();
-    const categories = units.map(u => u.unit.replace("::", " · "));
+    const isMobile3 = dom.clientWidth < 560;
+    const categories = units.map(u => {
+      const full = u.unit.replace("::", " · ");
+      if (isMobile3) return full.length > 30 ? full.slice(0, 29) + "…" : full;
+      const sep = full.indexOf(" · ");
+      return sep > 0 ? full.slice(0, sep) + " ·\n" + full.slice(sep + 3) : full;
+    });
     const values = units.map(u => u.spearman_rho);
 
     chart.setOption({
@@ -793,10 +812,14 @@
         formatter: (p) => {
           const idx = p[0].dataIndex;
           const u = units[idx];
-          return `<strong>${u.unit}</strong><br>Spearman ρ: ${u.spearman_rho.toFixed(3)}<br>Verdict: <strong>${u.verdict}</strong>`;
+          const conc = u.sign_concordance != null
+            ? `<br>Sign concordance (paper's significant genes): ${(u.sign_concordance * 100).toFixed(1)}%` : "";
+          return `<strong>${u.unit}</strong><br>Spearman ρ: ${u.spearman_rho.toFixed(3)}${conc}<br>Verdict: <strong>${u.verdict}</strong>`;
         }
       },
-      grid: { left: 240, right: 40, top: 10, bottom: 25 },
+      grid: isMobile3
+        ? { left: 120, right: 30, top: 10, bottom: 25 }
+        : { left: 300, right: 40, top: 10, bottom: 25 },
       xAxis: {
         type: "value",
         min: 0,
@@ -807,7 +830,7 @@
       yAxis: {
         type: "category",
         data: categories,
-        axisLabel: { color: "#64748b", fontSize: 10 }
+        axisLabel: { color: "#64748b", fontSize: 10, lineHeight: 12 }
       },
       series: [{
         type: "scatter",
@@ -850,17 +873,19 @@
           type: "scatter",
           symbolSize: 14,
           data: [
-            { value: [cal.sex_floor, 0], name: "Within-3m sex control: not estimable (all-male cohort), structural 0", itemStyle: { color: "#64748b" } },
-            { value: [cal.perm_mean, 0], name: "Label-permutation null, mean: 4.6", itemStyle: { color: "#f59e0b" } },
-            { value: [cal.observed, 0], name: "Observed, 3 month vs 18 month: 55", itemStyle: { color: "#0369a1" } }
-          ],
-          label: {
-            show: true,
-            position: "top",
-            formatter: (p) => p.data.name,
-            color: "#475569",
-            fontSize: 11
-          }
+            { value: [cal.sex_floor, 0],
+              name: "Differential expression by sex, 3-month group (2 female vs 5 male mice):\n0 genes at FDR < 0.05",
+              itemStyle: { color: "rgba(0,0,0,0)", borderColor: "#64748b", borderWidth: 2 },
+              label: { show: true, position: "top", distance: 6, align: "left", formatter: "Differential expression by sex, 3-month group (2 female vs 5 male mice):\n0 genes at FDR < 0.05", color: "#475569", fontSize: 11 } },
+            { value: [cal.perm_mean, 0],
+              name: "Label-permutation null, mean: 4.6",
+              itemStyle: { color: "#f59e0b" },
+              label: { show: true, position: "top", distance: 22, align: "left", formatter: "Label-permutation null, mean: 4.6", color: "#475569", fontSize: 11 } },
+            { value: [cal.observed, 0],
+              name: "Observed, 3 month vs 18 month: 55",
+              itemStyle: { color: "#0369a1" },
+              label: { show: true, position: "top", distance: 6, align: "right", formatter: "Observed, 3 month vs 18 month: 55", color: "#475569", fontSize: 11 } }
+          ]
         }
       ]
     });
@@ -878,7 +903,13 @@
     state.activeCharts["g6"] = chart;
 
     const units = [...prog.units].reverse();
-    const categories = units.map(u => u.unit.replace("::", " · "));
+    const isMobile6 = dom.clientWidth < 560;
+    const categories = units.map(u => {
+      const full = u.unit.replace("::", " · ");
+      if (isMobile6) return full.length > 30 ? full.slice(0, 29) + "…" : full;
+      const sep = full.indexOf(" · ");
+      return sep > 0 ? full.slice(0, sep) + " ·\n" + full.slice(sep + 3) : full;
+    });
 
     chart.setOption({
       tooltip: {
@@ -890,7 +921,9 @@
           return `<strong>${u.unit}</strong><br>Up with age: <strong style="color:${PALETTE.dirUp}">${u.n_up}</strong><br>Down with age: <strong style="color:${PALETTE.dirDown}">${u.n_down}</strong><br>Total: ${u.n_up + u.n_down}`;
         }
       },
-      grid: { left: 240, right: 60, top: 15, bottom: 25 },
+      grid: isMobile6
+        ? { left: 120, right: 40, top: 15, bottom: 25 }
+        : { left: 300, right: 60, top: 15, bottom: 25 },
       xAxis: {
         type: "value",
         axisLabel: { color: "#64748b" },
@@ -899,7 +932,7 @@
       yAxis: {
         type: "category",
         data: categories,
-        axisLabel: { color: "#64748b", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: 11, lineHeight: 13 }
       },
       series: [
         {
@@ -957,11 +990,11 @@
           return `Gene: <strong>${d[3]}</strong><br>Unit: ${d[4]}<br>Direction: <strong>${d[2] === 1 ? 'UP' : 'DOWN'}</strong> (log₂FC = ${d[5].toFixed(2)})`;
         }
       },
-      grid: { left: 90, right: 30, top: 40, bottom: 120 },
+      grid: { left: 90, right: 30, top: 40, bottom: 140 },
       xAxis: {
         type: "category",
         data: unitNames,
-        axisLabel: { color: "#64748b", rotate: 55, fontSize: 10 }
+        axisLabel: { color: "#64748b", rotate: 35, fontSize: 10 }
       },
       yAxis: {
         type: "category",
@@ -995,12 +1028,24 @@
     const mousePts = arms.mouse_wb.points.map(p => [p.age_normalized, p.score, p.donor]);
     const humanPts = arms.human_skin ? arms.human_skin.points.map(p => [p.age_normalized, p.score, p.donor]) : [];
     const nmrPts = arms.nmr ? arms.nmr.points.map(p => [p.age_normalized, p.score, p.donor]) : [];
+    const isMobile = dom.clientWidth < 560;
+
+    // Trend line through the committed points, mean-centered over the
+    // observed age range: y = mean(y) + slope * (x - mean(x)).
+    const fitLine = (pts, slope) => {
+      if (!pts.length) return [];
+      const mx = pts.reduce((a, p) => a + p[0], 0) / pts.length;
+      const my = pts.reduce((a, p) => a + p[1], 0) / pts.length;
+      const xs = pts.map(p => p[0]);
+      const lo = Math.min(...xs), hi = Math.max(...xs);
+      return [[lo, my + slope * (lo - mx)], [hi, my + slope * (hi - mx)]];
+    };
 
     chart.setOption({
       title: [
-        { text: `Mouse (slope = ${arms.mouse_wb.slope.toFixed(3)}, p = ${arms.mouse_wb.p.toFixed(3)}, n = ${arms.mouse_wb.n})`, left: "3%", top: "2%", textStyle: { color: PALETTE.mouse, fontSize: 12 } },
-        { text: `Human (slope = ${arms.human_skin.slope.toFixed(3)}, n = ${arms.human_skin.n}): LOW-POWERED`, left: "3%", top: "35%", textStyle: { color: PALETTE.human, fontSize: 12 } },
-        { text: `Naked Mole-Rat (slope = ${arms.nmr.slope.toFixed(3)}, p = ${arms.nmr.p.toFixed(3)}, n = ${arms.nmr.n})`, left: "3%", top: "68%", textStyle: { color: PALETTE.nmr, fontSize: 12 } }
+        { text: isMobile ? `Mouse (n = ${arms.mouse_wb.n})` : `Mouse (slope = ${arms.mouse_wb.slope.toFixed(3)}, p = ${arms.mouse_wb.p.toFixed(3)}, n = ${arms.mouse_wb.n})`, left: "3%", top: "2%", textStyle: { color: PALETTE.mouse, fontSize: 12 } },
+        { text: isMobile ? `Human (n = ${arms.human_skin.n}, low-powered)` : `Human (slope = ${arms.human_skin.slope.toFixed(3)}, n = ${arms.human_skin.n}): LOW-POWERED`, left: "3%", top: "35%", textStyle: { color: PALETTE.human, fontSize: 12 } },
+        { text: isMobile ? `Naked mole-rat (n = ${arms.nmr.n})` : `Naked Mole-Rat (slope = ${arms.nmr.slope.toFixed(3)}, p = ${arms.nmr.p.toFixed(3)}, n = ${arms.nmr.n})`, left: "3%", top: "68%", textStyle: { color: PALETTE.nmr, fontSize: 12 } }
       ],
       grid: [
         { left: 50, right: 30, top: "7%", height: "23%" },
@@ -1029,7 +1074,7 @@
         {
           xAxisIndex: 0, yAxisIndex: 0,
           type: "line",
-          data: [[0.05, 0.05 * arms.mouse_wb.slope + 0.1], [0.9, 0.9 * arms.mouse_wb.slope + 0.1]],
+          data: fitLine(mousePts, arms.mouse_wb.slope),
           itemStyle: { color: PALETTE.mouse },
           lineStyle: { width: 2.5 }
         },
@@ -1044,7 +1089,7 @@
         {
           xAxisIndex: 1, yAxisIndex: 1,
           type: "line",
-          data: [[0.1, 0.1 * arms.human_skin.slope + 0.3], [0.8, 0.8 * arms.human_skin.slope + 0.3]],
+          data: fitLine(humanPts, arms.human_skin.slope),
           itemStyle: { color: PALETTE.human },
           lineStyle: { type: "dashed", width: 2 }
         },
@@ -1059,7 +1104,7 @@
         {
           xAxisIndex: 2, yAxisIndex: 2,
           type: "line",
-          data: [[0.05, 0.05 * arms.nmr.slope + 0.15], [0.8, 0.8 * arms.nmr.slope + 0.15]],
+          data: fitLine(nmrPts, arms.nmr.slope),
           itemStyle: { color: PALETTE.nmr },
           lineStyle: { width: 2.5 }
         }
@@ -1078,32 +1123,32 @@
     const chart = echarts.init(dom);
     state.activeCharts["g15"] = chart;
 
-    const GROUP_COLOR = { brain: "#7c3aed", kidney: "#0d9488", lung: "#0284c7" };
+    const HUMAN = "#7c3aed"; // single human accent colour; hollow/filled carries the verdict
+    const humanize = n => n.replace(/_/g, " ").replace("ImmuneAging", "Immune-Aging");
     const rows = hc.cohorts.map((c, i) => ({
-      name: c.cohort.replace(/_/g, " "),
+      name: `${humanize(c.cohort)} (${c.n_donors})`,
+      short: humanize(c.cohort),
       value: [c.slope_per_year * 1000, i],
       ci: [c.ci_lo * 1000, c.ci_hi * 1000],
       n: c.n_donors, p: c.p, group: c.group, verdict: c.verdict,
       significant: c.ci_hi < 0 || c.ci_lo > 0,
     }));
-    const rowH = 1;
-    const xPad = 0.001;
 
     chart.setOption({
       tooltip: {
         trigger: "item",
         formatter: (p) => {
           const d = p.data;
-          return `<strong>${d.name}</strong> (${d.group})<br>donors: ${d.n}, slope: ${d.value[0].toFixed(3)}x10^-3/yr<br>95% CI: [${d.ci[0].toFixed(3)}, ${d.ci[1].toFixed(3)}]<br>p = ${d.p.toExponential(2)}${d.significant ? " (CI excludes 0)" : ""}`;
+          return `<strong>${d.short}</strong> (${d.group})<br>donors: ${d.n}, slope: ${d.value[0].toFixed(3)}x10^-3/yr<br>95% CI: [${d.ci[0].toFixed(3)}, ${d.ci[1].toFixed(3)}]<br>p = ${d.p.toExponential(2)}${d.significant ? " (CI excludes 0)" : ""}`;
         }
       },
-      grid: { left: 150, right: 60, top: 30, bottom: 40 },
+      grid: { left: 185, right: 60, top: 30, bottom: 40 },
       xAxis: {
         type: "value",
         name: "program score slope per year (x10^-3)",
         nameLocation: "middle",
         nameGap: 28,
-        min: -0.5, max: 1.1,
+        min: -3.5, max: 3.5, interval: 1,
         axisLabel: { color: "#64748b" },
         splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
@@ -1123,7 +1168,7 @@
             const x1 = api.coord([d.ci[0], d.value[1]])[0];
             const x2 = api.coord([d.ci[1], d.value[1]])[0];
             const xm = api.coord([d.value[0], d.value[1]])[0];
-            const color = GROUP_COLOR[d.group] || "#64748b";
+            const color = HUMAN;
             const children = [
               { type: "line", shape: { x1, y1: y, x2, y2: y }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
               { type: "line", shape: { x1, y1: y - 5, x2, y2: y + 5 }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
@@ -1134,6 +1179,9 @@
               : { type: "circle", shape: { cx: xm, cy: y, r: 5 }, style: { fill: "rgba(0,0,0,0)", stroke: color, lineWidth: 2, opacity: 0.6 } });
             if (d.significant) {
               children.push({ type: "text", style: { x: xm, y: y - 14, text: `p=${d.p.toFixed(3)}`, textAlign: "center", fontSize: 10, fontWeight: 700, fill: "#0f172a" } });
+              if (dom.clientWidth >= 560) {
+                children.push({ type: "text", style: { x: x2 + 8, y: y - 6, text: "the only cohort whose interval excludes zero", textAlign: "left", fontSize: 10, fontWeight: 600, fill: "#0f172a" } });
+              }
             }
             return { type: "group", children };
           }
@@ -1145,20 +1193,22 @@
             silent: true, symbol: "none",
             lineStyle: { color: "#0f172a", width: 2, type: "solid" },
             data: [{ xAxis: 0 }],
-            label: { show: true, formatter: "no change", position: "insideEndTop", color: "#0f172a", fontWeight: 600 }
+            label: { show: true, formatter: "no change", position: "end", color: "#0f172a", fontWeight: 600 }
           }
         }
       ]
     });
 
-    // top cell-type hits table
+    // top cell-type hits table (exploratory ranking, not a confirmed hit list)
     const tbody = document.getElementById("g15-tbody");
     if (tbody) {
       const fmt = v => (v * 1000).toFixed(2);
+      const NEURON_DAGGER = (r) => (r.cohort === "MSSM_DLPFC" && /L2\/3 intratelencephalic/.test(r.cell_type))
+        ? " &#8224;" : "";
       tbody.innerHTML = hc.celltypes.slice(0, 10).map(r => `
         <tr>
-          <td>${r.cohort.replace(/_/g, " ")}</td>
-          <td>${r.cell_type}</td>
+          <td>${humanize(r.cohort)}</td>
+          <td>${r.cell_type}${NEURON_DAGGER(r)}</td>
           <td class="font-mono">${r.n_donors}</td>
           <td class="font-mono">${r.slope_per_year >= 0 ? "+" : ""}${fmt(r.slope_per_year)}</td>
           <td class="font-mono">${r.p.toExponential(2)}</td>
@@ -1192,7 +1242,9 @@
     chart.setOption({
       title: {
         text: "", left: "center", top: 2,
-        subtext: `whole cortex average: flat (${x(dl.cohort.whole_cortex.slope_per_year).toFixed(2)}x10^-3/yr, p = ${dl.cohort.whole_cortex.p.toFixed(2)})`,
+        subtext: isMobile
+          ? "whole cortex: flat (p = 0.19)"
+          : `whole cortex average: flat (${x(dl.cohort.whole_cortex.slope_per_year).toFixed(2)}x10^-3/yr, p = ${dl.cohort.whole_cortex.p.toFixed(2)})`,
         subtextStyle: { fontSize: 12, fontWeight: 700, color: "#0f172a" }
       },
       tooltip: {
@@ -1223,6 +1275,7 @@
       yAxis: {
         type: "category",
         data: rows.map(r => r.cell_type),
+        inverse: true,
         axisLabel: { color: "#334155", fontSize: isMobile ? 10 : 11 },
         axisTick: { show: false }, axisLine: { show: false }
       },
@@ -1272,8 +1325,11 @@
           markLine: {
             silent: true, symbol: "none",
             lineStyle: { color: "#0f172a", width: 2 },
-            data: [{ xAxis: 0 }],
-            label: { show: true, formatter: "no change", position: "insideEndTop", color: "#0f172a", fontWeight: 600 }
+            data: [{ xAxis: 0 },
+              { xAxis: x(dl.cohort.whole_cortex.slope_per_year),
+                lineStyle: { color: "#94a3b8", width: 1.5, type: "dashed" },
+                label: { show: !isMobile, formatter: "whole-cortex\naverage", position: "insideEndBottom", color: "#475569", fontSize: 10, fontWeight: 600 } }],
+            label: { show: true, formatter: "no change", position: "insideEndBottom", color: "#0f172a", fontWeight: 600 }
           }
         }
       ]
@@ -1335,10 +1391,11 @@
             }
             if (kind === 3) { // direct label
               const p = api.coord([api.value(0), api.value(2)]);
+              const shortLabel = dom.clientWidth < 480;
               return {
                 type: "text",
                 style: {
-                  x: p[0], y: p[1], text: "equivalence not established",
+                  x: p[0], y: p[1], text: shortLabel ? "not proven equivalent" : "equivalence not established",
                   fill: "#9a3412", fontSize: 11, fontWeight: 600,
                   align: "left", verticalAlign: "middle"
                 }
@@ -1611,8 +1668,8 @@
           symbolSize: 8,
           data: [
             { value: [1.0, 29], name: "Paper Rule: 29 genes" },
-            { value: [1.45, 9], name: "Converted Rule: 9 genes" },
-            { value: [0.25, 560], name: "Loose Rule: 560 genes" }
+            { value: [1.45, 9], name: "Converted Rule: 9 genes (6 at FDR)" },
+            { value: [0.25, 811], name: "Loosest cutoff: 811 by p rule (560 by FDR)" }
           ],
           itemStyle: { color: "#ffffff", borderColor: PALETTE.nmr, borderWidth: 2 }
         }

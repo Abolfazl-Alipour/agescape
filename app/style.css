@@ -873,6 +873,7 @@ body {
 .modal-body-content {
   padding: 24px;
   overflow-y: auto;
+  overflow-x: auto;
   font-size: 0.86rem;
   color: var(--text-sub);
   line-height: 1.6;
@@ -1103,6 +1104,8 @@ body {
 .species-table-wrap {
   max-height: 420px;
   overflow-y: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
 }
@@ -1221,3 +1224,5 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+.species-table-wrap::after { content: ""; display: block; height: 2px; background: linear-gradient(90deg, rgba(15,23,42,0.18), transparent); }
