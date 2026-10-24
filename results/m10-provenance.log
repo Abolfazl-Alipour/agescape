@@ -1,8 +1,8 @@
 [m10] source: syn62064518/lifespan_pseudobulk.rds md5 verified aef628e7bc2e5134b790d98c6f57ec48
 [m10] DUA: AD Knowledge Portal controlled access; aggregates only committed
 [m10] program: 167 up / 94 down mouse genes -> 121 up / 70 down human orthologs
-[m10] human-space direction conflicts (net out in up-minus-down): ['CKB', 'ID2', 'STMN1']
-[m10] scoring recipe: M9-identical, up_mean(log1p) - dn_mean(log1p); robustness arm log1p(CPM)
+[m10] human-space direction conflicts retained in unequal up/down means: ['CKB', 'ID2', 'STMN1']
+[m10] scoring recipe: donor-pseudobulk up_mean(log1p) - dn_mean(log1p); robustness arm log1p(CPM); input summaries differ from M9
 [m10] cohort: 284 control donors, age 0.2-97.0 (SD 24.0), sexes: {'Male': np.int64(197), 'Female': np.int64(87)}
 [m10] cell types: 27
 [m10] [Adaptive] excluded 42 donors with zero cells of this type
@@ -57,4 +57,5 @@
 [m10] [SMC] slope -0.00062/yr CI [-0.00115,-0.00009] p=0.02265 n=238 (cpm p=0.4362, sex-adj p=0.0195, adult p=0.1336)
 [m10] [VLMC] excluded 5 donors with zero cells of this type
 [m10] [VLMC] slope -0.00023/yr CI [-0.00085,+0.00040] p=0.4766 n=279 (cpm p=0.2147, sex-adj p=0.463, adult p=0.2966)
-[m10] WHOLE CORTEX slope +0.00026/yr CI [-0.00012,+0.00063] p=0.1855 (sex-adj p=0.1776, rho +0.080)
+[m10] whole cortex: 8 to 27 observed cell types averaged per donor
+[m10] WHOLE CORTEX slope +0.00015/yr CI [-0.00017,+0.00046] p=0.3619 (sex-adj p=0.3473, rho +0.039)

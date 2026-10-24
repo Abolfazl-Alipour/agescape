@@ -37,17 +37,17 @@
 
 ## Stack & licence decisions (Step 0, per spec authority)
 
-- **No Node.js on the build machine** (verified) → Astro impossible. **Equivalent settled: zero-build static site** — one `index.html` + ES-module JS + CSS, all charts **ECharts 5.5.1 vendored locally** at `app/vendor/echarts.min.js` (Apache-2.0; licence retained in file header). No runtime external calls.
+- **No Node.js on the build machine** (verified) → Astro impossible. **Equivalent settled: zero-build static site** — one `index.html` + ES-module JS + CSS, all charts **ECharts 5.5.1 vendored locally** at `app/vendor/echarts.min.js` (Apache-2.0; licence retained in file header). Data and charts make no runtime external calls; Google Fonts currently loads its stylesheet and font files externally.
 - **Licences (spec working assumptions adopted):** code MIT; report/figures CC BY 4.0. Licence lines go in the Methods overlay and a top-level LICENCE.md.
 - **Analytics: NONE** (spec default — cookieless option not exercised).
-- **Base path:** configurable, default relative paths (works at `/`, `/agescape/`, or `file://`).
+- **Base path:** configurable relative paths, working at `/` and `/agescape/`. Serve over HTTP because browser `fetch()` does not reliably permit `file://` JSON loading.
 
 ## Required exports (schemas pinned by this contract)
 
 All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON only, total < 5 MB. Freeze date recorded per export: **2026-10-14** (data) / export date 2026-10-18.
 
 1. **`atlas.json`** ← m2-unit-eligibility.csv (d394b440aba5) + m2-aging-signal-ranked.csv (fb000922b087)
-   `{units: [{unit, tissue, cell_ontology_class, eligible, powered, n_cells_3m, n_cells_18m, n_mice_3m, n_mice_18m}], ranked: [{unit, n_de_genes, median_abs_log2fc, n_de_ci_low, n_de_ci_high, tissue}]}` — 163 units, 17 ranked. Powers G0 (163 tiles, per-tissue "X of Y" counts) + G1 (bars + whiskers).
+   `{units: [{unit, tissue, cell_ontology_class, eligible, powered, n_cells_3m, n_cells_18m, n_mice_3m, n_mice_18m}], ranked: [{unit, n_de_genes, median_abs_log2fc, n_de_ci_low, n_de_ci_high, tissue}]}` — 163 units, 17 ranked. Powers G0 (all 163 tiles, per-tissue "X of Y" counts) + G1 (ranked bars). Exported bootstrap fields are retained but not drawn as confidence intervals because 15 resamples are insufficient for stable tail estimates.
 2. **`calibration.json`** ← m2-calibration-trio-summary.csv (ac3e65b60721) + m2-calibration-positive-controls.csv (0c78f4ae25f6)
    `{observed: 55, perm_mean: 4.6, sex_floor: 0, unit: "Lung::adventitial cell", positive_controls: [...]}` — powers G2 fallback dot-plot. (Histogram form blocked on C1 — deferred.)
 3. **`agreement.json`** ← m3-agreement-table.csv (743ae1f1f262) + C3 join
@@ -71,11 +71,11 @@ All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON
 Copied verbatim from `figures/` (no re-rendering): `m3-dpt-vs-age.png` (17e50141a309), `m6-signature-figure.png` (d37d0ef831c4), `m6-positive-control-skin.png` (9371628bf60e), `m6-savina-reproduction.png` (ddc8ccee4034).
 
 10. **`anage.json`** <- data/raw/anage_dataset.zip (official AnAge Build 14 export, e3ddb66e32e9)
-   `[{n, latin, cls, long, kg, q, sc}]` — 4,141 species with recorded maximum longevity; `sc` flags the only 3 species with public single-cell aging data (mouse, human, naked mole-rat), verified at export. Powers G14 (species browser scatter + table). Added 2026-10-21.
+   `[{n, latin, cls, long, kg, q, sc}]` — 4,141 species with recorded maximum longevity; `sc` flags the three species included in this explorer, not a global census of public single-cell data. Powers G14. Added 2026-10-21; wording corrected 2026-10-24.
 11. **`humancohorts.json`** <- m9-cohort-summary.csv + m9-regressions.csv (scripts/run_m9_pipeline.py, 2026-10-21)
-   `{cohorts: [{cohort, group, n_donors, age_min/max/sd, slope_per_year, se, ci_lo, ci_hi, p, rho, verdict}] (11 cohorts, 621 scored control donors), celltypes: [top 40 powered hits], total_control_donors: 624, program_human_genes: 188}` — powers G15 (human cohort arm). Headline asserted at export: MSSM n=213 slope/yr -0.00019 with CI below zero. Added 2026-10-21.
-12. **`dlpfc.json`** <- m10-cohort-summary.csv + m10-celltype-regressions.csv (scripts/run_m10_pipeline.py, 6f224c6-era; 2026-10-22)
-   `{cohort: {name: "DLPFC_Lifespan_Atlas", source: "Synapse syn52396927 (AD Knowledge Portal DUA)", n_donors: 284, age_min: 0.2, age_max: 97.0, age_sd: 24.0, n_cell_types: 27, whole_cortex: {slope_per_year: +0.00026, ci_lo: -0.00012, ci_hi: +0.00063, p: 0.186, ...}}, program: {up_slots: 121, down_slots: 70, measured_unique: 178, coverage: 0.9319}, n_concordant: 7, celltypes: [{cell_type, n_donors, n_zero_donors, slope_per_year, se, ci_lo, ci_hi, p, q_bh, rho, slope_cpm, ci_lo_cpm, ci_hi_cpm, p_cpm, q_bh_cpm, slope_sex_adj, p_sex_adj, slope_adult, p_adult, concordant, direction}] (27 rows)}` — powers G16 (lifespan-atlas arm). `concordant` = both models p<0.05 with the same sign (7 cell types: Astro, Oligo, PC, IN_VIP up; PVM, IN_LAMP5_LHX6, Adaptive down); normalization-dependent and not-significant rows render hollow. Headline asserted at export: whole cortex p>0.1 with CI spanning zero; Oligo/Astro Bonferroni-level in both schemes. **DUA rule:** this export contains regression aggregates only; per-donor scores never leave `data/` (gitignored). Added 2026-10-22.
+   `{cohorts: [{cohort, group, n_donors, age_min/max/sd, slope_per_year, se, ci_lo, ci_hi, p, q_bh, rho, verdict}] (11 cohorts, 621 scored control donors), celltypes: [top 40 eligible exploratory hits], total_control_donors: 624, program_human_genes: 188}` — powers G15. MSSM has nominal p=0.028 and BH q=0.311 across 11 cohort tests. Added 2026-10-21; cohort-level BH correction added 2026-10-24.
+12. **`dlpfc.json`** <- m10-cohort-summary.csv + m10-celltype-regressions.csv (scripts/run_m10_pipeline.py)
+   `{cohort: {name: "DLPFC_Lifespan_Atlas", source: "Synapse syn52396927 (AD Knowledge Portal DUA)", n_donors: 284, age_min: 0.2, age_max: 97.0, age_sd: 24.0, n_cell_types: 27, whole_cortex: {slope_per_year: +0.0001464, ci_lo: -0.0001692, ci_hi: +0.0004620, p: 0.3619, ...}}, program: {up_slots: 121, down_slots: 70, measured_unique: 178, coverage: 0.9319}, n_concordant: 7, celltypes: [27 regression rows]}` — powers G16. `concordant` means nominal p<0.05 with the same sign in both schemes, not universal FDR or adult-only robustness. Other rows distinguish direction reversal, scheme-sensitive significance, and no nominal signal. The corrected whole-cortex summary averages only observed cell types per donor; missing cell types are not zeros. **DUA rule:** regression aggregates only; per-donor scores never leave `data/` (gitignored). Added 2026-10-22; missing-data handling corrected 2026-10-24.
 
 ## Hard gates
 

@@ -46,7 +46,7 @@ def fchk(anchor: str, expected: float, observed: float, ndigits: int) -> bool:
 
 def main() -> int:
     j = {p.stem: json.loads(p.read_text()) for p in sorted(DATA.glob("*.json"))}
-    for name in ["atlas", "calibration", "agreement", "design-grid", "program",
+    for name in ["atlas", "ranking", "calibration", "agreement", "design-grid", "program",
                  "signature", "savina", "power-grid", "provenance", "anage", "humancohorts",
                  "dlpfc"]:
         check(f"export exists: {name}.json", True, name in j)
@@ -201,11 +201,12 @@ def main() -> int:
     check("M9 MSSM slope negative with CI below zero", True,
           mssm["slope_per_year"] < 0 and mssm["ci_hi"] < 0)
     fchk("M9 MSSM slope_per_year -0.00019", -0.00019, mssm["slope_per_year"], 5)
+    fchk("M9 MSSM BH q across 11 cohorts 0.311", 0.311, mssm["q_bh"], 3)
     check("M9 cell-type hits present (>=10 rows)", True, len(hc["celltypes"]) >= 10)
     groups = {c["group"] for c in hc["cohorts"]}
     check("M9 cohorts span brain/kidney/lung", {"brain", "kidney", "lung"}, groups)
 
-    # ---- M10 DLPFC Lifespan Atlas (gold-standard human arm, G16)
+    # ---- M10 DLPFC Lifespan Atlas (human lifespan arm, G16)
     dl = j["dlpfc"]
     co = dl["cohort"]
     check("M10 n_donors 284, 27 cell types, age 0.2-97",
@@ -215,7 +216,7 @@ def main() -> int:
     wc = co["whole_cortex"]
     check("M10 whole cortex CI spans zero, p > 0.1", True,
           wc["ci_lo"] < 0 < wc["ci_hi"] and wc["p"] > 0.1)
-    fchk("M10 whole cortex slope +0.00026", 0.00026, wc["slope_per_year"], 5)
+    fchk("M10 whole cortex slope +0.00015 after missing-data correction", 0.00015, wc["slope_per_year"], 5)
     check("M10 celltypes == 27 rows", 27, len(dl["celltypes"]))
     check("M10 concordant == 7", 7, dl["n_concordant"])
     ol = next(c for c in dl["celltypes"] if c["cell_type"] == "Oligo")
@@ -231,8 +232,8 @@ def main() -> int:
     check("M10 PVM concordant down", True,
           pvm["concordant"] and pvm["direction"] == "down")
     en = next(c for c in dl["celltypes"] if c["cell_type"] == "Endo")
-    check("M10 Endo flagged normalization-dependent, not concordant", True,
-          (not en["concordant"]) and en["direction"] == "normalization-dependent")
+    check("M10 Endo direction reverses, not concordant", True,
+          (not en["concordant"]) and en["direction"] == "normalization-dependent direction")
     check("M10 program coverage 0.9319, 178 measured orthologs", True,
           abs(dl["program"]["coverage"] - 0.9319) < 1e-9
           and dl["program"]["measured_unique"] == 178)
@@ -288,8 +289,9 @@ def main() -> int:
     check("every export has provenance sources", 12, len(pv["sources"]))
     check("figure assets recorded == 4", 4, len(pv["assets"]))
     fig_ok = all((REPO / "app" / "figures" / name).stat().st_size == meta["bytes"]
+                 and hashlib.sha256((REPO / "app" / "figures" / name).read_bytes()).hexdigest() == meta["sha256"]
                  for name, meta in pv["assets"].items())
-    check("figure asset bytes match app/figures", True, fig_ok)
+    check("figure asset bytes and SHA-256 match app/figures", True, fig_ok)
 
     # ---- size budget
     sizes = {p.name: p.stat().st_size for p in DATA.glob("*.json")}

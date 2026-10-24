@@ -1,88 +1,40 @@
-# M9 Addendum — The Human Cohort Arm: Does the Mouse Aging Program Travel?
+# M9 Addendum: Public Human Cohort Analysis
 
-Date: 2026-10-21. Pipeline: `scripts/run_m9_pipeline.py` (CELLxGENE census, stable 2025-11-08).
-Companion note: `notes/m9-data-scoping.md`. Data: `results/m9-donor-scores.csv`,
-`results/m9-cohort-summary.csv`, `results/m9-regressions.csv`, `figures/m9-*.png`,
-`results/m9-provenance.log`. Web: graph G15, export `humancohorts.json`.
+Date: 2026-10-21; revised 2026-10-24. Pipeline: `scripts/run_m9_pipeline.py`. Data: `results/m9-cohort-summary.csv`, `results/m9-regressions.csv`, and aggregate export `app/data/humancohorts.json`.
 
-## Question
+## Question and data
 
-Chapter 5 previously reported the human arm as untestable with public data (Tabula
-Sapiens skin, 4 donors). M9 asks the question directly: does the 261-gene mouse aging
-program (167 up / 94 down; the exact set scored in the app) track donor age in human
-single-cell data that carries real per-donor ages?
+Does the mouse-derived aging score track chronological age in human donors? M9 analyzes 11 public CELLxGENE cohorts from brain, kidney, and lung: MSSM, HBCC, RADC, SEA-AD, four kidney cohorts, three lung cohorts, and immune-aging BAL. Only control donors with numeric ages are included: 624 selected and 621 scored after coverage filtering. Each cohort has 98.4% program-gene coverage.
 
-## Data
-
-Eleven public CELLxGENE cohorts, control donors only (disease == "normal") with numeric
-ages from HsapDv `development_stage`: MSSM DLPFC, HBCC DLPFC, RADC DLPFC, SEA-AD DLPFC,
-normal adult kidney, living-donor kidney, adult kidney v1.5 (snRNA and scRNA), lung
-CellRef 1.0, integrated human lung atlas, CZI immune-aging BAL. 624 control donors
-selected; 621 scored after per-cohort filters; 8,280 donor by cell-type units; 98.4%
-program-gene coverage in every cohort (188 human orthologs of the 261 mouse genes;
-3 genes map to both directions in human space and net out, matching M6).
+The mouse catalog has 261 direction-specific entries across 257 unique genes. Human ortholog mapping yields 121 up and 70 down slots; CKB, ID2, and STMN1 occur in both directional sets and do not simply cancel because the up and down means contain different numbers of genes.
 
 ## Methods
 
-Per cell: program score = mean log1p expression of up genes minus down genes.
-Per donor by cell type (>=20 cells): mean score. OLS per cohort by cell type and per
-whole cohort: score ~ age + sex. Pre-registered M4 floor for the power verdict
-(>=6 donors and donor-age SD >=12 years). No new statistical inventions beyond M2-M6.
+Per cell, score = mean log1p(raw count) across detected up-program genes minus the corresponding down-program mean. Donor-by-cell-type scores average cells of that type, requiring at least 20 cells. Whole-donor scores average cell types and therefore depend on sampled composition. OLS regresses score on age with sex adjustment. M9 and M10 use different expression summaries: M9 averages per-cell log1p counts, while M10 applies log1p to donor-level summed counts. Their slope magnitudes are not directly comparable.
 
-## Results (whole-cohort, control donors)
+The M4 floor of at least 6 donors and age SD at least 12 years is an eligibility rule, not proof of adequate power. BH correction across the 11 whole-cohort tests is reported in `q_bh`. Cell-type p-values remain exploratory and uncorrected across hundreds of tests.
 
-| cohort | n | ages | slope/yr (x10^-3) | 95% CI (x10^-3) | p | verdict |
-|---|---|---|---|---|---|---|
-| MSSM DLPFC | 213 | 19-89 | -0.193 | [-0.366, -0.021] | 0.028 | POWERED |
-| HBCC DLPFC | 134 | 2-85 | +0.168 | [-0.032, +0.369] | 0.100 | POWERED |
-| RADC DLPFC | 18 | 64-89 | +0.902 | [-1.222, +3.027] | 0.380 | LOW |
-| SEA-AD DLPFC | 21 | 29-89 | +0.148 | [-0.206, +0.501] | 0.392 | POWERED |
-| Kidney (4 cohorts) | 65 pooled | 14-76 | all CIs span 0 | | 0.29-0.78 | mixed |
-| Lung (3 cohorts) | 170 pooled | 2-81 | all CIs span 0 | | 0.49-0.89 | mixed |
+## Whole-cohort results
 
-Headline: the mouse program does NOT rise with age in any human cohort. In the largest
-cohort (MSSM, n=213) the whole-donor score significantly declines with age
-(p = 0.028) — human DLPFC ages away from the mouse lung/kidney old-age direction.
+No cohort has a nominally significant positive whole-cohort score slope. Eight point estimates are positive and three are negative; non-significant intervals do not establish flatness.
 
-## Results (cell type: the direction flips)
+MSSM DLPFC (n=213) has slope -0.000193 per year, 95% CI [-0.000366, -0.000021], nominal p=0.028. Across all 11 cohort tests its BH q=0.311, so this decline is not supported after cohort-level multiplicity correction. The separate M10 DLPFC analysis does not reproduce that direction in its available-cell-type average, but different scoring and cohort composition prevent treating this as an exact replication failure.
 
-The signal is cell-type-private, in opposite directions by compartment:
+## Cell-type results
 
-- UP with age (meets floor): SEA-AD microglia (+1.16x10^-3/yr, p=0.005), SEA-AD OPC
-  (+0.83, p=0.0001), SEA-AD SST interneurons (+0.43, p=0.007), SEA-AD oligodendrocyte
-  (+0.62, p=0.013), lung integrated acinar cells (+8.47, p=0.0015), basal and goblet cells.
-- DOWN with age (meets floor): MSSM L2/3 IT excitatory neurons (-0.49, p=0.0002),
-  MSSM VIP interneurons (-0.33, p=0.007), MSSM GABAergic neurons (-0.27, p=0.011).
+The exploratory ranking contains positive and negative associations. Examples include SEA-AD oligodendrocyte precursor cells and oligodendrocytes in the positive direction, and MSSM L2/3 IT excitatory neurons in the negative direction. These are hypothesis-generating results, not a confirmed hit list. The MSSM neuronal decline does not replicate as a same-direction robust association in M10; M10's glial findings are reported separately with raw, CPM, sex-adjusted, adult-only, and multiple-testing results.
 
-Glia and secretory epithelia move toward the mouse old-age program with age; human
-excitatory and inhibitory cortical neurons move against it. This agrees directionally
-with the DLPFC lifespan atlas (Yang et al., Nature 2026), which reports late-life glial
-immune reactivation and cell-type-specific trajectories — and it independently
-reproduces that study's central architecture in control donors only, with a mouse
-program as the readout.
+Differences between significant and non-significant lists do not prove opposite underlying effects or cell-type-private biology. Direct heterogeneity tests and comparable sampling would be required.
 
-## Interpretation and limits
+## Limitations
 
-1. Cross-tissue transport: the program was derived in mouse lung/kidney. Its failure
-   to rise in human brain, kidney, and lung is evidence AGAINST one universal program
-   and FOR the project's cell-type-private thesis. It is not evidence that human
-   tissues do not age — the per-cell-type table shows they do, in opposite directions.
-2. Whole-donor scores weight cell types by abundance (oligodendrocyte-heavy in DLPFC);
-   per-cell-type rows are the correct read.
-3. Disease cohorts contribute control donors only; composition differs across cohorts
-   and could confound slopes. Replication across the four DLPFC cohorts (direction of
-   glial rise is consistent in SEA-AD and MSSM OPC/oligo) mitigates but does not
-   eliminate this.
-4. Exploratory multiplicity: cell-type p-values are not FDR-corrected in this pass;
-   the G15 table is a ranking, not a confirmed hit list.
-5. The 3-gene human-space direction conflict (CKB, ID2, STMN1) nets out in the score;
-   documented in the provenance log.
-6. The DLPFC Lifespan Atlas (syn52396927) remains requested under DUA; once granted it
-   becomes the replication cohort in a single neurotypical lifespan design.
+1. The program was derived in mouse lung and kidney; human brain, kidney, and lung scoring is cross-species and often cross-tissue transport.
+2. Control donors can differ across cohorts in recruitment, comorbidities, tissue sampling, sequencing, and cell-type composition.
+3. Whole-donor scores are composition-weighted and can move without a shared within-cell-type effect.
+4. Donor-level replication avoids treating cells as independent animals, but observational age associations remain vulnerable to cohort confounding.
+5. Non-significant slopes are not evidence of equivalence or absence of aging.
+6. M10 is a complementary analysis, not an identical replication protocol.
 
-## Bottom line for the app and report
+## Bottom line
 
-The human question is no longer "untestable." With public data alone: the mouse aging
-program does not travel to humans as a whole-organism signal; where it does appear, its
-direction is cell-type-private — up in glia and secretory lung cells, down in cortical
-neurons. Aging is not one program, in a second species, with a second method.
+Public human cohorts provide no supported evidence of a whole-cohort rise in this mouse-derived score. Cell-type estimates vary, but exploratory multiplicity and cohort differences preclude a universal or cell-type-private biological conclusion. The strongest subsequent evidence and its own normalization limitations are documented in `report/m10-dlpfc-lifespan-atlas.md`.

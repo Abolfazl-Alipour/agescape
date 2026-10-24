@@ -36,10 +36,24 @@
     verdictPartial: "#f59e0b"
   };
 
+  function createChart(dom) {
+    const existing = echarts.getInstanceByDom(dom);
+    if (existing) existing.dispose();
+    const chart = echarts.init(dom);
+    const setOption = chart.setOption.bind(chart);
+    chart.setOption = (option, ...args) => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) option.animation = false;
+      return setOption(option, ...args);
+    };
+    return chart;
+  }
+
   // --------------------------------------------------------------------------
   // Initialization & Data Loading
   // --------------------------------------------------------------------------
   async function init() {
+    setupModalsAndDrawers();
+    setupUnitPanel();
     try {
       const files = [
         "atlas", "calibration", "agreement", "design-grid",
@@ -58,8 +72,6 @@
       console.log("Agescape app data loaded successfully:", Object.keys(state.data));
 
       setupNavigation();
-      setupModalsAndDrawers();
-      setupUnitPanel();
 
       // Render Charts
       renderG0AtlasMap();
@@ -84,13 +96,33 @@
       handleUrlHash();
       window.addEventListener("hashchange", handleUrlHash);
 
-      // Window resize listener
+      let resizeTimer;
+      let compactLayout = window.innerWidth < 560;
       window.addEventListener("resize", () => {
-        Object.values(state.activeCharts).forEach(c => c && c.resize && c.resize());
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if ((window.innerWidth < 560) !== compactLayout) {
+            compactLayout = window.innerWidth < 560;
+            [renderG0AtlasMap, renderG1RankingBars, renderG3Agreement,
+              renderG6ProgramBars, renderG9SignatureMultiples,
+              renderG10HonestInterval, renderG15HumanCohorts,
+              renderG16LifespanAtlas].forEach(render => {
+                const domId = { renderG0AtlasMap: "g0", renderG1RankingBars: "g1" }[render.name];
+                if (domId && state.activeCharts[domId]) state.activeCharts[domId].dispose();
+                render();
+              });
+          }
+          Object.values(state.activeCharts).forEach(c => c && c.resize && !c.isDisposed() && c.resize());
+        }, 150);
       });
 
     } catch (err) {
       console.error("Failed to initialize Agescape webapp:", err);
+      const notice = document.createElement("p");
+      notice.className = "load-error";
+      notice.setAttribute("role", "alert");
+      notice.textContent = "The interactive charts could not load. Reload the page, or use the Code link to inspect the analysis.";
+      document.querySelector(".hero-inner").appendChild(notice);
     }
   }
 
@@ -140,18 +172,33 @@
     const methodsModal = document.getElementById("methods-modal");
     const methodsClose = document.getElementById("btn-close-methods");
 
+    const closeMethods = () => {
+      methodsModal.hidden = true;
+      document.body.style.overflow = "";
+      document.querySelector("main").inert = false;
+      document.querySelector(".top-nav").inert = false;
+      methodsBtn.focus();
+    };
     if (methodsBtn && methodsModal && methodsClose) {
       methodsBtn.addEventListener("click", () => {
         methodsModal.hidden = false;
-        document.getElementById("btn-close-methods").focus();
+        document.body.style.overflow = "hidden";
+        document.querySelector("main").inert = true;
+        document.querySelector(".top-nav").inert = true;
+        methodsClose.focus();
         Object.values(state.activeCharts).forEach(c => c.dispatchAction && c.dispatchAction({ type: "hideTip" }));
       });
-      methodsClose.addEventListener("click", () => {
-        methodsModal.hidden = true;
-        document.getElementById("btn-open-methods").focus();
-      });
+      methodsClose.addEventListener("click", closeMethods);
       methodsModal.addEventListener("click", (e) => {
-        if (e.target === methodsModal) methodsModal.hidden = true;
+        if (e.target === methodsModal) closeMethods();
+      });
+      methodsModal.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") { e.preventDefault(); closeMethods(); }
+        if (e.key !== "Tab") return;
+        const items = [...methodsModal.querySelectorAll("button, a[href], input, [tabindex='0']")];
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       });
     }
 
@@ -181,19 +228,26 @@
 
     // Compare Published toggles
     document.querySelectorAll(".btn-compare").forEach(btn => {
+      btn.setAttribute("aria-controls", btn.dataset.target);
+      btn.setAttribute("aria-expanded", "false");
       btn.addEventListener("click", () => {
-        const targetId = btn.dataset.target;
-        const comp = document.getElementById(targetId);
+        const comp = document.getElementById(btn.dataset.target);
         if (comp) {
           comp.hidden = !comp.hidden;
+          btn.setAttribute("aria-expanded", String(!comp.hidden));
         }
       });
     });
 
     document.querySelectorAll(".compare-close").forEach(btn => {
+      btn.setAttribute("aria-label", "Close published figure comparison");
       btn.addEventListener("click", () => {
         const comp = btn.closest(".compare-container");
-        if (comp) comp.hidden = true;
+        if (comp) {
+          comp.hidden = true;
+          const toggle = document.querySelector(`[data-target="${comp.id}"]`);
+          if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.focus(); }
+        }
       });
     });
 
@@ -220,8 +274,12 @@
       rows = subKey === "ranked" ? rawData.ranked : rawData.units;
       filename = `atlas-${subKey || "units"}.csv`;
     } else if (exportName === "calibration") {
-      rows = rawData.positive_controls || [rawData];
-      filename = `calibration-positive-controls.csv`;
+      rows = subKey === "posctl" ? rawData.positive_controls : [{
+        unit: "Lung::adventitial cell", observed: rawData.observed,
+        permutation_mean: rawData.perm_mean, permutation_replicates: 5,
+        within_3m_sex_de_genes: rawData.sex_floor
+      }];
+      filename = subKey === "posctl" ? "calibration-positive-controls.csv" : "calibration-summary.csv";
     } else if (exportName === "agreement") {
       if (subKey === "scatter") {
         rows = rawData.scatter.points;
@@ -235,10 +293,14 @@
       filename = `program-${subKey || "genes"}.csv`;
     } else if (exportName === "signature") {
       if (subKey === "points") {
-        rows = rawData.arms.mouse_wb.points;
-        filename = `signature-mouse-wb-scores.csv`;
+        rows = Object.entries(rawData.arms).flatMap(([arm, value]) =>
+          value.points.map(point => ({ arm, ...point })));
+        filename = `signature-all-donor-scores.csv`;
       } else {
-        rows = [rawData.stats.diff, rawData.stats.tost];
+        rows = [
+          { test: "mouse_minus_nmr_slope_difference", ...rawData.stats.diff },
+          { test: "nmr_tost_equivalence", ...rawData.stats.tost }
+        ];
         filename = `signature-statistical-summary.csv`;
       }
     } else if (exportName === "savina") {
@@ -270,23 +332,24 @@
 
     if (!rows || rows.length === 0) return;
 
-    const headers = Object.keys(rows[0]);
-    const csvContent = [
-      headers.join(","),
-      ...rows.map(r => headers.map(h => {
-        let v = r[h];
-        if (typeof v === "string" && v.includes(",")) v = `"${v}"`;
-        return v !== undefined && v !== null ? v : "";
-      }).join(","))
-    ].join("\n");
+    downloadCsv(rows, filename);
+  }
 
+  function downloadCsv(rows, filename) {
+    const headers = [...new Set(rows.flatMap(row => Object.keys(row)))];
+    const cell = value => {
+      const text = value === undefined || value === null ? "" : String(value);
+      return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+    };
+    const csvContent = [headers.map(cell).join(","),
+      ...rows.map(row => headers.map(h => cell(row[h])).join(","))].join("\n");
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
     link.download = filename;
     link.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   // --------------------------------------------------------------------------
@@ -294,24 +357,48 @@
   // --------------------------------------------------------------------------
   function setupAccessibilityEnhancements() {
     document.querySelectorAll(".echart-container, .mini-chart").forEach(dom => {
-      if (dom.getAttribute("role")) return;
       const block = dom.closest(".graph-block") || dom.closest(".expander-content") || dom.closest("section");
       const titleEl = block ? block.querySelector(".graph-title, .sub-chart-title") : null;
       const label = titleEl ? titleEl.textContent.trim() : "Aging data chart";
       dom.setAttribute("role", "img");
-      dom.setAttribute("aria-label", `Chart: ${label}`);
+      dom.setAttribute("aria-label", `Chart: ${label}. Use the adjacent description and CSV download for the values.`);
     });
+
+    const unitSelect = document.createElement("select");
+    unitSelect.className = "accessible-chart-select";
+    unitSelect.setAttribute("aria-label", "Inspect a testable mouse cell-type unit");
+    unitSelect.innerHTML = "<option value=''>Inspect a cell-type unit</option>" +
+      state.data.atlas.ranked.map(r => `<option value="${r.unit}">${r.unit.replace("::", ": ")} (${r.n_de_genes} genes)</option>`).join("");
+    unitSelect.addEventListener("change", () => { if (unitSelect.value) openUnitPanel(unitSelect.value); });
+    document.getElementById("block-g1").appendChild(unitSelect);
+
+    const powerSelect = document.createElement("select");
+    powerSelect.className = "accessible-chart-select";
+    powerSelect.setAttribute("aria-label", "Select a study design and update the power readout");
+    powerSelect.innerHTML = "<option value=''>Select a study design</option>" +
+      state.data["power-grid"].tiles.map((t, i) => `<option value="${i}">${t.n_donors} donors, age SD ${t.sd}, dispersion ${t.dispersion}: effect ${t.min_30y_log2fc}</option>`).join("");
+    powerSelect.addEventListener("change", () => {
+      if (powerSelect.value !== "") updatePowerReadout(state.data["power-grid"].tiles[Number(powerSelect.value)]);
+    });
+    document.getElementById("power-readout").before(powerSelect);
 
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
-      const modal = document.getElementById("methods-modal");
-      if (modal && !modal.hidden) { modal.hidden = true; document.getElementById("btn-open-methods").focus(); return; }
       const panel = document.getElementById("unit-panel");
       if (panel && panel.classList.contains("open")) { closeUnitPanel(); return; }
       const openDrawer = document.querySelector(".drawer:not([hidden])");
-      if (openDrawer) { openDrawer.hidden = true; return; }
+      if (openDrawer) {
+        openDrawer.hidden = true;
+        const toggle = document.querySelector(`[data-drawer="${openDrawer.id}"]`);
+        if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.focus(); }
+        return;
+      }
       const openCompare = document.querySelector(".compare-container:not([hidden])");
-      if (openCompare) { openCompare.hidden = true; }
+      if (openCompare) {
+        openCompare.hidden = true;
+        const toggle = document.querySelector(`[data-target="${openCompare.id}"]`);
+        if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.focus(); }
+      }
     });
   }
 
@@ -323,6 +410,19 @@
     const closeBtn = document.getElementById("panel-close-btn");
     const searchInput = document.getElementById("panel-gene-search");
     const downloadBtn = document.getElementById("btn-download-panel-genes");
+    panel.inert = true;
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.setAttribute("aria-labelledby", "panel-unit-name");
+
+    document.getElementById("panel-human-link").addEventListener("click", closeUnitPanel);
+    panel.addEventListener("keydown", (e) => {
+      if (e.key !== "Tab") return;
+      const items = [...panel.querySelectorAll("button, a[href], input, select")];
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
 
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
@@ -342,29 +442,21 @@
         const prog = state.data.program;
         if (!prog) return;
         const genes = prog.genes.filter(g => g.unit === state.selectedUnit);
-        const headers = ["gene", "unit", "direction", "log2fc", "fdr"];
-        const csv = [
-          headers.join(","),
-          ...genes.map(g => headers.map(h => g[h]).join(","))
-        ].join("\n");
-        const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `${state.selectedUnit.replace("::", "-")}-genes.csv`;
-        a.click();
-        URL.revokeObjectURL(url);
+        downloadCsv(genes, `${state.selectedUnit.replace("::", "-")}-genes.csv`);
       });
     }
   }
 
   function openUnitPanel(unitName) {
-    state.selectedUnit = unitName;
     const panel = document.getElementById("unit-panel");
-    if (!panel) return;
+    if (!panel || (state.selectedUnit === unitName && panel.classList.contains("open"))) return;
+    state.panelReturnFocus = document.activeElement;
+    state.selectedUnit = unitName;
 
+    panel.inert = false;
     panel.classList.add("open");
     panel.setAttribute("aria-hidden", "false");
+    document.getElementById("panel-gene-search").value = "";
 
     const pcb = document.getElementById("panel-close-btn");
     if (pcb) pcb.focus();
@@ -416,11 +508,13 @@
     if (panel) {
       panel.classList.remove("open");
       panel.setAttribute("aria-hidden", "true");
+      panel.inert = true;
     }
     state.selectedUnit = null;
     if (window.location.hash.startsWith("#unit-")) {
-      history.pushState("", document.title, window.location.pathname + window.location.search);
+      history.replaceState("", document.title, window.location.pathname + window.location.search);
     }
+    if (state.panelReturnFocus && state.panelReturnFocus.isConnected) state.panelReturnFocus.focus();
   }
 
   function handleUrlHash() {
@@ -430,10 +524,10 @@
       const atlas = state.data.atlas;
       if (atlas) {
         const found = atlas.ranked.find(r => r.unit.toLowerCase().replace(/[^a-z0-9]+/g, "-") === slug);
-        if (found) {
-          openUnitPanel(found.unit);
-        }
+        if (found) openUnitPanel(found.unit);
       }
+    } else if (state.selectedUnit) {
+      closeUnitPanel();
     }
   }
 
@@ -443,7 +537,7 @@
 
     let chart = state.activeCharts["panel-bar"];
     if (!chart) {
-      chart = echarts.init(dom);
+      chart = createChart(dom);
       state.activeCharts["panel-bar"] = chart;
     }
 
@@ -504,7 +598,7 @@
     const atlas = state.data.atlas;
     if (!dom || !atlas) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g0"] = chart;
 
     // Group units by tissue
@@ -551,23 +645,27 @@
           return `<strong>${d.tissue}</strong><br>${d.ct}<br><span style="color:${d.powered ? '#0369a1' : '#64748b'}">${status}</span>`;
         }
       },
-      grid: { left: 160, right: 30, top: 10, bottom: 20 },
+      grid: dom.clientWidth < 560
+        ? { left: 104, right: 10, top: 10, bottom: 20 }
+        : { left: 160, right: 30, top: 10, bottom: 20 },
       xAxis: {
         type: "value",
         show: false,
-        max: 24
+        min: -0.5,
+        max: Math.max(...Object.values(tissueMap).map(units => units.length)) - 0.5
       },
       yAxis: {
         type: "category",
         data: yAxisLabels,
         inverse: true,
         axisLine: { lineStyle: { color: "rgba(15,23,42,0.2)" } },
-        axisLabel: { color: "#64748b", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: dom.clientWidth < 560 ? 9 : 11,
+          width: dom.clientWidth < 560 ? 94 : null, overflow: "truncate" }
       },
       series: [{
         type: "scatter",
         symbol: "rect",
-        symbolSize: [11, 11],
+        symbolSize: dom.clientWidth < 560 ? [5, 7] : [11, 11],
         data: data,
         itemStyle: {
           color: (p) => {
@@ -600,7 +698,7 @@
     const atlas = state.data.atlas;
     if (!dom || !atlas) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g1"] = chart;
 
     const ranked = [...atlas.ranked].reverse(); // Ascending for horizontal bar
@@ -678,7 +776,7 @@
     const dg = state.data["design-grid"];
     if (!dom || !dg) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts[domId] = chart;
 
     chart.setOption({
@@ -740,7 +838,7 @@
     const agr = state.data.agreement;
     if (!dom || !agr || !agr.scatter) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g3-scatter"] = chart;
 
     const sc = agr.scatter;
@@ -793,7 +891,7 @@
     const agr = state.data.agreement;
     if (!dom || !agr) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g3-lollipop"] = chart;
 
     const units = [...agr.lollipop].reverse();
@@ -851,7 +949,7 @@
     const cal = state.data.calibration;
     if (!dom || !cal) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g2"] = chart;
 
     chart.setOption({
@@ -899,7 +997,7 @@
     const prog = state.data.program;
     if (!dom || !prog) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g6"] = chart;
 
     const units = [...prog.units].reverse();
@@ -965,7 +1063,7 @@
     const prog = state.data.program;
     if (!dom || !prog || !prog.matrix_top40) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g7"] = chart;
 
     const m40 = prog.matrix_top40;
@@ -1021,7 +1119,7 @@
     const sig = state.data.signature;
     if (!dom || !sig) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g9"] = chart;
 
     const arms = sig.arms;
@@ -1120,7 +1218,7 @@
     const hc = state.data.humancohorts;
     if (!dom || !hc) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g15"] = chart;
 
     const HUMAN = "#7c3aed"; // single human accent colour; hollow/filled carries the verdict
@@ -1130,7 +1228,7 @@
       short: humanize(c.cohort),
       value: [c.slope_per_year * 1000, i],
       ci: [c.ci_lo * 1000, c.ci_hi * 1000],
-      n: c.n_donors, p: c.p, group: c.group, verdict: c.verdict,
+      n: c.n_donors, p: c.p, q: c.q_bh, group: c.group, verdict: c.verdict,
       significant: c.ci_hi < 0 || c.ci_lo > 0,
     }));
 
@@ -1139,23 +1237,26 @@
         trigger: "item",
         formatter: (p) => {
           const d = p.data;
-          return `<strong>${d.short}</strong> (${d.group})<br>donors: ${d.n}, slope: ${d.value[0].toFixed(3)}x10^-3/yr<br>95% CI: [${d.ci[0].toFixed(3)}, ${d.ci[1].toFixed(3)}]<br>p = ${d.p.toExponential(2)}${d.significant ? " (CI excludes 0)" : ""}`;
+          return `<strong>${d.short}</strong> (${d.group})<br>donors: ${d.n}, slope: ${d.value[0].toFixed(3)}x10^-3/yr<br>95% CI: [${d.ci[0].toFixed(3)}, ${d.ci[1].toFixed(3)}]<br>p = ${d.p.toExponential(2)}, BH q = ${d.q.toExponential(2)}${d.significant ? " (nominal CI excludes 0)" : ""}`;
         }
       },
-      grid: { left: 185, right: 60, top: 30, bottom: 40 },
+      grid: dom.clientWidth < 560
+        ? { left: 112, right: 14, top: 30, bottom: 55 }
+        : { left: 185, right: 60, top: 30, bottom: 40 },
       xAxis: {
         type: "value",
-        name: "program score slope per year (x10^-3)",
+        name: dom.clientWidth < 560 ? "score slope (x10^-3/year)" : "program score slope per year (x10^-3)",
         nameLocation: "middle",
         nameGap: 28,
         min: -3.5, max: 3.5, interval: 1,
-        axisLabel: { color: "#64748b" },
+        axisLabel: { color: "#64748b", fontSize: dom.clientWidth < 560 ? 9 : 11 },
         splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
       yAxis: {
         type: "category",
         data: rows.map(r => r.name),
-        axisLabel: { color: "#334155", fontSize: 11 },
+        axisLabel: { color: "#334155", fontSize: dom.clientWidth < 560 ? 9 : 11,
+          width: dom.clientWidth < 560 ? 102 : null, overflow: "truncate" },
         axisTick: { show: false }, axisLine: { show: false }
       },
       series: [
@@ -1220,18 +1321,18 @@
   }
 
   // --------------------------------------------------------------------------
-  // CHAPTER 5: G16 DLPFC Lifespan Atlas (M10 gold-standard arm)
+  // CHAPTER 5: G16 DLPFC Lifespan Atlas (M10 human lifespan arm)
   // --------------------------------------------------------------------------
   function renderG16LifespanAtlas() {
     const dom = document.getElementById("chart-g16");
     const dl = state.data.dlpfc;
     if (!dom || !dl) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g16"] = chart;
 
     const PURPLE = "#7c3aed";       // human cohort colour family (matches G15 brain)
-    const PURPLE_SOFT = "#b39ddb";  // CPM robustness arm
+    const PURPLE_SOFT = "#6d28d9";  // CPM robustness arm, AA-visible on white
     const x = v => v * 1000;        // slopes shown x10^-3/yr
     const isMobile = dom.clientWidth < 560;
 
@@ -1243,21 +1344,22 @@
       title: {
         text: "", left: "center", top: 2,
         subtext: isMobile
-          ? "whole cortex: flat (p = 0.19)"
-          : `whole cortex average: flat (${x(dl.cohort.whole_cortex.slope_per_year).toFixed(2)}x10^-3/yr, p = ${dl.cohort.whole_cortex.p.toFixed(2)})`,
+          ? `available-cell-type average: p = ${dl.cohort.whole_cortex.p.toFixed(2)}`
+          : `available-cell-type average: ${x(dl.cohort.whole_cortex.slope_per_year).toFixed(2)}x10^-3/yr, p = ${dl.cohort.whole_cortex.p.toFixed(2)}; no rise detected`,
         subtextStyle: { fontSize: 12, fontWeight: 700, color: "#0f172a" }
       },
       tooltip: {
         trigger: "item",
         formatter: (p) => {
           const d = rows[p.dataIndex];
-          const verdict = d.concordant ? "concordant across both normalization schemes"
-            : d.direction === "normalization-dependent" ? "direction depends on normalization: not claimed"
-            : "not significant";
+          const verdict = d.concordant ? "same-direction nominal signal in both schemes"
+            : d.direction === "normalization-dependent direction" ? "direction reverses between schemes: not claimed"
+            : d.direction === "scheme-sensitive significance" ? "same sign, but significance is not robust across schemes"
+            : "no nominal signal in either scheme";
           return `<strong>${d.cell_type}</strong> (${d.n_donors} donors)<br>` +
-            `raw-sum: ${x(d.slope_per_year).toFixed(2)}x10^-3/yr, p = ${d.p.toExponential(2)}<br>` +
-            `CPM-normalized: ${x(d.slope_cpm).toFixed(2)}x10^-3/yr, p = ${d.p_cpm.toExponential(2)}<br>` +
-            verdict;
+            `raw-sum: ${x(d.slope_per_year).toFixed(2)}x10^-3/yr, p = ${d.p.toExponential(2)}, BH q = ${d.q_bh.toExponential(2)}<br>` +
+            `CPM: ${x(d.slope_cpm).toFixed(2)}x10^-3/yr, p = ${d.p_cpm.toExponential(2)}, BH q = ${d.q_bh_cpm.toExponential(2)}<br>` +
+            `adults-only p = ${d.p_adult.toExponential(2)}<br>${verdict}`;
         }
       },
       grid: isMobile
@@ -1325,11 +1427,10 @@
           markLine: {
             silent: true, symbol: "none",
             lineStyle: { color: "#0f172a", width: 2 },
-            data: [{ xAxis: 0 },
+            data: [{ xAxis: 0, label: { show: true, formatter: "no change", position: "end", color: "#0f172a", fontWeight: 600 } },
               { xAxis: x(dl.cohort.whole_cortex.slope_per_year),
                 lineStyle: { color: "#94a3b8", width: 1.5, type: "dashed" },
-                label: { show: !isMobile, formatter: "whole-cortex\naverage", position: "insideEndBottom", color: "#475569", fontSize: 10, fontWeight: 600 } }],
-            label: { show: true, formatter: "no change", position: "insideEndBottom", color: "#0f172a", fontWeight: 600 }
+                label: { show: false } }]
           }
         }
       ]
@@ -1344,13 +1445,15 @@
     const sig = state.data.signature;
     if (!dom || !sig) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g10"] = chart;
 
     const delta = sig.stats.tost.delta;
 
     chart.setOption({
-      grid: { left: 160, right: 60, top: 25, bottom: 35 },
+      grid: dom.clientWidth < 560
+        ? { left: 82, right: 16, top: 25, bottom: 35 }
+        : { left: 160, right: 60, top: 25, bottom: 35 },
       xAxis: {
         type: "value",
         min: -0.4,
@@ -1361,7 +1464,8 @@
       yAxis: {
         type: "category",
         data: ["Slope Difference", "NMR Slope", "Mouse Slope"],
-        axisLabel: { color: "#64748b", fontSize: 11 }
+        axisLabel: { color: "#64748b", fontSize: dom.clientWidth < 560 ? 9 : 11,
+          width: dom.clientWidth < 560 ? 72 : null, overflow: "truncate" }
       },
       series: [
         // Bold line at 0
@@ -1395,8 +1499,8 @@
               return {
                 type: "text",
                 style: {
-                  x: p[0], y: p[1], text: shortLabel ? "not proven equivalent" : "equivalence not established",
-                  fill: "#9a3412", fontSize: 11, fontWeight: 600,
+                  x: p[0], y: p[1], text: shortLabel ? "equivalence unproven" : "equivalence not established",
+                  fill: "#9a3412", fontSize: shortLabel ? 9 : 11, fontWeight: 600,
                   align: "left", verticalAlign: "middle"
                 }
               };
@@ -1451,7 +1555,7 @@
     const sig = state.data.signature;
     if (!dom || !sig || !sig.lifespans) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g11"] = chart;
 
     chart.setOption({
@@ -1476,6 +1580,15 @@
             { value: sig.lifespans.mouse, itemStyle: { color: PALETTE.mouse } }
           ],
           barWidth: 16,
+          markArea: {
+            silent: true,
+            itemStyle: { color: "rgba(15,23,42,0.48)" },
+            label: { show: true, color: "#ffffff", fontSize: 9, formatter: "tested" },
+            data: [
+              [{ xAxis: 1 / 12, yAxis: "Mouse" }, { xAxis: 2.5, yAxis: "Mouse" }],
+              [{ xAxis: 1.1, yAxis: "Naked Mole-Rat" }, { xAxis: 11.3, yAxis: "Naked Mole-Rat" }]
+            ]
+          },
           label: {
             show: true,
             position: "right",
@@ -1501,7 +1614,7 @@
     const data = state.data.anage;
     if (!dom || !Array.isArray(data)) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g14"] = chart;
 
     const scatterPts = data.filter(d => d.kg && d.long).map(d => ({
@@ -1604,7 +1717,7 @@
           <td class="font-mono">${d.kg != null ? d.kg.toLocaleString("en-US") : "n/a"}</td>
           <td>${d.sc === "yes"
             ? `<span class="badge-sc">In this explorer</span>`
-            : `<span class="species-none">None public</span>`}</td>
+            : `<span class="species-none">Not included</span>`}</td>
         </tr>`).join("");
       if (note) {
         note.textContent = q
@@ -1627,7 +1740,7 @@
     const sav = state.data.savina;
     if (!dom || !sav) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts["g12"] = chart;
 
     const pts = sav.curve.map(r => [r.log2fc_cutoff, r.n_de_pval05]);
@@ -1692,7 +1805,7 @@
     const pw = state.data["power-grid"];
     if (!dom || !pw) return;
 
-    const chart = echarts.init(dom);
+    const chart = createChart(dom);
     state.activeCharts[domId] = chart;
 
     const tiles = pw.tiles.filter(t => Math.abs(t.dispersion - dispVal) < 0.01);
@@ -1728,7 +1841,7 @@
         trigger: "item",
         formatter: (p) => {
           const d = p.value;
-          return `Donors: <strong>${d[5]}</strong> | SD: <strong>${d[6]}y</strong><br>Min 30y log₂FC: <strong>${d[2].toFixed(3)}</strong><br>Status: <strong>${d[3]}</strong>`;
+          return `Donors: <strong>${d[5]}</strong> | SD: <strong>${d[6]}y</strong><br>Min 30y log₂FC: <strong>${d[2].toFixed(3)}</strong><br>Status: <strong>${d[4] ? "MEETS FLOOR" : "LOW-POWERED"}</strong>`;
         }
       },
       grid: { left: 40, right: 15, top: 15, bottom: 35 },
@@ -1785,15 +1898,18 @@
   }
 
   function updatePowerReadout(r) {
-    state.powerReadout = r;
-    document.getElementById("readout-donors").textContent = r.donors;
+    const donors = r.donors ?? r.n_donors;
+    const eligible = r.eligible_cohort ?? (r.verdict === "MEETS FLOOR" || r.verdict === "Adequately Powered");
+    const verdict = eligible ? "MEETS FLOOR" : "LOW-POWERED";
+    state.powerReadout = { ...r, donors, verdict };
+    document.getElementById("readout-donors").textContent = donors;
     document.getElementById("readout-sd").textContent = `${r.sd} y`;
     document.getElementById("readout-disp").textContent = r.dispersion;
     document.getElementById("readout-log2fc").textContent = r.min_30y_log2fc.toFixed(3);
 
     const verdictEl = document.getElementById("readout-verdict");
-    verdictEl.textContent = r.verdict;
-    verdictEl.className = r.verdict === "MEETS FLOOR" ? "badge-verdict badge-floor" : "badge-verdict badge-lowpower";
+    verdictEl.textContent = verdict;
+    verdictEl.className = eligible ? "badge-verdict badge-floor" : "badge-verdict badge-lowpower";
   }
 
   // Kickoff on DOM Load

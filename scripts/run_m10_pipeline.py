@@ -18,10 +18,11 @@ were 4 to 213 donors each with narrow age spreads; this atlas is 284 donors
 with age SD 24 years, which clears the pre-registered M4 human floor
 (>=6 donors, donor-age SD >=12) by an order of magnitude.
 
-Scoring mirrors M9 exactly so results are directly comparable:
-per donor x cell type, score = mean(log1p(count) over up-program genes
-present) minus mean(log1p(count) over down-program genes present), using
-the same 188-gene human ortholog set (data/interim/orthologs-mouse-human.csv).
+The score uses the same directional contrast and ortholog set as M9, but the
+input summaries differ. M9 averages per-cell log1p counts; M10 applies log1p
+to donor-level summed counts. Cross-cohort slope magnitudes are therefore not
+directly comparable: score = mean(log1p(count) over up-program genes present)
+minus mean(log1p(count) over down-program genes present).
 
 Robustness (eval discipline): (a) CPM-normalized scores (log1p of counts per
 million within donor x cell type) re-run for every regression; (b) sex-
@@ -94,7 +95,7 @@ def load_program():
     dn = sorted({m2h[g] for g in dn_m if g in m2h and isinstance(m2h[g], str)})
     prov(f"program: {len(up_m)} up / {len(dn_m)} down mouse genes -> "
          f"{len(up)} up / {len(dn)} down human orthologs")
-    prov(f"human-space direction conflicts (net out in up-minus-down): "
+    prov(f"human-space direction conflicts retained in unequal up/down means: "
          f"{sorted(set(up) & set(dn))}")
     return up, dn
 
@@ -127,7 +128,7 @@ def ols(y, X):
 def score_matrix(mat, genes, up, dn, norm=None):
     """M9 score per donor column: mean(log1p up) - mean(log1p down).
 
-    norm=None: M9 recipe on pseudobulk sums (log1p of summed counts).
+    norm=None: primary pseudobulk recipe (log1p of summed counts).
     norm='cpm': robustness arm, counts rescaled to per-million within the
     donor x cell-type column before log1p.
     Returns (score, coverage, n_up_used, n_dn_used)."""
@@ -157,8 +158,8 @@ def main():
     prov("DUA: AD Knowledge Portal controlled access; aggregates only committed")
 
     up, dn = load_program()
-    prov(f"scoring recipe: M9-identical, up_mean(log1p) - dn_mean(log1p); "
-         f"robustness arm log1p(CPM)")
+    prov("scoring recipe: donor-pseudobulk up_mean(log1p) - dn_mean(log1p); "
+         "robustness arm log1p(CPM); input summaries differ from M9")
 
     obj = rdata.read_rds(str(RDS))
     cd = obj.colData
@@ -190,8 +191,9 @@ def main():
         sc_raw, cov, nu, nd = score_matrix(mat, genes, up, dn)
         sc_cpm, _, _, _ = score_matrix(mat, genes, up, dn, norm="cpm")
 
-        for d, s in zip(donor_ids, sc_raw):
-            donor_scores[d].append(s)
+        for d, s, present in zip(donor_ids, sc_raw, keep):
+            if present:
+                donor_scores[d].append(s)
 
         d_age, d_sex = age[keep], sex[keep]
         r_raw = ols(sc_raw[keep], np.column_stack([np.ones(keep.sum()), d_age]))
@@ -231,11 +233,15 @@ def main():
     ct_df["q_bh_cpm"] = multipletests(ct_df["p_cpm"], method="fdr_bh")[1]
     ct_df.to_csv(RESULTS / "m10-celltype-regressions.csv", index=False)
 
-    # ---- whole-cortex headline: per-donor mean of cell-type scores (M9 style)
+    # Average only cell types observed in each donor; absent cell types are missing,
+    # not biological zeros. The number contributing therefore varies by donor.
     whole = pd.DataFrame({
         "donor_id": donor_ids, "age": age, "sex": sex,
+        "n_cell_types_observed": [len(donor_scores[d]) for d in donor_ids],
         "score": [np.mean(donor_scores[d]) for d in donor_ids],
     })
+    prov(f"whole cortex: {whole['n_cell_types_observed'].min()} to "
+         f"{whole['n_cell_types_observed'].max()} observed cell types averaged per donor")
     whole.to_csv(INTERIM / "m10-donor-whole-scores.csv", index=False)  # gitignored (DUA)
     r_all = ols(whole["score"].values,
                 np.column_stack([np.ones(n_donors), whole["age"].values]))

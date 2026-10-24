@@ -1226,3 +1226,25 @@ body {
 }
 
 .species-table-wrap::after { content: ""; display: block; height: 2px; background: linear-gradient(90deg, rgba(15,23,42,0.18), transparent); }
+
+.badge-lowpower { color: #92400e; background: #fffbeb; border-color: #d97706; }
+.badge-floor { color: #065f46; background: #ecfdf5; border-color: #059669; }
+.text-warning { color: #92400e; }
+.slideover-panel { visibility: hidden; }
+.slideover-panel.open { visibility: visible; }
+.accessible-chart-select {
+  width: 100%; min-height: 44px; padding: 9px 12px;
+  border: 1px solid var(--border-card); border-radius: var(--radius-md);
+  background: var(--bg-card); color: var(--text-main); font: inherit;
+}
+.load-error { padding: 16px; color: #991b1b; background: #fef2f2; border: 1px solid #dc2626; }
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 500; padding: 12px; background: #fff; color: #075985; }
+.skip-link:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; white-space: nowrap; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #075985; outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .graph-title-row { gap: 10px; }
+  .graph-controls { width: 100%; }
+  .graph-support { font-size: 0.88rem; line-height: 1.55; }
+}

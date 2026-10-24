@@ -25,7 +25,7 @@ Outputs (repo-rooted):
 Honesty rules (same as other milestones): no invented numbers; coverage reported
 per cohort; genes absent from a cohort's measurement are excluded there and the
 coverage is recorded; 3 genes map to both directions in human space (CKB, ID2,
-STMN1) and net out in the up-minus-down score (documented, matches M6 behavior).
+STMN1). They remain in unequally sized up/down means and do not simply cancel.
 """
 from __future__ import annotations
 
@@ -98,7 +98,7 @@ def load_program():
     dn = sorted({m2h[g] for g in dn_m if g in m2h and isinstance(m2h[g], str)})
     prov(f"program: {len(up_m)} up / {len(dn_m)} down mouse genes -> "
          f"{len(up)} up / {len(dn)} down human orthologs")
-    prov(f"human-space direction conflicts (net out in up-minus-down): "
+    prov(f"human-space direction conflicts retained in unequal up/down means: "
          f"{sorted(set(up) & set(dn))}")
     return up, dn
 
@@ -275,6 +275,8 @@ def main():
         fig.savefig(FIGURES / f"m9-{label.lower()}-score-vs-age.png", dpi=150)
         plt.close(fig)
     summary = pd.DataFrame(summary_rows)
+    from statsmodels.stats.multitest import multipletests
+    summary["q_bh"] = multipletests(summary["p"], method="fdr_bh")[1]
     summary.to_csv(RESULTS / "m9-cohort-summary.csv", index=False)
 
     # ---- per-cell-type regressions

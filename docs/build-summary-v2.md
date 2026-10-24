@@ -1,6 +1,8 @@
 # Agescape Web Application and Scientific Pipeline: Complete Project Walkthrough (Corrected)
 
-> **Notice:** This document supersedes the original walkthrough (`walkthrough.md`) following the 2026-10-18 builder correction review against the authoritative scientific report (`report/conserved-aging-programs.md`) and committed results files.
+> **Superseded 2026-10-24:** This is a historical 2026-10-18 build summary, not the current scientific reference. Later reviews corrected the sex-design description, added M9/M10 human analyses, narrowed cross-species and power claims, and fixed M10 missing-cell-type handling. Use `README.md`, `report/conserved-aging-programs.md`, `report/m9-human-cohorts.md`, `report/m10-dlpfc-lifespan-atlas.md`, and `app/DATA_CONTRACT.md` for current findings.
+>
+> **Original notice:** This document superseded the original walkthrough (`walkthrough.md`) following the 2026-10-18 builder correction review against the then-current scientific report and committed results files.
 
 ## Changelog of Corrections (C1 to C10)
 

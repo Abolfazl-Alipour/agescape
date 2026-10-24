@@ -225,7 +225,7 @@ def export_human_cohorts(prov):
             "age_sd": fnum(r["age_sd"]),
             "slope_per_year": fnum(r["slope_per_year"]), "se": fnum(r["se"]),
             "ci_lo": fnum(r["ci_lo"]), "ci_hi": fnum(r["ci_hi"]), "p": fnum(r["p"]),
-            "rho": fnum(r["rho"]), "verdict": r["verdict"],
+            "q_bh": fnum(r["q_bh"]), "rho": fnum(r["rho"]), "verdict": r["verdict"],
         })
 
     hits = regs[regs["n_donors"] >= 6].sort_values("p").head(40)
@@ -245,7 +245,7 @@ def export_human_cohorts(prov):
 
 
 def export_dlpfc(prov):
-    """M10 gold-standard arm: DLPFC Lifespan Atlas (284 control donors 0.2-97y,
+    """M10 human lifespan arm: DLPFC Lifespan Atlas (284 control donors 0.2-97y,
     27 cell types, authors' donor x cell-type pseudobulk; Synapse syn62064535,
     AD Knowledge Portal DUA). Values transcribe committed M10 aggregates only;
     per-donor values are DUA-controlled and never exported. Concordant flag is
@@ -264,8 +264,10 @@ def export_dlpfc(prov):
         conc = bool(r["p"] < 0.05 and r["p_cpm"] < 0.05 and r["slope"] * r["slope_cpm"] > 0)
         if conc:
             direction = "up" if r["slope"] > 0 else "down"
+        elif r["slope"] * r["slope_cpm"] < 0:
+            direction = "normalization-dependent direction"
         elif r["p"] < 0.05 or r["p_cpm"] < 0.05:
-            direction = "normalization-dependent"
+            direction = "scheme-sensitive significance"
         else:
             direction = "not significant"
         rows.append({

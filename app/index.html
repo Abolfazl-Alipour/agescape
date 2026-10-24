@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to findings</a>
 
   <!-- Top Navigation & Progress Rail -->
   <header class="top-nav" id="top-nav">
@@ -63,20 +64,21 @@
   </header>
 
   <!-- Main Scroll Container -->
-  <main class="page-container">
+  <main class="page-container" id="main-content">
+    <noscript><p class="graph-support">JavaScript is required to load the interactive charts and tables. The written findings, methods, and source notes remain available on this page.</p></noscript>
 
     <!-- =========================================================================
-         INTRO: Product hero — what this is and what you can do here
+         INTRO: Product hero: what this is and what you can do here
          ========================================================================= -->
     <section class="hero-intro" id="intro">
       <div class="hero-inner">
         <span class="hero-eyebrow">Interactive single-cell aging atlas</span>
         <h1 class="hero-headline">Aging is not one program. Here is the evidence.</h1>
-        <p class="hero-sub">We searched every cell type in the aging mouse atlas for genes that change with age. The signal is real but rare: only 17 of 163 cell-type units have enough mice and cells to test; 14 of the 17 show aging, all in lung and kidney, and each does so through largely its own genes. In humans, tested in 621 public donors and in a 284-donor lifespan atlas, the program does not rise as a whole. This page shows the evidence, and the exact study design that would settle the rest.</p>
+        <p class="hero-sub">We searched every cell type in the aging mouse atlas for genes that change with age. Only 17 of 163 cell-type units met the eligibility floor; 14 show aging-associated differential expression, all in lung and kidney. The catalog contains 261 direction-specific gene entries across 257 unique genes, with limited overlap among significant lists. In human analyses of 621 public donors and a 284-donor lifespan atlas, whole-cohort summaries provide no supported evidence of a rise. This page presents the evidence, its statistical limits, and designs that could improve inference.</p>
         <div class="hero-chips" aria-label="Key numbers">
-          <span class="chip"><strong>163</strong> units tested</span>
-          <span class="chip"><strong>14</strong> of 17 testable show aging</span>
-          <span class="chip"><strong>261</strong> aging genes</span>
+          <span class="chip"><strong>163</strong> units evaluated</span>
+          <span class="chip"><strong>14</strong> of 17 eligible show aging</span>
+          <span class="chip"><strong>261</strong> entries, 257 unique genes</span>
           <span class="chip"><strong>905</strong> human donors scored</span>
         </div>
         <a href="#story" class="hero-cta">Read the story</a>
@@ -92,31 +94,31 @@
         <li>
           <a href="#ch1" class="story-step-link">
             <span class="story-step-num">1</span>
-            <span class="story-step-body"><strong>Where can aging even be measured?</strong> Only 17 of 163 mouse cell-type units have enough mice and cells to test. All 17 are in lung and kidney.</span>
+            <span class="story-step-body"><strong>Where can aging even be measured?</strong> Only 17 of 163 mouse cell-type units met the eligibility floor. All 17 are in lung and kidney, but meeting the floor does not establish adequate power.</span>
           </a>
         </li>
         <li>
           <a href="#ch2" class="story-step-link">
             <span class="story-step-num">2</span>
-            <span class="story-step-body"><strong>Is the signal real?</strong> Yes. The top unit shows 55 aging genes against about 5 expected by chance, and the results match the original published atlas.</span>
+            <span class="story-step-body"><strong>Is the signal real?</strong> The top unit shows 55 aging-associated genes against a mean of 4.6 in five permutations, and its effect estimates agree with the published atlas. The small permutation check is supportive, not precise calibration.</span>
           </a>
         </li>
         <li>
           <a href="#ch3" class="story-step-link">
             <span class="story-step-num">3</span>
-            <span class="story-step-body"><strong>What is the aging program?</strong> 261 genes change with age, but most act in only one cell type. Aging looks private, not universal.</span>
+            <span class="story-step-body"><strong>What is the aging program?</strong> The catalog has 261 direction-specific entries across 257 unique genes. Significant lists overlap little, but that alone does not prove cell-type-private biology.</span>
           </a>
         </li>
         <li>
           <a href="#ch4" class="story-step-link">
             <span class="story-step-num">4</span>
-            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse: clearly yes. Naked mole-rat: flat, unproven. Human: tested in 621 donors, the program does not rise as a whole; in the 284-donor lifespan atlas, glia rise and immune cells fall.</span>
+            <span class="story-step-body"><strong>Does it hold across species?</strong> Mouse scores rise in a partly in-sample analysis. Five naked mole-rats cannot establish either change or stability. Human whole-cohort summaries show no supported rise, while cell-type estimates vary by cohort and normalization.</span>
           </a>
         </li>
         <li>
           <a href="#ch5" class="story-step-link">
             <span class="story-step-num">5</span>
-            <span class="story-step-body"><strong>What would answer the human question?</strong> A cohort with enough donors spread across ages. The power map shows how many, and the last graph shows the 284-donor lifespan cohort that already ran it.</span>
+            <span class="story-step-body"><strong>What would improve human inference?</strong> More donors with broader age coverage can reduce detectable-effect sizes, but the illustrative grid does not guarantee power or prescribe a design that works. The 284-donor lifespan atlas provides a complementary analysis.</span>
           </a>
         </li>
       </ol>
@@ -128,14 +130,14 @@
     <section class="chapter" id="ch1">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 1</span>
-        <h2 class="chapter-headline">Of 163 tissue-cell-type units, 17 are testable and 14 show aging, all in lung and kidney.</h2>
-        <p class="chapter-sub">&ldquo;Powered&rdquo; means at least 3 mice and at least 50 cells in both the young and old groups: the minimum needed to detect aging without fooling ourselves.</p>
+        <h2 class="chapter-headline">Of 163 tissue-cell-type units, 17 are eligible and 14 show aging, all in lung and kidney.</h2>
+        <p class="chapter-sub">&ldquo;Eligible&rdquo; means at least 3 mice and at least 50 cells in both the young and old groups. This analysis floor is not evidence of adequate statistical power.</p>
       </div>
 
       <!-- Main Graph G0: Atlas Eligibility Map -->
       <div class="graph-block" id="block-g0">
         <div class="graph-title-row">
-          <h3 class="graph-title">Aging signal is powered in only 2 of 16 tissues</h3>
+          <h3 class="graph-title">Only 2 of 16 tissues contain units eligible for this analysis</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g0" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
           </div>
@@ -144,13 +146,13 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g0" class="echart-container" style="height: 380px;"></div>
         </div>
-        <p class="graph-support">Of 163 tissue by cell-type units evaluated, 17 met the pre-registered mouse eligibility floor of at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast. All 17 are in lung or kidney. The other 146 units, spread across the other 14 tissues, did not meet the floor, so this atlas cannot support an aging call for them. Solid tiles: testable units. Hollow tiles: not testable, so no aging call is made.</p>
+        <p class="graph-support">Of 163 tissue by cell-type units evaluated, 17 met the pre-registered mouse eligibility floor of at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast. All 17 are in lung or kidney. The other 146 units, spread across the other 14 tissues, did not meet the floor, so this atlas cannot support an aging call for them. Meeting the floor permits analysis but does not establish adequate power. Solid tiles: eligible units. Hollow tiles: ineligible, so no aging call is made.</p>
 
         <!-- Expander: Why so few? -->
         <details class="story-expander" id="expander-ch1-why">
           <summary class="expander-summary">Why so few? The sex by age design constraint</summary>
           <div class="expander-content">
-            <p>The eligibility floor was pre-registered to prevent spurious discoveries. In the 10x Chromium droplet arm of Tabula Muris Senis, only 17 units have at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast.</p>
+            <p>The eligibility floor was pre-registered as a minimum analysis requirement, not a power calculation. In the 10x Chromium droplet arm of Tabula Muris Senis, only 17 units have at least 3 mice and at least 50 cells per group for the 3 month vs 18 month contrast.</p>
             <div id="chart-g4-mini" class="mini-chart" style="height: 180px;"></div>
             <p class="expander-note">3-month mice: 5 male, 2 female. 18-month mice: 2 male, 2 female. The 21-month group is female-only; 1-month, 24-month, and 30-month are male-only. The 3m vs 18m contrast is the only age comparison with both-sex replication in both groups.</p>
           </div>
@@ -185,7 +187,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g1" class="echart-container" style="height: 480px;"></div>
         </div>
-        <p class="graph-support">Differentially expressed genes (FDR &lt; 0.05) per unit, ranked. Rank 1: Lung, adventitial cell (55 genes); Rank 2: Kidney, proximal convoluted tubule epithelial cell (53). Three testable units show no aging genes and appear as zero bars. Tap any bar to inspect unit details.</p>
+        <p class="graph-support">Differentially expressed genes (FDR &lt; 0.05) per unit, ranked. Rank 1: Lung, adventitial cell (55 genes); Rank 2: Kidney, proximal convoluted tubule epithelial cell (53). Three eligible units show no aging genes and appear as zero bars. Tap any bar to inspect unit details.</p>
 
         <!-- Provenance Drawer G1 -->
         <div class="drawer" id="drawer-g1" hidden>
@@ -195,7 +197,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> same Tabula Muris Senis analysis; units ranked by differential-expression gene count with bootstrap intervals.</div>
+              <div><strong>Source:</strong> same Tabula Muris Senis analysis; units ranked by differential-expression gene count.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="atlas" data-sub="ranked">Download Ranked Data (CSV)</button>
@@ -211,8 +213,8 @@
     <section class="chapter" id="ch2">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 2</span>
-        <h2 class="chapter-headline">Top signal is 12x its permutation null, and pipeline agrees with original paper.</h2>
-        <p class="chapter-sub">Three sanity checks before believing any number: the signal must beat a shuffled-label null, match the published paper, and be independent of cell maturity.</p>
+        <h2 class="chapter-headline">Top signal is 12x its five-permutation mean, and pipeline agrees with the original paper.</h2>
+        <p class="chapter-sub">Three checks before interpreting the numbers: compare with shuffled labels, compare with published estimates, and examine the relationship with cell maturation.</p>
       </div>
 
       <!-- Main Graph G3: Agreement (Lead Visual) -->
@@ -228,11 +230,11 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g3-scatter" class="echart-container" style="height: 420px;"></div>
         </div>
-        <p class="graph-support">Agreement with the TMS paper's published age coefficients across the 17 powered units: 13 agree, 4 partial, 0 disagree. The strongest unit, Kidney proximal convoluted tubule, shows Spearman rho 0.866 over 13,019 shared genes, with sign concordance 0.977 among the paper's significant genes. For 15 of 17 units the comparison is between our dichotomous 3 month vs 18 month effects and the paper's continuous-age coefficients; a continuous-age bridge model was fit for 2 units, and the agreement table states which comparator applies per unit.</p>
+        <p class="graph-support">Agreement with the TMS paper's published age coefficients across the 17 eligible units: 13 agree, 4 partial, 0 disagree. The strongest agreement is in kidney proximal convoluted tubule: Spearman rho 0.866 over 13,019 shared genes, with sign concordance 0.977 among the paper's significant genes. For 15 of 17 units the comparison is between our dichotomous 3 month vs 18 month effects and the paper's continuous-age coefficients; a continuous-age bridge model was fit for 2 units, and the agreement table states which comparator applies per unit.</p>
 
         <!-- Layer 2: 17-Unit Lollipop Strip -->
         <div class="sub-chart-wrap" style="margin-top: 24px;">
-          <h3 class="sub-chart-title">Agreement status across all 17 powered units: 13 agree, 4 partial, 0 disagree</h3>
+          <h3 class="sub-chart-title">Agreement status across all 17 eligible units: 13 agree, 4 partial, 0 disagree</h3>
           <div id="chart-g3-lollipop" class="echart-container" style="height: 220px;"></div>
         </div>
 
@@ -257,7 +259,7 @@
       <!-- Supporting Graph G2: Calibration Trio -->
       <div class="graph-block" id="block-g2">
         <div class="graph-title-row">
-          <h3 class="graph-title">Calibration: 55 age-differentially expressed genes observed, 5 expected by chance, 0 differentially expressed by sex within the 3-month group</h3>
+          <h3 class="graph-title">Calibration check: 55 age-differentially expressed genes observed versus a mean of 4.6 across five permutations</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g2" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
             <button type="button" class="btn-compare" data-target="compare-g2">Compare Published</button>
@@ -267,7 +269,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g2" class="echart-container" style="height: 160px;"></div>
         </div>
-        <p class="graph-support">Observed in the top unit (lung adventitial cell), 3 month vs 18 month: 55 age-differentially expressed genes. Label-permutation null, mean: 4.6. Differential expression by sex within the 3-month group (2 female vs 5 male mice): 0 genes at FDR &lt; 0.05, so this unit's aging signal is not driven by sex.</p>
+        <p class="graph-support">Observed in the top unit (lung adventitial cell), 3 month vs 18 month: 55 age-differentially expressed genes. Five label permutations give a mean null count of 4.6, a coarse comparison rather than a precise null estimate. The within-3-month sex comparison (2 female vs 5 male mice) finds 0 genes at FDR &lt; 0.05, but this small comparison does not rule out sex effects or establish that the aging signal is independent of sex.</p>
 
         <!-- Compare Image Modal/Container for G2 -->
         <div class="compare-container" id="compare-g2" hidden>
@@ -275,16 +277,16 @@
             <span>Positive Control Trajectory (Mouse Skin)</span>
             <button type="button" class="compare-close">&times;</button>
           </div>
-          <img src="figures/m6-positive-control-skin.png" alt="Mouse skin positive control aging regression" class="compare-img">
+          <img src="figures/m6-positive-control-skin.png" alt="Mouse skin positive control aging regression" class="compare-img" loading="lazy" decoding="async">
         </div>
 
         <!-- Expander: Canonical markers notice & DPT guard -->
         <details class="story-expander" id="expander-ch2-guards">
-          <summary class="expander-summary">Statistical guards: Permutation null, sex-confound caveat, and trajectory independence</summary>
+          <summary class="expander-summary">Statistical guards: Permutation null, sex-confound caveat, and trajectory check</summary>
           <div class="expander-content">
-            <p>0. <strong>Sex by age (partial):</strong> 1-month, 24-month, and 30-month groups are male-only and the 21-month group is female-only, so sex and age cannot be separated across the full design (G4). The 3m vs 18m contrast has both sexes in both arms (5 male + 2 female vs 2 male + 2 female), the primary model adjusts for sex, and the within-3-month sex comparison finds nothing in this unit. Aging calls on this page are still conditional on the TMS design.</p>
-            <p>1. <strong>Marker Validation:</strong> <em>Spp1</em> and <em>Ccl2</em> move in the expected direction where they appear but do not reach cell-level significance individually; the aging call rests on the 12-fold permutation margin.</p>
-            <p>2. <strong>Differentiation Guard (G5):</strong> Guard check, Marrow: diffusion pseudotime vs chronological age, Spearman rho 0.016. Pseudotime here tracks cell maturation, not age, so maturation structure does not confound the age comparisons. No trajectory-based aging claim is made.</p>
+            <p>0. <strong>Sex by age (partial):</strong> 1-month, 24-month, and 30-month groups are male-only and the 21-month group is female-only, so sex and age cannot be separated across the full design (G4). The 3m vs 18m contrast has both sexes in both arms (5 male + 2 female vs 2 male + 2 female), and the primary model adjusts for sex. The within-3-month sex comparison finds no significant genes in this unit, but cannot exclude sex effects. Aging calls on this page remain conditional on the TMS design.</p>
+            <p>1. <strong>Marker Validation:</strong> <em>Spp1</em> and <em>Ccl2</em> move in the expected direction where they appear but do not reach cell-level significance individually. The five-permutation comparison is supportive evidence, not a precise calibration or a standalone basis for the aging call.</p>
+            <p>2. <strong>Differentiation Guard (G5):</strong> Guard check, Marrow: diffusion pseudotime vs chronological age, Spearman rho 0.016. This check finds no association in that analysis, but does not exclude every possible maturation effect. No trajectory-based aging claim is made.</p>
             <img src="figures/m3-dpt-vs-age.png" alt="Diffusion pseudotime versus age" loading="lazy" decoding="async" style="max-width: 100%; border-radius: 6px; margin-top: 8px;">
           </div>
         </details>
@@ -297,7 +299,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> label-permutation nulls, sex-control check, and positive controls computed for this analysis.</div>
+              <div><strong>Source:</strong> five label permutations, a limited within-young sex check, and positive controls computed for this analysis.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="calibration" data-sub="posctl">Download Calibration Data (CSV)</button>
@@ -318,7 +320,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g4-full" class="echart-container" style="height: 240px;"></div>
         </div>
-        <p class="graph-support">Hatched bars show single-sex age groups. The 3-month group has 5 male and 2 female mice; the 18-month group has 2 male and 2 female. The 1-month, 24-month, and 30-month groups are male-only and the 21-month group is female-only, so sex and age cannot be separated across the full design; the 3m vs 18m contrast is the only comparison with replication in both arms.</p>
+        <p class="graph-support">Lighter bars show single-sex age groups. The 3-month group has 5 male and 2 female mice; the 18-month group has 2 male and 2 female. The 1-month, 24-month, and 30-month groups are male-only and the 21-month group is female-only, so sex and age cannot be separated across the full design; the 3m vs 18m contrast is the only comparison with replication in both arms.</p>
 
         <!-- Provenance Drawer G4 -->
         <div class="drawer" id="drawer-g4" hidden>
@@ -344,14 +346,14 @@
     <section class="chapter" id="ch3">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 3</span>
-        <h2 class="chapter-headline">261 genes move with age across the powered units: 167 up, 94 down.</h2>
-        <p class="chapter-sub">A program is the set of genes that significantly change with age in one cell type. The matrix below shows whether aging is shared across units or private to each.</p>
+        <h2 class="chapter-headline">261 direction-specific gene entries across 257 unique genes: 167 entries up, 94 down.</h2>
+        <p class="chapter-sub">A program is the set of genes that significantly change with age in one cell type. The matrix below describes overlap among significant lists, which alone cannot establish whether the underlying biology is shared or private.</p>
       </div>
 
       <!-- Main Graph G6: Program Stacked Bars -->
       <div class="graph-block" id="block-g6">
         <div class="graph-title-row">
-          <h3 class="graph-title">Upregulated genes outnumber downregulated genes across nearly all powered units</h3>
+          <h3 class="graph-title">Upregulated entries outnumber downregulated entries across nearly all eligible units</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g6" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
           </div>
@@ -370,7 +372,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> aging program catalog across the 17 powered units (this analysis).</div>
+              <div><strong>Source:</strong> aging program catalog across the 17 eligible units (this analysis).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="program" data-sub="catalog">Download Program Catalog (CSV)</button>
@@ -382,7 +384,7 @@
       <!-- Main Graph G7: Gene × Unit Dot Matrix -->
       <div class="graph-block" id="block-g7">
         <div class="graph-title-row">
-          <h3 class="graph-title">Most aging genes are private to single cell types; 261 non-redundant genes change with age</h3>
+          <h3 class="graph-title">Significant gene lists overlap little: 261 direction-specific entries across 257 unique genes</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g7" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
           </div>
@@ -391,13 +393,13 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g7" class="echart-container" style="height: 600px;"></div>
         </div>
-        <p class="graph-support">Top 40 genes ranked by recurrence across the 17 powered units. Filled dots show program membership; color indicates direction (vermillion up, blue-grey down). Gene Ccl2 recurs in 2 of the 17 powered units; gene Spp1 recurs in 2 of the 17 powered units.</p>
+        <p class="graph-support">Top 40 genes ranked by recurrence across the 17 eligible units. Filled dots show program membership; color indicates direction (vermillion up, blue-grey down). Gene Ccl2 recurs in 2 of the 17 eligible units; gene Spp1 recurs in 2 of the 17 eligible units. Non-overlap of significant lists can reflect power and detection differences as well as biology, so it is not proof of cell-type-private aging.</p>
 
         <!-- Expander: Housekeeping guard -->
         <details class="story-expander" id="expander-ch3-housekeeping">
           <summary class="expander-summary">Housekeeping guard: Ribosomal and mitochondrial transcript inflation</summary>
           <div class="expander-content">
-            <p>Ribosomal (Rpl/Rps) and mitochondrial (mt-) genes represent a large fraction of raw single-cell sequencing reads. Across the 17 units, housekeeping genes account for only <strong>1.7%</strong> of background genes, yet still make up as much as <strong>10%</strong> of one unit's program after standard filtering (kidney fenestrated cell). All reported programs filter ribosomal and mitochondrial inflation.</p>
+            <p>Ribosomal (Rpl/Rps) and mitochondrial (mt-) genes represent a large fraction of raw single-cell sequencing reads. Across the 17 units, housekeeping genes account for <strong>1.7%</strong> of background genes and make up as much as <strong>10%</strong> of one unit's program (kidney fenestrated cell). These genes are monitored rather than filtered out of the reported programs; a high fraction is a composition caveat, not automatic evidence of an artifact.</p>
           </div>
         </details>
 
@@ -409,7 +411,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> gene by unit program membership, 312 entries across the 17 powered units (this analysis).</div>
+              <div><strong>Source:</strong> gene by unit program membership, 312 entries across the 17 eligible units (this analysis).</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="program" data-sub="genes">Download All 312 Gene Entries (CSV)</button>
@@ -425,14 +427,14 @@
     <section class="chapter" id="ch4">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 4</span>
-        <h2 class="chapter-headline">In mouse, the program rises with age. In the naked mole-rat, five animals cannot say. In humans, tested two ways, it does not rise as a whole.</h2>
-        <p class="chapter-sub">Each animal is scored by how strongly its cells express the mouse aging program. The question is simple: does that score rise as the animal gets older?</p>
+        <h2 class="chapter-headline">Mouse scores rise in a partly in-sample analysis. Five naked mole-rats are inconclusive. Human whole-cohort summaries show no supported rise.</h2>
+        <p class="chapter-sub">Each animal is scored by how strongly its cells express the mouse aging program. Scores and slopes are estimated separately within each cohort, not on a common cross-species effect scale.</p>
       </div>
 
       <!-- Main Graph G9: Signature Small Multiples -->
       <div class="graph-block" id="block-g9">
         <div class="graph-title-row">
-          <h3 class="graph-title">Mouse program rises steeply; naked mole-rat remains flat; human is severely underpowered</h3>
+          <h3 class="graph-title">Within-cohort score trajectories are descriptive; NMR and four-donor human panels are inconclusive</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g9" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
             <button type="button" class="btn-compare" data-target="compare-g9">Compare Published</button>
@@ -442,7 +444,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g9" class="echart-container" style="height: 520px;"></div>
         </div>
-        <p class="graph-support">Module score on life-stage normalized lifespan (0 to 1). Solid line: Mouse (β = 0.235, p = 0.008). Dashed line: Human (n = 4, LOW-POWERED, Tabula Sapiens skin only). Flat: NMR (β = 0.017, n = 5). The human panel is superseded by G15 (621 public-cohort donors) and G16 (284-donor lifespan atlas, Chapter 5) below.</p>
+        <p class="graph-support">Each panel shows a separate within-cohort descriptive score against life-stage normalized lifespan (0 to 1), not a common-scale cross-species effect. Mouse: β = 0.235, p = 0.008, with the score partly in-sample because the program was derived from the same mouse atlas. NMR: β = 0.017, based on skin only, 31% program coverage, five animals, and two group ages; this does not establish either a rise or stability. Human: n = 4, Tabula Sapiens skin only, below the eligibility floor. Larger human analyses appear in G15 and G16.</p>
 
         <!-- Compare Image Modal for G9 -->
         <div class="compare-container" id="compare-g9" hidden>
@@ -450,7 +452,7 @@
             <span>Published Figure: Comparative Lifespan Trajectory</span>
             <button type="button" class="compare-close">&times;</button>
           </div>
-          <img src="figures/m6-signature-figure.png" alt="Comparative lifespan regression figure" class="compare-img">
+          <img src="figures/m6-signature-figure.png" alt="Comparative lifespan regression figure" class="compare-img" loading="lazy" decoding="async">
         </div>
 
         <!-- Provenance Drawer G9 -->
@@ -461,7 +463,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> program scores per donor: 23 mouse, 4 human, 5 naked mole-rat, normalized by species lifespan.</div>
+              <div><strong>Source:</strong> program scores per donor: 23 mouse, 4 human skin donors, 5 naked mole-rats with skin-only sampling and 31% program coverage. Age is normalized by species lifespan; scores are cohort-specific and not directly comparable across panels.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="signature" data-sub="points">Download Donor Scores Data (CSV)</button>
@@ -473,7 +475,7 @@
       <!-- Main Graph G10: The Honest Interval -->
       <div class="graph-block" id="block-g10">
         <div class="graph-title-row">
-          <h3 class="graph-title">Equivalence is not statistically proven: NMR confidence interval spans beyond margin</h3>
+          <h3 class="graph-title">NMR equivalence is not established; a biological cross-species difference is not identifiable here</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g10" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
           </div>
@@ -482,7 +484,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g10" class="echart-container" style="height: 240px;"></div>
         </div>
-        <p class="graph-support">Forest plot of slopes and 95% CIs. Shaded band shows TOST equivalence margin (±0.059); NMR CI extends beyond the band (TOST p = 0.329, equivalence not established).</p>
+        <p class="graph-support">The mouse-minus-NMR interval includes zero, and the cohort-specific scores are not on a common biological scale. The exploratory TOST margin (±0.059) was derived from the observed mouse slope. NMR's interval extends beyond it (p = 0.329), so equivalence is not established.</p>
 
         <!-- Provenance Drawer G10 -->
         <div class="drawer" id="drawer-g10" hidden>
@@ -492,7 +494,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> slope and equivalence statistics from the same regressions shown in G9.</div>
+              <div><strong>Source:</strong> slope and exploratory equivalence statistics from the same regressions shown in G9. The TOST margin is post hoc and based on the observed mouse slope.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="signature" data-sub="stats">Download Statistical Summary (CSV)</button>
@@ -504,7 +506,7 @@
       <!-- Main Graph G15: Human cohort arm (M9) -->
       <div class="graph-block" id="block-g15">
         <div class="graph-title-row">
-          <h3 class="graph-title">Tested in 621 donors across 11 cohorts: the program score does not rise with age anywhere, and in the largest brain cohort it falls</h3>
+          <h3 class="graph-title">Tested in 621 donors across 11 cohorts: no supported whole-cohort rise, and one nominal MSSM decline</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g15" aria-expanded="false" title="Source & Data">Source &amp; data</button>
           </div>
@@ -513,10 +515,10 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g15" class="echart-container" style="height: 340px;"></div>
         </div>
-        <p class="graph-support">Whole-donor program score slope per year in 11 public cohorts (brain, kidney, lung), control donors only. Only MSSM DLPFC moves, downward (p = 0.028); that whole-cohort decline does not replicate in the 284-donor lifespan atlas (G16, Chapter 5), where the cortex-wide average is flat. Hollow: the interval includes zero, so no direction is claimed. Filled: the interval excludes zero.</p>
+        <p class="graph-support">Whole-donor program score slope per year in 11 public cohorts (brain, kidney, lung), control donors only. MSSM DLPFC has a nominal downward association (p = 0.028), but it is not supported after Benjamini-Hochberg correction across the 11 cohorts (q = 0.311). The other intervals include zero. In the separate 284-donor lifespan atlas (G16), the whole-cortex available-cell-type average has slope +0.00015 per year and p = 0.362; different scoring and cohort composition make this a descriptive comparison, not a direct replication test. Hollow: the interval includes zero, so no direction is claimed. Filled: the nominal interval excludes zero.</p>
 
         <div class="species-browser">
-          <h4 class="panel-subtitle">The signal hides inside cell types, and the directions conflict (score slope per year)</h4>
+          <h4 class="panel-subtitle">Exploratory cell-type estimates vary in direction (score slope per year)</h4>
           <div class="species-table-wrap">
             <table class="unit-gene-table species-table">
               <thead>
@@ -526,14 +528,14 @@
                   <th>Donors</th>
                   <th>Slope per year (x10&#8315;&#179;)</th>
                   <th>p</th>
-                  <th>Floor</th>
+                  <th>Eligibility floor</th>
                 </tr>
               </thead>
               <tbody id="g15-tbody">
                 <!-- Populated by JavaScript -->
               </tbody>
             </table>
-            <p class="table-note">Cell-type p-values are exploratory: hundreds of cell types were tested without multiple-testing correction, so read this as a ranking, not a confirmed hit list. The glial rises are the part that replicates in Chapter 5. &#8224; This neuron-down signal does not replicate in the 284-donor lifespan atlas (Chapter 5).</p>
+            <p class="table-note">Cell-type p-values are exploratory: hundreds of cell types were tested without multiple-testing correction, so read this as a ranking, not a confirmed hit list. Some glial estimates are directionally consistent with G16, but this does not by itself establish replication. &#8224; The MSSM neuron-down estimate is not directionally consistent with EN_L2_3_IT in G16; differences in scoring, cohorts, and normalization preclude declaring the discrepancy resolved.</p>
           </div>
         </div>
 
@@ -545,7 +547,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> this analysis of public CELLxGENE cohorts (MSSM, HBCC, RADC, SEA-AD, healthy kidney and lung cohorts, immune-aging BAL); control donors with recorded ages only, meaning no diagnosed disease in each cohort's metadata; 98.4% program-gene coverage in every cohort. The CSV downloads hold every plotted value.</div>
+              <div><strong>Source:</strong> this analysis of public CELLxGENE cohorts (MSSM, HBCC, RADC, SEA-AD, healthy kidney and lung cohorts, immune-aging BAL); control donors with recorded ages only, meaning no diagnosed disease in each cohort's metadata; 98.4% program-gene coverage in every cohort. The MSSM q-value is calculated across all 11 whole-cohort tests. The CSV downloads hold every plotted value.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="humancohorts" data-sub="cohorts">Download Cohort Summary (CSV)</button>
@@ -586,7 +588,7 @@
       <!-- Supporting Graph G14: AnAge Species Browser -->
       <div class="graph-block" id="block-g14">
         <div class="graph-title-row">
-          <h3 class="graph-title">Of 4,141 species with measured longevity, only 3 have public single-cell aging data this explorer can analyze</h3>
+          <h3 class="graph-title">This explorer includes single-cell aging comparisons for 3 of 4,141 species with measured longevity</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g14" aria-expanded="false" title="Source & Data">Source &amp; data</button>
           </div>
@@ -595,7 +597,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g14" class="echart-container" style="height: 360px;"></div>
         </div>
-        <p class="graph-support">Each dot is a species with recorded adult mass: body mass against maximum recorded lifespan (AnAge). Blue: mammals. Colored and labeled: the three species with public single-cell aging data this explorer can analyze. Every other dot, however long-lived, has none.</p>
+        <p class="graph-support">Each dot is a species with recorded adult mass: body mass against maximum recorded lifespan (AnAge). Blue: mammals. Colored and labeled: the three species included in this explorer's single-cell aging comparisons. Other species are not included here; their dots do not indicate whether public single-cell aging data exist elsewhere.</p>
 
         <div class="species-browser">
           <input type="search" id="species-search" class="species-search" placeholder="Search 4,141 species by name..." aria-label="Search species">
@@ -607,7 +609,7 @@
                   <th>Class</th>
                   <th>Max longevity (yrs)</th>
                   <th>Adult mass (kg)</th>
-                  <th>Single-cell aging data</th>
+                  <th>Included in this explorer</th>
                 </tr>
               </thead>
               <tbody id="species-tbody">
@@ -626,7 +628,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> AnAge Animal Ageing and Longevity Database (Build 14), 4,141 species with recorded maximum longevity. Single-cell availability flags reflect this explorer's own data only.</div>
+              <div><strong>Source:</strong> AnAge Animal Ageing and Longevity Database (Build 14), 4,141 species with recorded maximum longevity. Flags indicate inclusion in this explorer, not a comprehensive assessment of public single-cell data availability.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="anage">Download Full Species Table (CSV)</button>
@@ -638,7 +640,7 @@
       <!-- Supporting Graph G12: Savina 2022 Reproduction Curve -->
       <div class="graph-block" id="block-g12">
         <div class="graph-title-row">
-          <h3 class="graph-title">Savina et al. 2022 (Aging) reproduction: 29 DE genes at author threshold (paper reported 0)</h3>
+          <h3 class="graph-title">Savina re-analysis: converted natural-log cutoff gives 9 nominal and 6 FDR DE genes</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g12" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
             <button type="button" class="btn-compare" data-target="compare-g12">Compare Published</button>
@@ -648,7 +650,7 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g12" class="echart-container" style="height: 280px;"></div>
         </div>
-        <p class="graph-support">Savina et al. 2022 (Aging) reported zero global DE genes between young and aged naked mole-rat epidermis at their stated rule. We do not reproduce the literal zero: at p less than 0.05 and absolute log2FC at least 1.0 we find 29 genes. The most parsimonious explanation is a units ambiguity, since the paper's threshold appears to be in natural-log units, equivalent to about absolute log2FC 1.44; at cutoff 1.45 we find 9 genes (p rule) and 6 (FDR rule). The paper's broader claim, that naked mole-rat epidermis is unusually stable with age, is partially reproduced. Two caveats: Igfbp3, the paper's key gene, is absent from the GEO count file and could not be checked; our QC retained 10,251 cells vs the paper's 10,232.</p>
+        <p class="graph-support">Savina et al. 2022 (Aging) reported zero global DE genes between young and aged naked mole-rat epidermis at their stated rule. If the stated cutoff is interpreted in natural-log units and converted to absolute log2FC 1.45, we find 9 genes at nominal p &lt; 0.05 and 6 at FDR &lt; 0.05. Using the literal absolute log2FC cutoff 1.0 gives 29 nominal genes. A units mismatch is one possible explanation, not an established cause. These are cell-level Wilcoxon tests on five animals, not animal-replicated DE, and they do not establish overall age-related stability. Additional caveats: Igfbp3, the paper's key gene, is absent from the GEO count file and could not be checked; our QC retained 10,251 cells vs the paper's 10,232.</p>
 
         <!-- Compare Image Modal for G12 -->
         <div class="compare-container" id="compare-g12" hidden>
@@ -656,7 +658,7 @@
             <span>Published Figure: Savina 2022 Reproduction</span>
             <button type="button" class="compare-close">&times;</button>
           </div>
-          <img src="figures/m6-savina-reproduction.png" alt="Savina reproduction curve figure" class="compare-img">
+          <img src="figures/m6-savina-reproduction.png" alt="Savina reproduction curve figure" class="compare-img" loading="lazy" decoding="async">
         </div>
 
         <!-- Provenance Drawer G12 -->
@@ -667,7 +669,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> re-analysis of Savina et al. 2022 naked mole-rat skin counts (NCBI GEO GSE152886).</div>
+              <div><strong>Source:</strong> cell-level Wilcoxon re-analysis of Savina et al. 2022 naked mole-rat skin counts from five animals (NCBI GEO GSE152886). Counts at the converted and literal cutoffs are descriptive and are not animal-replicated differential expression.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="savina">Download Savina Curve Data (CSV)</button>
@@ -683,14 +685,14 @@
     <section class="chapter" id="ch5">
       <div class="chapter-header">
         <span class="chapter-num">Chapter 5</span>
-        <h2 class="chapter-headline">With 4 donors only huge effects show. With 284 donors across 0 to 97 years, the real pattern shows.</h2>
-        <p class="chapter-sub">Power asks one question: what size of effect could this study design actually detect? Small studies miss aging entirely. The last graph shows the design that works, already run.</p>
+        <h2 class="chapter-headline">Detectable effects depend on donor count, age spread, and biological dispersion.</h2>
+        <p class="chapter-sub">This illustrative grid shows modeled minimum detectable effects, not guaranteed power or a study design that is certain to work. The lifespan atlas then provides a complementary human analysis.</p>
       </div>
 
       <!-- Main Graph G13: Power Map (3 Small Multiples) -->
       <div class="graph-block" id="block-g13">
         <div class="graph-title-row">
-          <h3 class="graph-title">A human aging study needs at least 6 donors with ages spread over 12 years or more</h3>
+          <h3 class="graph-title">Illustrative detectable-effect grid: more donors and broader age spread can reduce detectable effect sizes</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g13" aria-expanded="false" title="Provenance & Data">Source &amp; data</button>
           </div>
@@ -734,7 +736,7 @@
             <span class="badge-verdict badge-lowpower" id="readout-verdict">LOW-POWERED</span>
           </div>
         </div>
-        <p class="graph-support">Each panel varies study design: donors (across) and age spread in years (up). Dark tiles mean only huge effects are detectable; light tiles mean small effects are detectable. Outlined tiles meet the human eligibility floor (at least 6 donors, donor-age SD at least 12 years). Tap any tile to update the readout. Mark (&#10005;) shows Tabula Sapiens skin: 4 donors, age SD 8 years, dispersion 0.1, min detectable 30-year log2FC 1.474, LOW-POWERED.</p>
+        <p class="graph-support">Each panel varies donors (across) and donor-age SD in years (up). Dark tiles indicate larger modeled minimum detectable effects; light tiles indicate smaller ones. Outlined tiles meet the human eligibility floor (at least 6 donors, donor-age SD at least 12 years), which is an analysis threshold and not evidence of adequate power. Tap any tile to update the readout. Mark (&#10005;) shows Tabula Sapiens skin: 4 donors, age SD 8 years, dispersion 0.1, modeled minimum detectable 30-year log2FC 1.474. These illustrative values are not guarantees of detection.</p>
 
         <!-- Provenance Drawer G13 -->
         <div class="drawer" id="drawer-g13" hidden>
@@ -744,7 +746,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> power simulation across 108 study designs varying donors, age spread, and dispersion (this analysis).</div>
+              <div><strong>Source:</strong> illustrative detectable-effect calculations across 108 combinations of donors, age spread, and dispersion (this analysis). The grid does not estimate design-specific power or guarantee detection.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="power-grid">Download Full Power Grid (CSV)</button>
@@ -756,7 +758,7 @@
       <!-- Main Graph G16: DLPFC Lifespan Atlas (M10) -->
       <div class="graph-block" id="block-g16">
         <div class="graph-title-row">
-          <h3 class="graph-title">With 284 donors across the full lifespan, glia and vascular cells rise, immune cells fall, and almost all neurons stay flat</h3>
+          <h3 class="graph-title">Across 284 donors, seven cell types have same-direction nominal signals in both normalization schemes</h3>
           <div class="graph-controls">
             <button type="button" class="drawer-toggle" data-drawer="drawer-g16" aria-expanded="false" title="Source & Data">Source &amp; data</button>
           </div>
@@ -765,7 +767,15 @@
         <div class="chart-canvas-wrap">
           <div id="chart-g16" class="echart-container" style="height: 640px;"></div>
         </div>
-        <p class="graph-support">284 neurologically normal control donors aged 0.2 to 97 years (no psychiatric or neurological diagnosis; common medical conditions such as cardiovascular disease are part of normal aging and not excluded), 27 dorsolateral prefrontal cortex (DLPFC) cell types, the mouse 261-gene program scored per donor per cell type from pseudobulk expression. Large purple dot: sum-count pseudobulk slope with its 95% confidence interval. Small light dot below: the same score after per-donor CPM normalization. Solid = direction holds in both normalization schemes (7 cell types); hollow = direction depends on normalization, so no direction is claimed. A row loses donors when a donor contributed zero cells of that type. Name key: EN and IN are excitatory and inhibitory neuron classes; Astro astrocyte; Oligo oligodendrocyte; OPC oligodendrocyte precursor; Micro microglia; PVM perivascular macrophage; PC pericyte; Endo endothelial; SMC smooth muscle; VLMC vascular leptomeningeal cell; Adaptive adaptive immune. The cortex-wide average is flat (p = 0.19): the program moves cell by cell, not everywhere at once.</p>
+        <p class="graph-support">In 284 control donors aged 0.2 to 97 years, seven of 27 prefrontal-cortex cell types show the same score direction under both normalization schemes. Solid dots mark these nominal signals; hollow dots claim no direction. The cortex-wide average detects no rise (p = 0.362), but averages different numbers of cell types across donors and is descriptive only.</p>
+        <details class="story-expander">
+          <summary class="expander-summary">How to read the cell-type evidence</summary>
+          <div class="expander-content">
+            <p>Large dots and intervals use sum-count pseudobulk; small dots use counts per million (CPM). Solid means same-direction nominal p &lt; 0.05 in both schemes, not uniform robustness. Six of seven also have BH q &lt; 0.05 in both. Adaptive does not (CPM q = 0.092) and is not significant in adults only (p = 0.127). Hover or tap a row for both q values and the adults-only result.</p>
+            <p>Donors with zero cells of a type are excluded from that row. Missing cell types are not biological zeros. Intervals that include zero do not establish neuronal flatness or equivalence. Control means no psychiatric or neurological diagnosis; common medical comorbidities remain.</p>
+            <p>Names: EN and IN are excitatory and inhibitory neurons; Astro astrocyte; Oligo oligodendrocyte; OPC oligodendrocyte precursor; Micro microglia; PVM perivascular macrophage; PC pericyte; Endo endothelial; SMC smooth muscle; VLMC vascular leptomeningeal cell; Adaptive adaptive immune.</p>
+          </div>
+        </details>
 
         <!-- Source Drawer G16 -->
         <div class="drawer" id="drawer-g16" hidden>
@@ -775,7 +785,7 @@
           </div>
           <div class="drawer-body">
             <div class="provenance-grid">
-              <div><strong>Source:</strong> DLPFC Lifespan Atlas (Synapse syn52396927, AD Knowledge Portal data use agreement). The atlas authors' per-donor, per-cell-type expression summaries (284 control donors, age 0.2 to 97, SD 24.0) were scored with this project's aging program and regressed on age. Program coverage here: 178 of 191 gene slots (93%). Robustness arms: CPM normalization, sex-adjusted OLS, adults-only (age at least 18), Spearman rank. Regression aggregates only; per-donor values are controlled data. The CSV download holds every plotted value.</div>
+              <div><strong>Source:</strong> DLPFC Lifespan Atlas (Synapse syn52396927, AD Knowledge Portal data use agreement). The atlas authors' per-donor, per-cell-type expression summaries (284 control donors, age 0.2 to 97, SD 24.0) were scored with this project's aging program and regressed on age. Program coverage here: 178 of 191 gene slots (93%). Robustness arms: CPM normalization, sex-adjusted OLS, adults-only (age at least 18), Spearman rank. Six of the seven same-direction nominal hits have BH q &lt; 0.05 in both raw and CPM schemes; adult-only tests are reported separately and are not a claim of universal robustness. Regression aggregates only; per-donor values are controlled data. The CSV download holds every plotted value.</div>
             </div>
             <div class="drawer-actions">
               <button type="button" class="btn-download" data-export="dlpfc">Download Cell-Type Regressions (CSV)</button>
@@ -789,8 +799,8 @@
         <div class="constructive-box">
           <div class="constructive-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></div>
           <div class="constructive-text">
-            <h3>What would settle the human question?</h3>
-            <p>At donor-age SD 12 years and dispersion 0.1, the minimum detectable 30-year log2FC first falls to 0.491 at 16 donors (values from the power simulation shown in G13). At dispersion 0.2, reaching a comparable detectable value (0.521) requires 16 donors at SD 16 years. At dispersion 0.4, detecting a 30-year log2FC of 0.556 requires 50 donors at SD 12 years. The DLPFC Lifespan Atlas in G16 is that design, already run: 284 donors, age SD 24.</p>
+            <h3>What would improve human inference?</h3>
+            <p>In the illustrative G13 grid, donor-age SD 12 years and dispersion 0.1 give a minimum detectable 30-year log2FC of 0.491 at 16 donors. At dispersion 0.2, the grid gives a comparable value of 0.521 at 16 donors and SD 16 years. At dispersion 0.4, it gives 0.556 at 50 donors and SD 12 years. These are modeled detectable effects, not guaranteed designs. The DLPFC Lifespan Atlas in G16 is a complementary dataset with 284 donors and age SD 24, not validation of the grid or a universal design.</p>
           </div>
         </div>
       </div>
@@ -851,7 +861,7 @@
           </div>
           <div class="meta-item">
             <span class="meta-label">Human Replication:</span>
-            <span class="meta-val text-warning">Human replication not tested per mouse unit; see the human chapter (<a href="#ch5" class="inline-link" onclick="document.getElementById('unit-panel').classList.remove('open')">Ch 4 to 5</a>)</span>
+            <span class="meta-val text-warning">Human replication not tested per mouse unit; see the human chapter (<a href="#ch5" class="inline-link" id="panel-human-link">Ch 4 to 5</a>)</span>
           </div>
         </div>
       </div>
@@ -913,10 +923,10 @@
               <td>245,389 cells; 238,186 after quality control</td>
             </tr>
             <tr>
-              <td>Tabula Sapiens (Lung, Kidney)</td>
+              <td>Tabula Sapiens (Skin)</td>
               <td>Figshare Release 1.0 (authoritative donor ages)</td>
               <td>Release 1.0</td>
-              <td>Lung and kidney used for the human arm</td>
+              <td>Skin used for the four-donor human panel</td>
             </tr>
             <tr>
               <td>Savina 2022 NMR Skin</td>
@@ -946,26 +956,26 @@
         </table>
 
         <h3>2. Human Data Coverage</h3>
-        <p>The human arm is tested in 11 public CELLxGENE cohorts (621 control donors) and the 284-donor DLPFC Lifespan Atlas under a data use agreement. A query of the SenNet public index found no unrestricted datasets with donor ages. The Tabula Sapiens skin panel (n = 4) is kept only as the low-powered design that motivates Chapter 5.</p>
+        <p>The human arm is tested in 11 public CELLxGENE cohorts (621 control donors) and the 284-donor DLPFC Lifespan Atlas under a data use agreement. A query of the SenNet public index did not identify unrestricted datasets with donor ages in that search. The Tabula Sapiens skin panel (n = 4) is below the eligibility floor and motivates Chapter 5. Meeting the human floor does not establish adequate power.</p>
 
         <h3>3. Ten-Step Pipeline Summary</h3>
         <ol class="methods-list">
           <li>Quality control applied per-tissue (mitochondrial fraction, min/max genes, Scrublet doublet removal).</li>
-          <li>163 tissue by cell-type units evaluated; 17 met the mouse eligibility floor (at least 3 mice and at least 50 cells in 3m and 18m, all in Lung or Kidney; 146 ineligible across the other 14 tissues); 14 of the 17 show aging.</li>
+          <li>163 tissue by cell-type units evaluated; 17 met the mouse eligibility floor (at least 3 mice and at least 50 cells in 3m and 18m, all in Lung or Kidney; 146 ineligible across the other 14 tissues); 14 of the 17 show aging. The floor permits analysis but does not establish adequate power.</li>
           <li>Pseudobulk differential expression per tissue by cell-type unit (PyDESeq2, 3m vs 18m, design ~ sex + age_group).</li>
-          <li>Permutation null calibration on the top unit (Lung adventitial cell) yields 4.6 genes vs 55 observed; the within-3-month sex comparison (5 male vs 2 female mice) finds 0 sex-linked genes.</li>
-          <li>Guard check on Marrow: diffusion pseudotime vs chronological age shows Spearman rho 0.016. Pseudotime tracks cell maturation, not age; no trajectory-based aging claim is made.</li>
+          <li>Five label permutations on the top unit (Lung adventitial cell) yield a mean of 4.6 genes vs 55 observed. The within-3-month sex comparison (5 male vs 2 female mice) finds 0 significant genes but cannot rule out sex effects.</li>
+          <li>Guard check on Marrow: diffusion pseudotime vs chronological age shows Spearman rho 0.016. This check finds no association in that analysis; no trajectory-based aging claim is made.</li>
           <li>Ensembl 1:1 reciprocal orthologs mapped for mouse-human and mouse-NMR.</li>
-          <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background.</li>
-          <li>Life-stage normalized regression and Two One-Sided Tests (TOST) evaluate NMR equivalence (not established, p = 0.329).</li>
-          <li>M9 human cohort arm: the 261-gene program scored in 621 control donors across 11 public CELLxGENE cohorts (brain, kidney, lung); the whole-donor score does not rise with age in any cohort, and cell-type directions conflict across cohorts.</li>
-          <li>M10 lifespan-atlas arm (G16): the same program scored in the DLPFC Lifespan Atlas (284 control donors aged 0.2 to 97, SD 24, under AD Knowledge Portal data use agreement) using the atlas authors' per-donor, per-cell-type expression summaries. Cortex-wide average is flat (p = 0.19); astrocytes and oligodendrocytes rise and perivascular macrophages fall at Bonferroni level in both raw-sum and CPM schemes (7 cell types concordant total); normalization-dependent cell types are drawn hollow and claimed as no direction. Regression aggregates only; per-donor values are controlled data.</li>
+          <li>Housekeeping inflation guard monitors ribosomal and mitochondrial fraction against 0.017 background; these genes are not filtered out of the reported programs.</li>
+          <li>Life-stage normalized regression and exploratory Two One-Sided Tests (TOST) evaluate NMR equivalence (not established, p = 0.329). The margin was derived from the observed mouse slope, not pre-registered.</li>
+          <li>M9 human cohort arm: 261 direction-specific entries across 257 unique genes scored in 621 control donors across 11 public CELLxGENE cohorts (brain, kidney, lung). No whole-cohort rise is supported; MSSM has nominal p = 0.028 and BH q = 0.311 across the 11 cohorts. Cell-type estimates vary in direction.</li>
+          <li>M10 lifespan-atlas arm (G16): the same ortholog program scored in the DLPFC Lifespan Atlas (284 control donors aged 0.2 to 97, SD 24, under AD Knowledge Portal data use agreement) using the atlas authors' per-donor, per-cell-type pseudobulk summaries. M9 averages per-cell scores before donor summaries, whereas M10 scores pseudobulk expression, so their coefficients are not identical or directly comparable. The whole-cortex available-cell-type average has slope +0.00015 per year and p = 0.362; absent cell types are excluded rather than set to zero, and varying composition makes the average descriptive. Seven cell types have same-direction nominal p &lt; 0.05 in raw and CPM schemes, with FDR and adult-only caveats; other rows are drawn hollow and no direction is claimed. Regression aggregates only; per-donor values are controlled data.</li>
         </ol>
 
         <h3>4. Three Load-Bearing Limitations</h3>
         <ul>
-          <li><strong>Partial sex by age confounding:</strong> In the TMS droplet arm, 1-month, 24-month, and 30-month mice are male-only and 21-month mice are female-only; only the 3-month and 18-month groups include both sexes. The primary 3m vs 18m contrast therefore has both-sex replication and adjusts for sex, but sex and age cannot be separated across the full age range.</li>
-          <li><strong>Outlier Scope:</strong> Naked mole-rat skin data represents young and aged animals (Savina et al. 2022, Aging). Multi-tissue in vivo single-cell atlases across a 30-year span do not exist.</li>
+          <li><strong>Partial sex by age confounding:</strong> In the TMS droplet arm, 1-month, 24-month, and 30-month mice are male-only and 21-month mice are female-only; only the 3-month and 18-month groups include both sexes. The primary 3m vs 18m contrast therefore has both-sex replication and adjusts for sex, but sex and age cannot be separated across the full age range, and the within-young null does not rule out sex effects.</li>
+          <li><strong>Outlier Scope:</strong> Naked mole-rat data are skin only, with 31% program coverage, five animals, and two group ages (Savina et al. 2022, Aging). This analysis does not include a multi-tissue in vivo single-cell atlas across the NMR lifespan.</li>
           <li><strong>Cross-Sectional Sampling:</strong> All datasets reflect cross-sectional donor cohorts, not longitudinal tracking of living individuals.</li>
         </ul>
 

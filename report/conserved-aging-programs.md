@@ -1,45 +1,22 @@
 # Conserved aging programs at single-cell resolution: a cross-species analysis with an honest power audit
 
-**Repository:** `agescape` — cross-species single-cell aging portfolio project (private repository)
-**Date:** 2026-10-14
-**Status:** Public release pending Reza's review. All numbers below are read directly from the
-committed files in `results/` and `figures/`; nothing in this document is untraced.
+**Repository:** `agescape` — cross-species single-cell aging portfolio project
+**Date:** 2026-10-14; revised 2026-10-24 with M9 and M10 human analyses
+**Status:** Public analysis and explorer. All numbers below are read directly from committed files in `results/` and `figures/`. The M9 and M10 addenda provide the full human methods and supersede the initial human-availability assessment.
 
 ---
 
 ## Abstract
 
-We re-analyzed the Tabula Muris Senis (TMS) droplet atlas (245,389 cells, 23 mice, 16 tissues)
-with a pre-registered pipeline — per-tissue QC, pseudobulk differential expression per
-tissue×cell-type unit (PyDESeq2, 3m vs 18m, the only sex-balanced contrast), and a calibration
-trio — and found that 17 of 163 evaluated units met the eligibility floor, all in Lung or Kidney.
-The strongest aging signals were Lung::adventitial cell (55 DE genes) and Kidney::proximal
-convoluted tubule epithelial cell (53 DE genes); the calibration trio supported the ranking
-(55 observed DE genes vs a 4.6-gene permutation null and a 0-gene sex-effect floor). Agreement
-with the TMS paper's own published age-coefficients was 13 agree / 4 partial / 0 disagree across
-the 17 powered units. We then attempted the pre-registered human replication arm and found it
-**untestable with obtainable public data**: Tabula Sapiens v1 is an adult cohort (skin donors
-33/45/59/61 y, n=4; lung donors 59/59/60/61 y) and the SenNet public index exposes no donor
-ages. Collapsing the 17-unit mouse program (167 up / 94 down genes) into a per-sample score, the
-mouse whole-body positive control rose with age (slope 0.235 [95% CI 0.067, 0.403], p=0.008,
-n=23 mice), while the naked mole-rat (NMR) score was flat over the tested span (slope 0.017
-[-0.257, 0.290], p=0.858, n=5 samples); the mouse-vs-NMR slope difference was 0.218 [-0.013,
-0.449], p=0.064, and TOST equivalence was **not** established (p=0.329 at δ=25% of the mouse
-slope). We partially reproduced Savina et al. 2022 (29 global DE genes at the paper's stated rule
-vs their reported 0). The honest headline: a calibrated mouse aging program, a human arm that
-public data cannot currently test, and a suggestive but non-conclusive longevity-outlier contrast.
+We re-analyzed the Tabula Muris Senis droplet atlas (245,389 cells, 23 mice, 16 tissues) using per-tissue quality control and donor-level pseudobulk differential expression. Seventeen of 163 tissue-by-cell-type units met the eligibility floor for the 3-month versus 18-month contrast, all in lung or kidney; 14 had at least one aging-associated gene. The largest DE counts were 55 in lung adventitial cells and 53 in kidney proximal convoluted tubule cells. Effect estimates agreed with published TMS coefficients in 13 units, partially agreed in four, and disagreed in none. The catalog contains 261 direction-specific entries across 257 unique genes. Limited overlap between significant DE lists is descriptive, not evidence that effects are private to each cell type.
+
+The derived mouse score rises with age (slope 0.235 [95% CI 0.067, 0.403], p=0.008, n=23), but this is partly an in-sample positive control. Five naked mole-rats with skin-only sampling, two group-mean ages, and 31% program coverage provide no detected rise and do not establish stability or equivalence (TOST p=0.329). The equivalence margin was derived from the observed mouse slope, not pre-registered, and cohort-specific score slopes are not a common biological cross-species scale.
+
+Human analyses now include 621 control donors across 11 public cohorts and 284 control donors in the DLPFC Lifespan Atlas. No nominally significant positive whole-cohort slope was detected. MSSM showed a nominal decline (p=0.028) that did not survive BH correction across 11 cohorts (q=0.311). In the lifespan atlas, seven cell types had same-direction nominal associations in raw-sum and CPM scoring schemes; six also had BH q<0.05 in both, but adults-only robustness was not universal. The corrected available-cell-type average detected no rise (slope +0.0001464 per year, p=0.3619). These cross-tissue, cross-dataset results do not identify a universal aging program or prove cell-type-private biology.
 
 ## Significance statement
 
-Aging-intervention targets are usually nominated from bulk or single-species data, and
-cross-species "conservation" claims are often made from cohorts that were never powered to detect
-age effects at all. This project contributes three things a target-prioritization effort can use:
-a calibrated, cell-type-resolved ranking of where aging signal is strongest in the mouse atlas;
-a documented, reproducible finding that the public human single-cell data obtainable today
-(Tabula Sapiens v1, SenNet's public index) cannot test per-cell-type human age replication; and
-a longevity-outlier contrast (mouse vs naked mole-rat) with pre-registered equivalence testing,
-reported with the statistics it earned rather than the statistics we wished for. Where a claim
-could not be tested, we say so and document exactly what data would test it.
+Cross-species aging claims need donor-level replication, explicit ortholog and scoring choices, and sensitivity to study design. This project provides a cell-type-resolved mouse analysis, explicit calibration and robustness checks, human tests in public and controlled-access cohorts, and an inconclusive naked-mole-rat comparison. Its central lesson is methodological as well as biological: eligibility is not power, non-significance is not equivalence, and limited overlap of significant lists is not proof of distinct underlying effects.
 
 ---
 
@@ -205,58 +182,17 @@ trajectory-based aging claim is made.
 
 ### 3.3 M4/M5 — The human-power reality
 
-This is a first-class result. Tabula Sapiens v1, the largest public human single-cell dataset
-with verified donor ages obtainable without restricted access, is an adult cohort: skin donors
-are 33/45/59/61 y (n=4) and lung donors 59/59/60/61 y. A donor-age contrast does not exist in
-these data. The power grid (`results/m4-human-power.csv`) quantifies why n=4 cannot be read as
-evidence either way: with 4 donors, even under the most favorable grid point (age SD 20 y,
-dispersion 0.1), the minimum detectable slope corresponds to a 30-year log2FC of 0.59; at the
-observed skin-cohort SD (8 y, dispersion 0.1) it is 1.474. All 12 grid points at n=4 are flagged
-Low-Powered; the eligibility floor (≥6 donors, SD ≥12 y) first becomes satisfiable at n=6.
-SenNet — the pre-registered primary human cohort — was queried via its public API on
-2026-10-14 (6,820 published datasets) and its public index carries no donor-age fields;
-restricted-path retrieval is documented as future work. Consequently the M5 catalog marks every
-unit's human replication UNTESTABLE, and the divergence table makes no conservation or
-divergence call. The housekeeping guard stands ready (ribo/mito fraction vs 0.017 background is
-reported per unit) but is not load-bearing because no human replication fraction is computed.
-The honest summary: **human per-cell-type age replication is untestable with the public data
-obtainable in this project**, and any published cross-species conservation claim built on
-TS-v1-scale cohorts deserves the same power scrutiny.
+The initial M4 power assessment applied to Tabula Sapiens skin: 4 donors, age SD 8 years, and an illustrative minimum detectable 30-year log2FC of 1.474 at dispersion 0.1. Six donors and age SD at least 12 years are eligibility floors, not proof of adequate power. The grid is an illustrative detectable-effect calculation under assumed dispersions, not a validated design rule.
+
+M9 subsequently scored 621 control donors in 11 public CELLxGENE cohorts, and M10 analyzed 284 control donors in the controlled-access DLPFC Lifespan Atlas. Thus the initial statement that human analysis was untestable is superseded. No nominally significant positive whole-cohort slope was detected; MSSM's nominal decline (p=0.028) had BH q=0.311 across 11 cohorts. M10 found seven same-direction nominal cell-type signals across raw-sum and CPM schemes. Six also had BH q<0.05 in both schemes, but adult-only robustness was not universal. The corrected whole-cortex summary averages only observed cell types and detects no rise (p=0.3619). See `report/m9-human-cohorts.md` and `report/m10-dlpfc-lifespan-atlas.md` for methods and limitations. Per-mouse-unit human replication remains untested because the human analyses do not provide matched lung/kidney units for all 17 mouse units.
 
 ### 3.4 M6 — The signature result, with the statistics it earned
 
-Program. The 17 powered units define 167 up- and 94 down-regulated unique genes
-(`results/m6-program-genes.csv`); 312 gene-unit entries in total across 14 units with ≥1 DE
-gene. Strict human replication on the only human skin data available (4 donors) retained 4
-genes (2 up, 2 down) — below the 10-gene floor — so the scored program is the full mouse
-program, flagged (§6).
+Program. The 17 eligible units define 167 up and 94 down direction-specific entries across 257 unique genes (`results/m6-program-genes.csv`); four genes occur in both directions. There are 312 gene-unit entries across 14 units with at least one DE gene. Overlap among significant lists is limited, but heterogeneous detection and sample sizes preclude a claim that effects are cell-type-private without direct heterogeneity tests.
 
-Scores (`results/m6-lifespan-program-scores.csv`, `results/m6-statistical-summary.csv`,
-Fig. 3). The mouse whole-body positive control passes: program score rises with
-life-stage-normalized age across 23 mice (slope 0.235 [0.067, 0.403], p=0.008). The NMR score
-is flat over the tested span (slope 0.017 [-0.257, 0.290], p=0.858, n=5 samples spanning
-1.1 y to 11.3 y — roughly the first third of the NMR lifespan). The mouse-vs-NMR slope
-difference is 0.218 [-0.013, 0.449], p=0.064: **suggestive, not conclusive** — the interval
-barely excludes zero and the test is underpowered at n=5. TOST equivalence at the
-pre-registered δ=0.0587 (25% of the mouse slope) is **not** established (p=0.329), and the
-exact sample-level permutation p=0.818. We therefore do not claim NMR equivalence; we claim
-that no NMR program rise was detected over the tested third of its lifespan, and that the
-formal equivalence test at the pre-registered margin failed to confirm flatness. The human arm
-(n=4, slope −0.213 [-1.374, 0.948], p=0.513) is shown with its wide interval and carries no
-claim. Program-gene coverage: mouse 1.00, human 0.73, NMR 0.31 — the NMR score is built on
-less than a third of the program genes and is labeled as such wherever shown.
+Scores (`results/m6-lifespan-program-scores.csv`, `results/m6-statistical-summary.csv`, Fig. 3). The mouse score rises across 23 mice (slope 0.235 [0.067, 0.403], p=0.008), but the score was derived from the same atlas and is partly in-sample. No rise is detected in NMR skin (slope 0.017 [-0.257, 0.290], p=0.858, n=5 animals at two group-mean ages spanning 1.1 to 11.3 years). The mouse-minus-NMR slope difference is 0.218 [-0.013, 0.449], p=0.064: its interval includes zero, and the differently computed cohort scores are not a common biological scale. TOST equivalence at the post-hoc δ=0.0587 (25% of the observed mouse slope) is not established (p=0.329); exact sample-level permutation p=0.818. The four-donor human skin panel is descriptive only. Program-gene coverage is mouse 1.00, human 0.73, and NMR 0.31.
 
-Savina reproduction. The paper reports zero global DE genes between young and aged NMR
-epidermis at its stated rule (p<0.05, |logFC|≥1.0 in Seurat's natural-log scale). Our curve
-(`results/m6-savina-reproduction.csv`) gives 29 genes at p<0.05 & |log2FC|≥1.0 (20 at FDR<0.05)
-and 560 genes at FDR<0.05 & |log2FC|≥0.25. The literal zero is not reproduced, but a conversion
-caveat applies: the paper's threshold of 1.0 in natural-log units corresponds to |log2FC|≈1.44,
-and at the nearest grid cutoff (1.45) our count is 9 genes (p<0.05) / 6 (FDR<0.05). Qualitatively, NMR epidermis is far more
-stable across age than mouse skin programs at matched cutoffs; the "remarkable stability" claim
-is partially reproduced, the literal zero is not, and a unit-conversion ambiguity in the paper's
-methods is the most parsimonious explanation. Two NMR caveats are printed wherever the NMR
-result appears: Igfbp3 — the paper's key gene — is absent from the GEO count file and its
-behavior is unverifiable here; and our QC yields 10,251 cells vs the paper's 10,232.
+Savina numeric-cutoff comparison. The paper reports zero global DE genes at its stated rule. Our cell-level Wilcoxon test across 10,251 cells from five animals gives 29 nominal genes at p<0.05 and |log2FC|≥1.0. Converting the paper's natural-log threshold gives |log2FC|≈1.44; at cutoff 1.45 we find 9 nominal genes and 6 at FDR<0.05. These are cell-level associations, not animal-replicated pseudobulk DE. The literal zero is not reproduced; a units difference is one possible explanation, not an established cause. Five animals cannot establish epidermal stability. Igfbp3 is absent from the GEO count file and could not be checked; our QC retained 10,251 cells versus the paper's 10,232.
 
 ---
 
@@ -271,13 +207,9 @@ behavior is unverifiable here; and our QC yields 10,251 cells vs the paper's 10,
 3. **Powered units cover 2 of 16 tissues.** All 17 eligible units are Lung or Kidney units;
    statements about "where aging signal is strongest" are statements about this atlas's design
    (cell abundance and mouse coverage), not about mouse biology as a whole.
-4. **Tabula Sapiens v1 is an adult cohort.** Skin 33–61 y (n=4), lung 59–61 y; no donor-age
-   contrast exists, so TS cannot support a human aging DE in these tissues.
-5. **SenNet inaccessibility.** The public index lacks donor ages (6,820 datasets queried
-   2026-10-14); the restricted path (Globus) was out of session budget. The human arm is
-   untestable as a result, not by choice of threshold.
-6. **The human arm of the signature figure is therefore descriptive only** (n=4, CI spanning
-   −1.37 to +0.95); no human conservation or divergence claim is made anywhere in this repo.
+4. **The G9 Tabula Sapiens panel remains low-powered.** Four adult skin donors with age SD 8 years cannot support an aging claim; this panel is retained as a design example, not as the human answer.
+5. **SenNet access remains unresolved.** The public index lacked donor ages when queried on 2026-10-14. M9 and M10 use other public and controlled-access cohorts instead.
+6. **Human cohorts are not matched per-mouse-unit replication.** M9 and M10 test transport of the mouse-derived score, not replication of each of the 17 mouse lung/kidney units. M9 and M10 also use different expression summaries, so slope magnitudes are not directly comparable across datasets.
 7. **NMR program coverage is 31%.** Less than a third of the program genes were detected in
    the NMR data; the NMR score is a partial-program score and could differ from the full-program
    score in either direction.
@@ -285,8 +217,7 @@ behavior is unverifiable here; and our QC yields 10,251 cells vs the paper's 10,
    that hinge on it could not be checked.
 9. **NMR ages are group means.** The 5 samples collapse to 1.1 y (n=3) and 11.3 y (n=2);
    within-group age variation is unknown to us.
-10. **Equivalence not established.** TOST at the pre-registered δ failed (p=0.329); the
-    interaction p=0.064 is suggestive only. "NMR is flat" is not a claim this repo makes.
+10. **Equivalence not established.** TOST at the post-hoc, observed-mouse-derived δ failed (p=0.329); the slope-difference interval includes zero. Neither NMR stability nor a biological cross-species difference is established.
 11. **Mouse skin arm is n=3, all ≥18 m.** TMS droplet contains no young skin mice; the
     epidermal mouse slope (0.452 [-3.679, 4.583], p=0.397, n=3) is uninformative, which is why
     the positive control was moved to the whole-body arm (§6).
@@ -309,6 +240,8 @@ behavior is unverifiable here; and our QC yields 10,251 cells vs the paper's 10,
     the data say nothing about late-life NMR programs.
 
 ## 5. Deviations from pre-registration (log)
+
+The M4/M5 entries below describe the initial data-availability decision on 2026-10-14. M9 and M10 subsequently tested the mouse-derived score in additional cohorts; they did not create matched replication for each mouse unit. The exploratory TOST margin was derived from the observed mouse slope and was not pre-registered.
 
 - **M4 — SenNet substitution by documented inaccessibility.** Pre-registered plan: SenNet as
   the primary human contrast. Reality: the public index has no donor ages (query documented,
@@ -346,7 +279,7 @@ aging programs of Tyshkovskiy/Gladyshev and the AP-1 inflammaging analysis of Ka
 al. were **not yet incorporated** and are named future-work comparisons, not cited supports.
 Differentiation from the existing literature: cell-type-resolved ranking rather than
 whole-tissue programs; an honest power analysis that treats "untestable" as a result; and a
-longevity-outlier contrast tested with pre-registered equivalence statistics rather than
+longevity-outlier contrast with an explicitly post-hoc equivalence margin rather than
 absence-of-significance language.
 
 ## 7. Code availability and reproduction
