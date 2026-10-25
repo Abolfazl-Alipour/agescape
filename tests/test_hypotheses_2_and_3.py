@@ -71,3 +71,27 @@ def test_h2_and_h3_figures_exist():
     fig_dir = REPO_ROOT / "figures"
     assert (fig_dir / "h2-composition-shifts-mouse-vs-human.png").exists()
     assert (fig_dir / "h3-transcriptional-noise-vs-age.png").exists()
+
+
+def test_h1_epigenetic_outputs_exist_and_accurate():
+    res_dir = REPO_ROOT / "results"
+    fig_dir = REPO_ROOT / "figures"
+    assert (res_dir / "h1-epigenetic-clock-human.csv").exists()
+    assert (res_dir / "h1-epigenetic-clock-mouse.csv").exists()
+    assert (res_dir / "h1-epigenetic-cross-species-summary.csv").exists()
+    assert (fig_dir / "h1-pan-mammalian-epigenetic-clock.png").exists()
+
+    # Verify Mouse Liver r > 0.90
+    m_df = pd.read_csv(res_dir / "h1-epigenetic-clock-mouse.csv")
+    r_mouse = float(m_df.iloc[0]["pearson_r"])
+    assert r_mouse > 0.90, f"Expected mouse r > 0.90, got {r_mouse}"
+    assert int(m_df.iloc[0]["n_samples"]) == 339
+
+    # Verify Human Liver r > 0.80 and All Tissues r > 0.75
+    h_df = pd.read_csv(res_dir / "h1-epigenetic-clock-human.csv").set_index("tissue")
+    r_h_liver = float(h_df.loc["Liver", "pearson_r"])
+    r_h_all = float(h_df.loc["All Tissues", "pearson_r"])
+    assert r_h_liver > 0.80, f"Expected human liver r > 0.80, got {r_h_liver}"
+    assert r_h_all > 0.75, f"Expected human all tissues r > 0.75, got {r_h_all}"
+    assert int(h_df.loc["All Tissues", "n_samples"]) == 661
+
