@@ -1260,36 +1260,31 @@
         axisTick: { show: false }, axisLine: { show: false }
       },
       series: [
+        ...rows.map(d => ({
+          name: `${d.short} 95% CI`,
+          type: "line",
+          data: [[d.ci[0], d.value[1]], [d.ci[1], d.value[1]]],
+          symbol: "none",
+          silent: true,
+          lineStyle: { color: HUMAN, width: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.55 },
+          tooltip: { show: false }
+        })),
         {
-          type: "custom",
-          data: rows,
-          renderItem: (params, api) => {
-            const d = rows[params.dataIndex];
-            const y = api.coord([0, d.value[1]])[1];
-            const x1 = api.coord([d.ci[0], d.value[1]])[0];
-            const x2 = api.coord([d.ci[1], d.value[1]])[0];
-            const xm = api.coord([d.value[0], d.value[1]])[0];
-            const color = HUMAN;
-            const children = [
-              { type: "line", shape: { x1, y1: y, x2, y2: y }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
-              { type: "line", shape: { x1, y1: y - 5, x2, y2: y + 5 }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
-              { type: "line", shape: { x1: x2, y1: y - 5, x2: x2, y2: y + 5 }, style: { stroke: color, lineWidth: d.significant ? 3 : 2, opacity: d.significant ? 1 : 0.45 } },
-            ];
-            children.push(d.significant
-              ? { type: "circle", shape: { cx: xm, cy: y, r: 6 }, style: { fill: color, stroke: "#0f172a", lineWidth: 1 } }
-              : { type: "circle", shape: { cx: xm, cy: y, r: 5 }, style: { fill: "rgba(0,0,0,0)", stroke: color, lineWidth: 2, opacity: 0.6 } });
-            if (d.significant) {
-              children.push({ type: "text", style: { x: xm, y: y - 14, text: `p=${d.p.toFixed(3)}`, textAlign: "center", fontSize: 10, fontWeight: 700, fill: "#0f172a" } });
-              if (dom.clientWidth >= 560) {
-                children.push({ type: "text", style: { x: x2 + 8, y: y - 6, text: "the only cohort whose interval excludes zero", textAlign: "left", fontSize: 10, fontWeight: 600, fill: "#0f172a" } });
-              }
-            }
-            return { type: "group", children };
-          }
-        },
-        {
+          name: "Cohort estimate",
           type: "scatter",
-          data: [],
+          data: rows.map(d => ({
+            ...d,
+            itemStyle: { color: d.significant ? HUMAN : "#ffffff", borderColor: HUMAN,
+              borderWidth: 2, opacity: d.significant ? 1 : 0.85 }
+          })),
+          symbolSize: (value, params) => params.data.significant ? 13 : 11,
+          label: {
+            show: true,
+            position: "top",
+            distance: 7,
+            formatter: d => d.data.significant ? `p=${d.data.p.toFixed(3)}; q=${d.data.q.toFixed(3)}` : "",
+            color: "#0f172a", fontSize: 10, fontWeight: 700
+          },
           markLine: {
             silent: true, symbol: "none",
             lineStyle: { color: "#0f172a", width: 2, type: "solid" },
