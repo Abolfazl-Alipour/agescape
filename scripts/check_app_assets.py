@@ -2,7 +2,7 @@
 """
 check_app_assets.py — verifies the static web app assets.
 In Spec v2.0, delegates directly to scripts/check_app_data.py which verifies
-all 105 anchors, file caps, and SHA-256 provenance against real data.
+all 146 anchors, file caps, and SHA-256 provenance against real data.
 """
 
 import sys

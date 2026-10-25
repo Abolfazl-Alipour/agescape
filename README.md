@@ -4,6 +4,14 @@ A reproducible single-cell analysis of aging-associated expression in mouse, hum
 
 The project tests where aging-associated differential expression can be estimated, how the mouse results compare with published coefficients, and whether a mouse-derived gene score shows similar age associations elsewhere. It does not claim a universal aging program, naked-mole-rat equivalence, or matched replication of every mouse cell-type unit in humans.
 
+## Start here
+
+- **Peer-review guide:** [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md)
+- **Current operations and deployment:** [`HANDOFF.md`](HANDOFF.md)
+- **Main scientific report:** [`report/conserved-aging-programs.md`](report/conserved-aging-programs.md)
+- **App data contract:** [`app/DATA_CONTRACT.md`](app/DATA_CONTRACT.md)
+- **Original pre-registration:** [`PLAN.md`](PLAN.md) and [`KICKOFF.md`](KICKOFF.md), retained as historical documents
+
 ## Current findings
 
 - **Mouse eligibility and DE:** 17 of 163 tissue-by-cell-type units met the analysis floor of at least 3 mice and 50 cells in both the 3-month and 18-month groups. All are in lung or kidney; 14 have at least one aging-associated gene. Lung adventitial cells have 55 DE genes and kidney proximal convoluted tubule cells have 53. The floor permits analysis; it is not proof of adequate power.
@@ -35,18 +43,22 @@ Raw and controlled-access data under `data/` are gitignored. No credentials belo
 
 ```bash
 conda create -n agescape --file environment.lock
+conda activate agescape
 python scripts/fetch_data.py
 python scripts/run_all.py
-python scripts/export_app_data.py
 python scripts/check_app_data.py
 python scripts/check_app_assets.py
 ```
 
-The M10 controlled-access pipeline requires separately authorized DLPFC inputs and an environment with `rdata`:
+`run_all.py` covers core M1-M6, notebooks 01-06, app export, and verification. M9 and M10 are separate stages with additional dependencies:
 
 ```bash
-python scripts/run_m10_pipeline.py
+python -m pip install -r requirements-supplemental.txt
+python scripts/run_m9_pipeline.py   # public CELLxGENE downloads
+python scripts/run_m10_pipeline.py  # requires authorized DLPFC inputs
 ```
+
+M10 requires separately authorized Synapse files under `data/external/dlpfc-atlas/`. Donor-level DLPFC values and credentials must remain outside Git.
 
 The app is static and must be served over HTTP:
 
@@ -68,4 +80,4 @@ Earlier project history and audit records remain in `notes/` for accountability.
 
 ## License
 
-Code: MIT. Report and figures: CC BY 4.0. Source datasets retain their own terms and access conditions.
+Code: [MIT](LICENSE). Report and figures: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source datasets retain their own terms and access conditions.

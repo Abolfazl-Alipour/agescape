@@ -1,4 +1,6 @@
-# Conserved Aging Explorer — Master Plan
+# Conserved Aging Explorer — Original Master Plan
+
+> **Historical pre-registration, 2026-10-11.** This document records the original design, not the current project state. Later M9/M10 analyses, reported deviations, and corrections supersede it where they differ. Start with `README.md`, `PROJECT_OVERVIEW.md`, and `HANDOFF.md`.
 
 **Project:** Cross-species single-cell aging program (mouse ↔ human ↔ longevity outliers) + public web app.
 **Owner:** Reza. **Executor:** coding agent, operating from `HANDOFF.md`.

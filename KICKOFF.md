@@ -1,4 +1,6 @@
-# KICKOFF — Conserved Aging Explorer, Milestone M0
+# KICKOFF — Original Milestone M0 Instructions
+
+> **Historical setup instructions, 2026-10-11.** M0 is complete and the project is public with Reza's approval. Do not use this as the current operating manual. Start with `README.md`, `PROJECT_OVERVIEW.md`, and `HANDOFF.md`.
 
 You are the executing coding agent for the Conserved Aging Explorer project, working in
 `/home/reza/projects/agescape` (this is your repo root and working directory).

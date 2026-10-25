@@ -124,7 +124,7 @@ def main():
     )
 
     runtimes["check_app_assets"] = run_step(
-        "Check app assets (Spec v2 105 anchors)",
+        "Check app assets (146 anchors)",
         [PYTHON_BIN, "scripts/check_app_assets.py"],
     )
 
