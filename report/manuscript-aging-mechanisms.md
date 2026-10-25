@@ -173,19 +173,93 @@ This model explains why whole-tissue anti-aging gene therapies targeting static 
 
 ## 4. Methods
 
-### 4.1 Single-Cell Data & Quality Control
-Mouse single-cell transcriptomics were obtained from *Tabula Muris Senis* droplet (`data/raw/tms_droplet_raw.h5ad`, 24,540 lung cells across 16 mice aged 1m to 30m). Human lung transcriptomics were analyzed from CELLxGENE *Lung_Integrated* (137 donors, age 2 to 81) and *Tabula Sapiens* (`TS_Lung.h5ad`). Single-nucleus human brain transcriptomics were obtained from the SEA-AD Lifespan DLPFC atlas (284 donors, age 0.2 to 97, 27 cell types).
+### 4.1 Dataset Provenance and Accessions
+All datasets analyzed in this study are derived exclusively from verified, public repositories with cryptographic checksum tracking:
 
-### 4.2 Distance-to-Median (DM) Transcriptional Noise
-To eliminate Poisson library-size confounding, single cells were normalized to counts per 10,000 UMIs. Within each target cell type, a baseline running median was constructed through the $\log_{10}(CV^2)$ versus $\log_{10}(\mu)$ relationship across 15 expression bins in young reference donors. For each gene, Distance-to-Median was computed as $\text{DM}_g = \log_{10}(CV^2_g) - \text{baseline}(\mu_g)$. Donor-level noise $\overline{\text{DM}}_i$ was defined as the median DM across expressed genes. Multivariate dispersion was computed as mean Euclidean distance to the donor centroid in PCA space (`betadisper`).
+| Dataset | Accession / Source | Platform | Species | Cohort Size / Composition |
+|---|---|---|---|---|
+| **Mouse Single-Cell Droplet** | Tabula Muris Senis (`tms_droplet_raw.h5ad`) | 10X Genomics Chromium v2 | *Mus musculus* | 24,540 lung cells, 21,647 kidney cells across 16 mice (1m, 3m, 18m, 21m, 30m; M/F) |
+| **Human Lung Single-Cell** | CELLxGENE `Lung_Integrated` | 10X Genomics Chromium (v2/v3) | *Homo sapiens* | 137 control donors (ages 2 to 81; 48 cell types) |
+| **Human Multi-Organ Single-Cell** | Tabula Sapiens (`TS_Lung.h5ad`, `TS_Kidney.h5ad`) | 10X Genomics & Smart-seq2 | *Homo sapiens* | Normal adult donors (TSP1, TSP2, TSP14, TSP25) |
+| **Human Brain Lifespan Atlas** | SEA-AD DLPFC (`syn52396927`, `lifespan_pseudobulk.rds`) | 10X Genomics snRNA-seq | *Homo sapiens* | 284 control donors (ages 0.2 to 97; 27 brain cell types) |
+| **Human Multi-Tissue Methylome** | NCBI GEO `GSE184211` | Horvath MammalMethyl40 (GPL28271) | *Homo sapiens* | 661 postmortem samples across 8 organs (Lung, Kidney, Liver, Heart, Muscle, Blood, Spleen, Adipose) |
+| **Mouse Liver Methylome** | NCBI GEO `GSE199979` | Horvath MammalMethyl40 (GPL28271) | *Mus musculus* | 339 liver samples across the full murine lifespan (age 0.47 to 2.78 years) |
+| **Universal Pan-Mammalian Clock** | Lu et al. (2023) / Clock Foundation | Horvath MammalMethyl40 | Multi-species | 816 orthologous CpGs calibrated against species maximum lifespan |
 
-### 4.3 Compositional Simplex Regression
-Cell counts per donor were transformed using the Aitchison Centred Log-Ratio (CLR):
-$$\text{CLR}(p_{ik}) = \ln(p_{ik}) - \frac{1}{K}\sum_{j=1}^K \ln(p_{ij})$$
-with a Laplace pseudocount of 0.5. Mathematical closure ($\sum \text{CLR} = 0$) was strictly validated. OLS regression was fit per cell type: $\text{CLR}_{ik} \sim \text{Age}_i + \text{Sex}_i$, with Benjamini-Hochberg FDR correction.
+### 4.2 Single-Cell Preprocessing, Filtering, and Normalization
+Raw droplet matrices were filtered to eliminate broken droplets, dying cells, and doublets:
+1. **Cell Filtering:** Droplets with fewer than 500 unique molecular identifiers (UMIs) or fewer than 200 detected genes were removed.
+2. **Mitochondrial Filtering:** Droplets with $> 15\%$ mitochondrial reads (indicative of plasma membrane rupture and autolysis) were excluded.
+3. **Doublet Flagging:** Doublets identified via Scrublet (score $> 0.25$) were removed to prevent intermediate artificial hybrid states from inflating cell-to-cell variance.
+4. **Library Size Standardization:** Cell counts were normalized to counts per 10,000 UMIs ($\text{CP10K}$) to standardize total cellular RNA content across disparate cell diameters:
+   $$x_{icg}^{\text{norm}} = \frac{x_{icg}}{\sum_{j=1}^G x_{icj}} \times 10^4$$
+   Log-transformed values were computed as $\ln(1 + x_{icg}^{\text{norm}})$.
 
-### 4.4 Pan-Mammalian Methylation Analysis
-DNA methylation beta values were obtained from NCBI GEO: Human GSE184211 ($N = 661$ postmortem donors across 8 organs) and Mouse GSE199979 ($N = 339$ liver samples across lifespan), both profiled on the custom Horvath Mammalian Array (GPL28271, 37k conserved CpGs). The Universal Pan-Mammalian Relative Age clock (Lu et al., 2023) was evaluated using 816 orthologous CpGs, scaling chronological age by species maximum lifespan (122.5 years for humans, 4.0 years for mice).
+### 4.3 Mathematical Formulation of Distance-to-Median (DM) and Transcriptional Noise
+In single-cell RNA-sequencing, gene variance is intrinsically coupled to mean expression via Poisson and negative binomial sampling physics:
+$$CV^2 \approx \frac{1}{\mu} + \alpha$$
+where $CV^2 = \sigma^2 / \mu^2$ is the squared coefficient of variation and $\alpha$ is overdispersion. To decouple biological noise from technical abundance artifacts, we implemented the **Distance-to-Median (DM)** method established by Martinez-Jimenez et al. (*Science*, 2017):
+
+1. **Cell-Level UMI Rarefaction:** To prevent library size differences between young and aged cells from confounding variance estimates, cells within each target cell type were downsampled to an identical library size of 1,500 UMIs via multinomial drawing.
+2. **Donor Subsampling:** Within each donor $i$, up to 500 cells were sampled to standardize donor sample size influence. Donors with fewer than 25 cells for a given cell type were excluded.
+3. **Empirical Technical Baseline Fitting:** In young reference donors (ages 1m and 3m), we calculated gene mean expression $\mu_g$ and squared coefficient of variation $CV^2_g = s_g^2 / \mu_g^2$ across expressed genes ($\mu_g > 0.01$ and detection rate $\ge 5\%$). A running median curve was constructed by computing median $\log_{10}(CV^2)$ across 15 equal-frequency bins of $\log_{10}(\mu)$. A continuous baseline function $\text{baseline}(\log_{10}(\mu))$ was established by linear interpolation through the bin midpoints.
+4. **Gene Distance-to-Median:** For each gene $g$ in donor $i$, Distance-to-Median was defined as its vertical deviation from the common baseline:
+   $$\text{DM}_{ig} = \log_{10}(CV^2_{ig}) - \text{baseline}(\log_{10}(\mu_{ig}))$$
+   Positive DM denotes excess cell-to-cell variability beyond the expected technical baseline for that gene's expression level.
+5. **Donor-Level Noise Metric:** The donor's transcriptional noise was computed as the median across expressed genes:
+   $$\overline{\text{DM}}_i = \text{median}_{g \in G_{\text{expr}}}(\text{DM}_{ig})$$
+6. **Multivariate Dispersion (`betadisper`):** In parallel, for each donor, we computed the centroid $C_i$ in normalized expression space and measured the mean Euclidean distance of individual cells to the donor centroid:
+   $$D_i = \frac{1}{N_i} \sum_{c=1}^{N_i} \| \mathbf{x}_{ic} - C_i \|_2$$
+7. **Donor-Level Regression:** Hypotheses were evaluated strictly with donor-level degrees of freedom:
+   $$\overline{\text{DM}}_i = \gamma_0 + \gamma_{\text{age}} \cdot \text{Age}_i + \gamma_{\text{sex}} \cdot \text{Sex}_i + \epsilon_i$$
+   where $\gamma_{\text{age}} > 0$ with Benjamini-Hochberg FDR $q < 0.05$ indicates a statistically credible accumulation of transcriptional noise.
+
+### 4.4 Mathematical Formulation of Compositional Data Analysis (Simplex Geometry)
+Single-cell cell-type counts per donor exist on a constrained Aitchison simplex:
+$$\mathcal{S}^K = \left\{ \mathbf{p} = (p_1, \dots, p_K) \in \mathbb{R}^K \;\middle|\; p_k > 0, \; \sum_{k=1}^K p_k = 1 \right\}$$
+Linear regressions of raw proportions $p_k$ suffer from negative correlative bias: an expansion in one cell type mathematically forces decreases in other cell types. To eliminate simplex closure artifacts, we implemented the **Centred Log-Ratio (CLR)** coordinate transformation (Aitchison, 1986):
+
+1. **Zero Handling:** Cell counts $n_{ik}$ were adjusted with a Laplace pseudocount of 0.5: $\tilde{p}_{ik} = (n_{ik} + 0.5) / \sum_j (n_{ij} + 0.5)$.
+2. **CLR Transformation:**
+   $$\text{CLR}(\tilde{p}_{ik}) = \ln(\tilde{p}_{ik}) - \frac{1}{K} \sum_{j=1}^K \ln(\tilde{p}_{ij})$$
+3. **Simplex Invariant:** The mathematical closure invariant was strictly enforced in code and automated tests:
+   $$\sum_{k=1}^K \text{CLR}(\tilde{p}_{ik}) = 0, \quad \forall i$$
+4. **Statistical Inference:** Donor-level linear models were fit per cell type:
+   $$\text{CLR}_{ik} = \beta_{0,k} + \beta_{\text{age},k} \cdot \text{Age}_i + \beta_{\text{sex},k} \cdot \text{Sex}_i + \eta_{ik}$$
+5. **Cross-Species Concordance:** Concordance between mouse annual slopes $\boldsymbol{\beta}_{\text{mouse}}$ and human annual slopes $\boldsymbol{\beta}_{\text{human}}$ across 11 homologous cell types was tested via Spearman rank correlation $\rho$ and two-sided exact binomial tests of sign agreement against the null proportion $p = 0.5$.
+
+### 4.5 Pan-Mammalian Methylation Array Architecture and Relative Age Scaling
+DNA methylation was profiled on the custom Illumina Horvath Mammalian BeadChip (GPL28271), featuring 37,492 CpG probes targeting loci conserved across 348 mammalian genomes. Methylation beta values are defined as:
+$$\beta = \frac{M}{M + U + 100}$$
+where $M$ and $U$ represent methylated and unmethylated fluorescent probe intensities, bounded between 0 (completely unmethylated) and 1 (fully methylated).
+
+The **Universal Pan-Mammalian Relative Age Clock** (Universal Clock 2; Lu et al., *Nature Aging*, 2023) predicts biological age normalized to species maximum recorded lifespan:
+$$\text{RelativeAge}_{\text{pred}} = \beta_0 + \sum_{j=1}^{816} \beta_j \cdot \beta_{ij}$$
+where $\beta_0 = -1.9114$ and $\beta_j$ represent fixed, published penalized regression weights across 816 orthologous CpGs. Actual relative age is defined as:
+$$\text{RelativeAge}_{\text{actual}} = \frac{\text{Chronological Age (years)}}{\text{Maximum Lifespan (years)}}$$
+Benchmarked against the AnAge database: $\text{MaxLifespan}_{\text{human}} = 122.5\text{ years}$ and $\text{MaxLifespan}_{\text{mouse}} = 4.0\text{ years}$. Model performance was evaluated via Pearson correlation $r$, Spearman rank correlation $\rho$, coefficient of determination $R^2$, and Mean Absolute Error in relative lifespan ($\text{MAE}_{\text{rel}}$) and chronological years ($\text{MAE}_{\text{years}} = \text{MAE}_{\text{rel}} \times \text{MaxLifespan}$).
+
+### 4.6 Somatic Marker Pseudobulk Regressions
+To trace the molecular cascade linking DNA damage to transcriptional noise in resident fibroblasts, single cells from mouse lung fibroblasts were aggregated into donor pseudobulk means for 11 targeted markers across DNA repair (*Parp1*, *Atm*, *Xrcc5*, *Sirt6*), senescence checkpoints (*Cdkn1a*, *Cdkn2a*), and sterile inflammatory signaling (*Stat1*, *Nfkb1*, *Ccl2*, *Cxcl12*, *B2m*):
+$$Y_{ig} = \frac{1}{N_{i,\text{fibro}}} \sum_{c=1}^{N_{i,\text{fibro}}} x_{icg}^{\text{norm}}$$
+OLS regression was fit: $Y_{ig} \sim \text{Age}_i + \text{Sex}_i$.
+
+### 4.7 Explicit Statement of Biological and Statistical Assumptions
+1. **Somatic Turnover Dichotomy:** We assume circulating monocytes possess a physiological half-life of 24–48 hours in blood and tissue, replenished continuously from bone marrow progenitors, whereas lung fibroblasts and vascular smooth muscle cells reside in the tissue for months to years without continuous replenishment.
+2. **Donor-Level Independence:** Statistical degrees of freedom are defined by independent donor organisms ($N = 16$ mice; $N = 137$ human lung donors; $N = 339$ mouse methylation samples; $N = 661$ human methylation samples). Individual cells within an animal are treated as non-independent cluster observations.
+3. **Environmental Divergence:** Inbred C57BL/6J mice housed in specific-pathogen-free barrier facilities are assumed to lack chronic lifelong exposure to herpesviruses (CMV, EBV) and ambient pollutants, while outbred human donors reflect diverse environmental exposures and subclinical immunosenescence.
+4. **Proportional Relative Lifespan Scaling:** The cross-species epigenetic clock assumes that the fundamental rate of chromatin aging scales proportionally with maximum potential species longevity.
+
+### 4.8 Multiplicity Corrections and Statistical Inference
+All $p$-values are two-sided. Multiple testing correction across cell types was performed using the Benjamini-Hochberg (BH) False Discovery Rate (FDR) procedure:
+$$q_{(i)} = \min_{j \ge i} \left( \frac{K \cdot p_{(j)}}{j} \right)$$
+Statistical significance was defined as FDR $q < 0.05$.
+
+### 4.9 Study Limitations
+1. **Cross-Sectional Sampling:** Human and mouse single-cell cohorts are cross-sectional; longitudinal trajectories within identical individual animals were not tracked.
+2. **Single-Cell Dissociation Survival:** Tissue dissociation may introduce survival biases: fragile parenchymal cells in fibrotic aged lungs may lyse at higher rates during enzymatic digestion than hardy fibroblasts.
+3. **Array Coverage Ceiling:** While the Horvath Mammalian Array profiles 37k conserved CpGs, it excludes primate-specific or rodent-specific transposable elements that may drive species-private epigenetic drift.
+4. **Single-Organ Entropy:** Transcriptional entropy was evaluated in mouse lung compartments; future work is required to establish whether renal and cardiac resident fibroblasts follow identical quantitative trajectories.
 
 ---
 

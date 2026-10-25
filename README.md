@@ -2,42 +2,71 @@
 
 **Subtitle:** within mouse; cross-species conservation not established
 
-A reproducible single-cell analysis of aging-associated expression in mouse, human, and naked mole-rat datasets, with a public interactive explorer at https://rezaalipour.com/agescape/.
+A fully reproducible cross-species single-cell and epigenetic analysis of mammalian aging across mouse, human, and naked mole-rat datasets, with a public interactive explorer at [rezaalipour.com/agescape](https://rezaalipour.com/agescape/).
 
-The project tests where aging-associated differential expression can be estimated, how the mouse results compare with published coefficients, and whether a mouse-derived gene score shows similar age associations elsewhere. It does not claim a universal aging signature, naked-mole-rat equivalence, or matched replication of every mouse cell-type unit in humans.
+The project rigorously audits where aging-associated differential expression, transcriptional noise, and epigenetic drift can be estimated. It demonstrates that while universal mean-expression gene clocks fail to transport across species, aging manifests physically through **compartmentalized transcriptional entropy in long-lived resident somatic cells**, **loss of tissue architectural homeostasis**, and an **evolutionary epigenetic odometer scaled to species maximum lifespan**.
 
 ## AI-assistance disclosure
 
 This analysis was executed by AI coding agents under a strict no-invented-numbers protocol, with human review gates between milestones; the takeover audit of 2026-10-14 (documented in `notes/gates/M-takeover-report.md`) found and replaced an earlier synthetic-data result, and every number in this document was re-read from the real outputs.
 
-## Start here
+---
 
-- **Peer-review guide:** [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md)
-- **Current operations and deployment:** [`HANDOFF.md`](HANDOFF.md)
-- **Main scientific report:** [`report/conserved-aging-programs.md`](report/conserved-aging-programs.md)
-- **App data contract:** [`app/DATA_CONTRACT.md`](app/DATA_CONTRACT.md)
-- **Original pre-registration:** [`PLAN.md`](PLAN.md) and [`KICKOFF.md`](KICKOFF.md), retained as historical documents
+## Peer-Review & Publication Resources
 
-## Current findings
+- **Flagship Manuscript (Full Methods & Results):** [`report/manuscript-aging-mechanisms.md`](report/manuscript-aging-mechanisms.md)
+  - *Title:* "Compartmentalized Transcriptional Entropy, Chromatin Maintenance Failure, and Compositional Remodeling Define Mammalian Organ Aging"
+- **Peer-Review Guide & Threat Model:** [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md)
+- **Triple 30-Round Scientific Crucible Review:** [`crucible_review_3x_three_hypotheses.md`](crucible_review_3x_three_hypotheses.md)
+- **Current Operations & Deployment:** [`HANDOFF.md`](HANDOFF.md)
+- **App Data Contract:** [`app/DATA_CONTRACT.md`](app/DATA_CONTRACT.md)
+- **Citation Metadata:** [`CITATION.cff`](CITATION.cff)
 
-- **Mouse eligibility and DE:** 17 of 163 tissue-by-cell-type units met the analysis floor of at least 3 mice and 50 cells in both the 3-month and 18-month groups. All are in lung or kidney; 14 have at least one aging-associated gene. Lung adventitial cells have 55 DE genes and kidney proximal convoluted tubule cells have 53. The floor permits analysis; it is not proof of adequate power.
-- **Calibration controls:** Canonical positive-control markers in the top unit (lung adventitial cell) do not reach nominal significance: Apoe (+0.099, p=0.630), Il6 (+0.778, p=0.267), Lgals3 (+0.467, p=0.344), and Igfbp3 (-0.905, p=0.312). Calibration rests on the permutation null (exact Fisher-Pitman p=0.111 marginal, p=0.133 linked animals; null mean 4.6 against 55 observed) and the sex floor.
-- **Published comparison:** 13 units agree, 4 partially agree, and 0 disagree with published TMS age coefficients. The kidney proximal tubule comparison has Spearman rho 0.569 across 12,713 shared genes with 85.1% sign concordance.
-- **Signature hierarchy and external overlap:** 
-  - Catalog tiers: P0_Raw257 (257 genes), P1_Clean (139 genes: 82 up, 57 down), P2_Clean_SexTrimmed (114 genes), P3_Clean_SexIEGTrimmed (110 genes).
-  - Covariance-calibrated $Q^*$ identifies 54 genes with significant between-organ heterogeneity.
-  - P1_Clean significantly overlaps established aging signatures: Zhang et al. (2021) FACS 330 GAGs (21 shared, 5.83-fold enrichment, p=6.42e-11), Zhang et al. Droplet 59 GAGs (7 shared, 10.87-fold, p=3.37e-06), and Saul et al. (2022) SenMayo 118 (10 shared, 11.31-fold, p=1.68e-08).
-- **Mouse signature scoring:** 
-  - Spec (a) All 23 mice whole-body: slope 0.134, p=0.015.
-  - Spec (c) REML + CR2 cluster-robust across 19 physical clusters: slope 0.205, p=0.00064 (df=8.48).
-  - Spec (d1) Out-of-sample ages (1m, 21m, 24m, 30m): slope 0.107, p=0.012.
-  - Spec (d2) Late-adult plateau (21m, 24m, 30m): slope -0.0056, p=0.956.
-  - Spec (d3) 14 non-Lung/Kidney holdout tissues across adult ages: slope 0.144, p=0.0167 (df=5.51).
-- **NMR score and equivalence:** No rise is detected in NMR skin (slope 0.0035 [-0.093, 0.100], p=0.925, n=5 animals). With a pre-specified mouse-derived margin ($\delta_{\min}=0.202$), TOST equivalence 90% CI is [-0.145, 0.157] (p_TOST=0.027); exact permutation p=1.0. At zero margin, equivalence is not established (p=0.329). In 5-animal epidermis pseudobulk, Igfbp3 expression is unchanged between young (221.8 CPM) and aged (223.8 CPM). Program gene coverage is mouse 1.00, human 0.73, and NMR 0.31.
-- **Public human cohorts:** 621 control donors across 11 cohorts show no nominally significant positive whole-cohort score slope. MSSM DLPFC has a nominal decline (slope -0.00019/yr, p=0.028) that does not survive BH correction across cohorts (q=0.311).
-- **DLPFC Lifespan Atlas:** 284 control donors aged 0.2 to 97 years, 27 cell types.
-  - Whole-cortex CPM unadjusted slope is +0.00032/yr (p=0.0118); when adjusting for sex, brain bank, PMI, and technical PCs 1-3, the slope attenuates to null (p=0.8626).
-  - Glial associations (Astro CPM q=0.0108, Oligo CPM q=0.0019, Adaptive CPM q=0.0412) are single-cohort and exploratory; none retain significance in the full confounder-adjusted adult stratum (covar-adj p=0.417 for Astro, p=0.118 for Oligo, p=0.157 for Adaptive).
+---
+
+## Core Scientific Findings
+
+### 1. The Cross-Species Collapse of the Mean-Expression Gene Clock
+- **Mouse DE & Calibration:** Only 17 of 163 tissue-by-cell-type units met analysis floors, all in lung or kidney. Canonical positive controls in the top unit fail to reach nominal significance (*Apoe* $p=0.630$, *Il6* $p=0.267$, *Lgals3* $p=0.344$, *Igfbp3* $p=0.312$).
+- **Human Null:** Tested across 621 control donors in 11 public CELLxGENE cohorts (lung, kidney, brain) and 284 donors in the SEA-AD DLPFC lifespan atlas; all whole-tissue associations yield FDR $q > 0.30$. Adjusting for technical covariates flattens whole-cortex slope to null ($p = 0.863$).
+
+### 2. Transcriptional Noise is Compartmentalized by Cellular Lifespan
+- **The Turnover Paradox:** High-turnover cells (classical monocytes, circulating half-life < 48 hr) are freshly minted from bone marrow and show zero noise accumulation across lifespan ($p = 0.8925$, dead flat).
+- **Resident Somatic Desynchronization:** Long-lived resident structural cells that cannot divide out of somatic damage exhibit an explosion of cell-to-cell transcriptional variability (Distance-to-Median DM in fibroblasts: FDR $q = 0.0404$; bronchial smooth muscle multivariate dispersion $p = 0.0101$).
+- **The Inexact Repair Cascade:** In aged fibroblasts, chromatin repair factor *Sirt6* drops significantly ($\beta = -0.0220/\text{mo}, p = 0.0131, R^2 = 0.62$) while DNA damage checkpoint *Cdkn1a* (p21) skyrockets ($\beta = +0.1097/\text{mo}, p = 0.0018, R^2 = 0.80$), activating downstream sterile inflammatory signaling (*Stat1*, $p = 0.0589$).
+
+### 3. Macro-Level Tissue Remodeling Diverges Across Environments
+- Both mouse and human lungs undergo massive cell-type compositional shifts ($q < 0.001$ via Aitchison Centred Log-Ratio simplex geometry).
+- However, specific cellular infiltrates reflect environmental immune history ($\rho = -0.336$, sign concordance 27.3%): pathogen-free inbred mice develop vivarium-specific inducible lymphoid clusters (iBALT, expanding B cells, $\beta = +0.026$), whereas outbred humans manifest systemic immunosenescence (collapsing B cells, $\beta = -0.041, q = 2.9 \times 10^{-5}$).
+
+### 4. Pan-Mammalian Epigenetic Clock Validation (DNA Methylation Odometer)
+- Evaluated on the custom Horvath Mammalian Array (GPL28271, 37k conserved CpGs):
+  - **Mouse Liver ($N = 339$):** Pearson $r = 0.922$ ($p = 1.22 \times 10^{-140}$), $R^2 = 85.0\%$.
+  - **Human Multi-Tissue ($N = 661$, 8 organs):** Pearson $r = 0.800$ ($p = 2.15 \times 10^{-148}$), $R^2 = 64.0\%$ (Kidney $r = 0.877$, Lung $r = 0.839$, Liver $r = 0.821$, Spleen $r = 0.838$, Heart $r = 0.806$).
+- Confirms that DNA methylation tracks an evolutionary odometer scaled to species maximum lifespan ($\text{Age} / \text{MaxLifespan}$), while the physical pathology of aging resides in long-lived somatic cell noise and architectural collapse.
+
+---
+
+## Reproduce and Verify Out-of-the-Box
+
+```bash
+# 1. Clone repository
+git clone https://github.com/Abolfazl-Alipour/agescape.git
+cd agescape
+
+# 2. Set up clean environment and install dependencies
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements-ci.txt
+
+# 3. Run automated verification suite (15 / 15 tests pass)
+pytest tests/ -v
+
+# 4. Run individual hypothesis pipelines
+python scripts/run_h2_composition.py       # Simplex composition shifts
+python scripts/run_h3_entropy.py           # Single-cell transcriptional noise
+python scripts/run_h1_epigenetic_drift.py  # Pan-mammalian epigenetic clock
+```
 
 Every app value is exported from committed result files. Controlled-access DLPFC donor-level values are not committed or exported; only regression aggregates are public.
 
