@@ -1,0 +1,18 @@
+{
+  "dataset_name": "Horvath Mammalian Methylation Consortium (Mammal320k)",
+  "geo_accession": "GSE223748",
+  "platform": "GPL28271 (Illumina Infinium Mammalian Methylation BeadChip)",
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE223nnn/GSE223748/matrix/GSE223748_series_matrix.txt.gz",
+  "species_included": [
+    "Mus musculus",
+    "Homo sapiens"
+  ],
+  "tissues": [
+    "Lung",
+    "Kidney",
+    "Cortex",
+    "Blood"
+  ],
+  "metric": "Shannon Epigenetic Entropy (bits/CpG)",
+  "status": "Protocol Specified; Ready for automated download upon compute allocation."
+}
