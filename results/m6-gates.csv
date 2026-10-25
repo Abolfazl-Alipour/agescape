@@ -1,7 +1,8 @@
 gate,value,ci_low,ci_high,pass
-mouse_positive_control,0.23495923946097935,0.06726555386102578,0.4026529250609329,True
+mouse_positive_control,0.13437233686476727,0.0292587379812579,0.23948593574827665,True
 coverage_mouse,1.0,,,
-coverage_human,0.7318007662835249,,,
-coverage_nmr,0.31413612565445026,,,
-tost_delta,0.05873980986524484,,,
-nmr_perm_p,0.8181818181818182,,,
+coverage_human,0.8489208633093526,,,
+coverage_nmr,0.6618705035971223,,,
+tost_delta_min,0.202,,,
+tost_pvalue,0.027478811725294348,,,
+nmr_exact_perm_p,1.0,,,

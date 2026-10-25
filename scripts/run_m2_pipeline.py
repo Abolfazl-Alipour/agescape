@@ -1,19 +1,15 @@
-#!/usr/bin/env python3
 """
-run_m2_pipeline.py — Executes Milestone M2:
-1. Unit eligibility (≥3 mice & ≥50 cells per group in 3m vs 18m).
-2. Pseudobulk aggregation per (mouse × tissue × cell_type).
-3. PyDESeq2 differential expression (~ age_group + sex).
-4. Calibration trio: (a) label-permutation null, (b) positive controls, (c) sex floor within 3m.
-5. Aging-signal ranking with mouse-level bootstrap 95% CIs.
-6. Cell-level Wilcoxon comparison.
-7. Compositional analysis (fraction vs age, mouse unit).
-8. Sensitivity runs: extended bins and 18m vs 24m male-only.
-9. Orientation assertion cell.
-10. Generates all 5 required figures and golden results tables.
+run_m2_pipeline.py — Executes Milestone M2
 """
 
 import os
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
+os.environ.setdefault("NUMBA_NUM_THREADS", "1")
+os.environ.setdefault("PYTHONHASHSEED", "42")
 import sys
 import time
 import warnings
@@ -144,8 +140,11 @@ def run_pydeseq2_de(counts_df, metadata_df, design_formula="~ sex + age_group", 
 # Aggregation per (mouse × tissue × cell_type)
 de_results_by_unit = {}
 ranking_path = RESULTS_DIR / "m2-aging-signal-ranked.csv"
+use_cache = "--use-cache" in sys.argv
 
-# Pre-load cached results if available
+# Pre-load cached results if available and requested
+if use_cache:
+    print("Using cached M2 results where available (--use-cache)...", flush=True)
 for idx, row in eligible_units.iterrows():
     unit_name = row["unit"]
     safe_unit_name = unit_name.replace("::", "__").replace(" ", "_").replace(",", "").replace("-", "_")
@@ -153,7 +152,7 @@ for idx, row in eligible_units.iterrows():
     if unit_cache_file.exists():
         de_results_by_unit[unit_name] = pd.read_csv(unit_cache_file, index_col=0)
 
-if ranking_path.exists():
+if use_cache and ranking_path.exists():
     print(f"Loading pre-computed ranking table from {ranking_path}...", flush=True)
     ranking_df = pd.read_csv(ranking_path)
 else:
@@ -197,7 +196,7 @@ else:
         
         try:
             t_start = time.time()
-            if unit_cache_file.exists():
+            if use_cache and unit_cache_file.exists():
                 print(f"  Unit '{unit_name}': Loading from existing checkpoint {unit_cache_file.name}", flush=True)
                 res_df = pd.read_csv(unit_cache_file, index_col=0)
                 de_results_by_unit[unit_name] = res_df
@@ -616,15 +615,6 @@ print(f"Saved {power_fig_path}")
 # Step 10: Update methods.md
 # ---------------------------------------------------------
 print("\n--- Step 10: Updating notes/methods.md ---", flush=True)
-with open(NOTES_DIR / "methods.md", "a") as f:
-    f.write("\n## 3. Milestone M2 Differential Expression & Ranking Parameters\n")
-    f.write("- **Primary Design:** Pseudobulk per (mouse × tissue × cell_ontology_class) raw integer counts, PyDESeq2 with design `~ sex + age_group` on 3m vs 18m contrast.\n")
-    f.write("- **Significance Criteria:** BH-FDR < 0.05 and |log2FC| >= 0.25.\n")
-    f.write("- **Log2FC Standard:** Old vs Young (positive = upregulated with age). Orientation programmatically asserted on known biomarkers (Cdkn2a, Spp1).\n")
-    f.write(f"- **Calibration Trio Results:** Top aging unit ({top_unit_name}): Observed DE = {ranking_df.iloc[0]['n_de_genes']}, Shuffled Age Permutation Null = {mean_perm_de:.1f} DE genes, Sex-Effect Floor (3m) = {sex_floor_de} DE genes.\n")
-    f.write(f"- **Pseudobulk vs Wilcoxon Consistency:** Spearman correlation rho = {spearman_corr:.3f} across eligible cell types.\n")
-    f.write(f"- **Sensitivity Tests:** Extended bins (young=1m+3m, old=18m+21m+24m+30m) = {n_de_ext} DE genes; male-only (18m vs 24m) = {n_de_male} DE genes.\n")
-
-print(f"Updated {NOTES_DIR / 'methods.md'}")
+# Preserved curated notes/methods.md; do not overwrite.
 
 print("\n=== M2 PIPELINE FINISHED SUCCESSFULLY ===", flush=True)

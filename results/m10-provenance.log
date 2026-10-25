@@ -1,61 +1,10 @@
 [m10] source: syn62064518/lifespan_pseudobulk.rds md5 verified aef628e7bc2e5134b790d98c6f57ec48
 [m10] DUA: AD Knowledge Portal controlled access; aggregates only committed
-[m10] program: 167 up / 94 down mouse genes -> 121 up / 70 down human orthologs
-[m10] human-space direction conflicts retained in unequal up/down means: ['CKB', 'ID2', 'STMN1']
-[m10] scoring recipe: donor-pseudobulk up_mean(log1p) - dn_mean(log1p); robustness arm log1p(CPM); input summaries differ from M9
-[m10] cohort: 284 control donors, age 0.2-97.0 (SD 24.0), sexes: {'Male': np.int64(197), 'Female': np.int64(87)}
+[m10] program: 166 up / 91 down mouse genes -> 120 up / 68 down human orthologs
+[m10] scoring recipe: primary CPM-normalized log1p(CPM); robustness raw counts
+[m10] cohort: 284 control donors, age 0.2-97.0 (SD 24.0)
 [m10] cell types: 27
-[m10] [Adaptive] excluded 42 donors with zero cells of this type
-[m10] [Adaptive] slope -0.00077/yr CI [-0.00125,-0.00029] p=0.001929 n=242 (cpm p=0.04752, sex-adj p=0.001707, adult p=0.1268)
-[m10] [Astro] slope +0.00241/yr CI [+0.00160,+0.00322] p=1.274e-08 n=284 (cpm p=0.002836, sex-adj p=1.261e-08, adult p=0.0003112)
-[m10] [EN_L2_3_IT] excluded 3 donors with zero cells of this type
-[m10] [EN_L2_3_IT] slope +0.00087/yr CI [+0.00038,+0.00136] p=0.000574 n=281 (cpm p=0.3601, sex-adj p=0.0004378, adult p=0.6875)
-[m10] [EN_L3_5_IT_1] excluded 11 donors with zero cells of this type
-[m10] [EN_L3_5_IT_1] slope +0.00014/yr CI [-0.00052,+0.00079] p=0.6793 n=273 (cpm p=0.6308, sex-adj p=0.774, adult p=0.2089)
-[m10] [EN_L3_5_IT_2] excluded 9 donors with zero cells of this type
-[m10] [EN_L3_5_IT_2] slope +0.00080/yr CI [+0.00004,+0.00155] p=0.03858 n=275 (cpm p=0.5892, sex-adj p=0.0308, adult p=0.274)
-[m10] [EN_L3_5_IT_3] excluded 10 donors with zero cells of this type
-[m10] [EN_L3_5_IT_3] slope -0.00062/yr CI [-0.00127,+0.00004] p=0.06422 n=274 (cpm p=8.442e-05, sex-adj p=0.06929, adult p=0.1116)
-[m10] [EN_L5_6_NP] excluded 23 donors with zero cells of this type
-[m10] [EN_L5_6_NP] slope -0.00013/yr CI [-0.00078,+0.00053] p=0.7 n=261 (cpm p=0.666, sex-adj p=0.7214, adult p=0.01643)
-[m10] [EN_L5_ET] excluded 153 donors with zero cells of this type
-[m10] [EN_L5_ET] slope +0.00067/yr CI [-0.00006,+0.00141] p=0.07335 n=131 (cpm p=0.03023, sex-adj p=0.08235, adult p=0.4042)
-[m10] [EN_L6B] excluded 27 donors with zero cells of this type
-[m10] [EN_L6B] slope +0.00021/yr CI [-0.00045,+0.00086] p=0.5386 n=257 (cpm p=0.1741, sex-adj p=0.5245, adult p=0.6986)
-[m10] [EN_L6_CT] excluded 16 donors with zero cells of this type
-[m10] [EN_L6_CT] slope +0.00017/yr CI [-0.00043,+0.00078] p=0.5727 n=268 (cpm p=0.8975, sex-adj p=0.4982, adult p=0.812)
-[m10] [EN_L6_IT_1] excluded 21 donors with zero cells of this type
-[m10] [EN_L6_IT_1] slope +0.00068/yr CI [-0.00010,+0.00146] p=0.08921 n=263 (cpm p=0.8162, sex-adj p=0.08498, adult p=0.421)
-[m10] [EN_L6_IT_2] excluded 44 donors with zero cells of this type
-[m10] [EN_L6_IT_2] slope +0.00037/yr CI [-0.00052,+0.00126] p=0.4145 n=240 (cpm p=0.9475, sex-adj p=0.4545, adult p=0.5166)
-[m10] [Endo] excluded 4 donors with zero cells of this type
-[m10] [Endo] slope -0.00196/yr CI [-0.00288,-0.00104] p=3.911e-05 n=280 (cpm p=0.0002346, sex-adj p=1.526e-05, adult p=0.0004255)
-[m10] [IN_ADARB2] excluded 10 donors with zero cells of this type
-[m10] [IN_ADARB2] slope +0.00033/yr CI [-0.00016,+0.00081] p=0.1856 n=274 (cpm p=7.593e-05, sex-adj p=0.1399, adult p=0.3702)
-[m10] [IN_LAMP5_LHX6] excluded 9 donors with zero cells of this type
-[m10] [IN_LAMP5_LHX6] slope -0.00089/yr CI [-0.00131,-0.00047] p=3.675e-05 n=275 (cpm p=0.01419, sex-adj p=6.412e-05, adult p=0.0117)
-[m10] [IN_LAMP5_RELN] excluded 4 donors with zero cells of this type
-[m10] [IN_LAMP5_RELN] slope -0.00011/yr CI [-0.00057,+0.00035] p=0.6455 n=280 (cpm p=0.1353, sex-adj p=0.6116, adult p=0.8273)
-[m10] [IN_PVALB] excluded 5 donors with zero cells of this type
-[m10] [IN_PVALB] slope -0.00014/yr CI [-0.00063,+0.00034] p=0.5659 n=279 (cpm p=0.304, sex-adj p=0.5326, adult p=0.3264)
-[m10] [IN_PVALB_CHC] excluded 11 donors with zero cells of this type
-[m10] [IN_PVALB_CHC] slope +0.00008/yr CI [-0.00055,+0.00071] p=0.8104 n=273 (cpm p=0.1048, sex-adj p=0.7105, adult p=0.00651)
-[m10] [IN_SST] excluded 4 donors with zero cells of this type
-[m10] [IN_SST] slope -0.00062/yr CI [-0.00116,-0.00008] p=0.02506 n=280 (cpm p=0.01417, sex-adj p=0.0254, adult p=0.2916)
-[m10] [IN_VIP] excluded 1 donors with zero cells of this type
-[m10] [IN_VIP] slope +0.00064/yr CI [+0.00022,+0.00105] p=0.002636 n=283 (cpm p=0.0002848, sex-adj p=0.002319, adult p=0.03747)
-[m10] [Micro] excluded 1 donors with zero cells of this type
-[m10] [Micro] slope -0.00023/yr CI [-0.00114,+0.00067] p=0.6156 n=283 (cpm p=4.596e-06, sex-adj p=0.6561, adult p=0.2275)
-[m10] [OPC] slope +0.00054/yr CI [-0.00008,+0.00116] p=0.08946 n=284 (cpm p=0.0001221, sex-adj p=0.07791, adult p=0.006258)
-[m10] [Oligo] excluded 7 donors with zero cells of this type
-[m10] [Oligo] slope +0.00177/yr CI [+0.00118,+0.00236] p=9.172e-09 n=277 (cpm p=0.0006458, sex-adj p=2.973e-09, adult p=8.843e-05)
-[m10] [PC] excluded 3 donors with zero cells of this type
-[m10] [PC] slope +0.00110/yr CI [+0.00048,+0.00172] p=0.0005853 n=281 (cpm p=1.233e-07, sex-adj p=0.0008673, adult p=0.006564)
-[m10] [PVM] excluded 25 donors with zero cells of this type
-[m10] [PVM] slope -0.00224/yr CI [-0.00327,-0.00120] p=3.029e-05 n=259 (cpm p=0.003211, sex-adj p=3.38e-05, adult p=0.009826)
-[m10] [SMC] excluded 46 donors with zero cells of this type
-[m10] [SMC] slope -0.00062/yr CI [-0.00115,-0.00009] p=0.02265 n=238 (cpm p=0.4362, sex-adj p=0.0195, adult p=0.1336)
-[m10] [VLMC] excluded 5 donors with zero cells of this type
-[m10] [VLMC] slope -0.00023/yr CI [-0.00085,+0.00040] p=0.4766 n=279 (cpm p=0.2147, sex-adj p=0.463, adult p=0.2966)
-[m10] whole cortex: 8 to 27 observed cell types averaged per donor
-[m10] WHOLE CORTEX slope +0.00015/yr CI [-0.00017,+0.00046] p=0.3619 (sex-adj p=0.3473, rho +0.039)
+[m10] Saved wide results/m10-confounder-audit.csv (27 rows, 1 per cell type)
+[m10] Saved results/m10-celltype-regressions.csv
+[m10] Saved results/m10-cohort-summary.csv
+[m10] Saved figures/m10-dlpfc-celltype-forest.png

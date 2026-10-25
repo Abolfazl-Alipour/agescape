@@ -43,6 +43,9 @@ def main():
         target_path = raw_dir / filename
 
         if not target_path.exists():
+            if meta.get("optional"):
+                print(f"{filename:<35} {'-':<12} {'SKIP':<10} optional, not present")
+                continue
             print(f"{filename:<35} {'MISSING':<12} {'FAIL':<10} File not found")
             all_passed = False
             continue
@@ -51,7 +54,11 @@ def main():
         actual_sha = compute_sha256(target_path)
         size_mb = f"{actual_size / (1024 * 1024):.1f}"
 
-        if actual_sha.lower() == expected_sha.lower():
+        if actual_size != expected_size:
+            status = "FAIL"
+            match_str = f"SIZE MISMATCH (expected {expected_size}, got {actual_size})"
+            all_passed = False
+        elif actual_sha.lower() == expected_sha.lower():
             status = "PASS"
             match_str = f"OK ({actual_sha[:8]}...)"
         else:

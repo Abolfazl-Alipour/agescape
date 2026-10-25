@@ -1,0 +1,8 @@
+{
+  "filename": "anage_dataset.zip",
+  "url": "https://genomics.senescence.info/species/dataset.zip",
+  "size_bytes": 169150,
+  "downloaded": "2026-10-14T03:20:00Z",
+  "notes": "Official AnAge zipped TSV export; build date in release.html; used for species max-lifespan normalization.",
+  "sha256": "e3ddb66e32e973a79932859ba53013e8f60d957c6ec01c6eb573e3ea3018d630"
+}

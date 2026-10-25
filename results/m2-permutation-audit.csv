@@ -1,0 +1,25 @@
+perm_id,type,unit,young_mice,old_mice,n_de_genes,is_observed,strict_6
+1,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-9', '18-M-52']","['18-F-50', '18-F-51', '3-M-8']",2,False,
+2,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-8', '18-M-52']","['18-F-50', '18-F-51', '3-M-9']",4,False,
+3,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-8', '3-M-9']","['18-F-50', '18-F-51', '18-M-52']",50,True,
+4,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-9', '18-M-52']","['3-F-57', '18-F-51', '3-M-8']",1,False,
+5,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-8', '18-M-52']","['3-F-57', '18-F-51', '3-M-9']",0,False,
+6,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-8', '3-M-9']","['3-F-57', '18-F-51', '18-M-52']",1,False,
+7,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-9', '18-M-52']","['3-F-57', '18-F-50', '3-M-8']",0,False,
+8,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-8', '18-M-52']","['3-F-57', '18-F-50', '3-M-9']",0,False,
+9,exact_kidney_9,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-8', '3-M-9']","['3-F-57', '18-F-50', '18-M-52']",3,False,
+1,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-8', '3-M-9']","['18-F-50', '18-F-51', '18-M-52']",50,True,True
+2,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-9', '18-M-52']","['18-F-50', '18-F-51', '3-M-8']",2,False,True
+3,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-8', '3-M-9']","['18-F-50', '18-F-51', '18-M-52']",50,True,False
+4,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '3-M-9', '18-M-52']","['18-F-50', '18-F-51', '3-M-8']",2,False,False
+5,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-8', '3-M-9']","['3-F-57', '18-F-51', '18-M-52']",1,False,True
+6,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-9', '18-M-52']","['3-F-57', '18-F-51', '3-M-8']",1,False,True
+7,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-8', '3-M-9']","['3-F-57', '18-F-51', '18-M-52']",1,False,False
+8,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '3-M-9', '18-M-52']","['3-F-57', '18-F-51', '3-M-8']",1,False,False
+9,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-8', '3-M-9']","['3-F-57', '18-F-50', '18-M-52']",3,False,True
+10,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-9', '18-M-52']","['3-F-57', '18-F-50', '3-M-8']",0,False,True
+11,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-8', '3-M-9']","['3-F-57', '18-F-50', '18-M-52']",3,False,False
+12,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-51', '3-M-9', '18-M-52']","['3-F-57', '18-F-50', '3-M-8']",0,False,False
+13,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '18-F-50', '3-M-9']","['18-F-51', '3-M-8', '18-M-52']",1,False,False
+14,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['3-F-57', '18-F-51', '3-M-9']","['18-F-50', '3-M-8', '18-M-52']",0,False,False
+15,global_linked_15,Kidney::kidney proximal convoluted tubule epithelial cell,"['18-F-50', '18-F-51', '3-M-9']","['3-F-57', '3-M-8', '18-M-52']",4,False,False

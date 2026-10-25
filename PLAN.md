@@ -40,12 +40,12 @@ gated by Reza's sign-off. Nothing public without his explicit go-ahead.
 
 | File | Size | SHA-256 | Status | Content (verified by reading HDF5 structure) |
 |---|---|---|---|---|
-| `/home/reza/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad` | 3.8 GB | `86e45e88f9c475253792f1bbcdf5851a5be0ef35da72fced607ed261aebc099d` | **Intact** | Tabula Muris Senis (TMS) **droplet** raw counts: 245,389 cells × 20,138 genes, 16 tissues, ~124 cell types, 20 mice, 6 age groups. No PCA/UMAP precomputed — the pipeline computes them. |
-| `/home/reza/projects/aging_hypothalamus/data/tms_brain.h5ad` | 304 MB | `31ee7ffe9fd11fd128925c2dae862399f5c54f27aef9c026dbeaa077ea143339` | **Intact** | TMS **FACS** `Brain_Non-Myeloid` subset: 7,249 cells × 22,966 genes, ages 3m/18m/24m, 14 mice, 17 cell types. |
-| `/home/reza/projects/dry_lab/data/brain_aging.h5ad` | 304 MB | `31ee7ffe…ea143339` | **Intact** | Byte-identical duplicate of the file above. Backup only. |
-| `/home/reza/projects/aging_hypothalamus/data/23872787{,.1}` | 0 B | — | **Dead** | Empty failed downloads. Executor deletes them in M0 (they are outside this repo; record the deletion in the M0 report). |
+| `<USER_HOME>/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad` | 3.8 GB | `86e45e88f9c475253792f1bbcdf5851a5be0ef35da72fced607ed261aebc099d` | **Intact** | Tabula Muris Senis (TMS) **droplet** raw counts: 245,389 cells × 20,138 genes, 16 tissues, ~124 cell types, 20 mice, 6 age groups. No PCA/UMAP precomputed — the pipeline computes them. |
+| `<USER_HOME>/projects/aging_hypothalamus/data/tms_brain.h5ad` | 304 MB | `31ee7ffe9fd11fd128925c2dae862399f5c54f27aef9c026dbeaa077ea143339` | **Intact** | TMS **FACS** `Brain_Non-Myeloid` subset: 7,249 cells × 22,966 genes, ages 3m/18m/24m, 14 mice, 17 cell types. |
+| `<USER_HOME>/projects/dry_lab/data/brain_aging.h5ad` | 304 MB | `31ee7ffe…ea143339` | **Intact** | Byte-identical duplicate of the file above. Backup only. |
+| `<USER_HOME>/projects/aging_hypothalamus/data/23872787{,.1}` | 0 B | — | **Dead** | Empty failed downloads. Executor deletes them in M0 (they are outside this repo; record the deletion in the M0 report). |
 
-**Machine:** 49 GB RAM, 12 cores, 247 GB free disk, conda at `/home/reza/miniconda3`, internet
+**Machine:** 49 GB RAM, 12 cores, 247 GB free disk, conda at `<USER_HOME>/miniconda3`, internet
 reachable (cellxgene.cziscience.com confirmed 200 OK). OS: record exact distro + glibc in M0 manifest.
 
 ### 2.1 Verified facts that shape the analysis (read from file metadata, not the paper)

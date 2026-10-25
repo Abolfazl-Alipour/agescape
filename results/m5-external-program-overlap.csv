@@ -1,0 +1,13 @@
+tier,tier_size,external_set,external_set_size_in_bg,n_shared,expected_by_chance,fold_enrichment,hypergeometric_pvalue,shared_genes
+P0_Raw257,257,Zhang2021_FACS_330_GAGs,330,30,6.66,4.51,4.434478882351492e-12,Actb;Apoe;Cd63;Cd74;Cyba;Dcn;Fos;Gas6;Glul;Gnb1;Gpx3;Gsn;H2-Aa;H2-Ab1;H2-D1;H2-K1;Jun;Junb;Jund;Macf1;Myadm;Psap;Rps27;Sepw1;Sparc;Spnb2;Tagln2;Tmsb10;Tmsb4x;Ubb
+P0_Raw257,257,Zhang2021_Droplet_59_GAGs,59,16,1.19,13.44,2.3970993936561477e-14,Apoe;Fos;H2-Ab1;H2-D1;H2-K1;H3f3b;Jun;Junb;Jund;Klf6;Nfkbia;Rn45s;Rps15a-ps4;Rps27;Sepw1;Ubb
+P0_Raw257,257,Saul2022_SenMayo_Mouse_118,81,15,1.63,9.18,6.183688990235685e-11,Angptl4;Ccl2;Ccl3;Cxcl10;Cxcl2;Egf;Gmfg;Igfbp1;Igfbp5;Igfbp6;Igfbp7;Jun;Mmp13;Serpine2;Spp1
+P1_Clean,139,Zhang2021_FACS_330_GAGs,330,21,3.6,5.83,6.421332546387754e-11,Actb;Apoe;Cd63;Cd74;Dcn;Fos;Gas6;Glul;Gnb1;Gpx3;Gsn;H2-Aa;H2-Ab1;Jun;Junb;Jund;Myadm;Psap;Sparc;Tagln2;Tmsb10
+P1_Clean,139,Zhang2021_Droplet_59_GAGs,59,7,0.64,10.87,3.3685675599682916e-06,Apoe;Fos;H2-Ab1;Jun;Junb;Jund;Klf6
+P1_Clean,139,Saul2022_SenMayo_Mouse_118,81,10,0.88,11.31,1.6820533320387147e-08,Angptl4;Cxcl10;Cxcl2;Egf;Igfbp6;Igfbp7;Jun;Mmp13;Serpine2;Spp1
+P2_Clean_SexTrimmed,114,Zhang2021_FACS_330_GAGs,330,18,2.95,6.09,7.328923102686745e-10,Actb;Apoe;Cd63;Cd74;Dcn;Gas6;Glul;Gnb1;Gpx3;Gsn;H2-Aa;H2-Ab1;Jun;Junb;Jund;Myadm;Tagln2;Tmsb10
+P2_Clean_SexTrimmed,114,Zhang2021_Droplet_59_GAGs,59,6,0.53,11.36,1.3798037831125308e-05,Apoe;H2-Ab1;Jun;Junb;Jund;Klf6
+P2_Clean_SexTrimmed,114,Saul2022_SenMayo_Mouse_118,81,8,0.73,11.03,6.009930685602582e-07,Angptl4;Cxcl10;Cxcl2;Egf;Igfbp6;Igfbp7;Jun;Mmp13
+P3_Clean_SexIEGTrimmed,110,Zhang2021_FACS_330_GAGs,330,15,2.85,5.26,1.4725617884218815e-07,Actb;Apoe;Cd63;Cd74;Dcn;Gas6;Glul;Gnb1;Gpx3;Gsn;H2-Aa;H2-Ab1;Myadm;Tagln2;Tmsb10
+P3_Clean_SexIEGTrimmed,110,Zhang2021_Droplet_59_GAGs,59,3,0.51,5.89,0.014357111691685895,Apoe;H2-Ab1;Klf6
+P3_Clean_SexIEGTrimmed,110,Saul2022_SenMayo_Mouse_118,81,7,0.7,10.01,6.080176884151328e-06,Angptl4;Cxcl10;Cxcl2;Egf;Igfbp6;Igfbp7;Mmp13

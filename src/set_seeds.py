@@ -3,6 +3,18 @@ Determinism utilities for Conserved Aging Explorer.
 """
 
 import os
+import sys
+
+# CRITICAL: Thread and hash seeds must be set at module load time before C-libraries initialize
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("VECLIB_MAXIMUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
+if "numba" not in sys.modules:
+    os.environ.setdefault("NUMBA_NUM_THREADS", "1")
+os.environ.setdefault("PYTHONHASHSEED", "42")
+
 import random
 import numpy as np
 

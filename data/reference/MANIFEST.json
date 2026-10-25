@@ -1,0 +1,42 @@
+{
+  "ensembl_release": 106,
+  "sources": {
+    "gtf": "https://ftp.ensembl.org/pub/release-106/gtf/mus_musculus/Mus_musculus.GRCm39.106.gtf.gz",
+    "homologies": "https://ftp.ensembl.org/pub/release-106/tsv/ensembl-compara/homologies/mus_musculus/Compara.106.protein_default.homologies.tsv.gz",
+    "nmr_species": "heterocephalus_glaber_female"
+  },
+  "files": {
+    "m1-hvg-union.csv": {
+      "sha256": "4b6e4e013f0192f282240c298ead9f55f7891e22418a46b8102b48330a9b78e5",
+      "size_bytes": 59588
+    },
+    "mouse-gene-chromosomes.csv": {
+      "sha256": "661120cd7d303e301aadc4cf9ed8a2c3e17d42e8195e31591b4d8d628a0a2edd",
+      "size_bytes": 2442450
+    },
+    "nmr-ensg2symbol.tsv": {
+      "sha256": "53d3d9f695cfbf2255fd5191ff8411b5ff5667b5efbf75408c47618391369080",
+      "size_bytes": 454452
+    },
+    "orthologs-mouse-human.csv": {
+      "sha256": "942c5b563f62ceb0aac410987c32943fa5cb080bab6109dba1b3527a63378074",
+      "size_bytes": 1107637
+    },
+    "orthologs-mouse-nmr.csv": {
+      "sha256": "83b91a96384fbfdf67f20ccb23fab478c794b9410f755944759aeb3183065c73",
+      "size_bytes": 891364
+    },
+    "saul2022-senmayo-mouse.csv": {
+      "sha256": "24040bd369a4b28d6d554a6e710f5c53cc3b95307ae249e42fc74ef3372d99eb",
+      "size_bytes": 694
+    },
+    "zhang2021-330-gags.csv": {
+      "sha256": "f482fc569a5d624fd38b032d21b483dd3ad4217daedd0c43f014947f9fde91cc",
+      "size_bytes": 15070
+    },
+    "zhang2021-59-droplet-gags.csv": {
+      "sha256": "ef28171d5c2e32b8b32685401644456c2f35cc6fed8132dbe2a75aca2dcf0eff",
+      "size_bytes": 374
+    }
+  }
+}

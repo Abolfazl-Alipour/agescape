@@ -3,14 +3,14 @@
 > **Historical setup instructions, 2026-10-11.** M0 is complete and the project is public with Reza's approval. Do not use this as the current operating manual. Start with `README.md`, `PROJECT_OVERVIEW.md`, and `HANDOFF.md`.
 
 You are the executing coding agent for the Conserved Aging Explorer project, working in
-`/home/reza/projects/agescape` (this is your repo root and working directory).
+`<REPO_ROOT>` (this is your repo root and working directory).
 
 ## Read these files, in this order, before writing any code
 
-1. `/home/reza/projects/agescape/HANDOFF.md` — your operating manual. Follow it exactly.
-2. `/home/reza/projects/agescape/PLAN.md` — the pre-registered decisions. When HANDOFF and PLAN
+1. `<REPO_ROOT>/HANDOFF.md` — your operating manual. Follow it exactly.
+2. `<REPO_ROOT>/PLAN.md` — the pre-registered decisions. When HANDOFF and PLAN
    conflict, PLAN wins and you note the conflict in your gate report.
-3. `/home/reza/projects/agescape/notes/reviews.md` — review log; context for why decisions exist.
+3. `<REPO_ROOT>/notes/reviews.md` — review log; context for why decisions exist.
 
 ## Non-negotiables (from PLAN.md §1 and HANDOFF.md §0)
 
@@ -28,18 +28,18 @@ Execute HANDOFF.md §3 (Milestone M0) step by step. In summary:
 1. Create the repo tree per PLAN.md §3, including `scripts/` and `notes/gates/`. Write the
    `.gitignore` exactly as given in HANDOFF.md §3 (note: `figures/` is NOT ignored).
 2. Copy local data into `data/raw/` (do not modify the originals):
-   - FROM `/home/reza/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad`
+   - FROM `<USER_HOME>/projects/aging_hypothalamus/tabula-muris-senis-droplet-official-raw-obj.h5ad`
      TO `data/raw/tms_droplet_raw.h5ad`
      (SHA-256 must be `86e45e88f9c475253792f1bbcdf5851a5be0ef35da72fced607ed261aebc099d`)
-   - FROM `/home/reza/projects/aging_hypothalamus/data/tms_brain.h5ad`
+   - FROM `<USER_HOME>/projects/aging_hypothalamus/data/tms_brain.h5ad`
      TO `data/raw/tms_facs_brain_nonmyeloid.h5ad`
      (SHA-256 must be `31ee7ffe9fd11fd128925c2dae862399f5c54f27aef9c026dbeaa077ea143339`)
 3. Delete the two dead 0-byte files at
-   `/home/reza/projects/aging_hypothalamus/data/23872787` and `.../23872787.1` and note the
+   `<USER_HOME>/projects/aging_hypothalamus/data/23872787` and `.../23872787.1` and note the
    deletion in your gate report.
 4. Write `environment.yml` per PLAN.md §4.1 (Python 3.11; channels conda-forge + bioconda,
    strict priority; packages listed there — note: doublet detection is `scrublet`). Create env
-   `agescape` with conda or mamba at `/home/reza/miniconda3`. Register the kernelspec:
+   `agescape` with conda or mamba at `<USER_HOME>/miniconda3`. Register the kernelspec:
    `conda run -n agescape python -m ipykernel install --user --name agescape`
 5. Smoke-test imports per HANDOFF.md §3, then write the lock: `conda list --explicit > environment.lock`
 6. Write `scripts/verify_data.py`, `scripts/fetch_data.py`, and `data/manifest/*.json` per
@@ -64,4 +64,4 @@ in HANDOFF.md §13, then stop and give Reza a short summary with the checklist e
 when Reza replies with `M0 approved`. Conditional feedback means not approved: implement the
 conditions, re-check, re-report.
 
-Machine context: 49 GB RAM, 12 cores, ~247 GB free disk, conda at `/home/reza/miniconda3`.
+Machine context: 49 GB RAM, 12 cores, ~247 GB free disk, conda at `<USER_HOME>/miniconda3`.

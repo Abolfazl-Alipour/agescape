@@ -1,0 +1,18 @@
+unit,tissue,cell_ontology_class,n_tested_genes,n_de_s0_greedy,n_de_s1_uniform,rms_log2fc_s1,min_cells_3m,max_cells_3m,min_cells_18m,max_cells_18m,mice_ge10_3m,mice_ge10_18m,survives_floor10,mice_ge20_3m,mice_ge20_18m,survives_floor20
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,11856,53,50,1.9462,0,482,0,573,3,3,True,3,3,True
+Lung::adventitial cell,Lung,adventitial cell,10150,55,34,1.8211,0,257,0,23,2,3,False,2,1,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,11342,36,27,1.8926,0,799,0,75,4,3,True,3,3,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,9398,35,27,2.0811,0,74,0,90,4,4,True,3,3,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,9834,28,19,1.6721,0,40,0,53,3,3,True,3,3,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,9304,23,18,1.3949,0,61,0,74,3,3,True,3,3,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,10431,18,15,1.4777,0,158,0,105,3,3,True,3,3,True
+Kidney::macrophage,Kidney,macrophage,9721,16,12,1.6755,0,57,0,105,3,3,True,3,3,True
+Lung::NK cell,Lung,NK cell,9115,10,10,1.484,0,263,0,55,4,4,True,4,4,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,9565,10,10,2.2485,0,88,0,122,3,3,True,3,3,True
+Lung::classical monocyte,Lung,classical monocyte,10674,9,9,2.4026,0,60,0,472,3,4,True,2,4,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,10595,7,7,1.711,0,104,0,288,2,4,False,2,4,False
+Lung::B cell,Lung,B cell,8871,3,3,2.1242,0,129,0,179,2,4,False,2,4,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,8087,9,2,2.7339,0,112,0,62,3,4,True,2,4,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,10231,0,0,0.0,0,103,0,320,2,3,False,2,3,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",6057,0,0,0.0,0,107,0,33,2,3,False,1,2,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,8062,0,0,0.0,0,27,0,29,3,3,True,2,2,False

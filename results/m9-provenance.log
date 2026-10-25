@@ -1,37 +1,5 @@
-[m9] program: 167 up / 94 down mouse genes -> 121 up / 70 down human orthologs
-[m9] human-space direction conflicts (net out in up-minus-down): ['CKB', 'ID2', 'STMN1']
-[m9] donors total 2255; control donors with numeric age: 624
-[m9] [MSSM_DLPFC] downloading 214 control donors (ages 19-89) ...
-[m9] [MSSM_DLPFC] cells=842,830 genes_measured=188 program_coverage=0.984
-[m9] [MSSM_DLPFC] scored donor x cell-type units: 2809
-[m9] [HBCC_DLPFC] downloading 134 control donors (ages 2-85) ...
-[m9] [HBCC_DLPFC] cells=688,828 genes_measured=188 program_coverage=0.984
-[m9] [HBCC_DLPFC] scored donor x cell-type units: 2031
-[m9] [RADC_DLPFC] downloading 18 control donors (ages 64-89) ...
-[m9] [RADC_DLPFC] cells=82,782 genes_measured=188 program_coverage=0.984
-[m9] [RADC_DLPFC] scored donor x cell-type units: 269
-[m9] [SEAAD_DLPFC] downloading 21 control donors (ages 29-89) ...
-[m9] [SEAAD_DLPFC] cells=397,577 genes_measured=188 program_coverage=0.984
-[m9] [SEAAD_DLPFC] scored donor x cell-type units: 366
-[m9] [Kidney_NormalAdult] downloading 18 control donors (ages 43-74) ...
-[m9] [Kidney_NormalAdult] cells=48,783 genes_measured=188 program_coverage=0.984
-[m9] [Kidney_NormalAdult] scored donor x cell-type units: 226
-[m9] [Kidney_LivingDonor] downloading 19 control donors (ages 33-65) ...
-[m9] [Kidney_LivingDonor] cells=27,675 genes_measured=188 program_coverage=0.984
-[m9] [Kidney_LivingDonor] scored donor x cell-type units: 96
-[m9] [Kidney_SN_v15] downloading 10 control donors (ages 14-76) ...
-[m9] [Kidney_SN_v15] cells=62,655 genes_measured=188 program_coverage=0.984
-[m9] [Kidney_SN_v15] scored donor x cell-type units: 135
-[m9] [Kidney_SCR_v15] downloading 18 control donors (ages 30-66) ...
-[m9] [Kidney_SCR_v15] cells=25,317 genes_measured=188 program_coverage=0.984
-[m9] [Kidney_SCR_v15] scored donor x cell-type units: 156
-[m9] [Lung_CellRef] downloading 21 control donors (ages 12-76) ...
-[m9] [Lung_CellRef] cells=122,445 genes_measured=188 program_coverage=0.984
-[m9] [Lung_CellRef] scored donor x cell-type units: 308
-[m9] [Lung_Integrated] downloading 139 control donors (ages 2-81) ...
-[m9] [Lung_Integrated] cells=667,370 genes_measured=188 program_coverage=0.984
-[m9] [Lung_Integrated] scored donor x cell-type units: 1542
-[m9] [ImmuneAging_BAL] downloading 12 control donors (ages 20-75) ...
-[m9] [ImmuneAging_BAL] cells=826,117 genes_measured=188 program_coverage=0.984
-[m9] [ImmuneAging_BAL] scored donor x cell-type units: 342
-[m9] total donor x cell-type units: 8280
+[m9] program: 166 up / 91 down mouse genes -> 120 up / 68 down human orthologs
+[m9] Loading cached donor scores from results/m9-donor-scores.csv ...
+[m9] 
+--- Running Module 4b: Homologous Cell-Type Concordance ---
+[m9] Saved results/m9-gene-level-concordance.csv (16 homologous cell-type pairs)

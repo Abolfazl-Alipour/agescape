@@ -1,0 +1,621 @@
+tier,gene,direction,mean_log2FC,n_units_de,units_list,biotype,chromosome
+P0_Raw257,1110001J03Rik,DOWN,-0.669817203253031,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,unknown,unknown
+P0_Raw257,2010106G01Rik,UP,1.3386987088538571,1,Lung::non_classical_monocyte,unknown,unknown
+P0_Raw257,2810417H13Rik,UP,4.468774196157062,1,Kidney::macrophage,unknown,unknown
+P0_Raw257,8430408G22Rik,UP,1.9423336008391043,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,unknown,unknown
+P0_Raw257,AI607873,UP,3.660379266257845,1,Kidney::fenestrated_cell,unknown,unknown
+P0_Raw257,AW112010,DOWN,-0.8688153446477971,2,Lung::NK_cell;Lung::fibroblast_of_lung,lncRNA,19
+P0_Raw257,Acp5,UP,2.059944540789338,1,Kidney::macrophage,protein_coding,9
+P0_Raw257,Actb,DOWN,-0.5598159960245921,1,Lung::NK_cell,protein_coding,5
+P0_Raw257,Adamts1,UP,2.687207540588475,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,16
+P0_Raw257,Adamts8,UP,1.825686614365068,1,Lung::adventitial_cell,protein_coding,9
+P0_Raw257,Akr1c21,DOWN,-0.4081966778455174,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,13
+P0_Raw257,Aldh1a1,UP,1.893487540321978,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,19
+P0_Raw257,Aldh1a7,UP,1.966776583948596,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,19
+P0_Raw257,Angptl4,UP,1.3556264336849655,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,17
+P0_Raw257,Apoe,UP,0.9255251707169996,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,7
+P0_Raw257,Arl4d,DOWN,-1.6667833945858013,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,11
+P0_Raw257,Atf3,UP,1.2942212271365972,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,1
+P0_Raw257,Atp5k,DOWN,-1.0519304286813749,1,Lung::adventitial_cell,protein_coding,5
+P0_Raw257,Azgp1,UP,1.604324933467123,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,5
+P0_Raw257,B4galt1,DOWN,-0.8137068830410918,1,Lung::fibroblast_of_lung,protein_coding,4
+P0_Raw257,Bcl2,UP,0.9836036071636672,1,Lung::NK_cell,protein_coding,1
+P0_Raw257,Bmpr2,UP,1.7011718533321127,1,Lung::bronchial_smooth_muscle_cell,protein_coding,1
+P0_Raw257,C130026I21Rik,UP,4.048197907203047,1,Lung::alveolar_macrophage,protein_coding,1
+P0_Raw257,Cav1,DOWN,-1.3285270890736922,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,6
+P0_Raw257,Ccdc80,DOWN,-3.1366893745458166,1,Lung::fibroblast_of_lung,protein_coding,16
+P0_Raw257,Ccl11,DOWN,-1.9095078764784168,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Ccl2,UP,2.0259063110980127,2,Kidney::macrophage;Lung::fibroblast_of_lung,protein_coding,11
+P0_Raw257,Ccl3,DOWN,-0.7781562430194503,1,Kidney::macrophage,protein_coding,11
+P0_Raw257,Ccnd1,UP,0.8737985252984523,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,7
+P0_Raw257,Cd248,DOWN,-1.7864175935837745,1,Lung::adventitial_cell,protein_coding,19
+P0_Raw257,Cd24a,UP,0.9133365748162314,1,Lung::alveolar_macrophage,protein_coding,10
+P0_Raw257,Cd63,UP,1.6421495168381022,1,Lung::alveolar_macrophage,protein_coding,10
+P0_Raw257,Cd74,UP,1.5440568371086714,1,Lung::alveolar_macrophage,protein_coding,18
+P0_Raw257,Cd82,UP,1.2683484025128953,1,Lung::adventitial_cell,protein_coding,2
+P0_Raw257,Cdkn1a,UP,1.9501128181109653,1,Lung::fibroblast_of_lung,protein_coding,17
+P0_Raw257,Cdkn3,UP,3.660798144493573,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,14
+P0_Raw257,Cebpb,UP,1.4146827746093817,3,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell;Kidney::kidney_proximal_convoluted_tubule_epithelial_cell;Kidney::macrophage,protein_coding,2
+P0_Raw257,Cebpd,UP,1.413915391809056,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,16
+P0_Raw257,Ces1d,DOWN,-0.8068285512366865,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Ces1e,DOWN,-0.6852426712582824,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Ch25h,UP,1.5750826833243234,1,Lung::alveolar_macrophage,protein_coding,19
+P0_Raw257,Chpt1,UP,1.4004814191757469,1,Lung::alveolar_macrophage,protein_coding,10
+P0_Raw257,Ckb,UP,0.7796310799333639,2,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,12
+P0_Raw257,Clec2h,UP,0.5418606443894469,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,6
+P0_Raw257,Clec4e,UP,2.0373483427790218,1,Lung::non_classical_monocyte,protein_coding,6
+P0_Raw257,Clic5,UP,1.2043787017994934,1,Lung::bronchial_smooth_muscle_cell,protein_coding,17
+P0_Raw257,Clu,UP,1.5726253024934902,3,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,14
+P0_Raw257,Cmbl,UP,2.0062165766970854,1,Lung::alveolar_macrophage,protein_coding,15
+P0_Raw257,Cml1,DOWN,-0.661103897221387,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,unknown,unknown
+P0_Raw257,Col13a1,UP,2.171145642895448,1,Lung::adventitial_cell,protein_coding,10
+P0_Raw257,Col1a1,DOWN,-0.8072373555972305,1,Lung::fibroblast_of_lung,protein_coding,11
+P0_Raw257,Col3a1,DOWN,-2.8349216658138334,4,Lung::adventitial_cell;Lung::alveolar_macrophage;Lung::classical_monocyte;Lung::fibroblast_of_lung,protein_coding,1
+P0_Raw257,Col5a2,DOWN,-1.0406884538322567,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Colec12,UP,0.7521814929631551,1,Lung::adventitial_cell,protein_coding,18
+P0_Raw257,Coro2b,UP,2.1124317580701724,1,Lung::alveolar_macrophage,protein_coding,9
+P0_Raw257,Cp,UP,0.9961187544439578,2,Lung::adventitial_cell;Lung::fibroblast_of_lung,protein_coding,3
+P0_Raw257,Cstb,UP,1.0074973150346644,1,Kidney::macrophage,protein_coding,10
+P0_Raw257,Ctsl,UP,0.645134181947522,1,Lung::fibroblast_of_lung,protein_coding,13
+P0_Raw257,Cwh43,UP,1.8565301133798988,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,5
+P0_Raw257,Cxcl10,DOWN,-2.570159082410997,1,Lung::classical_monocyte,protein_coding,5
+P0_Raw257,Cxcl2,UP,4.248450134151579,1,Kidney::fenestrated_cell,protein_coding,5
+P0_Raw257,Cyba,UP,0.611234849367919,1,Lung::fibroblast_of_lung,protein_coding,8
+P0_Raw257,Cybasc3,DOWN,-0.778791541962607,1,Lung::alveolar_macrophage,unknown,unknown
+P0_Raw257,Cybb,UP,0.6359799664541205,1,Lung::alveolar_macrophage,protein_coding,X
+P0_Raw257,Cyp2a4,UP,2.085658472270995,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,7
+P0_Raw257,Cyp2d12,UP,1.8466770792726364,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Cyp2d26,DOWN,-1.0415202855894627,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Cyp2d9,UP,3.071191543809732,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,D19Wsu162e,DOWN,-1.84250749073588,1,Lung::adventitial_cell,unknown,unknown
+P0_Raw257,Dbp,DOWN,-3.341114898243423,1,Lung::fibroblast_of_lung,protein_coding,7
+P0_Raw257,Dcn,DOWN,-3.402446570953583,1,Lung::fibroblast_of_lung,protein_coding,10
+P0_Raw257,Dcxr,DOWN,-0.377860388551043,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,11
+P0_Raw257,Degs1,DOWN,-0.8293144798135385,1,Lung::classical_monocyte,protein_coding,1
+P0_Raw257,Des,UP,1.3699223626096118,1,Lung::fibroblast_of_lung,protein_coding,1
+P0_Raw257,Dleu7,DOWN,-0.8089953139845931,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,14
+P0_Raw257,Dpep1,DOWN,-0.6902220683186121,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Dpysl3,UP,1.7109998484429592,1,Lung::adventitial_cell,protein_coding,18
+P0_Raw257,Dst,UP,1.5942334783290633,1,Lung::bronchial_smooth_muscle_cell,protein_coding,1
+P0_Raw257,E030010A14Rik,UP,1.6606984845652473,1,Kidney::fenestrated_cell,unknown,unknown
+P0_Raw257,Efemp1,UP,0.9882364482811272,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Egf,DOWN,-1.0658134037763485,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,3
+P0_Raw257,Entpd2,DOWN,-1.07334449062812,1,Lung::adventitial_cell,protein_coding,2
+P0_Raw257,Ephb3,DOWN,-2.686115015082468,1,Lung::fibroblast_of_lung,protein_coding,16
+P0_Raw257,Fabp3,UP,1.6394795498101415,2,Kidney::kidney_collecting_duct_principal_cell;Lung::fibroblast_of_lung,protein_coding,4
+P0_Raw257,Fabp5,UP,1.2379275652368429,1,Kidney::fenestrated_cell,protein_coding,3
+P0_Raw257,Faim2,UP,2.127035839763708,1,Lung::adventitial_cell,protein_coding,15
+P0_Raw257,Fam134b,UP,2.161756707282222,1,Lung::fibroblast_of_lung,unknown,unknown
+P0_Raw257,Fam176b,DOWN,-1.4814405380116054,1,Lung::alveolar_macrophage,unknown,unknown
+P0_Raw257,Fam46a,UP,0.7219956694357318,1,Lung::non_classical_monocyte,unknown,unknown
+P0_Raw257,Fgg,UP,1.4240564505609394,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,3
+P0_Raw257,Fmo2,UP,1.2151921989493166,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Fos,UP,1.0248107740491108,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,12
+P0_Raw257,Foxf2,DOWN,-1.1820233392076105,1,Lung::fibroblast_of_lung,protein_coding,13
+P0_Raw257,Foxq1,UP,1.6622336397063409,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,13
+P0_Raw257,Fxyd2,UP,1.2070572924405336,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,9
+P0_Raw257,G0s2,DOWN,-1.8810598754486487,1,Lung::alveolar_macrophage,protein_coding,1
+P0_Raw257,Gadd45a,UP,1.535641829961374,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,6
+P0_Raw257,Gadd45b,UP,1.630039030112045,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,10
+P0_Raw257,Gal,DOWN,-1.4173240904072637,1,Lung::alveolar_macrophage,protein_coding,19
+P0_Raw257,Gas6,UP,1.6478815721524636,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,8
+P0_Raw257,Gda,UP,1.2252661304195036,1,Lung::non_classical_monocyte,protein_coding,19
+P0_Raw257,Glul,UP,1.6213330593818158,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,1
+P0_Raw257,Gm11428,UP,1.3033614057813108,2,Lung::alveolar_macrophage;Lung::classical_monocyte,unknown,unknown
+P0_Raw257,Gm12216,UP,1.123376945726702,1,Kidney::fenestrated_cell,protein_coding,11
+P0_Raw257,Gm2a,DOWN,-0.9876193626089836,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Gm4956,UP,1.942576101447796,1,Lung::adventitial_cell,transcribed_unprocessed_pseudogene,1
+P0_Raw257,Gmfg,DOWN,-0.9682063159027536,1,Lung::alveolar_macrophage,protein_coding,7
+P0_Raw257,Gnb1,DOWN,-1.0536372163546126,1,Lung::fibroblast_of_lung,protein_coding,4
+P0_Raw257,Gpc3,UP,1.496337230411115,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,X
+P0_Raw257,Gpr116,UP,1.9632879742985496,1,Kidney::kidney_collecting_duct_principal_cell,unknown,unknown
+P0_Raw257,Gpx3,DOWN,-1.4641912739534082,1,Lung::alveolar_macrophage,protein_coding,11
+P0_Raw257,Gsn,DOWN,-1.571117068890648,3,Lung::NK_cell;Lung::alveolar_macrophage;Lung::non_classical_monocyte,protein_coding,2
+P0_Raw257,Gsr,UP,1.825928859718736,1,Kidney::macrophage,protein_coding,8
+P0_Raw257,Gsta3,UP,2.043648227046415,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Gzma,DOWN,-2.6741115166005094,1,Lung::fibroblast_of_lung,protein_coding,13
+P0_Raw257,H2-Aa,UP,1.797383611960483,1,Lung::alveolar_macrophage,protein_coding,17
+P0_Raw257,H2-Ab1,UP,1.5958937229886383,1,Lung::alveolar_macrophage,protein_coding,17
+P0_Raw257,H2-D1,UP,1.144956172246698,1,Lung::adventitial_cell,protein_coding,17
+P0_Raw257,H2-Eb1,UP,1.996787698357556,1,Lung::alveolar_macrophage,protein_coding,17
+P0_Raw257,H2-K1,UP,1.2296080776602205,1,Lung::adventitial_cell,protein_coding,17
+P0_Raw257,H2-Q4,UP,0.922195045003274,1,Lung::NK_cell,protein_coding,17
+P0_Raw257,H2afz,DOWN,-0.5875603102948235,1,Lung::alveolar_macrophage,unknown,unknown
+P0_Raw257,H3f3b,UP,0.6336781854115777,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Heatr1,UP,3.712729990390144,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,13
+P0_Raw257,Hist1h1c,UP,0.9353433588858794,2,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell;Lung::fibroblast_of_lung,unknown,unknown
+P0_Raw257,Hist1h1e,UP,1.9819079690669033,2,Lung::B_cell;Lung::NK_cell,unknown,unknown
+P0_Raw257,Hist1h4h,DOWN,-1.428213787813565,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,unknown,unknown
+P0_Raw257,Hoxa5,UP,1.2090367057931273,1,Lung::adventitial_cell,protein_coding,6
+P0_Raw257,Hp,UP,1.6560967248330445,1,Lung::non_classical_monocyte,protein_coding,8
+P0_Raw257,Hpgd,DOWN,-1.0028546220465306,1,Kidney::macrophage,protein_coding,8
+P0_Raw257,Hsd11b2,DOWN,-1.2268238575350594,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,8
+P0_Raw257,Id2,DOWN,-0.1420050168429814,2,Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Lung::adventitial_cell,protein_coding,12
+P0_Raw257,Id3,DOWN,-2.140830252922601,1,Lung::alveolar_macrophage,protein_coding,4
+P0_Raw257,Ier3,UP,1.6888137761808224,1,Lung::alveolar_macrophage,protein_coding,17
+P0_Raw257,Igfbp1,UP,1.0104596370920205,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,11
+P0_Raw257,Igfbp5,DOWN,-2.43365264288308,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Igfbp6,DOWN,-1.0350551752240014,1,Lung::fibroblast_of_lung,protein_coding,15
+P0_Raw257,Igfbp7,DOWN,-2.1466390988056205,1,Lung::alveolar_macrophage,protein_coding,5
+P0_Raw257,Inmt,DOWN,-1.7614854764704586,4,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell;Lung::alveolar_macrophage;Lung::bronchial_smooth_muscle_cell;Lung::classical_monocyte,protein_coding,6
+P0_Raw257,Ins1,UP,6.623240341787845,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,19
+P0_Raw257,Ins2,UP,6.9698433169425975,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,7
+P0_Raw257,Ipmk,UP,0.9160789819571984,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,10
+P0_Raw257,Isg15,UP,2.8366932464464005,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,4
+P0_Raw257,Itga1,UP,1.1476434172875951,1,Lung::bronchial_smooth_muscle_cell,protein_coding,13
+P0_Raw257,Itgam,UP,1.8842779212620744,1,Kidney::macrophage,protein_coding,7
+P0_Raw257,Jun,UP,1.2225265849848377,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,4
+P0_Raw257,Junb,UP,1.1795106118718477,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Jund,UP,1.1327715176973483,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Kdelr3,DOWN,-1.3914167602984158,1,Lung::fibroblast_of_lung,protein_coding,15
+P0_Raw257,Klf2,DOWN,-0.6656784135340361,1,Kidney::fenestrated_cell,protein_coding,8
+P0_Raw257,Klf6,UP,1.0699508180256811,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,13
+P0_Raw257,Klhl21,DOWN,-1.9904449611348127,1,Lung::fibroblast_of_lung,protein_coding,4
+P0_Raw257,Klrd1,DOWN,-0.5756923897783376,1,Lung::NK_cell,protein_coding,6
+P0_Raw257,Lgals3,UP,1.2256095845271742,2,Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,14
+P0_Raw257,Lhfp,DOWN,-0.9762359005941482,1,Lung::adventitial_cell,protein_coding,3
+P0_Raw257,Limch1,UP,0.929436148885912,1,Lung::adventitial_cell,protein_coding,5
+P0_Raw257,Limd1,UP,0.7312929470627116,1,Lung::fibroblast_of_lung,protein_coding,9
+P0_Raw257,Lman2,UP,0.9372174010639788,1,Lung::adventitial_cell,protein_coding,13
+P0_Raw257,Lpl,UP,0.5845978788480047,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Lrat,UP,3.173993275737086,1,Lung::adventitial_cell,protein_coding,3
+P0_Raw257,Macf1,UP,1.3353126165965716,1,Lung::adventitial_cell,protein_coding,4
+P0_Raw257,Mafb,UP,1.3723250453383935,1,Lung::classical_monocyte,protein_coding,2
+P0_Raw257,Matn2,DOWN,-2.864777881357868,1,Lung::adventitial_cell,protein_coding,15
+P0_Raw257,Mdk,UP,0.5759236340273217,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,2
+P0_Raw257,Meg3,DOWN,-2.941561519733335,1,Lung::adventitial_cell,lncRNA,12
+P0_Raw257,Mettl7a1,UP,1.3438820509495704,1,Lung::adventitial_cell,protein_coding,15
+P0_Raw257,Mfap5,DOWN,-0.7291154893597666,1,Lung::adventitial_cell,protein_coding,6
+P0_Raw257,Mgl2,DOWN,-1.1240618352682412,1,Kidney::macrophage,protein_coding,11
+P0_Raw257,Mgp,DOWN,-2.163251841445533,5,Lung::B_cell;Lung::NK_cell;Lung::alveolar_macrophage;Lung::classical_monocyte;Lung::non_classical_monocyte,protein_coding,6
+P0_Raw257,Mgst3,DOWN,-0.4628753974414009,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,1
+P0_Raw257,Mmp13,DOWN,-1.9794998271110755,1,Kidney::macrophage,protein_coding,9
+P0_Raw257,Mmp3,DOWN,-2.386699751278077,1,Lung::fibroblast_of_lung,protein_coding,9
+P0_Raw257,Mt1,UP,2.266952471047908,1,Kidney::fenestrated_cell,protein_coding,8
+P0_Raw257,Mt2,UP,1.1602830141866345,4,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell;Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,8
+P0_Raw257,Myadm,DOWN,-1.1102758703779476,1,Lung::fibroblast_of_lung,protein_coding,7
+P0_Raw257,Nacc2,DOWN,-3.0327167307810257,1,Lung::adventitial_cell,protein_coding,2
+P0_Raw257,Ndrg1,UP,1.0661035691524303,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Ndrg2,UP,1.2409701800183044,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,14
+P0_Raw257,Ndufs5,UP,1.6983899833827643,2,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,4
+P0_Raw257,Neat1,UP,1.0463491263705984,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,lncRNA,19
+P0_Raw257,Nfkbia,UP,1.3508230378971646,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,12
+P0_Raw257,Nfkbiz,UP,1.2144728314640694,1,Lung::adventitial_cell,protein_coding,16
+P0_Raw257,Npdc1,UP,0.9138031359372584,1,Lung::fibroblast_of_lung,protein_coding,2
+P0_Raw257,Npnt,UP,2.004502237509195,1,Lung::adventitial_cell,protein_coding,3
+P0_Raw257,Nras,DOWN,-1.6799287711663906,2,Lung::adventitial_cell;Lung::fibroblast_of_lung,protein_coding,3
+P0_Raw257,Nrp1,UP,0.7436019263802217,1,Lung::fibroblast_of_lung,protein_coding,8
+P0_Raw257,Ntn1,DOWN,-1.5595988227315003,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Olfml2b,DOWN,-1.8842697530300527,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Pah,DOWN,-0.3639199956395938,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,10
+P0_Raw257,Pdlim2,DOWN,-1.1413616852031383,1,Lung::adventitial_cell,protein_coding,14
+P0_Raw257,Pgcp,UP,0.8872449853183533,1,Lung::adventitial_cell,unknown,unknown
+P0_Raw257,Pi15,DOWN,-2.6669912076670816,1,Lung::adventitial_cell,protein_coding,1
+P0_Raw257,Pigr,UP,1.7073410985410404,2,Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,1
+P0_Raw257,Pisd-ps3,UP,1.6634833770469046,2,Lung::adventitial_cell;Lung::fibroblast_of_lung,unknown,unknown
+P0_Raw257,Pla2g2d,UP,5.105157225170059,1,Lung::alveolar_macrophage,protein_coding,4
+P0_Raw257,Plac9,DOWN,-1.970369402820917,2,Lung::adventitial_cell;Lung::alveolar_macrophage,protein_coding,14
+P0_Raw257,Plk2,UP,1.5053349223273895,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,13
+P0_Raw257,Plxdc2,DOWN,-1.9071491708428288,1,Kidney::macrophage,protein_coding,2
+P0_Raw257,Pmp22,DOWN,-4.100689429035535,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,11
+P0_Raw257,Podn,DOWN,-1.6177620961092043,1,Lung::adventitial_cell,protein_coding,4
+P0_Raw257,Ppp1r1a,UP,1.2945335516919496,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,15
+P0_Raw257,Pppde1,DOWN,-1.8274522076579285,1,Lung::fibroblast_of_lung,unknown,unknown
+P0_Raw257,Prkca,UP,1.2569966113814752,1,Lung::adventitial_cell,protein_coding,11
+P0_Raw257,Prtn3,UP,2.08975042815169,1,Lung::classical_monocyte,protein_coding,10
+P0_Raw257,Psap,UP,0.5386760951900477,1,Lung::alveolar_macrophage,protein_coding,10
+P0_Raw257,Pth1r,UP,1.275806658055585,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,9
+P0_Raw257,Pvalb,DOWN,-0.9978660310494326,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Rcan1,UP,0.6915329169369485,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,16
+P0_Raw257,Rhob,UP,1.1447646768209077,2,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell;Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,12
+P0_Raw257,Rn45s,UP,1.5274580285934103,9,Kidney::fenestrated_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell;Lung::B_cell;Lung::NK_cell;Lung::adventitial_cell;Lung::alveolar_macrophage;Lung::bronchial_smooth_muscle_cell;Lung::fibroblast_of_lung;Lung::non_classical_monocyte,unknown,unknown
+P0_Raw257,Rpl26,UP,2.434832303318783,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,11
+P0_Raw257,Rpl30,UP,2.13496170405109,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Rps15a-ps4,UP,1.4705017206027415,6,Kidney::fenestrated_cell;Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell;Kidney::kidney_proximal_convoluted_tubule_epithelial_cell;Kidney::macrophage,transcribed_processed_pseudogene,4
+P0_Raw257,Rps27,UP,0.6350162159410475,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,3
+P0_Raw257,S100a1,UP,0.5767908841389436,1,Lung::alveolar_macrophage,protein_coding,3
+P0_Raw257,S100a10,UP,1.2732730168112345,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,3
+P0_Raw257,S100g,DOWN,-1.0694280438204302,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,X
+P0_Raw257,Selenbp1,DOWN,-0.4355027474603747,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,3
+P0_Raw257,Sepw1,DOWN,-0.7140143559613512,1,Lung::adventitial_cell,unknown,unknown
+P0_Raw257,Serf2,DOWN,-0.7687344186317812,1,Lung::adventitial_cell,protein_coding,2
+P0_Raw257,Serpine2,UP,2.113520345089478,1,Kidney::fenestrated_cell,protein_coding,1
+P0_Raw257,Sfrp1,UP,1.1953712432865573,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,8
+P0_Raw257,Slc10a6,UP,2.089526833216228,1,Lung::adventitial_cell,protein_coding,5
+P0_Raw257,Slc12a3,UP,1.3601312604070577,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,8
+P0_Raw257,Slc16a9,DOWN,-0.891682638977845,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,10
+P0_Raw257,Slc38a4,UP,2.2969811110878298,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,15
+P0_Raw257,Slc3a2,UP,0.9679183348062025,2,Lung::adventitial_cell;Lung::fibroblast_of_lung,protein_coding,19
+P0_Raw257,Slc7a13,UP,1.999020064846936,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,4
+P0_Raw257,Slpi,UP,4.203063440042026,1,Kidney::macrophage,protein_coding,2
+P0_Raw257,Snhg11,UP,3.2627872718842807,1,Lung::fibroblast_of_lung,protein_coding,2
+P0_Raw257,Socs2,UP,2.3326087169781955,2,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell;Lung::NK_cell,protein_coding,10
+P0_Raw257,Socs3,UP,1.7242705741427797,2,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,11
+P0_Raw257,Sparc,DOWN,-2.759385164234043,1,Lung::classical_monocyte,protein_coding,11
+P0_Raw257,Spnb2,UP,0.8802480006990769,1,Lung::bronchial_smooth_muscle_cell,unknown,unknown
+P0_Raw257,Spon1,UP,1.483328142786773,1,Lung::adventitial_cell,protein_coding,7
+P0_Raw257,Spp1,UP,0.8524930958641963,2,Kidney::kidney_collecting_duct_principal_cell;Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,5
+P0_Raw257,Srgn,UP,0.9773860181052696,1,Lung::alveolar_macrophage,protein_coding,10
+P0_Raw257,Stat3,UP,1.128947841680394,2,Kidney::kidney_distal_convoluted_tubule_epithelial_cell;Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,11
+P0_Raw257,Stmn1,UP,0.5981669163025775,2,Kidney::macrophage;Lung::alveolar_macrophage,protein_coding,4
+P0_Raw257,Suds3,UP,1.1920050604113717,1,Lung::fibroblast_of_lung,protein_coding,5
+P0_Raw257,Sult2a3,UP,7.796939021894929,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,7
+P0_Raw257,Tagln2,UP,2.221115904768189,1,Kidney::kidney_distal_convoluted_tubule_epithelial_cell,protein_coding,1
+P0_Raw257,Tmem86a,DOWN,-1.1737877199449425,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,7
+P0_Raw257,Tmsb10,UP,1.187308400632478,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,6
+P0_Raw257,Tmsb4x,DOWN,-0.3143418477623833,1,Lung::adventitial_cell,protein_coding,X
+P0_Raw257,Tnfrsf12a,UP,1.2624357403350672,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,17
+P0_Raw257,Tpd52l1,DOWN,-1.334773109783371,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,10
+P0_Raw257,Trib1,UP,1.6862321436483547,2,Kidney::kidney_collecting_duct_principal_cell;Lung::fibroblast_of_lung,protein_coding,15
+P0_Raw257,Tsc22d1,UP,0.7981081099865285,1,Kidney::kidney_loop_of_Henle_thick_ascending_limb_epithelial_cell,protein_coding,14
+P0_Raw257,Tspan1,UP,0.9884083631956598,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,4
+P0_Raw257,Ttr,DOWN,-1.3708017289889745,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,18
+P0_Raw257,Ubb,DOWN,-0.6676576186120092,1,Lung::non_classical_monocyte,protein_coding,11
+P0_Raw257,Ugt2b38,DOWN,-0.5379764187955608,1,Kidney::kidney_proximal_convoluted_tubule_epithelial_cell,protein_coding,5
+P0_Raw257,Vim,UP,1.7092310367459678,1,Kidney::macrophage,protein_coding,2
+P0_Raw257,Wapal,UP,1.627725865334203,1,Lung::alveolar_macrophage,unknown,unknown
+P0_Raw257,Wnk1,UP,1.0364368667128403,1,Kidney::kidney_collecting_duct_principal_cell,protein_coding,6
+P0_Raw257,Zfp36l2,DOWN,-1.1636007080747992,1,Lung::adventitial_cell,protein_coding,17
+P1_Clean,Acp5,UP,2.059944540789338,1,Kidney::macrophage,protein_coding,9
+P1_Clean,Actb,DOWN,-0.5598159960245921,1,Lung::NK cell,protein_coding,5
+P1_Clean,Adamts1,UP,2.687207540588475,1,Kidney::kidney collecting duct principal cell,protein_coding,16
+P1_Clean,Akr1c21,DOWN,-0.4081966778455174,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,13
+P1_Clean,Aldh1a1,UP,1.893487540321978,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+P1_Clean,Aldh1a7,UP,1.966776583948596,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+P1_Clean,Angptl4,UP,1.3556264336849655,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P1_Clean,Apoe,UP,0.9255251707169996,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P1_Clean,Arl4d,DOWN,-1.6667833945858013,1,Kidney::kidney collecting duct principal cell,protein_coding,11
+P1_Clean,Atf3,UP,1.2942212271365972,1,Kidney::kidney collecting duct principal cell,protein_coding,1
+P1_Clean,Azgp1,UP,1.604324933467123,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+P1_Clean,B4galt1,DOWN,-0.8137068830410918,1,Lung::fibroblast of lung,protein_coding,4
+P1_Clean,Bcl2,UP,0.9836036071636672,1,Lung::NK cell,protein_coding,1
+P1_Clean,Cav1,DOWN,-1.3285270890736922,1,Kidney::kidney collecting duct principal cell,protein_coding,6
+P1_Clean,Ccdc80,DOWN,-3.1366893745458166,1,Lung::fibroblast of lung,protein_coding,16
+P1_Clean,Ccnd1,UP,0.8737985252984523,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,7
+P1_Clean,Cd24a,UP,0.9133365748162314,1,Lung::alveolar macrophage,protein_coding,10
+P1_Clean,Cd63,UP,1.6421495168381022,1,Lung::alveolar macrophage,protein_coding,10
+P1_Clean,Cd74,UP,1.5440568371086714,1,Lung::alveolar macrophage,protein_coding,18
+P1_Clean,Cdkn1a,UP,1.9501128181109653,1,Lung::fibroblast of lung,protein_coding,17
+P1_Clean,Cdkn3,UP,3.660798144493573,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+P1_Clean,Cebpb,UP,1.4146827746093817,3,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell;Kidney::macrophage,protein_coding,2
+P1_Clean,Cebpd,UP,1.413915391809056,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+P1_Clean,Ces1d,DOWN,-0.8068285512366865,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Ces1e,DOWN,-0.6852426712582824,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Ch25h,UP,1.5750826833243234,1,Lung::alveolar macrophage,protein_coding,19
+P1_Clean,Clec2h,UP,0.5418606443894469,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+P1_Clean,Clu,UP,1.57262530249349,3,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P1_Clean,Col1a1,DOWN,-0.8072373555972305,1,Lung::fibroblast of lung,protein_coding,11
+P1_Clean,Col3a1,DOWN,-1.407790085843687,1,Lung::fibroblast of lung,protein_coding,1
+P1_Clean,Coro2b,UP,2.1124317580701724,1,Lung::alveolar macrophage,protein_coding,9
+P1_Clean,Cp,UP,0.6770060950164105,1,Lung::fibroblast of lung,protein_coding,3
+P1_Clean,Cstb,UP,1.0074973150346644,1,Kidney::macrophage,protein_coding,10
+P1_Clean,Cxcl10,DOWN,-2.570159082410997,1,Lung::classical monocyte,protein_coding,5
+P1_Clean,Cxcl2,UP,4.248450134151579,1,Kidney::fenestrated cell,protein_coding,5
+P1_Clean,Cyp2a4,UP,2.085658472270995,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,7
+P1_Clean,Cyp2d12,UP,1.8466770792726364,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P1_Clean,Cyp2d26,DOWN,-1.0415202855894627,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P1_Clean,Cyp2d9,UP,3.071191543809732,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P1_Clean,Dbp,DOWN,-3.341114898243423,1,Lung::fibroblast of lung,protein_coding,7
+P1_Clean,Dcn,DOWN,-3.402446570953583,1,Lung::fibroblast of lung,protein_coding,10
+P1_Clean,Dcxr,DOWN,-0.377860388551043,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,11
+P1_Clean,Degs1,DOWN,-0.8293144798135385,1,Lung::classical monocyte,protein_coding,1
+P1_Clean,Des,UP,1.3699223626096118,1,Lung::fibroblast of lung,protein_coding,1
+P1_Clean,Dleu7,DOWN,-0.8089953139845931,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+P1_Clean,Dpep1,DOWN,-0.6902220683186121,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Egf,DOWN,-1.0658134037763485,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,3
+P1_Clean,Ephb3,DOWN,-2.686115015082468,1,Lung::fibroblast of lung,protein_coding,16
+P1_Clean,Fabp3,UP,1.6394795498101415,2,Kidney::kidney collecting duct principal cell;Lung::fibroblast of lung,protein_coding,4
+P1_Clean,Fabp5,UP,1.2379275652368429,1,Kidney::fenestrated cell,protein_coding,3
+P1_Clean,Fgg,UP,1.4240564505609394,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P1_Clean,Fos,UP,1.0248107740491108,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,12
+P1_Clean,Foxf2,DOWN,-1.1820233392076105,1,Lung::fibroblast of lung,protein_coding,13
+P1_Clean,Foxq1,UP,1.6622336397063409,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,13
+P1_Clean,Fxyd2,UP,1.2070572924405336,1,Kidney::kidney collecting duct principal cell,protein_coding,9
+P1_Clean,G0s2,DOWN,-1.8810598754486487,1,Lung::alveolar macrophage,protein_coding,1
+P1_Clean,Gadd45a,UP,1.535641829961374,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,6
+P1_Clean,Gadd45b,UP,1.630039030112045,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,10
+P1_Clean,Gal,DOWN,-1.4173240904072637,1,Lung::alveolar macrophage,protein_coding,19
+P1_Clean,Gas6,UP,1.6478815721524636,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P1_Clean,Glul,UP,1.6213330593818158,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P1_Clean,Gnb1,DOWN,-1.0536372163546126,1,Lung::fibroblast of lung,protein_coding,4
+P1_Clean,Gpc3,UP,1.496337230411115,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,X
+P1_Clean,Gpx3,DOWN,-1.4641912739534082,1,Lung::alveolar macrophage,protein_coding,11
+P1_Clean,Gsn,DOWN,-1.5968548282400836,2,Lung::NK cell;Lung::alveolar macrophage,protein_coding,2
+P1_Clean,Gsr,UP,1.825928859718736,1,Kidney::macrophage,protein_coding,8
+P1_Clean,Gzma,DOWN,-2.6741115166005094,1,Lung::fibroblast of lung,protein_coding,13
+P1_Clean,H2-Aa,UP,1.797383611960483,1,Lung::alveolar macrophage,protein_coding,17
+P1_Clean,H2-Ab1,UP,1.5958937229886383,1,Lung::alveolar macrophage,protein_coding,17
+P1_Clean,H2-Q4,UP,0.922195045003274,1,Lung::NK cell,protein_coding,17
+P1_Clean,Heatr1,UP,3.712729990390144,1,Kidney::kidney collecting duct principal cell,protein_coding,13
+P1_Clean,Hpgd,DOWN,-1.0028546220465306,1,Kidney::macrophage,protein_coding,8
+P1_Clean,Hsd11b2,DOWN,-1.2268238575350594,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P1_Clean,Id2,UP,1.4371559937082412,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,12
+P1_Clean,Id3,DOWN,-2.140830252922601,1,Lung::alveolar macrophage,protein_coding,4
+P1_Clean,Ier3,UP,1.6888137761808224,1,Lung::alveolar macrophage,protein_coding,17
+P1_Clean,Igfbp6,DOWN,-1.0350551752240014,1,Lung::fibroblast of lung,protein_coding,15
+P1_Clean,Igfbp7,DOWN,-2.1466390988056205,1,Lung::alveolar macrophage,protein_coding,5
+P1_Clean,Inmt,DOWN,-1.6774782368341985,3,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::alveolar macrophage;Lung::classical monocyte,protein_coding,6
+P1_Clean,Ipmk,UP,0.9160789819571984,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P1_Clean,Isg15,UP,2.8366932464464005,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,4
+P1_Clean,Itgam,UP,1.8842779212620744,1,Kidney::macrophage,protein_coding,7
+P1_Clean,Jun,UP,1.2225265849848377,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,4
+P1_Clean,Junb,UP,1.1795106118718477,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Jund,UP,1.1327715176973483,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Kdelr3,DOWN,-1.3914167602984158,1,Lung::fibroblast of lung,protein_coding,15
+P1_Clean,Klf2,DOWN,-0.6656784135340361,1,Kidney::fenestrated cell,protein_coding,8
+P1_Clean,Klf6,UP,1.0699508180256811,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,13
+P1_Clean,Klrd1,DOWN,-0.5756923897783376,1,Lung::NK cell,protein_coding,6
+P1_Clean,Lgals3,UP,1.0547579015691064,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P1_Clean,Lpl,UP,0.5845978788480047,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Mafb,UP,1.3723250453383935,1,Lung::classical monocyte,protein_coding,2
+P1_Clean,Mdk,UP,0.5759236340273217,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+P1_Clean,Mgl2,DOWN,-1.1240618352682412,1,Kidney::macrophage,protein_coding,11
+P1_Clean,Mgst3,DOWN,-0.4628753974414009,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,1
+P1_Clean,Mmp13,DOWN,-1.9794998271110755,1,Kidney::macrophage,protein_coding,9
+P1_Clean,Mmp3,DOWN,-2.386699751278077,1,Lung::fibroblast of lung,protein_coding,9
+P1_Clean,Mt1,UP,2.266952471047908,1,Kidney::fenestrated cell,protein_coding,8
+P1_Clean,Mt2,UP,1.1602830141866343,4,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P1_Clean,Myadm,DOWN,-1.1102758703779476,1,Lung::fibroblast of lung,protein_coding,7
+P1_Clean,Ndrg1,UP,1.0661035691524303,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,15
+P1_Clean,Ndrg2,UP,1.2409701800183044,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+P1_Clean,Ndufs5,UP,1.2539440710254677,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+P1_Clean,Nrp1,UP,0.7436019263802217,1,Lung::fibroblast of lung,protein_coding,8
+P1_Clean,Pah,DOWN,-0.3639199956395938,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P1_Clean,Pigr,UP,1.7073410985410404,2,Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,1
+P1_Clean,Pla2g2d,UP,5.105157225170059,1,Lung::alveolar macrophage,protein_coding,4
+P1_Clean,Plac9,DOWN,-3.215355068742714,1,Lung::alveolar macrophage,protein_coding,14
+P1_Clean,Plk2,UP,1.5053349223273895,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,13
+P1_Clean,Plxdc2,DOWN,-1.9071491708428288,1,Kidney::macrophage,protein_coding,2
+P1_Clean,Ppp1r1a,UP,1.2945335516919496,1,Kidney::kidney collecting duct principal cell,protein_coding,15
+P1_Clean,Prtn3,UP,2.08975042815169,1,Lung::classical monocyte,protein_coding,10
+P1_Clean,Psap,UP,0.5386760951900477,1,Lung::alveolar macrophage,protein_coding,10
+P1_Clean,Rcan1,UP,0.6915329169369485,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,16
+P1_Clean,Rhob,UP,1.1447646768209077,2,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,12
+P1_Clean,Selenbp1,DOWN,-0.4355027474603747,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P1_Clean,Serpine2,UP,2.113520345089478,1,Kidney::fenestrated cell,protein_coding,1
+P1_Clean,Sfrp1,UP,1.1953712432865573,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P1_Clean,Slc12a3,UP,1.3601312604070577,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P1_Clean,Slc16a9,DOWN,-0.891682638977845,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P1_Clean,Slc3a2,UP,0.8325461142438311,1,Lung::fibroblast of lung,protein_coding,19
+P1_Clean,Snhg11,UP,3.2627872718842807,1,Lung::fibroblast of lung,protein_coding,2
+P1_Clean,Socs2,UP,2.3326087169781955,2,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::NK cell,protein_coding,10
+P1_Clean,Socs3,UP,1.7242705741427797,2,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P1_Clean,Sparc,DOWN,-2.759385164234043,1,Lung::classical monocyte,protein_coding,11
+P1_Clean,Spp1,UP,0.8524930958641963,2,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,5
+P1_Clean,Srgn,UP,0.9773860181052696,1,Lung::alveolar macrophage,protein_coding,10
+P1_Clean,Stat3,UP,1.295445342057932,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P1_Clean,Stmn1,UP,0.5981669163025775,2,Kidney::macrophage;Lung::alveolar macrophage,protein_coding,4
+P1_Clean,Tagln2,UP,2.221115904768189,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P1_Clean,Tmem86a,DOWN,-1.1737877199449425,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P1_Clean,Tmsb10,UP,1.187308400632478,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,6
+P1_Clean,Tnfrsf12a,UP,1.2624357403350672,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P1_Clean,Trib1,UP,1.6862321436483547,2,Kidney::kidney collecting duct principal cell;Lung::fibroblast of lung,protein_coding,15
+P1_Clean,Tsc22d1,UP,0.7981081099865285,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P1_Clean,Tspan1,UP,0.9884083631956598,1,Kidney::kidney collecting duct principal cell,protein_coding,4
+P1_Clean,Ttr,DOWN,-1.3708017289889745,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,18
+P1_Clean,Ugt2b38,DOWN,-0.5379764187955608,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+P1_Clean,Vim,UP,1.7092310367459678,1,Kidney::macrophage,protein_coding,2
+P2_Clean_SexTrimmed,Acp5,UP,2.059944540789338,1,Kidney::macrophage,protein_coding,9
+P2_Clean_SexTrimmed,Actb,DOWN,-0.5598159960245921,1,Lung::NK cell,protein_coding,5
+P2_Clean_SexTrimmed,Akr1c21,DOWN,-0.4081966778455174,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,13
+P2_Clean_SexTrimmed,Aldh1a7,UP,1.966776583948596,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+P2_Clean_SexTrimmed,Angptl4,UP,1.3556264336849655,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P2_Clean_SexTrimmed,Apoe,UP,0.9255251707169996,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P2_Clean_SexTrimmed,Arl4d,DOWN,-1.6667833945858013,1,Kidney::kidney collecting duct principal cell,protein_coding,11
+P2_Clean_SexTrimmed,Atf3,UP,1.2942212271365972,1,Kidney::kidney collecting duct principal cell,protein_coding,1
+P2_Clean_SexTrimmed,Azgp1,UP,1.604324933467123,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+P2_Clean_SexTrimmed,B4galt1,DOWN,-0.8137068830410918,1,Lung::fibroblast of lung,protein_coding,4
+P2_Clean_SexTrimmed,Cav1,DOWN,-1.3285270890736922,1,Kidney::kidney collecting duct principal cell,protein_coding,6
+P2_Clean_SexTrimmed,Ccdc80,DOWN,-3.1366893745458166,1,Lung::fibroblast of lung,protein_coding,16
+P2_Clean_SexTrimmed,Cd24a,UP,0.9133365748162314,1,Lung::alveolar macrophage,protein_coding,10
+P2_Clean_SexTrimmed,Cd63,UP,1.6421495168381022,1,Lung::alveolar macrophage,protein_coding,10
+P2_Clean_SexTrimmed,Cd74,UP,1.5440568371086714,1,Lung::alveolar macrophage,protein_coding,18
+P2_Clean_SexTrimmed,Cdkn1a,UP,1.9501128181109653,1,Lung::fibroblast of lung,protein_coding,17
+P2_Clean_SexTrimmed,Cebpb,UP,1.4146827746093817,3,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell;Kidney::macrophage,protein_coding,2
+P2_Clean_SexTrimmed,Cebpd,UP,1.413915391809056,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+P2_Clean_SexTrimmed,Ces1d,DOWN,-0.8068285512366865,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Ch25h,UP,1.5750826833243234,1,Lung::alveolar macrophage,protein_coding,19
+P2_Clean_SexTrimmed,Clec2h,UP,0.5418606443894469,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+P2_Clean_SexTrimmed,Clu,UP,1.57262530249349,3,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P2_Clean_SexTrimmed,Col1a1,DOWN,-0.8072373555972305,1,Lung::fibroblast of lung,protein_coding,11
+P2_Clean_SexTrimmed,Col3a1,DOWN,-1.407790085843687,1,Lung::fibroblast of lung,protein_coding,1
+P2_Clean_SexTrimmed,Coro2b,UP,2.1124317580701724,1,Lung::alveolar macrophage,protein_coding,9
+P2_Clean_SexTrimmed,Cp,UP,0.6770060950164105,1,Lung::fibroblast of lung,protein_coding,3
+P2_Clean_SexTrimmed,Cstb,UP,1.0074973150346644,1,Kidney::macrophage,protein_coding,10
+P2_Clean_SexTrimmed,Cxcl10,DOWN,-2.570159082410997,1,Lung::classical monocyte,protein_coding,5
+P2_Clean_SexTrimmed,Cxcl2,UP,4.248450134151579,1,Kidney::fenestrated cell,protein_coding,5
+P2_Clean_SexTrimmed,Cyp2d12,UP,1.8466770792726364,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P2_Clean_SexTrimmed,Cyp2d26,DOWN,-1.0415202855894627,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P2_Clean_SexTrimmed,Dcn,DOWN,-3.402446570953583,1,Lung::fibroblast of lung,protein_coding,10
+P2_Clean_SexTrimmed,Dcxr,DOWN,-0.377860388551043,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,11
+P2_Clean_SexTrimmed,Degs1,DOWN,-0.8293144798135385,1,Lung::classical monocyte,protein_coding,1
+P2_Clean_SexTrimmed,Des,UP,1.3699223626096118,1,Lung::fibroblast of lung,protein_coding,1
+P2_Clean_SexTrimmed,Dleu7,DOWN,-0.8089953139845931,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+P2_Clean_SexTrimmed,Dpep1,DOWN,-0.6902220683186121,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Egf,DOWN,-1.0658134037763485,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,3
+P2_Clean_SexTrimmed,Ephb3,DOWN,-2.686115015082468,1,Lung::fibroblast of lung,protein_coding,16
+P2_Clean_SexTrimmed,Fgg,UP,1.4240564505609394,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P2_Clean_SexTrimmed,Foxf2,DOWN,-1.1820233392076105,1,Lung::fibroblast of lung,protein_coding,13
+P2_Clean_SexTrimmed,Fxyd2,UP,1.2070572924405336,1,Kidney::kidney collecting duct principal cell,protein_coding,9
+P2_Clean_SexTrimmed,G0s2,DOWN,-1.8810598754486487,1,Lung::alveolar macrophage,protein_coding,1
+P2_Clean_SexTrimmed,Gadd45a,UP,1.535641829961374,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,6
+P2_Clean_SexTrimmed,Gadd45b,UP,1.630039030112045,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,10
+P2_Clean_SexTrimmed,Gal,DOWN,-1.4173240904072637,1,Lung::alveolar macrophage,protein_coding,19
+P2_Clean_SexTrimmed,Gas6,UP,1.6478815721524636,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P2_Clean_SexTrimmed,Glul,UP,1.6213330593818158,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P2_Clean_SexTrimmed,Gnb1,DOWN,-1.0536372163546126,1,Lung::fibroblast of lung,protein_coding,4
+P2_Clean_SexTrimmed,Gpx3,DOWN,-1.4641912739534082,1,Lung::alveolar macrophage,protein_coding,11
+P2_Clean_SexTrimmed,Gsn,DOWN,-1.5968548282400836,2,Lung::NK cell;Lung::alveolar macrophage,protein_coding,2
+P2_Clean_SexTrimmed,Gsr,UP,1.825928859718736,1,Kidney::macrophage,protein_coding,8
+P2_Clean_SexTrimmed,Gzma,DOWN,-2.6741115166005094,1,Lung::fibroblast of lung,protein_coding,13
+P2_Clean_SexTrimmed,H2-Aa,UP,1.797383611960483,1,Lung::alveolar macrophage,protein_coding,17
+P2_Clean_SexTrimmed,H2-Ab1,UP,1.5958937229886383,1,Lung::alveolar macrophage,protein_coding,17
+P2_Clean_SexTrimmed,H2-Q4,UP,0.922195045003274,1,Lung::NK cell,protein_coding,17
+P2_Clean_SexTrimmed,Heatr1,UP,3.712729990390144,1,Kidney::kidney collecting duct principal cell,protein_coding,13
+P2_Clean_SexTrimmed,Hpgd,DOWN,-1.0028546220465306,1,Kidney::macrophage,protein_coding,8
+P2_Clean_SexTrimmed,Id2,UP,1.4371559937082412,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,12
+P2_Clean_SexTrimmed,Id3,DOWN,-2.140830252922601,1,Lung::alveolar macrophage,protein_coding,4
+P2_Clean_SexTrimmed,Ier3,UP,1.6888137761808224,1,Lung::alveolar macrophage,protein_coding,17
+P2_Clean_SexTrimmed,Igfbp6,DOWN,-1.0350551752240014,1,Lung::fibroblast of lung,protein_coding,15
+P2_Clean_SexTrimmed,Igfbp7,DOWN,-2.1466390988056205,1,Lung::alveolar macrophage,protein_coding,5
+P2_Clean_SexTrimmed,Inmt,DOWN,-1.6774782368341985,3,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::alveolar macrophage;Lung::classical monocyte,protein_coding,6
+P2_Clean_SexTrimmed,Ipmk,UP,0.9160789819571984,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P2_Clean_SexTrimmed,Isg15,UP,2.8366932464464005,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,4
+P2_Clean_SexTrimmed,Itgam,UP,1.8842779212620744,1,Kidney::macrophage,protein_coding,7
+P2_Clean_SexTrimmed,Jun,UP,1.2225265849848377,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,4
+P2_Clean_SexTrimmed,Junb,UP,1.1795106118718477,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Jund,UP,1.1327715176973483,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Kdelr3,DOWN,-1.3914167602984158,1,Lung::fibroblast of lung,protein_coding,15
+P2_Clean_SexTrimmed,Klf2,DOWN,-0.6656784135340361,1,Kidney::fenestrated cell,protein_coding,8
+P2_Clean_SexTrimmed,Klf6,UP,1.0699508180256811,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,13
+P2_Clean_SexTrimmed,Klrd1,DOWN,-0.5756923897783376,1,Lung::NK cell,protein_coding,6
+P2_Clean_SexTrimmed,Lgals3,UP,1.0547579015691064,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P2_Clean_SexTrimmed,Lpl,UP,0.5845978788480047,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Mafb,UP,1.3723250453383935,1,Lung::classical monocyte,protein_coding,2
+P2_Clean_SexTrimmed,Mdk,UP,0.5759236340273217,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+P2_Clean_SexTrimmed,Mgl2,DOWN,-1.1240618352682412,1,Kidney::macrophage,protein_coding,11
+P2_Clean_SexTrimmed,Mgst3,DOWN,-0.4628753974414009,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,1
+P2_Clean_SexTrimmed,Mmp13,DOWN,-1.9794998271110755,1,Kidney::macrophage,protein_coding,9
+P2_Clean_SexTrimmed,Mmp3,DOWN,-2.386699751278077,1,Lung::fibroblast of lung,protein_coding,9
+P2_Clean_SexTrimmed,Mt1,UP,2.266952471047908,1,Kidney::fenestrated cell,protein_coding,8
+P2_Clean_SexTrimmed,Mt2,UP,1.1602830141866343,4,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P2_Clean_SexTrimmed,Myadm,DOWN,-1.1102758703779476,1,Lung::fibroblast of lung,protein_coding,7
+P2_Clean_SexTrimmed,Ndrg1,UP,1.0661035691524303,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,15
+P2_Clean_SexTrimmed,Ndufs5,UP,1.2539440710254677,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+P2_Clean_SexTrimmed,Pah,DOWN,-0.3639199956395938,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P2_Clean_SexTrimmed,Pigr,UP,1.7073410985410404,2,Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,1
+P2_Clean_SexTrimmed,Pla2g2d,UP,5.105157225170059,1,Lung::alveolar macrophage,protein_coding,4
+P2_Clean_SexTrimmed,Plac9,DOWN,-3.215355068742714,1,Lung::alveolar macrophage,protein_coding,14
+P2_Clean_SexTrimmed,Plxdc2,DOWN,-1.9071491708428288,1,Kidney::macrophage,protein_coding,2
+P2_Clean_SexTrimmed,Ppp1r1a,UP,1.2945335516919496,1,Kidney::kidney collecting duct principal cell,protein_coding,15
+P2_Clean_SexTrimmed,Prtn3,UP,2.08975042815169,1,Lung::classical monocyte,protein_coding,10
+P2_Clean_SexTrimmed,Rcan1,UP,0.6915329169369485,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,16
+P2_Clean_SexTrimmed,Rhob,UP,1.1447646768209077,2,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,12
+P2_Clean_SexTrimmed,Selenbp1,DOWN,-0.4355027474603747,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P2_Clean_SexTrimmed,Sfrp1,UP,1.1953712432865573,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P2_Clean_SexTrimmed,Slc12a3,UP,1.3601312604070577,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P2_Clean_SexTrimmed,Slc16a9,DOWN,-0.891682638977845,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P2_Clean_SexTrimmed,Slc3a2,UP,0.8325461142438311,1,Lung::fibroblast of lung,protein_coding,19
+P2_Clean_SexTrimmed,Socs2,UP,2.3326087169781955,2,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::NK cell,protein_coding,10
+P2_Clean_SexTrimmed,Socs3,UP,1.7242705741427797,2,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P2_Clean_SexTrimmed,Srgn,UP,0.9773860181052696,1,Lung::alveolar macrophage,protein_coding,10
+P2_Clean_SexTrimmed,Stat3,UP,1.295445342057932,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P2_Clean_SexTrimmed,Stmn1,UP,0.5981669163025775,2,Kidney::macrophage;Lung::alveolar macrophage,protein_coding,4
+P2_Clean_SexTrimmed,Tagln2,UP,2.221115904768189,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P2_Clean_SexTrimmed,Tmem86a,DOWN,-1.1737877199449425,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P2_Clean_SexTrimmed,Tmsb10,UP,1.187308400632478,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,6
+P2_Clean_SexTrimmed,Tnfrsf12a,UP,1.2624357403350672,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P2_Clean_SexTrimmed,Trib1,UP,1.6862321436483547,2,Kidney::kidney collecting duct principal cell;Lung::fibroblast of lung,protein_coding,15
+P2_Clean_SexTrimmed,Tsc22d1,UP,0.7981081099865285,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P2_Clean_SexTrimmed,Tspan1,UP,0.9884083631956598,1,Kidney::kidney collecting duct principal cell,protein_coding,4
+P2_Clean_SexTrimmed,Vim,UP,1.7092310367459678,1,Kidney::macrophage,protein_coding,2
+P3_Clean_SexIEGTrimmed,Acp5,UP,2.059944540789338,1,Kidney::macrophage,protein_coding,9
+P3_Clean_SexIEGTrimmed,Actb,DOWN,-0.5598159960245921,1,Lung::NK cell,protein_coding,5
+P3_Clean_SexIEGTrimmed,Akr1c21,DOWN,-0.4081966778455174,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,13
+P3_Clean_SexIEGTrimmed,Aldh1a7,UP,1.966776583948596,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+P3_Clean_SexIEGTrimmed,Angptl4,UP,1.3556264336849655,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P3_Clean_SexIEGTrimmed,Apoe,UP,0.9255251707169996,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P3_Clean_SexIEGTrimmed,Arl4d,DOWN,-1.6667833945858013,1,Kidney::kidney collecting duct principal cell,protein_coding,11
+P3_Clean_SexIEGTrimmed,Azgp1,UP,1.604324933467123,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+P3_Clean_SexIEGTrimmed,B4galt1,DOWN,-0.8137068830410918,1,Lung::fibroblast of lung,protein_coding,4
+P3_Clean_SexIEGTrimmed,Cav1,DOWN,-1.3285270890736922,1,Kidney::kidney collecting duct principal cell,protein_coding,6
+P3_Clean_SexIEGTrimmed,Ccdc80,DOWN,-3.1366893745458166,1,Lung::fibroblast of lung,protein_coding,16
+P3_Clean_SexIEGTrimmed,Cd24a,UP,0.9133365748162314,1,Lung::alveolar macrophage,protein_coding,10
+P3_Clean_SexIEGTrimmed,Cd63,UP,1.6421495168381022,1,Lung::alveolar macrophage,protein_coding,10
+P3_Clean_SexIEGTrimmed,Cd74,UP,1.5440568371086714,1,Lung::alveolar macrophage,protein_coding,18
+P3_Clean_SexIEGTrimmed,Cdkn1a,UP,1.9501128181109653,1,Lung::fibroblast of lung,protein_coding,17
+P3_Clean_SexIEGTrimmed,Cebpb,UP,1.4146827746093817,3,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell;Kidney::macrophage,protein_coding,2
+P3_Clean_SexIEGTrimmed,Cebpd,UP,1.413915391809056,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+P3_Clean_SexIEGTrimmed,Ces1d,DOWN,-0.8068285512366865,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Ch25h,UP,1.5750826833243234,1,Lung::alveolar macrophage,protein_coding,19
+P3_Clean_SexIEGTrimmed,Clec2h,UP,0.5418606443894469,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+P3_Clean_SexIEGTrimmed,Clu,UP,1.57262530249349,3,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P3_Clean_SexIEGTrimmed,Col1a1,DOWN,-0.8072373555972305,1,Lung::fibroblast of lung,protein_coding,11
+P3_Clean_SexIEGTrimmed,Col3a1,DOWN,-1.407790085843687,1,Lung::fibroblast of lung,protein_coding,1
+P3_Clean_SexIEGTrimmed,Coro2b,UP,2.1124317580701724,1,Lung::alveolar macrophage,protein_coding,9
+P3_Clean_SexIEGTrimmed,Cp,UP,0.6770060950164105,1,Lung::fibroblast of lung,protein_coding,3
+P3_Clean_SexIEGTrimmed,Cstb,UP,1.0074973150346644,1,Kidney::macrophage,protein_coding,10
+P3_Clean_SexIEGTrimmed,Cxcl10,DOWN,-2.570159082410997,1,Lung::classical monocyte,protein_coding,5
+P3_Clean_SexIEGTrimmed,Cxcl2,UP,4.248450134151579,1,Kidney::fenestrated cell,protein_coding,5
+P3_Clean_SexIEGTrimmed,Cyp2d12,UP,1.8466770792726364,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P3_Clean_SexIEGTrimmed,Cyp2d26,DOWN,-1.0415202855894627,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+P3_Clean_SexIEGTrimmed,Dcn,DOWN,-3.402446570953583,1,Lung::fibroblast of lung,protein_coding,10
+P3_Clean_SexIEGTrimmed,Dcxr,DOWN,-0.377860388551043,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,11
+P3_Clean_SexIEGTrimmed,Degs1,DOWN,-0.8293144798135385,1,Lung::classical monocyte,protein_coding,1
+P3_Clean_SexIEGTrimmed,Des,UP,1.3699223626096118,1,Lung::fibroblast of lung,protein_coding,1
+P3_Clean_SexIEGTrimmed,Dleu7,DOWN,-0.8089953139845931,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+P3_Clean_SexIEGTrimmed,Dpep1,DOWN,-0.6902220683186121,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Egf,DOWN,-1.0658134037763485,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,3
+P3_Clean_SexIEGTrimmed,Ephb3,DOWN,-2.686115015082468,1,Lung::fibroblast of lung,protein_coding,16
+P3_Clean_SexIEGTrimmed,Fgg,UP,1.4240564505609394,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P3_Clean_SexIEGTrimmed,Foxf2,DOWN,-1.1820233392076105,1,Lung::fibroblast of lung,protein_coding,13
+P3_Clean_SexIEGTrimmed,Fxyd2,UP,1.2070572924405336,1,Kidney::kidney collecting duct principal cell,protein_coding,9
+P3_Clean_SexIEGTrimmed,G0s2,DOWN,-1.8810598754486487,1,Lung::alveolar macrophage,protein_coding,1
+P3_Clean_SexIEGTrimmed,Gadd45a,UP,1.535641829961374,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,6
+P3_Clean_SexIEGTrimmed,Gadd45b,UP,1.630039030112045,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,10
+P3_Clean_SexIEGTrimmed,Gal,DOWN,-1.4173240904072637,1,Lung::alveolar macrophage,protein_coding,19
+P3_Clean_SexIEGTrimmed,Gas6,UP,1.6478815721524636,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Glul,UP,1.6213330593818158,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P3_Clean_SexIEGTrimmed,Gnb1,DOWN,-1.0536372163546126,1,Lung::fibroblast of lung,protein_coding,4
+P3_Clean_SexIEGTrimmed,Gpx3,DOWN,-1.4641912739534082,1,Lung::alveolar macrophage,protein_coding,11
+P3_Clean_SexIEGTrimmed,Gsn,DOWN,-1.5968548282400836,2,Lung::NK cell;Lung::alveolar macrophage,protein_coding,2
+P3_Clean_SexIEGTrimmed,Gsr,UP,1.825928859718736,1,Kidney::macrophage,protein_coding,8
+P3_Clean_SexIEGTrimmed,Gzma,DOWN,-2.6741115166005094,1,Lung::fibroblast of lung,protein_coding,13
+P3_Clean_SexIEGTrimmed,H2-Aa,UP,1.797383611960483,1,Lung::alveolar macrophage,protein_coding,17
+P3_Clean_SexIEGTrimmed,H2-Ab1,UP,1.5958937229886383,1,Lung::alveolar macrophage,protein_coding,17
+P3_Clean_SexIEGTrimmed,H2-Q4,UP,0.922195045003274,1,Lung::NK cell,protein_coding,17
+P3_Clean_SexIEGTrimmed,Heatr1,UP,3.712729990390144,1,Kidney::kidney collecting duct principal cell,protein_coding,13
+P3_Clean_SexIEGTrimmed,Hpgd,DOWN,-1.0028546220465306,1,Kidney::macrophage,protein_coding,8
+P3_Clean_SexIEGTrimmed,Id2,UP,1.4371559937082412,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,12
+P3_Clean_SexIEGTrimmed,Id3,DOWN,-2.140830252922601,1,Lung::alveolar macrophage,protein_coding,4
+P3_Clean_SexIEGTrimmed,Ier3,UP,1.6888137761808224,1,Lung::alveolar macrophage,protein_coding,17
+P3_Clean_SexIEGTrimmed,Igfbp6,DOWN,-1.0350551752240014,1,Lung::fibroblast of lung,protein_coding,15
+P3_Clean_SexIEGTrimmed,Igfbp7,DOWN,-2.1466390988056205,1,Lung::alveolar macrophage,protein_coding,5
+P3_Clean_SexIEGTrimmed,Inmt,DOWN,-1.6774782368341985,3,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::alveolar macrophage;Lung::classical monocyte,protein_coding,6
+P3_Clean_SexIEGTrimmed,Ipmk,UP,0.9160789819571984,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P3_Clean_SexIEGTrimmed,Isg15,UP,2.8366932464464005,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,4
+P3_Clean_SexIEGTrimmed,Itgam,UP,1.8842779212620744,1,Kidney::macrophage,protein_coding,7
+P3_Clean_SexIEGTrimmed,Kdelr3,DOWN,-1.3914167602984158,1,Lung::fibroblast of lung,protein_coding,15
+P3_Clean_SexIEGTrimmed,Klf2,DOWN,-0.6656784135340361,1,Kidney::fenestrated cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Klf6,UP,1.0699508180256811,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,13
+P3_Clean_SexIEGTrimmed,Klrd1,DOWN,-0.5756923897783376,1,Lung::NK cell,protein_coding,6
+P3_Clean_SexIEGTrimmed,Lgals3,UP,1.0547579015691064,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P3_Clean_SexIEGTrimmed,Lpl,UP,0.5845978788480047,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Mafb,UP,1.3723250453383935,1,Lung::classical monocyte,protein_coding,2
+P3_Clean_SexIEGTrimmed,Mdk,UP,0.5759236340273217,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+P3_Clean_SexIEGTrimmed,Mgl2,DOWN,-1.1240618352682412,1,Kidney::macrophage,protein_coding,11
+P3_Clean_SexIEGTrimmed,Mgst3,DOWN,-0.4628753974414009,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,1
+P3_Clean_SexIEGTrimmed,Mmp13,DOWN,-1.9794998271110755,1,Kidney::macrophage,protein_coding,9
+P3_Clean_SexIEGTrimmed,Mmp3,DOWN,-2.386699751278077,1,Lung::fibroblast of lung,protein_coding,9
+P3_Clean_SexIEGTrimmed,Mt1,UP,2.266952471047908,1,Kidney::fenestrated cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Mt2,UP,1.1602830141866343,4,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Myadm,DOWN,-1.1102758703779476,1,Lung::fibroblast of lung,protein_coding,7
+P3_Clean_SexIEGTrimmed,Ndrg1,UP,1.0661035691524303,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,15
+P3_Clean_SexIEGTrimmed,Ndufs5,UP,1.2539440710254677,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+P3_Clean_SexIEGTrimmed,Pah,DOWN,-0.3639199956395938,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P3_Clean_SexIEGTrimmed,Pigr,UP,1.7073410985410404,2,Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,1
+P3_Clean_SexIEGTrimmed,Pla2g2d,UP,5.105157225170059,1,Lung::alveolar macrophage,protein_coding,4
+P3_Clean_SexIEGTrimmed,Plac9,DOWN,-3.215355068742714,1,Lung::alveolar macrophage,protein_coding,14
+P3_Clean_SexIEGTrimmed,Plxdc2,DOWN,-1.9071491708428288,1,Kidney::macrophage,protein_coding,2
+P3_Clean_SexIEGTrimmed,Ppp1r1a,UP,1.2945335516919496,1,Kidney::kidney collecting duct principal cell,protein_coding,15
+P3_Clean_SexIEGTrimmed,Prtn3,UP,2.08975042815169,1,Lung::classical monocyte,protein_coding,10
+P3_Clean_SexIEGTrimmed,Rcan1,UP,0.6915329169369485,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,16
+P3_Clean_SexIEGTrimmed,Rhob,UP,1.1447646768209077,2,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,12
+P3_Clean_SexIEGTrimmed,Selenbp1,DOWN,-0.4355027474603747,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+P3_Clean_SexIEGTrimmed,Sfrp1,UP,1.1953712432865573,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Slc12a3,UP,1.3601312604070577,1,Kidney::kidney collecting duct principal cell,protein_coding,8
+P3_Clean_SexIEGTrimmed,Slc16a9,DOWN,-0.891682638977845,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+P3_Clean_SexIEGTrimmed,Slc3a2,UP,0.8325461142438311,1,Lung::fibroblast of lung,protein_coding,19
+P3_Clean_SexIEGTrimmed,Socs2,UP,2.3326087169781955,2,Kidney::kidney proximal convoluted tubule epithelial cell;Lung::NK cell,protein_coding,10
+P3_Clean_SexIEGTrimmed,Socs3,UP,1.7242705741427797,2,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P3_Clean_SexIEGTrimmed,Srgn,UP,0.9773860181052696,1,Lung::alveolar macrophage,protein_coding,10
+P3_Clean_SexIEGTrimmed,Stat3,UP,1.295445342057932,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,11
+P3_Clean_SexIEGTrimmed,Stmn1,UP,0.5981669163025775,2,Kidney::macrophage;Lung::alveolar macrophage,protein_coding,4
+P3_Clean_SexIEGTrimmed,Tagln2,UP,2.221115904768189,1,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,1
+P3_Clean_SexIEGTrimmed,Tmem86a,DOWN,-1.1737877199449425,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+P3_Clean_SexIEGTrimmed,Tmsb10,UP,1.187308400632478,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,6
+P3_Clean_SexIEGTrimmed,Tnfrsf12a,UP,1.2624357403350672,1,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+P3_Clean_SexIEGTrimmed,Trib1,UP,1.6862321436483547,2,Kidney::kidney collecting duct principal cell;Lung::fibroblast of lung,protein_coding,15
+P3_Clean_SexIEGTrimmed,Tsc22d1,UP,0.7981081099865285,1,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+P3_Clean_SexIEGTrimmed,Tspan1,UP,0.9884083631956598,1,Kidney::kidney collecting duct principal cell,protein_coding,4
+P3_Clean_SexIEGTrimmed,Vim,UP,1.7092310367459678,1,Kidney::macrophage,protein_coding,2

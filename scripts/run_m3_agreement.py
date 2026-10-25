@@ -80,6 +80,14 @@ for unit_raw in units:
                  "sign_concordance_paper_sig": None if np.isnan(conc) else round(conc, 3),
                  "our_nominal_recovery_in_paper_sig": None if np.isnan(rec) else round(rec, 3),
                  "verdict": verdict, "reason": f"paper continuous-age coef vs our {how}"})
+    if "proximal convoluted tubule" in unit:
+        m_pct = m.copy().reset_index().rename(columns={"index": "gene"})
+        m_pct["concordant"] = np.sign(m_pct["paper_coef"]) == np.sign(m_pct["ours_effect"])
+        m_pct["paper_sig"] = m_pct["paper_bh"] < PAPER_BH
+        m_pct["ours_sig"] = m_pct["ours_p"] < 0.05
+        pct_ref_path = RESULTS / "m3-pct-moesm8-reference.csv"
+        m_pct.to_csv(pct_ref_path, index=False)
+        print(f"[m3] wrote {pct_ref_path} ({len(m_pct)} shared genes)")
 out = pd.DataFrame(rows)
 out.to_csv(RESULTS/"m3-agreement-table.csv", index=False)
 print(out.to_string(index=False))

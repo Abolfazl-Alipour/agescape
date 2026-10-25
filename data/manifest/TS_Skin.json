@@ -1,0 +1,13 @@
+{
+  "filename": "TS_Skin.h5ad",
+  "dataset_id": "0041b9c3-6a49-4bf7-8514-9bc7190067a7",
+  "dataset_version_id": "c240d5bc-a521-4330-a76b-7d566e939d87",
+  "collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5",
+  "collection": "Tabula Sapiens (CELLxGENE)",
+  "url": "https://datasets.cellxgene.cziscience.com/c240d5bc-a521-4330-a76b-7d566e939d87.h5ad",
+  "size_bytes": 508729263,
+  "schema_version": "7.1.0",
+  "downloaded": "2026-10-14T03:20:00Z",
+  "notes": "17,786 cells; 4 donors 33/45/59/61y; 10x+Smart-seq2; X log-normalized, var_names=ENSG (symbols in var.feature_name).",
+  "sha256": "9965e67597c926ee491dc30286f25b4e3b1f38db05607a0a385b40f8e8b7f157"
+}

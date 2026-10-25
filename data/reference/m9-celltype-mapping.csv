@@ -1,0 +1,18 @@
+mouse_tissue,mouse_cell_type,mouse_cl_id,human_mapped_cell_type,human_cl_id,disposition
+Lung,fibroblast of lung,CL:0002553,lung fibroblast,CL:0002553,Matched
+Lung,adventitial cell,CL:0000000,lung adventitial fibroblast,CL:0002553,Matched
+Lung,alveolar macrophage,CL:0000583,alveolar macrophage,CL:0000583,Matched
+Lung,classical monocyte,CL:0000860,classical monocyte,CL:0000860,Matched
+Lung,non-classical monocyte,CL:0000875,non-classical monocyte,CL:0000875,Matched
+Lung,NK cell,CL:0000623,natural killer cell,CL:0000623,Matched
+Lung,bronchial smooth muscle cell,CL:0002598,bronchial smooth muscle cell,CL:0002598,Matched
+Lung,B cell,CL:0000236,B cell,CL:0000236,Matched
+Lung,"CD4-positive, alpha-beta T cell",CL:0000624,"CD4-positive, alpha-beta T cell",CL:0000624,Matched
+Kidney,kidney proximal convoluted tubule epithelial cell,CL:0002306,proximal tubule epithelial cell,CL:0002306,Matched
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,CL:0002341,thick ascending limb cell,CL:0002341,Matched
+Kidney,epithelial cell of proximal tubule,CL:0002306,proximal tubule epithelial cell,CL:0002306,Matched
+Kidney,fenestrated cell,CL:0000650,kidney fenestrated endothelial cell,CL:0000650,Matched
+Kidney,macrophage,CL:0000235,kidney macrophage,CL:0000235,Matched
+Kidney,kidney distal convoluted tubule epithelial cell,CL:0002340,distal convoluted tubule cell,CL:0002340,Matched
+Kidney,kidney collecting duct principal cell,CL:0005011,collecting duct principal cell,CL:0005011,Matched
+Kidney,kidney cortex artery cell,CL:0002543,renal arterial vascular smooth muscle cell,CL:0002543,unmatched

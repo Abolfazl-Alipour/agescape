@@ -1,0 +1,17 @@
+mouse_tissue,mouse_cell_type,human_mapped_cell_type,mouse_de_genes_fdr05,status
+Lung,fibroblast of lung,lung fibroblast,36,Homologous unit matched
+Lung,adventitial cell,lung adventitial fibroblast,55,Homologous unit matched
+Lung,alveolar macrophage,alveolar macrophage,35,Homologous unit matched
+Lung,classical monocyte,classical monocyte,9,Homologous unit matched
+Lung,non-classical monocyte,non-classical monocyte,9,Homologous unit matched
+Lung,NK cell,natural killer cell,10,Homologous unit matched
+Lung,bronchial smooth muscle cell,bronchial smooth muscle cell,7,Homologous unit matched
+Lung,B cell,B cell,3,Homologous unit matched
+Lung,"CD4-positive, alpha-beta T cell","CD4-positive, alpha-beta T cell",0,Homologous unit matched
+Kidney,kidney proximal convoluted tubule epithelial cell,proximal tubule epithelial cell,53,Homologous unit matched
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,thick ascending limb cell,18,Homologous unit matched
+Kidney,epithelial cell of proximal tubule,proximal tubule epithelial cell,0,Homologous unit matched
+Kidney,fenestrated cell,kidney fenestrated endothelial cell,10,Homologous unit matched
+Kidney,macrophage,kidney macrophage,16,Homologous unit matched
+Kidney,kidney distal convoluted tubule epithelial cell,distal convoluted tubule cell,23,Homologous unit matched
+Kidney,kidney collecting duct principal cell,collecting duct principal cell,28,Homologous unit matched

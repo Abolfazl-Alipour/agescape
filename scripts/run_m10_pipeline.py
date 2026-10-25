@@ -1,47 +1,18 @@
 #!/usr/bin/env python3
 """
-run_m10_pipeline.py — Gold-standard human lifespan replication of the mouse
-aging program on the DLPFC Lifespan Atlas (controlled-access, AD Knowledge
-Portal DUA; source: Synapse syn52396927, folder syn62064535,
-lifespan_pseudobulk.rds + SingleCellExperiment colData).
+run_m10_pipeline.py — Gold-standard human lifespan replication on the DLPFC Lifespan Atlas
+(controlled-access, AD Knowledge Portal DUA; source: syn52396927 / lifespan_pseudobulk.rds).
 
-Run with the census environment (has rdata; no scanpy needed):
+Run with the census environment:
     /tmp/censusenv/bin/python scripts/run_m10_pipeline.py
 
-M10 question: does the 261-gene mouse aging program (167 up / 94 down,
-results/m6-program-genes.csv) track chronological age across the FULL human
-lifespan (0.2 to 97 years, 284 control donors, 27 DLPFC cell types,
-donor x cell-type pseudobulk already summed by the authors)?
-
-This is the cohort M9 could only approximate: M9's public CELLxGENE cohorts
-were 4 to 213 donors each with narrow age spreads; this atlas is 284 donors
-with age SD 24 years, which clears the pre-registered M4 human floor
-(>=6 donors, donor-age SD >=12) by an order of magnitude.
-
-The score uses the same directional contrast and ortholog set as M9, but the
-input summaries differ. M9 averages per-cell log1p counts; M10 applies log1p
-to donor-level summed counts. Cross-cohort slope magnitudes are therefore not
-directly comparable: score = mean(log1p(count) over up-program genes present)
-minus mean(log1p(count) over down-program genes present).
-
-Robustness (eval discipline): (a) CPM-normalized scores (log1p of counts per
-million within donor x cell type) re-run for every regression; (b) sex-
-adjusted OLS (score ~ age + sex) alongside the primary unadjusted model that
-matches M9; (c) Spearman rank correlation alongside OLS; (d) donors with a
-zero-count cell-type column (no cells of that type sampled) are excluded from
-that cell type's regression and counted.
-
-DUA hygiene: per-donor scores are controlled data. Only aggregate regression
-output is committed to results/; per-donor scores go to data/interim/
-(gitignored). Nothing per-donor ever enters the repo, the app, or the report.
-
-Outputs:
-  results/m10-celltype-regressions.csv   one row per cell type: OLS + Spearman,
-                                          primary and CPM-normalized, sex-adj
-  results/m10-cohort-summary.csv         whole-cortex headline (per-donor mean score)
-  results/m10-provenance.log             cohort composition + recipe decisions
-  figures/m10-dlpfc-whole-score-vs-age.png
-  figures/m10-dlpfc-celltype-forest.png
+Rigorous Rebuild Highlights:
+1. Primary normalization is CPM: log1p(CPM) within donor x cell type.
+2. PsychAD confounder adjustment: ~ Age + Sex + Brain_bank + PMI + TechPC1-3.
+3. Developmental stratum (<20y) fits WITHOUT Brain_bank (100% HBCC, singular otherwise).
+4. Outputs wide results/m10-confounder-audit.csv (27 rows, 1 per cell type).
+5. Strict DUA hygiene: NO per-donor scatter plots or donor files committed.
+   Compute scores in RAM; generates only aggregate forest plot.
 """
 from __future__ import annotations
 
@@ -65,13 +36,13 @@ warnings.filterwarnings("ignore", category=UserWarning, module="rdata")
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FIGURES = REPO / "figures"
-INTERIM = REPO / "data" / "interim"
+REF_DIR = REPO / "data" / "reference"
 EXTERNAL = REPO / "data" / "external" / "dlpfc-atlas"
-for d in (RESULTS, FIGURES, INTERIM):
+for d in (RESULTS, FIGURES):
     d.mkdir(parents=True, exist_ok=True)
 
 RDS = EXTERNAL / "lifespan_pseudobulk.rds"
-MD5 = "aef628e7bc2e5134b790d98c6f57ec48"  # synapseclient-verified at download
+MD5 = "aef628e7bc2e5134b790d98c6f57ec48"
 
 PROV = []
 
@@ -82,30 +53,20 @@ def prov(msg: str) -> None:
     PROV.append(line)
 
 
-# ---------------------------------------------------------------- program genes
-
 def load_program():
-    """Identical recipe to M9: m6 program genes -> human orthologs."""
     pg = pd.read_csv(RESULTS / "m6-program-genes.csv")
     up_m = pg["program_up"].dropna().tolist()
     dn_m = pg["program_down"].dropna().tolist()
-    orth = pd.read_csv(REPO / "data" / "interim" / "orthologs-mouse-human.csv")
+    orth = pd.read_csv(REF_DIR / "orthologs-mouse-human.csv")
     m2h = dict(zip(orth["mouse_gene_symbol"], orth["human_gene_symbol"]))
     up = sorted({m2h[g] for g in up_m if g in m2h and isinstance(m2h[g], str)})
     dn = sorted({m2h[g] for g in dn_m if g in m2h and isinstance(m2h[g], str)})
-    prov(f"program: {len(up_m)} up / {len(dn_m)} down mouse genes -> "
-         f"{len(up)} up / {len(dn)} down human orthologs")
-    prov(f"human-space direction conflicts retained in unequal up/down means: "
-         f"{sorted(set(up) & set(dn))}")
+    prov(f"program: {len(up_m)} up / {len(dn_m)} down mouse genes -> {len(up)} up / {len(dn)} down human orthologs")
     return up, dn
 
 
-# ---------------------------------------------------------------- stats helpers
-
 def ols(y, X):
-    """OLS with intercept in X. Slope of X[:,1], SE, p, 95% CI, plus Spearman.
-    (Copied from run_m9_pipeline.py so M10 uses byte-identical inference.)"""
-    y = np.asarray(y, float)
+    y = np.asarray(y, float).ravel()
     X = np.asarray(X, float)
     n, k = X.shape
     beta, *_ = np.linalg.lstsq(X, y, rcond=None)
@@ -113,25 +74,20 @@ def ols(y, X):
     dof = n - k
     s2 = (resid @ resid) / max(dof, 1)
     cov = s2 * np.linalg.inv(X.T @ X)
-    se = np.sqrt(np.diag(cov))
+    se = np.sqrt(np.maximum(np.diag(cov), 1e-300))
     tstat = beta[1] / se[1]
-    p = 2 * stats.t.sf(abs(tstat), dof)
-    tcrit = stats.t.ppf(0.975, dof)
+    p = 2 * stats.t.sf(abs(tstat), max(dof, 1))
+    tcrit = stats.t.ppf(0.975, max(dof, 1))
     return {
         "slope": beta[1], "se": se[1], "p": p,
         "ci_lo": beta[1] - tcrit * se[1], "ci_hi": beta[1] + tcrit * se[1],
         "rho": stats.spearmanr(X[:, 1], y).statistic,
         "rho_p": stats.spearmanr(X[:, 1], y).pvalue,
+        "dof": dof, "n": n
     }
 
 
-def score_matrix(mat, genes, up, dn, norm=None):
-    """M9 score per donor column: mean(log1p up) - mean(log1p down).
-
-    norm=None: primary pseudobulk recipe (log1p of summed counts).
-    norm='cpm': robustness arm, counts rescaled to per-million within the
-    donor x cell-type column before log1p.
-    Returns (score, coverage, n_up_used, n_dn_used)."""
+def score_matrix(mat, genes, up, dn, norm="cpm"):
     gidx = {g: i for i, g in enumerate(genes)}
     up_i = [gidx[g] for g in up if g in gidx]
     dn_i = [gidx[g] for g in dn if g in gidx]
@@ -148,8 +104,6 @@ def score_matrix(mat, genes, up, dn, norm=None):
     return up_mean - dn_mean, coverage, len(up_i), len(dn_i)
 
 
-# ---------------------------------------------------------------- main pipeline
-
 def main():
     import hashlib
     md5 = hashlib.md5(RDS.read_bytes()).hexdigest()
@@ -158,145 +112,196 @@ def main():
     prov("DUA: AD Knowledge Portal controlled access; aggregates only committed")
 
     up, dn = load_program()
-    prov("scoring recipe: donor-pseudobulk up_mean(log1p) - dn_mean(log1p); "
-         "robustness arm log1p(CPM); input summaries differ from M9")
+    prov("scoring recipe: primary CPM-normalized log1p(CPM); robustness raw counts")
 
     obj = rdata.read_rds(str(RDS))
     cd = obj.colData
     donor_ids = list(cd.rownames)
-    age = np.asarray(cd.listData["Age"], float)
-    sex = np.asarray(cd.listData["Sex"]).astype(str)
+    
+    # Ravel all colData fields
+    age = np.asarray(cd.listData["Age"], float).ravel()
+    sex = np.asarray(cd.listData["Sex"]).astype(str).ravel()
+    brain_bank = np.asarray(cd.listData["Brain_bank"]).astype(str).ravel()
+    pmi = np.asarray(cd.listData["PMI"], float).ravel()
+    tech_pc1 = np.asarray(cd.listData["TechPC1"], float).ravel()
+    tech_pc2 = np.asarray(cd.listData["TechPC2"], float).ravel()
+    tech_pc3 = np.asarray(cd.listData["TechPC3"], float).ravel()
+    
     n_donors = len(donor_ids)
-    prov(f"cohort: {n_donors} control donors, age {age.min():.1f}-{age.max():.1f} "
-         f"(SD {age.std():.1f}), sexes: {dict(pd.Series(sex).value_counts())}")
+    prov(f"cohort: {n_donors} control donors, age {age.min():.1f}-{age.max():.1f} (SD {age.std():.1f})")
 
     cts = sorted(obj.assays.data.listData.keys())
     prov(f"cell types: {len(cts)}")
 
-    rows = []
-    donor_scores = {d: [] for d in donor_ids}
+    # We will build wide results for confounder audit and regression table
+    confounder_rows = []
+    regression_rows = []
+    donor_scores_cpm = {d: [] for d in donor_ids}
+
     for ct in cts:
         m = obj.assays.data.listData[ct]
         genes = [str(g) for g in m.Dimnames[0]]
         assert [str(d) for d in m.Dimnames[1]] == donor_ids, "donor order drift"
-        mat = sp.csc_matrix((np.asarray(m.x), np.asarray(m.i), np.asarray(m.p)),
-                            shape=tuple(m.Dim))
+        mat = sp.csc_matrix((np.asarray(m.x), np.asarray(m.i), np.asarray(m.p)), shape=tuple(m.Dim))
 
         colsum = np.asarray(mat.sum(axis=0)).ravel()
         keep = colsum > 0
         n_zero = int((~keep).sum())
-        if n_zero:
-            prov(f"[{ct}] excluded {n_zero} donors with zero cells of this type")
 
-        sc_raw, cov, nu, nd = score_matrix(mat, genes, up, dn)
-        sc_cpm, _, _, _ = score_matrix(mat, genes, up, dn, norm="cpm")
+        # CPM primary, raw counts secondary
+        sc_cpm, cov, nu, nd = score_matrix(mat, genes, up, dn, norm="cpm")
+        sc_raw, _, _, _ = score_matrix(mat, genes, up, dn, norm=None)
 
-        for d, s, present in zip(donor_ids, sc_raw, keep):
+        for d, s, present in zip(donor_ids, sc_cpm, keep):
             if present:
-                donor_scores[d].append(s)
+                donor_scores_cpm[d].append(s)
 
-        d_age, d_sex = age[keep], sex[keep]
-        r_raw = ols(sc_raw[keep], np.column_stack([np.ones(keep.sum()), d_age]))
-        r_cpm = ols(sc_cpm[keep], np.column_stack([np.ones(keep.sum()), d_age]))
-        Xs = np.column_stack([np.ones(keep.sum()), d_age, (d_sex == "Female").astype(float)])
-        r_sex = ols(sc_raw[keep], Xs)
-        ad = d_age >= 18
-        r_adult = ols(sc_raw[keep][ad],
-                      np.column_stack([np.ones(ad.sum()), d_age[ad]])) if ad.sum() > 10 else None
+        # Base vectors for present donors
+        y = sc_cpm[keep]
+        a = age[keep]
+        s_male = (sex[keep] == "Male").astype(float)
+        bb_hbcc = (brain_bank[keep] == "HBCC").astype(float)
+        pmi_k = pmi[keep]
+        pc1 = tech_pc1[keep]
+        pc2 = tech_pc2[keep]
+        pc3 = tech_pc3[keep]
 
-        rows.append({
+        # 1. Unadjusted All Donors
+        X_unadj = np.column_stack([np.ones(len(y)), a])
+        r_unadj = ols(y, X_unadj)
+
+        # 2. Covariate Adjusted All Donors (~ Age + Sex + Brain_bank + PMI + TechPC1-3)
+        X_covar = np.column_stack([np.ones(len(y)), a, s_male, bb_hbcc, pmi_k, pc1, pc2, pc3])
+        r_covar = ols(y, X_covar)
+
+        # 3. Adult (>=20y) Covariate Adjusted
+        ad_mask = a >= 20.0
+        X_adult = np.column_stack([np.ones(ad_mask.sum()), a[ad_mask], s_male[ad_mask], bb_hbcc[ad_mask], pmi_k[ad_mask], pc1[ad_mask], pc2[ad_mask], pc3[ad_mask]])
+        r_adult = ols(y[ad_mask], X_adult) if ad_mask.sum() >= 10 else None
+
+        # 4. Age >= 40y Covariate Adjusted
+        ge40_mask = a >= 40.0
+        X_ge40 = np.column_stack([np.ones(ge40_mask.sum()), a[ge40_mask], s_male[ge40_mask], bb_hbcc[ge40_mask], pmi_k[ge40_mask], pc1[ge40_mask], pc2[ge40_mask], pc3[ge40_mask]])
+        r_ge40 = ols(y[ge40_mask], X_ge40) if ge40_mask.sum() >= 10 else None
+
+        # 5. Developmental (<20y) — WITHOUT Brain_bank because 100% HBCC!
+        dev_mask = a < 20.0
+        X_dev = np.column_stack([np.ones(dev_mask.sum()), a[dev_mask], s_male[dev_mask], pmi_k[dev_mask], pc1[dev_mask], pc2[dev_mask], pc3[dev_mask]])
+        r_dev = ols(y[dev_mask], X_dev) if dev_mask.sum() >= 10 else None
+
+        # 6. HBCC Only
+        hbcc_mask = bb_hbcc == 1.0
+        X_hbcc = np.column_stack([np.ones(hbcc_mask.sum()), a[hbcc_mask], s_male[hbcc_mask], pmi_k[hbcc_mask], pc1[hbcc_mask], pc2[hbcc_mask], pc3[hbcc_mask]])
+        r_hbcc = ols(y[hbcc_mask], X_hbcc) if hbcc_mask.sum() >= 10 else None
+
+        # 7. MSSM Only
+        mssm_mask = bb_hbcc == 0.0
+        X_mssm = np.column_stack([np.ones(mssm_mask.sum()), a[mssm_mask], s_male[mssm_mask], pmi_k[mssm_mask], pc1[mssm_mask], pc2[mssm_mask], pc3[mssm_mask]])
+        r_mssm = ols(y[mssm_mask], X_mssm) if mssm_mask.sum() >= 10 else None
+
+        # Wide confounder audit row
+        confounder_rows.append({
+            "cell_type": ct,
+            "n_all": len(y),
+            "slope_all": r_unadj["slope"], "se_all": r_unadj["se"], "p_all": r_unadj["p"],
+            "n_covar_adj": len(y),
+            "slope_covar_adj": r_covar["slope"], "se_covar_adj": r_covar["se"], "p_covar_adj": r_covar["p"],
+            "n_adult_ge20": int(ad_mask.sum()),
+            "slope_adult_ge20": r_adult["slope"] if r_adult else np.nan, "se_adult_ge20": r_adult["se"] if r_adult else np.nan, "p_adult_ge20": r_adult["p"] if r_adult else np.nan,
+            "n_age_ge40": int(ge40_mask.sum()),
+            "slope_age_ge40": r_ge40["slope"] if r_ge40 else np.nan, "se_age_ge40": r_ge40["se"] if r_ge40 else np.nan, "p_age_ge40": r_ge40["p"] if r_ge40 else np.nan,
+            "n_dev_lt20": int(dev_mask.sum()),
+            "slope_dev_lt20": r_dev["slope"] if r_dev else np.nan, "se_dev_lt20": r_dev["se"] if r_dev else np.nan, "p_dev_lt20": r_dev["p"] if r_dev else np.nan,
+            "n_hbcc": int(hbcc_mask.sum()),
+            "slope_hbcc": r_hbcc["slope"] if r_hbcc else np.nan, "se_hbcc": r_hbcc["se"] if r_hbcc else np.nan, "p_hbcc": r_hbcc["p"] if r_hbcc else np.nan,
+            "n_mssm": int(mssm_mask.sum()),
+            "slope_mssm": r_mssm["slope"] if r_mssm else np.nan, "se_mssm": r_mssm["se"] if r_mssm else np.nan, "p_mssm": r_mssm["p"] if r_mssm else np.nan,
+        })
+
+        # Regression summary row (CPM primary, raw counts secondary)
+        r_raw_unadj = ols(sc_raw[keep], X_unadj)
+        r_raw_sex = ols(sc_raw[keep], np.column_stack([np.ones(len(y)), a, s_male]))
+        regression_rows.append({
             "cell_type": ct, "n_donors": int(keep.sum()), "n_zero_donors": n_zero,
             "coverage": round(cov, 4), "n_up_genes": nu, "n_down_genes": nd,
-            "slope": r_raw["slope"], "se": r_raw["se"], "p": r_raw["p"],
-            "ci_lo": r_raw["ci_lo"], "ci_hi": r_raw["ci_hi"],
-            "rho": r_raw["rho"], "rho_p": r_raw["rho_p"],
-            "slope_cpm": r_cpm["slope"], "p_cpm": r_cpm["p"],
-            "ci_lo_cpm": r_cpm["ci_lo"], "ci_hi_cpm": r_cpm["ci_hi"],
-            "slope_sex_adj": r_sex["slope"], "p_sex_adj": r_sex["p"],
-            "ci_lo_sex_adj": r_sex["ci_lo"], "ci_hi_sex_adj": r_sex["ci_hi"],
-            "n_adults": int(ad.sum()),
-            "slope_adult": (r_adult["slope"] if r_adult else np.nan),
-            "p_adult": (r_adult["p"] if r_adult else np.nan),
-            "ci_lo_adult": (r_adult["ci_lo"] if r_adult else np.nan),
-            "ci_hi_adult": (r_adult["ci_hi"] if r_adult else np.nan),
+            "slope": r_unadj["slope"], "se": r_unadj["se"], "p": r_unadj["p"],  # primary is CPM
+            "ci_lo": r_unadj["ci_lo"], "ci_hi": r_unadj["ci_hi"],
+            "rho": r_unadj["rho"], "rho_p": r_unadj["rho_p"],
+            "slope_raw_counts": r_raw_unadj["slope"], "p_raw_counts": r_raw_unadj["p"],
+            "slope_covar_adj": r_covar["slope"], "p_covar_adj": r_covar["p"],
+            "n_adults": int(ad_mask.sum()),
+            "slope_adult": r_adult["slope"] if r_adult else np.nan,
+            "p_adult": r_adult["p"] if r_adult else np.nan,
         })
-        adult_p = f"{r_adult['p']:.4g}" if r_adult else "nan"
-        prov(f"[{ct}] slope {r_raw['slope']:+.5f}/yr "
-             f"CI [{r_raw['ci_lo']:+.5f},{r_raw['ci_hi']:+.5f}] p={r_raw['p']:.4g} "
-             f"n={keep.sum()} (cpm p={r_cpm['p']:.4g}, sex-adj p={r_sex['p']:.4g}, "
-             f"adult p={adult_p})")
 
-    ct_df = pd.DataFrame(rows).sort_values("p").reset_index(drop=True)
-    # Benjamini-Hochberg FDR across the 27 cell-type tests, both models
+    # Save wide confounder audit
+    confound_df = pd.DataFrame(confounder_rows)
     from statsmodels.stats.multitest import multipletests
-    ct_df["q_bh"] = multipletests(ct_df["p"], method="fdr_bh")[1]
-    ct_df["q_bh_cpm"] = multipletests(ct_df["p_cpm"], method="fdr_bh")[1]
-    ct_df.to_csv(RESULTS / "m10-celltype-regressions.csv", index=False)
+    for col in ["p_all", "p_covar_adj", "p_adult_ge20", "p_age_ge40", "p_dev_lt20", "p_hbcc", "p_mssm"]:
+        valid = confound_df[col].notna()
+        qcol = col.replace("p_", "q_")
+        confound_df[qcol] = np.nan
+        if valid.sum() > 0:
+            confound_df.loc[valid, qcol] = multipletests(confound_df.loc[valid, col], method="fdr_bh")[1]
 
-    # Average only cell types observed in each donor; absent cell types are missing,
-    # not biological zeros. The number contributing therefore varies by donor.
-    whole = pd.DataFrame({
-        "donor_id": donor_ids, "age": age, "sex": sex,
-        "n_cell_types_observed": [len(donor_scores[d]) for d in donor_ids],
-        "score": [np.mean(donor_scores[d]) for d in donor_ids],
-    })
-    prov(f"whole cortex: {whole['n_cell_types_observed'].min()} to "
-         f"{whole['n_cell_types_observed'].max()} observed cell types averaged per donor")
-    whole.to_csv(INTERIM / "m10-donor-whole-scores.csv", index=False)  # gitignored (DUA)
-    r_all = ols(whole["score"].values,
-                np.column_stack([np.ones(n_donors), whole["age"].values]))
-    Xs_all = np.column_stack([np.ones(n_donors), whole["age"].values,
-                              (whole["sex"] == "Female").astype(float)])
-    r_all_sex = ols(whole["score"].values, Xs_all)
-    summary = pd.DataFrame([{
-        "cohort": "DLPFC_Lifespan_Atlas", "n_donors": n_donors,
-        "age_min": age.min(), "age_max": age.max(), "age_sd": age.std(),
+    confound_path = RESULTS / "m10-confounder-audit.csv"
+    confound_df.to_csv(confound_path, index=False)
+    prov(f"Saved wide {confound_path} ({len(confound_df)} rows, 1 per cell type)")
+
+    # Save celltype regressions table
+    reg_df = pd.DataFrame(regression_rows).sort_values("p").reset_index(drop=True)
+    valid_p = reg_df["p"].notna()
+    reg_df["q_bh"] = np.nan
+    if valid_p.sum() > 0:
+        reg_df.loc[valid_p, "q_bh"] = multipletests(reg_df.loc[valid_p, "p"], method="fdr_bh")[1]
+    reg_df.to_csv(RESULTS / "m10-celltype-regressions.csv", index=False)
+    prov(f"Saved {RESULTS / 'm10-celltype-regressions.csv'}")
+
+    # Whole cortex summary (computed in RAM, no per-donor file saved)
+    whole_scores = [np.mean(donor_scores_cpm[d]) if len(donor_scores_cpm[d]) > 0 else np.nan for d in donor_ids]
+    valid_donors = ~np.isnan(whole_scores)
+    y_wc = np.array(whole_scores)[valid_donors]
+    a_wc = age[valid_donors]
+    s_wc = (sex[valid_donors] == "Male").astype(float)
+    bb_wc = (brain_bank[valid_donors] == "HBCC").astype(float)
+    pmi_wc = pmi[valid_donors]
+    pc1_wc = tech_pc1[valid_donors]
+    pc2_wc = tech_pc2[valid_donors]
+    pc3_wc = tech_pc3[valid_donors]
+
+    r_wc_unadj = ols(y_wc, np.column_stack([np.ones(len(y_wc)), a_wc]))
+    r_wc_covar = ols(y_wc, np.column_stack([np.ones(len(y_wc)), a_wc, s_wc, bb_wc, pmi_wc, pc1_wc, pc2_wc, pc3_wc]))
+
+    summary_df = pd.DataFrame([{
+        "cohort": "DLPFC_Lifespan_Atlas", "n_donors": int(valid_donors.sum()),
+        "age_min": a_wc.min(), "age_max": a_wc.max(), "age_sd": a_wc.std(),
         "n_cell_types": len(cts),
-        "slope": r_all["slope"], "se": r_all["se"], "p": r_all["p"],
-        "ci_lo": r_all["ci_lo"], "ci_hi": r_all["ci_hi"],
-        "rho": r_all["rho"], "rho_p": r_all["rho_p"],
-        "slope_sex_adj": r_all_sex["slope"], "p_sex_adj": r_all_sex["p"],
-        "ci_lo_sex_adj": r_all_sex["ci_lo"], "ci_hi_sex_adj": r_all_sex["ci_hi"],
+        "slope": r_wc_unadj["slope"], "se": r_wc_unadj["se"], "p": r_wc_unadj["p"],
+        "ci_lo": r_wc_unadj["ci_lo"], "ci_hi": r_wc_unadj["ci_hi"],
+        "rho": r_wc_unadj["rho"], "rho_p": r_wc_unadj["rho_p"],
+        "slope_covar_adj": r_wc_covar["slope"], "p_covar_adj": r_wc_covar["p"],
+        "ci_lo_covar_adj": r_wc_covar["ci_lo"], "ci_hi_covar_adj": r_wc_covar["ci_hi"],
     }])
-    summary.to_csv(RESULTS / "m10-cohort-summary.csv", index=False)
-    prov(f"WHOLE CORTEX slope {r_all['slope']:+.5f}/yr "
-         f"CI [{r_all['ci_lo']:+.5f},{r_all['ci_hi']:+.5f}] p={r_all['p']:.4g} "
-         f"(sex-adj p={r_all_sex['p']:.4g}, rho {r_all['rho']:+.3f})")
+    summary_df.to_csv(RESULTS / "m10-cohort-summary.csv", index=False)
+    prov(f"Saved {RESULTS / 'm10-cohort-summary.csv'}")
 
-    # ---- figures
-    fig, ax = plt.subplots(figsize=(6, 4.2))
-    colors = np.where(whole["sex"] == "Female", "#7e57c2", "#0369a1")
-    ax.scatter(whole["age"], whole["score"], s=16, alpha=0.55, c=colors)
-    xs = np.linspace(age.min(), age.max(), 100)
-    ax.plot(xs, r_all["slope"] * xs + (whole["score"].mean() - r_all["slope"] * age.mean()),
-            color="#c23b22", lw=2)
-    for lo, hi in [(r_all["ci_lo"], r_all["ci_hi"])]:
-        pass
-    ax.set_xlabel("donor age (years)")
-    ax.set_ylabel("mouse aging-program score")
-    ax.set_title(f"DLPFC Lifespan Atlas (n={n_donors}): slope {r_all['slope']:+.4f}/yr, "
-                 f"p={r_all['p']:.4g}")
-    fig.tight_layout()
-    fig.savefig(FIGURES / "m10-dlpfc-whole-score-vs-age.png", dpi=150)
-    plt.close(fig)
-
-    f2, a2 = plt.subplots(figsize=(6, 7))
-    d = ct_df.sort_values("slope")
-    a2.errorbar(d["slope"], d["cell_type"],
+    # Forest plot of cell types
+    fig, ax = plt.subplots(figsize=(6.5, 7.5))
+    d = reg_df.sort_values("slope")
+    ax.errorbar(d["slope"], d["cell_type"],
                 xerr=[d["slope"] - d["ci_lo"], d["ci_hi"] - d["slope"]],
                 fmt="o", color="#0369a1", ecolor="#9ec3dd", ms=4)
-    a2.axvline(0, color="#444", lw=0.8)
-    a2.set_xlabel("program score slope per year (95% CI)")
-    a2.set_title("Mouse aging program vs human age, by DLPFC cell type")
-    f2.tight_layout()
-    f2.savefig(FIGURES / "m10-dlpfc-celltype-forest.png", dpi=150)
-    plt.close(f2)
+    ax.axvline(0, color="#444", lw=0.8, linestyle="--")
+    ax.set_xlabel("P1 Aging Signature Score Slope per Year (95% CI)")
+    ax.set_title("Lifespan Aging Signature vs Human Age by DLPFC Cell Type")
+    fig.tight_layout()
+    fig.savefig(FIGURES / "m10-dlpfc-celltype-forest.png", dpi=150)
+    plt.close(fig)
+    prov(f"Saved {FIGURES / 'm10-dlpfc-celltype-forest.png'}")
 
     (RESULTS / "m10-provenance.log").write_text("\n".join(PROV) + "\n")
-    print("\nsignificant cell types (uncorrected p<0.05, primary model):",
-          (ct_df["p"] < 0.05).sum(), "of", len(ct_df))
-    print(ct_df.head(8)[["cell_type", "slope", "p", "slope_cpm", "p_cpm",
-                         "slope_sex_adj", "p_sex_adj"]].to_string(index=False))
+    print(f"\n[m10] Whole cortex CPM slope: {r_wc_unadj['slope']:+.5f}/yr (p={r_wc_unadj['p']:.4g}); covar-adj p={r_wc_covar['p']:.4g}")
+    print("[m10] Done successfully.")
 
 
 if __name__ == "__main__":

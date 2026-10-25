@@ -152,13 +152,13 @@ python3 -m http.server 8080 --directory app
 
 ### Run Full Data Export and Anchor Verification
 ```bash
-/home/reza/miniconda3/envs/agescape/bin/python scripts/export_app_data.py
-/home/reza/miniconda3/envs/agescape/bin/python scripts/check_app_data.py
+python scripts/export_app_data.py
+python scripts/check_app_data.py
 ```
 
 ### Run Master End-to-End Pipeline
 ```bash
-/home/reza/miniconda3/envs/agescape/bin/python scripts/run_all.py
+python scripts/run_all.py
 ```
 
 ---
@@ -168,7 +168,7 @@ python3 -m http.server 8080 --directory app
 An independent review pass re-verified every claim in this document against disk state and closed four residual items:
 
 1. **Stale residue number removed.** The Methods overlay data table still said "64,888 cells verified" (a leftover from the purged fabricated first run). Corrected to 238,186 cells verified, QC of 245,389 raw, matching `notes/gates/M1-report.md` and the M1 h5ad on disk.
-2. **B2 lint scoped to the repo.** `scripts/check_app_data.py` hardcoded an absolute path into `/home/reza/.gemini/...` (another tool's private directory) and linted the walkthrough file living there, guaranteeing a FAIL because the walkthrough changelog quotes the banned phrases. Lint now scans only `app/index.html` and `app/app.js`, the user-facing surfaces the rule exists for.
+2. **B2 lint scoped to the repo.** `scripts/check_app_data.py` hardcoded an absolute path into `<USER_HOME>/.gemini/...` (another tool's private directory) and linted the walkthrough file living there, guaranteeing a FAIL because the walkthrough changelog quotes the banned phrases. Lint now scans only `app/index.html` and `app/app.js`, the user-facing surfaces the rule exists for.
 3. **C3 join documented accurately.** `app/DATA_CONTRACT.md` named the m2 dichotomous log2FC file as the scatter's "ours" side; the literal join gives n=11,836, rho=0.309 and does not reproduce the pinned anchor (n=13,019, rho=0.866). Contract corrected with a dated note: the anchor is defined by the M3 continuous bridge slope join (mirroring `scripts/run_m3_agreement.py`), and the export field was renamed `ours_log2fc` to `ours_bridge_slope` so the values cannot be misread as fold changes. The G3 scatter x-axis was already labeled "Our Bridge Slope"; the tooltip was tightened to match.
 4. **Gate re-run after all fixes: 116 of 116 anchors PASS** (export + `check_app_data.py` on 2026-10-19).
 

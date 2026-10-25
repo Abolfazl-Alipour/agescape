@@ -1,0 +1,13 @@
+{
+  "filename": "GSE152886_nmr_skin_raw.csv.gz",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE152nnn/GSE152886/suppl/GSE152886_raw_data.csv.gz",
+  "accession": "GSE152886",
+  "srp": "SRP268136",
+  "bioproject": "PRJNA640800",
+  "source_paper": "Savina et al. 2022, Aging (PMC9134947); accession cross-checked on GEO record 2026-10-14 (contributor Savina A, title 'Single cell transcriptomics of young and aged naked mole-rat epidermal cells')",
+  "size_bytes": 28659764,
+  "sha256": "ca6a76c272cbaa87d2338510e4f64497e04a535fd157007e8b1c271cd23374d3",
+  "downloaded": "2026-10-14T00:00:00Z",
+  "format": "tab-separated genes x cells raw counts; 20274 genes; 6 samples (1J,5J,6J young; 2V,3V,4V aged)",
+  "notes": "Only supplementary file for the series. SRA raw reads NOT downloaded (authors' processed counts sufficient; rationale per protocol). Sample 2V removed per paper (technical outlier), leaving 5 samples."
+}

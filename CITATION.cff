@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Conserved Aging Explorer: Single-Cell Aging Signature Power, Calibration, and Cross-Species Transfer"
+version: "1.0.0"
+date-released: "2026-10-25"
+url: "https://rezaalipour.com/agescape/"
+repository-code: "https://github.com/Abolfazl-Alipour/agescape"
+license: "MIT"
+authors:
+  - family-names: "Alipour"
+    given-names: "Reza"
+    alias: "Abolfazl Alipour"
+    affiliation: "Kavox Labs"
+    website: "https://rezaalipour.com"
+keywords:
+  - "aging signature"
+  - "single-cell RNA-seq"
+  - "Tabula Muris Senis"
+  - "Tabula Sapiens"
+  - "Heterocephalus glaber"
+  - "transcriptomics"
+  - "cross-species conservation"

@@ -1,0 +1,8 @@
+{
+  "filename": "tms_nature2020_moesm8_dge_results.xlsx",
+  "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2496-1/MediaObjects/41586_2020_2496_MOESM8_ESM.xlsx",
+  "size_bytes": 153332854,
+  "sha256": "91ce4f3cfbfbceabfe4564f375921ba0af171e786a754830d677a7dfa59be6f1",
+  "downloaded": "2026-10-14T03:20:00Z",
+  "notes": "TMS paper (Nature 2020) Supplementary Table: published age-DGE coefficients (DGE_result.tissue_cell.age_coef/bh_p) used for the M3 agreement test."
+}

@@ -10,6 +10,10 @@ dependencies:
   - leidenalg
   - python-igraph
   - scikit-learn
+  - scikit-image>=0.20
+  - statsmodels>=0.14
+  - psutil>=5.9
+  - pyyaml>=6.0
   - matplotlib
   - seaborn
   - jupyter
@@ -22,5 +26,3 @@ dependencies:
   - scikit-misc
   - pydeseq2
   - pip
-  - pip:
-    - scrublet

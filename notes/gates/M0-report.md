@@ -7,14 +7,14 @@
 - [x] `conda run -n agescape python -c "import scanpy, anndata, pydeseq2, scrublet, src; print(scanpy.__version__)"` passes:
   - Output: `SCANPY_VERSION: 1.11.5` (anndata 0.11.3, pydeseq2 0.5.4, scrublet 0.2.3, src import clean).
 - [x] `jupyter kernelspec list` shows `agescape`:
-  - Verified: `agescape /home/reza/.local/share/jupyter/kernels/agescape`.
+  - Verified: `agescape <USER_HOME>/.local/share/jupyter/kernels/agescape`.
 - [x] `environment.lock` committed; `.gitignore` correct; tree matches PLAN.md §3:
   - Initial commits: `ae8e503` and `836817a`.
   - Directories: `data/raw`, `data/interim`, `data/manifest`, `scripts`, `notebooks`, `src`, `results`, `figures`, `notes/gates`, `report`, `app`.
 - [x] `notes/age-bins.md` exists and matches PLAN.md §4.2:
   - Verified file path: `notes/age-bins.md` defining primary 3m vs 18m sex-balanced contrast, continuous human age model, sensitivity designs, and log2FC old-vs-young orientation.
 - [x] Dead files deleted:
-  - Deleted `/home/reza/projects/aging_hypothalamus/data/23872787` and `/home/reza/projects/aging_hypothalamus/data/23872787.1` (0 bytes). Confirmed absent with exit code 2 on subsequent `ls`.
+  - Deleted `<USER_HOME>/projects/aging_hypothalamus/data/23872787` and `<USER_HOME>/projects/aging_hypothalamus/data/23872787.1` (0 bytes). Confirmed absent with exit code 2 on subsequent `ls`.
 
 ## Numbers worth Reza's attention
 1. **Raw droplet scale:** Exactly 245,389 cells across 20,138 genes and 16 tissues, totaling 4,056,529,818 bytes.

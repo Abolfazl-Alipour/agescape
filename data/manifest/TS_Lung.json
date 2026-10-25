@@ -1,0 +1,13 @@
+{
+  "filename": "TS_Lung.h5ad",
+  "dataset_id": "0d2ee4ac-05ee-40b2-afb6-ebb584caa867",
+  "dataset_version_id": "fddf43a3-b7c8-49e9-ac0a-5e24b390849f",
+  "collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5",
+  "url": "https://datasets.cellxgene.cziscience.com/fddf43a3-b7c8-49e9-ac0a-5e24b390849f.h5ad",
+  "size_bytes": 3196847981,
+  "schema_version": "7.1.0",
+  "downloaded": "2026-10-14T03:20:00Z",
+  "notes": "65,847 cells; donors TSP1/2/14/25 = 59/61/59/60y -> NO usable age contrast; used to establish TS v1 adult-cohort limitation.",
+  "sha256": "fc804117a0beadbe1c8aae5e778b8d984f655c9e22280038b32813ee0d916a8f",
+  "optional": true
+}

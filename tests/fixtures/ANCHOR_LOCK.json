@@ -1,0 +1,319 @@
+{
+  "m2_positive_controls": {
+    "Apoe": {
+      "log2fc": 0.099,
+      "pvalue": 0.63
+    },
+    "Il6": {
+      "log2fc": 0.778,
+      "pvalue": 0.267
+    },
+    "Lgals3": {
+      "log2fc": 0.467,
+      "pvalue": 0.344
+    },
+    "Igfbp3": {
+      "log2fc": -0.905,
+      "pvalue": 0.312
+    }
+  },
+  "m4_power": {
+    "n4_sd8_disp0.1": 1.474,
+    "n4_sd8_disp0.2": 2.085,
+    "n4_sd8_disp0.4": 2.949,
+    "n4_sd12_disp0.1": 0.983,
+    "n4_sd12_disp0.2": 1.39,
+    "n4_sd12_disp0.4": 1.966,
+    "n4_sd16_disp0.1": 0.737,
+    "n4_sd16_disp0.2": 1.042,
+    "n4_sd16_disp0.4": 1.474,
+    "n4_sd20_disp0.1": 0.59,
+    "n4_sd20_disp0.2": 0.834,
+    "n4_sd20_disp0.4": 1.179,
+    "n6_sd8_disp0.1": 1.204,
+    "n6_sd8_disp0.2": 1.702,
+    "n6_sd8_disp0.4": 2.408,
+    "n6_sd12_disp0.1": 0.803,
+    "n6_sd12_disp0.2": 1.135,
+    "n6_sd12_disp0.4": 1.605,
+    "n6_sd16_disp0.1": 0.602,
+    "n6_sd16_disp0.2": 0.851,
+    "n6_sd16_disp0.4": 1.204,
+    "n6_sd20_disp0.1": 0.482,
+    "n6_sd20_disp0.2": 0.681,
+    "n6_sd20_disp0.4": 0.963,
+    "n8_sd8_disp0.1": 1.042,
+    "n8_sd8_disp0.2": 1.474,
+    "n8_sd8_disp0.4": 2.085,
+    "n8_sd12_disp0.1": 0.695,
+    "n8_sd12_disp0.2": 0.983,
+    "n8_sd12_disp0.4": 1.39,
+    "n8_sd16_disp0.1": 0.521,
+    "n8_sd16_disp0.2": 0.737,
+    "n8_sd16_disp0.4": 1.042,
+    "n8_sd20_disp0.1": 0.417,
+    "n8_sd20_disp0.2": 0.59,
+    "n8_sd20_disp0.4": 0.834,
+    "n10_sd8_disp0.1": 0.932,
+    "n10_sd8_disp0.2": 1.319,
+    "n10_sd8_disp0.4": 1.865,
+    "n10_sd12_disp0.1": 0.622,
+    "n10_sd12_disp0.2": 0.879,
+    "n10_sd12_disp0.4": 1.243,
+    "n10_sd16_disp0.1": 0.466,
+    "n10_sd16_disp0.2": 0.659,
+    "n10_sd16_disp0.4": 0.932,
+    "n10_sd20_disp0.1": 0.373,
+    "n10_sd20_disp0.2": 0.527,
+    "n10_sd20_disp0.4": 0.746,
+    "n12_sd8_disp0.1": 0.851,
+    "n12_sd8_disp0.2": 1.204,
+    "n12_sd8_disp0.4": 1.702,
+    "n12_sd12_disp0.1": 0.567,
+    "n12_sd12_disp0.2": 0.803,
+    "n12_sd12_disp0.4": 1.135,
+    "n12_sd16_disp0.1": 0.426,
+    "n12_sd16_disp0.2": 0.602,
+    "n12_sd16_disp0.4": 0.851,
+    "n12_sd20_disp0.1": 0.34,
+    "n12_sd20_disp0.2": 0.482,
+    "n12_sd20_disp0.4": 0.681,
+    "n16_sd8_disp0.1": 0.737,
+    "n16_sd8_disp0.2": 1.042,
+    "n16_sd8_disp0.4": 1.474,
+    "n16_sd12_disp0.1": 0.491,
+    "n16_sd12_disp0.2": 0.695,
+    "n16_sd12_disp0.4": 0.983,
+    "n16_sd16_disp0.1": 0.369,
+    "n16_sd16_disp0.2": 0.521,
+    "n16_sd16_disp0.4": 0.737,
+    "n16_sd20_disp0.1": 0.295,
+    "n16_sd20_disp0.2": 0.417,
+    "n16_sd20_disp0.4": 0.59,
+    "n20_sd8_disp0.1": 0.659,
+    "n20_sd8_disp0.2": 0.932,
+    "n20_sd8_disp0.4": 1.319,
+    "n20_sd12_disp0.1": 0.44,
+    "n20_sd12_disp0.2": 0.622,
+    "n20_sd12_disp0.4": 0.879,
+    "n20_sd16_disp0.1": 0.33,
+    "n20_sd16_disp0.2": 0.466,
+    "n20_sd16_disp0.4": 0.659,
+    "n20_sd20_disp0.1": 0.264,
+    "n20_sd20_disp0.2": 0.373,
+    "n20_sd20_disp0.4": 0.527,
+    "n30_sd8_disp0.1": 0.538,
+    "n30_sd8_disp0.2": 0.761,
+    "n30_sd8_disp0.4": 1.077,
+    "n30_sd12_disp0.1": 0.359,
+    "n30_sd12_disp0.2": 0.508,
+    "n30_sd12_disp0.4": 0.718,
+    "n30_sd16_disp0.1": 0.269,
+    "n30_sd16_disp0.2": 0.381,
+    "n30_sd16_disp0.4": 0.538,
+    "n30_sd20_disp0.1": 0.215,
+    "n30_sd20_disp0.2": 0.305,
+    "n30_sd20_disp0.4": 0.431,
+    "n50_sd8_disp0.1": 0.417,
+    "n50_sd8_disp0.2": 0.59,
+    "n50_sd8_disp0.4": 0.834,
+    "n50_sd12_disp0.1": 0.278,
+    "n50_sd12_disp0.2": 0.393,
+    "n50_sd12_disp0.4": 0.556,
+    "n50_sd16_disp0.1": 0.208,
+    "n50_sd16_disp0.2": 0.295,
+    "n50_sd16_disp0.4": 0.417,
+    "n50_sd20_disp0.1": 0.167,
+    "n50_sd20_disp0.2": 0.236,
+    "n50_sd20_disp0.4": 0.334
+  },
+  "m5_hierarchy": {
+    "P0_Raw257": 257,
+    "P1_Clean": 139,
+    "P2_Clean_SexTrimmed": 114,
+    "P3_Clean_SexIEGTrimmed": 110
+  },
+  "m5_heterogeneity": {
+    "n_genes_tested": 4815,
+    "n_between_organ_heterogeneous": 54
+  },
+  "m5_external_overlaps": {
+    "Zhang2021_FACS_330_GAGs": {
+      "shared": 21,
+      "fold_enrichment": 5.83,
+      "fisher_p": 6.421332546387754e-11
+    },
+    "Zhang2021_Droplet_59_GAGs": {
+      "shared": 7,
+      "fold_enrichment": 10.87,
+      "fisher_p": 3.368567559968292e-06
+    },
+    "Saul2022_SenMayo_Mouse_118": {
+      "shared": 10,
+      "fold_enrichment": 11.31,
+      "fisher_p": 1.6820533320387147e-08
+    }
+  },
+  "m6_stats": {
+    "Spec (a) Mouse whole-body all mice (OLS)": {
+      "slope": 0.1344,
+      "p_value": 0.0146995597779293
+    },
+    "Spec (b) Mouse whole-body unpooled individual mice (OLS)": {
+      "slope": 0.046,
+      "p_value": 0.1511163283283683
+    },
+    "Spec (c) Mouse tissue-adjusted CR2 cluster-robust (G=19 clusters)": {
+      "slope": 0.2053,
+      "p_value": 0.0006445076558579
+    },
+    "Spec (d1) Out-of-sample ages (1m, 21m, 24m, 30m)": {
+      "slope": 0.1069,
+      "p_value": 0.0117395093560811
+    },
+    "Spec (d2) Late-adult out-of-sample ages (21m, 24m, 30m plateau)": {
+      "slope": -0.0056,
+      "p_value": 0.9559568072353636
+    },
+    "Spec (d3) 14 non-Lung/Kidney organ holdout adult ages (CR2)": {
+      "slope": 0.144,
+      "p_value": 0.0167323239282376
+    },
+    "Human TS skin aging slope (n=4 donors, LOW-POWERED)": {
+      "slope": -0.5979,
+      "p_value": 0.3654906598965856
+    },
+    "Naked mole-rat skin aging slope (n=5 animals)": {
+      "slope": 0.0058,
+      "p_value": 0.9331790614814766
+    },
+    "Mouse (whole-body) vs NMR slope difference": {
+      "slope": 0.1285,
+      "p_value": 0.1153085566926193
+    },
+    "NMR TOST equivalence (delta_min=0.202, true 90% CI)": {
+      "slope": 0.0058,
+      "p_value": 0.0274788117252943
+    },
+    "NMR aged-vs-young score difference (exact 10-permutation)": {
+      "slope": 0.0019,
+      "p_value": 1.0
+    }
+  },
+  "m9_cohorts": {
+    "total_donors": 621,
+    "cohorts": {
+      "MSSM_DLPFC": {
+        "n_donors": 213,
+        "slope": -0.00019,
+        "p": 0.0282492972608579,
+        "q_bh": 0.3107
+      },
+      "HBCC_DLPFC": {
+        "n_donors": 134,
+        "slope": 0.00017,
+        "p": 0.0996442585419584,
+        "q_bh": 0.548
+      },
+      "RADC_DLPFC": {
+        "n_donors": 18,
+        "slope": 0.0009,
+        "p": 0.3796458767252876,
+        "q_bh": 0.6153
+      },
+      "SEAAD_DLPFC": {
+        "n_donors": 21,
+        "slope": 0.00015,
+        "p": 0.3915684896982317,
+        "q_bh": 0.6153
+      },
+      "Kidney_NormalAdult": {
+        "n_donors": 18,
+        "slope": 0.0006,
+        "p": 0.3125639643192977,
+        "q_bh": 0.6153
+      },
+      "Kidney_LivingDonor": {
+        "n_donors": 19,
+        "slope": -0.00075,
+        "p": 0.2922946580310503,
+        "q_bh": 0.6153
+      },
+      "Kidney_SN_v15": {
+        "n_donors": 10,
+        "slope": 0.00051,
+        "p": 0.2878565824217112,
+        "q_bh": 0.6153
+      },
+      "Kidney_SCR_v15": {
+        "n_donors": 18,
+        "slope": 0.00021,
+        "p": 0.7826797310488731,
+        "q_bh": 0.8945
+      },
+      "Lung_CellRef": {
+        "n_donors": 21,
+        "slope": -0.0001,
+        "p": 0.8944633481626115,
+        "q_bh": 0.8945
+      },
+      "Lung_Integrated": {
+        "n_donors": 137,
+        "slope": 0.00029,
+        "p": 0.494043553432464,
+        "q_bh": 0.6793
+      },
+      "ImmuneAging_BAL": {
+        "n_donors": 12,
+        "slope": 6e-05,
+        "p": 0.8858519938307706,
+        "q_bh": 0.8945
+      }
+    }
+  },
+  "m10_lifespan": {
+    "whole_cortex": {
+      "n_donors": 284,
+      "slope": 0.00032,
+      "p": 0.0118185532812634,
+      "covar_adj_p": 0.8626218107276717
+    },
+    "key_celltypes": {
+      "Astro": {
+        "slope": 0.00092,
+        "p": 0.0039931151645964,
+        "q_bh": 0.0108,
+        "covar_adj_p": 0.4170209009078614,
+        "adult_p": 0.0315663271226094
+      },
+      "Oligo": {
+        "slope": 0.00075,
+        "p": 0.0004824868846843,
+        "q_bh": 0.0019,
+        "covar_adj_p": 0.1183170156364959,
+        "adult_p": 0.1594641749072844
+      },
+      "Adaptive": {
+        "slope": -0.00153,
+        "p": 0.0198465559602555,
+        "q_bh": 0.0412,
+        "covar_adj_p": 0.1573702633123215,
+        "adult_p": 0.3931608945889457
+      },
+      "Micro": {
+        "slope": 0.00154,
+        "p": 2.2491804863889524e-05,
+        "q_bh": 0.0002,
+        "covar_adj_p": 0.0020223467388276,
+        "adult_p": 0.0019190115141212
+      },
+      "OPC": {
+        "slope": 0.00107,
+        "p": 4.5546875925759104e-05,
+        "q_bh": 0.0003,
+        "covar_adj_p": 0.0485510251822196,
+        "adult_p": 0.0048633733079497
+      }
+    }
+  }
+}

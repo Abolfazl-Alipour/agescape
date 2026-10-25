@@ -1,0 +1,120 @@
+unit,tissue,cell_ontology_class,gene,detected,log2FC,lfcSE,pvalue,FDR,nominal_p_lt_0.05,fdr_lt_0.05
+Lung::adventitial cell,Lung,adventitial cell,Apoe,True,0.0990758159290822,0.2057735277105282,0.6301754674824931,0.9017442250590108,False,False
+Lung::adventitial cell,Lung,adventitial cell,Il6,True,0.7775673184485411,0.7012087581474094,0.2674752149014432,,False,False
+Lung::adventitial cell,Lung,adventitial cell,Lgals3,True,0.4671797294330275,0.4940997249896608,0.3443949548975402,0.7825028226923703,False,False
+Lung::adventitial cell,Lung,adventitial cell,Igfbp3,True,-0.9048952685214996,0.8954536146752963,0.3122347348971241,0.7657486773684212,False,False
+Lung::adventitial cell,Lung,adventitial cell,Cdkn2a,False,,,,,False,False
+Lung::adventitial cell,Lung,adventitial cell,Cdkn1a,True,0.009359421475757,0.6690869129319011,0.9888392760101602,0.9967965446367982,False,False
+Lung::adventitial cell,Lung,adventitial cell,Ccl2,True,-4.237965135156398,1.7547636301417917,0.0157300166195693,0.248701801227748,True,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Apoe,True,0.102254899091332,0.1624065480997335,0.5289412675246569,0.9997733012572808,False,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Il6,False,,,,,False,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Lgals3,True,0.9672182884263852,0.5071208718316211,0.0564851574134934,0.9997733012572808,False,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Igfbp3,True,-0.24935630775853,0.6156769905770387,0.6854690025160626,0.9997733012572808,False,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Cdkn2a,False,,,,,False,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Cdkn1a,True,1.0777198686741984,0.3293244860591551,0.0010659458855593,0.1286455413933477,True,False
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,Ccl2,True,1.7012858434944,1.4825910893627094,0.251171531515023,,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Apoe,True,-0.0566140901016827,0.3678097497536597,0.8776710705426034,0.9940091231860406,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Il6,True,-0.0898971873158984,1.9498269115710756,0.9632263901380216,,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Lgals3,True,-0.7009464849564799,0.5505151923881912,0.2029273995052158,0.8603555933811248,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Igfbp3,True,-0.1228295235206895,0.2314524971004323,0.5956336233219846,0.9759664742816592,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Cdkn2a,False,,,,,False,False
+Lung::fibroblast of lung,Lung,fibroblast of lung,Cdkn1a,True,1.9501128181109653,0.2980199677368408,6.006964416179201e-11,2.982457832632974e-07,True,True
+Lung::fibroblast of lung,Lung,fibroblast of lung,Ccl2,True,2.823088727245656,0.7813207130685293,0.0003024102837903,0.0442168565011201,True,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,Apoe,True,-1.1390389537582577,0.3351460401668067,0.0006772311080722,0.1029038863991078,True,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Il6,False,,,,,False,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Lgals3,True,-0.1716339745656608,0.1416667018994987,0.225690951221916,0.9866311157945332,False,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Igfbp3,False,,,,,False,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Cdkn2a,True,1.5485766255124285,0.8336923768890202,0.0632412386187697,0.8017073668872899,False,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Cdkn1a,True,0.5201128505296916,0.2450157434012161,0.0337728627100101,0.6702099316702279,True,False
+Lung::alveolar macrophage,Lung,alveolar macrophage,Ccl2,True,1.5115807095769522,0.8183685106541959,0.0647375651260677,0.8025402914834742,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Apoe,True,0.8485937914634964,0.5706697042350716,0.1370111356600623,0.9998731387509538,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Il6,False,,,,,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Lgals3,True,-0.0029969246173204,0.2712766559780349,0.9911855620803056,0.9998731387509538,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Igfbp3,False,,,,,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Cdkn2a,False,,,,,False,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Cdkn1a,True,1.986944508939236,0.7405991002070305,0.0072989409097982,0.6020126468204796,True,False
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,Ccl2,False,,,,,False,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Apoe,True,0.9435311793883282,0.4392213699567744,0.0316986241741023,0.9697597489869322,True,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Il6,False,,,,,False,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Lgals3,True,1.3964612674852417,0.3612035697758055,0.0001105743683569,0.0175315661030005,True,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Igfbp3,False,,,,,False,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Cdkn2a,False,,,,,False,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Cdkn1a,True,0.5477492615954908,0.4271631439896309,0.1997391009324558,0.999130001986973,False,False
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,Ccl2,False,,,,,False,False
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Apoe,True,0.9255251707169996,0.2312976344356967,6.295636076517945e-05,0.0251069966731535,True,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Il6,False,,,,,False,False
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Lgals3,True,1.0547579015691064,0.247730397997857,2.065550781966596e-05,0.0112328407070219,True,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Igfbp3,True,-0.6033242631597623,1.252393361461566,0.6299927643557841,,False,False
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Cdkn2a,False,,,,,False,False
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Cdkn1a,True,1.5759490360030248,0.8354880504168908,0.0592597096874993,0.9999177083536596,False,False
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,Ccl2,False,,,,,False,False
+Kidney::macrophage,Kidney,macrophage,Apoe,True,0.2025710952487864,0.2243767599617036,0.3666231644656366,0.9999714942616618,False,False
+Kidney::macrophage,Kidney,macrophage,Il6,True,3.493355947688705,4.348417843274051,0.4217652273970771,,False,False
+Kidney::macrophage,Kidney,macrophage,Lgals3,True,0.8466370005255103,0.241605914279683,0.0004579701869032,0.1010151383683638,True,False
+Kidney::macrophage,Kidney,macrophage,Igfbp3,True,-1.5031442573460894,1.056261542879133,0.1547130804253182,,False,False
+Kidney::macrophage,Kidney,macrophage,Cdkn2a,False,,,,,False,False
+Kidney::macrophage,Kidney,macrophage,Cdkn1a,True,0.4169291941584474,0.2505268765238301,0.0960705812262047,0.9999714942616618,False,False
+Kidney::macrophage,Kidney,macrophage,Ccl2,True,1.2287238949503696,0.3249957106027512,0.0001563636534096,0.0482850961728874,True,True
+Lung::NK cell,Lung,NK cell,Apoe,True,-1.1009996240523603,0.3974106893656418,0.0055981844113684,0.8797836363728239,True,False
+Lung::NK cell,Lung,NK cell,Il6,False,,,,,False,False
+Lung::NK cell,Lung,NK cell,Lgals3,True,0.8244268798797862,0.4733892300814219,0.0815887461362467,0.9999514368230312,False,False
+Lung::NK cell,Lung,NK cell,Igfbp3,True,-0.1357831326522968,1.5136627598882364,0.9285216347811508,0.9999514368230312,False,False
+Lung::NK cell,Lung,NK cell,Cdkn2a,False,,,,,False,False
+Lung::NK cell,Lung,NK cell,Cdkn1a,True,0.787579254364141,0.6225095243011571,0.2058110392284012,0.9999514368230312,False,False
+Lung::NK cell,Lung,NK cell,Ccl2,False,,,,,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Apoe,True,0.336132243306104,0.2121632441146785,0.1131233048797717,0.999859601533302,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Il6,True,3.351957336213558,2.9270555841465624,0.2521414182685293,0.999859601533302,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Lgals3,True,1.0949092085841128,1.115344704917563,0.326258573622519,0.999859601533302,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Igfbp3,True,-0.0792707189654798,0.202362841650949,0.6952609237069436,0.999859601533302,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Cdkn2a,False,,,,,False,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Cdkn1a,True,0.5382680281782645,0.2160858496581677,0.0127387145085797,0.999859601533302,True,False
+Kidney::fenestrated cell,Kidney,fenestrated cell,Ccl2,True,1.0835775498032327,1.67047156154445,0.516554500541308,0.999859601533302,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Apoe,True,-0.3550678971067221,0.221156319120062,0.1083823945708612,0.648851605493104,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Il6,False,,,,,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Lgals3,True,0.0937125857525985,0.2624240615140193,0.7210142248216476,0.9508019013890384,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Igfbp3,False,,,,,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Cdkn2a,False,,,,,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Cdkn1a,True,0.4254598934343911,0.3674516811326913,0.246918629753401,0.7706927816038532,False,False
+Lung::non-classical monocyte,Lung,non-classical monocyte,Ccl2,True,0.6493205590549023,1.590821898291214,0.6831512780482991,,False,False
+Lung::classical monocyte,Lung,classical monocyte,Apoe,True,0.1176784296629945,0.2952396680959698,0.6901982008045979,0.98948771136424,False,False
+Lung::classical monocyte,Lung,classical monocyte,Il6,True,0.5139801040731516,1.7493632260696246,0.7689032266858099,0.9954482962466064,False,False
+Lung::classical monocyte,Lung,classical monocyte,Lgals3,True,0.3243261572921687,0.2802483766079534,0.2471575214563572,0.9296744302137016,False,False
+Lung::classical monocyte,Lung,classical monocyte,Igfbp3,False,,,,,False,False
+Lung::classical monocyte,Lung,classical monocyte,Cdkn2a,False,,,,,False,False
+Lung::classical monocyte,Lung,classical monocyte,Cdkn1a,True,0.5208796540122315,0.3941114634543052,0.1862828333978188,0.8958396366577692,False,False
+Lung::classical monocyte,Lung,classical monocyte,Ccl2,True,-0.8930020365009207,0.5659528173885198,0.1145946400699094,0.8526353969070181,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Apoe,True,-0.2545372057853326,0.4960144926187427,0.6078360070747023,0.9997927603742616,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Il6,False,,,,,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Lgals3,True,-0.4814448142723849,0.4786780877517524,0.3145214430929671,0.9997927603742616,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Igfbp3,True,-0.9189729043384528,0.9528314664897652,0.3348126878102881,0.9997927603742616,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Cdkn2a,True,-0.8781363049277646,1.5480005820228824,0.5705298718099867,0.9997927603742616,False,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Cdkn1a,True,2.372367013485362,0.982643439452245,0.0157667546037213,0.9997927603742616,True,False
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,Ccl2,False,,,,,False,False
+Lung::B cell,Lung,B cell,Apoe,True,-0.4228221216056902,0.2707612600199647,0.1183810846627269,0.9997525944832582,False,False
+Lung::B cell,Lung,B cell,Il6,False,,,,,False,False
+Lung::B cell,Lung,B cell,Lgals3,True,0.211390901982564,0.411153439065652,0.6071533091723937,0.9997525944832582,False,False
+Lung::B cell,Lung,B cell,Igfbp3,False,,,,,False,False
+Lung::B cell,Lung,B cell,Cdkn2a,False,,,,,False,False
+Lung::B cell,Lung,B cell,Cdkn1a,True,-0.2824689882754225,0.8747806818210291,0.7467689797586787,0.9997525944832582,False,False
+Lung::B cell,Lung,B cell,Ccl2,False,,,,,False,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Apoe,True,2.094360792492418,0.7227921399630263,0.0037603267905865,0.9998325044857383,True,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Il6,False,,,,,False,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Lgals3,True,1.1629805919016591,0.7577454649701263,0.1248352806008509,0.9998325044857383,False,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Igfbp3,True,-1.071366412962669,0.7105370149853752,0.1315989838467586,0.9998325044857383,False,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Cdkn2a,False,,,,,False,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Cdkn1a,True,2.1072446990983846,0.7574091140132081,0.0053995916344772,0.9998325044857383,True,False
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,Ccl2,True,1.0937815274320195,1.2710297188305868,0.3894872766972586,0.9998325044857383,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Apoe,True,-0.7905906959877468,0.7209489188055548,0.2728174330068362,0.9997466006843974,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Il6,False,,,,,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Lgals3,True,1.4169391648291203,0.7736755414149243,0.0670351208377781,0.9997466006843974,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Igfbp3,False,,,,,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Cdkn2a,False,,,,,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Cdkn1a,False,,,,,False,False
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",Ccl2,False,,,,,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Apoe,True,0.0909980747571478,0.3747403015060768,0.8081373272709261,0.9999068428282624,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Il6,False,,,,,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Lgals3,True,1.8604164412570623,1.4008417894639964,0.1841548684617148,0.9999068428282624,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Igfbp3,True,-0.4672856627400321,0.3820831827108992,0.2213317422726483,0.9999068428282624,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Cdkn2a,False,,,,,False,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Cdkn1a,True,0.5383930583692655,0.2733551973970266,0.0488873108896398,0.9999068428282624,True,False
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,Ccl2,False,,,,,False,False

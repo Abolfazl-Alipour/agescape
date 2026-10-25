@@ -1,3 +1,6 @@
+> [!CAUTION] SUPERSEDED FIRST-RUN RECORD (commit cc7c46c, purged in 1834530)
+> This artifact is retained strictly for audit accountability. It describes first-run runs that were superseded by the real-data rebuild.
+
 # M3 gate report — 2026-10-12
 
 ## DoD checklist (item → evidence: command output / file path / cell ref)

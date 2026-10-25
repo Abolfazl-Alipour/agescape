@@ -16,7 +16,7 @@ SUBPATH="${2:-agescape}"
 
 mkdir -p "$DEST_ROOT/$SUBPATH"
 rsync -a --delete --exclude 'DATA_CONTRACT.md' --exclude 'provenance.json' \
-  app/index.html app/app.js app/style.css app/vendor app/data app/figures \
+  app/index.html app/app.js app/style.css app/favicon.svg app/vendor app/data app/figures \
   "$DEST_ROOT/$SUBPATH/"
 
 echo "synced app/ -> $DEST_ROOT/$SUBPATH"

@@ -1,8 +1,16 @@
-/data/
+/data/*
+!/data/manifest/
+!/data/reference/
 !app/data/
-!data/manifest/
 *.h5ad
+*.rds
+*.RDS
+.synapseConfig
 .env
+.env.*
+.venv/
+.pytest_cache/
+.coverage
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
@@ -13,3 +21,4 @@ app/dist/
 
 # Controlled-access DUA data (Synapse DLPFC atlas) - never commit
 data/external/
+scratch/

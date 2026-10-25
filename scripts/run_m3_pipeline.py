@@ -30,6 +30,13 @@ import time
 import warnings
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.set_seeds import set_seeds
+set_seeds(42)
+
 import numpy as np
 import pandas as pd
 import scipy.stats as stats
@@ -38,15 +45,6 @@ import seaborn as sns
 
 import scanpy as sc
 import anndata as ad
-from pydeseq2.dds import DeseqDataSet
-from pydeseq2.ds import DeseqStats
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
-import src
-from src.set_seeds import set_seeds
 from src.plotting import set_pub_style
 
 set_seeds(42)
@@ -143,7 +141,15 @@ dpt_pseudotime = sub_marrow.obs["dpt_pseudotime"].values
 valid_dpt = ~np.isnan(dpt_pseudotime)
 spearman_dpt_age, sp_p = stats.spearmanr(sub_marrow.obs.loc[valid_dpt, "dpt_pseudotime"], sub_marrow.obs.loc[valid_dpt, "age_months"])
 pearson_dpt_age, pr_p = stats.pearsonr(sub_marrow.obs.loc[valid_dpt, "dpt_pseudotime"], sub_marrow.obs.loc[valid_dpt, "age_months"])
-print(f"DPT Pseudotime vs Chronological Age: Spearman rho = {spearman_dpt_age:.3f} (p = {sp_p:.2e}), Pearson r = {pearson_dpt_age:.3f} (p = {pr_p:.2e})")
+print(f"Cell-level DPT vs Chronological Age: Spearman rho = {spearman_dpt_age:.3f} (p = {sp_p:.2e}), Pearson r = {pearson_dpt_age:.3f} (p = {pr_p:.2e})")
+
+# Mouse-level pseudobulk mean DPT
+mouse_dpt_df = sub_marrow.obs.loc[valid_dpt].groupby("mouse.id", observed=True).agg({
+    "dpt_pseudotime": "mean",
+    "age_months": "first"
+})
+m_spearman_dpt_age, m_sp_p = stats.spearmanr(mouse_dpt_df["dpt_pseudotime"], mouse_dpt_df["age_months"])
+print(f"Mouse-level DPT vs Chronological Age (n={len(mouse_dpt_df)} mice): Spearman rho = {m_spearman_dpt_age:.3f} (p = {m_sp_p:.2e})")
 
 # Mandatory Guard (c): Graph connectivity check across age groups
 print("Checking graph connectivity per age group:")
@@ -226,27 +232,44 @@ for t_name, c_name in units_to_test:
     counts_df = pd.DataFrame(bulk_rows, index=mouse_ids, columns=sub_u.var_names)
     meta_df = pd.DataFrame(meta_rows, index=mouse_ids)
     
-    # Filter expressed genes
+    # Filter to adult mice only (>=3m)
+    adult_mask = meta_df["age_months"] >= 3.0
+    counts_df = counts_df[adult_mask]
+    meta_df = meta_df[adult_mask]
+    
+    # Total library size calculated BEFORE gene filtering!
+    total_lib_size = counts_df.sum(axis=1)
+    
+    # Filter expressed genes (at least 10 counts across adult samples)
     keep_g = counts_df.columns[counts_df.sum(axis=0) >= 10]
     sub_counts = counts_df[keep_g]
     
-    # Linear model per gene: log(CPM + 1) ~ age_months + sex
-    lib_size = sub_counts.sum(axis=1)
-    cpm = (sub_counts.T / lib_size * 1e4).T
-    log_cpm = np.log1p(cpm)
+    # CP10K normalization
+    import statsmodels.api as sm
+    cp10k = (sub_counts.T / total_lib_size * 1e4).T
+    log_cp10k = np.log1p(cp10k)
     
     for g in keep_g:
-        y = log_cpm[g].values
-        x_age = meta_df["age_months"].values
-        # Simple robust regression of gene expression vs age_months
-        res = stats.linregress(x_age, y)
+        y = log_cp10k[g].values
+        X = pd.DataFrame({
+            "intercept": 1.0,
+            "age_months": meta_df["age_months"].values,
+            "is_male": (meta_df["sex"] == "male").astype(float).values
+        })
+        if X["is_male"].nunique() < 2 or np.linalg.matrix_rank(X) < 3:
+            X = X[["intercept", "age_months"]]
+        ols_res = sm.OLS(y, X).fit()
+        slope = ols_res.params.get("age_months", 0.0)
+        pval = ols_res.pvalues.get("age_months", 1.0)
+        std_y = np.std(y)
+        rval = float(np.corrcoef(meta_df["age_months"].values, y)[0, 1]) if std_y > 0 else 0.0
         bridge_records.append({
             "tissue": t_name,
             "cell_ontology_class": c_name,
             "gene": g,
-            "slope_per_month": res.slope,
-            "rvalue": res.rvalue,
-            "pvalue": res.pvalue
+            "slope_per_month": slope,
+            "rvalue": rval,
+            "pvalue": pval
         })
 
 bridge_df = pd.DataFrame(bridge_records)
@@ -255,55 +278,26 @@ bridge_df.to_csv(bridge_path, index=False)
 print(f"Saved continuous bridge model results to {bridge_path}")
 
 # ---------------------------------------------------------
-# Step 4: TMS Literature Agreement Check
+# Step 4: TMS Literature Agreement Check via Official MOESM8
 # ---------------------------------------------------------
-print("\n--- Step 4: Tabula Muris Senis Literature Agreement Check ---", flush=True)
+print("\n--- Step 4: Tabula Muris Senis Literature Agreement Check (MOESM8) ---", flush=True)
 
-# Canonical TMS 2020 published aging markers and literature-verified programs
-# (Nature 2020, Almanzar et al. Tabula Muris Senis consortium)
-tms_published_markers = {
-    # Upregulated with age across tissues
-    "Cdkn2a": 1, "Spp1": 1, "Apoe": 1, "Igfbp3": 1, "Lgals3": 1,
-    "Ccl2": 1, "Il6": 1, "Col1a1": 1, "Col3a1": 1, "Fn1": 1,
-    "B2m": 1, "H2-K1": 1, "H2-D1": 1, "Cd68": 1, "Tyrobp": 1,
-    # Downregulated with age (ribosomal, oxidative phosphorylation, protein synthesis)
-    "Rpl3": -1, "Rpl4": -1, "Rpl5": -1, "Rpl6": -1, "Rps3": -1,
-    "Rps4x": -1, "Rps5": -1, "Rps6": -1, "Eif4e": -1, "Eif3a": -1,
-    "Cox4i1": -1, "Atp5b": -1, "Ndufa1": -1
-}
-
-# Evaluate directional agreement on top cell type (Lung fibroblast or Marrow)
-top_bridge = bridge_df[bridge_df["tissue"] == "Lung"] if (bridge_df["tissue"] == "Lung").sum() > 0 else bridge_df
-tested_genes = []
-for g, lit_dir in tms_published_markers.items():
-    sub_g = top_bridge[top_bridge["gene"] == g]
-    if len(sub_g) > 0:
-        obs_slope = sub_g["slope_per_month"].mean()
-        obs_dir = 1 if obs_slope > 0 else -1
-        agree = (obs_dir == lit_dir)
-        tested_genes.append({
-            "gene": g,
-            "literature_direction": "UP" if lit_dir == 1 else "DOWN",
-            "model_slope_per_month": obs_slope,
-            "model_pvalue": sub_g["pvalue"].mean(),
-            "model_direction": "UP" if obs_dir == 1 else "DOWN",
-            "concordant": agree
-        })
-
-agreement_df = pd.DataFrame(tested_genes)
-n_tested = len(agreement_df)
-n_concordant = agreement_df["concordant"].sum()
-pct_concordance = 100.0 * n_concordant / n_tested if n_tested > 0 else 0.0
-
-# Binomial test vs chance (p=0.5)
-binom_res = stats.binomtest(n_concordant, n_tested, p=0.5, alternative="greater")
-print(f"TMS Literature Agreement: {n_concordant}/{n_tested} genes concordant ({pct_concordance:.1f}%)")
-print(f"Binomial Test for Directional Enrichment: p = {binom_res.pvalue:.4e}")
+# Run official MOESM8 agreement script
+import subprocess
+agreement_script = REPO_ROOT / "scripts" / "run_m3_agreement.py"
+res = subprocess.run([sys.executable, str(agreement_script)], capture_output=True, text=True)
+print(res.stdout)
+if res.returncode != 0:
+    print(f"Error running agreement script: {res.stderr}")
 
 agreement_path = RESULTS_DIR / "m3-agreement-table.csv"
-agreement_df.to_csv(agreement_path, index=False)
-print(f"Saved literature agreement table to {agreement_path}")
-print(agreement_df.to_string(index=False))
+if agreement_path.exists():
+    agreement_df = pd.read_csv(agreement_path)
+    agree_units = (agreement_df["verdict"] == "agree").sum()
+    total_units = len(agreement_df)
+    print(f"MOESM8 Literature Agreement: {agree_units}/{total_units} units concordant ('agree')")
+else:
+    agreement_df = pd.DataFrame()
 
 # ---------------------------------------------------------
 # Step 5: Publication Figures
@@ -320,42 +314,31 @@ sns.stripplot(data=sub_plot.sample(min(len(sub_plot), 500), random_state=42), x=
 plt.title(f"Diffusion Pseudotime Across Age Cohorts ({target_tissue} Differentiation Continuum)")
 plt.xlabel("Chronological Age Group")
 plt.ylabel("Diffusion Pseudotime (DPT, Root = Kit+/Cd34+ Precursor)")
-plt.annotate(f"DPT vs Age Spearman rho = {spearman_dpt_age:.3f} (p = {sp_p:.1e})\nGraph built on 3m young, old cells projected", 
-             xy=(0.03, 0.85), xycoords="axes fraction", fontsize=9, bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="gray", alpha=0.9))
+plt.annotate(f"Cell DPT vs Age Spearman rho = {spearman_dpt_age:.3f} (p = {sp_p:.1e})\nMouse mean DPT vs Age rho = {m_spearman_dpt_age:.3f} (p = {m_sp_p:.1e})\nJoint diffusion map across all marrow cells", 
+             xy=(0.03, 0.82), xycoords="axes fraction", fontsize=9, bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="gray", alpha=0.9))
 plt.tight_layout()
 fig_dpt_path = FIGURES_DIR / "m3-dpt-vs-age.png"
 plt.savefig(fig_dpt_path)
 plt.close()
 print(f"Saved {fig_dpt_path}")
 
-# 2. figures/m3-agreement-table.png: Agreement plot / bar chart
-plt.figure(figsize=(8, 5))
-agree_counts = agreement_df["concordant"].value_counts()
-plt.bar(["Concordant Direction", "Discordant Direction"], [n_concordant, n_tested - n_concordant], color=["#2CA02C", "#D62728"], width=0.5)
-plt.ylabel("Number of Canonical TMS Aging Genes")
-plt.title(f"Directional Concordance vs Published TMS Aging Programs\n({pct_concordance:.1f}% Agreement, Binomial p = {binom_res.pvalue:.2e})")
-for i, count in enumerate([n_concordant, n_tested - n_concordant]):
-    plt.text(i, count + 0.3, f"{count} ({count/n_tested*100:.1f}%)", ha="center", fontweight="bold")
-plt.ylim(0, n_tested + 2)
-plt.tight_layout()
-fig_agree_path = FIGURES_DIR / "m3-agreement-table.png"
-plt.savefig(fig_agree_path)
-plt.close()
-print(f"Saved {fig_agree_path}")
-
-# ---------------------------------------------------------
-# Step 6: Update notes/methods.md
-# ---------------------------------------------------------
-print("\n--- Step 6: Updating notes/methods.md ---", flush=True)
-with open(NOTES_DIR / "methods.md", "a") as f:
-    f.write("\n## 4. Milestone M3 Trajectory & Literature Agreement Parameters\n")
-    f.write(f"- **Continuum Tissue:** '{target_tissue}' selected per written rule (graded hematopoietic differentiation continuum from precursor to mature lineages).\n")
-    f.write(f"- **Root Identification:** Root cell selected based on maximal stem marker expression (Kit, Cd34) within 3m young hematopoietic precursor cells.\n")
-    f.write(f"- **Diffusion Pseudotime (DPT):** `sc.tl.diffmap` + `sc.tl.dpt(n_dcs=10)`. Graph built on young cells and projected.\n")
-    f.write(f"- **Correlation Guard:** DPT vs chronological age Spearman rho = {spearman_dpt_age:.3f} (p = {sp_p:.2e}), Pearson r = {pearson_dpt_age:.3f}.\n")
-    f.write(f"- **Root Sensitivity:** Primary vs alternative root DPT Spearman rho = {alt_corr:.3f}.\n")
-    f.write(f"- **TMS Literature Concordance:** {n_concordant}/{n_tested} ({pct_concordance:.1f}%) directional agreement against published TMS aging markers (Binomial p = {binom_res.pvalue:.4e}).\n")
-
-print(f"Updated {NOTES_DIR / 'methods.md'}")
+# 2. figures/m3-agreement-table.png: Agreement plot / bar chart from MOESM8
+if len(agreement_df) > 0 and "verdict" in agreement_df.columns:
+    plt.figure(figsize=(8, 5))
+    verdict_counts = agreement_df["verdict"].value_counts()
+    categories = ["agree", "partial", "disagree"]
+    counts = [verdict_counts.get(c, 0) for c in categories]
+    colors = ["#2CA02C", "#FF7F0E", "#D62728"]
+    plt.bar(["Agree", "Partial", "Disagree"], counts, color=colors, width=0.5)
+    plt.ylabel("Number of Tested Units")
+    plt.title(f"Directional Concordance vs Published TMS Aging Programs (MOESM8)\n({agree_units}/{total_units} Agree)")
+    for i, count in enumerate(counts):
+        plt.text(i, count + 0.2, f"{count}", ha="center", fontweight="bold")
+    plt.ylim(0, max(counts) + 2)
+    plt.tight_layout()
+    fig_agree_path = FIGURES_DIR / "m3-agreement-table.png"
+    plt.savefig(fig_agree_path)
+    plt.close()
+    print(f"Saved {fig_agree_path}")
 
 print("\n=== M3 PIPELINE FINISHED SUCCESSFULLY ===", flush=True)

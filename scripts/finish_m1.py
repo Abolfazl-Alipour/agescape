@@ -171,28 +171,7 @@ print(f"Saved {umap_celltype_path}", flush=True)
 # Step 8: Update methods.md
 # ---------------------------------------------------------
 print("\n--- Documenting Parameters in notes/methods.md ---", flush=True)
-hvg_df = pd.read_csv(REPO_ROOT / "data" / "interim" / "m1-hvg-union.csv")
-with open(NOTES_DIR / "methods.md", "w") as f:
-    f.write("# Computational Methods and Parameter Registry\n\n")
-    f.write("Binding methodological parameter records across all project milestones.\n\n")
-    f.write("## 1. Literature Verification and Bibliography\n")
-    f.write("- **Tabula Muris Consortium** (2020). *A single-cell transcriptomic atlas characterizes ageing tissues in the mouse.* Nature, 583(7817), 590–595. DOI: 10.1038/s41586-020-2496-1. Data accession: GEO GSE149590 / CELLxGENE collection `0b9d8a04-bb9d-44da-aa27-405c9245e770`.\n")
-    f.write("- **Schaum et al.** (2020). *Ageing hallmarks exhibited by each cell type in the mouse.* Nature, 583(7817), 596–602. DOI: 10.1038/s41586-020-2499-y.\n")
-    f.write("- **The Tabula Sapiens Consortium** (2022). *The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans.* Science, 376(6594), eabl4896. DOI: 10.1126/science.abl4896.\n")
-    f.write("- **Savina et al.** (2022). *Single-cell transcriptomics reveals age-resistant mechanisms in the naked mole-rat.* Aging, 14. Accession: GEO GSE152886.\n\n")
-    f.write("## 2. Milestone M1 Parameters\n")
-    f.write("- **String Sanitization:** All obs columns stripped of leading/trailing whitespace (`src.io.strip_obs_strings`).\n")
-    f.write("- **QC Filters:** Minimum 500 genes/cell, maximum 5,000 genes/cell, minimum 1,000 UMI counts. MT filter N/A (0 MT genes in raw object).\n")
-    f.write("- **Doublet Detection:** Scrublet executed per tissue using `sc.pp.scrublet` (expected doublet rate 0.06, random state 42). Doublets excluded.\n")
-    f.write("- **Normalization:** Total count normalization to 10,000 counts per cell (`sc.pp.normalize_total(target_sum=1e4)`), followed by `sc.pp.log1p` on concatenated cleaned object.\n")
-    f.write(f"- **Feature Selection:** Per-tissue highly variable genes (2,000 genes/tissue, `flavor='seurat'`). Union taken across all 16 tissues: {len(hvg_df)} genes.\n")
-    f.write("- **Dimensionality Reduction:** Sparse TruncatedSVD PCA (`zero_center=False`, n_pcs=50, random_state=42) on HVG subset only. Neighborhood graph: n_neighbors=15, n_pcs=30, random_state=42.\n")
-    f.write("- **UMAP:** Single-threaded execution (`n_jobs=1`, random_state=42) for strict cross-machine reproducibility.\n")
-    f.write("- **Clustering:** Leiden algorithm (`flavor='igraph'`, resolution=1.0, random_state=42).\n")
-    f.write("- **Annotation:** Majority vote of provided `cell_ontology_class` per Leiden cluster.\n")
-    f.write("- **Display Subsample:** Proportional stratified sampling per tissue with a floor of 500 cells/tissue, seed 42.\n")
-
-print(f"Saved {NOTES_DIR / 'methods.md'}", flush=True)
+# Preserved curated notes/methods.md; do not overwrite.
 
 # ---------------------------------------------------------
 # Verification of all 6 figures and results

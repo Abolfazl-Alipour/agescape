@@ -1248,3 +1248,30 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .graph-controls { width: 100%; }
   .graph-support { font-size: 0.88rem; line-height: 1.55; }
 }
+
+/* Explicit chart container dimensions (migrated from inline styles for strict CSP) */
+#chart-g0 { height: 380px; }
+#chart-g4-mini { height: 180px; }
+#chart-g1 { height: 480px; }
+#chart-g3-scatter { height: 420px; }
+#chart-g3-lollipop { height: 220px; }
+.sub-chart-wrap { margin-top: 24px; }
+#chart-g2 { height: 160px; }
+.guard-img { max-width: 100%; border-radius: 6px; margin-top: 8px; }
+#chart-g4-full { height: 240px; }
+#chart-g6 { height: 480px; }
+#chart-g7 { height: 600px; }
+#chart-g9 { height: 520px; }
+#chart-g10 { height: 240px; }
+#chart-g15 { height: 340px; }
+#chart-g11 { height: 180px; }
+#chart-g14 { height: 360px; }
+#chart-g12 { height: 280px; }
+#chart-g13-low, #chart-g13-mid, #chart-g13-high { height: 280px; }
+#chart-g16 { height: 640px; }
+#chart-panel-bar { height: 90px; width: 100%; }
+.hero-subtitle-note { margin-top: 6px; font-size: 0.95rem; color: var(--text-sub); }
+.ai-disclosure { font-size: 0.88rem; line-height: 1.6; color: var(--text-sub); background: var(--bg-mini); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--border-highlight); margin-top: 8px; }
+.text-dir-up { color: var(--color-dir-up); font-weight: 600; }
+.text-dir-down { color: var(--color-dir-down); font-weight: 600; }
+

@@ -367,16 +367,32 @@
     const unitSelect = document.createElement("select");
     unitSelect.className = "accessible-chart-select";
     unitSelect.setAttribute("aria-label", "Inspect a testable mouse cell-type unit");
-    unitSelect.innerHTML = "<option value=''>Inspect a cell-type unit</option>" +
-      state.data.atlas.ranked.map(r => `<option value="${r.unit}">${r.unit.replace("::", ": ")} (${r.n_de_genes} genes)</option>`).join("");
+    const defaultUnitOpt = document.createElement("option");
+    defaultUnitOpt.value = "";
+    defaultUnitOpt.textContent = "Inspect a cell-type unit";
+    unitSelect.appendChild(defaultUnitOpt);
+    state.data.atlas.ranked.forEach(r => {
+      const opt = document.createElement("option");
+      opt.value = r.unit;
+      opt.textContent = `${r.unit.replace("::", ": ")} (${r.n_de_genes} genes)`;
+      unitSelect.appendChild(opt);
+    });
     unitSelect.addEventListener("change", () => { if (unitSelect.value) openUnitPanel(unitSelect.value); });
     document.getElementById("block-g1").appendChild(unitSelect);
 
     const powerSelect = document.createElement("select");
     powerSelect.className = "accessible-chart-select";
     powerSelect.setAttribute("aria-label", "Select a study design and update the power readout");
-    powerSelect.innerHTML = "<option value=''>Select a study design</option>" +
-      state.data["power-grid"].tiles.map((t, i) => `<option value="${i}">${t.n_donors} donors, age SD ${t.sd}, dispersion ${t.dispersion}: effect ${t.min_30y_log2fc}</option>`).join("");
+    const defaultPowerOpt = document.createElement("option");
+    defaultPowerOpt.value = "";
+    defaultPowerOpt.textContent = "Select a study design";
+    powerSelect.appendChild(defaultPowerOpt);
+    state.data["power-grid"].tiles.forEach((t, i) => {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = `${t.n_donors} donors, age SD ${t.sd}, dispersion ${t.dispersion}: effect ${t.min_30y_log2fc}`;
+      powerSelect.appendChild(opt);
+    });
     powerSelect.addEventListener("change", () => {
       if (powerSelect.value !== "") updatePowerReadout(state.data["power-grid"].tiles[Number(powerSelect.value)]);
     });
@@ -572,14 +588,35 @@
     const tbody = document.getElementById("panel-gene-tbody");
     if (!tbody) return;
 
-    tbody.innerHTML = genes.map(g => `
-      <tr>
-        <td><strong>${g.gene}</strong></td>
-        <td><span style="color:${g.direction === 'up' ? PALETTE.dirUp : '#64748b'}">${g.direction.toUpperCase()}</span></td>
-        <td class="font-mono">${g.log2fc !== null ? g.log2fc.toFixed(2) : "N/A"}</td>
-        <td class="font-mono">${g.fdr !== null ? g.fdr.toFixed(4) : "N/A"}</td>
-      </tr>
-    `).join("");
+    tbody.replaceChildren();
+    genes.forEach(g => {
+      const tr = document.createElement("tr");
+
+      const tdGene = document.createElement("td");
+      const strong = document.createElement("strong");
+      strong.textContent = g.gene;
+      tdGene.appendChild(strong);
+      tr.appendChild(tdGene);
+
+      const tdDir = document.createElement("td");
+      const spanDir = document.createElement("span");
+      spanDir.className = g.direction === "up" ? "text-dir-up" : "text-dir-down";
+      spanDir.textContent = g.direction.toUpperCase();
+      tdDir.appendChild(spanDir);
+      tr.appendChild(tdDir);
+
+      const tdLfc = document.createElement("td");
+      tdLfc.className = "font-mono";
+      tdLfc.textContent = g.log2fc !== null ? g.log2fc.toFixed(2) : "N/A";
+      tr.appendChild(tdLfc);
+
+      const tdFdr = document.createElement("td");
+      tdFdr.className = "font-mono";
+      tdFdr.textContent = g.fdr !== null ? g.fdr.toFixed(4) : "N/A";
+      tr.appendChild(tdFdr);
+
+      tbody.appendChild(tr);
+    });
   }
 
   function filterUnitGenes(query) {
@@ -1299,19 +1336,47 @@
     const tbody = document.getElementById("g15-tbody");
     if (tbody) {
       const fmt = v => (v * 1000).toFixed(2);
-      const NEURON_DAGGER = (r) => (r.cohort === "MSSM_DLPFC" && /L2\/3 intratelencephalic/.test(r.cell_type))
-        ? " &#8224;" : "";
-      tbody.innerHTML = hc.celltypes.slice(0, 10).map(r => `
-        <tr>
-          <td>${humanize(r.cohort)}</td>
-          <td>${r.cell_type}${NEURON_DAGGER(r)}</td>
-          <td class="font-mono">${r.n_donors}</td>
-          <td class="font-mono">${r.slope_per_year >= 0 ? "+" : ""}${fmt(r.slope_per_year)}</td>
-          <td class="font-mono">${r.p.toExponential(2)}</td>
-          <td>${r.verdict === "POWERED-FLOOR"
-            ? `<span class="badge-sc">meets floor</span>`
-            : `<span class="species-none">low power</span>`}</td>
-        </tr>`).join("");
+      tbody.replaceChildren();
+      hc.celltypes.slice(0, 10).forEach(r => {
+        const tr = document.createElement("tr");
+
+        const tdCohort = document.createElement("td");
+        tdCohort.textContent = humanize(r.cohort);
+        tr.appendChild(tdCohort);
+
+        const tdCt = document.createElement("td");
+        tdCt.textContent = r.cell_type + ((r.cohort === "MSSM_DLPFC" && /L2\/3 intratelencephalic/.test(r.cell_type)) ? " †" : "");
+        tr.appendChild(tdCt);
+
+        const tdDonors = document.createElement("td");
+        tdDonors.className = "font-mono";
+        tdDonors.textContent = String(r.n_donors);
+        tr.appendChild(tdDonors);
+
+        const tdSlope = document.createElement("td");
+        tdSlope.className = "font-mono";
+        tdSlope.textContent = (r.slope_per_year >= 0 ? "+" : "") + fmt(r.slope_per_year);
+        tr.appendChild(tdSlope);
+
+        const tdP = document.createElement("td");
+        tdP.className = "font-mono";
+        tdP.textContent = r.p.toExponential(2);
+        tr.appendChild(tdP);
+
+        const tdVerdict = document.createElement("td");
+        const spanBadge = document.createElement("span");
+        if (r.verdict === "POWERED-FLOOR") {
+          spanBadge.className = "badge-sc";
+          spanBadge.textContent = "meets floor";
+        } else {
+          spanBadge.className = "species-none";
+          spanBadge.textContent = "low power";
+        }
+        tdVerdict.appendChild(spanBadge);
+        tr.appendChild(tdVerdict);
+
+        tbody.appendChild(tr);
+      });
     }
   }
 
@@ -1704,16 +1769,49 @@
         ? sorted.filter(d => d.n.toLowerCase().includes(q) || d.latin.toLowerCase().includes(q))
         : sorted;
       const shown = hits.slice(0, PAGE);
-      tbody.innerHTML = shown.map(d => `
-        <tr>
-          <td><strong>${esc(d.n)}</strong><br><span class="species-latin">${esc(d.latin)}</span></td>
-          <td>${esc(d.cls)}</td>
-          <td class="font-mono">${d.long}</td>
-          <td class="font-mono">${d.kg != null ? d.kg.toLocaleString("en-US") : "n/a"}</td>
-          <td>${d.sc === "yes"
-            ? `<span class="badge-sc">In this explorer</span>`
-            : `<span class="species-none">Not included</span>`}</td>
-        </tr>`).join("");
+      tbody.replaceChildren();
+      shown.forEach(d => {
+        const tr = document.createElement("tr");
+
+        const tdName = document.createElement("td");
+        const strong = document.createElement("strong");
+        strong.textContent = d.n;
+        tdName.appendChild(strong);
+        tdName.appendChild(document.createElement("br"));
+        const spanLatin = document.createElement("span");
+        spanLatin.className = "species-latin";
+        spanLatin.textContent = d.latin;
+        tdName.appendChild(spanLatin);
+        tr.appendChild(tdName);
+
+        const tdCls = document.createElement("td");
+        tdCls.textContent = d.cls;
+        tr.appendChild(tdCls);
+
+        const tdLong = document.createElement("td");
+        tdLong.className = "font-mono";
+        tdLong.textContent = String(d.long);
+        tr.appendChild(tdLong);
+
+        const tdKg = document.createElement("td");
+        tdKg.className = "font-mono";
+        tdKg.textContent = d.kg != null ? d.kg.toLocaleString("en-US") : "n/a";
+        tr.appendChild(tdKg);
+
+        const tdSc = document.createElement("td");
+        const spanBadge = document.createElement("span");
+        if (d.sc === "yes") {
+          spanBadge.className = "badge-sc";
+          spanBadge.textContent = "In this explorer";
+        } else {
+          spanBadge.className = "species-none";
+          spanBadge.textContent = "Not included";
+        }
+        tdSc.appendChild(spanBadge);
+        tr.appendChild(tdSc);
+
+        tbody.appendChild(tr);
+      });
       if (note) {
         note.textContent = q
           ? `${hits.length} matching species. Showing the first ${shown.length} by longevity.`
