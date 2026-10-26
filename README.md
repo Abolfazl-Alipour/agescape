@@ -17,7 +17,10 @@ This analysis was executed by AI coding agents under a strict no-invented-number
 - **Flagship Manuscript (Full Methods & Results):** [`report/manuscript-aging-mechanisms.md`](report/manuscript-aging-mechanisms.md)
   - *Title:* "Cell-Type-Private Transcriptional Signatures, Compositional Remodeling, and Epigenetic Clock Dynamics Across Mammalian Aging"
 - **Peer-Review Guide & Threat Model:** [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md)
-- **Triple 30-Round Scientific Crucible Review:** [`crucible_review_3x_three_hypotheses.md`](crucible_review_3x_three_hypotheses.md)
+- **Scientific Walkthroughs & Crucible Reviews:** [`notes/crucibles/`](notes/crucibles/)
+  - Final Reconciliation Walkthrough: [`notes/crucibles/walkthrough_final_reconciliation.md`](notes/crucibles/walkthrough_final_reconciliation.md)
+  - Final 10-Round Crucible Review: [`notes/crucibles/crucible_walkthrough_review_final_reconciliation.md`](notes/crucibles/crucible_walkthrough_review_final_reconciliation.md)
+  - Triple 30-Round Scientific Crucible Review: [`notes/crucibles/crucible_review_3x_three_hypotheses.md`](notes/crucibles/crucible_review_3x_three_hypotheses.md)
 - **Current Operations & Deployment:** [`HANDOFF.md`](HANDOFF.md)
 - **App Data Contract:** [`app/DATA_CONTRACT.md`](app/DATA_CONTRACT.md)
 - **Citation Metadata:** [`CITATION.cff`](CITATION.cff)
