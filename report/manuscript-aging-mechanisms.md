@@ -265,4 +265,8 @@ Donor pseudobulk expression was calculated in mouse lung fibroblasts for 11 targ
 
 All code, pipelines, and tests are public at `https://github.com/Abolfazl-Alipour/agescape`.  
 An interactive data explorer is available at `https://rezaalipour.com/agescape/`.  
-All 16 automated validation tests run cleanly via `pytest tests/ -v`.
+All 16 automated validation tests run cleanly via `pytest tests/ -v`.  
+Full forensic audit records, implementation plans, and independent 10-round scientific crucible reviews across 5 perspectives are documented in [`notes/crucibles/`](../notes/crucibles/):
+* Final Reconciliation Walkthrough: [`walkthrough_final_reconciliation.md`](../notes/crucibles/walkthrough_final_reconciliation.md)
+* Final 10-Round Scientific Crucible Review: [`crucible_walkthrough_review_final_reconciliation.md`](../notes/crucibles/crucible_walkthrough_review_final_reconciliation.md)
+* Triple 30-Round Scientific Crucible Review: [`crucible_review_3x_three_hypotheses.md`](../notes/crucibles/crucible_review_3x_three_hypotheses.md)
