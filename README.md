@@ -15,7 +15,7 @@ This analysis was executed by AI coding agents under a strict no-invented-number
 ## Peer-Review & Publication Resources
 
 - **Flagship Manuscript (Full Methods & Results):** [`report/manuscript-aging-mechanisms.md`](report/manuscript-aging-mechanisms.md)
-  - *Title:* "Compartmentalized Transcriptional Entropy, Chromatin Maintenance Failure, and Compositional Remodeling Define Mammalian Organ Aging"
+  - *Title:* "Cell-Type-Private Transcriptional Signatures, Compositional Remodeling, and Epigenetic Clock Dynamics Across Mammalian Aging"
 - **Peer-Review Guide & Threat Model:** [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md)
 - **Triple 30-Round Scientific Crucible Review:** [`crucible_review_3x_three_hypotheses.md`](crucible_review_3x_three_hypotheses.md)
 - **Current Operations & Deployment:** [`HANDOFF.md`](HANDOFF.md)
@@ -27,23 +27,24 @@ This analysis was executed by AI coding agents under a strict no-invented-number
 ## Core Scientific Findings
 
 ### 1. Cell-Type-Private Transcriptional Aging vs. Whole-Tissue Averaging
-- **Whole-Tissue Cortex Null:** In the SEA-AD DLPFC lifespan atlas (284 donors, ages 0.2–97 years), whole-tissue CPM scores attenuate completely to null after adjusting for brain bank, PMI, and technical covariates ($\beta = +0.00015/\text{yr}, p = 0.863$).
+- **Whole-Tissue Cortex Null:** In the SEA-AD DLPFC lifespan atlas (284 donors, ages 0.2–97 years), whole-tissue CPM scores attenuate completely to null after adjusting for brain bank, PMI, and technical covariates ($\beta = +0.000027/\text{yr}, p = 0.8626$; unadjusted $\beta = +0.000318/\text{yr}, p = 0.0118$).
 - **Cell-Type-Private Cross-Species Replications:** The mouse-derived aging signature transports across species specifically in glial populations:
   - **Oligodendrocyte Precursor Cells (OPCs):** Significant positive slope across all 4 independent human DLPFC cohorts (SEA-AD $p = 1.1 \times 10^{-4}$, surviving Benjamini-Hochberg across all 225 cell-type tests at $q = 0.021$; MSSM $p = 0.008$; HBCC $p = 0.024$; RADC $p = 0.033$).
   - **Microglia:** Significant positive slope across 3 human cohorts (SEA-AD $p = 0.005$, MSSM $p = 0.026$, RADC $p = 0.031$; M10 adult lifespan stratum $\beta = +0.00142/\text{yr}, p = 0.0019$).
+- **Neuronal Divergence:** Major excitatory projection neurons exhibit highly significant negative slopes (e.g., `EN_L3_5_IT_3`, adjusted $\beta = -0.00140/\text{yr}, p = 3.79 \times 10^{-7}, q = 1.02 \times 10^{-5}$), demonstrating cell-type-private divergence rather than whole-tissue synchronized aging.
 
 ### 2. Naked Mole-Rat as an Evolutionary Negative Control
-- **Comparative Senescence Contrast:** While the mouse signature rises robustly with age across 23 mice (whole-body slope $+0.134, p = 0.015$; REML slope $+0.205, p = 0.00064$), it remains completely flat in the negligible-senescence naked mole-rat (*Heterocephalus glaber*, GSE152886 skin: slope $+0.0035, p = 0.925, n = 5$).
-- **Equivalence Confirmed:** Two-One-Sided-Test (TOST) equivalence confirms flatness within the mouse margin ($p_{\text{TOST}} = 0.027$), and epidermal *Igfbp3* expression is unchanged (221.8 vs 223.8 CPM), confirming that the signature tracks true biological senescence rather than chronometric drift.
+- **Comparative Senescence Contrast:** While the mouse signature rises across adult mice (whole-body OLS $+0.1344, p = 0.0147$; REML cluster-robust $+0.2053, p = 0.00064$), it remains flat in the negligible-senescence naked mole-rat (*Heterocephalus glaber*, GSE152886 skin: slope $+0.0058$ per unit of normalized maximum lifespan, $p = 0.9332, n = 5$).
+- **Equivalence Analysis:** Two-One-Sided-Test (TOST) equivalence confirms flatness within the mouse-derived margin ($p_{\text{TOST}} = 0.0275$ under $\delta_{\min} = 0.202$), and epidermal *Igfbp3* expression is unchanged (221.8 vs 223.8 CPM). At $n = 5$ animals, the 95% CI $[-0.093, +0.100]$ rules out mouse-rate chronological progression but cannot exclude lifespan-scaled drift. Additionally, mouse whole-body slopes exhibit an unpooled OLS slope of $+0.0465$ ($p = 0.1511$) and a plateau in late adulthood (21–30m slope $-0.0056, p = 0.9560$).
 
 ### 3. Transcriptional Noise and Fibroblast Marker Audit
 - **Rarefied 1,500-UMI Single-Cell Noise:** In mouse lung downsampled to 1,500 UMIs/cell, lung fibroblasts display a nominal unadjusted increase in Distance-to-Median noise ($\beta = +0.00109/\text{mo}, p = 0.0443$, FDR $q = 0.2713$), whereas classical monocytes display flat noise ($\beta = +0.00008/\text{mo}, p = 0.8923$) alongside significant shifts in mean expression.
 - **Fibroblast Marker Audit:** In mouse lung fibroblasts, *Cdkn1a* (p21) is significantly upregulated ($\beta = +0.1080/\text{mo}, p = 0.0029, q = 0.0322, R^2 = 0.777$), while *Sirt6* exhibits an exploratory downward trend ($\beta = -0.0136/\text{mo}, p = 0.0245, q = 0.1350$).
 
 ### 4. Compositional Remodeling Across Mammals
-- **Within-Species Remodeling:** Aitchison Centered Log-Ratio (CLR) reveals significant remodeling in mouse lung (6 cell types with FDR $q < 0.05$) and human adult lung (4 cell types with FDR $q < 0.05$, including club cell decline $q = 0.0123$ and type 2 alveolar cell expansion $q = 0.0220$).
+- **Within-Species Remodeling:** Aitchison Centered Log-Ratio (CLR) reveals significant remodeling in mouse lung (6 cell types across $N = 16$ lung-profiled mice show FDR $q < 0.05$) and human adult lung (4 cell types across $N = 117$ adult donors show FDR $q < 0.05$, including club cell decline $q = 0.0123$ and type 2 alveolar cell expansion $q = 0.0220$).
 - **Resolution of Pediatric Confound:** In humans, the apparent B-cell collapse was driven entirely by pediatric donors (ages 2–19); restricting to adult donors ($\ge 20$ yr, $N = 117$) yields a flat B-cell trajectory ($\beta = -0.0027/\text{yr}, p = 0.7601$).
-- **Cross-Species Divergence:** Homologous trajectory concordance is not established (sign concordance 3/7, two-sided binomial $p = 1.000$, Spearman $\rho = -0.286$).
+- **Cross-Species Divergence:** Homologous trajectory concordance is not statistically established (sign concordance 3/7, two-sided binomial $p = 1.000$, Spearman $\rho = -0.286$).
 
 ### 5. Calibrated Pan-Mammalian Epigenetic Clock 2
 - Evaluated with Lu et al.'s (2023) double-exponential inverse link function $\exp(-\exp(-\hat{\eta}))$:
@@ -64,7 +65,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements-ci.txt
 
-# 3. Run automated verification suite (15 / 15 tests pass)
+# 3. Run automated verification suite (16 / 16 tests pass)
 pytest tests/ -v
 
 # 4. Run individual hypothesis pipelines
