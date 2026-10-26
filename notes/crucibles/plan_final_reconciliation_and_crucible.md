@@ -5,7 +5,7 @@
 Following a line-by-line re-review of the codebase (`agescape` @ commit `f58245d`) and manuscript (`report/manuscript-aging-mechanisms.md`), five specific substantive vulnerabilities and two presentation defects have been identified:
 1. **Mouse Donor Count & Slope Mismatches in Composition (Section 2.5):** The manuscript claimed $N = 23$ mice and quoted stale slopes; the committed `results/h2-composition-mouse-lung.csv` correctly uses the $N = 16$ mice with lung tissue (T cell $+0.0641$, vein endothelial $+0.0587$, fibroblast $-0.0980$).
 2. **Whole-Cortex Prose Drift (Section 2.1):** The unadjusted slope was reported as $+0.00049$ and adjusted as $+0.00015$; committed `results/m10-cohort-summary.csv` has unadjusted $+0.000318$ ($p = 0.0118$) and adjusted $+0.000027$ ($p = 0.8626$).
-3. **Naked Mole-Rat Framing & Units (Section 2.2):** Slopes were mislabeled as `/mo` instead of per unit of normalized maximum lifespan. The reported slope was $+0.0035$ instead of committed $+0.0058$ ($p = 0.933$). The TOST margin ($\delta_{\min} = 0.202$) tests mouse-rate equivalence, but zero-margin equivalence fails ($p = 0.329$). Rhetoric claiming it "proves senescence specificity" must be softened to what $n = 5$ supports.
+3. **Naked Mole-Rat Framing & Units (Section 2.2):** Slopes were mislabeled as `/mo` instead of per unit of normalized maximum lifespan. The reported slope was $+0.0035$ instead of committed $+0.0058$ ($p = 0.933$). The TOST margin ($\delta_{\min} = 0.202$) tests mouse-rate equivalence, but the direct mouse-vs-NMR contrast is non-significant ($p = 0.115$). Rhetoric claiming it "proves senescence specificity" must be softened to what $n = 5$ supports.
 4. **Mouse Positive Control Completeness:** Table 2.2 reported only 3 of 6 specifications, omitting the unpooled donor OLS ($p = 0.151$) and the late-adult plateau ($p = 0.956$). All 6 specifications must be reported.
 5. **Human Glial & Neuronal Transport Transparency (Section 2.1):** Full reporting of the 27-cell-type M10 adjusted regressions, showing that the signature rises in glia (Microglia $p = 0.0020$, OPC $p = 0.0486$) and declines in excitatory neurons (`EN_L3_5_IT_3`, $p = 3.79 \times 10^{-7}$). Disclosing signature tiers (P1_Clean vs P0_Raw257) and cohort power status (RADC low-powered).
 6. **Integrity & Formatting Clean-Up:** Strip local `file:///` links, fix corresponding email, remove phantom links in README, and add a complete References section.
@@ -52,7 +52,7 @@ flowchart TD
 
 ### Perspective 2: Evolutionary Biologist & Aging Geneticist
 #### Round 3: Naked Mole-Rat Equivalence Constraints & Rhetoric Calibration
-* **Critique:** Claiming that $n = 5$ NMR skin samples "proves" senescence specificity is excessive. The TOST margin $\delta_{\min} = 0.202$ tests against the mouse rate, and zero-margin equivalence fails ($p = 0.329$).
+* **Critique:** Claiming that $n = 5$ NMR skin samples "proves" senescence specificity is excessive. The TOST margin $\delta_{\min} = 0.202$ tests against the mouse rate, and the direct mouse-vs-NMR contrast is non-significant ($p = 0.115$).
 * **Remediation Requirement:** Soften language: replace "proves" and "verifies" with "is consistent with." State clearly that the TOST margin rules out mouse-rate chronological drift, but that $n = 5$ cannot rule out slow lifespan-scaled drift, and that tissue differences (skin vs multi-organ) remain.
 
 #### Round 4: Transparent Reporting of All 6 Mouse Specifications

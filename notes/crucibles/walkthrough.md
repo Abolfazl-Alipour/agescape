@@ -28,7 +28,7 @@ Key achievements:
    - Validated P1_Clean against published external aging signatures: Zhang et al. (2021) FACS 330 GAGs (21 shared, 5.83-fold, $p=6.42\times 10^{-11}$), Zhang et al. Droplet 59 GAGs (7 shared, 10.87-fold, $p=3.37\times 10^{-6}$), and Saul et al. (2022) SenMayo 118 (10 shared, 11.31-fold, $p=1.68\times 10^{-8}$).
 7. **Multi-Specification Scoring & TOST Equivalence (M6):**
    - Whole-body mouse: Spec (a) All 23 mice slope = 0.134 ($p=0.015$); Spec (c) REML + CR2 cluster-robust across 19 physical clusters slope = 0.205 ($p=0.00064, df=8.48$); Spec (d1) Out-of-sample ages slope = 0.107 ($p=0.012$); Spec (d2) Late-adult plateau slope = -0.0056 ($p=0.956$); Spec (d3) 14 non-Lung/Kidney holdout tissues slope = 0.144 ($p=0.0167, df=5.51$).
-   - Naked mole-rat: 1:1 Ensembl 106 ortholog mapping; 5-animal epidermis pseudobulk confirmed *Igfbp3* expression is identical between young (221.8 CPM) and aged (223.8 CPM). TOST equivalence with pre-specified mouse margin $\delta_{\min}=0.202$ established 90% CI $[-0.145, 0.157]$ ($p_{\text{TOST}}=0.027$; exact permutation $p=1.0$); at zero margin, equivalence is not established ($p=0.329$).
+   - Naked mole-rat: 1:1 Ensembl 106 ortholog mapping; 5-animal epidermis pseudobulk confirmed *Igfbp3* expression is identical between young (221.8 CPM) and aged (223.8 CPM). TOST equivalence with pre-specified mouse margin $\delta_{\min}=0.202$ established 90% CI $[-0.145, 0.157]$ ($p_{\text{TOST}}=0.027$; exact permutation $p=1.0$); direct mouse-vs-NMR contrast is non-significant ($p=0.115$).
 8. **Human Lifespan Atlas Confounder Audit (M10):**
    - Primary CPM normalization (`log1p(CPM)`) across 284 control donors (age 0.2–97.0y).
    - Produced wide 27-row confounder audit (`results/m10-confounder-audit.csv`).
@@ -101,7 +101,7 @@ PASS: all 146 anchors hold.
 | **M6** | Whole-body Mouse | Spec (a) slope = 0.134, p=0.015; Spec (c) CR2 slope = 0.205, p=0.00064 | PASS |
 | **M6** | Holdout Tissues | Spec (d3) 14 non-Lung/Kidney holdout tissues slope = 0.144, p=0.0167 | PASS |
 | **M6** | Late-adult Plateau | Spec (d2) 21m–30m plateau slope = -0.0056, p=0.956 | PASS |
-| **M6** | NMR TOST | delta_min=0.202, 90% CI [-0.145, 0.157], p=0.027; zero-margin p=0.329 | PASS |
+| **M6** | NMR TOST | delta_min=0.202, 90% CI [-0.145, 0.157], p=0.027; direct contrast p=0.115 | PASS |
 | **M6** | NMR Igfbp3 | 5-animal pseudobulk CPM: 221.8 young vs 223.8 aged (unchanged) | PASS |
 | **M9** | Public Human Cohorts | 621 control donors across 11 cohorts; MSSM decline p=0.028, BH q=0.311 | PASS |
 | **M10** | DLPFC Lifespan Atlas | 284 control donors; unadjusted CPM slope +0.00032/yr (p=0.0118); covar-adjusted p=0.8626 (null) | PASS |

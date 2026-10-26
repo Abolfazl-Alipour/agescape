@@ -121,7 +121,10 @@ def main():
 
     # Evaluate Human Performance by Tissue
     h_tissue_rows = []
-    tissues = ["All Tissues", "Lung", "Kidney", "Liver", "Heart", "Muscle", "Blood", "Adipose", "Spleen"]
+    tissues = [
+        "All Tissues", "Lung", "Kidney", "Liver", "Heart",
+        "Muscle", "Blood", "Adipose", "Spleen", "LymphNode", "BoneMarrow", "Pituitary"
+    ]
 
     for t in tissues:
         sub = h_df if t == "All Tissues" else h_df[h_df["tissue"] == t]

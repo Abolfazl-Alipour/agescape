@@ -11,7 +11,7 @@
 
 We re-analyzed the Tabula Muris Senis droplet atlas (245,389 cells, 23 mice, 16 tissues) using per-tissue quality control and donor-level pseudobulk differential expression. Seventeen of 163 tissue-by-cell-type units met the eligibility floor for the 3-month versus 18-month contrast, all in lung or kidney; 14 had at least one aging-associated gene. The largest DE counts were 55 in lung adventitial cells and 53 in kidney proximal convoluted tubule cells. Effect estimates agreed with published TMS coefficients in 13 units, partially agreed in four, and disagreed in none. The catalog contains 261 direction-specific entries across 257 unique genes (P0 catalog). We constructed an audited signature hierarchy: P1_Clean (139 genes: 82 up, 57 down), P2_Clean_SexTrimmed (114 genes), and P3_Clean_SexIEGTrimmed (110 genes). Covariance-calibrated $Q^*$ decomposition identified 54 genes with significant between-organ effect heterogeneity. P1_Clean significantly overlaps established aging signatures: Zhang et al. (2021) FACS 330 GAGs (21 shared, 5.83-fold enrichment, p=6.42e-11), Zhang et al. Droplet 59 GAGs (7 shared, 10.87-fold, p=3.37e-06), and Saul et al. (2022) SenMayo 118 (10 shared, 11.31-fold, p=1.68e-08).
 
-The derived mouse aging signature rises with age across 23 mice (whole-body slope 0.134 [95% CI 0.029, 0.239], p=0.015), confirmed by tissue-adjusted cluster-robust regression across 19 physical clusters (slope 0.205, p=0.00064, df=8.48) and out-of-sample generalization in 14 non-Lung/Kidney holdout tissues (slope 0.144, p=0.0167, df=5.51). A late-adult plateau is observed across 21m–30m mice (slope -0.0056, p=0.956). Five naked mole-rats with skin-only sampling, two group-mean ages, and 31% signature coverage provide no detected rise (slope 0.0035, p=0.925). Under a pre-specified mouse-derived margin ($\delta_{\min}=0.202$), TOST equivalence 90% CI is [-0.145, 0.157] (p_TOST=0.027; permutation p=1.0); at zero margin, equivalence is not established (p=0.329). Whole-epidermis Igfbp3 pseudobulk expression is unchanged between young (221.8 CPM) and aged (223.8 CPM) NMR.
+The derived mouse aging signature rises with age across 23 mice (whole-body slope 0.134 [95% CI 0.029, 0.239], p=0.015), confirmed by tissue-adjusted cluster-robust regression across 19 physical clusters (slope 0.205, p=0.00064, df=8.48) and out-of-sample generalization in 14 non-Lung/Kidney holdout tissues (slope 0.144, p=0.0167, df=5.51). Within the late-adult subset (21m–30m mice), slope is flat (-0.0056, p=0.956), though an interaction test is non-significant (p=0.563). Five naked mole-rats with skin-only sampling, two group-mean ages, and 31% signature coverage provide no detected rise (slope +0.0058, p=0.933). Under a mouse-derived margin ($\delta_{\min}=0.2023$), TOST equivalence 90% CI is [-0.1450, 0.1567] (p_TOST=0.0274; permutation p=1.0). Whole-epidermis Igfbp3 pseudobulk expression is unchanged between young (221.8 CPM) and aged (223.8 CPM) NMR.
 
 Human analyses now include 621 control donors across 11 public cohorts and 284 control donors in the DLPFC Lifespan Atlas. No nominally significant positive whole-cohort slope was detected in public cohorts; MSSM showed a nominal decline (p=0.028) that did not survive BH correction across 11 cohorts (q=0.311). In the lifespan atlas, unadjusted whole-cortex CPM score rose nominally (+0.00032/yr, p=0.0118), but after adjusting for sex, brain bank, PMI, and technical PCs 1-3, the slope attenuated to null (p=0.8626). Exploratory glial signals (Astro CPM q=0.0108, Oligo CPM q=0.0019, Adaptive CPM q=0.0412) likewise attenuated in the confounder-adjusted adult stratum. These results do not identify a universal aging signature or prove cell-type-private biology.
 
@@ -25,7 +25,7 @@ Cross-species aging claims need donor-level replication, explicit ortholog and s
 
 All raw inputs are version-pinned in `data/manifest/*.json` (URL, accession or dataset UUID, dataset version, schema version, size, SHA-256, download date) and verified by `scripts/verify_data.py`.
 
-- **Tabula Muris Senis, droplet (mouse, primary).** CZ CELLxGENE collection `0b9d8a04-bb9d-44da-aa27-705bb65b54eb`, dataset `48b37086-25f7-4ecd-be66-f5bb378e3aea`, dataset version `084058cc-4f17-43ce-b14e-1278df074013` (schema 7.1.0). The object contains 245,389 cells × 20,138 genes across 16 tissues, 23 mice (6 female, 17 male), and 6 age groups (1m, 3m, 18m, 21m, 24m, 30m). Age and sex are partially confounded by design: 1m, 24m and 30m are male-only and 21m is female-only; the pre-registered primary contrast is 3m vs 18m, the only pair with both sexes in both groups (`results/m1-sex-age-table.csv`).
+- **Tabula Muris Senis, droplet (mouse, primary).** CZ CELLxGENE collection `0b9d8a04-bb9d-44da-aa27-705bb65b54eb`, dataset `48b37086-25f7-4ecd-be66-f5bb378e3aea`, dataset version `084058cc-4f17-43ce-b14e-1278df074013` (schema 7.1.0). The object contains 245,389 cells × 20,138 genes across 16 tissues, 23 mice (6 female, 17 male), and 6 age groups (1m, 3m, 18m, 21m, 24m, 30m). Age and sex are partially confounded by design: 1m, 24m and 30m are male-only and 21m is female-only; the documented primary contrast is 3m vs 18m, the only pair with both sexes in both groups (`results/m1-sex-age-table.csv`).
 - **Tabula Sapiens v1 (human, replication cohort attempt).** CZ CELLxGENE Tabula Sapiens collection. Skin (17,786 cells; donors aged 33/45/59/61 y, n=4) and Lung (65,847 cells; donors TSP1/2/14/25 aged 59/61/59/60 y). TS v1 is an adult cohort: it provides no usable donor-age contrast in either tissue.
 - **Naked mole-rat skin (longevity outlier).** GEO GSE152886 (Savina et al. 2022, *Aging*; BioProject PRJNA640800). The single supplementary processed-counts file (20,274 genes × 6 samples) was used. Sample 2V was dropped as a technical outlier per the source paper, leaving 5 samples: 1J/5J/6J (young, 1.1 y group mean) and 3V/4V (aged, 11.3 y group mean). Our QC retained 10,251 cells vs the paper's 10,232.
 - **AnAge (lifespan denominators).** Official zipped-TSV export from genomics.senescence.info (`results/m6-species-lifespans.csv`): Homo sapiens 122.5 y, Heterocephalus glaber 31 y, Mus musculus 4 y.
@@ -69,7 +69,7 @@ NMR arm mapped by stable Ensembl 1:1 ortholog IDs; TOST equivalence tested with 
 
 ### 3.1 M1/M2 — Mouse aging signal ranking and calibration
 
-Of 163 tissue×cell-type units evaluated against the pre-registered floor, 17 were eligible — 9 Lung and 8 Kidney (`results/m2-unit-eligibility.csv`). The ranking is headed by Lung::adventitial cell (55 DE genes; 8 mice, 423 cells; median |log2FC| 1.34) and Kidney::kidney proximal convoluted tubule epithelial cell (53 DE genes; 6 mice, 1,793 cells; median |log2FC| 1.24). Three eligible units returned zero DE genes.
+Of 163 tissue×cell-type units evaluated against the documented eligibility floor, 17 were eligible — 9 Lung and 8 Kidney (`results/m2-unit-eligibility.csv`). The ranking is headed by Lung::adventitial cell (55 DE genes; 8 mice, 423 cells; median |log2FC| 1.34) and Kidney::kidney proximal convoluted tubule epithelial cell (53 DE genes; 6 mice, 1,793 cells; median |log2FC| 1.24). Three eligible units returned zero DE genes.
 
 The calibration trio on the top unit:
 1. Permutation null: exact Fisher-Pitman p=0.1111 (marginal) and p=0.1333 (linked animals), with 55 observed DE genes against a null mean of 4.6.
@@ -107,13 +107,13 @@ Scoring the P1_Clean signature (`results/m6-statistical-summary.csv`, Fig. 3):
 - Spec (b) Unpooled individual mice (N=20): slope 0.046 [-0.018, 0.111], p=0.151.
 - Spec (c) REML + CR2 cluster-robust across 19 physical clusters: slope 0.205 [0.116, 0.295], p=0.00064 (df=8.48).
 - Spec (d1) Out-of-sample ages (1m, 21m, 24m, 30m): slope 0.107 [0.029, 0.184], p=0.012.
-- Spec (d2) Late-adult plateau (21m, 24m, 30m): slope -0.0056 [-0.229, 0.218], p=0.956.
+- Spec (d2) Late-adult subset (21m, 24m, 30m): slope -0.0056 [-0.2338, 0.2225], p=0.956 (interaction test p=0.563).
 - Spec (d3) 14 non-Lung/Kidney holdout tissues across adult ages: slope 0.144 [0.038, 0.250], p=0.0167 (df=5.51).
 
 Naked mole-rat contrast:
-- NMR skin slope is 0.0035 [-0.093, 0.100], p=0.925 (n=5 animals).
-- Pre-specified mouse margin TOST ($\delta_{\min}=0.202$): 90% CI [-0.145, 0.157], p_TOST=0.027. Exact permutation p=1.0. At zero margin, equivalence is not established (p=0.329).
-- Slope difference (mouse minus NMR) is 0.131 [-0.076, 0.338], p=0.202.
+- NMR skin slope is +0.0058 [-0.1981, 0.2098], p=0.9332 (n=5 animals).
+- Mouse-derived margin TOST ($\delta_{\min}=0.2023$): 90% CI [-0.1450, 0.1567], p_TOST=0.0274. Exact permutation p=1.0.
+- Slope difference (mouse minus NMR) is +0.1285 [-0.0314, 0.2885], p=0.1153.
 - In 5-animal epidermis pseudobulk, Igfbp3 expression is 221.8 CPM in young vs 223.8 CPM in aged animals (unchanged).
 
 ---
@@ -126,7 +126,7 @@ Naked mole-rat contrast:
 4. **The Tabula Sapiens panel is low-powered.** 4 donors with age SD 8 y cannot test an aging effect.
 5. **Human cohorts are not matched per-mouse-unit replication.** M9 and M10 test transport of the mouse-derived score. M9 uses per-cell log1p counts while M10 uses donor pseudobulk CPM, so slope magnitudes are not directly comparable.
 6. **NMR signature coverage is 31%.** Less than a third of signature genes were detected in NMR skin; scores are computed on different ortholog subsets.
-7. **Equivalence not established at zero margin.** TOST with mouse margin passes (p=0.027), but zero-margin equivalence fails (p=0.329).
+7. **Equivalence bound caveats.** TOST with mouse margin passes (p=0.0274), but the margin exceeds the mouse point estimate itself, ruling out effects larger than 0.2023 rather than mouse-magnitude effects.
 8. **NMR ages are group means.** 5 samples represent two group-mean ages (1.1 y and 11.3 y).
 9. **Positive controls were not significant in the top unit.** Calibration rests on the permutation null and sex floor.
 10. **M10 glial signals attenuate under confounder adjustment.** Whole-cortex CPM slope attenuates to null (p=0.8626) when adjusting for brain bank, PMI, and technical covariates.
