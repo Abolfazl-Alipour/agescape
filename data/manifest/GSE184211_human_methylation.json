@@ -1,0 +1,21 @@
+{
+  "dataset_name": "Human Multi-Tissue Mammalian Methylation Array Cohort",
+  "geo_accession": "GSE184211",
+  "platform": "GPL28271 (Illumina Infinium Mammalian Methylation BeadChip)",
+  "species": "Homo sapiens",
+  "n_tissues": 661,
+  "files": [
+    {
+      "filename": "GSE184211_series_matrix.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184211/matrix/GSE184211_series_matrix.txt.gz",
+      "sha256": "45a861c3936ddb4e30cb96253ed5d14cf8efc1e9593c8ad755f8ff97eb0335a8",
+      "size_bytes": 28441
+    },
+    {
+      "filename": "GSE184211_datBetaNormalized.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184211/suppl/GSE184211_datBetaNormalized.csv.gz",
+      "sha256": "3eca1b84c743bc79173cdac1efe34c97c62b0054db54db7709990cc4ab70e860",
+      "size_bytes": 199733284
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "resource_name": "Universal Pan-Mammalian Epigenetic Clock 2 Coefficients (Lu et al. Nature Aging 2023)",
+  "source_publication": "Lu, A.T., Fei, Z., Haghani, A. et al. Universal DNA methylation age across mammalian tissues. Nat Aging 3, 1144-1166 (2023). https://doi.org/10.1038/s43587-023-00462-6",
+  "source_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-023-00462-6/MediaObjects/43587_2023_462_MOESM4_ESM.csv",
+  "files": [
+    {
+      "filename": "Universal_Coef.CombAnn.csv",
+      "sha256": "70cf2e8117bc23e1d9907eb0a253271af2eb8cc23adfac7e7e7e06a4728ab3b3",
+      "size_bytes": 214726
+    }
+  ]
+}

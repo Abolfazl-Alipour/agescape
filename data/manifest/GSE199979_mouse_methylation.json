@@ -1,0 +1,16 @@
+{
+  "dataset_name": "Mouse Lifespan Liver Methylation Cohort (BXD Recombinant Inbred Panel)",
+  "geo_accession": "GSE199979",
+  "platform": "GPL28271 (Illumina Infinium Mammalian Methylation BeadChip)",
+  "species": "Mus musculus",
+  "strain_details": "BXD recombinant inbred panel, 95%+ female, standard chow and high-fat diet arms",
+  "n_samples": 339,
+  "files": [
+    {
+      "filename": "GSE199979_series_matrix.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE199nnn/GSE199979/matrix/GSE199979_series_matrix.txt.gz",
+      "sha256": "2e11bd2c8fcaa749eb25c86485da5a1edf173d34dc147eb1f87d9ef634e97bb4",
+      "size_bytes": 46736003
+    }
+  ]
+}

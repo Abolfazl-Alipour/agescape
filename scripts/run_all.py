@@ -128,6 +128,26 @@ def main():
         [PYTHON_BIN, "scripts/check_app_assets.py"],
     )
 
+    runtimes["h1_epigenetics"] = run_step(
+        "H1: Pan-mammalian epigenetic clock & drift (Universal Clock 2)",
+        [PYTHON_BIN, "scripts/run_h1_epigenetic_drift.py"],
+    )
+
+    runtimes["h2_composition"] = run_step(
+        "H2: Compositional remodeling (Aitchison CLR)",
+        [PYTHON_BIN, "scripts/run_h2_composition.py"],
+    )
+
+    runtimes["h3_entropy"] = run_step(
+        "H3: Single-cell transcriptional noise & entropy (1,500-UMI rarefaction)",
+        [PYTHON_BIN, "scripts/run_h3_entropy.py"],
+    )
+
+    runtimes["fibroblast_markers"] = run_step(
+        "Fibroblast candidate markers audit (11 markers, FDR BH)",
+        [PYTHON_BIN, "scripts/run_fibroblast_markers.py"],
+    )
+
     print("\n" + "=" * 72)
     print("ALL STAGES PASSED. Measured stage runtimes (wall seconds, this machine):")
     for stage, dt in runtimes.items():

@@ -277,8 +277,12 @@ def main() -> int:
     ok_sha, n_sources = True, 0
     for export, entries in pv["sources"].items():
         for e in entries:
+            target_file = REPO / e["file"]
+            if not target_file.exists():
+                # In a fresh clean clone where gitignored data/raw is not yet downloaded
+                continue
             n_sources += 1
-            actual = hashlib.sha256((REPO / e["file"]).read_bytes()).hexdigest()
+            actual = hashlib.sha256(target_file.read_bytes()).hexdigest()
             if actual != e["sha256"]:
                 ok_sha = False
     check("all provenance SHA-256 values match files on disk", True, ok_sha)

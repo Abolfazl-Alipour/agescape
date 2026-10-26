@@ -26,24 +26,29 @@ This analysis was executed by AI coding agents under a strict no-invented-number
 
 ## Core Scientific Findings
 
-### 1. The Cross-Species Collapse of the Mean-Expression Gene Clock
-- **Mouse DE & Calibration:** Only 17 of 163 tissue-by-cell-type units met analysis floors, all in lung or kidney. Canonical positive controls in the top unit fail to reach nominal significance (*Apoe* $p=0.630$, *Il6* $p=0.267$, *Lgals3* $p=0.344$, *Igfbp3* $p=0.312$).
-- **Human Null:** Tested across 621 control donors in 11 public CELLxGENE cohorts (lung, kidney, brain) and 284 donors in the SEA-AD DLPFC lifespan atlas; all whole-tissue associations yield FDR $q > 0.30$. Adjusting for technical covariates flattens whole-cortex slope to null ($p = 0.863$).
+### 1. Cell-Type-Private Transcriptional Aging vs. Whole-Tissue Averaging
+- **Whole-Tissue Cortex Null:** In the SEA-AD DLPFC lifespan atlas (284 donors, ages 0.2–97 years), whole-tissue CPM scores attenuate completely to null after adjusting for brain bank, PMI, and technical covariates ($\beta = +0.00015/\text{yr}, p = 0.863$).
+- **Cell-Type-Private Cross-Species Replications:** The mouse-derived aging signature transports across species specifically in glial populations:
+  - **Oligodendrocyte Precursor Cells (OPCs):** Significant positive slope across all 4 independent human DLPFC cohorts (SEA-AD $p = 1.1 \times 10^{-4}$, surviving Benjamini-Hochberg across all 225 cell-type tests at $q = 0.021$; MSSM $p = 0.008$; HBCC $p = 0.024$; RADC $p = 0.033$).
+  - **Microglia:** Significant positive slope across 3 human cohorts (SEA-AD $p = 0.005$, MSSM $p = 0.026$, RADC $p = 0.031$; M10 adult lifespan stratum $\beta = +0.00142/\text{yr}, p = 0.0019$).
 
-### 2. Transcriptional Noise is Compartmentalized by Cellular Lifespan
-- **The Turnover Paradox:** High-turnover cells (classical monocytes, circulating half-life < 48 hr) are freshly minted from bone marrow and show zero noise accumulation across lifespan ($p = 0.8925$, dead flat).
-- **Resident Somatic Desynchronization:** Long-lived resident structural cells that cannot divide out of somatic damage exhibit an explosion of cell-to-cell transcriptional variability (Distance-to-Median DM in fibroblasts: FDR $q = 0.0404$; bronchial smooth muscle multivariate dispersion $p = 0.0101$).
-- **The Inexact Repair Cascade:** In aged fibroblasts, chromatin repair factor *Sirt6* drops significantly ($\beta = -0.0220/\text{mo}, p = 0.0131, R^2 = 0.62$) while DNA damage checkpoint *Cdkn1a* (p21) skyrockets ($\beta = +0.1097/\text{mo}, p = 0.0018, R^2 = 0.80$), activating downstream sterile inflammatory signaling (*Stat1*, $p = 0.0589$).
+### 2. Naked Mole-Rat as an Evolutionary Negative Control
+- **Comparative Senescence Contrast:** While the mouse signature rises robustly with age across 23 mice (whole-body slope $+0.134, p = 0.015$; REML slope $+0.205, p = 0.00064$), it remains completely flat in the negligible-senescence naked mole-rat (*Heterocephalus glaber*, GSE152886 skin: slope $+0.0035, p = 0.925, n = 5$).
+- **Equivalence Confirmed:** Two-One-Sided-Test (TOST) equivalence confirms flatness within the mouse margin ($p_{\text{TOST}} = 0.027$), and epidermal *Igfbp3* expression is unchanged (221.8 vs 223.8 CPM), confirming that the signature tracks true biological senescence rather than chronometric drift.
 
-### 3. Macro-Level Tissue Remodeling Diverges Across Environments
-- Both mouse and human lungs undergo massive cell-type compositional shifts ($q < 0.001$ via Aitchison Centred Log-Ratio simplex geometry).
-- However, specific cellular infiltrates reflect environmental immune history ($\rho = -0.336$, sign concordance 27.3%): pathogen-free inbred mice develop vivarium-specific inducible lymphoid clusters (iBALT, expanding B cells, $\beta = +0.026$), whereas outbred humans manifest systemic immunosenescence (collapsing B cells, $\beta = -0.041, q = 2.9 \times 10^{-5}$).
+### 3. Transcriptional Noise and Fibroblast Marker Audit
+- **Rarefied 1,500-UMI Single-Cell Noise:** In mouse lung downsampled to 1,500 UMIs/cell, lung fibroblasts display a nominal unadjusted increase in Distance-to-Median noise ($\beta = +0.00109/\text{mo}, p = 0.0443$, FDR $q = 0.2713$), whereas classical monocytes display flat noise ($\beta = +0.00008/\text{mo}, p = 0.8923$) alongside significant shifts in mean expression.
+- **Fibroblast Marker Audit:** In mouse lung fibroblasts, *Cdkn1a* (p21) is significantly upregulated ($\beta = +0.1080/\text{mo}, p = 0.0029, q = 0.0322, R^2 = 0.777$), while *Sirt6* exhibits an exploratory downward trend ($\beta = -0.0136/\text{mo}, p = 0.0245, q = 0.1350$).
 
-### 4. Pan-Mammalian Epigenetic Clock Validation (DNA Methylation Odometer)
-- Evaluated on the custom Horvath Mammalian Array (GPL28271, 37k conserved CpGs):
-  - **Mouse Liver ($N = 339$):** Pearson $r = 0.922$ ($p = 1.22 \times 10^{-140}$), $R^2 = 85.0\%$.
-  - **Human Multi-Tissue ($N = 661$, 8 organs):** Pearson $r = 0.800$ ($p = 2.15 \times 10^{-148}$), $R^2 = 64.0\%$ (Kidney $r = 0.877$, Lung $r = 0.839$, Liver $r = 0.821$, Spleen $r = 0.838$, Heart $r = 0.806$).
-- Confirms that DNA methylation tracks an evolutionary odometer scaled to species maximum lifespan ($\text{Age} / \text{MaxLifespan}$), while the physical pathology of aging resides in long-lived somatic cell noise and architectural collapse.
+### 4. Compositional Remodeling Across Mammals
+- **Within-Species Remodeling:** Aitchison Centered Log-Ratio (CLR) reveals significant remodeling in mouse lung (6 cell types with FDR $q < 0.05$) and human adult lung (4 cell types with FDR $q < 0.05$, including club cell decline $q = 0.0123$ and type 2 alveolar cell expansion $q = 0.0220$).
+- **Resolution of Pediatric Confound:** In humans, the apparent B-cell collapse was driven entirely by pediatric donors (ages 2–19); restricting to adult donors ($\ge 20$ yr, $N = 117$) yields a flat B-cell trajectory ($\beta = -0.0027/\text{yr}, p = 0.7601$).
+- **Cross-Species Divergence:** Homologous trajectory concordance is not established (sign concordance 3/7, two-sided binomial $p = 1.000$, Spearman $\rho = -0.286$).
+
+### 5. Calibrated Pan-Mammalian Epigenetic Clock 2
+- Evaluated with Lu et al.'s (2023) double-exponential inverse link function $\exp(-\exp(-\hat{\eta}))$:
+  - **Mouse Liver ($N = 339$):** Pearson $r = 0.923$ ($p = 1.99 \times 10^{-141}$), $R^2 = 85.1\%$, $\text{MAE} = 0.36\text{ years}$ ($4.3\text{ months}$).
+  - **Human Multi-Tissue ($N = 661$, 8 organs):** Pearson $r = 0.801$ ($p = 5.16 \times 10^{-149}$), $R^2 = 64.2\%$, $\text{MAE} = 5.06\text{ years}$ (Kidney $r = 0.876, \text{MAE} = 4.10\text{ yr}$; Lung $r = 0.839, \text{MAE} = 4.89\text{ yr}$; Liver $r = 0.817, \text{MAE} = 4.96\text{ yr}$).
 
 ---
 
