@@ -50,11 +50,11 @@ Cell-type composition modeled via quasi-binomial GLM with total library size wei
 
 **M3 — Trajectory and literature agreement.** Diffusion pseudotime on Marrow hematopoietic continuum; animal-level mean DPT vs age rho = 0.457 (p=0.065) reported alongside cell-level rho = 0.016 (p=1.13e-3; `figures/m3-dpt-vs-age.png`). Agreement with TMS paper tested against MOESM8 continuous-age coefficients over 12,713 shared genes; continuous bridge model (`log1p(CP10K) ~ age_months + sex`) fit on adult mice.
 
-**M4 — Human power model.** Power grid over n donors (4–50), donor-age SD (8–20 y) and biological dispersion (0.1–0.4) computed before human claims (`results/m4-human-power.csv`). Tabula Sapiens skin (4 donors, SD 8 y) requires minimum detectable 30-year log2FC of 1.474 at dispersion 0.1, proving that TS v1 is unpowered.
+**M4 — Human power model.** Power grid over n donors (4–50), donor-age SD (8–20 y) and biological dispersion (0.1–0.4) computed before human claims (`results/m4-human-power.csv`). Tabula Sapiens skin (4 donors, SD 8 y) has a modeled minimum detectable 30-year log2FC of 1.474 at dispersion 0.1 and does not meet the human analysis floor.
 
-**M5 — Signature hierarchy, heterogeneity, and external overlaps.** Program tiers constructed: P0_Raw257 (257 genes), P1_Clean (139 genes: 82 up, 57 down), P2_Clean_SexTrimmed (114 genes), P3_Clean_SexIEGTrimmed (110 genes) (`results/m5-program-hierarchy.csv`). Covariance-calibrated $Q^*$ statistic decomposing within-organ vs between-organ heterogeneity identified 54 genes with significant organ heterogeneity (`results/m5-heterogeneity-qstar.csv`). P1_Clean overlap tested against Zhang et al. (2021) 330 GAGs, 59 Droplet GAGs, and Saul et al. (2022) SenMayo 118 (`results/m5-external-program-overlap.csv`).
+**M5 — Signature hierarchy, heterogeneity, and external overlaps.** Program tiers constructed: P0_Raw257 (257 genes), P1_Clean (139 genes: 89 up, 50 down), P2_Clean_SexTrimmed (114 genes), P3_Clean_SexIEGTrimmed (110 genes) (`results/m5-program-hierarchy.csv`). Covariance-calibrated $Q^*$ statistic decomposing within-organ vs between-organ heterogeneity identified 54 genes with significant organ heterogeneity (`results/m5-heterogeneity-qstar.csv`). P1_Clean overlap tested against Zhang et al. (2021) 330 GAGs, 59 Droplet GAGs, and Saul et al. (2022) SenMayo 118 (`results/m5-external-program-overlap.csv`).
 
-**M6 — Signature scoring and cross-species contrast.** Scored via CP10K + `sc.tl.score_genes` (up minus down) on `data/interim/m1-qc-cleaned.h5ad`. Pre-registered specifications:
+**M6 — Signature scoring and cross-species contrast.** Scored via CP10K + `sc.tl.score_genes` (up minus down) on `data/interim/m1-qc-cleaned.h5ad`. Prespecified specifications:
 - Spec (a) All 23 mice whole-body (OLS)
 - Spec (b) Unpooled individual mice (N=20, OLS)
 - Spec (c) REML + CR2 cluster-robust (G=19 physical clusters)

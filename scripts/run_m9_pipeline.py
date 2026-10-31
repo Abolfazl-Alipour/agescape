@@ -1,56 +1,34 @@
 #!/usr/bin/env python3
-"""
-run_m9_pipeline.py — Human lifespan program-scoring on public CELLxGENE cohorts.
+"""Score public CELLxGENE cohorts with both mouse-derived aging-signature tiers."""
 
-Run with the census environment:
-    /tmp/censusenv/bin/python scripts/run_m9_pipeline.py [--use-cache]
-
-Rigorous Rebuild Highlights:
-1. Pins census_version="2025-11-08" (stable release).
-2. Requests raw_sum and cell_type_ontology_term_id explicitly in obs columns.
-3. Adult primary stratum (age >= 20.0 years) with all-ages secondary.
-4. Robust power verdicts: flags age_sd < 12.0y as LOW-POWERED.
-5. Multipletests NaN guard: applies BH strictly on valid non-NaN p-values.
-6. Module 4b: Homologous unit-matched cell type concordance (results/m9-gene-level-concordance.csv).
-"""
 from __future__ import annotations
 
 import argparse
-import json
+import gc
 import re
 import sys
 import warnings
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import scipy.stats as stats
-
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-
-warnings.filterwarnings("ignore")
+from statsmodels.stats.multitest import multipletests
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO))
+from src.aging_programs import load_program_tiers
+
 RESULTS = REPO / "results"
 FIGURES = REPO / "figures"
-REF_DIR = REPO / "data" / "reference"
 RESULTS.mkdir(exist_ok=True)
 FIGURES.mkdir(exist_ok=True)
-
 PROV = []
-
-
-def prov(msg: str) -> None:
-    line = f"[m9] {msg}"
-    print(line, flush=True)
-    PROV.append(line)
-
-
 HUMAN_MAX_LIFESPAN = 122.5
-
 COHORTS = {
     "37a17b78-4864-4a42-b67b-31c00962795a": ("MSSM_DLPFC", "brain"),
     "5c97eeeb-7e52-44b3-b010-b832b1f5424c": ("HBCC_DLPFC", "brain"),
@@ -64,24 +42,16 @@ COHORTS = {
     "9f222629-9e39-47d0-b83f-e08d610c7479": ("Lung_Integrated", "lung"),
     "1b350d0a-4535-4879-beb6-1142f3f94947": ("ImmuneAging_BAL", "lung"),
 }
-
 MIN_CELLS_PER_DONOR_CT = 20
 MIN_DONORS_FOR_REGRESSION = 6
 MIN_AGE_SD = 12.0
-
 AGE_RE = re.compile(r"(\d+)-year-old")
 
 
-def load_program():
-    pg = pd.read_csv(RESULTS / "m6-program-genes.csv")
-    up_m = pg["program_up"].dropna().tolist()
-    dn_m = pg["program_down"].dropna().tolist()
-    orth = pd.read_csv(REF_DIR / "orthologs-mouse-human.csv")
-    m2h = dict(zip(orth["mouse_gene_symbol"], orth["human_gene_symbol"]))
-    up = sorted({m2h[g] for g in up_m if g in m2h and isinstance(m2h[g], str)})
-    dn = sorted({m2h[g] for g in dn_m if g in m2h and isinstance(m2h[g], str)})
-    prov(f"program: {len(up_m)} up / {len(dn_m)} down mouse genes -> {len(up)} up / {len(dn)} down human orthologs")
-    return up, dn
+def prov(msg: str) -> None:
+    line = f"[m9] {msg}"
+    print(line, flush=True)
+    PROV.append(line)
 
 
 def ols(y, X):
@@ -111,230 +81,251 @@ def power_verdict(n, sd):
     tiles = mid.assign(dist=(mid["n_donors"] - n).abs() + (mid["donor_age_sd_years"] - sd).abs() * 3)
     tile = tiles.sort_values("dist").iloc[0]
     floor = (n >= MIN_DONORS_FOR_REGRESSION) and (sd >= MIN_AGE_SD)
-    return ("POWERED-FLOOR" if floor else "LOW-POWERED",
-            float(tile["min_detectable_30y_log2fc"]), int(tile["n_donors"]), float(tile["donor_age_sd_years"]))
+    return (
+        "POWERED-FLOOR" if floor else "LOW-POWERED",
+        float(tile["min_detectable_30y_log2fc"]),
+        int(tile["n_donors"]),
+        float(tile["donor_age_sd_years"]),
+    )
 
 
-def run_gene_level_concordance():
-    prov("\n--- Running Module 4b: Homologous Cell-Type Concordance ---")
-    mapping_path = REF_DIR / "m9-celltype-mapping.csv"
-    if not mapping_path.exists():
-        prov("m9-celltype-mapping.csv missing; skipping concordance")
-        return
-    mapping_df = pd.read_csv(mapping_path)
-    
-    # Load mouse unit DE files
-    concordance_rows = []
-    for _, r in mapping_df.iterrows():
-        if r["disposition"] != "Matched":
-            continue
-        m_tissue = r["mouse_tissue"]
-        m_ct = r["mouse_cell_type"]
-        h_ct = r["human_mapped_cell_type"]
-        slug = f"{m_tissue}__{m_ct}".replace(" ", "_").replace("-", "_").replace(",", "")
-        de_path = RESULTS / f"m2_de_{slug}.csv"
-        if not de_path.exists():
-            continue
-        m_de = pd.read_csv(de_path).set_index("index")
-        
-        concordance_rows.append({
-            "mouse_tissue": m_tissue,
-            "mouse_cell_type": m_ct,
-            "human_mapped_cell_type": h_ct,
-            "mouse_de_genes_fdr05": int((m_de["FDR"] < 0.05).sum()) if "FDR" in m_de.columns else 0,
-            "status": "Homologous unit matched"
-        })
-        
-    concord_df = pd.DataFrame(concordance_rows)
-    concord_path = RESULTS / "m9-gene-level-concordance.csv"
-    concord_df.to_csv(concord_path, index=False)
-    prov(f"Saved {concord_path} ({len(concord_df)} homologous cell-type pairs)")
+def score_cells(matrix, names, up, dn, library_sizes=None):
+    X = matrix.tocsr() if sp.issparse(matrix) else sp.csr_matrix(matrix)
+    X = X.astype(np.float64)
+    if library_sizes is not None and X.shape[0] != len(library_sizes) and X.shape[1] == len(library_sizes):
+        X = X.T.tocsr()
+    if library_sizes is not None and X.shape[0] != len(library_sizes):
+        raise ValueError("Expression matrix and library-size dimensions do not match")
+    if library_sizes is not None:
+        scale = 1e6 / np.where(library_sizes > 0, library_sizes, 1.0)
+        X = sp.diags(scale) @ X
+    X = X.tocsr()
+    X.data = np.log1p(X.data)
+    up_i = [i for i, gene in enumerate(names) if gene in set(up)]
+    dn_i = [i for i, gene in enumerate(names) if gene in set(dn)]
+    up_mean = np.asarray(X[:, up_i].mean(axis=1)).ravel() if up_i else np.zeros(X.shape[0])
+    dn_mean = np.asarray(X[:, dn_i].mean(axis=1)).ravel() if dn_i else np.zeros(X.shape[0])
+    coverage = len(set(up_i) | set(dn_i)) / max(len(set(up) | set(dn)), 1)
+    return up_mean - dn_mean, coverage
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--use-cache", action="store_true", help="Use existing results/m9-donor-scores.csv")
-    args = parser.parse_args()
+def extract_scores(programs):
+    import cellxgene_census
 
-    up, dn = load_program()
-    symbols = sorted(set(up) | set(dn))
-    var_filter = "feature_name in [" + ",".join(f"'{s}'" for s in symbols) + "]"
+    prov("Opening CELLxGENE Census version 2025-11-08")
+    census = cellxgene_census.open_soma(census_version="2025-11-08")
+    ids = ",".join(f"'{key}'" for key in COHORTS)
+    obs = cellxgene_census.get_obs(
+        census, "Homo sapiens",
+        value_filter=f"dataset_id in [{ids}]",
+        column_names=["dataset_id", "donor_id", "development_stage", "disease", "cell_type",
+                      "cell_type_ontology_term_id", "raw_sum", "sex", "is_primary_data"],
+    )
+    obs["dataset_id"] = obs["dataset_id"].astype(str)
+    obs["donor_id"] = obs["donor_id"].astype(str)
+    obs["age"] = obs["development_stage"].astype(str).str.extract(AGE_RE).astype(float)
+    obs = obs[(obs["is_primary_data"] == True) & (obs["disease"] == "normal") & obs["age"].notna()].copy()
 
-    scores_path = RESULTS / "m9-donor-scores.csv"
-    if args.use_cache and scores_path.exists():
-        prov(f"Loading cached donor scores from {scores_path} ...")
-        scores = pd.read_csv(scores_path)
-    else:
-        import cellxgene_census
-        prov("Opening CELLxGENE Census version 2025-11-08 ...")
-        census = cellxgene_census.open_soma(census_version="2025-11-08")
-        ids = ",".join(f"'{k}'" for k in COHORTS)
+    donor_meta = (obs.groupby(["dataset_id", "donor_id"], observed=True)
+                  .agg(age=("age", "first"), sex=("sex", lambda s: str(s.iloc[0])),
+                       disease=("disease", lambda s: str(s.iloc[0])), cells=("donor_id", "size"))
+                  .reset_index())
+    prov(f"Normal control donors with numeric age: {len(donor_meta)}")
 
-        obs = cellxgene_census.get_obs(
-            census, "Homo sapiens",
-            value_filter=f"dataset_id in [{ids}]",
-            column_names=["dataset_id", "donor_id", "development_stage", "disease",
-                          "cell_type", "cell_type_ontology_term_id", "raw_sum", "sex", "is_primary_data"],
-        )
-        obs["dataset_id"] = obs["dataset_id"].astype(str)
-        obs["donor_id"] = obs["donor_id"].astype(str)
-        obs["age"] = obs["development_stage"].astype(str).str.extract(AGE_RE).astype(float)
-        obs = obs[obs["is_primary_data"] == True]
+    prethreshold = (obs[obs["cell_type"].astype(str) != "unknown"]
+                    .groupby(["dataset_id", "donor_id", "cell_type"], observed=True)
+                    .agg(n_cells=("donor_id", "size"), raw_sum=("raw_sum", "sum"),
+                         age=("age", "first"), sex=("sex", lambda s: str(s.iloc[0])))
+                    .reset_index())
+    prethreshold["cohort"] = prethreshold["dataset_id"].map(lambda x: COHORTS[x][0])
+    prethreshold["group"] = prethreshold["dataset_id"].map(lambda x: COHORTS[x][1])
+    prethreshold["census_version"] = "2025-11-08"
+    prethreshold = prethreshold[["cohort", "group", "dataset_id", "donor_id", "cell_type", "n_cells",
+                                 "raw_sum", "age", "sex", "census_version"]]
+    count_path = RESULTS / "m9-donor-cell-counts-prethreshold.csv"
+    prethreshold.to_csv(count_path, index=False)
+    prov(f"Saved {len(prethreshold)} unfiltered donor-cell-type count rows to results/{count_path.name}")
 
-        donor_meta = (obs.groupby(["dataset_id", "donor_id"], observed=True)
-                        .agg(age=("age", "first"),
-                             disease=("disease", lambda s: str(s.iloc[0])),
-                             sex=("sex", lambda s: str(s.iloc[0])),
-                             cells=("donor_id", "size"))
-                        .reset_index())
-        controls = donor_meta[(donor_meta["disease"] == "normal") & donor_meta["age"].notna()].copy()
-        prov(f"donors total {donor_meta.shape[0]}; control donors with numeric age: {controls.shape[0]}")
-
-        score_rows = []
-        for ds_id, (label, group) in COHORTS.items():
-            cds = controls[controls["dataset_id"] == ds_id]
-            if len(cds) < 4:
-                prov(f"[{label}] only {len(cds)} control donors with age; SKIPPED")
-                continue
-            donor_list = ",".join(f"'{d}'" for d in cds["donor_id"])
-            prov(f"[{label}] downloading {len(cds)} control donors (ages {cds['age'].min():.0f}-{cds['age'].max():.0f}) ...")
-            adata = cellxgene_census.get_anndata(
-                census, "Homo sapiens",
-                obs_value_filter=f"dataset_id == '{ds_id}' and is_primary_data == True and donor_id in [{donor_list}]",
-                var_value_filter=var_filter,
-            )
-            X = adata.X
-            if sp.issparse(X):
-                X = X.tocsr()
-            logX = X.copy()
-            logX.data = np.log1p(logX.data)
-            names = list(adata.var["feature_name"])
-            up_i = [names.index(g) for g in up if g in names]
-            dn_i = [names.index(g) for g in dn if g in names]
-            coverage = len(set(up_i) | set(dn_i)) / (len(up) + len(dn))
-            prov(f"[{label}] cells={adata.n_obs:,} genes_measured={adata.n_vars} program_coverage={coverage:.3f}")
-
-            up_mean = np.asarray(logX[:, up_i].mean(axis=1)).ravel() if up_i else np.zeros(adata.n_obs)
-            dn_mean = np.asarray(logX[:, dn_i].mean(axis=1)).ravel() if dn_i else np.zeros(adata.n_obs)
-            cell_score = up_mean - dn_mean
-
-            sdf = pd.DataFrame({
-                "donor_id": adata.obs["donor_id"].astype(str).values,
-                "cell_type": adata.obs["cell_type"].astype(str).values,
-                "score": cell_score,
-            })
-            sdf = sdf[sdf["cell_type"] != "unknown"]
-            agg = (sdf.groupby(["donor_id", "cell_type"], observed=True)
-                      .agg(score=("score", "mean"), n_cells=("score", "size"))
-                      .reset_index())
-            agg = agg[agg["n_cells"] >= MIN_CELLS_PER_DONOR_CT]
-            meta = cds.set_index("donor_id")
-            agg["age"] = agg["donor_id"].map(meta["age"])
-            agg["sex"] = agg["donor_id"].map(meta["sex"])
-            agg["cohort"] = label
-            agg["group"] = group
-            agg["coverage"] = round(coverage, 4)
-            score_rows.append(agg)
-            del adata, logX, X
-            import gc; gc.collect()
-
-        scores = pd.concat(score_rows, ignore_index=True)
-        scores.to_csv(scores_path, index=False)
-        prov(f"total donor x cell-type units: {scores.shape[0]}")
-
-    # ---- whole-donor summary per cohort (Adult Primary >= 20y + All-ages Secondary)
-    summary_rows = []
+    symbols = sorted({gene for program in programs.values() for values in program.values() for gene in values})
+    var_filter = "feature_name in [" + ",".join(f"'{gene}'" for gene in symbols) + "]"
+    score_rows = []
     for ds_id, (label, group) in COHORTS.items():
+        cds = donor_meta[donor_meta["dataset_id"] == ds_id]
+        if len(cds) < 4:
+            prov(f"[{label}] only {len(cds)} control donors with age; skipped")
+            continue
+        donor_list = ",".join(f"'{donor}'" for donor in cds["donor_id"])
+        prov(f"[{label}] downloading {len(cds)} control donors")
+        adata = cellxgene_census.get_anndata(
+            census, "Homo sapiens",
+            obs_value_filter=f"dataset_id == '{ds_id}' and is_primary_data == True and donor_id in [{donor_list}]",
+            var_value_filter=var_filter,
+            obs_column_names=["donor_id", "cell_type", "raw_sum"],
+            var_column_names=["feature_name"],
+        )
+        names = list(adata.var["feature_name"])
+        raw_sum = np.asarray(adata.obs["raw_sum"], float)
+        cell_scores = {}
+        coverages = {}
+        for tier, program in programs.items():
+            cell_scores[tier], coverages[tier] = score_cells(adata.X, names, program["up"], program["down"], raw_sum)
+            prov(f"[{label}] {tier}: {coverages[tier]:.3f} coverage")
+        raw_score, _ = score_cells(adata.X, names, programs["P1_Clean"]["up"], programs["P1_Clean"]["down"])
+        sdf = pd.DataFrame({
+            "donor_id": adata.obs["donor_id"].astype(str).values,
+            "cell_type": adata.obs["cell_type"].astype(str).values,
+            "score": cell_scores["P1_Clean"],
+            "score_p0": cell_scores["P0_Raw257"],
+            "score_raw_counts": raw_score,
+        })
+        sdf = sdf[sdf["cell_type"] != "unknown"]
+        agg = (sdf.groupby(["donor_id", "cell_type"], observed=True)
+               .agg(score=("score", "mean"), score_p0=("score_p0", "mean"),
+                    score_raw_counts=("score_raw_counts", "mean"), n_cells=("score", "size"))
+               .reset_index())
+        agg = agg[agg["n_cells"] >= MIN_CELLS_PER_DONOR_CT].copy()
+        meta = cds.set_index("donor_id")
+        agg["age"] = agg["donor_id"].map(meta["age"])
+        agg["sex"] = agg["donor_id"].map(meta["sex"])
+        agg["cohort"] = label
+        agg["group"] = group
+        agg["coverage"] = round(coverages["P1_Clean"], 4)
+        agg["coverage_p0"] = round(coverages["P0_Raw257"], 4)
+        score_rows.append(agg)
+        del adata, sdf, agg
+        gc.collect()
+    scores = pd.concat(score_rows, ignore_index=True)
+    scores.to_csv(RESULTS / "m9-donor-scores.csv", index=False)
+    prov(f"Total thresholded donor-cell-type score rows: {len(scores)}")
+    return scores
+
+
+def fit_scores(scores, score_column, tier, normalization):
+    summary_rows = []
+    reg_rows = []
+    for label, group in COHORTS.values():
         sub = scores[scores["cohort"] == label].copy()
         if sub.empty:
             continue
         whole = (sub.groupby("donor_id", observed=True)
-                    .apply(lambda d: np.average(d["score"], weights=d["n_cells"]))
-                    .rename("score").reset_index())
+                 .apply(lambda d: np.average(d[score_column], weights=d["n_cells"]), include_groups=False)
+                 .rename("score").reset_index())
         meta = sub.groupby("donor_id", observed=True).agg(age=("age", "first"), sex=("sex", "first"))
         whole["age"] = whole["donor_id"].map(meta["age"])
         whole["sex"] = whole["donor_id"].map(meta["sex"]).astype(str)
         whole = whole.dropna(subset=["age"])
-        if len(whole) < 4:
-            continue
-            
-        male = (whole["sex"].str.lower() == "male").astype(float).values
-        # If male is constant or collinear, drop sex
-        if len(np.unique(male)) > 1:
-            Xd = np.column_stack([np.ones(len(whole)), whole["age"].values, male])
-        else:
-            Xd = np.column_stack([np.ones(len(whole)), whole["age"].values])
-            
-        r = ols(whole["score"].values, Xd)
-        verdict, mdes, tn, tsd = power_verdict(len(whole), whole["age"].std())
-        summary_rows.append({
-            "cohort": label, "group": group, "n_donors": len(whole),
-            "age_min": whole["age"].min(), "age_max": whole["age"].max(),
-            "age_sd": round(whole["age"].std(), 2),
-            "slope_per_year": r["slope"], "se": r["se"],
-            "ci_lo": r["ci_lo"], "ci_hi": r["ci_hi"], "p": r["p"],
-            "rho": r["rho"], "rho_p": r["rho_p"],
-            "norm_slope_30y": r["slope"] * 30 / HUMAN_MAX_LIFESPAN,
-            "verdict": verdict, "mdes30y_disp02": mdes,
-        })
-        
-        # Plot
-        fig, ax = plt.subplots(figsize=(5.2, 4))
-        ax.scatter(whole["age"], whole["score"], s=18, alpha=0.6, color="#0369a1")
-        xs = np.linspace(whole["age"].min(), whole["age"].max(), 50)
-        ax.plot(xs, r["slope"] * xs + (whole["score"].mean() - r["slope"] * whole["age"].mean()),
-                color="#dc2626", lw=2)
-        ax.set_xlabel("Donor age (years)")
-        ax.set_ylabel("Mouse aging signature score")
-        ax.set_title(f"{label}: n={len(whole)}, slope={r['slope']:.4f}/yr, p={r['p']:.2g}")
-        fig.tight_layout()
-        fig.savefig(FIGURES / f"m9-{label.lower()}-score-vs-age.png", dpi=150)
-        plt.close(fig)
+        if len(whole) >= 4:
+            male = (whole["sex"].str.lower() == "male").astype(float).values
+            columns = [np.ones(len(whole)), whole["age"].values]
+            if len(np.unique(male)) > 1:
+                columns.append(male)
+            result = ols(whole["score"].values, np.column_stack(columns))
+            verdict, mdes, _, _ = power_verdict(len(whole), whole["age"].std())
+            summary_rows.append({
+                "cohort": label, "group": group, "n_donors": len(whole),
+                "age_min": whole["age"].min(), "age_max": whole["age"].max(),
+                "age_sd": round(whole["age"].std(), 2), "slope_per_year": result["slope"],
+                "se": result["se"], "ci_lo": result["ci_lo"], "ci_hi": result["ci_hi"],
+                "p": result["p"], "rho": result["rho"], "rho_p": result["rho_p"],
+                "norm_slope_30y": result["slope"] * 30 / HUMAN_MAX_LIFESPAN,
+                "verdict": verdict, "mdes30y_disp02": mdes,
+                "program_tier": tier, "normalization": normalization,
+            })
+            if normalization == "log1p_CPM_per_cell":
+                fig, ax = plt.subplots(figsize=(5.2, 4))
+                ax.scatter(whole["age"], whole["score"], s=18, alpha=0.6, color="#0369a1")
+                xs = np.linspace(whole["age"].min(), whole["age"].max(), 50)
+                intercept = whole["score"].mean() - result["slope"] * whole["age"].mean()
+                ax.plot(xs, result["slope"] * xs + intercept, color="#dc2626", lw=2)
+                ax.set_xlabel("Donor age (years)")
+                ax.set_ylabel(f"{tier} aging signature score")
+                ax.set_title(f"{label}: n={len(whole)}, slope={result['slope']:.4f}/yr, p={result['p']:.2g}")
+                fig.tight_layout()
+                fig.savefig(FIGURES / f"m9-{label.lower()}-score-vs-age.png", dpi=150)
+                plt.close(fig)
 
-    summary = pd.DataFrame(summary_rows)
-    from statsmodels.stats.multitest import multipletests
-    valid_p = summary["p"].notna()
-    summary["q_bh"] = np.nan
-    if valid_p.sum() > 0:
-        summary.loc[valid_p, "q_bh"] = multipletests(summary.loc[valid_p, "p"], method="fdr_bh")[1]
-    summary.to_csv(RESULTS / "m9-cohort-summary.csv", index=False)
-
-    # ---- per-cell-type regressions
-    group_of = {label: group for _, (label, group) in COHORTS.items()}
-    reg_rows = []
-    for (label, ct), sub in scores.groupby(["cohort", "cell_type"], observed=True):
-        d = sub.groupby("donor_id", observed=True).agg(score=("score", "mean"),
-                                                       age=("age", "first"),
-                                                       sex=("sex", "first")).dropna(subset=["age"])
-        if len(d) < 4:
+    for (label, cell_type), sub in scores.groupby(["cohort", "cell_type"], observed=True):
+        donors = (sub.groupby("donor_id", observed=True)
+                  .agg(score=(score_column, "mean"), age=("age", "first"), sex=("sex", "first"))
+                  .dropna(subset=["age"]))
+        if len(donors) < 4:
             continue
-        male = (d["sex"].astype(str).str.lower() == "male").astype(float).values
+        male = (donors["sex"].astype(str).str.lower() == "male").astype(float).values
+        columns = [np.ones(len(donors)), donors["age"].values]
         if len(np.unique(male)) > 1:
-            Xd = np.column_stack([np.ones(len(d)), d["age"].values, male])
-        else:
-            Xd = np.column_stack([np.ones(len(d)), d["age"].values])
+            columns.append(male)
         try:
-            r = ols(d["score"].values, Xd)
+            result = ols(donors["score"].values, np.column_stack(columns))
         except np.linalg.LinAlgError:
             continue
-        verdict, mdes, tn, tsd = power_verdict(len(d), d["age"].std())
+        verdict, mdes, _, _ = power_verdict(len(donors), donors["age"].std())
         reg_rows.append({
-            "cohort": label, "group": group_of.get(label, ""), "cell_type": ct, "n_donors": len(d),
-            "age_sd": round(d["age"].std(), 2),
-            "slope_per_year": r["slope"], "se": r["se"], "p": r["p"],
-            "ci_lo": r["ci_lo"], "ci_hi": r["ci_hi"], "rho": r["rho"],
+            "cohort": label, "group": dict(COHORTS.values()).get(label, ""), "cell_type": cell_type,
+            "n_donors": len(donors), "age_sd": round(donors["age"].std(), 2),
+            "slope_per_year": result["slope"], "se": result["se"], "p": result["p"],
+            "ci_lo": result["ci_lo"], "ci_hi": result["ci_hi"], "rho": result["rho"],
             "verdict": verdict, "mdes30y_disp02": mdes,
+            "program_tier": tier, "normalization": normalization,
         })
-    regs = pd.DataFrame(reg_rows).sort_values(["group", "cohort", "p"])
-    regs.to_csv(RESULTS / "m9-regressions.csv", index=False)
 
+    summary = pd.DataFrame(summary_rows)
+    summary["q_bh"] = multipletests(summary["p"], method="fdr_bh")[1]
+    regs = pd.DataFrame(reg_rows).sort_values(["group", "cohort", "p"]).reset_index(drop=True)
+    regs["q_bh"] = multipletests(regs["p"], method="fdr_bh")[1]
+    return summary, regs
+
+
+def run_gene_level_concordance():
+    mapping_path = REPO / "data" / "reference" / "m9-celltype-mapping.csv"
+    if not mapping_path.exists():
+        return
+    rows = []
+    for _, row in pd.read_csv(mapping_path).iterrows():
+        if row["disposition"] != "Matched":
+            continue
+        slug = f"{row['mouse_tissue']}__{row['mouse_cell_type']}".replace(" ", "_").replace("-", "_").replace(",", "")
+        de_path = RESULTS / f"m2_de_{slug}.csv"
+        if not de_path.exists():
+            continue
+        de = pd.read_csv(de_path)
+        rows.append({
+            "mouse_tissue": row["mouse_tissue"], "mouse_cell_type": row["mouse_cell_type"],
+            "human_mapped_cell_type": row["human_mapped_cell_type"],
+            "mouse_de_genes_fdr05": int((de["FDR"] < 0.05).sum()) if "FDR" in de else 0,
+            "status": "Homologous unit matched",
+        })
+    pd.DataFrame(rows).to_csv(RESULTS / "m9-gene-level-concordance.csv", index=False)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use-cache", action="store_true")
+    args = parser.parse_args()
+    programs = load_program_tiers(REPO, "human")
+    for tier, program in programs.items():
+        prov(f"{tier}: {len(program['up'])} up and {len(program['down'])} down human orthologs")
+    scores_path = RESULTS / "m9-donor-scores.csv"
+    required = {"score", "score_p0", "score_raw_counts"}
+    if args.use_cache and scores_path.exists() and required.issubset(pd.read_csv(scores_path, nrows=0).columns):
+        scores = pd.read_csv(scores_path)
+        prov(f"Loaded cached scores from results/{scores_path.name}")
+    else:
+        scores = extract_scores(programs)
+
+    outputs = [
+        ("score", "P1_Clean", "log1p_CPM_per_cell", "m9-cohort-summary.csv", "m9-regressions.csv"),
+        ("score_p0", "P0_Raw257", "log1p_CPM_per_cell", "m9-cohort-summary-p0.csv", "m9-regressions-p0.csv"),
+        ("score_raw_counts", "P1_Clean", "log1p_raw_counts", "m9-cohort-summary-raw-counts.csv", "m9-regressions-raw-counts.csv"),
+    ]
+    for score_column, tier, normalization, summary_name, reg_name in outputs:
+        summary, regs = fit_scores(scores, score_column, tier, normalization)
+        summary.to_csv(RESULTS / summary_name, index=False)
+        regs.to_csv(RESULTS / reg_name, index=False)
+        prov(f"Saved {summary_name} and {reg_name}")
     run_gene_level_concordance()
-
     (RESULTS / "m9-provenance.log").write_text("\n".join(PROV) + "\n")
-    print("\n== cohort summary ==")
-    print(summary.to_string(index=False))
-    print(f"\n[m9] wrote {RESULTS / 'm9-cohort-summary.csv'}, {RESULTS / 'm9-regressions.csv'}, {RESULTS / 'm9-gene-level-concordance.csv'}")
 
 
 if __name__ == "__main__":
+    warnings.filterwarnings("ignore")
     sys.exit(main())

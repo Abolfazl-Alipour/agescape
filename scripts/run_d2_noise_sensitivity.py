@@ -114,6 +114,7 @@ def main():
     cell_types = [
         "fibroblast of lung",
         "classical monocyte",
+        "intermediate monocyte",
         "bronchial smooth muscle cell",
         "alveolar macrophage",
         "B cell",

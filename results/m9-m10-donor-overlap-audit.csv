@@ -1,0 +1,5 @@
+cohort,brain_bank_compared,m9_donors,m10_donors_in_bank,exact_identifier_overlap,m9_with_any_age_sex_bank_match,m9_with_unique_age_sex_bank_match,m9_with_ambiguous_age_sex_bank_match,m9_without_age_sex_bank_match,distinct_m10_ids_in_unique_matches,overlap_status
+MSSM_DLPFC,MSSM,214,112,0,160,52,108,54,28,"bounded by age, sex, and bank; identifiers not shared across sources"
+HBCC_DLPFC,HBCC,134,172,0,133,35,98,1,35,"bounded by age, sex, and bank; identifiers not shared across sources"
+RADC_DLPFC,not applicable,18,0,0,0,0,0,18,0,"bounded by age, sex, and bank; identifiers not shared across sources"
+SEAAD_DLPFC,not applicable,21,0,0,0,0,0,21,0,"bounded by age, sex, and bank; identifiers not shared across sources"

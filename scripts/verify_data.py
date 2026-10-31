@@ -37,36 +37,43 @@ def main():
         with open(m_path, "r") as f:
             meta = json.load(f)
 
-        filename = meta["filename"]
-        expected_sha = meta["sha256"]
-        expected_size = meta["size_bytes"]
-        target_path = raw_dir / filename
-
-        if not target_path.exists():
-            if meta.get("optional"):
-                print(f"{filename:<35} {'-':<12} {'SKIP':<10} optional, not present")
-                continue
-            print(f"{filename:<35} {'MISSING':<12} {'FAIL':<10} File not found")
-            all_passed = False
+        records = meta.get("files", [meta] if "filename" in meta else [])
+        if not records:
+            print(f"{m_path.name:<35} {'-':<12} {'SKIP':<10} metadata only")
             continue
+        for record in records:
+            filename = record["filename"]
+            expected_sha = record["sha256"]
+            expected_size = record["size_bytes"]
+            raw_path = raw_dir / filename
+            reference_path = repo_root / "data" / "reference" / filename
+            target_path = raw_path if raw_path.exists() else reference_path
 
-        actual_size = target_path.stat().st_size
-        actual_sha = compute_sha256(target_path)
-        size_mb = f"{actual_size / (1024 * 1024):.1f}"
+            if not target_path.exists():
+                if record.get("optional") or meta.get("optional"):
+                    print(f"{filename:<35} {'-':<12} {'SKIP':<10} optional, not present")
+                    continue
+                print(f"{filename:<35} {'MISSING':<12} {'FAIL':<10} File not found")
+                all_passed = False
+                continue
 
-        if actual_size != expected_size:
-            status = "FAIL"
-            match_str = f"SIZE MISMATCH (expected {expected_size}, got {actual_size})"
-            all_passed = False
-        elif actual_sha.lower() == expected_sha.lower():
-            status = "PASS"
-            match_str = f"OK ({actual_sha[:8]}...)"
-        else:
-            status = "FAIL"
-            match_str = f"MISMATCH (expected {expected_sha[:8]}, got {actual_sha[:8]})"
-            all_passed = False
+            actual_size = target_path.stat().st_size
+            actual_sha = compute_sha256(target_path)
+            size_mb = f"{actual_size / (1024 * 1024):.1f}"
 
-        print(f"{filename:<35} {size_mb:<12} {status:<10} {match_str}")
+            if actual_size != expected_size:
+                status = "FAIL"
+                match_str = f"SIZE MISMATCH (expected {expected_size}, got {actual_size})"
+                all_passed = False
+            elif actual_sha.lower() == expected_sha.lower():
+                status = "PASS"
+                match_str = f"OK ({actual_sha[:8]}...)"
+            else:
+                status = "FAIL"
+                match_str = f"MISMATCH (expected {expected_sha[:8]}, got {actual_sha[:8]})"
+                all_passed = False
+
+            print(f"{filename:<35} {size_mb:<12} {status:<10} {match_str}")
 
     print("-" * 80)
     if all_passed:

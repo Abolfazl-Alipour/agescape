@@ -198,10 +198,10 @@ def main() -> int:
     mssm = next(c for c in hc["cohorts"] if c["cohort"] == "MSSM_DLPFC")
     check("M9 MSSM n_donors 213, verdict POWERED-FLOOR", (213, "POWERED-FLOOR"),
           (mssm["n_donors"], mssm["verdict"]))
-    check("M9 MSSM slope negative with CI below zero", True,
-          mssm["slope_per_year"] < 0 and mssm["ci_hi"] < 0)
-    fchk("M9 MSSM slope_per_year -0.00019", -0.00019, mssm["slope_per_year"], 5)
-    fchk("M9 MSSM BH q across 11 cohorts 0.311", 0.311, mssm["q_bh"], 3)
+    check("M9 MSSM whole-cohort result does not survive BH", True,
+          mssm["slope_per_year"] < 0 and mssm["q_bh"] > 0.05)
+    fchk("M9 MSSM slope_per_year -0.00040", -0.00040, mssm["slope_per_year"], 5)
+    fchk("M9 MSSM BH q across 11 cohorts 0.940", 0.940, mssm["q_bh"], 3)
     check("M9 cell-type hits present (>=10 rows)", True, len(hc["celltypes"]) >= 10)
     groups = {c["group"] for c in hc["cohorts"]}
     check("M9 cohorts span brain/kidney/lung", {"brain", "kidney", "lung"}, groups)
@@ -215,27 +215,27 @@ def main() -> int:
     fchk("M10 age_sd 24.0", 24.0, co["age_sd"], 1)
     wc = co["whole_cortex"]
     check("M10 whole cortex covar-adjusted p > 0.1", True, wc["p_covar_adj"] > 0.1)
-    fchk("M10 whole cortex CPM slope +0.00032", 0.00032, wc["slope_per_year"], 5)
+    fchk("M10 whole cortex P1 CPM slope +0.00019", 0.00019, wc["slope_per_year"], 5)
     check("M10 celltypes == 27 rows", 27, len(dl["celltypes"]))
-    check("M10 concordant == 8", 8, dl["n_concordant"])
+    check("M10 concordant == 9", 9, dl["n_concordant"])
     ol = next(c for c in dl["celltypes"] if c["cell_type"] == "Oligo")
     ast = next(c for c in dl["celltypes"] if c["cell_type"] == "Astro")
     pvm = next(c for c in dl["celltypes"] if c["cell_type"] == "PVM")
-    fchk("M10 Oligo slope +0.00075", 0.00075, ol["slope_per_year"], 5)
+    fchk("M10 Oligo P1 slope +0.00115", 0.00115, ol["slope_per_year"], 5)
     check("M10 Oligo p < 1e-3, concordant up", True,
           ol["p"] < 1e-3 and ol["concordant"] and ol["direction"] == "up")
-    check("M10 Astro p in (1e-3, 5e-3)", True, 1e-3 < ast["p"] < 5e-3)
+    check("M10 Astro nominal p in (0.01, 0.05)", True, 0.01 < ast["p"] < 0.05)
     check("M10 Astro concordant up", True,
           ast["concordant"] and ast["direction"] == "up")
-    fchk("M10 PVM slope -0.00228", -0.00228, pvm["slope_per_year"], 5)
+    fchk("M10 PVM P1 slope -0.00444", -0.00444, pvm["slope_per_year"], 5)
     check("M10 PVM concordant down", True,
           pvm["concordant"] and pvm["direction"] == "down")
     en = next(c for c in dl["celltypes"] if c["cell_type"] == "Endo")
     check("M10 Endo direction reverses, not concordant", True,
           (not en["concordant"]) and en["direction"] == "normalization-dependent direction")
-    check("M10 program coverage 0.9319, 178 measured orthologs", True,
-          abs(dl["program"]["coverage"] - 0.9319) < 1e-9
-          and dl["program"]["measured_unique"] == 178)
+    check("M10 P1 program coverage 0.9576, 113 measured orthologs", True,
+          abs(dl["program"]["coverage"] - 0.9576) < 1e-9
+          and dl["program"]["measured_unique"] == 113)
     sig_cts = [c for c in dl["celltypes"] if c["q_bh"] < 0.05]
     check("M10 BH-FDR q<0.05 set is non-empty", True, len(sig_cts) >= 5)
 

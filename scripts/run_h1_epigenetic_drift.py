@@ -61,6 +61,13 @@ def inverse_trafo_age(linear_pred, max_lifespan, gestation):
     return pred_rel, pred_years
 
 
+def predictive_r2(observed, predicted):
+    observed = np.asarray(observed, float)
+    predicted = np.asarray(predicted, float)
+    denominator = np.sum((observed - observed.mean()) ** 2)
+    return np.nan if denominator == 0 else 1 - np.sum((observed - predicted) ** 2) / denominator
+
+
 def main():
     print("[H1 Epigenetics] Starting Phase 3: Pan-Mammalian Epigenetic Clock & Drift...")
     results_dir = REPO_ROOT / "results"
@@ -108,6 +115,10 @@ def main():
     beta_df = pd.read_csv(REPO_ROOT / "data" / "raw" / "GSE184211_datBetaNormalized.csv.gz", index_col=0)
     beta_df.index = beta_df.index.str.strip('\"')
     beta_df.columns = beta_df.columns.str.strip('\"')
+    h_df["array_column"] = "X" + h_df["title"].str.split(".Human.", n=1).str[1]
+    if not h_df["array_column"].isin(beta_df.columns).all():
+        raise ValueError("Human metadata and methylation matrix sample labels do not match")
+    beta_df = beta_df.loc[:, h_df["array_column"]]
 
     common_h_cpgs = list(set(coefs.index).intersection(set(beta_df.index)))
     print(f"  Matched {len(common_h_cpgs)} / {len(coefs)} Universal CpGs in Human dataset.")
@@ -143,15 +154,19 @@ def main():
             "pearson_r": r,
             "pearson_p": p,
             "spearman_rho": rho,
-            "r2": r**2,
+            "pearson_r_squared": r**2,
+            "predictive_r2": predictive_r2(sub["age"], sub["pred_age_years"]),
             "mae_relative_age": mae_rel,
             "mae_years": mae_years
         })
 
     h_res_df = pd.DataFrame(h_tissue_rows)
     h_res_df.to_csv(results_dir / "h1-epigenetic-clock-human.csv", index=False)
+    h_predictions = h_df[["gsm", "title", "array_column", "tissue", "age", "pred_age_years",
+                          "actual_rel_age", "pred_rel_age"]].copy()
+    h_predictions.to_csv(results_dir / "h1-epigenetic-clock-human-predictions.csv", index=False)
     print(f"[H1 Epigenetics] Saved human tissue results to results/h1-epigenetic-clock-human.csv")
-    print(h_res_df[["tissue", "n_samples", "pearson_r", "pearson_p", "r2", "mae_years"]].to_string(index=False))
+    print(h_res_df[["tissue", "n_samples", "pearson_r", "pearson_p", "predictive_r2", "mae_years"]].to_string(index=False))
 
     # -------------------------------------------------------------
     # 3. Mouse Lifespan Analysis (GSE199979, N=339 Liver, BXD panel)
@@ -215,13 +230,19 @@ def main():
         "pearson_r": r_m,
         "pearson_p": p_m,
         "spearman_rho": rho_m,
-        "r2": r_m**2,
+        "pearson_r_squared": r_m**2,
+        "predictive_r2": predictive_r2(m_valid["age_years"], m_valid["pred_age_years"]),
         "mae_relative_age": mae_m_rel,
         "mae_years": mae_m_years
     }])
     m_res_df.to_csv(results_dir / "h1-epigenetic-clock-mouse.csv", index=False)
+    m_predictions = m_valid[["gsm", "title", "tissue", "age_years", "pred_age_years",
+                             "actual_rel_age", "pred_rel_age"]].copy()
+    m_predictions["n_clock_probes"] = len(probes)
+    m_predictions["n_universal_clock_probes"] = len(coefs)
+    m_predictions.to_csv(results_dir / "h1-epigenetic-clock-mouse-predictions.csv", index=False)
     print(f"[H1 Epigenetics] Saved mouse liver results to results/h1-epigenetic-clock-mouse.csv")
-    print(m_res_df[["species", "tissue", "n_samples", "pearson_r", "pearson_p", "r2", "mae_years"]].to_string(index=False))
+    print(m_res_df[["species", "tissue", "n_samples", "pearson_r", "pearson_p", "predictive_r2", "mae_years"]].to_string(index=False))
 
     # -------------------------------------------------------------
     # 4. Cross-Species Liver-to-Liver Benchmark Summary

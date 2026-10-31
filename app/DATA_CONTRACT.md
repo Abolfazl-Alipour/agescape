@@ -11,14 +11,14 @@
 | Ranking head 55, 53, 36, 35 | Lung::adventitial 55, Kidney::PCT 53, Lung::fibroblast 36, Lung::alveolar macrophage 35 | ✓ |
 | Calibration 55 / 4.6 / 0 | `m2-calibration-trio-summary.csv`: observed 55, permutation mean 4.6, sex floor 0 | ✓ |
 | Agreement 13 agree / 4 partial / 0 disagree | `m3-agreement-table.csv` verdict counts | ✓ |
-| Kidney PCT rho 0.866 | 0.866, n_shared 13,019 | ✓ |
-| Program 167 up / 94 down / 312 gene-unit entries | `m6-program-genes.csv` 167/94; `m5-gene-level-programs.csv` 312 rows | ✓ |
-| Mouse whole-body slope 0.235 [0.067, 0.403] p=0.008, n=23 | 0.23496 [0.06727, 0.40265] p=0.0083, n=23 | ✓ |
-| NMR slope 0.017 [-0.257, 0.290] p=0.858, n=5 | 0.01667 [-0.25667, 0.290] p=0.8585, n=5 | ✓ |
-| Slope difference 0.218 [-0.013, 0.449] p=0.064 | 0.21828 [-0.01263, 0.44920] p=0.0639 | ✓ |
-| TOST δ=0.0587, p=0.329 not established | δ=0.05874, p=0.32894 | ✓ |
-| Exact permutation p=0.818 | 0.81818 | ✓ |
-| Coverage 1.00 / 0.73 / 0.31 (mouse/human/NMR) | `m6-gates.csv` 1.0 / 0.73180 / 0.31414 | ✓ |
+| Kidney PCT rho 0.569 | 0.568639, n_shared 12,713 | ✓ |
+| Program 166 up / 91 down / 312 gene-unit entries | `m6-program-genes.csv` 166/91; `m5-gene-level-programs.csv` 312 rows | ✓ |
+| Mouse whole-body slope 0.1344 [0.0293, 0.2395] p=0.0147, n=23 | 0.13437 [0.02926, 0.23949] p=0.014700, n=23 | ✓ |
+| NMR slope 0.0058 [-0.1981, 0.2098] p=0.9332, n=5 | 0.005836 [-0.198122, 0.209795] p=0.933179, n=5 | ✓ |
+| Slope difference 0.1285 [-0.0314, 0.2885] p=0.1153 | 0.128536 [-0.031443, 0.288515] p=0.115309 | ✓ |
+| TOST δ=0.2023, p=0.02748 at a post hoc margin exceeding the mouse estimate | δ=0.2023, p=0.027479 | ✓ |
+| Exact permutation p=1.000 | 1.000 | ✓ |
+| Coverage 1.00 / 0.8489 / 0.6619 (mouse/human/NMR) | `m6-gates.csv` 1.0 / 0.84892 / 0.66187 | ✓ |
 | Power anchors: 1.474 @ (4 donors, SD 8, disp 0.1); 0.59 @ (4, 20, disp 0.1) | `m4-human-power.csv` `min_detectable_30y_log2fc`: 1.474 and 0.59 | ✓ |
 | Savina 29 @ stated rule; 9 & 6 @ 1.45; 560 @ loose rule | `m6-savina-reproduction.csv`: @1.0 → 29 (p<0.05), 20 (FDR); @1.45 → 9 (p), 6 (FDR); @0.25 → 811 (p), 560 (FDR) | ✓ |
 | Lifespans 4 / 31 / 122.5 y | `m6-species-lifespans.csv` mouse 4.0, NMR 31, human 122.5 | ✓ |
@@ -55,10 +55,10 @@ All written by `scripts/export_app_data.py` → `app/data/`, deterministic, JSON
 4. **`design-grid.json`** ← m1-sex-age-table.csv (832e990f8803)
    `{age_groups: ["1m","3m","18m","21m","24m","30m"], cells: {female: [...6], male: [...6]}, mice: {female: [...6], male: [...6]}}` — powers G4; hatch rule: female-only columns (21m), male-only (1m, 24m, 30m); outline 3m & 18m as "the only fair fight".
 5. **`program.json`** ← m5-mouse-program-catalog.csv (d5ab9ace5f3c) + m5-gene-level-programs.csv (5251165002a1) + m6-program-genes.csv (941766a85207)
-   `{units: [{unit, n_up, n_down, frac_ribo_mito, frac_ribo_mito_background}], genes: [{gene, unit, direction, log2fc, fdr}], summary: {up: 167, down: 94, entries: 312}, matrix_top40: {rows: 40 (ranked by units-present, full set in `genes`), columns: 17 units}}` — powers G6, G7, unit-panel gene tables. **Stated sampling rule:** G7 displays top 40 genes by unit-recurrence; the full 312-row matrix is one tap down (drawer download). Not silent dropping.
+   `{units: [{unit, n_up, n_down, frac_ribo_mito, frac_ribo_mito_background}], genes: [{gene, unit, direction, log2fc, fdr}], summary: {up: 166, down: 91, entries: 312}, matrix_top40: {rows: 40 (ranked by units-present, full set in `genes`), columns: 17 units}}` — powers G6, G7, unit-panel gene tables. **Stated sampling rule:** G7 displays top 40 genes by unit-recurrence; the full 312-row matrix is one tap down (drawer download). Not silent dropping.
    - **Correction (2026-10-19, file wins):** the m5 catalog stores m2-DE-filename slugs (`Lung::adventitial_cell`); all `unit` fields and matrix columns in this export are translated back to display names (`Lung::adventitial cell`) so program.json joins to every other export (and to the app's panel lookups) on identical strings. Translation rule: filename stem form `re.sub(r"[^A-Za-z0-9_]+", "_", unit.replace("::", "__"))`, keyed back with `__` restored to `::`; asserted 1:1 against the 17 committed `m2_de_*.csv` stems at export.
 6. **`signature.json`** ← m6-lifespan-program-scores.csv (dfff50c3d1d4) + m6-statistical-summary.csv (176a8dcab93f) + m6-gates.csv (1c1260534996) + m6-species-lifespans.csv (ad28535a0957)
-   `{arms: {mouse_wb: {points: [{donor, age_years, age_normalized, score, n_cells}], n: 23, slope, ci, p}, mouse_skin: {...n:3, underpowered: true}, human_skin: {...n:4, low_powered: true}, human_fibroblast: {...}, nmr: {..., tested_span_years: [1.1, 11.3]}}, stats: {diff: {...}, tost: {delta: 0.05874, p: 0.32894, established: false}, perm_p: 0.81818}, coverage: {mouse: 1.0, human: 0.73180, nmr: 0.31414}, lifespans: {mouse: 4.0, nmr: 31.0, human: 122.5}}` — powers G9, G10, G11.
+   `{arms: {mouse_wb: {points: [{donor, age_years, age_normalized, score, n_cells}], n: 23, slope, ci, p}, mouse_skin: {...n:3, underpowered: true}, human_skin: {...n:4, low_powered: true}, human_fibroblast: {...}, nmr: {..., tested_span_years: [1.1, 11.3]}}, stats: {diff: {...}, tost: {delta: 0.2023, p: 0.02748, established: true}, perm_p: 1.0}, coverage: {mouse: 1.0, human: 0.84892, nmr: 0.66187}, lifespans: {mouse: 4.0, nmr: 31.0, human: 122.5}}` — powers G9, G10, G11. The large post hoc TOST margin exceeds the mouse whole-body estimate and cannot exclude a mouse-sized effect.
 7. **`savina.json`** ← m6-savina-reproduction.csv (cfdab4a0f3a1)
    `{curve: [{log2fc_cutoff, n_de_pval05, n_de_fdr05}], markers: {paper_rule: {cutoff: 1.0, n_pval: 29}, converted_rule: {cutoff: 1.45, n_pval: 9, n_fdr: 6}, loose_rule: {cutoff: 0.25, n_fdr: 560}}, caveats: ["Igfbp3 absent from source file", "QC 10,251 vs paper 10,232"]}` — powers G12.
 8. **`power-grid.json`** <- m4-human-power.csv (03dc469a5a05)
@@ -72,10 +72,10 @@ Copied verbatim from `figures/` (no re-rendering): `m3-dpt-vs-age.png` (17e50141
 
 10. **`anage.json`** <- data/raw/anage_dataset.zip (official AnAge Build 14 export, e3ddb66e32e9)
    `[{n, latin, cls, long, kg, q, sc}]` — 4,141 species with recorded maximum longevity; `sc` flags the three species included in this explorer, not a global census of public single-cell data. Powers G14. Added 2026-10-21; wording corrected 2026-10-24.
-11. **`humancohorts.json`** <- m9-cohort-summary.csv + m9-regressions.csv (scripts/run_m9_pipeline.py, 2026-10-21)
-   `{cohorts: [{cohort, group, n_donors, age_min/max/sd, slope_per_year, se, ci_lo, ci_hi, p, q_bh, rho, verdict}] (11 cohorts, 621 scored control donors), celltypes: [top 40 eligible exploratory hits], total_control_donors: 624, program_human_genes: 188}` — powers G15. MSSM has nominal p=0.028 and BH q=0.311 across 11 cohort tests. Added 2026-10-21; cohort-level BH correction added 2026-10-24.
+11. **`humancohorts.json`** <- m9-cohort-summary.csv + m9-regressions.csv (scripts/run_m9_pipeline.py)
+   `{cohorts: [{cohort, group, n_donors, age_min/max/sd, slope_per_year, se, ci_lo, ci_hi, p, q_bh, rho, verdict}] (11 cohorts, 621 scored control donors), celltypes: [top 40 eligible rows with global q values], total_control_donors: 621, program_human_genes: 118, program_tier: P1_Clean}` — powers G15. MSSM has slope -0.000404, p=0.2403, and BH q=0.9402 across 11 cohort tests. Primary scores use per-cell library-size normalization. Updated 2026-10-31.
 12. **`dlpfc.json`** <- m10-cohort-summary.csv + m10-celltype-regressions.csv (scripts/run_m10_pipeline.py)
-   `{cohort: {name: "DLPFC_Lifespan_Atlas", source: "Synapse syn52396927 (AD Knowledge Portal DUA)", n_donors: 284, age_min: 0.2, age_max: 97.0, age_sd: 24.0, n_cell_types: 27, whole_cortex: {slope_per_year: +0.0001464, ci_lo: -0.0001692, ci_hi: +0.0004620, p: 0.3619, ...}}, program: {up_slots: 121, down_slots: 70, measured_unique: 178, coverage: 0.9319}, n_concordant: 7, celltypes: [27 regression rows]}` — powers G16. `concordant` means nominal p<0.05 with the same sign in both schemes, not universal FDR or adult-only robustness. Other rows distinguish direction reversal, scheme-sensitive significance, and no nominal signal. The corrected whole-cortex summary averages only observed cell types per donor; missing cell types are not zeros. **DUA rule:** regression aggregates only; per-donor scores never leave `data/` (gitignored). Added 2026-10-22; missing-data handling corrected 2026-10-24.
+   `{cohort: {name: "DLPFC_Lifespan_Atlas", source: "Synapse syn52396927 (AD Knowledge Portal DUA)", n_donors: 284, age_min: 0.2, age_max: 97.0, age_sd: 24.0, n_cell_types: 27, whole_cortex: {slope_per_year: +0.000186, p: 0.3494, slope_covar_adj: -0.000209, p_covar_adj: 0.4004, ...}}, program: {up_slots: 73, down_slots: 40, measured_unique: 113, coverage: 0.9576, tier: P1_Clean}, n_concordant: 9, celltypes: [27 regression rows with global q values]}` — powers G16. `concordant` means nominal p<0.05 with the same sign in both schemes, not primary global significance. The whole-cortex summary averages only observed cell types per donor; missing cell types are not zeros. **DUA rule:** regression aggregates only; per-donor scores never leave `data/` (gitignored). Updated 2026-10-31.
 
 ## Hard gates
 

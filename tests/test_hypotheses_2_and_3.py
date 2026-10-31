@@ -113,3 +113,30 @@ def test_h1_epigenetic_outputs_exist_and_accurate():
     assert r_h_all > 0.75, f"Expected human all tissues r > 0.75, got {r_h_all}"
     assert mae_h_all < 10.0, f"Expected human MAE < 10.0 years (with link function), got {mae_h_all}"
     assert int(h_df.loc["All Tissues", "n_samples"]) == 661
+
+
+def test_h2_prethreshold_counts_and_presence_outputs():
+    res_dir = REPO_ROOT / "results"
+    counts = pd.read_csv(res_dir / "m9-donor-cell-counts-prethreshold.csv")
+    lung = counts[(counts["cohort"] == "Lung_Integrated") & (counts["age"] >= 20)]
+    assert ((lung["n_cells"] > 0) & (lung["n_cells"] < 20)).any()
+    primary = pd.read_csv(res_dir / "h2-composition-human-lung.csv")
+    observed = pd.read_csv(res_dir / "h2-composition-human-lung-observed-only.csv")
+    presence = pd.read_csv(res_dir / "h2-composition-human-lung-presence.csv")
+    assert len(primary) == len(observed) == len(presence)
+    assert primary["n_donors"].nunique() == 1
+    assert (observed["n_donors"] <= primary["n_donors"].iloc[0]).all()
+    assert (presence["n_present"] + presence["n_absent"] == primary["n_donors"].iloc[0]).all()
+
+
+def test_h1_predictive_r2_recomputes_from_per_sample_predictions():
+    for species, age_column in (("human", "age"), ("mouse", "age_years")):
+        predictions = pd.read_csv(REPO_ROOT / "results" / f"h1-epigenetic-clock-{species}-predictions.csv")
+        observed = predictions[age_column].to_numpy()
+        predicted = predictions["pred_age_years"].to_numpy()
+        expected = 1 - np.sum((observed - predicted) ** 2) / np.sum((observed - observed.mean()) ** 2)
+        summary = pd.read_csv(REPO_ROOT / "results" / f"h1-epigenetic-clock-{species}.csv")
+        if species == "human":
+            summary = summary[summary["tissue"] == "All Tissues"]
+        assert np.isclose(summary.iloc[0]["predictive_r2"], expected)
+        assert "r2" not in summary.columns

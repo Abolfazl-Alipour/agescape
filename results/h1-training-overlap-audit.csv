@@ -1,0 +1,3 @@
+dataset,evaluation_samples,source_checked,consortium_dataset,training_overlap_status
+GSE184211,661,https://pmc.ncbi.nlm.nih.gov/articles/PMC10501909/,true,included in Mammalian Methylation Consortium data used to develop the published clocks
+GSE199979,339,https://pmc.ncbi.nlm.nih.gov/articles/PMC10501909/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC9049972/,not determined,sample-level training membership unresolved; do not call independent validation

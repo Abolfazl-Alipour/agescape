@@ -95,18 +95,14 @@ LS_NMR = lifespans["Heterocephalus glaber"]
 # ---------------------------------------------------------
 # Step 2: Load Programs (P1_Clean & P0_Raw257) & Orthologs
 # ---------------------------------------------------------
-hier_df = pd.read_csv(RESULTS_DIR / "m5-program-hierarchy.csv")
+from src.aging_programs import load_program_tiers
 
-# P1_Clean (primary)
-p1_sub = hier_df[hier_df["tier"] == "P1_Clean"]
-p1_up = sorted(list(p1_sub[p1_sub["direction"] == "UP"]["gene"]))
-p1_dn = sorted(list(p1_sub[p1_sub["direction"] == "DOWN"]["gene"]))
+program_tiers = load_program_tiers(REPO_ROOT, "mouse")
+p1_up = program_tiers["P1_Clean"]["up"]
+p1_dn = program_tiers["P1_Clean"]["down"]
+p0_up = program_tiers["P0_Raw257"]["up"]
+p0_dn = program_tiers["P0_Raw257"]["down"]
 prov(f"Loaded P1_Clean: {len(p1_up)} UP, {len(p1_dn)} DOWN genes")
-
-# P0_Raw257 (baseline)
-p0_sub = hier_df[hier_df["tier"] == "P0_Raw257"]
-p0_up = sorted(list(p0_sub[p0_sub["direction"] == "UP"]["gene"]))
-p0_dn = sorted(list(p0_sub[p0_sub["direction"] == "DOWN"]["gene"]))
 prov(f"Loaded P0_Raw257: {len(p0_up)} UP, {len(p0_dn)} DOWN genes")
 
 # Ortholog mappings

@@ -337,7 +337,7 @@ comp_our.columns = ["cell_ontology_class", "fraction_our_pipeline"]
 comp_orig = adata.obs["cell_ontology_class"].value_counts(normalize=True).reset_index()
 comp_orig.columns = ["cell_ontology_class", "fraction_paper_raw"]
 
-comp_comparison = pd.merge(comp_orig, comp_our, on="cell_ontology_class", how="outer").fillna(0)
+comp_comparison = pd.merge(comp_orig, comp_our, on="cell_ontology_class", how="outer").astype(object).fillna(0)
 comp_comparison["absolute_diff"] = (comp_comparison["fraction_our_pipeline"] - comp_comparison["fraction_paper_raw"]).abs()
 comp_comparison = comp_comparison.sort_values(by="fraction_paper_raw", ascending=False)
 

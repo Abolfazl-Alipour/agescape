@@ -1,0 +1,4 @@
+test_id,cohort,cell_type,slope_per_year,p,source,model,program_tier,multiplicity_family,q_global_bh,survives_global_bh_05
+transport_022,MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,-0.0013027608953082,0.0001650054087092,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0207906814973592,True
+transport_023,MSSM_DLPFC,oligodendrocyte,0.0011522791799155,0.0004114010800031,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0345576907202604,True
+transport_230,DLPFC_Lifespan_Atlas,EN_L3_5_IT_3,-0.001383074658867,8.242560589828516e-05,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.02077125268636786,True

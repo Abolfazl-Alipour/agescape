@@ -1399,6 +1399,11 @@
     // sort by primary slope descending; glia rise, immune fall
     const rows = [...dl.celltypes].sort((a, b) => b.slope_per_year - a.slope_per_year)
       .map((c, i) => ({ ...c, row: i }));
+    const maxMagnitude = Math.max(...rows.flatMap(d => [
+      Math.abs(x(d.slope_per_year)), Math.abs(x(d.slope_raw)),
+      Math.abs(x(d.ci_lo)), Math.abs(x(d.ci_hi))
+    ]));
+    const axisLimit = Math.max(1, Math.ceil(maxMagnitude));
 
     chart.setOption({
       title: {
@@ -1417,8 +1422,8 @@
             : d.direction === "scheme-sensitive significance" ? "same sign, but significance is not robust across schemes"
             : "no nominal signal in either scheme";
           return `<strong>${d.cell_type}</strong> (${d.n_donors} donors)<br>` +
-            `raw-sum: ${x(d.slope_per_year).toFixed(2)}x10^-3/yr, p = ${d.p.toExponential(2)}, BH q = ${d.q_bh.toExponential(2)}<br>` +
-            `CPM: ${x(d.slope_cpm).toFixed(2)}x10^-3/yr, p = ${d.p_cpm.toExponential(2)}, BH q = ${d.q_bh_cpm.toExponential(2)}<br>` +
+            `CPM: ${x(d.slope_per_year).toFixed(2)}x10^-3/yr, p = ${d.p.toExponential(2)}, global q = ${d.q_global_bh.toExponential(2)}<br>` +
+            `raw counts: ${x(d.slope_raw).toFixed(2)}x10^-3/yr, p = ${d.p_raw.toExponential(2)}<br>` +
             `adults-only p = ${d.p_adult.toExponential(2)}<br>${verdict}`;
         }
       },
@@ -1430,7 +1435,7 @@
         name: "program score slope per year (x10^-3)",
         nameLocation: "middle",
         nameGap: 28,
-        min: -3.5, max: 3.5, interval: 1,
+        min: -axisLimit, max: axisLimit, interval: axisLimit / 4,
         axisLabel: { color: "#64748b", fontSize: isMobile ? 10 : 11 },
         splitLine: { lineStyle: { color: "rgba(15,23,42,0.06)" } }
       },
@@ -1451,9 +1456,9 @@
             const xLo = api.coord([x(d.ci_lo), d.row])[0];
             const xHi = api.coord([x(d.ci_hi), d.row])[0];
             const xM = api.coord([x(d.slope_per_year), d.row])[0];
-            const xC = api.coord([x(d.slope_cpm), d.row])[0];
+            const xC = api.coord([x(d.slope_raw), d.row])[0];
             const children = [];
-            // raw-sum CI whisker + dot (primary)
+            // CPM CI whisker and primary dot
             children.push({ type: "line", shape: { x1: xLo, y1: y, x2: xHi, y2: y },
               style: { stroke: PURPLE, lineWidth: d.concordant ? 3 : 2, opacity: d.concordant ? 1 : 0.5 } });
             children.push(d.concordant
@@ -1461,7 +1466,7 @@
                   style: { fill: PURPLE, stroke: "#0f172a", lineWidth: 1 } }
               : { type: "circle", shape: { cx: xM, cy: y, r: 5 },
                   style: { fill: "rgba(0,0,0,0)", stroke: PURPLE, lineWidth: 2, opacity: 0.65 } });
-            // CPM robustness dot, smaller, nudged below the row center
+            // Raw-count sensitivity dot, smaller, nudged below the row center
             children.push(d.concordant
               ? { type: "circle", shape: { cx: xC, cy: y + 9, r: 4 }, style: { fill: PURPLE_SOFT } }
               : { type: "circle", shape: { cx: xC, cy: y + 9, r: 3.5 },
@@ -1559,7 +1564,7 @@
               return {
                 type: "text",
                 style: {
-                  x: p[0], y: p[1], text: shortLabel ? "equivalence unproven" : "equivalence not established",
+                  x: p[0], y: p[1], text: shortLabel ? "not excluded" : "mouse-sized effect not excluded",
                   fill: "#9a3412", fontSize: shortLabel ? 9 : 11, fontWeight: 600,
                   align: "left", verticalAlign: "middle"
                 }

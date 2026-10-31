@@ -1,5 +1,6 @@
-[m9] program: 166 up / 91 down mouse genes -> 120 up / 68 down human orthologs
-[m9] Loading cached donor scores from results/m9-donor-scores.csv ...
-[m9] 
---- Running Module 4b: Homologous Cell-Type Concordance ---
-[m9] Saved results/m9-gene-level-concordance.csv (16 homologous cell-type pairs)
+[m9] P0_Raw257: 120 up and 68 down human orthologs
+[m9] P1_Clean: 76 up and 42 down human orthologs
+[m9] Loaded cached scores from results/m9-donor-scores.csv
+[m9] Saved m9-cohort-summary.csv and m9-regressions.csv
+[m9] Saved m9-cohort-summary-p0.csv and m9-regressions-p0.csv
+[m9] Saved m9-cohort-summary-raw-counts.csv and m9-regressions-raw-counts.csv

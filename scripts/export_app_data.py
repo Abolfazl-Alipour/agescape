@@ -215,7 +215,7 @@ def export_human_cohorts(prov):
     assert len(summ) == 11, f"expected 11 cohorts, got {len(summ)}"
     assert int(summ["n_donors"].sum()) == 621, summ["n_donors"].sum()
     mssm = summ[summ["cohort"] == "MSSM_DLPFC"].iloc[0]
-    assert mssm["n_donors"] == 213 and mssm["ci_hi"] < 0, "MSSM headline changed"
+    assert mssm["n_donors"] == 213 and mssm["q_bh"] > 0.05, "MSSM cohort result changed unexpectedly"
 
     cohorts = []
     for _, r in summ.iterrows():
@@ -233,7 +233,9 @@ def export_human_cohorts(prov):
         "cohort": r["cohort"], "group": r["group"], "cell_type": r["cell_type"],
         "n_donors": int(r["n_donors"]), "age_sd": fnum(r["age_sd"]),
         "slope_per_year": fnum(r["slope_per_year"]), "ci_lo": fnum(r["ci_lo"]),
-        "ci_hi": fnum(r["ci_hi"]), "p": fnum(r["p"]), "verdict": r["verdict"],
+        "ci_hi": fnum(r["ci_hi"]), "p": fnum(r["p"]), "q_bh": fnum(r["q_bh"]),
+        "q_global_bh": fnum(r["q_global_bh"]), "verdict": r["verdict"],
+        "program_tier": r["program_tier"], "normalization": r["normalization"],
     } for _, r in hits.iterrows()]
 
     prov["humancohorts.json"] = [
@@ -241,7 +243,8 @@ def export_human_cohorts(prov):
         {"file": "results/m9-regressions.csv", "sha256": sha256_full(RESULTS / "m9-regressions.csv"), "rows": len(regs)},
     ]
     return {"cohorts": cohorts, "celltypes": celltypes,
-            "total_control_donors": 624, "program_human_genes": 188}
+            "total_control_donors": int(summ["n_donors"].sum()),
+            "program_human_genes": 118, "program_tier": "P1_Clean"}
 
 
 def export_dlpfc(prov):
@@ -279,7 +282,8 @@ def export_dlpfc(prov):
             "n_zero_donors": inum(r["n_zero_donors"]),
             "slope_per_year": fnum(slope_cpm), "se": fnum(r["se"]),
             "ci_lo": fnum(r["ci_lo"]), "ci_hi": fnum(r["ci_hi"]),
-            "p": fnum(p_cpm), "q_bh": fnum(r["q_bh"]), "rho": fnum(r["rho"]),
+            "p": fnum(p_cpm), "q_bh": fnum(r["q_bh"]), "q_global_bh": fnum(r["q_global_bh"]),
+            "rho": fnum(r["rho"]), "program_tier": r["program_tier"],
             "slope_raw": fnum(slope_raw), "p_raw": fnum(p_raw),
             "slope_covar_adj": fnum(r["slope_covar_adj"]), "p_covar_adj": fnum(r["p_covar_adj"]),
             "slope_adult": fnum(r["slope_adult"]), "p_adult": fnum(r["p_adult"]),
@@ -308,8 +312,10 @@ def export_dlpfc(prov):
                 "p_covar_adj": fnum(summ["p_covar_adj"]),
             },
         },
-        "program": {"up_slots": 121, "down_slots": 70, "measured_unique": 178,
-                    "coverage": 0.9319},
+        "program": {"up_slots": int(regs["n_up_genes"].max()),
+                    "down_slots": int(regs["n_down_genes"].max()),
+                    "measured_unique": int(regs["n_up_genes"].max() + regs["n_down_genes"].max()),
+                    "coverage": fnum(regs["coverage"].max()), "tier": "P1_Clean"},
         "n_concordant": n_conc,
         "celltypes": rows,
     }

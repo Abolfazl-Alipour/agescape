@@ -274,9 +274,9 @@
   "m10_lifespan": {
     "whole_cortex": {
       "n_donors": 284,
-      "slope": 0.00032,
-      "p": 0.0118185532812634,
-      "covar_adj_p": 0.8626218107276717
+      "slope": 0.00019,
+      "p": 0.349415,
+      "covar_adj_p": 0.400449
     },
     "key_celltypes": {
       "Astro": {

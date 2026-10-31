@@ -1,10 +1,3 @@
-[m10] source: syn62064518/lifespan_pseudobulk.rds md5 verified aef628e7bc2e5134b790d98c6f57ec48
-[m10] DUA: AD Knowledge Portal controlled access; aggregates only committed
-[m10] program: 166 up / 91 down mouse genes -> 120 up / 68 down human orthologs
-[m10] scoring recipe: primary CPM-normalized log1p(CPM); robustness raw counts
-[m10] cohort: 284 control donors, age 0.2-97.0 (SD 24.0)
-[m10] cell types: 27
-[m10] Saved wide results/m10-confounder-audit.csv (27 rows, 1 per cell type)
-[m10] Saved results/m10-celltype-regressions.csv
-[m10] Saved results/m10-cohort-summary.csv
-[m10] Saved figures/m10-dlpfc-celltype-forest.png
+source: syn62064518/lifespan_pseudobulk.rds md5 aef628e7bc2e5134b790d98c6f57ec48
+primary: P1_Clean log1p(CPM); sensitivity: P0_Raw257 and raw-count scores
+only aggregate regression outputs committed

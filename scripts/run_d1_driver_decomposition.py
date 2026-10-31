@@ -12,6 +12,7 @@ Outputs:
   - results/d1-glial-model-summary.csv
 """
 from pathlib import Path
+import sys
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
@@ -19,6 +20,8 @@ import scipy.stats as stats
 import rdata
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO))
+from src.aging_programs import load_program_tiers
 
 INFLAMMATORY_STRESS_GENES = {
     "CCL2", "ISG15", "ITGAM", "STAT3", "NFKBIA", "NFKBIZ", "SOCS2", "SOCS3",
@@ -27,28 +30,14 @@ INFLAMMATORY_STRESS_GENES = {
 }
 
 def load_programs():
-    pg = pd.read_csv(REPO / "results" / "m6-program-genes.csv")
-    up_m = pg["program_up"].dropna().tolist()
-    dn_m = pg["program_down"].dropna().tolist()
-    orth = pd.read_csv(REPO / "data" / "reference" / "orthologs-mouse-human.csv")
-    m2h = dict(zip(orth["mouse_gene_symbol"], orth["human_gene_symbol"]))
-    up_p0 = sorted({m2h[g] for g in up_m if g in m2h and isinstance(m2h[g], str)})
-    dn_p0 = sorted({m2h[g] for g in dn_m if g in m2h and isinstance(m2h[g], str)})
-
-    hier = pd.read_csv(REPO / "results" / "m5-program-hierarchy.csv")
-    p1 = hier[hier["tier"] == "P1_Clean"]
-    up_p1_m = p1[p1["direction"] == "UP"]["gene"].tolist()
-    dn_p1_m = p1[p1["direction"] == "DOWN"]["gene"].tolist()
-    up_p1 = sorted({m2h[g] for g in up_p1_m if g in m2h and isinstance(m2h[g], str)})
-    dn_p1 = sorted({m2h[g] for g in dn_p1_m if g in m2h and isinstance(m2h[g], str)})
-
+    tiers = load_program_tiers(REPO, "human")
+    up_p0, dn_p0 = tiers["P0_Raw257"]["up"], tiers["P0_Raw257"]["down"]
     up_p0_no_inflam = [g for g in up_p0 if g not in INFLAMMATORY_STRESS_GENES]
     dn_p0_no_inflam = [g for g in dn_p0 if g not in INFLAMMATORY_STRESS_GENES]
-
     return {
+        "P1_Clean": (tiers["P1_Clean"]["up"], tiers["P1_Clean"]["down"]),
         "P0_Raw257": (up_p0, dn_p0),
         "P0_Minus_Inflammatory": (up_p0_no_inflam, dn_p0_no_inflam),
-        "P1_Clean": (up_p1, dn_p1)
     }
 
 def fit_unadj(y, keep, age):

@@ -1,0 +1,253 @@
+test_id,cohort,cell_type,slope_per_year,p,source,model,program_tier,multiplicity_family,q_global_bh,survives_global_bh_05
+transport_001,HBCC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,0.000870274171777,0.012087471517688,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.19037767640358602,False
+transport_002,HBCC_DLPFC,perivascular macrophage,-0.0030414177131769,0.033490378179058,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.2699901985466968,False
+transport_003,HBCC_DLPFC,oligodendrocyte,0.0006601213863417,0.0436556508744648,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.32136766660429633,False
+transport_004,HBCC_DLPFC,oligodendrocyte precursor cell,0.0006273184593995,0.0547678865796582,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.3833752060576074,False
+transport_005,HBCC_DLPFC,VIP GABAergic cortical interneuron,-0.0006371942006305,0.0594425009220626,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.3941976376936783,False
+transport_006,HBCC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,-0.0005884848938159,0.0678543984808707,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_007,HBCC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,0.0006033544346412,0.0700857869287487,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_008,HBCC_DLPFC,lamp5 GABAergic cortical interneuron,-0.0005784276230522,0.1019611961884834,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.4758189155462559,False
+transport_009,HBCC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,0.0005509375548872,0.1533644974444497,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_010,HBCC_DLPFC,astrocyte,0.0007314324313067,0.1552089449535032,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_011,HBCC_DLPFC,microglial cell,0.0007956549979754,0.2081611913272577,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_012,HBCC_DLPFC,smooth muscle cell,-0.0018410354817585,0.271318531983163,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_013,HBCC_DLPFC,L5/6 near-projecting glutamatergic neuron,-0.0003232085838645,0.2902231171468131,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6965354811523514,False
+transport_014,HBCC_DLPFC,T cell,0.0035489374107542,0.2953276905569669,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7020997926448647,False
+transport_015,HBCC_DLPFC,vascular leptomeningeal cell,0.0007872081820751,0.3545452624980318,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7702190185302071,False
+transport_016,HBCC_DLPFC,GABAergic neuron,-0.0001931780375181,0.6275989960948727,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_017,HBCC_DLPFC,endothelial cell,-0.0003596162546027,0.6410798774737129,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_018,HBCC_DLPFC,sst GABAergic cortical interneuron,-0.0001456756875864,0.652212213358203,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9130970987014841,False
+transport_019,HBCC_DLPFC,pvalb GABAergic cortical interneuron,-0.0001388934601275,0.6626113558782423,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9212100458307428,False
+transport_020,HBCC_DLPFC,pericyte,-0.0002243441830936,0.7590914483137097,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_021,HBCC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,-2.3824396406884183e-05,0.9558904937692572,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_022,MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,-0.0013027608953082,0.0001650054087092,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0207906814973592,True
+transport_023,MSSM_DLPFC,oligodendrocyte,0.0011522791799155,0.0004114010800031,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0345576907202604,True
+transport_024,MSSM_DLPFC,VIP GABAergic cortical interneuron,-0.0010800775665841,0.0011853609707869,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0628177631658318,False
+transport_025,MSSM_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,-0.0011621150487552,0.001266670171922,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.0628177631658318,False
+transport_026,MSSM_DLPFC,microglial cell,0.0020179356791534,0.0037075061770235,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.11549095409314765,False
+transport_027,MSSM_DLPFC,lamp5 GABAergic cortical interneuron,-0.0010586397170454,0.0103173760887963,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.17333191829177785,False
+transport_028,MSSM_DLPFC,pvalb GABAergic cortical interneuron,-0.000758379740897,0.0180248550823544,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.25234797115296165,False
+transport_029,MSSM_DLPFC,oligodendrocyte precursor cell,0.0009620901905657,0.0275506309910601,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_030,MSSM_DLPFC,endothelial cell,0.0019998397258974,0.0286231501868111,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_031,MSSM_DLPFC,GABAergic neuron,-0.0007315973604972,0.0321067683043852,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26969685375683566,False
+transport_032,MSSM_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,-0.0008376507751483,0.0446343981394856,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.32136766660429633,False
+transport_033,MSSM_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,-0.0009657123296366,0.0758186040555935,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_034,MSSM_DLPFC,vascular leptomeningeal cell,0.0019895237973875,0.1331010063555297,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5160888724716968,False
+transport_035,MSSM_DLPFC,sst GABAergic cortical interneuron,-0.0003974539985149,0.1345262161835393,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5160888724716968,False
+transport_036,MSSM_DLPFC,L5/6 near-projecting glutamatergic neuron,-0.0006538344650705,0.1351661332663968,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5160888724716968,False
+transport_037,MSSM_DLPFC,astrocyte,-0.0003812741435643,0.564948995748476,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8788095489420737,False
+transport_038,MSSM_DLPFC,L6b glutamatergic neuron of the primary motor cortex,-0.0002337182643777,0.5769700929972239,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8920028431613523,False
+transport_039,MSSM_DLPFC,pericyte,0.000469849878191,0.7330481435777326,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_040,MSSM_DLPFC,smooth muscle cell,-0.0011679628976697,0.80227861653875,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_041,MSSM_DLPFC,T cell,-0.0002601339263767,0.8091879828686571,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_042,MSSM_DLPFC,perivascular macrophage,-3.9490189282785615e-05,0.9804015781136955,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_043,RADC_DLPFC,L5/6 near-projecting glutamatergic neuron,-0.0081922575372377,0.0037624801022172,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.11549095409314765,False
+transport_044,RADC_DLPFC,endothelial cell,0.0094818004502431,0.0379509530084038,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.28980727751871993,False
+transport_045,RADC_DLPFC,pvalb GABAergic cortical interneuron,-0.0077709264132287,0.0698447895870116,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_046,RADC_DLPFC,sst GABAergic cortical interneuron,-0.0057288090454581,0.0990913208289213,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.47115118582807863,False
+transport_047,RADC_DLPFC,GABAergic neuron,-0.005990388030208,0.1063101122076891,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.478395504934601,False
+transport_048,RADC_DLPFC,microglial cell,0.0083839381247983,0.1348867624876118,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5160888724716968,False
+transport_049,RADC_DLPFC,vascular leptomeningeal cell,-0.0065624797337682,0.159838839272629,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_050,RADC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,-0.0046410164024948,0.1866354815372798,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5953435613594241,False
+transport_051,RADC_DLPFC,lamp5 GABAergic cortical interneuron,-0.0067410486277883,0.2029815707729502,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_052,RADC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,-0.0075108743836664,0.2188875906735512,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.606150251095988,False
+transport_053,RADC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,-0.0052789992264741,0.2533488361554652,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6650406949080963,False
+transport_054,RADC_DLPFC,oligodendrocyte precursor cell,0.0037215571008824,0.3057290290697947,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7068230763815437,False
+transport_055,RADC_DLPFC,pericyte,0.006248274248632,0.3137201794829672,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7124364800590275,False
+transport_056,RADC_DLPFC,VIP GABAergic cortical interneuron,-0.003424744023972,0.3970282437879259,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_057,RADC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,-0.0013946917896487,0.7128571123584531,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_058,RADC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,-0.0028627695822786,0.7283667777088245,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_059,RADC_DLPFC,oligodendrocyte,0.0006943231890849,0.7502828428595711,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_060,RADC_DLPFC,astrocyte,-0.0012103091766047,0.8228027438573634,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_061,SEAAD_DLPFC,oligodendrocyte precursor cell,0.0032657951833559,0.0045829743687757,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.11549095409314765,False
+transport_062,SEAAD_DLPFC,microglial cell,0.0055670676508564,0.008923730147584,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.166401580879566,False
+transport_063,SEAAD_DLPFC,oligodendrocyte,0.0031933998449685,0.0217000603786615,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_064,SEAAD_DLPFC,vascular leptomeningeal cell,0.0071328500109442,0.0316166260206954,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26969685375683566,False
+transport_065,SEAAD_DLPFC,lamp5 GABAergic cortical interneuron,-0.0014549290189781,0.1567978185871402,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_066,SEAAD_DLPFC,sst GABAergic cortical interneuron,0.0005780577476385,0.2519604795883157,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6650406949080963,False
+transport_067,SEAAD_DLPFC,VIP GABAergic cortical interneuron,-0.0010787786469923,0.2648145492866202,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_068,SEAAD_DLPFC,chandelier pvalb GABAergic cortical interneuron,-0.0010533017646125,0.2693841118414415,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_069,SEAAD_DLPFC,sncg GABAergic cortical interneuron,-0.0008468501548978,0.3056628821334379,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7068230763815437,False
+transport_070,SEAAD_DLPFC,near-projecting glutamatergic cortical neuron,-0.0007756981209791,0.3740152592994336,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_071,SEAAD_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,-0.000997834275695,0.3991053225490422,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_072,SEAAD_DLPFC,cerebral cortex endothelial cell,0.0055588191551012,0.402683908773552,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_073,SEAAD_DLPFC,astrocyte of the cerebral cortex,0.001333515812209,0.5625043631467171,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8788095489420737,False
+transport_074,SEAAD_DLPFC,L6b glutamatergic cortical neuron,0.0007203833076626,0.6031595621720856,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8940953509845032,False
+transport_075,SEAAD_DLPFC,caudal ganglionic eminence derived cortical interneuron,0.0003342284521406,0.7540785065131753,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_076,SEAAD_DLPFC,corticothalamic-projecting glutamatergic cortical neuron,-0.0001672946070852,0.8837452324777291,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_077,SEAAD_DLPFC,pvalb GABAergic cortical interneuron,2.2979515049200844e-05,0.9732499276202272,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_078,SEAAD_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,2.3038821005723088e-05,0.9838947520537484,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_079,Kidney_LivingDonor,renal alpha-intercalated cell,-0.0294384150322363,0.0209529528175793,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_080,Kidney_LivingDonor,kidney loop of Henle cortical thick ascending limb epithelial cell,-0.007941593056821,0.026295751442152,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_081,Kidney_LivingDonor,kidney loop of Henle descending limb epithelial cell,-0.0017727599538643,0.4109740613845315,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_082,Kidney_LivingDonor,epithelial cell of proximal tubule,0.0032004543191042,0.451197493816167,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_083,Kidney_LivingDonor,renal principal cell,-0.007116259298571,0.4520056894217958,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_084,Kidney_LivingDonor,mononuclear phagocyte,-0.0023897424883416,0.7645249444416057,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9383659541362901,False
+transport_085,Kidney_LivingDonor,T cell,-0.0014674366488621,0.8385806418059327,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_086,Kidney_LivingDonor,kidney capillary endothelial cell,-0.0009908664720249,0.8796368546953087,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_087,Kidney_LivingDonor,natural killer cell,0.0033226223883273,0.9116019186329412,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9775475893425581,False
+transport_088,Kidney_NormalAdult,conventional dendritic cell,-0.0081245961338147,0.0308994583474692,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26969685375683566,False
+transport_089,Kidney_NormalAdult,renal interstitial pericyte,-0.0032210860701381,0.1179124312465829,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5104117390796513,False
+transport_090,Kidney_NormalAdult,kidney loop of Henle thin descending limb epithelial cell,-0.0113203588293094,0.2040119989819602,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_091,Kidney_NormalAdult,epithelial cell of proximal tubule,0.0076347002503611,0.3427316107281098,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7576172447674007,False
+transport_092,Kidney_NormalAdult,cytotoxic T cell,-0.0056427465024937,0.3686542615724003,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_093,Kidney_NormalAdult,endothelial cell,0.002193701866475,0.3789486513336113,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_094,Kidney_NormalAdult,alternatively activated macrophage,0.007727979478538,0.3863577593313552,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_095,Kidney_NormalAdult,monocyte,-0.0043856193245954,0.4028299320460931,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_096,Kidney_NormalAdult,parietal epithelial cell,-0.0029890553632568,0.4534191771040246,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_097,Kidney_NormalAdult,kidney connecting tubule epithelial cell,-0.0029382760712151,0.4541279657007914,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_098,Kidney_NormalAdult,kidney loop of Henle thick ascending limb epithelial cell,0.0036515134155532,0.4691135186619969,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8211715691661804,False
+transport_099,Kidney_NormalAdult,podocyte,0.0061727698800022,0.5365175035451442,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8557114613504831,False
+transport_100,Kidney_NormalAdult,T cell,-0.0011459885220198,0.7065619460959431,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_101,Kidney_NormalAdult,mature NK T cell,0.0030983299742574,0.7808784489266664,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9460642746611535,False
+transport_102,Kidney_NormalAdult,kidney collecting duct intercalated cell,-0.0007446918297959,0.8160594419478003,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_103,Kidney_NormalAdult,kidney distal convoluted tubule epithelial cell,0.0008546123437828,0.8435689344008899,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_104,Kidney_NormalAdult,natural killer cell,0.0007916063000972,0.8462391217947267,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_105,Kidney_NormalAdult,kidney collecting duct principal cell,0.0007508927930905,0.8790414266304524,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_106,Kidney_NormalAdult,B cell,-0.0021131679977221,0.9014493312850376,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9710600172465028,False
+transport_107,Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,-0.0153483441242955,0.1171472778139155,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5104117390796513,False
+transport_108,Kidney_SCR_v15,kidney collecting duct principal cell,-0.0082944590368405,0.1766042749826097,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5705676576361236,False
+transport_109,Kidney_SCR_v15,endothelial cell,0.0053900865698583,0.1901360350625411,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5989285104470045,False
+transport_110,Kidney_SCR_v15,T cell,0.0023889407730295,0.6369532180160558,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_111,Kidney_SCR_v15,kidney connecting tubule epithelial cell,-0.0024005544306352,0.6389693270854012,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_112,Kidney_SCR_v15,epithelial cell of proximal tubule,0.0026011833050723,0.676285152693204,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9212100458307428,False
+transport_113,Kidney_SCR_v15,kidney collecting duct intercalated cell,-0.0016307040729475,0.7889907166558937,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.951318950226245,False
+transport_114,Kidney_SCR_v15,kidney interstitial cell,-0.0005586771038887,0.8777782492356737,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_115,Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,-0.0001463166445454,0.9849904629812368,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_116,Kidney_SN_v15,kidney collecting duct intercalated cell,-0.0030654177531575,0.0824319920323927,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.4327679581700617,False
+transport_117,Kidney_SN_v15,podocyte,0.0034832141328265,0.1238575034459813,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5124929610408647,False
+transport_118,Kidney_SN_v15,kidney interstitial fibroblast,0.0038548303495267,0.2090556010926699,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_119,Kidney_SN_v15,epithelial cell of proximal tubule,0.0036122156115413,0.3794781149747309,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_120,Kidney_SN_v15,kidney interstitial alternatively activated macrophage,0.0014074968454224,0.4229296499947526,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.791932023560705,False
+transport_121,Kidney_SN_v15,mononuclear phagocyte,0.0021344077404035,0.640396017426979,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_122,Kidney_SN_v15,T cell,0.000826601631898,0.7070658118207384,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_123,Kidney_SN_v15,kidney distal convoluted tubule epithelial cell,0.0017438021177662,0.7139238325540915,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_124,Kidney_SN_v15,kidney connecting tubule epithelial cell,-0.0025269062767504,0.7362913687554918,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_125,Kidney_SN_v15,renal interstitial pericyte,0.0012197536764908,0.8024323536281227,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_126,Kidney_SN_v15,endothelial cell,0.0003520363482249,0.835849128872338,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_127,Kidney_SN_v15,parietal epithelial cell,-0.001547410357197,0.8409198711389828,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_128,Kidney_SN_v15,kidney loop of Henle thin ascending limb epithelial cell,-0.0012483880396953,0.8870541210709687,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_129,Kidney_SN_v15,kidney collecting duct principal cell,0.0004609674806359,0.9202974129710664,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9823942644004585,False
+transport_130,Kidney_SN_v15,kidney loop of Henle thick ascending limb epithelial cell,-0.0001505645388685,0.9279511929236726,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9823942644004585,False
+transport_131,Kidney_SN_v15,kidney loop of Henle thin descending limb epithelial cell,0.0001100674185681,0.9791741496690808,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_132,ImmuneAging_BAL,mucosal invariant T cell,0.0017737038164681,0.1506307535119584,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_133,ImmuneAging_BAL,progenitor cell,0.0022962589827464,0.1638016686448002,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_134,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",0.0017309530734391,0.1665410967978183,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_135,ImmuneAging_BAL,group 3 innate lymphoid cell,0.001193872724157,0.2602713755180282,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_136,ImmuneAging_BAL,"central memory CD8-positive, alpha-beta T cell",0.0016697939628014,0.3138113066926669,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7124364800590275,False
+transport_137,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell",0.0015234519122588,0.3204052242059559,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7209117544634008,False
+transport_138,ImmuneAging_BAL,"CD16-positive, CD56-dim natural killer cell, human",0.0009915454259172,0.3825421621005476,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_139,ImmuneAging_BAL,memory B cell,0.0005375105321633,0.4007652028192489,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_140,ImmuneAging_BAL,group 1 innate lymphoid cell,-0.0007874464586318,0.4065736485531059,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_141,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell, terminally differentiated",0.0012375532255153,0.424249298336092,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.791932023560705,False
+transport_142,ImmuneAging_BAL,germinal center B cell,-0.0008291946988209,0.5121535707465225,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8380694794034003,False
+transport_143,ImmuneAging_BAL,"CD4-positive, alpha-beta memory T cell",-0.0005531487379918,0.5209242467980975,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8414930140584651,False
+transport_144,ImmuneAging_BAL,classical monocyte,0.0008609538158162,0.5259418311161038,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8441868881608801,False
+transport_145,ImmuneAging_BAL,"CD16-negative, CD56-bright natural killer cell, human",0.0005024561415003,0.5573846636466102,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8788095489420737,False
+transport_146,ImmuneAging_BAL,plasmablast,0.0006032626704863,0.5966383551230888,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_147,ImmuneAging_BAL,"CD8-positive, alpha-beta memory T cell",-0.0007202518269094,0.5971792933060176,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_148,ImmuneAging_BAL,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",0.0005406800300238,0.6147402589725425,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8954597991969983,False
+transport_149,ImmuneAging_BAL,macrophage,-0.0004534944055159,0.642917463393417,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9051128534924083,False
+transport_150,ImmuneAging_BAL,"naive thymus-derived CD8-positive, alpha-beta T cell",0.0004082185719281,0.7100878180111607,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_151,ImmuneAging_BAL,conventional dendritic cell,0.0004725894480172,0.7289488250500306,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_152,ImmuneAging_BAL,naive B cell,-0.0002449939691344,0.732578814144456,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_153,ImmuneAging_BAL,non-classical monocyte,-0.0004665855156131,0.7340141714057042,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370981056888078,False
+transport_154,ImmuneAging_BAL,immature innate lymphoid cell,0.0003994084104547,0.7670769307622054,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9383659541362901,False
+transport_155,ImmuneAging_BAL,gamma-delta T cell,0.0002211934279863,0.8255831894609725,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_156,ImmuneAging_BAL,mast cell,-0.0002077479500102,0.837744919070303,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_157,ImmuneAging_BAL,"naive thymus-derived CD4-positive, alpha-beta T cell",-0.000122600550675,0.9016985874431812,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9710600172465028,False
+transport_158,ImmuneAging_BAL,plasma cell,-7.693349663509515e-05,0.9317151952051967,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9823942644004585,False
+transport_159,ImmuneAging_BAL,"central memory CD4-positive, alpha-beta T cell",2.450731552963171e-05,0.9739907658953384,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_160,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell",5.056756523089191e-05,0.9763096624816164,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_161,Lung_CellRef,endothelial cell of artery,-0.0067785955999313,0.0908456109224147,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.44888419514604905,False
+transport_162,Lung_CellRef,alveolar type 1 fibroblast cell,0.0064434364597207,0.1648184287807639,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_163,Lung_CellRef,natural killer cell,-0.002994277130773,0.1656782095458032,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5450435895201327,False
+transport_164,Lung_CellRef,vein endothelial cell of respiratory system,-0.0029292147954787,0.2121621467022884,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_165,Lung_CellRef,secondary crest myofibroblast,0.0074058328468582,0.2221500667829097,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6070849012164251,False
+transport_166,Lung_CellRef,alveolar capillary type 1 endothelial cell,-0.0036006454053271,0.2812333923728491,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6880661638636697,False
+transport_167,Lung_CellRef,classical monocyte,-0.0013896823024087,0.2893079946489096,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6965354811523514,False
+transport_168,Lung_CellRef,lung interstitial macrophage,0.0035390868444629,0.2984618943606998,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7029196016719286,False
+transport_169,Lung_CellRef,alveolar adventitial fibroblast,0.0045105141052883,0.3357571882580756,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7487682428410182,False
+transport_170,Lung_CellRef,vein endothelial cell,-0.0032564656701613,0.3814847094927592,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_171,Lung_CellRef,serous secreting cell,-0.0066186551801224,0.4203443301751102,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.791932023560705,False
+transport_172,Lung_CellRef,pericyte,0.0025279152820614,0.4482920380368267,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_173,Lung_CellRef,endothelial cell of respiratory system lymphatic vessel,-0.0020679382946316,0.4618211583409583,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8195699429712782,False
+transport_174,Lung_CellRef,"CD8-positive, alpha-beta cytotoxic T cell",-0.0018530507845199,0.4735974214094977,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8211715691661804,False
+transport_175,Lung_CellRef,alveolar capillary type 2 endothelial cell,-0.0023355993997642,0.4746912687237894,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8211715691661804,False
+transport_176,Lung_CellRef,airway submucosal gland collecting duct epithelial cell,-0.006093015827344,0.5201647671788816,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8414930140584651,False
+transport_177,Lung_CellRef,pulmonary alveolar type 2 cell,0.0016252350383874,0.5988888825651406,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_178,Lung_CellRef,pulmonary alveolar type 1 cell,0.0012533454173476,0.6125909122737789,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8954597991969983,False
+transport_179,Lung_CellRef,ciliated cell,-0.0007403527367842,0.7551596953071109,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_180,Lung_CellRef,alveolar macrophage,0.0003243791087467,0.7565574357658925,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_181,Lung_CellRef,plasma cell,0.0013834266748733,0.7799834238105263,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9460642746611535,False
+transport_182,Lung_CellRef,mucus secreting cell of tracheobronchial tree submucosal gland,0.0015022890535232,0.8469111868767772,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_183,Lung_CellRef,myoepithelial cell,-0.00127157157883,0.85373413249023,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9561822283890575,False
+transport_184,Lung_CellRef,vascular associated smooth muscle cell,9.224605337773482e-05,0.972064118493396,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_185,Lung_CellRef,secretory cell,-4.176999826985903e-05,0.9848416469178056,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_186,Lung_CellRef,lung secretory cell,8.238830325108833e-06,0.9969042795247648,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9969042795247648,False
+transport_187,Lung_Integrated,acinar cell,0.0150318759405934,0.0069977074444058,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.1603111159991147,False
+transport_188,Lung_Integrated,alveolar type 1 fibroblast cell,-0.0076931509266907,0.0088506316231083,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.166401580879566,False
+transport_189,Lung_Integrated,non-classical monocyte,-0.0063942287042324,0.009244532271087,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.166401580879566,False
+transport_190,Lung_Integrated,mucus secreting cell,-0.0321758850316327,0.0242076398533772,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_191,Lung_Integrated,tracheobronchial goblet cell,-0.0075835887074095,0.0268266992756792,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_192,Lung_Integrated,"CD8-positive, alpha-beta T cell",-0.0018326120216123,0.0645702997509083,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_193,Lung_Integrated,pulmonary alveolar type 1 cell,-0.0030170011050442,0.0727000792243001,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_194,Lung_Integrated,tracheobronchial serous cell,0.0139726744725323,0.0732528097459537,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_195,Lung_Integrated,mast cell,-0.0033139461292512,0.076243048360913,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_196,Lung_Integrated,respiratory tract hillock cell,0.0084036889345757,0.0898275661066273,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.44888419514604905,False
+transport_197,Lung_Integrated,pulmonary alveolar type 2 cell,-0.0037112557311978,0.0906510136747861,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.44888419514604905,False
+transport_198,Lung_Integrated,plasma cell,-0.0042239270822889,0.1060231835461787,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.478395504934601,False
+transport_199,Lung_Integrated,multiciliated epithelial cell,-0.0045086370528015,0.1195011611337279,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5104117390796513,False
+transport_200,Lung_Integrated,natural killer cell,-0.0024517780157758,0.1240558358075109,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5124929610408647,False
+transport_201,Lung_Integrated,alveolar macrophage,-0.0021751156132763,0.1437524307177395,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.5355238930857963,False
+transport_202,Lung_Integrated,stromal cell,-0.0274216677382611,0.1958111812361128,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_203,Lung_Integrated,lung pericyte,-0.0046653346152265,0.2005380349476569,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_204,Lung_Integrated,pulmonary alveolar epithelial cell,-0.0071574585496487,0.2122172055870709,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_205,Lung_Integrated,respiratory basal cell,0.0030844598102997,0.2240432373536807,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6070849012164251,False
+transport_206,Lung_Integrated,myofibroblast cell,-0.0207319511228554,0.2399618997709312,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.6433021142795177,False
+transport_207,Lung_Integrated,endothelial cell of lymphatic vessel,-0.0034543862105713,0.2617913768710667,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_208,Lung_Integrated,epithelial cell of lower respiratory tract,-0.0029438207271281,0.3981651123367863,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_209,Lung_Integrated,classical monocyte,-0.0015458288398172,0.4113963994243252,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.7853931261737117,False
+transport_210,Lung_Integrated,club cell,0.0017836068776215,0.4534192766828745,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8116329599758825,False
+transport_211,Lung_Integrated,elicited macrophage,0.0010817390522172,0.4862059860631914,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.833495976108328,False
+transport_212,Lung_Integrated,B cell,-0.0009234394516357,0.4928370314378193,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8349085816388533,False
+transport_213,Lung_Integrated,nasal mucosa goblet cell,0.0014523111197274,0.4936562645404331,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8349085816388533,False
+transport_214,Lung_Integrated,plasmacytoid dendritic cell,0.0031101345167042,0.5004857805810297,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8380694794034003,False
+transport_215,Lung_Integrated,multiciliated columnar cell of tracheobronchial tree,0.0009602079415125,0.5069303561987846,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8380694794034003,False
+transport_216,Lung_Integrated,capillary endothelial cell,-0.0011479145422318,0.5612286696494871,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8788095489420737,False
+transport_217,Lung_Integrated,pulmonary artery endothelial cell,-0.0017387358713469,0.5886698146305889,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_218,Lung_Integrated,bronchus fibroblast of lung,-0.0022200493188683,0.5905090396744581,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_219,Lung_Integrated,tracheobronchial smooth muscle cell,-0.001704136067945,0.6758740598175835,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9212100458307428,False
+transport_220,Lung_Integrated,lung macrophage,-0.0009301512145027,0.6816130097545122,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9234756906351456,False
+transport_221,Lung_Integrated,vein endothelial cell,0.0009313762116617,0.7108643815017135,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9370250302272451,False
+transport_222,Lung_Integrated,"CD4-positive, alpha-beta T cell",-0.0004655589814173,0.7546036277637415,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9377012008581119,False
+transport_223,Lung_Integrated,ionocyte,0.0007818117908851,0.8375112386638823,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_224,Lung_Integrated,CD1c-positive myeloid dendritic cell,-0.0002769446085084,0.8678329915549591,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_225,Lung_Integrated,alveolar adventitial fibroblast,0.0001500821983456,0.9698196773904292,M9,age_plus_sex,P1_Clean,primary_M9_M10_cell_type_transport,0.9889147277739907,False
+transport_226,DLPFC_Lifespan_Atlas,Micro,0.0020688797126225,0.0014956610277579,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.0628177631658318,False
+transport_227,DLPFC_Lifespan_Atlas,OPC,0.0010283782316372,0.0342844696567234,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.2699901985466968,False
+transport_228,DLPFC_Lifespan_Atlas,PVM,-0.0037112616927774,0.0044070180574521,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.11549095409314765,False
+transport_229,DLPFC_Lifespan_Atlas,Oligo,0.0005124758608248,0.1304999860619478,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.5160888724716968,False
+transport_230,DLPFC_Lifespan_Atlas,EN_L3_5_IT_3,-0.001383074658867,8.242560589828516e-05,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.02077125268636786,True
+transport_231,DLPFC_Lifespan_Atlas,PC,0.0004093478920917,0.6680591902411495,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9212100458307428,False
+transport_232,DLPFC_Lifespan_Atlas,IN_LAMP5_LHX6,-0.0012078238215123,0.0131112234586949,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.19435460656418324,False
+transport_233,DLPFC_Lifespan_Atlas,IN_ADARB2,0.0005788667193453,0.216916136261361,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.606150251095988,False
+transport_234,DLPFC_Lifespan_Atlas,EN_L5_ET,0.0014583936720074,0.1445064473406117,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.5355238930857963,False
+transport_235,DLPFC_Lifespan_Atlas,EN_L2_3_IT,0.000275603738897,0.4757581313423109,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.8211715691661804,False
+transport_236,DLPFC_Lifespan_Atlas,Astro,0.0007008299379497,0.2014520723024542,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.6008846719993468,False
+transport_237,DLPFC_Lifespan_Atlas,Adaptive,-0.0020176540008953,0.0568596369525722,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.3872602300553566,False
+transport_238,DLPFC_Lifespan_Atlas,IN_SST,-0.0003036429076045,0.3494006821792296,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.7656432339927466,False
+transport_239,DLPFC_Lifespan_Atlas,EN_L6_CT,0.0009852545769737,0.026398501078117,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_240,DLPFC_Lifespan_Atlas,SMC,-0.0020344253161256,0.0664484054162935,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.40879251461595906,False
+transport_241,DLPFC_Lifespan_Atlas,EN_L3_5_IT_2,0.0002266308945819,0.6142704778834686,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.8954597991969983,False
+transport_242,DLPFC_Lifespan_Atlas,Endo,-7.687777498576938e-05,0.9239969684228488,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9823942644004585,False
+transport_243,DLPFC_Lifespan_Atlas,EN_L6B,0.0001177572589531,0.8125934663111167,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9527750852363744,False
+transport_244,DLPFC_Lifespan_Atlas,EN_L5_6_NP,-0.0007907085701652,0.0963609554725351,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.46698001498228553,False
+transport_245,DLPFC_Lifespan_Atlas,IN_LAMP5_RELN,-0.0002056347480373,0.594693572552253,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.8930177420497956,False
+transport_246,DLPFC_Lifespan_Atlas,IN_PVALB_CHC,6.577570779713102e-05,0.8863931672358291,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9635243039219143,False
+transport_247,DLPFC_Lifespan_Atlas,EN_L6_IT_1,-0.0002928420017144,0.511038930556987,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.8380694794034003,False
+transport_248,DLPFC_Lifespan_Atlas,IN_PVALB,-0.000388945644724,0.271706610613534,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.671275155633437,False
+transport_249,DLPFC_Lifespan_Atlas,EN_L3_5_IT_1,-0.0002706251217785,0.5069801312179538,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.8380694794034003,False
+transport_250,DLPFC_Lifespan_Atlas,IN_VIP,-0.0006568699158695,0.027689355566437,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.26714940174357027,False
+transport_251,DLPFC_Lifespan_Atlas,VLMC,7.678262204537522e-05,0.9384774769482688,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9854013507956823,False
+transport_252,DLPFC_Lifespan_Atlas,EN_L6_IT_2,0.0002576530699815,0.6740319380298798,M10,fully_adjusted,P1_Clean,primary_M9_M10_cell_type_transport,0.9212100458307428,False
