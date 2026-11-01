@@ -2,7 +2,7 @@
 
 **Subtitle:** within mouse; cross-species conservation not established
 
-Agescape is a reproducible analysis of mouse, human, and naked mole-rat aging data, with a static interactive explorer at [rezaalipour.com/agescape](https://rezaalipour.com/agescape/). It tests how a mouse-derived transcriptional signature behaves across cohorts and cell types, how lung cell-type composition changes with age, how transcriptional noise depends on UMI sampling, and how a published mammalian methylation clock performs under explicit predictive metrics.
+Agescape is a reproducible analysis of mouse, human, and naked mole-rat aging data, with a static interactive explorer at [rezaalipour.com/agescape](https://rezaalipour.com/agescape/). It tests how a mouse-derived transcriptional signature behaves across cohorts and cell types, how cell-type fractions within organs change with age, how transcriptional noise depends on UMI sampling, and how a published mammalian methylation clock performs under explicit predictive metrics.
 
 ## Current manuscript
 
@@ -13,7 +13,7 @@ The primary manuscript is [`report/manuscript-aging-mechanisms.md`](report/manus
 - The primary analysis uses the filtered 139-gene `P1_Clean` signature. The 257-gene `P0_Raw257` score is a labeled sensitivity analysis in every human arm.
 - In PsychAD cortex, the primary whole-cortex score was not associated with age before adjustment (slope +0.000186 per year, p = 0.3494) or after covariate adjustment (slope -0.000209, p = 0.4004).
 - Three of 252 primary human cell-type tests survived the shared BH correction: MSSM L2/3 neurons, MSSM oligodendrocytes, and PsychAD EN_L3_5_IT_3 neurons. No OPC or microglial result survived that primary correction. Glial transport is a candidate finding.
-- Complete pre-threshold human lung counts gave 119 adult donors and 44 tested cell types. Club cells and multiciliated epithelial cells had FDR-significant negative age slopes. Detection and study-center sensitivity checks make these results exploratory.
+- Across 13 adequately covered mouse organs, 8 had at least one age-associated cell-type fraction change at FDR 0.05. Three of 11 human cohort datasets had such a change. Naked mole-rat skin had no significant change, but five animals cannot establish stability. See `report/organ-cell-composition.md`.
 - Mouse lung fibroblast Cdkn1a increased with age (slope +0.1080 per month, q = 0.0322). The fibroblast transcriptional-noise increase was not reproducible across UMI sampling models.
 - The naked mole-rat comparison did not detect a slope in five animals. It cannot establish equivalence or senescence specificity.
 - Universal Clock 2 gave MAE 0.36 years in mouse liver and 5.06 years across 661 human tissue profiles. Predictive R-squared was 0.3169 and 0.6383, respectively. The evaluations are not presented as independent validation.
@@ -53,6 +53,7 @@ python scripts/run_m9_pipeline.py
 python scripts/run_human_transport_inference.py
 python scripts/run_h2_composition.py
 python scripts/run_d3_human_composition_sensitivity.py
+python scripts/run_organ_composition.py
 python scripts/export_app_data.py
 ```
 

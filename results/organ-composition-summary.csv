@@ -1,0 +1,29 @@
+species,organ,cohort,n_donors,n_cell_types,n_significant,min_q,answer
+Mouse,Bladder,TMS,8,4,1,0.005223651308561635,age-associated fraction change detected
+Mouse,Fat,TMS,6,5,0,0.26792990961290547,no fraction change detected at FDR 0.05
+Mouse,Heart_and_Aorta,TMS,11,8,0,0.26194295618611574,no fraction change detected at FDR 0.05
+Mouse,Kidney,TMS,16,19,4,0.0002922112690168672,age-associated fraction change detected
+Mouse,Large_Intestine,TMS,3,0,0,,insufficient donor coverage
+Mouse,Limb_Muscle,TMS,16,9,1,0.0031705311744928853,age-associated fraction change detected
+Mouse,Liver,TMS,12,8,5,0.0036747758221414304,age-associated fraction change detected
+Mouse,Lung,TMS,16,29,3,0.0007539377341336325,age-associated fraction change detected
+Mouse,Mammary_Gland,TMS,6,7,0,0.14237362737993933,no fraction change detected at FDR 0.05
+Mouse,Marrow,TMS,17,18,2,0.00852537641628288,age-associated fraction change detected
+Mouse,Pancreas,TMS,8,8,0,0.9496178413415782,no fraction change detected at FDR 0.05
+Mouse,Skin,TMS,3,0,0,,insufficient donor coverage
+Mouse,Spleen,TMS,13,12,1,0.0006697280568570336,age-associated fraction change detected
+Mouse,Thymus,TMS,6,6,0,0.7163184144510151,no fraction change detected at FDR 0.05
+Mouse,Tongue,TMS,9,3,2,0.04266715814348405,age-associated fraction change detected
+Mouse,Trachea,TMS,2,0,0,,insufficient donor coverage
+Human,brain,HBCC_DLPFC,88,24,0,0.2547295639672774,no fraction change detected at FDR 0.05
+Human,lung,ImmuneAging_BAL,12,31,0,0.23097819975959538,no fraction change detected at FDR 0.05
+Human,kidney,Kidney_LivingDonor,19,17,1,0.04211961083306065,age-associated fraction change detected
+Human,kidney,Kidney_NormalAdult,18,26,0,0.5423194439007669,no fraction change detected at FDR 0.05
+Human,kidney,Kidney_SCR_v15,18,23,0,0.3934010133703292,no fraction change detected at FDR 0.05
+Human,kidney,Kidney_SN_v15,9,22,0,0.9612699981749856,no fraction change detected at FDR 0.05
+Human,lung,Lung_CellRef,17,32,0,0.7707721866929773,no fraction change detected at FDR 0.05
+Human,lung,Lung_Integrated,119,50,2,0.003722963819948871,age-associated fraction change detected
+Human,brain,MSSM_DLPFC,213,25,6,0.0013028261445344916,age-associated fraction change detected
+Human,brain,RADC_DLPFC,18,23,0,0.5401660133306508,no fraction change detected at FDR 0.05
+Human,brain,SEAAD_DLPFC,21,18,0,0.1991484017017204,no fraction change detected at FDR 0.05
+Naked mole-rat,Skin,GSE152886,5,4,0,1.0,no fraction change detected at FDR 0.05

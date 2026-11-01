@@ -13,7 +13,7 @@ The project is cross-sectional and observational. It is not a perturbation study
 | Arm | Data | Inferential unit | Purpose |
 |---|---|---|---|
 | Mouse | Tabula Muris Senis droplet atlas, 23 mice | Mouse | Differential expression, signature derivation, composition, noise, and targeted markers |
-| Public human cohorts | 11 CELLxGENE cohorts, 621 scored control donors | Donor | Library-normalized signature transport and lung composition |
+| Public human cohorts | 11 CELLxGENE cohorts, 621 scored control donors | Donor | Library-normalized signature transport and organ cell-fraction analysis |
 | Human lifespan atlas | PsychAD DLPFC, 284 control donors, 27 cell types | Donor | Covariate-adjusted lifespan and adult-stratum sensitivity models |
 | Naked mole-rat | GSE152886, five animals | Animal | Descriptive skin comparison and equivalence bounds |
 | Methylation | GSE199979 and GSE184211, 1,000 array profiles | Array profile | Published Clock 2 benchmark with per-sample predictive metrics |
@@ -28,7 +28,7 @@ One BH family covers 225 public-cohort cell-type tests and 27 primary covariate-
 1. **No primary whole-cortex association was detected.** PsychAD slopes were +0.000186 per year before adjustment (p = 0.3494) and -0.000209 after adjustment (p = 0.4004).
 2. **Three primary cell-type tests survived global correction.** These were MSSM L2/3 neurons, MSSM oligodendrocytes, and PsychAD EN_L3_5_IT_3 neurons. The PsychAD neuronal association attenuated in adults.
 3. **Glial transport is a candidate, not an established mechanism.** No OPC or microglial result survived the 252-test primary correction. PsychAD adult microglia survived only the secondary adult-only family.
-4. **Human composition requires detection and study-center caveats.** Complete counts gave two FDR-significant lung cell-type associations. Multiciliated-cell detection varied with age, and study adjustment attenuated the club-cell association.
+4. **Cell-type fractions change in some organs, not universally.** Eight of 13 adequately covered mouse organs and 3 of 11 human cohort datasets had age-associated fraction changes. Integrated human lung and living-donor kidney results were sensitive to observed-record filtering. Five NMR animals cannot establish stability. See `report/organ-cell-composition.md`.
 5. **Cross-species remodeling concordance was not demonstrated.** Three of seven homologous pairs had the same slope sign, binomial p = 1.000, and Spearman rho = 0.000.
 6. **Mouse fibroblast Cdkn1a increased with age.** The slope was +0.1080 per month with q = 0.0322. The nominal transcriptional-noise increase depended on the UMI sampling model.
 7. **The NMR comparison is inconclusive.** The slope was +0.0058 per normalized lifespan with p = 0.9332 in five animals. The post hoc equivalence margin exceeded the mouse whole-body point estimate.

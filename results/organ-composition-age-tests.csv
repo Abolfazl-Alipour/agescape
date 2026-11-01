@@ -1,0 +1,863 @@
+species,organ,cohort,cell_type,sensitivity,model,effect_type,effect,se,pvalue,n_donors,n_present,total_cells,q_bh
+Mouse,Bladder,TMS,bladder cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.06132672069585182,0.009465783955511762,0.0013059128271404087,8,8,2977,0.005223651308561635
+Mouse,Bladder,TMS,bladder urothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.04827124795019257,0.017113489411116654,0.03708003606780402,8,8,4998,0.07416007213560805
+Mouse,Bladder,TMS,endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.003471984492348038,0.02175023912180222,0.8794208689395931,8,8,332,0.8794208689395931
+Mouse,Bladder,TMS,leukocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.016527457238007286,0.013845101654301691,0.2861229923720806,8,8,362,0.3814973231627741
+Mouse,Bladder,TMS,bladder cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.06132672069585182,0.009465783955511762,0.0013059128271404087,8,8,2977,0.005223651308561635
+Mouse,Bladder,TMS,bladder urothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.04827124795019257,0.017113489411116654,0.03708003606780402,8,8,4998,0.07416007213560805
+Mouse,Bladder,TMS,endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.003471984492348038,0.02175023912180222,0.8794208689395931,8,8,332,0.8794208689395931
+Mouse,Bladder,TMS,leukocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.016527457238007286,0.013845101654301691,0.2861229923720806,8,8,362,0.3814973231627741
+Mouse,Fat,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.10022899539185473,0.06463301026182418,0.21875143170341976,6,6,679,0.5468785792585493
+Mouse,Fat,TMS,T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0047896480814099834,0.015592974150463826,0.7788041388986601,6,6,563,0.9110090809159476
+Mouse,Fat,TMS,endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.026919893859067193,0.03474935586595951,0.4949789468485069,6,6,1448,0.8249649114141782
+Mouse,Fat,TMS,mesenchymal stem cell of adipose,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.003944247568540338,0.03247493327091259,0.9110090809159476,6,6,1732,0.9110090809159476
+Mouse,Fat,TMS,myeloid cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.13588278490087222,0.04393174359395385,0.05358598192258109,6,6,1739,0.26792990961290547
+Mouse,Fat,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.10022899539185473,0.06463301026182418,0.21875143170341976,6,6,679,0.5468785792585493
+Mouse,Fat,TMS,T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0047896480814099834,0.015592974150463826,0.7788041388986601,6,6,563,0.9110090809159476
+Mouse,Fat,TMS,endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.026919893859067193,0.03474935586595951,0.4949789468485069,6,6,1448,0.8249649114141782
+Mouse,Fat,TMS,mesenchymal stem cell of adipose,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.003944247568540338,0.03247493327091259,0.9110090809159476,6,6,1732,0.9110090809159476
+Mouse,Fat,TMS,myeloid cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.13588278490087222,0.04393174359395385,0.05358598192258109,6,6,1739,0.26792990961290547
+Mouse,Heart_and_Aorta,TMS,cardiac neuron,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.026861182613299985,0.038590754802194864,0.5061109971708836,11,9,80,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,cardiomyocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.019917786861185786,0.03169498054480102,0.5472460218686372,11,10,331,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,endocardial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.010402958885015806,0.022174510360962924,0.6514889936796907,11,11,660,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,endothelial cell of coronary artery,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0007948167794468233,0.013081387423615864,0.9530413291425668,11,11,3267,0.9530413291425668
+Mouse,Heart_and_Aorta,TMS,erythrocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0780177449697303,0.039267036113314016,0.082172679660351,11,8,152,0.328690718641404
+Mouse,Heart_and_Aorta,TMS,fibroblast of cardiac tissue,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.005146757455428204,0.014739428025680328,0.7359648415710409,11,11,2392,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,leukocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0123474240713855,0.013704456927998977,0.39391399617050216,11,11,949,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,smooth muscle cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.048047584216770786,0.018641086437373177,0.03274286952326447,11,11,428,0.26194295618611574
+Mouse,Heart_and_Aorta,TMS,cardiac neuron,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.026861182613299985,0.038590754802194864,0.5061109971708836,11,9,80,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,cardiomyocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.019917786861185786,0.03169498054480102,0.5472460218686372,11,10,331,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,endocardial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.010402958885015806,0.022174510360962924,0.6514889936796907,11,11,660,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,endothelial cell of coronary artery,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0007948167794468233,0.013081387423615864,0.9530413291425668,11,11,3267,0.9530413291425668
+Mouse,Heart_and_Aorta,TMS,erythrocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0780177449697303,0.039267036113314016,0.082172679660351,11,8,152,0.328690718641404
+Mouse,Heart_and_Aorta,TMS,fibroblast of cardiac tissue,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.005146757455428204,0.014739428025680328,0.7359648415710409,11,11,2392,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,leukocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0123474240713855,0.013704456927998977,0.39391399617050216,11,11,949,0.8411026760811896
+Mouse,Heart_and_Aorta,TMS,smooth muscle cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.048047584216770786,0.018641086437373177,0.03274286952326447,11,11,428,0.26194295618611574
+Mouse,Kidney,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.08821248325609565,0.05205152035723551,0.1139346420948868,16,16,3124,0.24373698394877852
+Mouse,Kidney,TMS,NK cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.03042679674856622,0.04044798517472364,0.4653069126558015,16,13,66,0.5893887560306819
+Mouse,Kidney,TMS,T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0935007483652261,0.03859133954771145,0.0307408418908021,16,16,1341,0.11681519918504799
+Mouse,Kidney,TMS,brush cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.003743559069422635,0.020831108195689285,0.8601511264233889,16,14,382,0.8601511264233889
+Mouse,Kidney,TMS,epithelial cell of proximal tubule,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.026730085421607822,0.038581199816174,0.5006086122273988,16,14,3035,0.5944727270200362
+Mouse,Kidney,TMS,fenestrated cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.036678535459626974,0.024911161396435604,0.16471348484116333,16,14,1017,0.2607963509985086
+Mouse,Kidney,TMS,fibroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.007598482238692533,0.016420723937533327,0.6512029404287136,16,14,158,0.7102958256935582
+Mouse,Kidney,TMS,kidney capillary endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.11032513258240749,0.016954141715313998,1.9809983669209634e-05,16,12,157,0.0002922112690168672
+Mouse,Kidney,TMS,kidney collecting duct principal cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.010672542188696555,0.024712348667574876,0.6729118348675814,16,14,699,0.7102958256935582
+Mouse,Kidney,TMS,kidney cortex artery cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.025205596857906604,0.015517104360694759,0.12828262313093605,16,14,341,0.24373698394877852
+Mouse,Kidney,TMS,kidney distal convoluted tubule epithelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.030005646336259805,0.019545558359474947,0.14871638488241962,16,14,741,0.2568737557059975
+Mouse,Kidney,TMS,kidney loop of Henle ascending limb epithelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0479280915925484,0.014470197842005688,0.005614460783619357,16,14,201,0.03555825162958926
+Mouse,Kidney,TMS,kidney loop of Henle thick ascending limb epithelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.058811362096056176,0.025361362722734374,0.03732300588353195,16,14,1535,0.11818951863118451
+Mouse,Kidney,TMS,kidney mesangial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.08976334380433341,0.014411911431875615,3.0759080949143915e-05,16,13,212,0.0002922112690168672
+Mouse,Kidney,TMS,kidney proximal convoluted tubule epithelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.04508587506872721,0.033160598694265325,0.19706576937408693,16,14,4388,0.2674464012934037
+Mouse,Kidney,TMS,lymphocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06187992738990777,0.03798684917219532,0.1272966610963208,16,16,1275,0.24373698394877852
+Mouse,Kidney,TMS,macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.04234009130850637,0.019826294523749923,0.052317415482750644,16,16,1404,0.14200441345318032
+Mouse,Kidney,TMS,plasma cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.13458157647281943,0.04272933587840942,0.007677110351874925,16,11,323,0.036466274171405896
+Mouse,Kidney,TMS,podocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02705050614543663,0.019597212327969085,0.19076121592415557,16,14,395,0.2674464012934037
+Mouse,Kidney,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.08821248325609565,0.05205152035723551,0.1139346420948868,16,16,3124,0.24373698394877852
+Mouse,Kidney,TMS,NK cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.03042679674856622,0.04044798517472364,0.4653069126558015,16,13,66,0.5893887560306819
+Mouse,Kidney,TMS,T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0935007483652261,0.03859133954771145,0.0307408418908021,16,16,1341,0.11681519918504799
+Mouse,Kidney,TMS,brush cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.003743559069422635,0.020831108195689285,0.8601511264233889,16,14,382,0.8601511264233889
+Mouse,Kidney,TMS,epithelial cell of proximal tubule,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.026730085421607822,0.038581199816174,0.5006086122273988,16,14,3035,0.5944727270200362
+Mouse,Kidney,TMS,fenestrated cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.036678535459626974,0.024911161396435604,0.16471348484116333,16,14,1017,0.2607963509985086
+Mouse,Kidney,TMS,fibroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.007598482238692533,0.016420723937533327,0.6512029404287136,16,14,158,0.7102958256935582
+Mouse,Kidney,TMS,kidney capillary endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.11032513258240749,0.016954141715313998,1.9809983669209634e-05,16,12,157,0.0002922112690168672
+Mouse,Kidney,TMS,kidney collecting duct principal cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.010672542188696555,0.024712348667574876,0.6729118348675814,16,14,699,0.7102958256935582
+Mouse,Kidney,TMS,kidney cortex artery cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.025205596857906604,0.015517104360694759,0.12828262313093605,16,14,341,0.24373698394877852
+Mouse,Kidney,TMS,kidney distal convoluted tubule epithelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.030005646336259805,0.019545558359474947,0.14871638488241962,16,14,741,0.2568737557059975
+Mouse,Kidney,TMS,kidney loop of Henle ascending limb epithelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0479280915925484,0.014470197842005688,0.005614460783619357,16,14,201,0.03555825162958926
+Mouse,Kidney,TMS,kidney loop of Henle thick ascending limb epithelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.058811362096056176,0.025361362722734374,0.03732300588353195,16,14,1535,0.11818951863118451
+Mouse,Kidney,TMS,kidney mesangial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.08976334380433341,0.014411911431875615,3.0759080949143915e-05,16,13,212,0.0002922112690168672
+Mouse,Kidney,TMS,kidney proximal convoluted tubule epithelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.04508587506872721,0.033160598694265325,0.19706576937408693,16,14,4388,0.2674464012934037
+Mouse,Kidney,TMS,lymphocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.06187992738990777,0.03798684917219532,0.1272966610963208,16,16,1275,0.24373698394877852
+Mouse,Kidney,TMS,macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.04234009130850637,0.019826294523749923,0.052317415482750644,16,16,1404,0.14200441345318032
+Mouse,Kidney,TMS,plasma cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.13458157647281943,0.04272933587840942,0.007677110351874925,16,11,323,0.036466274171405896
+Mouse,Kidney,TMS,podocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.02705050614543663,0.019597212327969085,0.19076121592415557,16,14,395,0.2674464012934037
+Mouse,Limb_Muscle,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02097839754733149,0.037916887757487694,0.5894652177873234,16,15,1500,0.8262232625603152
+Mouse,Limb_Muscle,TMS,Schwann cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0006486746908984792,0.01393744257114572,0.9635857416411258,16,16,274,0.9635857416411258
+Mouse,Limb_Muscle,TMS,T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.038949478883220624,0.028279489074009435,0.19167022840135448,16,15,1249,0.655497508915505
+Mouse,Limb_Muscle,TMS,endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.010434371582256359,0.009184690120950802,0.276440968069857,16,16,6890,0.655497508915505
+Mouse,Limb_Muscle,TMS,macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.007627934968538321,0.01667243728330324,0.6548515442909479,16,16,2476,0.8262232625603152
+Mouse,Limb_Muscle,TMS,mesenchymal stem cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.005446625048579359,0.012290240793853732,0.6649305004543227,16,16,12967,0.8262232625603152
+Mouse,Limb_Muscle,TMS,skeletal muscle cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.053243808922124033,0.011112548834745387,0.0003522812416103206,16,16,192,0.0031705311744928853
+Mouse,Limb_Muscle,TMS,skeletal muscle satellite cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.01188109716538431,0.010802104480614826,0.29133222618466886,16,16,2049,0.655497508915505
+Mouse,Limb_Muscle,TMS,smooth muscle cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.005592441616460137,0.016134063208837306,0.7344206778313912,16,16,1163,0.8262232625603152
+Mouse,Limb_Muscle,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.02097839754733149,0.037916887757487694,0.5894652177873234,16,15,1500,0.8262232625603152
+Mouse,Limb_Muscle,TMS,Schwann cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0006486746908984792,0.01393744257114572,0.9635857416411258,16,16,274,0.9635857416411258
+Mouse,Limb_Muscle,TMS,T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.038949478883220624,0.028279489074009435,0.19167022840135448,16,15,1249,0.655497508915505
+Mouse,Limb_Muscle,TMS,endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.010434371582256359,0.009184690120950802,0.276440968069857,16,16,6890,0.655497508915505
+Mouse,Limb_Muscle,TMS,macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.007627934968538321,0.01667243728330324,0.6548515442909479,16,16,2476,0.8262232625603152
+Mouse,Limb_Muscle,TMS,mesenchymal stem cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.005446625048579359,0.012290240793853732,0.6649305004543227,16,16,12967,0.8262232625603152
+Mouse,Limb_Muscle,TMS,skeletal muscle cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.053243808922124033,0.011112548834745387,0.0003522812416103206,16,16,192,0.0031705311744928853
+Mouse,Limb_Muscle,TMS,skeletal muscle satellite cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.01188109716538431,0.010802104480614826,0.29133222618466886,16,16,2049,0.655497508915505
+Mouse,Limb_Muscle,TMS,smooth muscle cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.005592441616460137,0.016134063208837306,0.7344206778313912,16,16,1163,0.8262232625603152
+Mouse,Liver,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0847133157292351,0.015819604356098325,0.0004593469777676788,12,8,172,0.0036747758221414304
+Mouse,Liver,TMS,Kupffer cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.03325426933517097,0.040353177401361635,0.4311902373400676,12,10,2389,0.4591371439563477
+Mouse,Liver,TMS,NK cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.05374702990048768,0.020753965694339183,0.029226732184020065,12,9,551,0.0467627714944321
+Mouse,Liver,TMS,endothelial cell of hepatic sinusoid,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.05405231911983066,0.017411800395692824,0.012633478807984324,12,12,672,0.025266957615968647
+Mouse,Liver,TMS,hepatic stellate cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.038319865490353607,0.017849250368760047,0.06034401023296657,12,6,37,0.0804586803106221
+Mouse,Liver,TMS,hepatocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.16159294364426124,0.04423290754981629,0.005290900032657407,12,11,2913,0.01614948956597882
+Mouse,Liver,TMS,myeloid leukocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.07302018870865043,0.020473137802835033,0.006056058587242057,12,8,307,0.01614948956597882
+Mouse,Liver,TMS,plasmacytoid dendritic cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.00923032458090136,0.011935300909446903,0.4591371439563477,12,7,41,0.4591371439563477
+Mouse,Liver,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0905210758150651,0.017568097364519353,0.0008715553385123881,11,8,172,0.006972442708099105
+Mouse,Liver,TMS,Kupffer cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.015495557561674249,0.043967723807560526,0.7336201211285984,11,10,2389,0.7336201211285984
+Mouse,Liver,TMS,NK cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.045308190074621384,0.02282324846722963,0.0823858814437504,11,9,551,0.13164899781102782
+Mouse,Liver,TMS,endothelial cell of hepatic sinusoid,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.05728626504152051,0.019942198522623616,0.020745432423607928,11,11,667,0.041490864847215855
+Mouse,Liver,TMS,hepatic stellate cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.03857308819778444,0.020651358394110746,0.09873674835827087,11,6,37,0.13164899781102782
+Mouse,Liver,TMS,hepatocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.13971468952157898,0.04737812635988323,0.018455910369438076,11,10,2461,0.041490864847215855
+Mouse,Liver,TMS,myeloid leukocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.07222492012246906,0.023678104808001175,0.015814237394417147,11,8,307,0.041490864847215855
+Mouse,Liver,TMS,plasmacytoid dendritic cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.012024299187054194,0.01358675419468375,0.40197158375315734,11,7,41,0.4593960957178941
+Mouse,Lung,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.02326797375638467,0.015459443039436022,0.1562036140139099,16,16,1495,0.26646498861196394
+Mouse,Lung,TMS,"CD4-positive, alpha-beta T cell",all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.004027401844596596,0.023807241045075176,0.8682691124645691,16,15,550,0.9325853430175002
+Mouse,Lung,TMS,"CD8-positive, alpha-beta T cell",all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06601694337391692,0.02327404805492258,0.014014824418043964,16,14,867,0.05806141544618214
+Mouse,Lung,TMS,NK cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.06179928166949256,0.020841214225242446,0.010946437187864616,16,16,1190,0.053285991014825375
+Mouse,Lung,TMS,T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06187246471732035,0.009768003936885828,2.599785290115974e-05,16,15,251,0.0007539377341336325
+Mouse,Lung,TMS,adventitial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.06264394078830501,0.027973223694676076,0.04324310459588424,16,16,516,0.12540500332806429
+Mouse,Lung,TMS,alveolar macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.028513459965705125,0.018368912662785206,0.14459566376300437,16,16,1349,0.2620796405704454
+Mouse,Lung,TMS,basophil,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.011603579534097021,0.023244212858941477,0.625977435755107,16,16,130,0.756389401537421
+Mouse,Lung,TMS,bronchial smooth muscle cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.046643703724967525,0.024382149679789304,0.07802620065318949,16,16,2336,0.1759102980081772
+Mouse,Lung,TMS,ciliated columnar cell of tracheobronchial tree,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.05328525331493833,0.0252045594837603,0.05440001199143554,16,12,56,0.14341821343196645
+Mouse,Lung,TMS,classical monocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06286793640987537,0.03357111100307309,0.08377332798752195,16,16,7913,0.1759102980081772
+Mouse,Lung,TMS,club cell of bronchiole,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0005854468043463368,0.0197030291743973,0.9767468364193109,16,10,15,0.9767468364193109
+Mouse,Lung,TMS,dendritic cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.006849277862139971,0.01489066755682165,0.6531353711019898,16,13,43,0.7576370304783082
+Mouse,Lung,TMS,endothelial cell of lymphatic vessel,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.021167249667600335,0.009324421504765737,0.040861894122118256,16,12,41,0.12540500332806429
+Mouse,Lung,TMS,fibroblast of lung,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.1002112293170084,0.03282975103791136,0.009256208503247482,16,15,1516,0.053285991014825375
+Mouse,Lung,TMS,intermediate monocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06352911600623348,0.03864076806338063,0.12410906798127865,16,14,1748,0.2399441980971387
+Mouse,Lung,TMS,lung macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.057247059716624575,0.04068096899215186,0.18281959314016147,16,13,1156,0.2790404316349833
+Mouse,Lung,TMS,mature NK T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.06360085152325233,0.02807129963834583,0.04119562589118612,16,13,418,0.12540500332806429
+Mouse,Lung,TMS,myeloid dendritic cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0011090192085368659,0.01550065144947156,0.9440517233582291,16,15,243,0.9767468364193109
+Mouse,Lung,TMS,neutrophil,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02265224569596158,0.033111349699760824,0.5059102882535991,16,14,548,0.666881743607017
+Mouse,Lung,TMS,non-classical monocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.018995174183201007,0.023593814766196007,0.43524523958046846,16,15,1008,0.6010529498968374
+Mouse,Lung,TMS,pericyte cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.06620232438969019,0.022354037863644288,0.011024687796170766,16,14,60,0.053285991014825375
+Mouse,Lung,TMS,plasma cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.02709810943483263,0.023901327944185032,0.277375151157566,16,8,45,0.40219396917847067
+Mouse,Lung,TMS,plasmacytoid dendritic cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02633847504571235,0.01412314235670443,0.08492221283153382,16,13,75,0.1759102980081772
+Mouse,Lung,TMS,pulmonary interstitial fibroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.12924791399066587,0.0258288273684403,0.00024123567927398614,16,12,220,0.003497917349472799
+Mouse,Lung,TMS,regulatory T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.031388503704551665,0.021657572175456594,0.1709433411031034,16,14,122,0.2754087162216666
+Mouse,Lung,TMS,smooth muscle cell of the pulmonary artery,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.006711731362824545,0.016663564372842554,0.6936561705149393,16,13,98,0.7736934209589708
+Mouse,Lung,TMS,type II pneumocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.018490847858436237,0.03369672117331346,0.592481743528919,16,14,125,0.74704219836255
+Mouse,Lung,TMS,vein endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.05649008239893154,0.015307635802319447,0.002719783890959375,16,14,320,0.02629124427927396
+Mouse,Lung,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.015529182025447365,0.018265525883154565,0.4133418825649199,14,14,1480,0.5418861030059114
+Mouse,Lung,TMS,"CD4-positive, alpha-beta T cell",exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.039950295033644806,0.018849206711595637,0.057623138881192346,14,14,549,0.32404039602239487
+Mouse,Lung,TMS,"CD8-positive, alpha-beta T cell",exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.03211774479560768,0.019060679651522378,0.12010937183722131,14,14,867,0.3429563010207771
+Mouse,Lung,TMS,NK cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.031764043972923046,0.017243536695747047,0.09256048399905129,14,14,859,0.3429563010207771
+Mouse,Lung,TMS,T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.05823685019592906,0.010750649691775164,0.00021111936605604866,14,14,249,0.0030612308078127055
+Mouse,Lung,TMS,adventitial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.009746950711963,0.009646853614937553,0.3340239743252115,14,14,165,0.4843347627715567
+Mouse,Lung,TMS,alveolar macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.034726229364014025,0.021352025038073742,0.13215140911754705,14,14,1267,0.3429563010207771
+Mouse,Lung,TMS,basophil,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0253413332448416,0.027003837238516962,0.36816991542316985,14,14,122,0.5084251212986631
+Mouse,Lung,TMS,bronchial smooth muscle cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.003072514185686666,0.012182661504011339,0.8055338062962702,14,14,2334,0.8343028708068513
+Mouse,Lung,TMS,ciliated columnar cell of tracheobronchial tree,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.01425320506828344,0.019325060050723233,0.4762267935441593,14,10,26,0.5418861030059114
+Mouse,Lung,TMS,classical monocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.025883431476996312,0.03348048860867942,0.45576091242689215,14,14,7899,0.5418861030059114
+Mouse,Lung,TMS,club cell of bronchiole,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.014775755510875382,0.020487553220961546,0.48582891993633437,14,9,14,0.5418861030059114
+Mouse,Lung,TMS,dendritic cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0014526015601151673,0.01728636787046051,0.9345410906362582,14,13,43,0.9345410906362582
+Mouse,Lung,TMS,endothelial cell of lymphatic vessel,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.015541545143210272,0.01032584387344232,0.16045732554224115,14,12,41,0.35794326467115334
+Mouse,Lung,TMS,fibroblast of lung,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.04514047126459559,0.021312585572384427,0.05776811146034176,14,13,415,0.32404039602239487
+Mouse,Lung,TMS,intermediate monocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.018466370093996348,0.038414964653897384,0.6401427155932764,14,14,1748,0.6875606945261117
+Mouse,Lung,TMS,lung macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.05143310590759998,0.05001544179445275,0.32586967761541136,14,12,1154,0.4843347627715567
+Mouse,Lung,TMS,mature NK T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.046371939936684564,0.03283435903894982,0.18552239818355398,14,13,418,0.3842963962373618
+Mouse,Lung,TMS,myeloid dendritic cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.013660836924489023,0.012937066434674675,0.3136331781128178,14,14,235,0.4843347627715567
+Mouse,Lung,TMS,neutrophil,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.053559204353895565,0.03385135736479665,0.14191295214652846,14,13,546,0.3429563010207771
+Mouse,Lung,TMS,non-classical monocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.023025257962044642,0.029113348456873005,0.4457295346777938,14,13,983,0.5418861030059114
+Mouse,Lung,TMS,pericyte cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.037085118641226156,0.020738457431996638,0.10128403897383925,14,12,34,0.3429563010207771
+Mouse,Lung,TMS,plasma cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.03706069744392018,0.028695543759917622,0.2230037664419119,14,8,45,0.4041943266759653
+Mouse,Lung,TMS,plasmacytoid dendritic cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.02743010474030306,0.01350038307665203,0.06704284055635756,14,12,68,0.32404039602239487
+Mouse,Lung,TMS,pulmonary interstitial fibroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.08208145013222315,0.011352468893641821,1.6860250357458443e-05,14,10,53,0.0004889472603662948
+Mouse,Lung,TMS,regulatory T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.03544293480205607,0.026617183972203078,0.20993318848165027,14,13,121,0.4041943266759653
+Mouse,Lung,TMS,smooth muscle cell of the pulmonary artery,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.026250088025886825,0.01615971086987962,0.13256973995908605,14,13,98,0.3429563010207771
+Mouse,Lung,TMS,type II pneumocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.029108722595784935,0.02746245645014846,0.31188853119308935,14,12,73,0.4843347627715567
+Mouse,Lung,TMS,vein endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.03174373039697126,0.010172974125984235,0.009743068227637763,14,14,320,0.09418299286716504
+Mouse,Mammary_Gland,TMS,B cell,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.01945837905342075,0.023744455049748075,0.4585249097151568,6,6,1626,0.5349457280010163
+Mouse,Mammary_Gland,TMS,T cell,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.05296104940077079,0.014207759812009092,0.020339089625705617,6,6,3212,0.14237362737993933
+Mouse,Mammary_Gland,TMS,basal cell,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.029747206244820603,0.022338724586152648,0.2537942606315799,6,6,1572,0.35531196488421185
+Mouse,Mammary_Gland,TMS,endothelial cell,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.012213814329942396,0.005705895959096096,0.09902546997567777,6,6,648,0.26524519366209276
+Mouse,Mammary_Gland,TMS,luminal epithelial cell of mammary gland,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.015090780990680973,0.03568147521335901,0.6940928203425103,6,6,1716,0.6940928203425103
+Mouse,Mammary_Gland,TMS,macrophage,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.007427155923764833,0.0052520278804072265,0.2302169051094829,6,6,517,0.35531196488421185
+Mouse,Mammary_Gland,TMS,stromal cell,all_donor_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.03236809962486757,0.01603477638482173,0.11367651156946833,6,6,2773,0.26524519366209276
+Mouse,Mammary_Gland,TMS,B cell,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.01945837905342075,0.023744455049748075,0.4585249097151568,6,6,1626,0.5349457280010163
+Mouse,Mammary_Gland,TMS,T cell,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.05296104940077079,0.014207759812009092,0.020339089625705617,6,6,3212,0.14237362737993933
+Mouse,Mammary_Gland,TMS,basal cell,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.029747206244820603,0.022338724586152648,0.2537942606315799,6,6,1572,0.35531196488421185
+Mouse,Mammary_Gland,TMS,endothelial cell,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,-0.012213814329942396,0.005705895959096096,0.09902546997567777,6,6,648,0.26524519366209276
+Mouse,Mammary_Gland,TMS,luminal epithelial cell of mammary gland,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.015090780990680973,0.03568147521335901,0.6940928203425103,6,6,1716,0.6940928203425103
+Mouse,Mammary_Gland,TMS,macrophage,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.007427155923764833,0.0052520278804072265,0.2302169051094829,6,6,517,0.35531196488421185
+Mouse,Mammary_Gland,TMS,stromal cell,exclude_pooled_ids,age_only_rank_deficient_sex,CLR_slope_per_year,0.03236809962486757,0.01603477638482173,0.11367651156946833,6,6,2773,0.26524519366209276
+Mouse,Marrow,TMS,NK cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.006136797233737321,0.017570011846921377,0.7320793255963158,17,16,146,0.9160953557610484
+Mouse,Marrow,TMS,basophil,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.02409365447118146,0.023326136516541765,0.3191630355694194,17,11,103,0.9160953557610484
+Mouse,Marrow,TMS,erythroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0033422870330007443,0.01396433931005473,0.8143069828987096,17,17,2357,0.9160953557610484
+Mouse,Marrow,TMS,erythroid progenitor,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0032865024296782367,0.04618813669053867,0.9442811159637018,17,7,396,0.9755899490758161
+Mouse,Marrow,TMS,granulocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.006502099343227121,0.007810680264103717,0.4191224315595044,17,17,11055,0.9160953557610484
+Mouse,Marrow,TMS,granulocytopoietic cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.010445900649463026,0.00523072552510887,0.06564265483055583,17,17,7560,0.29539194673750124
+Mouse,Marrow,TMS,hematopoietic precursor cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.005215742850599787,0.009864587944176537,0.6052716942604895,17,17,2056,0.9160953557610484
+Mouse,Marrow,TMS,immature B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.006837739182005065,0.02220975716403385,0.7627132454241664,17,17,771,0.9160953557610484
+Mouse,Marrow,TMS,late pro-B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.08343228518802477,0.020016080966325445,0.0009472640462536532,17,16,519,0.00852537641628288
+Mouse,Marrow,TMS,macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0005220989419726244,0.016761012233279672,0.9755899490758161,17,17,807,0.9755899490758161
+Mouse,Marrow,TMS,megakaryocyte-erythroid progenitor cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.008674638081026054,0.012396551645123427,0.4955396965239597,17,17,1870,0.9160953557610484
+Mouse,Marrow,TMS,monocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.04041102157877546,0.01680809259743795,0.03061805477985853,17,17,2384,0.18370832867915118
+Mouse,Marrow,TMS,naive B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.016134957324274765,0.01396549401294263,0.2672876638962347,17,17,398,0.9160953557610484
+Mouse,Marrow,TMS,naive T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.011616014987790446,0.015608425740200497,0.46905489995414473,17,17,1325,0.9160953557610484
+Mouse,Marrow,TMS,plasma cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.017529790048089904,0.029351444976358828,0.55988475428326,17,16,441,0.9160953557610484
+Mouse,Marrow,TMS,precursor B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.051966303020456704,0.012345193869144996,0.0008743586299668157,17,17,901,0.00852537641628288
+Mouse,Marrow,TMS,proerythroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.008959955401817966,0.02428740776226083,0.7177114434170002,17,17,3612,0.9160953557610484
+Mouse,Marrow,TMS,promonocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0028608384289291458,0.011207519813529961,0.8022336419335188,17,17,2770,0.9160953557610484
+Mouse,Marrow,TMS,NK cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.006136797233737321,0.017570011846921377,0.7320793255963158,17,16,146,0.9160953557610484
+Mouse,Marrow,TMS,basophil,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.02409365447118146,0.023326136516541765,0.3191630355694194,17,11,103,0.9160953557610484
+Mouse,Marrow,TMS,erythroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0033422870330007443,0.01396433931005473,0.8143069828987096,17,17,2357,0.9160953557610484
+Mouse,Marrow,TMS,erythroid progenitor,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0032865024296782367,0.04618813669053867,0.9442811159637018,17,7,396,0.9755899490758161
+Mouse,Marrow,TMS,granulocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.006502099343227121,0.007810680264103717,0.4191224315595044,17,17,11055,0.9160953557610484
+Mouse,Marrow,TMS,granulocytopoietic cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.010445900649463026,0.00523072552510887,0.06564265483055583,17,17,7560,0.29539194673750124
+Mouse,Marrow,TMS,hematopoietic precursor cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.005215742850599787,0.009864587944176537,0.6052716942604895,17,17,2056,0.9160953557610484
+Mouse,Marrow,TMS,immature B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.006837739182005065,0.02220975716403385,0.7627132454241664,17,17,771,0.9160953557610484
+Mouse,Marrow,TMS,late pro-B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.08343228518802477,0.020016080966325445,0.0009472640462536532,17,16,519,0.00852537641628288
+Mouse,Marrow,TMS,macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0005220989419726244,0.016761012233279672,0.9755899490758161,17,17,807,0.9755899490758161
+Mouse,Marrow,TMS,megakaryocyte-erythroid progenitor cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.008674638081026054,0.012396551645123427,0.4955396965239597,17,17,1870,0.9160953557610484
+Mouse,Marrow,TMS,monocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.04041102157877546,0.01680809259743795,0.03061805477985853,17,17,2384,0.18370832867915118
+Mouse,Marrow,TMS,naive B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.016134957324274765,0.01396549401294263,0.2672876638962347,17,17,398,0.9160953557610484
+Mouse,Marrow,TMS,naive T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.011616014987790446,0.015608425740200497,0.46905489995414473,17,17,1325,0.9160953557610484
+Mouse,Marrow,TMS,plasma cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.017529790048089904,0.029351444976358828,0.55988475428326,17,16,441,0.9160953557610484
+Mouse,Marrow,TMS,precursor B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.051966303020456704,0.012345193869144996,0.0008743586299668157,17,17,901,0.00852537641628288
+Mouse,Marrow,TMS,proerythroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.008959955401817966,0.02428740776226083,0.7177114434170002,17,17,3612,0.9160953557610484
+Mouse,Marrow,TMS,promonocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0028608384289291458,0.011207519813529961,0.8022336419335188,17,17,2770,0.9160953557610484
+Mouse,Pancreas,TMS,endothelial cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.03772377249686398,0.07693814376117233,0.6446694744345483,8,8,106,0.9496178413415782
+Mouse,Pancreas,TMS,leukocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.019671358328433565,0.08744398320955435,0.8309156111738809,8,7,177,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic A cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.030503252786168774,0.1286144265407514,0.8219373854056464,8,6,310,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.1925081236009295,0.2215131954914442,0.4245585287911796,8,6,2656,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic D cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.09460708831220356,0.13014185302340053,0.49985016335772425,8,6,266,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic acinar cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.27674424629764627,0.157131714990085,0.13850462172916017,8,8,220,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic ductal cel,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.09849483309876832,0.1616206300196974,0.5688733622909603,8,8,304,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic stellate cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.00022548387181547253,0.1460465004318505,0.9988278370912171,8,6,21,0.9988278370912171
+Mouse,Pancreas,TMS,endothelial cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.03772377249686398,0.07693814376117233,0.6446694744345483,8,8,106,0.9496178413415782
+Mouse,Pancreas,TMS,leukocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.019671358328433565,0.08744398320955435,0.8309156111738809,8,7,177,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic A cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.030503252786168774,0.1286144265407514,0.8219373854056464,8,6,310,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.1925081236009295,0.2215131954914442,0.4245585287911796,8,6,2656,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic D cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.09460708831220356,0.13014185302340053,0.49985016335772425,8,6,266,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic acinar cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.27674424629764627,0.157131714990085,0.13850462172916017,8,8,220,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic ductal cel,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.09849483309876832,0.1616206300196974,0.5688733622909603,8,8,304,0.9496178413415782
+Mouse,Pancreas,TMS,pancreatic stellate cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.00022548387181547253,0.1460465004318505,0.9988278370912171,8,6,21,0.9988278370912171
+Mouse,Spleen,TMS,B cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.04778946152646781,0.03628363822495327,0.2171841554331473,13,13,22043,0.28957887391086307
+Mouse,Spleen,TMS,NK cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.04147058323170031,0.014517313749159684,0.017055160053976347,13,13,523,0.08962261238002067
+Mouse,Spleen,TMS,T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.07079058038247422,0.03165708666092141,0.04932378402652341,13,13,4609,0.09864756805304682
+Mouse,Spleen,TMS,erythroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.057653145802602127,0.03793125354503664,0.15949320810272288,13,7,247,0.23923981215408432
+Mouse,Spleen,TMS,granulocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.0959240881047714,0.04094826678501704,0.04115898588548428,13,12,1129,0.09864756805304682
+Mouse,Spleen,TMS,immature NKT cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.03208468868527968,0.011893810004814582,0.022405653095005168,13,13,80,0.08962261238002067
+Mouse,Spleen,TMS,macrophage,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.0142453103544978,0.008727952290558946,0.1336989700179077,13,13,1422,0.2291982343164132
+Mouse,Spleen,TMS,macrophage dendritic cell progenitor,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.03041704503508905,0.012319045896634661,0.03315550189715764,13,13,148,0.09864756805304682
+Mouse,Spleen,TMS,mature NK T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.003248029799989994,0.029049342232940357,0.9131859172895903,13,13,2501,0.9131859172895903
+Mouse,Spleen,TMS,megakaryocyte-erythroid progenitor cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.02394787012420724,0.04792965828588643,0.6281340181800275,13,11,626,0.6852371107418481
+Mouse,Spleen,TMS,plasma cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.07581432698781479,0.011369511879068156,5.5810671404752795e-05,13,13,799,0.0006697280568570336
+Mouse,Spleen,TMS,proerythroblast,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.013293732003896793,0.012254380300928888,0.303463701863754,13,13,862,0.3641564422365048
+Mouse,Spleen,TMS,B cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.04778946152646781,0.03628363822495327,0.2171841554331473,13,13,22043,0.28957887391086307
+Mouse,Spleen,TMS,NK cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.04147058323170031,0.014517313749159684,0.017055160053976347,13,13,523,0.08962261238002067
+Mouse,Spleen,TMS,T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.07079058038247422,0.03165708666092141,0.04932378402652341,13,13,4609,0.09864756805304682
+Mouse,Spleen,TMS,erythroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.057653145802602127,0.03793125354503664,0.15949320810272288,13,7,247,0.23923981215408432
+Mouse,Spleen,TMS,granulocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.0959240881047714,0.04094826678501704,0.04115898588548428,13,12,1129,0.09864756805304682
+Mouse,Spleen,TMS,immature NKT cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.03208468868527968,0.011893810004814582,0.022405653095005168,13,13,80,0.08962261238002067
+Mouse,Spleen,TMS,macrophage,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.0142453103544978,0.008727952290558946,0.1336989700179077,13,13,1422,0.2291982343164132
+Mouse,Spleen,TMS,macrophage dendritic cell progenitor,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.03041704503508905,0.012319045896634661,0.03315550189715764,13,13,148,0.09864756805304682
+Mouse,Spleen,TMS,mature NK T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.003248029799989994,0.029049342232940357,0.9131859172895903,13,13,2501,0.9131859172895903
+Mouse,Spleen,TMS,megakaryocyte-erythroid progenitor cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.02394787012420724,0.04792965828588643,0.6281340181800275,13,11,626,0.6852371107418481
+Mouse,Spleen,TMS,plasma cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.07581432698781479,0.011369511879068156,5.5810671404752795e-05,13,13,799,0.0006697280568570336
+Mouse,Spleen,TMS,proerythroblast,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.013293732003896793,0.012254380300928888,0.303463701863754,13,13,862,0.3641564422365048
+Mouse,Thymus,TMS,DN3 thymocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02913042903831465,0.03413930008314657,0.4562158283969501,6,6,146,0.7163184144510151
+Mouse,Thymus,TMS,DN4 thymocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.026562599194079644,0.06054097748284273,0.6905161287714348,6,6,1968,0.7163184144510151
+Mouse,Thymus,TMS,double negative T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.022106333715942842,0.05534586152174767,0.7163184144510151,6,6,968,0.7163184144510151
+Mouse,Thymus,TMS,immature T cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.02991776144906151,0.045972583296597695,0.5615911199683592,6,6,1771,0.7163184144510151
+Mouse,Thymus,TMS,professional antigen presenting cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.10468177339532794,0.12953114404277752,0.47813945974821964,6,6,2471,0.7163184144510151
+Mouse,Thymus,TMS,thymocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.05008984838608859,0.05686838133683112,0.4432798158064054,6,6,1849,0.7163184144510151
+Mouse,Thymus,TMS,DN3 thymocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.02913042903831465,0.03413930008314657,0.4562158283969501,6,6,146,0.7163184144510151
+Mouse,Thymus,TMS,DN4 thymocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.026562599194079644,0.06054097748284273,0.6905161287714348,6,6,1968,0.7163184144510151
+Mouse,Thymus,TMS,double negative T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.022106333715942842,0.05534586152174767,0.7163184144510151,6,6,968,0.7163184144510151
+Mouse,Thymus,TMS,immature T cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.02991776144906151,0.045972583296597695,0.5615911199683592,6,6,1771,0.7163184144510151
+Mouse,Thymus,TMS,professional antigen presenting cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.10468177339532794,0.12953114404277752,0.47813945974821964,6,6,2471,0.7163184144510151
+Mouse,Thymus,TMS,thymocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.05008984838608859,0.05686838133683112,0.4432798158064054,6,6,1849,0.7163184144510151
+Mouse,Tongue,TMS,Langerhans cell,all_donor_ids,age_plus_sex,CLR_slope_per_year,0.044943251510905335,0.014335990804899874,0.020195955432946753,9,9,172,0.04266715814348405
+Mouse,Tongue,TMS,basal cell of epidermis,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.03034516796178823,0.010574980244321111,0.028444772095656032,9,9,9241,0.04266715814348405
+Mouse,Tongue,TMS,keratinocyte,all_donor_ids,age_plus_sex,CLR_slope_per_year,-0.014598083549117118,0.007606116088701227,0.10337271865060238,9,9,10618,0.10337271865060238
+Mouse,Tongue,TMS,Langerhans cell,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,0.044943251510905335,0.014335990804899874,0.020195955432946753,9,9,172,0.04266715814348405
+Mouse,Tongue,TMS,basal cell of epidermis,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.03034516796178823,0.010574980244321111,0.028444772095656032,9,9,9241,0.04266715814348405
+Mouse,Tongue,TMS,keratinocyte,exclude_pooled_ids,age_plus_sex,CLR_slope_per_year,-0.014598083549117118,0.007606116088701227,0.10337271865060238,9,9,10618,0.10337271865060238
+Human,brain,HBCC_DLPFC,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.007449419450631932,0.006130471437001819,0.22767487511921936,88,16,24,0.4439989080221219
+Human,brain,HBCC_DLPFC,GABAergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010009189097850592,0.008467966316762934,0.24049940851198268,88,86,9737,0.4439989080221219
+Human,brain,HBCC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.002546106561708986,0.007403302310405408,0.7317595391829883,88,88,56281,0.7982831336541691
+Human,brain,HBCC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006342916139725253,0.0059058228141310185,0.2858574214050083,88,87,35417,0.49004129383715705
+Human,brain,HBCC_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005798627039040058,0.006800117788949916,0.39620852354416836,88,43,144,0.5593532097094142
+Human,brain,HBCC_DLPFC,L5/6 near-projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014954109058260175,0.006824588409027122,0.03117270286799647,88,82,3528,0.2547295639672774
+Human,brain,HBCC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.023425042555610703,0.0090956471612797,0.011741684255975347,88,80,4381,0.2547295639672774
+Human,brain,HBCC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01934919742972375,0.010298026450684845,0.06368239099181935,88,82,8602,0.2547295639672774
+Human,brain,HBCC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0201219887217828,0.010287185621701889,0.053746507013578235,88,79,4107,0.2547295639672774
+Human,brain,HBCC_DLPFC,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.013492828723583533,0.008325023954352116,0.1087741783240909,88,63,363,0.32632253497227276
+Human,brain,HBCC_DLPFC,VIP GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0017865790055349902,0.004727171510699661,0.7064186129567956,88,87,21585,0.7982831336541691
+Human,brain,HBCC_DLPFC,astrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0029993144033243707,0.007630457925878511,0.695250895879325,88,88,51607,0.7982831336541691
+Human,brain,HBCC_DLPFC,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.009381554383111109,0.004836659166939255,0.055735510371771685,88,88,9301,0.2547295639672774
+Human,brain,HBCC_DLPFC,lamp5 GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0025484973380995495,0.0042389558447344,0.5493009591859561,88,86,8637,0.7324012789146082
+Human,brain,HBCC_DLPFC,microglial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.008726756240735456,0.006010180662393737,0.15018407004272324,88,88,19376,0.3633964680379795
+Human,brain,HBCC_DLPFC,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00693359073775947,0.007875786932054431,0.38114237478135204,88,64,275,0.5593532097094142
+Human,brain,HBCC_DLPFC,oligodendrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009175876216061269,0.006777313992884124,0.17935386537182876,88,88,134579,0.3913175244476264
+Human,brain,HBCC_DLPFC,oligodendrocyte precursor cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00713534477323336,0.0049291821464637325,0.1514151950158248,88,88,29360,0.3633964680379795
+Human,brain,HBCC_DLPFC,pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0006179205864977782,0.00506932754204836,0.9032706896517134,88,87,4443,0.9032706896517134
+Human,brain,HBCC_DLPFC,perivascular macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010320791536460433,0.006318210404194879,0.10606295273217439,88,83,964,0.32632253497227276
+Human,brain,HBCC_DLPFC,pvalb GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.002212431872352961,0.005578155434852978,0.6926385680068825,88,86,18979,0.7982831336541691
+Human,brain,HBCC_DLPFC,smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0015097490870400847,0.007924839521342476,0.8493649711727209,88,77,879,0.8862938829628392
+Human,brain,HBCC_DLPFC,sst GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0048627491078071915,0.0056172016861693996,0.38909765602257407,88,85,20564,0.5593532097094142
+Human,brain,HBCC_DLPFC,vascular leptomeningeal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.013907091067790802,0.006710486606229723,0.04125400635078207,88,87,2491,0.2547295639672774
+Human,brain,HBCC_DLPFC,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.01484300715482104,0.012113168215963088,0.2421767574086944,16,16,24,0.5249741058995001
+Human,brain,HBCC_DLPFC,GABAergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.008473601756953431,0.00751074190383269,0.26248705294975005,86,86,9737,0.5249741058995001
+Human,brain,HBCC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.002546106561708986,0.007403302310405408,0.7317595391829883,88,88,56281,0.7635751713213791
+Human,brain,HBCC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005322591248369876,0.005651578667706762,0.3490016597759385,87,87,35417,0.5872995777758396
+Human,brain,HBCC_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005170296223290188,0.0076521748812129285,0.5031419799525515,43,43,144,0.6037703759430618
+Human,brain,HBCC_DLPFC,L5/6 near-projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.007608872990806828,0.005820236206554976,0.1948984627139516,82,82,3528,0.5197292339038709
+Human,brain,HBCC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.016240106967606263,0.007153034878106331,0.025980644902345272,80,80,4381,0.3117677388281433
+Human,brain,HBCC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.011282688024511718,0.009296496626394452,0.2284976413155001,82,82,8602,0.5249741058995001
+Human,brain,HBCC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,observed_records_only,age_plus_sex,CLR_slope_per_year,0.006951564692378737,0.00839626192453563,0.4102992824571954,79,79,4107,0.5872995777758396
+Human,brain,HBCC_DLPFC,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.018638247314617776,0.006406386863150031,0.005073731950973903,63,63,363,0.12176956682337367
+Human,brain,HBCC_DLPFC,VIP GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0026842863168622935,0.0044720612622133876,0.5499657810125493,87,87,21585,0.6285323211571993
+Human,brain,HBCC_DLPFC,astrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0029993144033243707,0.007630457925878511,0.695250895879325,88,88,51607,0.7584555227774454
+Human,brain,HBCC_DLPFC,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.009381554383111109,0.004836659166939255,0.055735510371771685,88,88,9301,0.3344130622306301
+Human,brain,HBCC_DLPFC,lamp5 GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0025843876721060753,0.003777235023292175,0.4957542653852907,86,86,8637,0.6037703759430618
+Human,brain,HBCC_DLPFC,microglial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.008726756240735456,0.006010180662393737,0.15018407004272324,88,88,19376,0.5197292339038709
+Human,brain,HBCC_DLPFC,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.005805201262212811,0.006883949300833815,0.402358103669901,64,64,275,0.5872995777758396
+Human,brain,HBCC_DLPFC,oligodendrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.009175876216061269,0.006777313992884124,0.17935386537182876,88,88,134579,0.5197292339038709
+Human,brain,HBCC_DLPFC,oligodendrocyte precursor cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.00713534477323336,0.0049291821464637325,0.1514151950158248,88,88,29360,0.5197292339038709
+Human,brain,HBCC_DLPFC,pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.000333079458488698,0.005081905601470678,0.9478980161049951,87,87,4443,0.9478980161049951
+Human,brain,HBCC_DLPFC,perivascular macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.007595199651823899,0.0057870392438168885,0.19312136820035145,83,83,964,0.5197292339038709
+Human,brain,HBCC_DLPFC,pvalb GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0035954399335081347,0.00445811637189485,0.4222634748373595,86,86,18979,0.5872995777758396
+Human,brain,HBCC_DLPFC,smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0058586206015441514,0.0075539581299043,0.4404746833318797,77,77,879,0.5872995777758396
+Human,brain,HBCC_DLPFC,sst GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004341120635553416,0.0042351792629522645,0.30837063241426294,85,85,20564,0.5692996290724854
+Human,brain,HBCC_DLPFC,vascular leptomeningeal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.013919003543344691,0.006762329921959559,0.04265930520757465,87,87,2491,0.3344130622306301
+Human,lung,ImmuneAging_BAL,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02126217260599658,0.019646437930973547,0.3072883124693571,12,11,227,0.7338314189267777
+Human,lung,ImmuneAging_BAL,"CD16-negative, CD56-bright natural killer cell, human",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0026479063639342675,0.010224580380382835,0.8014807710982872,12,12,14442,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"CD16-positive, CD56-dim natural killer cell, human",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01749950491716143,0.010336983925471025,0.12472334822792007,12,12,55065,0.7338314189267777
+Human,lung,ImmuneAging_BAL,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.016580364326781914,0.006977259350551496,0.041475523240764235,12,12,19751,0.6428706102318457
+Human,lung,ImmuneAging_BAL,"CD4-positive, alpha-beta memory T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.001462651593304989,0.004453867657452475,0.7501207827747763,12,12,53953,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"CD8-positive, alpha-beta memory T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006963559677354871,0.0050883064945857455,0.20432914112326964,12,12,70959,0.7338314189267777
+Human,lung,ImmuneAging_BAL,"central memory CD4-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0032995483350661617,0.005903073932697465,0.589828092266135,12,12,72997,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"central memory CD8-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.003204534786100558,0.01332352378596365,0.815318685914514,12,12,2403,0.9438446359067855
+Human,lung,ImmuneAging_BAL,classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0065974061227449445,0.010892915265325624,0.5597020936190913,12,12,69139,0.9438446359067855
+Human,lung,ImmuneAging_BAL,conventional dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.00929414728977219,0.008620242128378865,0.30900260552211206,12,12,2365,0.7338314189267777
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0012142512327146145,0.009571002838702639,0.9018343236319765,12,12,18227,0.9640297942272852
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell, terminally differentiated",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.017382745504761286,0.034131439825726834,0.6228015785800938,12,12,6824,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010026497017228578,0.009671697950171467,0.32693294374087273,12,12,16817,0.7338314189267777
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.012591469319428734,0.012265195284559655,0.3314077375798351,12,12,22926,0.7338314189267777
+Human,lung,ImmuneAging_BAL,gamma-delta T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0009213077309931806,0.019033322000367957,0.9624506414422053,12,12,10606,0.9646329809797646
+Human,lung,ImmuneAging_BAL,germinal center B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.003050150497667256,0.013172143168622315,0.8220582312736519,12,12,266,0.9438446359067855
+Human,lung,ImmuneAging_BAL,group 1 innate lymphoid cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.005985660096708197,0.02175802089731086,0.7894496730465719,12,12,8630,0.9438446359067855
+Human,lung,ImmuneAging_BAL,group 3 innate lymphoid cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0005227253235213572,0.011465916102638243,0.9646329809797646,12,12,3258,0.9646329809797646
+Human,lung,ImmuneAging_BAL,immature innate lymphoid cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02195317162959725,0.011235400588554502,0.08244481544987046,12,12,6767,0.7338314189267777
+Human,lung,ImmuneAging_BAL,macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.009586686442126046,0.013342838022790043,0.49068648710472773,12,12,105777,0.9438446359067855
+Human,lung,ImmuneAging_BAL,mast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.011889605013677381,0.011200475044808166,0.31610432707596486,12,12,16196,0.7338314189267777
+Human,lung,ImmuneAging_BAL,memory B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006339924236693464,0.013085228195031273,0.6395971458868721,12,12,91131,0.9438446359067855
+Human,lung,ImmuneAging_BAL,mucosal invariant T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.002089044439947365,0.01370765799278855,0.8822334545883607,12,12,2929,0.9640297942272852
+Human,lung,ImmuneAging_BAL,naive B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004529096764580864,0.01878527320278913,0.8148818860486109,12,12,38601,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD4-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004534793915168131,0.007927462189307193,0.5813020386452545,12,12,53787,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD8-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.035039785362283374,0.01020125841971648,0.007450909669664367,12,12,24082,0.23097819975959538
+Human,lung,ImmuneAging_BAL,non-classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.029421909170075013,0.01594299644970158,0.09805909737324744,12,12,8616,0.7338314189267777
+Human,lung,ImmuneAging_BAL,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004072930747171358,0.01086557783182189,0.7164546766244912,12,12,15711,0.9438446359067855
+Human,lung,ImmuneAging_BAL,plasmablast,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015342366217498267,0.013331131166208897,0.27944456496973696,12,12,7549,0.7338314189267777
+Human,lung,ImmuneAging_BAL,plasmacytoid dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03544198885718702,0.024268871424894287,0.1781931545076745,12,10,642,0.7338314189267777
+Human,lung,ImmuneAging_BAL,progenitor cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01773434214146975,0.01313693155096122,0.2099983979596071,12,12,5474,0.7338314189267777
+Human,lung,ImmuneAging_BAL,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.003982585560164136,0.013039216977365467,0.7678337635428,11,11,227,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"CD16-negative, CD56-bright natural killer cell, human",observed_records_only,age_plus_sex,CLR_slope_per_year,0.0026479063639342675,0.010224580380382835,0.8014807710982872,12,12,14442,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"CD16-positive, CD56-dim natural killer cell, human",observed_records_only,age_plus_sex,CLR_slope_per_year,0.01749950491716143,0.010336983925471025,0.12472334822792007,12,12,55065,0.7732847590131045
+Human,lung,ImmuneAging_BAL,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.016580364326781914,0.006977259350551496,0.041475523240764235,12,12,19751,0.6428706102318457
+Human,lung,ImmuneAging_BAL,"CD4-positive, alpha-beta memory T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.001462651593304989,0.004453867657452475,0.7501207827747763,12,12,53953,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"CD8-positive, alpha-beta memory T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.006963559677354871,0.0050883064945857455,0.20432914112326964,12,12,70959,0.7902799896134529
+Human,lung,ImmuneAging_BAL,"central memory CD4-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0032995483350661617,0.005903073932697465,0.589828092266135,12,12,72997,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"central memory CD8-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.003204534786100558,0.01332352378596365,0.815318685914514,12,12,2403,0.9438446359067855
+Human,lung,ImmuneAging_BAL,classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0065974061227449445,0.010892915265325624,0.5597020936190913,12,12,69139,0.9438446359067855
+Human,lung,ImmuneAging_BAL,conventional dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00929414728977219,0.008620242128378865,0.30900260552211206,12,12,2365,0.7902799896134529
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.0012142512327146145,0.009571002838702639,0.9018343236319765,12,12,18227,0.9640297942272852
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell, terminally differentiated",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.017382745504761286,0.034131439825726834,0.6228015785800938,12,12,6824,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.010026497017228578,0.009671697950171467,0.32693294374087273,12,12,16817,0.7902799896134529
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.012591469319428734,0.012265195284559655,0.3314077375798351,12,12,22926,0.7902799896134529
+Human,lung,ImmuneAging_BAL,gamma-delta T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0009213077309931806,0.019033322000367957,0.9624506414422053,12,12,10606,0.9646329809797646
+Human,lung,ImmuneAging_BAL,germinal center B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.003050150497667256,0.013172143168622315,0.8220582312736519,12,12,266,0.9438446359067855
+Human,lung,ImmuneAging_BAL,group 1 innate lymphoid cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005985660096708197,0.02175802089731086,0.7894496730465719,12,12,8630,0.9438446359067855
+Human,lung,ImmuneAging_BAL,group 3 innate lymphoid cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0005227253235213572,0.011465916102638243,0.9646329809797646,12,12,3258,0.9646329809797646
+Human,lung,ImmuneAging_BAL,immature innate lymphoid cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02195317162959725,0.011235400588554502,0.08244481544987046,12,12,6767,0.7599580046426677
+Human,lung,ImmuneAging_BAL,macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.009586686442126046,0.013342838022790043,0.49068648710472773,12,12,105777,0.9438446359067855
+Human,lung,ImmuneAging_BAL,mast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.011889605013677381,0.011200475044808166,0.31610432707596486,12,12,16196,0.7902799896134529
+Human,lung,ImmuneAging_BAL,memory B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.006339924236693464,0.013085228195031273,0.6395971458868721,12,12,91131,0.9438446359067855
+Human,lung,ImmuneAging_BAL,mucosal invariant T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.002089044439947365,0.01370765799278855,0.8822334545883607,12,12,2929,0.9640297942272852
+Human,lung,ImmuneAging_BAL,naive B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004529096764580864,0.01878527320278913,0.8148818860486109,12,12,38601,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD4-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004534793915168131,0.007927462189307193,0.5813020386452545,12,12,53787,0.9438446359067855
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD8-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.035039785362283374,0.01020125841971648,0.007450909669664367,12,12,24082,0.23097819975959538
+Human,lung,ImmuneAging_BAL,non-classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.029421909170075013,0.01594299644970158,0.09805909737324744,12,12,8616,0.7599580046426677
+Human,lung,ImmuneAging_BAL,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.004072930747171358,0.01086557783182189,0.7164546766244912,12,12,15711,0.9438446359067855
+Human,lung,ImmuneAging_BAL,plasmablast,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.015342366217498267,0.013331131166208897,0.27944456496973696,12,12,7549,0.7902799896134529
+Human,lung,ImmuneAging_BAL,plasmacytoid dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.029839349616950218,0.02211489658038413,0.219255130222768,10,10,642,0.7902799896134529
+Human,lung,ImmuneAging_BAL,progenitor cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01773434214146975,0.01313693155096122,0.2099983979596071,12,12,5474,0.7902799896134529
+Human,kidney,Kidney_LivingDonor,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01511474312702632,0.0240678857601367,0.5388620867759896,19,11,68,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.11639406188090633,0.05568167509638174,0.05290620343788794,19,12,938,0.18357370437321238
+Human,kidney,Kidney_LivingDonor,epithelial cell of proximal tubule,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.07791060914685705,0.02872298865535022,0.01537370295152849,19,19,20983,0.08711765005866143
+Human,kidney,Kidney_LivingDonor,kidney capillary endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009233461502571224,0.020992806731267716,0.6659368389441332,19,19,572,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,kidney connecting tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.010784102359350857,0.028568955008241248,0.7107799544078188,19,14,122,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,kidney cortex collecting duct epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.08034635007050252,0.02241320375339926,0.0024776241666506263,19,11,45,0.04211961083306065
+Human,kidney,Kidney_LivingDonor,kidney distal convoluted tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.016302870915753158,0.01791366297223347,0.37628677189391424,19,18,109,0.7107639024662824
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle cortical thick ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.013839393238616882,0.02558061589021828,0.5959527575059934,19,18,1156,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle descending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.10159092832326438,0.03501209010625288,0.01040648286658038,19,19,1011,0.08711765005866143
+Human,kidney,Kidney_LivingDonor,mesangial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.011038072136996544,0.027203341683501622,0.6902923074515805,19,16,130,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,mononuclear phagocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.09150556679194079,0.04642907091229408,0.06629211601940074,19,16,999,0.18782766205496876
+Human,kidney,Kidney_LivingDonor,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.10127262201570136,0.04869619795632076,0.05399226599212129,19,10,466,0.18357370437321238
+Human,kidney,Kidney_LivingDonor,parietal epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.03186039620744686,0.022656621812637615,0.1787802370562095,19,15,64,0.43418057570793733
+Human,kidney,Kidney_LivingDonor,podocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.020081881813302577,0.027152935731965883,0.470265252948197,19,6,16,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,renal alpha-intercalated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.018975768809352075,0.02073561728517428,0.3737102156234944,19,19,304,0.7107639024662824
+Human,kidney,Kidney_LivingDonor,renal beta-intercalated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007260223054999221,0.02148521413944637,0.7398186461995182,19,18,130,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,renal principal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.016462515128688376,0.02576962269984196,0.5319701660096608,19,18,455,0.7398186461995182
+Human,kidney,Kidney_LivingDonor,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03215784926368999,0.029024683151616375,0.30008018422097316,11,11,68,0.709897395747463
+Human,kidney,Kidney_LivingDonor,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.10646342654754673,0.05917738389556364,0.10554824668826338,12,12,938,0.44858004842511934
+Human,kidney,Kidney_LivingDonor,epithelial cell of proximal tubule,observed_records_only,age_plus_sex,CLR_slope_per_year,0.07791060914685705,0.02872298865535022,0.01537370295152849,19,19,20983,0.13067647508799216
+Human,kidney,Kidney_LivingDonor,kidney capillary endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.009233461502571224,0.020992806731267716,0.6659368389441332,19,19,572,0.8708404816961743
+Human,kidney,Kidney_LivingDonor,kidney connecting tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0044482004683987775,0.01590466768304114,0.7849128682762807,14,14,122,0.9026576551741616
+Human,kidney,Kidney_LivingDonor,kidney cortex collecting duct epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.04684793702718795,0.03283895170610871,0.1915344684297748,11,11,45,0.542680993884362
+Human,kidney,Kidney_LivingDonor,kidney distal convoluted tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01579472192572238,0.017416468849158116,0.3788064187299864,18,18,109,0.709897395747463
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle cortical thick ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.015376860676605113,0.018446457937564702,0.4175867033808606,18,18,1156,0.709897395747463
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle descending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.10159092832326438,0.03501209010625288,0.01040648286658038,19,19,1011,0.13067647508799216
+Human,kidney,Kidney_LivingDonor,mesangial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005580398498842954,0.02119579176118504,0.7964626369183779,16,16,130,0.9026576551741616
+Human,kidney,Kidney_LivingDonor,mononuclear phagocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.07790429100708186,0.041100411681971795,0.0804825931960627,16,16,999,0.44858004842511934
+Human,kidney,Kidney_LivingDonor,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03520914885556922,0.07472348417927382,0.6518347642155428,10,10,466,0.8708404816961743
+Human,kidney,Kidney_LivingDonor,parietal epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0013540436630900318,0.021346981216914113,0.9504682720091198,15,15,64,0.9504682720091198
+Human,kidney,Kidney_LivingDonor,podocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.003565713764077931,0.024156103140418144,0.892012163467115,6,6,16,0.9477629236838097
+Human,kidney,Kidney_LivingDonor,renal alpha-intercalated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.018975768809352075,0.02073561728517428,0.3737102156234944,19,19,304,0.709897395747463
+Human,kidney,Kidney_LivingDonor,renal beta-intercalated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013077821948242585,0.017676318960411126,0.4708128590874017,18,18,130,0.7276198731350754
+Human,kidney,Kidney_LivingDonor,renal principal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.024944146961783695,0.017936753380747947,0.18461333068400254,18,18,455,0.542680993884362
+Human,kidney,Kidney_NormalAdult,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014089297193565938,0.032883842562724586,0.6744076569056179,18,18,327,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010943502859943905,0.03025150306843519,0.7225836231177554,18,18,1612,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,alternatively activated macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02094552008618856,0.02902784071617457,0.4816580378057112,18,16,264,0.756869723356877
+Human,kidney,Kidney_NormalAdult,conventional dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008227503586658838,0.018826394781745217,0.668323089507337,18,18,1076,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,cytotoxic T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02051726012340924,0.029649403807276153,0.49951239890528987,18,16,385,0.756869723356877
+Human,kidney,Kidney_NormalAdult,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013086563131056295,0.01296668955745779,0.32886129572555656,18,18,5006,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013071633212836628,0.01541431664039049,0.4097558468443021,18,11,20,0.756869723356877
+Human,kidney,Kidney_NormalAdult,epithelial cell of proximal tubule,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.06392736331651136,0.03344255441873346,0.07523062318407076,18,18,8319,0.6519987342619465
+Human,kidney,Kidney_NormalAdult,kidney collecting duct intercalated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015388085635106692,0.023585208853884092,0.5239867315547609,18,18,4261,0.756869723356877
+Human,kidney,Kidney_NormalAdult,kidney collecting duct principal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02702018494938485,0.03673059481817788,0.4733017874878696,18,18,5117,0.756869723356877
+Human,kidney,Kidney_NormalAdult,kidney connecting tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02502359908267983,0.03089511001471979,0.43062941832179236,18,18,1564,0.756869723356877
+Human,kidney,Kidney_NormalAdult,kidney distal convoluted tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04871201362343995,0.034563741236272164,0.17912942322352848,18,17,1616,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,kidney interstitial fibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0311030132691492,0.027634422070030657,0.27805692567590684,18,9,38,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thick ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014887610145561767,0.03707890648030839,0.6937056680764375,18,18,11161,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thin descending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.08753563130808976,0.0754119571743577,0.2638778375691343,18,9,2757,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,leukocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03650245934574877,0.017241876482370702,0.05137511079856728,18,17,109,0.6519987342619465
+Human,kidney,Kidney_NormalAdult,mast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02217099110158648,0.02081694092177869,0.3036997758798715,18,8,17,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,mature NK T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02416320722767221,0.024546821612236765,0.3405450912892504,18,17,301,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004691254342702971,0.014295094152162138,0.7473176214309613,18,18,850,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04916002512064356,0.03500034868572023,0.1805209879003081,18,16,458,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,non-classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02204955573453278,0.02134704661200501,0.3180136947215157,18,17,116,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,parietal epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04617559790330401,0.031234180547360255,0.15999991405568684,18,16,262,0.7378476977933759
+Human,kidney,Kidney_NormalAdult,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.05771425011493776,0.022358125094814673,0.020858440150029498,18,8,30,0.5423194439007669
+Human,kidney,Kidney_NormalAdult,plasmacytoid dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0102513200751355,0.02151046709219197,0.6405338599890714,18,9,18,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,podocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01912137359651674,0.03946970278494764,0.6350593157874825,18,15,275,0.7772103262881996
+Human,kidney,Kidney_NormalAdult,renal interstitial pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007146473129516549,0.029706037157926586,0.8131430671910747,18,18,1912,0.8131430671910747
+Human,kidney,Kidney_NormalAdult,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.014089297193565938,0.032883842562724586,0.6744076569056179,18,18,327,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.010943502859943905,0.03025150306843519,0.7225836231177554,18,18,1612,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,alternatively activated macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.021761166912993707,0.02529349788002879,0.4051860497467883,16,16,264,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,conventional dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008227503586658838,0.018826394781745217,0.668323089507337,18,18,1076,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,cytotoxic T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.002070291229239766,0.02230719518745297,0.9274709427825528,16,16,385,0.9274709427825528
+Human,kidney,Kidney_NormalAdult,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013086563131056295,0.01296668955745779,0.32886129572555656,18,18,5006,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.011476055556275167,0.010486701968685709,0.3056558250425112,11,11,20,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,epithelial cell of proximal tubule,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.06392736331651136,0.03344255441873346,0.07523062318407076,18,18,8319,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney collecting duct intercalated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.015388085635106692,0.023585208853884092,0.5239867315547609,18,18,4261,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney collecting duct principal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02702018494938485,0.03673059481817788,0.4733017874878696,18,18,5117,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney connecting tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02502359908267983,0.03089511001471979,0.43062941832179236,18,18,1564,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney distal convoluted tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.014142587977064159,0.016732853825972113,0.41221201009807956,17,17,1616,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney interstitial fibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,0.024558704878550556,0.044939079364410335,0.6044414825998135,9,9,38,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thick ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.014887610145561767,0.03707890648030839,0.6937056680764375,18,18,11161,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thin descending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.07515583099886773,0.1759769979274755,0.684223469998688,9,9,2757,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,leukocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.026470204391245183,0.019051258047760027,0.18640793774824066,17,17,109,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,mast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02560465287741627,0.05228241715868658,0.6450491434312648,8,8,17,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,mature NK T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0297293813810147,0.021309410929473235,0.18471607824672032,17,17,301,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004691254342702971,0.014295094152162138,0.7473176214309613,18,18,850,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02228896512681463,0.02688591409110995,0.4220541993148554,16,16,458,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,non-classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.025953322746811988,0.020455006613952727,0.22520283854697057,17,17,116,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,parietal epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02216085079065666,0.02624720670656088,0.4137627027912211,16,16,262,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.012361935923305839,0.11701554376819004,0.9199725636970908,8,8,30,0.9274709427825528
+Human,kidney,Kidney_NormalAdult,plasmacytoid dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013026915014363412,0.04105735004909789,0.7617774210005084,9,9,18,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,podocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.01939588277944627,0.03693077841376088,0.6090143809478274,15,15,275,0.8611396933049226
+Human,kidney,Kidney_NormalAdult,renal interstitial pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.007146473129516549,0.029706037157926586,0.8131430671910747,18,18,1912,0.8809049894569975
+Human,kidney,Kidney_SCR_v15,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.04930508355511559,0.03673695397827523,0.19952260769946834,18,13,131,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03232710145951559,0.024260967179845362,0.2025940675848878,18,18,617,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,conventional dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013433082151655777,0.020359842088869172,0.519395756160768,18,18,129,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,cytotoxic T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.020425569320375758,0.03136879923722518,0.5248048478713417,18,16,132,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.009985021498845836,0.015902139314427483,0.5395092594690621,18,18,3237,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,epithelial cell of proximal tubule,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.021022690540624934,0.024248943523401612,0.39962422551138954,18,18,6429,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney collecting duct intercalated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.031054291415316043,0.021147877890773843,0.1626431538903226,18,18,2097,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney collecting duct principal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.017617631126625587,0.02330671281586998,0.46141366414125223,18,18,2577,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney connecting tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02328397195467524,0.03617610362263254,0.5295347591224437,18,17,1398,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.07384866938094878,0.03602538640856378,0.058277980597113754,18,17,2015,0.4467978512445388
+Human,kidney,Kidney_SCR_v15,kidney interstitial alternatively activated macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02206369295064971,0.025301463967499053,0.3969346738987147,18,18,239,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney interstitial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009217148082338006,0.016365554162566482,0.5816176901300836,18,18,1070,0.7040635196311538
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.019086196801586457,0.029917483765144585,0.5331177560466399,18,18,4042,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thin ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.002320500773929155,0.04122510041088555,0.9558548909359309,18,14,199,0.9558548909359309
+Human,kidney,Kidney_SCR_v15,mature NK T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.023125003689072828,0.034508847071505346,0.5129677203404226,18,12,74,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.027332728847274328,0.011732960518386546,0.03420878377133297,18,18,212,0.3934010133703292
+Human,kidney,Kidney_SCR_v15,mononuclear phagocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0241158849115551,0.02365407604235396,0.32411745722889085,18,16,169,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0037536909101727554,0.017829865871208935,0.8360885332416659,18,18,171,0.8740925574799234
+Human,kidney,Kidney_SCR_v15,non-classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.044750378520578206,0.017783811718163785,0.023726807520352063,18,8,25,0.3934010133703292
+Human,kidney,Kidney_SCR_v15,parietal epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.008468682504295633,0.020967103590874996,0.6919835687275478,18,16,167,0.79578110403668
+Human,kidney,Kidney_SCR_v15,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014897509905890362,0.015858809069592875,0.3624154890949765,18,11,25,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,"plasmacytoid dendritic cell, human",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.028096465218708774,0.02381195755171582,0.25640268465525956,18,6,17,0.6893729426549127
+Human,kidney,Kidney_SCR_v15,podocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01309954520903165,0.03721844001374144,0.7297611917576379,18,14,116,0.7992622576393177
+Human,kidney,Kidney_SCR_v15,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.012745553576292907,0.03876802529320914,0.7491149332720501,13,13,131,0.8204592126312931
+Human,kidney,Kidney_SCR_v15,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03232710145951559,0.024260967179845362,0.2025940675848878,18,18,617,0.5824579443065524
+Human,kidney,Kidney_SCR_v15,conventional dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013433082151655777,0.020359842088869172,0.519395756160768,18,18,129,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,cytotoxic T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.04641673279146976,0.02472553167004772,0.08309928164959211,16,16,132,0.4034174663158855
+Human,kidney,Kidney_SCR_v15,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.009985021498845836,0.015902139314427483,0.5395092594690621,18,18,3237,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,epithelial cell of proximal tubule,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.021022690540624934,0.024248943523401612,0.39962422551138954,18,18,6429,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,kidney collecting duct intercalated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.031054291415316043,0.021147877890773843,0.1626431538903226,18,18,2097,0.53439893421106
+Human,kidney,Kidney_SCR_v15,kidney collecting duct principal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.017617631126625587,0.02330671281586998,0.46141366414125223,18,18,2577,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,kidney connecting tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.00267135108940723,0.029318369572506053,0.9286918502554832,17,17,1398,0.9286918502554832
+Human,kidney,Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.053009515587745415,0.028873909038376045,0.08769944919910554,17,17,2015,0.4034174663158855
+Human,kidney,Kidney_SCR_v15,kidney interstitial alternatively activated macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02206369295064971,0.025301463967499053,0.3969346738987147,18,18,239,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,kidney interstitial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.009217148082338006,0.016365554162566482,0.5816176901300836,18,18,1070,0.7431781596106624
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.019086196801586457,0.029917483765144585,0.5331177560466399,18,18,4042,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thin ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.027808813738893393,0.038683946684497324,0.48721000779739576,14,14,199,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,mature NK T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0466061141561795,0.026981108865390048,0.11817343709485123,12,12,74,0.45299817553026306
+Human,kidney,Kidney_SCR_v15,monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.027332728847274328,0.011732960518386546,0.03420878377133297,18,18,212,0.3591211302452718
+Human,kidney,Kidney_SCR_v15,mononuclear phagocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.04005200718527102,0.01727539718787421,0.037357247947611354,16,16,169,0.3591211302452718
+Human,kidney,Kidney_SCR_v15,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0037536909101727554,0.017829865871208935,0.8360885332416659,18,18,171,0.8740925574799234
+Human,kidney,Kidney_SCR_v15,non-classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03501862907605004,0.013342888305803881,0.0468418865537311,8,8,25,0.3591211302452718
+Human,kidney,Kidney_SCR_v15,parietal epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006807714776918574,0.015487403731460406,0.6674710532837788,16,16,167,0.7675917112763456
+Human,kidney,Kidney_SCR_v15,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006861543004704672,0.014296282941179987,0.6441086626753922,11,11,25,0.7675917112763456
+Human,kidney,Kidney_SCR_v15,"plasmacytoid dendritic cell, human",observed_records_only,age_plus_sex,CLR_slope_per_year,-0.052293160385447957,0.05704644628186919,0.4269100400684395,6,6,17,0.7299242922228488
+Human,kidney,Kidney_SCR_v15,podocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03629847197321451,0.03529277918582715,0.32580170070825526,14,14,116,0.7299242922228488
+Human,kidney,Kidney_SN_v15,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01765721517165472,0.020320563500090722,0.41828108018001464,9,9,937,0.9612699981749856
+Human,kidney,Kidney_SN_v15,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004252005390726443,0.021307441897430508,0.8484198518484961,9,9,4644,0.9612699981749856
+Human,kidney,Kidney_SN_v15,epithelial cell of proximal tubule,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.028309577695354433,0.025313110904651062,0.306173566815237,9,9,11795,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney collecting duct intercalated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02418703619762373,0.017605703927550596,0.21861417843590172,9,9,3618,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney collecting duct principal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009631019410708855,0.021065486222999516,0.66361786230625,9,9,8500,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney connecting tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01861376095454764,0.036615116353889726,0.6293439254180454,9,9,2366,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney distal convoluted tubule epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.031968376037256434,0.06160920127255073,0.6224125660344566,9,8,2794,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney interstitial alternatively activated macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0061459919596997415,0.013595819993028635,0.66711538126099,9,9,644,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney interstitial fibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01803779757516613,0.038579228192270096,0.6566037421877834,9,9,5815,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thick ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0027337834197796967,0.026691869918138354,0.9217604923795547,9,9,9796,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thin ascending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0048625981913913005,0.04925577867713557,0.9245750795384418,9,8,2713,0.9612699981749856
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thin descending limb epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.017217291404987817,0.044684878679452485,0.7133011124332183,9,8,3438,0.9612699981749856
+Human,kidney,Kidney_SN_v15,mast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02212961110741107,0.029284873243543015,0.47845498064210384,9,6,76,0.9612699981749856
+Human,kidney,Kidney_SN_v15,mature NK T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0009894027226071437,0.019544965216190636,0.9612699981749856,9,8,101,0.9612699981749856
+Human,kidney,Kidney_SN_v15,mononuclear phagocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.015983661621645114,0.012512022160888621,0.24863964197623145,9,9,480,0.9612699981749856
+Human,kidney,Kidney_SN_v15,neural cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.007306349214304006,0.025501358855991255,0.7841248258974073,9,6,27,0.9612699981749856
+Human,kidney,Kidney_SN_v15,non-classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02698270101040608,0.016190388089688743,0.1466455399559663,9,9,66,0.9612699981749856
+Human,kidney,Kidney_SN_v15,papillary tips cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02612620694263416,0.0567306892958584,0.6613545607991397,9,6,304,0.9612699981749856
+Human,kidney,Kidney_SN_v15,parietal epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.037045344585050655,0.030732570075636564,0.2734226398665064,9,9,335,0.9612699981749856
+Human,kidney,Kidney_SN_v15,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.007561136172577093,0.027670803874512363,0.793820683186924,9,7,70,0.9612699981749856
+Human,kidney,Kidney_SN_v15,podocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015100852032126483,0.04892127683071005,0.7680043463467727,9,7,696,0.9612699981749856
+Human,kidney,Kidney_SN_v15,renal interstitial pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004789519244795891,0.024670828012392263,0.8524747407646157,9,9,942,0.9612699981749856
+Human,kidney,Kidney_SN_v15,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01765721517165472,0.020320563500090722,0.41828108018001464,9,9,937,0.9894805529014938
+Human,kidney,Kidney_SN_v15,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.004252005390726443,0.021307441897430508,0.8484198518484961,9,9,4644,0.9913656854059356
+Human,kidney,Kidney_SN_v15,epithelial cell of proximal tubule,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.028309577695354433,0.025313110904651062,0.306173566815237,9,9,11795,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney collecting duct intercalated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02418703619762373,0.017605703927550596,0.21861417843590172,9,9,3618,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney collecting duct principal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.009631019410708855,0.021065486222999516,0.66361786230625,9,9,8500,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney connecting tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.01861376095454764,0.036615116353889726,0.6293439254180454,9,9,2366,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney distal convoluted tubule epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.030832228069886666,0.05056952919117159,0.5687020407396459,8,8,2794,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney interstitial alternatively activated macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0061459919596997415,0.013595819993028635,0.66711538126099,9,9,644,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney interstitial fibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01803779757516613,0.038579228192270096,0.6566037421877834,9,9,5815,0.9894805529014938
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thick ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0027337834197796967,0.026691869918138354,0.9217604923795547,9,9,9796,0.9913656854059356
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thin ascending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00020016814327376408,0.04389851846612908,0.9965381587825578,8,8,2713,0.9965381587825578
+Human,kidney,Kidney_SN_v15,kidney loop of Henle thin descending limb epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01150133726302932,0.030134147306219824,0.7183871611943901,8,8,3438,0.9894805529014938
+Human,kidney,Kidney_SN_v15,mast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.017214672165860062,0.012970989169269132,0.27641825863846187,6,6,76,0.9894805529014938
+Human,kidney,Kidney_SN_v15,mature NK T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.002023644641677487,0.018864530051986843,0.9187442314060533,8,8,101,0.9913656854059356
+Human,kidney,Kidney_SN_v15,mononuclear phagocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.015983661621645114,0.012512022160888621,0.24863964197623145,9,9,480,0.9894805529014938
+Human,kidney,Kidney_SN_v15,neural cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.010735055873423868,0.011759323042914292,0.4286085866250008,6,6,27,0.9894805529014938
+Human,kidney,Kidney_SN_v15,non-classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02698270101040608,0.016190388089688743,0.1466455399559663,9,9,66,0.9894805529014938
+Human,kidney,Kidney_SN_v15,papillary tips cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0054408797667755094,0.07439741917902773,0.9463036087965749,6,6,304,0.9913656854059356
+Human,kidney,Kidney_SN_v15,parietal epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.037045344585050655,0.030732570075636564,0.2734226398665064,9,9,335,0.9894805529014938
+Human,kidney,Kidney_SN_v15,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008424001095141177,0.02186304424322648,0.7196222202919955,7,7,70,0.9894805529014938
+Human,kidney,Kidney_SN_v15,podocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.017386382008018307,0.023243137901343747,0.49602787299968604,7,7,696,0.9894805529014938
+Human,kidney,Kidney_SN_v15,renal interstitial pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.004789519244795891,0.024670828012392263,0.8524747407646157,9,9,942,0.9913656854059356
+Human,lung,Lung_CellRef,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.03582987280737281,0.02618038609080334,0.19269304667324433,17,12,136,0.7707721866929773
+Human,lung,Lung_CellRef,"CD8-positive, alpha-beta cytotoxic T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.018509058238767834,0.04345861911451764,0.6766552027103645,17,8,482,0.9539867453700872
+Human,lung,Lung_CellRef,alveolar adventitial fibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0052215528465826885,0.021725652675804723,0.8135499911255402,17,17,893,0.9539867453700872
+Human,lung,Lung_CellRef,alveolar capillary type 1 endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.024307027908439527,0.035458322809989916,0.5042159187252143,17,13,4953,0.9539867453700872
+Human,lung,Lung_CellRef,alveolar capillary type 2 endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0018786896180776485,0.026554854189819035,0.9445993978061028,17,13,944,0.9539867453700872
+Human,lung,Lung_CellRef,alveolar macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0022113431891982024,0.036651780656536875,0.9527425571873709,17,17,49591,0.9539867453700872
+Human,lung,Lung_CellRef,alveolar type 1 fibroblast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004923898843547374,0.02494705173664888,0.8463717900646508,17,13,1211,0.9539867453700872
+Human,lung,Lung_CellRef,basal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.02258165423988976,0.025545027973354395,0.39162785719315746,17,16,201,0.9539867453700872
+Human,lung,Lung_CellRef,ciliated cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.04230852572267093,0.02666180029274107,0.13486658009996866,17,15,3744,0.7707721866929773
+Human,lung,Lung_CellRef,classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04864682322767256,0.022530394055059032,0.04867846683305209,17,13,186,0.7707721866929773
+Human,lung,Lung_CellRef,conventional dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005326222042684752,0.02436802521233262,0.8301358961484354,17,12,65,0.9539867453700872
+Human,lung,Lung_CellRef,endothelial cell of artery,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03418562541789759,0.015238935676515228,0.04157501925212904,17,17,1711,0.7707721866929773
+Human,lung,Lung_CellRef,endothelial cell of respiratory system lymphatic vessel,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01933820514417358,0.021675879260648092,0.3873882649377315,17,14,949,0.9539867453700872
+Human,lung,Lung_CellRef,goblet cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013641148046656518,0.02618499233129706,0.6105411289367905,17,12,160,0.9539867453700872
+Human,lung,Lung_CellRef,helper T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04305542992034811,0.03697368795575426,0.26368650129322063,17,11,353,0.9375520045981178
+Human,lung,Lung_CellRef,lung interstitial macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.042448524939322364,0.029322696421495546,0.1697410720933355,17,16,392,0.7707721866929773
+Human,lung,Lung_CellRef,lung secretory cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.04327536829566182,0.029441227844226255,0.16370486444194335,17,13,2717,0.7707721866929773
+Human,lung,Lung_CellRef,mast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00470585966717907,0.021093008158753156,0.8266796768083852,17,7,87,0.9539867453700872
+Human,lung,Lung_CellRef,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015166148793084106,0.025431317893010424,0.5604563854129315,17,14,473,0.9539867453700872
+Human,lung,Lung_CellRef,neutrophil,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01419897251381498,0.028253775277118514,0.6230920059916337,17,6,104,0.9539867453700872
+Human,lung,Lung_CellRef,pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007609143219802434,0.022767908517669043,0.7431787580668328,17,14,395,0.9539867453700872
+Human,lung,Lung_CellRef,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.04065887267575886,0.02943772637854261,0.18887160685624263,17,16,378,0.7707721866929773
+Human,lung,Lung_CellRef,pulmonary alveolar type 1 cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0019366488011363758,0.0329679349201307,0.9539867453700872,17,13,4062,0.9539867453700872
+Human,lung,Lung_CellRef,pulmonary alveolar type 2 cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03654234676942855,0.036824225166834305,0.3378716167397345,17,16,19542,0.9539867453700872
+Human,lung,Lung_CellRef,pulmonary neuroendocrine cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.035527551046945854,0.03329536868566931,0.3040085431843343,17,8,1010,0.9539867453700872
+Human,lung,Lung_CellRef,respiratory tract suprabasal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.012498453740354552,0.02303200158922025,0.5959003803540222,17,12,42,0.9539867453700872
+Human,lung,Lung_CellRef,secondary crest myofibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.001409559228776085,0.01857444229721448,0.9405827524046124,17,14,380,0.9539867453700872
+Human,lung,Lung_CellRef,secretory cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.028889793600481637,0.020652170936604007,0.18361303010636953,17,17,1782,0.7707721866929773
+Human,lung,Lung_CellRef,tracheobronchial smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.009047379986077,0.02270274429274568,0.6962622974295215,17,10,57,0.9539867453700872
+Human,lung,Lung_CellRef,vascular associated smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.007965079059722468,0.024072599734465787,0.7456372211879945,17,17,1273,0.9539867453700872
+Human,lung,Lung_CellRef,vein endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013093336847103764,0.026674015096309886,0.6311267438843171,17,15,2823,0.9539867453700872
+Human,lung,Lung_CellRef,vein endothelial cell of respiratory system,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.013957320100342957,0.022908806423653432,0.5521144854563962,17,17,1320,0.9539867453700872
+Human,lung,Lung_CellRef,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03459667758006886,0.03459918102098638,0.34346955507339005,12,12,136,0.7356283538672049
+Human,lung,Lung_CellRef,"CD8-positive, alpha-beta cytotoxic T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.05258936139679269,0.08241221989653215,0.5514677142334046,8,8,482,0.8833831767302339
+Human,lung,Lung_CellRef,alveolar adventitial fibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0052215528465826885,0.021725652675804723,0.8135499911255402,17,17,893,0.9297714184291888
+Human,lung,Lung_CellRef,alveolar capillary type 1 endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.00025960977804985144,0.017800075909947498,0.988650340317564,13,13,4953,0.988650340317564
+Human,lung,Lung_CellRef,alveolar capillary type 2 endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0219664674963823,0.01774358967615409,0.24399499793901733,13,13,944,0.7356283538672049
+Human,lung,Lung_CellRef,alveolar macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0022113431891982024,0.036651780656536875,0.9527425571873709,17,17,49591,0.988650340317564
+Human,lung,Lung_CellRef,alveolar type 1 fibroblast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02644541641528335,0.016348584878552595,0.13682046100761738,13,13,1211,0.7356283538672049
+Human,lung,Lung_CellRef,basal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.002289120568913998,0.023458530055530745,0.9237530087987382,16,16,201,0.988650340317564
+Human,lung,Lung_CellRef,ciliated cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008627053420960533,0.020606054658449245,0.6828561002637858,15,15,3744,0.8837181880746601
+Human,lung,Lung_CellRef,classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.030158295459703874,0.030416828863881678,0.34482579087525234,13,13,186,0.7356283538672049
+Human,lung,Lung_CellRef,conventional dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.007337910208560427,0.021818191659150898,0.74433772718158,12,12,65,0.8837181880746601
+Human,lung,Lung_CellRef,endothelial cell of artery,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03418562541789759,0.015238935676515228,0.04157501925212904,17,17,1711,0.6652003080340646
+Human,lung,Lung_CellRef,endothelial cell of respiratory system lymphatic vessel,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0006274494442299822,0.016198530631985203,0.969795763915572,14,14,949,0.988650340317564
+Human,lung,Lung_CellRef,goblet cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.022978420091607728,0.0278645631538186,0.43088492036311177,12,12,160,0.8617698407262235
+Human,lung,Lung_CellRef,helper T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028641020196620084,0.056390904537522366,0.625226865094229,11,11,353,0.8837181880746601
+Human,lung,Lung_CellRef,lung interstitial macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.04075250260670073,0.02913289556593515,0.18526159914750173,16,16,392,0.7356283538672049
+Human,lung,Lung_CellRef,lung secretory cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02659180097813054,0.017555187391291898,0.1607837307066034,13,13,2717,0.7356283538672049
+Human,lung,Lung_CellRef,mast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02025383997755212,0.034501532449359426,0.5887110223266356,7,7,87,0.8837181880746601
+Human,lung,Lung_CellRef,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02016107217092882,0.019458926449423812,0.32240345090490785,14,14,473,0.7356283538672049
+Human,lung,Lung_CellRef,neutrophil,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0728631670677532,0.01552561417213198,0.018293639102644112,6,6,104,0.5853964512846116
+Human,lung,Lung_CellRef,pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.025305215964118298,0.020171200087054923,0.23565376433659985,14,14,395,0.7356283538672049
+Human,lung,Lung_CellRef,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03953862355793591,0.026568379316004618,0.16055451433779075,16,16,378,0.7356283538672049
+Human,lung,Lung_CellRef,pulmonary alveolar type 1 cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.026061138569204664,0.01554143890007747,0.12449800559448025,13,13,4062,0.7356283538672049
+Human,lung,Lung_CellRef,pulmonary alveolar type 2 cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013993225646559894,0.029665517243895656,0.6449597077079279,16,16,19542,0.8837181880746601
+Human,lung,Lung_CellRef,pulmonary neuroendocrine cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.04852765383584903,0.06939492539211392,0.5155523259127128,8,8,1010,0.8833831767302339
+Human,lung,Lung_CellRef,respiratory tract suprabasal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.025061636100210984,0.024871832526960045,0.33995261772262825,12,12,42,0.7356283538672049
+Human,lung,Lung_CellRef,secondary crest myofibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006244256422725724,0.016475930060787434,0.7119068740279859,14,14,380,0.8837181880746601
+Human,lung,Lung_CellRef,secretory cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028889793600481637,0.020652170936604007,0.18361303010636953,17,17,1782,0.7356283538672049
+Human,lung,Lung_CellRef,tracheobronchial smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.013779011922799737,0.021714076950154374,0.5458837233448003,10,10,57,0.8833831767302339
+Human,lung,Lung_CellRef,vascular associated smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.007965079059722468,0.024072599734465787,0.7456372211879945,17,17,1273,0.8837181880746601
+Human,lung,Lung_CellRef,vein endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.025084874965509128,0.020950255302192765,0.25428606120713104,15,15,2823,0.7356283538672049
+Human,lung,Lung_CellRef,vein endothelial cell of respiratory system,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.013957320100342957,0.022908806423653432,0.5521144854563962,17,17,1320,0.8833831767302339
+Human,lung,Lung_Integrated,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0015571546219291291,0.0074817921766570546,0.8354956568981979,119,81,2936,0.9081474531502151
+Human,lung,Lung_Integrated,CD1c-positive myeloid dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.006685495524874451,0.007697909921825446,0.3869238442254289,119,100,6762,0.5862482488264075
+Human,lung,Lung_Integrated,"CD4-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00024360512511252758,0.009945421820921155,0.9805004985722422,119,95,13639,0.9805004985722422
+Human,lung,Lung_Integrated,"CD8-positive, alpha-beta T cell",all_adult_donors,age_plus_sex,CLR_slope_per_year,0.00998400262695738,0.011256071485785588,0.37692053904103046,119,96,18351,0.5862482488264075
+Human,lung,Lung_Integrated,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006358517456177559,0.0053144220413464,0.23395505047742132,119,47,395,0.48740635516129444
+Human,lung,Lung_Integrated,acinar cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.003125025710225255,0.0107995183417365,0.7728169842067977,119,32,991,0.858685538007553
+Human,lung,Lung_Integrated,alveolar adventitial fibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0047201577194760725,0.008053300555919874,0.5589371810795639,119,68,8170,0.6986714763494548
+Human,lung,Lung_Integrated,alveolar macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009372914061957418,0.01523405899894038,0.5395879017139409,119,92,88832,0.691779361171719
+Human,lung,Lung_Integrated,alveolar type 1 fibroblast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009384181167295202,0.008766871868245556,0.28665524276092913,119,61,8014,0.5118843620730876
+Human,lung,Lung_Integrated,bronchial goblet cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0051354009724238385,0.006843839947285266,0.45455221303554283,119,45,1300,0.6442689268837835
+Human,lung,Lung_Integrated,bronchus fibroblast of lung,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015426039299557997,0.005873137748230005,0.00979016664758692,119,52,1024,0.09790166647586919
+Human,lung,Lung_Integrated,brush cell of tracheobronchial tree,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004802496365463644,0.007618912803039999,0.5297127444122245,119,27,150,0.691779361171719
+Human,lung,Lung_Integrated,capillary endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.010992374102977891,0.011532542833045806,0.34249028661635256,119,69,23010,0.5757109597163466
+Human,lung,Lung_Integrated,classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014070387506816325,0.010114508055752787,0.1668547099713846,119,95,16442,0.40326447399538723
+Human,lung,Lung_Integrated,club cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0601654537170281,0.014643192718890143,7.445927639897742e-05,119,87,31984,0.003722963819948871
+Human,lung,Lung_Integrated,conventional dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014136686024546475,0.004979007633564076,0.005340776452774021,119,49,226,0.08596717268560293
+Human,lung,Lung_Integrated,dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01202071338386243,0.005431888371905798,0.028855626197836475,119,51,241,0.19030728313102202
+Human,lung,Lung_Integrated,elicited macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.006014074785947304,0.011713770916274804,0.6086346257374042,119,94,23911,0.724565030639767
+Human,lung,Lung_Integrated,endothelial cell of lymphatic vessel,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004075514301803966,0.007874048153883689,0.6057312798018893,119,71,4744,0.724565030639767
+Human,lung,Lung_Integrated,epithelial cell of lower respiratory tract,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007393582406859879,0.007831002519168235,0.34705917851796075,119,90,5173,0.5757109597163466
+Human,lung,Lung_Integrated,fibroblast,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008592545055814025,0.005696237692557747,0.13415575821854658,119,10,62,0.37938976516733763
+Human,lung,Lung_Integrated,hematopoietic stem cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.003457179295105509,0.00507719107680566,0.49727682227345776,119,15,20,0.6719957057749429
+Human,lung,Lung_Integrated,ionocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.008596830138797999,0.009294929306658544,0.3569407950241349,119,47,572,0.5757109597163466
+Human,lung,Lung_Integrated,lung macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0062519485238412735,0.008507021119015292,0.4638736273563241,119,76,4561,0.6442689268837835
+Human,lung,Lung_Integrated,lung pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008598030362510226,0.006900365404863051,0.21526572382525333,119,44,2691,0.4679689648375072
+Human,lung,Lung_Integrated,mast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.019466653808047348,0.0090669554390583,0.03387597187790804,119,90,5974,0.19030728313102202
+Human,lung,Lung_Integrated,mesothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.010431441072055944,0.006043909019717355,0.08702031446172821,119,20,201,0.3346935171604931
+Human,lung,Lung_Integrated,mucus secreting cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0076119849321827394,0.007007095218847232,0.2795873536217034,119,12,471,0.5118843620730876
+Human,lung,Lung_Integrated,multiciliated columnar cell of tracheobronchial tree,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01416219137202447,0.009433441802175568,0.13600158444513807,119,112,30684,0.37938976516733763
+Human,lung,Lung_Integrated,multiciliated epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.034092110991866396,0.00977616720890159,0.0006901573419998885,119,74,2108,0.017253933549997214
+Human,lung,Lung_Integrated,myofibroblast cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0060518753350688285,0.00458113297763582,0.18908692018048887,119,41,474,0.42974300041020197
+Human,lung,Lung_Integrated,nasal mucosa goblet cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.037364592684987874,0.017393720545930334,0.03378023829741966,119,81,37271,0.19030728313102202
+Human,lung,Lung_Integrated,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.017150897659258726,0.010444005128509966,0.10326177338099113,119,80,9368,0.368792047789254
+Human,lung,Lung_Integrated,non-classical monocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.014585538928352503,0.009729931452164896,0.13658031546024155,119,84,8463,0.37938976516733763
+Human,lung,Lung_Integrated,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008343979370387975,0.007260820149770711,0.2528462957188253,119,77,1837,0.5056925914376506
+Human,lung,Lung_Integrated,plasmacytoid dendritic cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008185021506748227,0.007291490790765884,0.2639491614960314,119,48,549,0.507594541338522
+Human,lung,Lung_Integrated,pulmonary alveolar epithelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.002737866924869958,0.006993857501415839,0.696169982116313,119,56,1047,0.7911022524049011
+Human,lung,Lung_Integrated,pulmonary alveolar type 1 cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.018303593064582423,0.010283501201631615,0.07771085696030648,119,76,12644,0.32379523733461035
+Human,lung,Lung_Integrated,pulmonary alveolar type 2 cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.041164738566197186,0.014958565578023782,0.006877373814848234,119,81,72848,0.08596717268560293
+Human,lung,Lung_Integrated,pulmonary artery endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0003108376972430467,0.009061647524551403,0.9726948407189682,119,76,6582,0.9805004985722422
+Human,lung,Lung_Integrated,pulmonary neuroendocrine cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.005202453220856988,0.006927132392672018,0.4541581673992487,119,32,148,0.6442689268837835
+Human,lung,Lung_Integrated,respiratory basal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.02785208323547259,0.015630190538286848,0.07737525997946348,119,95,60128,0.32379523733461035
+Human,lung,Lung_Integrated,respiratory tract hillock cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.001413547270060099,0.013227032569312422,0.9150782605245993,119,32,4305,0.953206521379791
+Human,lung,Lung_Integrated,serous secreting cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00309029625170454,0.007161459455463963,0.6668929444528134,119,9,1472,0.7754569121544342
+Human,lung,Lung_Integrated,smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007167648331559977,0.005183292753475776,0.16937107907806262,119,11,371,0.40326447399538723
+Human,lung,Lung_Integrated,stromal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.012965685781579117,0.006179547787764746,0.03806145662620441,119,20,381,0.19030728313102202
+Human,lung,Lung_Integrated,tracheobronchial goblet cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.012195867363279373,0.0077329693111045615,0.11748980724003368,119,28,962,0.37938976516733763
+Human,lung,Lung_Integrated,tracheobronchial serous cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01121725323971956,0.007725267898877654,0.1491950870846419,119,12,1284,0.39261865022274184
+Human,lung,Lung_Integrated,tracheobronchial smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0010754677257293751,0.006223123852882809,0.8630956776523523,119,68,2073,0.9181868911195238
+Human,lung,Lung_Integrated,vein endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.020042950523345347,0.00951523519693929,0.037324874258946705,119,82,10171,0.19030728313102202
+Human,lung,Lung_Integrated,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0026503419302068257,0.006742578410980703,0.695336046177733,81,81,2936,0.8607431426875644
+Human,lung,Lung_Integrated,CD1c-positive myeloid dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00027289688730612084,0.005351172186532,0.959432311077137,100,100,6762,0.962740747130995
+Human,lung,Lung_Integrated,"CD4-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.004815853341849265,0.009220921230087692,0.6027344505783037,95,95,13639,0.7727364751003892
+Human,lung,Lung_Integrated,"CD8-positive, alpha-beta T cell",observed_records_only,age_plus_sex,CLR_slope_per_year,0.008856696509535801,0.009491287308844673,0.35316424056658535,96,96,18351,0.6407322082170611
+Human,lung,Lung_Integrated,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005739911269010547,0.008775473282522367,0.5164609139449431,47,47,395,0.6979201539796528
+Human,lung,Lung_Integrated,acinar cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.04318858245562081,0.018756084053554743,0.028668287994029887,32,32,991,0.1791767999626868
+Human,lung,Lung_Integrated,alveolar adventitial fibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0038634596036460937,0.010222387278245738,0.706705819230491,68,68,8170,0.8607431426875644
+Human,lung,Lung_Integrated,alveolar macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.012343581175551913,0.014092526703959496,0.38344471513229766,92,92,88832,0.6407322082170611
+Human,lung,Lung_Integrated,alveolar type 1 fibroblast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02018036192593668,0.007973312034966902,0.014108498178803091,61,61,8014,0.1410849817880309
+Human,lung,Lung_Integrated,bronchial goblet cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.02248415491988979,0.013731932131984351,0.10902667149771951,45,45,1300,0.3759667522838011
+Human,lung,Lung_Integrated,bronchus fibroblast of lung,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02053668298166458,0.008801727060547535,0.023782870314096177,52,52,1024,0.16987764510068695
+Human,lung,Lung_Integrated,brush cell of tracheobronchial tree,observed_records_only,age_plus_sex,CLR_slope_per_year,0.021234634433165908,0.017994477079074492,0.24953950820508825,27,27,150,0.5198739754272672
+Human,lung,Lung_Integrated,capillary endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.002734081660900847,0.012135521726936896,0.822445339776531,69,69,23010,0.8939623258440554
+Human,lung,Lung_Integrated,classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.014328329224676133,0.008143330261095712,0.08181400042240215,95,95,16442,0.3408916684266757
+Human,lung,Lung_Integrated,club cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.04913008027375122,0.01647267481159279,0.003740911572315398,87,87,31984,0.07316568058810542
+Human,lung,Lung_Integrated,conventional dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00725647976166465,0.0061499021397732985,0.2440925396340661,49,49,226,0.5198739754272672
+Human,lung,Lung_Integrated,dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.012940736570632556,0.008855951473682394,0.15046339519660745,51,51,241,0.40909063318265587
+Human,lung,Lung_Integrated,elicited macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006436337442300088,0.011345294964798474,0.5718981827888778,94,94,23911,0.752497608932734
+Human,lung,Lung_Integrated,endothelial cell of lymphatic vessel,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006053399113273364,0.007527509352909513,0.4241011525953033,71,71,4744,0.6631873859644852
+Human,lung,Lung_Integrated,epithelial cell of lower respiratory tract,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0014561155940357338,0.0076141268649266925,0.8487841978859019,90,90,5173,0.9029619126445765
+Human,lung,Lung_Integrated,fibroblast,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.01882641311284849,0.023917033439514398,0.45701016819199675,10,10,62,0.6720737767529363
+Human,lung,Lung_Integrated,hematopoietic stem cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.010701508877525958,0.015147084234676303,0.4933637623741692,15,15,20,0.6979201539796528
+Human,lung,Lung_Integrated,ionocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.012918803921440222,0.016545171658158504,0.4390891445353313,47,47,572,0.6652865826292899
+Human,lung,Lung_Integrated,lung macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0021572994380532093,0.008944468204947148,0.8100854790150881,76,76,4561,0.8939623258440554
+Human,lung,Lung_Integrated,lung pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004258106926939362,0.012623657668840521,0.7376027782778236,44,44,2691,0.8607431426875644
+Human,lung,Lung_Integrated,mast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.026527568832664036,0.009068782732646956,0.0043899408352863255,90,90,5974,0.07316568058810542
+Human,lung,Lung_Integrated,mesothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03874169285741966,0.017793301584548525,0.04383420223318797,20,20,201,0.24352334573993317
+Human,lung,Lung_Integrated,mucus secreting cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.08619673595257175,0.045613746552287816,0.09137860843479916,12,12,471,0.35145618628768904
+Human,lung,Lung_Integrated,multiciliated columnar cell of tracheobronchial tree,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.019987283544275765,0.008525975298035837,0.020875425792463296,112,112,30684,0.16987764510068695
+Human,lung,Lung_Integrated,multiciliated epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.010624912485486126,0.011915563863115495,0.37557456567648856,74,74,2108,0.6407322082170611
+Human,lung,Lung_Integrated,myofibroblast cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008555569350113873,0.0076383458078208835,0.2697086483597827,41,41,474,0.5394172967195654
+Human,lung,Lung_Integrated,nasal mucosa goblet cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03193793770498047,0.021598100141914343,0.14323748743336118,81,81,37271,0.40909063318265587
+Human,lung,Lung_Integrated,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01967008237909887,0.009998310757496486,0.052745778164613004,80,80,9368,0.263728890823065
+Human,lung,Lung_Integrated,non-classical monocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.014361122555875353,0.008957961268090784,0.11279002568514034,84,84,8463,0.3759667522838011
+Human,lung,Lung_Integrated,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0053736887517938665,0.008096636150282801,0.5089486942529025,77,77,1837,0.6979201539796528
+Human,lung,Lung_Integrated,plasmacytoid dendritic cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0024818692741168454,0.010296810210375373,0.8106245392554557,48,48,549,0.8939623258440554
+Human,lung,Lung_Integrated,pulmonary alveolar epithelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.007983770428271518,0.009103398156653454,0.38443932493023664,56,56,1047,0.6407322082170611
+Human,lung,Lung_Integrated,pulmonary alveolar type 1 cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00041558395509724085,0.008865765303282239,0.962740747130995,76,76,12644,0.962740747130995
+Human,lung,Lung_Integrated,pulmonary alveolar type 2 cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01004167624730992,0.012505879726386188,0.42443992701727057,81,81,72848,0.6631873859644852
+Human,lung,Lung_Integrated,pulmonary artery endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0027734817104527083,0.008333778628150613,0.7402391027113053,76,76,6582,0.8607431426875644
+Human,lung,Lung_Integrated,pulmonary neuroendocrine cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.05268920479134348,0.01564503382043455,0.0021536297096752303,32,32,148,0.07316568058810542
+Human,lung,Lung_Integrated,respiratory basal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.027642995122834038,0.01802316296568922,0.12852343052463577,95,95,60128,0.4016357203894868
+Human,lung,Lung_Integrated,respiratory tract hillock cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028332552643944124,0.030558371204525623,0.3614951817347219,32,32,4305,0.6407322082170611
+Human,lung,Lung_Integrated,serous secreting cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.09759717862612356,0.06150250910639695,0.16363625327306236,9,9,1472,0.40909063318265587
+Human,lung,Lung_Integrated,smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03249599007326034,0.021993481426367853,0.17778574412482562,11,11,371,0.42329939077339435
+Human,lung,Lung_Integrated,stromal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.040791122260474544,0.02095770962360026,0.06833292131362273,20,20,381,0.31060418778919424
+Human,lung,Lung_Integrated,tracheobronchial goblet cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03393436994624287,0.026655679536917422,0.21470697977651124,28,28,962,0.4879704085829801
+Human,lung,Lung_Integrated,tracheobronchial serous cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.07580589376411603,0.049544427921274496,0.1603583431092842,12,12,1284,0.40909063318265587
+Human,lung,Lung_Integrated,tracheobronchial smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0008470340091860726,0.0073455816201727754,0.9085532877826843,68,68,2073,0.9464096747736295
+Human,lung,Lung_Integrated,vein endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.02135017032886509,0.007817392537179068,0.007782216115255959,82,82,10171,0.09727770144069948
+Human,brain,MSSM_DLPFC,B cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0013426702566734752,0.004470280274785034,0.7642036415818421,213,37,100,0.8683546638981697
+Human,brain,MSSM_DLPFC,GABAergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.009689356911065357,0.0033589631543343356,0.00432729550441847,213,209,13415,0.02396274664645086
+Human,brain,MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.00019834423976769223,0.00416634382557216,0.9620752495891193,213,210,89432,0.9620752495891193
+Human,brain,MSSM_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0009345825559346061,0.0036634210261698905,0.7988862907863162,213,212,59282,0.8683546638981697
+Human,brain,MSSM_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.003133197453908461,0.003969176995342814,0.4307790335912382,213,91,188,0.6576509918839838
+Human,brain,MSSM_DLPFC,L5/6 near-projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007811331434518471,0.00451737672309409,0.08524746567329351,213,191,4238,0.19374424016657615
+Human,brain,MSSM_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004829479231115956,0.003961091092694995,0.22412477707298675,213,200,7602,0.43100918667882065
+Human,brain,MSSM_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006673817998375969,0.004601054235220508,0.14841180144121227,213,201,10456,0.3091912530025256
+Human,brain,MSSM_DLPFC,L6b glutamatergic neuron of the primary motor cortex,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01603986448647968,0.004515074970579643,0.00047111304996162116,213,197,4368,0.00392594208301351
+Human,brain,MSSM_DLPFC,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0011436885555995194,0.005450186974965012,0.8339929416820628,213,146,829,0.8687426475854821
+Human,brain,MSSM_DLPFC,VIP GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.006314611689467788,0.0029136194906537434,0.03133910282692516,213,210,39806,0.08425453782923699
+Human,brain,MSSM_DLPFC,astrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0011719210199306112,0.004116326526087562,0.776154014723653,213,213,107367,0.8683546638981697
+Human,brain,MSSM_DLPFC,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010029880706554665,0.004435464853006325,0.02476580838653906,213,201,4759,0.07739315120793457
+Human,brain,MSSM_DLPFC,lamp5 GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0013653329240307494,0.0030818224670452117,0.6582016837752547,213,206,14997,0.8660548470727035
+Human,brain,MSSM_DLPFC,microglial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.00384700883373712,0.003750674044754032,0.3062202600113243,213,212,37953,0.5468218928773647
+Human,brain,MSSM_DLPFC,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.004069698201822115,0.005151647071073484,0.43043056011173514,213,141,556,0.6576509918839838
+Human,brain,MSSM_DLPFC,oligodendrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.015966479002039242,0.004036014211500529,0.00010422609156275933,213,213,314361,0.0013028261445344916
+Human,brain,MSSM_DLPFC,oligodendrocyte precursor cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.011090899272629412,0.002720690646287969,6.485543889030171e-05,213,213,56715,0.0013028261445344916
+Human,brain,MSSM_DLPFC,pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.008258999464308525,0.0034558622368335394,0.01773907624704108,213,205,4010,0.06335384373943242
+Human,brain,MSSM_DLPFC,perivascular macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.009713041039778473,0.004543815386908738,0.0337018151316948,213,182,1810,0.08425453782923699
+Human,brain,MSSM_DLPFC,plasma cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0028291763010092827,0.003939941606849388,0.47350871415646834,213,6,15,0.6576509918839838
+Human,brain,MSSM_DLPFC,pvalb GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0024018825141893336,0.0033107855383699195,0.4689701286699264,213,209,31088,0.6576509918839838
+Human,brain,MSSM_DLPFC,smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.01278317650301939,0.004905734159704758,0.009823170270121482,213,161,807,0.04092987612550617
+Human,brain,MSSM_DLPFC,sst GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.011016138375759372,0.003863914822871684,0.0047925493292901725,213,209,31217,0.02396274664645086
+Human,brain,MSSM_DLPFC,vascular leptomeningeal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.001771439953784916,0.005070695134229085,0.727177719215557,213,199,3943,0.8683546638981697
+Human,brain,MSSM_DLPFC,B cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.027745925061399473,0.010023644030719921,0.009061238886626294,37,37,100,0.03522172929878556
+Human,brain,MSSM_DLPFC,GABAergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.008387058400167034,0.0031335043136788807,0.008036727959119068,209,209,13415,0.03522172929878556
+Human,brain,MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0014878859947188613,0.003648883482880467,0.6838678251178086,210,210,89432,0.8141283632354865
+Human,brain,MSSM_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0006699719336826905,0.0035218060803292282,0.8493093740811661,212,212,59282,0.8493093740811661
+Human,brain,MSSM_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0008052049342444547,0.00408143122904971,0.8440595263262819,91,91,188,0.8493093740811661
+Human,brain,MSSM_DLPFC,L5/6 near-projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.002359277104100155,0.003858402761197945,0.5416306574580501,191,191,4238,0.7126719177079606
+Human,brain,MSSM_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0048087002705470535,0.0035194266468883614,0.1733927683186915,200,200,7602,0.36123493399727397
+Human,brain,MSSM_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005837114672063656,0.004114304524548101,0.15754796177523472,201,201,10456,0.35806354948916985
+Human,brain,MSSM_DLPFC,L6b glutamatergic neuron of the primary motor cortex,observed_records_only,age_plus_sex,CLR_slope_per_year,0.010562100554153232,0.004052466663090133,0.009862084203659957,197,197,4368,0.03522172929878556
+Human,brain,MSSM_DLPFC,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.001040574194783006,0.0053957049221442675,0.8473482564378783,146,146,829,0.8493093740811661
+Human,brain,MSSM_DLPFC,VIP GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0076449239156150045,0.002364797674476463,0.0014264774424799964,210,210,39806,0.008915484015499978
+Human,brain,MSSM_DLPFC,astrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0011719210199306112,0.004116326526087562,0.776154014723653,213,213,107367,0.8493093740811661
+Human,brain,MSSM_DLPFC,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.008866123322771835,0.0036833747700273332,0.016999356512900445,201,201,4759,0.04722043475805679
+Human,brain,MSSM_DLPFC,lamp5 GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0022101837115176223,0.0024200745955481615,0.3621834643481778,206,206,14997,0.5991113716197859
+Human,brain,MSSM_DLPFC,microglial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.003174317486291654,0.00364962240257455,0.38542609466848926,212,212,37953,0.5991113716197859
+Human,brain,MSSM_DLPFC,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006157656712204523,0.0052107175469240565,0.2393455685676392,141,141,556,0.42740280101364136
+Human,brain,MSSM_DLPFC,oligodendrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.015966479002039242,0.004036014211500529,0.00010422609156275933,213,213,314361,0.0013028261445344916
+Human,brain,MSSM_DLPFC,oligodendrocyte precursor cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.011090899272629412,0.002720690646287969,6.485543889030171e-05,213,213,56715,0.0013028261445344916
+Human,brain,MSSM_DLPFC,pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.007366803695673854,0.0031292670700505034,0.019524334162341374,205,205,4010,0.04881083540585343
+Human,brain,MSSM_DLPFC,perivascular macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.005585455420606047,0.004553637050677366,0.2215869268438109,182,182,1810,0.4261287054688671
+Human,brain,MSSM_DLPFC,plasma cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03049559232856318,0.03390580140770289,0.4347149592961592,6,6,15,0.6037707768002212
+Human,brain,MSSM_DLPFC,pvalb GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0015916647587561831,0.0028432854954573076,0.5762256013576134,209,209,31088,0.7202820016970166
+Human,brain,MSSM_DLPFC,smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.011347959888261889,0.00449944399783518,0.012656174557619557,161,161,807,0.039550545492561116
+Human,brain,MSSM_DLPFC,sst GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.012122067305985713,0.0033733909354255903,0.00040825521857224494,209,209,31217,0.0034021268214353747
+Human,brain,MSSM_DLPFC,vascular leptomeningeal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.00418165588812657,0.005036495060046216,0.40739573270145446,199,199,3943,0.5991113716197859
+Human,brain,RADC_DLPFC,GABAergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.04725120451767362,0.03928242726358768,0.24767419619083986,18,18,1664,0.72955593458028
+Human,brain,RADC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.08949673395344578,0.036175876621381726,0.02579797803205184,18,18,8187,0.5401660133306508
+Human,brain,RADC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.013272720705574892,0.0288267257738819,0.6518110796349829,18,18,7864,0.8818620489179181
+Human,brain,RADC_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.019095092361392736,0.028288836936703272,0.509944491717983,18,12,26,0.7389498436722287
+Human,brain,RADC_DLPFC,L5/6 near-projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005109433846293407,0.04069133650794932,0.9017432466458474,18,17,571,0.9766537560783947
+Human,brain,RADC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.06863080643284714,0.0485339980610223,0.17775879115067073,18,17,849,0.72955593458028
+Human,brain,RADC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.07850084463782589,0.05337407210868294,0.16201928936884194,18,17,1419,0.72955593458028
+Human,brain,RADC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004666638546986037,0.06383251308754558,0.9426865012199578,18,16,639,0.9766537560783947
+Human,brain,RADC_DLPFC,T cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.054989254076303354,0.050320807719736196,0.291733455959042,18,9,55,0.72955593458028
+Human,brain,RADC_DLPFC,VIP GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.025257412806486166,0.022901456045228377,0.28746254988512493,18,18,3685,0.72955593458028
+Human,brain,RADC_DLPFC,astrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.028568437899814107,0.03529374164035009,0.4309112323637854,18,18,10787,0.72955593458028
+Human,brain,RADC_DLPFC,endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.03016646750231654,0.04513441334044379,0.5140520651632895,18,18,1576,0.7389498436722287
+Human,brain,RADC_DLPFC,lamp5 GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.028591245638560685,0.01320958344583485,0.04697095768092616,18,18,1556,0.5401660133306508
+Human,brain,RADC_DLPFC,microglial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005230074465837321,0.03889081749492903,0.8948101256506588,18,18,3408,0.9766537560783947
+Human,brain,RADC_DLPFC,natural killer cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.06742256892615163,0.05180468401484026,0.21273064201380398,18,11,60,0.72955593458028
+Human,brain,RADC_DLPFC,oligodendrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.006943884252913576,0.03765254075461985,0.8561540777684514,18,18,28268,0.9766537560783947
+Human,brain,RADC_DLPFC,oligodendrocyte precursor cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.023183422987091012,0.02461075900474179,0.3611158943419228,18,18,3747,0.72955593458028
+Human,brain,RADC_DLPFC,pericyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.03533994130190424,0.03960124196057473,0.3862739724049983,18,18,771,0.72955593458028
+Human,brain,RADC_DLPFC,perivascular macrophage,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.026391310498825125,0.033574482924723044,0.4440775253966922,18,18,263,0.72955593458028
+Human,brain,RADC_DLPFC,pvalb GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01931911602726209,0.018286692171942,0.30747798851733066,18,18,3487,0.72955593458028
+Human,brain,RADC_DLPFC,smooth muscle cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.001949878677085147,0.06552837041455728,0.9766537560783947,18,15,419,0.9766537560783947
+Human,brain,RADC_DLPFC,sst GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.001913763394866208,0.03326009299717282,0.9548750849908213,18,18,2697,0.9766537560783947
+Human,brain,RADC_DLPFC,vascular leptomeningeal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.043045901707809676,0.04587829198997095,0.3629725648770849,18,18,783,0.72955593458028
+Human,brain,RADC_DLPFC,GABAergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.04725120451767362,0.03928242726358768,0.24767419619083986,18,18,1664,0.8511485903436601
+Human,brain,RADC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.08949673395344578,0.036175876621381726,0.02579797803205184,18,18,8187,0.36826780427553335
+Human,brain,RADC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.013272720705574892,0.0288267257738819,0.6518110796349829,18,18,7864,0.9980076674548273
+Human,brain,RADC_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0031108667767286435,0.034620598961723814,0.9303696090278174,12,12,26,0.9980076674548273
+Human,brain,RADC_DLPFC,L5/6 near-projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.01872310696267097,0.03346973586749151,0.5847249163740413,17,17,571,0.9606195054716393
+Human,brain,RADC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.009016108398765902,0.04134207017213639,0.830509255603699,17,17,849,0.9980076674548273
+Human,brain,RADC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008800685391352075,0.044440309997511473,0.8458653063861977,17,17,1419,0.9980076674548273
+Human,brain,RADC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,observed_records_only,age_plus_sex,CLR_slope_per_year,0.09895572044108195,0.04534530533113318,0.048034930992460874,16,16,639,0.36826780427553335
+Human,brain,RADC_DLPFC,T cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.00013254364870928927,0.050923959881042036,0.9980076674548273,9,9,55,0.9980076674548273
+Human,brain,RADC_DLPFC,VIP GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.025257412806486166,0.022901456045228377,0.28746254988512493,18,18,3685,0.8511485903436601
+Human,brain,RADC_DLPFC,astrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028568437899814107,0.03529374164035009,0.4309112323637854,18,18,10787,0.8511485903436601
+Human,brain,RADC_DLPFC,endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.03016646750231654,0.04513441334044379,0.5140520651632895,18,18,1576,0.9094767306735122
+Human,brain,RADC_DLPFC,lamp5 GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028591245638560685,0.01320958344583485,0.04697095768092616,18,18,1556,0.36826780427553335
+Human,brain,RADC_DLPFC,microglial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.005230074465837321,0.03889081749492903,0.8948101256506588,18,18,3408,0.9980076674548273
+Human,brain,RADC_DLPFC,natural killer cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0512439310875869,0.05586726390799652,0.38583171903878083,11,11,60,0.8511485903436601
+Human,brain,RADC_DLPFC,oligodendrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.006943884252913576,0.03765254075461985,0.8561540777684514,18,18,28268,0.9980076674548273
+Human,brain,RADC_DLPFC,oligodendrocyte precursor cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.023183422987091012,0.02461075900474179,0.3611158943419228,18,18,3747,0.8511485903436601
+Human,brain,RADC_DLPFC,pericyte,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.03533994130190424,0.03960124196057473,0.3862739724049983,18,18,771,0.8511485903436601
+Human,brain,RADC_DLPFC,perivascular macrophage,observed_records_only,age_plus_sex,CLR_slope_per_year,0.026391310498825125,0.033574482924723044,0.4440775253966922,18,18,263,0.8511485903436601
+Human,brain,RADC_DLPFC,pvalb GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01931911602726209,0.018286692171942,0.30747798851733066,18,18,3487,0.8511485903436601
+Human,brain,RADC_DLPFC,smooth muscle cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.013614612586869218,0.057006832063903716,0.8152718051034687,15,15,419,0.9980076674548273
+Human,brain,RADC_DLPFC,sst GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.001913763394866208,0.03326009299717282,0.9548750849908213,18,18,2697,0.9980076674548273
+Human,brain,RADC_DLPFC,vascular leptomeningeal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.043045901707809676,0.04587829198997095,0.3629725648770849,18,18,783,0.8511485903436601
+Human,brain,SEAAD_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0032099088187798044,0.0034430720944613412,0.363528891068594,21,21,172363,0.5033476953257455
+Human,brain,SEAAD_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.006216633176834546,0.0055959514223193636,0.28122411855930796,21,21,1257,0.49917938349739704
+Human,brain,SEAAD_DLPFC,L6b glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.015537309070865344,0.009186282719926164,0.10800849585531483,21,21,5743,0.3888305850791334
+Human,brain,SEAAD_DLPFC,VIP GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.0036059161248111933,0.0027310924887307157,0.20327198454073622,21,21,29322,0.4573619652166565
+Human,brain,SEAAD_DLPFC,astrocyte of the cerebral cortex,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.007630618365269476,0.0076667060343605055,0.33278625566493136,21,21,21831,0.49917938349739704
+Human,brain,SEAAD_DLPFC,caudal ganglionic eminence derived cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.010643920005267385,0.004299843614800476,0.023475624263546897,21,21,2656,0.1991484017017204
+Human,brain,SEAAD_DLPFC,cerebral cortex endothelial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.0061616870644321635,0.008866457709983868,0.4959645064197736,21,21,634,0.5579600697222453
+Human,brain,SEAAD_DLPFC,chandelier pvalb GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005066536824518722,0.00619385279806174,0.4240570403391437,21,21,4735,0.516836628143901
+Human,brain,SEAAD_DLPFC,corticothalamic-projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.000936259547495973,0.006019963121792048,0.8781376566057331,21,21,8365,0.8781376566057331
+Human,brain,SEAAD_DLPFC,lamp5 GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.003077867849359757,0.001992419461643207,0.13979686538180294,21,21,20901,0.41939059614540886
+Human,brain,SEAAD_DLPFC,microglial cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.008562391198098573,0.0059329384095674915,0.1661434816492471,21,21,9269,0.42722609566949254
+Human,brain,SEAAD_DLPFC,near-projecting glutamatergic cortical neuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.002348893672790844,0.004693436034884174,0.6228125312401107,21,21,5420,0.659448562489529
+Human,brain,SEAAD_DLPFC,oligodendrocyte,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.01949933345305125,0.010362973984172963,0.07615925723323304,21,21,41211,0.34271665754954866
+Human,brain,SEAAD_DLPFC,oligodendrocyte precursor cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.004776181775289047,0.00592492238486811,0.43069719011991753,21,21,8702,0.516836628143901
+Human,brain,SEAAD_DLPFC,pvalb GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.002463511734772003,0.002271205626731166,0.29238194139706786,21,21,32063,0.49917938349739704
+Human,brain,SEAAD_DLPFC,sncg GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.005380791265398975,0.005254185004472403,0.3193568450555318,21,21,7162,0.49917938349739704
+Human,brain,SEAAD_DLPFC,sst GABAergic cortical interneuron,all_adult_donors,age_plus_sex,CLR_slope_per_year,-0.011296994821646013,0.004897988319001329,0.03319140028362007,21,21,24872,0.1991484017017204
+Human,brain,SEAAD_DLPFC,vascular leptomeningeal cell,all_adult_donors,age_plus_sex,CLR_slope_per_year,0.028008907261396272,0.010844565115467261,0.01876678302807119,21,21,1071,0.1991484017017204
+Human,brain,SEAAD_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0032099088187798044,0.0034430720944613412,0.363528891068594,21,21,172363,0.5033476953257455
+Human,brain,SEAAD_DLPFC,L5 extratelencephalic projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.006216633176834546,0.0055959514223193636,0.28122411855930796,21,21,1257,0.49917938349739704
+Human,brain,SEAAD_DLPFC,L6b glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.015537309070865344,0.009186282719926164,0.10800849585531483,21,21,5743,0.3888305850791334
+Human,brain,SEAAD_DLPFC,VIP GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.0036059161248111933,0.0027310924887307157,0.20327198454073622,21,21,29322,0.4573619652166565
+Human,brain,SEAAD_DLPFC,astrocyte of the cerebral cortex,observed_records_only,age_plus_sex,CLR_slope_per_year,0.007630618365269476,0.0076667060343605055,0.33278625566493136,21,21,21831,0.49917938349739704
+Human,brain,SEAAD_DLPFC,caudal ganglionic eminence derived cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.010643920005267385,0.004299843614800476,0.023475624263546897,21,21,2656,0.1991484017017204
+Human,brain,SEAAD_DLPFC,cerebral cortex endothelial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.0061616870644321635,0.008866457709983868,0.4959645064197736,21,21,634,0.5579600697222453
+Human,brain,SEAAD_DLPFC,chandelier pvalb GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.005066536824518722,0.00619385279806174,0.4240570403391437,21,21,4735,0.516836628143901
+Human,brain,SEAAD_DLPFC,corticothalamic-projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.000936259547495973,0.006019963121792048,0.8781376566057331,21,21,8365,0.8781376566057331
+Human,brain,SEAAD_DLPFC,lamp5 GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.003077867849359757,0.001992419461643207,0.13979686538180294,21,21,20901,0.41939059614540886
+Human,brain,SEAAD_DLPFC,microglial cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.008562391198098573,0.0059329384095674915,0.1661434816492471,21,21,9269,0.42722609566949254
+Human,brain,SEAAD_DLPFC,near-projecting glutamatergic cortical neuron,observed_records_only,age_plus_sex,CLR_slope_per_year,0.002348893672790844,0.004693436034884174,0.6228125312401107,21,21,5420,0.659448562489529
+Human,brain,SEAAD_DLPFC,oligodendrocyte,observed_records_only,age_plus_sex,CLR_slope_per_year,0.01949933345305125,0.010362973984172963,0.07615925723323304,21,21,41211,0.34271665754954866
+Human,brain,SEAAD_DLPFC,oligodendrocyte precursor cell,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.004776181775289047,0.00592492238486811,0.43069719011991753,21,21,8702,0.516836628143901
+Human,brain,SEAAD_DLPFC,pvalb GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.002463511734772003,0.002271205626731166,0.29238194139706786,21,21,32063,0.49917938349739704
+Human,brain,SEAAD_DLPFC,sncg GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.005380791265398975,0.005254185004472403,0.3193568450555318,21,21,7162,0.49917938349739704
+Human,brain,SEAAD_DLPFC,sst GABAergic cortical interneuron,observed_records_only,age_plus_sex,CLR_slope_per_year,-0.011296994821646013,0.004897988319001329,0.03319140028362007,21,21,24872,0.1991484017017204
+Human,brain,SEAAD_DLPFC,vascular leptomeningeal cell,observed_records_only,age_plus_sex,CLR_slope_per_year,0.028008907261396272,0.010844565115467261,0.01876678302807119,21,21,1071,0.1991484017017204
+Naked mole-rat,Skin,GSE152886,basal,annotation_resolution_0.4,,aged_minus_young_fraction,-0.0014339810448923407,,0.9,5,5,5182,1.0
+Naked mole-rat,Skin,GSE152886,intermediate,annotation_resolution_0.4,,aged_minus_young_fraction,0.0,,1.0,5,0,0,1.0
+Naked mole-rat,Skin,GSE152886,corneum,annotation_resolution_0.4,,aged_minus_young_fraction,0.003933150896534732,,0.7,5,5,5023,1.0
+Naked mole-rat,Skin,GSE152886,immune,annotation_resolution_0.4,,aged_minus_young_fraction,-0.0024991698516423147,,0.4,5,5,46,1.0
+Naked mole-rat,Skin,GSE152886,basal,annotation_resolution_0.6,,aged_minus_young_fraction,0.0009293829361085026,,1.0,5,5,5044,1.0
+Naked mole-rat,Skin,GSE152886,intermediate,annotation_resolution_0.6,,aged_minus_young_fraction,0.0,,1.0,5,0,0,1.0
+Naked mole-rat,Skin,GSE152886,corneum,annotation_resolution_0.6,,aged_minus_young_fraction,0.0025168667274706458,,0.8,5,5,5153,1.0
+Naked mole-rat,Skin,GSE152886,immune,annotation_resolution_0.6,,aged_minus_young_fraction,-0.0034462496635791224,,0.4,5,5,54,1.0

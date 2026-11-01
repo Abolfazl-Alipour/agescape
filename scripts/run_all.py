@@ -138,6 +138,11 @@ def main():
         [PYTHON_BIN, "scripts/run_h2_composition.py"],
     )
 
+    runtimes["organ_composition"] = run_step(
+        "Organ cell-fraction analysis in mouse, human, and NMR",
+        [PYTHON_BIN, "scripts/run_organ_composition.py"],
+    )
+
     runtimes["h3_entropy"] = run_step(
         "H3: Single-cell transcriptional noise & entropy (1,500-UMI rarefaction)",
         [PYTHON_BIN, "scripts/run_h3_entropy.py"],
