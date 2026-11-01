@@ -19,6 +19,11 @@ report/_build/
 app/node_modules/
 app/dist/
 results/h3-bayesian/
+results/h3-cross-species-bayesian/
+results/h3-human-vector-gene-drivers-all.csv
+results/h3-human-hbcc-gene-replication-all.csv
+results/h3-human-hbcc-gene-replication-depth.csv
+results/h3-human-neuronal-gene-replication-all.csv
 
 # Controlled-access DUA data (Synapse DLPFC atlas) - never commit
 data/external/

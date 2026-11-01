@@ -1,0 +1,5 @@
+cell_type,mssm_fdr_genes,same_direction_in_hbcc,hbcc_nominal_same_direction,both_fdr
+GABAergic neuron,5,4,1,0
+VIP GABAergic cortical interneuron,294,272,156,24
+pvalb GABAergic cortical interneuron,333,295,137,20
+sst GABAergic cortical interneuron,123,118,97,62

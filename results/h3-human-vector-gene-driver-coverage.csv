@@ -1,0 +1,7 @@
+cohort,cell_type,n_donors,n_genes
+MSSM_DLPFC,GABAergic neuron,155,59523
+MSSM_DLPFC,VIP GABAergic cortical interneuron,197,59523
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,189,59523
+MSSM_DLPFC,sst GABAergic cortical interneuron,177,59523
+Lung_Integrated,acinar cell,16,59523
+Lung_Integrated,nasal mucosa goblet cell,37,59523

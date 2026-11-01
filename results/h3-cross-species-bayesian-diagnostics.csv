@@ -1,0 +1,9 @@
+model_directory,species,model,prior_sd,max_rhat,divergences,convergence_rating,pareto_k_max,pareto_k_n_bad,calibration_rating,calibration_diagnosis
+mouse-unadjusted-prior-0.50,Mouse,unadjusted,0.5,1.0,0,excellent,1.128454180724363,9,fair,well-calibrated
+mouse-depth_adjusted-prior-0.50,Mouse,depth_adjusted,0.5,1.0,0,excellent,1.1060679687516148,6,fair,under-confident (predictions too uncertain)
+human-unadjusted_fixed_group-prior-0.50,Human,unadjusted_fixed_group,0.5,1.01,0,good,0.9855986127188224,13,fair,under-confident (predictions too uncertain)
+naked-mole-rat-unadjusted-prior-0.50,Naked mole-rat,unadjusted,0.5,1.01,0,excellent,0.9329160165030344,7,poor,under-confident (predictions too uncertain)
+human-global-within-unit-unadjusted-prior-0.50,Human,global_unadjusted,0.5,1.0116257332583811,0,fair,0.8325466456724246,8,fair,under-confident (predictions too uncertain)
+human-global-within-unit-depth_adjusted-prior-0.50,Human,global_depth_adjusted,0.5,1.0143496965700627,0,fair,1.203731035695596,18,fair,under-confident (predictions too uncertain)
+human-global-within-unit-depth_adjusted-prior-0.25,Human,global_depth_adjusted,0.25,1.0152410743227973,0,fair,1.3026805881174386,13,fair,under-confident (predictions too uncertain)
+human-global-within-unit-depth_adjusted-prior-1.00,Human,global_depth_adjusted,1.0,1.0115285063235533,0,fair,1.0432164057018578,15,fair,under-confident (predictions too uncertain)

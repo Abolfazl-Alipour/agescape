@@ -1,0 +1,5 @@
+cohort,cell_type,model,n_donors,n_assays,n_suspension_types,full_rank,age_slope,age_pvalue,depth_slope,depth_pvalue
+Lung_Integrated,acinar cell,depth_adjusted,16,2,1,True,-0.0010154064314073846,0.19340544537383278,-0.08650456965607782,1.325880284701637e-05
+Lung_Integrated,acinar cell,depth_and_assay_adjusted,16,2,1,True,-0.0010643169558982625,0.10171636307245617,-0.10980994052327793,4.223504935761864e-06
+Lung_Integrated,nasal mucosa goblet cell,depth_adjusted,37,5,1,True,0.00022528530042299207,0.626845808485662,-0.08250097918285361,1.1489767629581739e-11
+Lung_Integrated,nasal mucosa goblet cell,depth_and_assay_adjusted,37,5,1,True,0.0006330354938168407,0.10822675349766664,-0.12536974312960916,3.0892748485670346e-12

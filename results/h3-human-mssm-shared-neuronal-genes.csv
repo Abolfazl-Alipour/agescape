@@ -1,0 +1,57 @@
+gene,n_fdr_subtypes,consistent_direction,direction,cell_types,min_q
+OLFM1,3,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0002279396018251
+RNF152,3,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0003580285795102
+TTC28,3,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0015137295395829
+CAMK2N1,3,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0022430180018903
+STAG1,3,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0032193673472001
+RNLS,3,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0128798999594381
+GABRB1,3,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0177432862148193
+MKRN3,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,5.378326068678479e-06
+SLITRK2,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,1.104289544618729e-05
+ANGPT1,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,4.159079249824641e-05
+CACNB2,2,True,1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,4.1949105560617465e-05
+FAM13C,2,True,1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,5.6236576972514526e-05
+SCN2B,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,6.546671938686063e-05
+SSX2IP,2,True,-1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,8.505088731483154e-05
+ATP6V1A,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0001333700462051
+NAV3,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0002007386938775
+ADAMTS9,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0002603917666969
+SMIM43,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0003580285795102
+PPARG,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0011824720360261
+RUNX2,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0012093188747456
+MOAP1,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0014086801435352
+YWHAB,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0014770808936286
+ZNF532,2,True,1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.001493314780836
+CRH,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0015137295395829
+IGF1R,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0015970272927077
+RAB3B,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0016700165227344
+NRIP3,2,True,-1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0018426176773197
+ZNF804B,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0024016035725057
+ME3,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0029785806891724
+ZCCHC14,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0038432212976359
+ARL4C,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0039673919452841
+CBLN4,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0047078200153717
+LYRM9,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0047333517503648
+RASGRF2-AS1,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0058259984774582
+PLPPR4,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0063001555588541
+SPATS2L,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0063424962897504
+NCK2,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0076172382551973
+KCTD16,2,True,1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0076511413087587
+RIN2,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0077735265639279
+EML5,2,True,-1,VIP GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0078177726608177
+PTHLH,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0083513553681288
+CDK5R1,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0086676529711448
+CA8,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0108371785196981
+CCDC184,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0108676930697412
+PALLD,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0119378981237255
+LGI2,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0128516719257109
+RNF187,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0130982620811285
+TP53INP2,2,True,-1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0130982620811285
+NDRG4,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0137721127892948
+TMEM51-AS1,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0149510399295963
+CCDC85B,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0155290113706492
+ATP8A2,2,True,1,pvalb GABAergic cortical interneuron;sst GABAergic cortical interneuron,0.0161695247917522
+PNMA8A,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0229719264070362
+MIR29B2CHG,2,True,1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0245124472105302
+EXOSC6,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0398092547516639
+MEGF8,2,True,-1,VIP GABAergic cortical interneuron;pvalb GABAergic cortical interneuron,0.0421632340013963

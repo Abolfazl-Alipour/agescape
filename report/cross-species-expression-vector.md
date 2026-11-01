@@ -57,7 +57,9 @@ Six human cohort-by-cell-type units pass correction within their cohorts. Four a
 | Lung Integrated | acinar cell | 16 | -0.005213 | 0.0035 |
 | Lung Integrated | nasal mucosa goblet cell | 37 | -0.002443 | 0.0443 |
 
-These cell-type results do not make the overall human summary significant. They justify cell-type-specific follow-up rather than a claim of uniform human expression-vector disruption.
+These cell-type results do not make the overall human summary significant. Follow-up analysis showed that all six lose significance after UMI-depth adjustment. Age-associated depth has the sign needed to create positive MSSM and negative lung associations. The unadjusted hits are therefore not established biological findings.
+
+Normalized donor-pseudobulk analysis gives a different result. No gene survives depth-adjusted FDR in the two lung epithelial units, but MSSM interneurons have extensive depth-adjusted gene-expression changes. Twenty-four VIP, 20 pvalb, and 62 sst genes pass FDR in both MSSM and HBCC. These replicated interneuron changes support targeted neuronal biology rather than universal whole-vector disruption. See `report/human-expression-vector-interpretation.md` and `report/cross-species-bayesian-vector.md`.
 
 ## NMR compartment results
 

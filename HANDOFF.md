@@ -9,7 +9,7 @@ Last updated: 2026-11-01. This is the operating handoff for the scientific artif
 - Main manuscript: `report/manuscript-aging-mechanisms.md`
 - Reviewer guide: `PROJECT_OVERVIEW.md`
 - Reproduction commands: `README.md`
-- Latest verification: 37 tests pass and all 146 app-data anchors pass.
+- Latest verification: 43 tests pass and all 146 app-data anchors pass. One Bayesian-only test is skipped in the core environment.
 - Controlled-access donor-level DLPFC data, credentials, and derived donor-level values are not committed.
 
 ## Read in this order
@@ -18,12 +18,14 @@ Last updated: 2026-11-01. This is the operating handoff for the scientific artif
 2. `PROJECT_OVERVIEW.md`: scientific design, results, and limitations.
 3. `report/manuscript-aging-mechanisms.md`: current manuscript. The new vector analysis has not yet been added.
 4. `report/cross-species-expression-vector.md`: direct whole-vector analysis in mouse, human, and NMR.
-5. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
-6. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
-7. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
-8. `notes/cross-species-expression-vector-methods.md`: whole-vector distances, species designs, and lifespan scaling.
-9. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
-10. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
+5. `report/human-expression-vector-interpretation.md`: depth, assay, power, gene drivers, and HBCC replication.
+6. `report/cross-species-bayesian-vector.md`: Bayesian effects, prior sensitivity, and diagnostics.
+7. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
+8. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
+9. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
+10. `notes/cross-species-expression-vector-methods.md` and `notes/cross-species-bayesian-vector-methods.md`: vector methods.
+11. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
+12. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
 
 ## Non-negotiable rules
 
@@ -70,11 +72,15 @@ The direct vector analysis uses no UMI downsampling. It compares each complete w
 
 Mouse shows an overall positive association: effect +0.1028 SD, 95% CI +0.0678 to +0.1378, p = 0.00000398 across 62 tissue-by-cell-type units and 23 animals. It remains positive after UMI-depth adjustment and after excluding pooled identifiers. Five cell types pass FDR, all positive: bladder cells, kidney fenestrated cells, podocytes, limb-muscle mesenchymal stem cells, and lung fibroblasts.
 
-Human shows no overall association: effect +0.0365 SD, 95% CI -0.0221 to +0.0951, p = 0.2218 across 135 cohort-by-cell-type units and 479 cohort-specific adult donors. None of seven cohort summaries is significant. Six cell types pass within-cohort FDR: four positive MSSM GABAergic neuronal populations and two negative integrated-lung epithelial populations.
+Human shows no overall association: effect +0.0365 SD, 95% CI -0.0221 to +0.0951, p = 0.2218 across 135 cohort-by-cell-type units and 479 cohort-specific adult donors. None of seven cohort summaries is significant. Six cell types pass within-cohort FDR in the unadjusted analysis, but all six lose significance after UMI-depth adjustment. Age-associated depth has the sign needed to create positive MSSM neuronal and negative integrated-lung epithelial associations. Lung hits also remain null after assay adjustment.
+
+Normalized donor-pseudobulk analysis gives a more specific result. No gene survives depth-adjusted FDR in the two lung epithelial units. In MSSM interneurons, 294 VIP, 333 pvalb, and 123 sst genes survive depth-adjusted FDR. These changes replicate in HBCC: 272 of 294 VIP, 295 of 333 pvalb, and 118 of 123 sst genes have the same direction, with 24, 20, and 62 passing FDR in both cohorts. Seven genes pass FDR in all three MSSM subtypes, and all seven have the same direction in HBCC. RNLS passes FDR in all three HBCC subtypes. This supports reproducible interneuron transcriptional aging, not a universal whole-vector disruption claim.
 
 NMR shows a negative point estimate of -0.4744 SD per 10 percent of maximum lifespan, exact p = 0.2, across basal and corneum skin compartments in five animals. Both compartment effects are negative. This does not establish stability or a significant between-species difference. The simple hypothesis of positive mouse and human effects with a weaker NMR effect is not observed because the overall human effect is null.
 
-See `report/cross-species-expression-vector.md`, `notes/cross-species-expression-vector-methods.md`, and `results/h3-cross-species-vector-*.csv`. The manuscript has not yet been updated with this analysis.
+Bayesian analysis is consistent with these qualifications. Mouse posterior means are +0.1495 unadjusted and +0.0782 depth-adjusted, with both 94% HDIs above zero. The human global unadjusted posterior is positive (+0.0893), but an alternative hierarchical model is near zero and depth adjustment gives +0.0133 with every prior-sensitivity interval crossing zero. NMR has posterior mean -0.1581 with 94% HDI -0.7210 to +0.4798. Human global R-hat values are 1.0115 to 1.0152, all models have influence warnings, and NMR calibration is poor. Bayesian estimates are exploratory.
+
+See `report/cross-species-expression-vector.md`, `report/human-expression-vector-interpretation.md`, `report/cross-species-bayesian-vector.md`, and the corresponding `notes/` and `results/` files. The manuscript has not yet been updated with this analysis.
 
 ### Methylation clock
 
@@ -97,8 +103,11 @@ Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tis
 | Bayesian hierarchical analysis | `scripts/run_h3_bayesian_disorder.py` | `results/h3-bayesian-*.csv`, `results/h3-frequentist-global.csv` |
 | Mouse-lung direct vector analysis | `scripts/run_h3_expression_vector.py` | `results/h3-expression-vector*.csv` |
 | Cross-species direct vector analysis | `scripts/run_cross_species_expression_vector.py` | `results/h3-cross-species-vector-*.csv` |
+| Human depth and assay audits | `scripts/audit_human_expression_vector.py`, `scripts/audit_human_vector_assay.py` | `results/h3-human-*-audit.csv` |
+| Human gene drivers and HBCC replication | `scripts/run_human_vector_gene_drivers.py`, `scripts/run_human_neuronal_gene_replication.py` | `results/h3-human-*gene*.csv` |
+| Bayesian vector models | `scripts/run_cross_species_bayesian_vector.py`, `scripts/run_human_bayesian_global_vector.py` | `results/h3-*bayesian*.csv` |
 
-`scripts/run_all.py` covers the core pipeline, direct organ-fraction and transcriptional-disorder stages, and the mouse-lung vector analysis. M9, M10, the cross-species vector analysis, and the Bayesian analysis have separate environments or inputs.
+`scripts/run_all.py` covers the core pipeline, direct organ-fraction and transcriptional-disorder stages, and the mouse-lung vector analysis. M9, M10, the cross-species vector analysis, human follow-up analyses, and Bayesian analyses have separate environments or inputs.
 
 ## Reproduction and verification
 
@@ -123,15 +132,27 @@ python scripts/run_cross_species_expression_vector.py --summarize-only
 
 The first command downloads public full-transcriptome human data and recomputes all species. The second recomputes statistics from committed public donor-level distances without downloading cells again.
 
+Human follow-up:
+
+```bash
+python scripts/audit_human_expression_vector.py
+python scripts/audit_human_vector_assay.py
+python scripts/run_human_vector_gene_drivers.py
+python scripts/run_human_neuronal_gene_replication.py
+python scripts/summarize_human_neuronal_programs.py
+```
+
 Bayesian analysis:
 
 ```bash
 conda env create -f environment-bayesian.yml
 conda activate agescape-bayesian
 python scripts/run_h3_bayesian_disorder.py
+python scripts/run_cross_species_bayesian_vector.py
+python scripts/run_human_bayesian_global_vector.py
 ```
 
-The Bayesian stage uses `bayesian-workflow` revision `18ab0de9b63b5bb03caa96146235e8f1534d45d4`. Large NetCDF files and machine-specific diagnostic artifacts stay local under `results/h3-bayesian/` and are gitignored. Aggregate posterior, diagnostic, and comparison tables are committed.
+The Bayesian stage uses `bayesian-workflow` revision `18ab0de9b63b5bb03caa96146235e8f1534d45d4`. Large NetCDF files and machine-specific diagnostic artifacts stay local under `results/h3-bayesian/` and `results/h3-cross-species-bayesian/` and are gitignored. Aggregate posterior and diagnostic tables are committed.
 
 M9 downloads public CELLxGENE data. M10 requires separately authorized Synapse inputs under `data/external/dlpfc-atlas/`. Never commit Synapse credentials or controlled donor-level data.
 

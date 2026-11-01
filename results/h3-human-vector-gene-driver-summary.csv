@@ -1,0 +1,13 @@
+cohort,cell_type,model,n_genes,n_fdr,min_q
+Lung_Integrated,acinar cell,age_plus_sex,59523,115,0.0016351056866128358
+Lung_Integrated,acinar cell,age_plus_sex_depth,59523,0,1.0
+Lung_Integrated,nasal mucosa goblet cell,age_plus_sex,59523,0,0.1367239008755992
+Lung_Integrated,nasal mucosa goblet cell,age_plus_sex_depth,59523,0,1.0
+MSSM_DLPFC,GABAergic neuron,age_plus_sex,59523,96,0.0006582726334216789
+MSSM_DLPFC,GABAergic neuron,age_plus_sex_depth,59523,5,0.024688807269345973
+MSSM_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex,59523,830,2.7216204185352678e-12
+MSSM_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex_depth,59523,294,3.541038133442402e-10
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex,59523,790,2.3358724383048986e-10
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex_depth,59523,333,7.426571714498065e-09
+MSSM_DLPFC,sst GABAergic cortical interneuron,age_plus_sex,59523,386,1.5062791490908188e-06
+MSSM_DLPFC,sst GABAergic cortical interneuron,age_plus_sex_depth,59523,123,5.378326068678479e-06
