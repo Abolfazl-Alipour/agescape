@@ -12,7 +12,7 @@ We tested whether a mouse-derived transcriptional aging signature shows consiste
 
 In PsychAD cortex, the primary whole-cortex score was not associated with age before adjustment (slope +0.000186 per year, p = 0.3494) or after adjustment for sex, brain bank, postmortem interval, and technical covariates (slope -0.000209 per year, p = 0.4004). One Benjamini-Hochberg correction across 252 primary human cell-type tests left three survivors: MSSM L2/3 intratelencephalic projecting glutamatergic neurons (slope -0.001303, q = 0.0208), MSSM oligodendrocytes (slope +0.001152, q = 0.0346), and PsychAD EN_L3_5_IT_3 neurons (slope -0.001383, q = 0.0208). No oligodendrocyte precursor cell or microglial result survived this primary correction. Glial transport is therefore a candidate finding, not an established mechanism.
 
-In mouse lung fibroblasts, Cdkn1a increased with age (slope +0.1080 per month, p = 0.0029, q = 0.0322). Fibroblast transcriptional noise did not show a reproducible increase after accounting for the UMI sampling model. Across 13 mouse organs with adequate donor coverage, 8 had at least one age-associated cell-type fraction change at FDR 0.05. Three of 11 human cohort datasets had such a change. In integrated human lung, club cells and multiciliated epithelial cells decreased (q = 0.0037 and q = 0.0173), but these associations were not retained in observed-record-only sensitivity analysis. Naked mole-rat skin showed no significant fraction change, but five animals permit only ten age-label assignments and cannot establish stability.
+In mouse lung fibroblasts, Cdkn1a increased with age (slope +0.1080 per month, p = 0.0029, q = 0.0322). Direct tests showed no consistent increase in within-cell Shannon entropy across nine lung cell types. Off-program expression had no FDR-significant cell-type result, while a donor-adjusted Bayesian hierarchical model gave a weak positive cross-cell-type trend with intervals including zero. Across 13 mouse organs with adequate donor coverage, 8 had at least one age-associated cell-type fraction change at FDR 0.05. Three of 11 human cohort datasets had such a change. In integrated human lung, club cells and multiciliated epithelial cells decreased (q = 0.0037 and q = 0.0173), but these associations were not retained in observed-record-only sensitivity analysis. Naked mole-rat skin showed no significant fraction change, but five animals permit only ten age-label assignments and cannot establish stability.
 
 The published Universal Clock 2 coefficients yielded MAE 0.36 years in mouse liver and 5.06 years across 661 human tissue profiles. Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tissue evaluation. Mouse scoring used 724 of 816 clock probes. The human evaluation data were part of the consortium resource used to develop the published clocks, so this was a benchmark reproduction rather than independent validation. The five-animal naked mole-rat comparison did not detect a slope and could not establish senescence specificity.
 
@@ -24,7 +24,9 @@ Together, the results do not support a single whole-tissue transcriptional aging
 
 A central question in geroscience is whether aging involves a conserved set of orthologous genes whose expression changes systematically across tissues and species. Bulk-tissue measurements can mix changes in cell-type abundance with changes in expression within cells. Single-cell and single-nucleus atlases allow these sources of variation to be examined separately, but they also introduce detection, integration, and unequal-sampling problems.
 
-We asked four questions. First, does a transcriptional signature derived from mouse lung and kidney show whole-tissue or cell-type-specific age associations in human cohorts? Second, do cell-type abundances change concordantly in mouse and human lung? Third, does transcriptional noise increase with age after controlling for library sampling? Fourth, how does a published mammalian DNA methylation clock perform when its inverse link, probe availability, and predictive metrics are evaluated explicitly?
+The information theory of aging proposes that DNA repair can erode epigenetic information and disrupt cell identity [12]. We evaluated downstream transcriptomic predictions of reduced transcriptional fidelity, not DNA damage or chromatin restoration themselves.
+
+We asked four questions. First, does a transcriptional signature derived from mouse lung and kidney show whole-tissue or cell-type-specific age associations in human cohorts? Second, do cell-type abundances change concordantly in mouse and human lung? Third, do within-cell entropy, off-program expression, and cell-to-cell variability increase with age after controlling for library sampling? Fourth, how does a published mammalian DNA methylation clock perform when its inverse link, probe availability, and predictive metrics are evaluated explicitly?
 
 The primary analysis used a filtered 139-gene signature throughout. The unfiltered 257-gene discovery signature was analyzed separately as a sensitivity score. We treated cross-sectional associations as observational and did not interpret them as longitudinal or causal effects.
 
@@ -64,23 +66,27 @@ The naked mole-rat skin slope was +0.0058 (95% CI -0.1981 to +0.2098, p = 0.9332
 
 The post hoc TOST margin was 0.2023 and exceeded the mouse whole-body ordinary least-squares estimate of 0.1344. The NMR 90% CI was -0.1450 to +0.1567 (TOST p = 0.0275). Equivalence at this margin does not exclude an effect of the observed mouse magnitude. Five animals, group-mean ages, skin-only sampling, and incomplete ortholog coverage prevent a definitive claim of senescence specificity or biological equivalence.
 
-### 2.3 Transcriptional noise depends on the library-sampling model
+### 2.3 Within-cell transcriptional disorder does not show a consistent increase
 
-We compared multinomial resampling and hypergeometric without-replacement subsampling to 1,500 UMI per cell in nine mouse lung cell types. The table reports the committed without-replacement cell counts and both sampling-model results.
+We tested two transcriptomic predictions of reduced transcriptional fidelity: increased within-cell Shannon entropy and increased expression of genes characteristic of other cell types. All cells were downsampled without replacement to 1,500 UMI. Animal means were regressed on age and sex. Young-reference profiles were cross-fitted so that each young animal was excluded from its own reference.
 
-| Cell type | Donors | Cells | Multinomial DM slope per month | p | Without-replacement DM slope per month | p | BH q |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| fibroblast of lung | 10 | 1,475 | +0.00109 | 0.0443 | -0.000288 | 0.4748 | 0.6612 |
-| bronchial smooth muscle cell | 13 | 2,320 | +0.000276 | 0.1038 | -0.000219 | 0.0690 | 0.3103 |
-| alveolar macrophage | 14 | 1,324 | +0.000560 | 0.4518 | +0.000248 | 0.1265 | 0.3796 |
-| classical monocyte | 14 | 7,899 | +0.000078 | 0.8923 | +0.000069 | 0.5142 | 0.6612 |
-| intermediate monocyte | 8 | 1,678 | -0.000262 | 0.8439 | +0.000092 | 0.7101 | 0.7989 |
-| B cell | 13 | 1,476 | +0.000499 | 0.3359 | -0.000458 | 0.0520 | 0.3103 |
-| NK cell | 15 | 1,189 | -0.000830 | 0.0603 | +0.000254 | 0.2653 | 0.5761 |
-| CD8-positive, alpha-beta T cell | 10 | 828 | +0.000174 | 0.5338 | -0.000360 | 0.3201 | 0.5761 |
-| vein endothelial cell | 8 | 273 | +0.000602 | 0.4787 | +0.000017 | 0.9664 | 0.9664 |
+| Cell type | Animals | Entropy slope per month | Entropy q | Off-program UMI-fraction slope per month | Off-program q |
+|---|---:|---:|---:|---:|---:|
+| fibroblast of lung | 10 | +0.003010 | 0.5313 | +0.00002168 | 0.7954 |
+| bronchial smooth muscle cell | 13 | -0.002166 | 0.1895 | +0.00000165 | 0.7954 |
+| alveolar macrophage | 14 | -0.001378 | 0.7664 | -0.00000009 | 0.9750 |
+| classical monocyte | 14 | +0.000720 | 0.7895 | +0.00000533 | 0.7954 |
+| intermediate monocyte | 8 | -0.000355 | 0.9464 | +0.00000603 | 0.7954 |
+| B cell | 13 | +0.000115 | 0.9464 | +0.00000183 | 0.7979 |
+| NK cell | 15 | -0.000297 | 0.9464 | -0.00000152 | 0.8213 |
+| CD8-positive, alpha-beta T cell | 10 | +0.003379 | 0.6392 | +0.00000123 | 0.7979 |
+| vein endothelial cell | 8 | -0.005760 | 0.1895 | not evaluable | not evaluable |
 
-The nominal fibroblast increase under multinomial resampling did not survive FDR correction and reversed sign under without-replacement subsampling. Classical monocytes showed no detected noise slope under either model despite nine differentially expressed genes in the 3-month versus 18-month comparison. Mean-expression change and cell-to-cell variability are therefore distinct measurements.
+No primary analysis detected an FDR-significant increase. With exactly 20 cells per animal, fibroblast entropy increased (slope +0.004692 per month, q = 0.0487), but bronchial smooth-muscle and vein endothelial entropy decreased (slopes -0.003136 and -0.005370, both q = 0.0464). No off-program result survived correction in any sensitivity analysis. Vein endothelial cells had no genes meeting the off-program reference definition. The results therefore do not show a consistent increase in transcriptional disorder and do not establish stability.
+
+Global models estimated the same directions. The animal-clustered frequentist entropy effect was -0.079 standard deviations over 15 months (95% CI -0.479 to +0.321, p = 0.699), and the Bayesian posterior mean was -0.060 (94% HDI -0.508 to +0.356, posterior probability of an increase 0.395). Off-program effects were +0.244 in the frequentist model (95% CI -0.196 to +0.684, p = 0.278) and +0.243 in the Bayesian model (94% HDI -0.224 to +0.702, posterior probability of an increase 0.841). Across Bayesian sensitivity analyses, off-program increase probabilities ranged from 0.731 to 0.857 and all intervals included zero. All Bayesian models had influential-observation warnings, so the off-program trend is exploratory rather than confirmatory.
+
+The earlier distance-to-median analysis measured the distinct outcome of cell-to-cell variability. Its nominal fibroblast increase under multinomial resampling did not survive FDR correction and reversed sign under without-replacement subsampling. Mean-expression change, cell-to-cell variability, and within-cell disorder are distinct measurements.
 
 ### 2.4 Lung fibroblast Cdkn1a increases with age
 
@@ -128,7 +134,7 @@ The primary analysis did not support a whole-cortex transcriptional aging associ
 
 The human lung analysis illustrates why atlas composition cannot be interpreted from thresholded score tables alone. Restoring counts below the expression-score threshold changed the evaluable cohort and cell-type set. Detection presence was itself associated with age, and study-center adjustment attenuated the leading club-cell result. These are constraints on inference, not evidence that the compositional changes are absent.
 
-The naked mole-rat comparison did not detect a score slope. Its small sample, group-mean ages, tissue mismatch, and post hoc equivalence margin prevent a claim of negligible senescence or species-specific aging. The transcriptional-noise result also depended on the UMI sampling model. In contrast, fibroblast Cdkn1a showed an FDR-significant mean-expression increase, although this single marker is not sufficient to define a senescent cell state.
+The naked mole-rat comparison did not detect a score slope. Its small sample, group-mean ages, tissue mismatch, and post hoc equivalence margin prevent a claim of negligible senescence or species-specific aging. Direct within-cell entropy and off-program analyses did not support a general increase in transcriptional disorder. Entropy estimates depended on cell-number balancing, and neither transcriptomic outcome identifies an epigenetic cause. In contrast, fibroblast Cdkn1a showed an FDR-significant mean-expression increase, although this single marker is not sufficient to define a senescent cell state.
 
 The methylation analysis was a reproduction of a published clock on consortium data. The inverse link yielded low chronological-age errors, but predictive R-squared was substantially below squared Pearson correlation in mouse liver. This distinction matters because correlation measures ordering, whereas predictive R-squared measures error relative to the observed-age variance.
 
@@ -141,6 +147,7 @@ The methylation analysis was a reproduction of a published clock on consortium d
 5. Human lung detection and study origin were associated with some compositional estimates. Integrated-atlas composition should not be interpreted as direct tissue cell counting.
 6. The NMR comparison included five animals, two group-mean age categories, skin only, and incomplete signature coverage.
 7. The methylation evaluations were not demonstrated to be independent of clock development data. The mouse clock implementation omitted 92 unavailable probes.
+8. Transcriptional entropy and off-program expression are indirect phenotypes. Ambient RNA, residual doublets, annotation errors, and cell-state transitions can affect them, and transcriptomics cannot identify DNA repair or chromatin restoration as causes.
 
 ---
 
@@ -174,9 +181,13 @@ Counts were transformed with a 0.5 pseudocount and centered log-ratio. Regressio
 
 The NMR matrix lacked cell-type labels, so cells were re-annotated using the paper's processing outline and marker families. Sample 2V was excluded. Immune markers were Cd207, Ctss, and Mfge8; basal markers were Krt5, Trp63, and Krt15; corneum markers were Krt10 and Krt1. Remaining keratinocyte clusters were labeled intermediate. Exact permutations compared mean aged and young fractions across all ten assignments of two aged animals among five. Annotation was repeated at resolution 0.6 as a sensitivity check. The minimum possible two-sided NMR p value was 0.1.
 
-### 4.6 Transcriptional noise and targeted markers
+### 4.6 Transcriptional disorder, cell-to-cell noise, and targeted markers
 
-Singlet cells with at least 1,500 UMI were downsampled to 1,500 UMI using multinomial resampling or hypergeometric sampling without replacement. Distance-to-median and donor-centroid dispersion were regressed on age and sex. Eleven senescence, DNA-repair, and chromatin markers were evaluated in lung fibroblast donor pseudobulk with BH correction across the marker panel.
+Singlet lung cells with at least 1,500 UMI were downsampled without replacement to 1,500 UMI. Shannon entropy was calculated per cell after excluding mitochondrial, ribosomal, and sex-linked marker genes. Off-program genes were detected in at most 5 percent of young target cells and at least 20 percent of another lung cell type, with expression of at least 20 counts per 10,000 and at least fivefold enrichment over the target. References used animals aged 1 or 3 months and excluded the evaluated young animal. Animal means were regressed on age and sex, with BH correction across cell types separately for each primary endpoint. Sensitivity analyses balanced at 20 cells per animal, excluded pooled identifiers, removed immunoglobulin, hemoglobin, and immediate-early genes, and counted detected off-program genes.
+
+A complementary Bayesian hierarchical model standardized outcomes within cell type and used a 15-month age contrast. It included global effects, non-centered cell-type intercepts and age slopes, animal random intercepts, and a Student-t likelihood. The primary global age prior was Normal(0, 0.5), with 0.25 and 1.0 standard-deviation priors as sensitivity analyses. Posterior means, 94 percent highest-density intervals, and probabilities of a positive effect were reported. Prior predictive, convergence, leave-one-out, posterior predictive, and calibration checks were retained. A matching frequentist global model used cell-type fixed intercepts and animal-clustered standard errors.
+
+The earlier cell-to-cell analysis used multinomial or without-replacement downsampling, distance-to-median, and donor-centroid dispersion. Eleven senescence, DNA-repair, and chromatin markers were evaluated in lung fibroblast donor pseudobulk with BH correction across the marker panel.
 
 ### 4.7 Positive controls
 
@@ -207,6 +218,7 @@ Karakaslar and colleagues identified increased Jun and Fos activity in aging mou
 9. Tabula Muris Consortium. (2020). A single-cell transcriptomic atlas characterizes ageing tissues in the mouse. *Nature*, 583(7817), 590 to 595.
 10. Tyshkovskiy, A., et al. (2026). Universal transcriptomic hallmarks of mammalian ageing and mortality. *Nature*, 654, 173 to 188. doi:10.1038/s41586-026-10542-3.
 11. Zhang, X., et al. (2021). Characterization of the conserved mammalian aging signature through single-cell cross-species meta-analysis. *Cell Reports*, 36(12), 109763.
+12. Yang, J. H., et al. (2023). Loss of epigenetic information as a cause of mammalian aging. *Cell*, 186(2), 305 to 326.e27. doi:10.1016/j.cell.2022.12.027.
 
 ---
 

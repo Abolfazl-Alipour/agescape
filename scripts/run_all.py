@@ -148,6 +148,11 @@ def main():
         [PYTHON_BIN, "scripts/run_h3_entropy.py"],
     )
 
+    runtimes["h3_transcriptional_disorder"] = run_step(
+        "H3: Within-cell entropy and cross-fitted off-program expression",
+        [PYTHON_BIN, "scripts/run_h3_transcriptional_disorder.py"],
+    )
+
     runtimes["fibroblast_markers"] = run_step(
         "Fibroblast candidate markers audit (11 markers, FDR BH)",
         [PYTHON_BIN, "scripts/run_fibroblast_markers.py"],

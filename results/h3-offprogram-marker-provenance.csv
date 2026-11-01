@@ -1,0 +1,618 @@
+cell_type,excluded_donor,source_cell_type,n_marker_genes,n_all_marker_genes,n_stringent_marker_genes
+fibroblast of lung,18-F-51,B cell,3,35,35
+fibroblast of lung,18-F-51,alveolar macrophage,1,35,35
+fibroblast of lung,18-F-51,bronchial smooth muscle cell,10,35,35
+fibroblast of lung,18-F-51,classical monocyte,1,35,35
+fibroblast of lung,18-F-51,myeloid dendritic cell,3,35,35
+fibroblast of lung,18-F-51,neutrophil,8,35,35
+fibroblast of lung,18-F-51,non-classical monocyte,3,35,35
+fibroblast of lung,18-F-51,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,18-F-51,type II pneumocyte,4,35,35
+fibroblast of lung,18-M-52,B cell,3,35,35
+fibroblast of lung,18-M-52,alveolar macrophage,1,35,35
+fibroblast of lung,18-M-52,bronchial smooth muscle cell,10,35,35
+fibroblast of lung,18-M-52,classical monocyte,1,35,35
+fibroblast of lung,18-M-52,myeloid dendritic cell,3,35,35
+fibroblast of lung,18-M-52,neutrophil,8,35,35
+fibroblast of lung,18-M-52,non-classical monocyte,3,35,35
+fibroblast of lung,18-M-52,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,18-M-52,type II pneumocyte,4,35,35
+fibroblast of lung,18-M-53,B cell,3,35,35
+fibroblast of lung,18-M-53,alveolar macrophage,1,35,35
+fibroblast of lung,18-M-53,bronchial smooth muscle cell,10,35,35
+fibroblast of lung,18-M-53,classical monocyte,1,35,35
+fibroblast of lung,18-M-53,myeloid dendritic cell,3,35,35
+fibroblast of lung,18-M-53,neutrophil,8,35,35
+fibroblast of lung,18-M-53,non-classical monocyte,3,35,35
+fibroblast of lung,18-M-53,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,18-M-53,type II pneumocyte,4,35,35
+fibroblast of lung,21-F-54,B cell,3,35,35
+fibroblast of lung,21-F-54,alveolar macrophage,1,35,35
+fibroblast of lung,21-F-54,bronchial smooth muscle cell,10,35,35
+fibroblast of lung,21-F-54,classical monocyte,1,35,35
+fibroblast of lung,21-F-54,myeloid dendritic cell,3,35,35
+fibroblast of lung,21-F-54,neutrophil,8,35,35
+fibroblast of lung,21-F-54,non-classical monocyte,3,35,35
+fibroblast of lung,21-F-54,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,21-F-54,type II pneumocyte,4,35,35
+fibroblast of lung,21-F-55,B cell,3,35,35
+fibroblast of lung,21-F-55,alveolar macrophage,1,35,35
+fibroblast of lung,21-F-55,bronchial smooth muscle cell,10,35,35
+fibroblast of lung,21-F-55,classical monocyte,1,35,35
+fibroblast of lung,21-F-55,myeloid dendritic cell,3,35,35
+fibroblast of lung,21-F-55,neutrophil,8,35,35
+fibroblast of lung,21-F-55,non-classical monocyte,3,35,35
+fibroblast of lung,21-F-55,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,21-F-55,type II pneumocyte,4,35,35
+fibroblast of lung,1-M-62,B cell,3,35,35
+fibroblast of lung,1-M-62,alveolar macrophage,1,35,35
+fibroblast of lung,1-M-62,bronchial smooth muscle cell,9,35,35
+fibroblast of lung,1-M-62,classical monocyte,1,35,35
+fibroblast of lung,1-M-62,myeloid dendritic cell,3,35,35
+fibroblast of lung,1-M-62,neutrophil,8,35,35
+fibroblast of lung,1-M-62,non-classical monocyte,3,35,35
+fibroblast of lung,1-M-62,pulmonary interstitial fibroblast,2,35,35
+fibroblast of lung,1-M-62,type II pneumocyte,5,35,35
+fibroblast of lung,1-M-63,B cell,3,29,29
+fibroblast of lung,1-M-63,alveolar macrophage,2,29,29
+fibroblast of lung,1-M-63,bronchial smooth muscle cell,11,29,29
+fibroblast of lung,1-M-63,classical monocyte,2,29,29
+fibroblast of lung,1-M-63,myeloid dendritic cell,3,29,29
+fibroblast of lung,1-M-63,non-classical monocyte,2,29,29
+fibroblast of lung,1-M-63,pulmonary interstitial fibroblast,2,29,29
+fibroblast of lung,1-M-63,type II pneumocyte,4,29,29
+fibroblast of lung,3-F-57,B cell,3,37,37
+fibroblast of lung,3-F-57,alveolar macrophage,2,37,37
+fibroblast of lung,3-F-57,bronchial smooth muscle cell,10,37,37
+fibroblast of lung,3-F-57,classical monocyte,1,37,37
+fibroblast of lung,3-F-57,myeloid dendritic cell,3,37,37
+fibroblast of lung,3-F-57,neutrophil,10,37,37
+fibroblast of lung,3-F-57,non-classical monocyte,2,37,37
+fibroblast of lung,3-F-57,pulmonary interstitial fibroblast,2,37,37
+fibroblast of lung,3-F-57,type II pneumocyte,4,37,37
+fibroblast of lung,3-M-5/6,B cell,3,28,28
+fibroblast of lung,3-M-5/6,bronchial smooth muscle cell,10,28,28
+fibroblast of lung,3-M-5/6,myeloid dendritic cell,2,28,28
+fibroblast of lung,3-M-5/6,neutrophil,8,28,28
+fibroblast of lung,3-M-5/6,non-classical monocyte,3,28,28
+fibroblast of lung,3-M-5/6,pulmonary interstitial fibroblast,2,28,28
+fibroblast of lung,3-M-7/8,B cell,3,26,26
+fibroblast of lung,3-M-7/8,NK cell,1,26,26
+fibroblast of lung,3-M-7/8,bronchial smooth muscle cell,9,26,26
+fibroblast of lung,3-M-7/8,myeloid dendritic cell,1,26,26
+fibroblast of lung,3-M-7/8,neutrophil,8,26,26
+fibroblast of lung,3-M-7/8,non-classical monocyte,2,26,26
+fibroblast of lung,3-M-7/8,pulmonary interstitial fibroblast,2,26,26
+bronchial smooth muscle cell,18-F-50,B cell,3,25,25
+bronchial smooth muscle cell,18-F-50,adventitial cell,7,25,25
+bronchial smooth muscle cell,18-F-50,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,18-F-50,neutrophil,4,25,25
+bronchial smooth muscle cell,18-F-50,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,18-F-50,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,18-F-50,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,18-F-51,B cell,3,25,25
+bronchial smooth muscle cell,18-F-51,adventitial cell,7,25,25
+bronchial smooth muscle cell,18-F-51,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,18-F-51,neutrophil,4,25,25
+bronchial smooth muscle cell,18-F-51,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,18-F-51,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,18-F-51,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,18-M-52,B cell,3,25,25
+bronchial smooth muscle cell,18-M-52,adventitial cell,7,25,25
+bronchial smooth muscle cell,18-M-52,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,18-M-52,neutrophil,4,25,25
+bronchial smooth muscle cell,18-M-52,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,18-M-52,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,18-M-52,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,18-M-53,B cell,3,25,25
+bronchial smooth muscle cell,18-M-53,adventitial cell,7,25,25
+bronchial smooth muscle cell,18-M-53,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,18-M-53,neutrophil,4,25,25
+bronchial smooth muscle cell,18-M-53,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,18-M-53,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,18-M-53,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,21-F-54,B cell,3,25,25
+bronchial smooth muscle cell,21-F-54,adventitial cell,7,25,25
+bronchial smooth muscle cell,21-F-54,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,21-F-54,neutrophil,4,25,25
+bronchial smooth muscle cell,21-F-54,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,21-F-54,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,21-F-54,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,21-F-55,B cell,3,25,25
+bronchial smooth muscle cell,21-F-55,adventitial cell,7,25,25
+bronchial smooth muscle cell,21-F-55,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,21-F-55,neutrophil,4,25,25
+bronchial smooth muscle cell,21-F-55,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,21-F-55,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,21-F-55,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,30-M-3,B cell,3,25,25
+bronchial smooth muscle cell,30-M-3,adventitial cell,7,25,25
+bronchial smooth muscle cell,30-M-3,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,30-M-3,neutrophil,4,25,25
+bronchial smooth muscle cell,30-M-3,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,30-M-3,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,30-M-3,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,30-M-4,B cell,3,25,25
+bronchial smooth muscle cell,30-M-4,adventitial cell,7,25,25
+bronchial smooth muscle cell,30-M-4,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,30-M-4,neutrophil,4,25,25
+bronchial smooth muscle cell,30-M-4,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,30-M-4,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,30-M-4,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,30-M-5,B cell,3,25,25
+bronchial smooth muscle cell,30-M-5,adventitial cell,7,25,25
+bronchial smooth muscle cell,30-M-5,fibroblast of lung,1,25,25
+bronchial smooth muscle cell,30-M-5,neutrophil,4,25,25
+bronchial smooth muscle cell,30-M-5,non-classical monocyte,1,25,25
+bronchial smooth muscle cell,30-M-5,pulmonary interstitial fibroblast,3,25,25
+bronchial smooth muscle cell,30-M-5,type II pneumocyte,6,25,25
+bronchial smooth muscle cell,1-M-62,B cell,3,26,26
+bronchial smooth muscle cell,1-M-62,adventitial cell,7,26,26
+bronchial smooth muscle cell,1-M-62,fibroblast of lung,1,26,26
+bronchial smooth muscle cell,1-M-62,neutrophil,4,26,26
+bronchial smooth muscle cell,1-M-62,non-classical monocyte,1,26,26
+bronchial smooth muscle cell,1-M-62,pulmonary interstitial fibroblast,3,26,26
+bronchial smooth muscle cell,1-M-62,type II pneumocyte,7,26,26
+bronchial smooth muscle cell,1-M-63,B cell,3,19,19
+bronchial smooth muscle cell,1-M-63,adventitial cell,6,19,19
+bronchial smooth muscle cell,1-M-63,non-classical monocyte,1,19,19
+bronchial smooth muscle cell,1-M-63,pulmonary interstitial fibroblast,3,19,19
+bronchial smooth muscle cell,1-M-63,type II pneumocyte,6,19,19
+bronchial smooth muscle cell,3-F-56,B cell,3,27,27
+bronchial smooth muscle cell,3-F-56,adventitial cell,7,27,27
+bronchial smooth muscle cell,3-F-56,fibroblast of lung,1,27,27
+bronchial smooth muscle cell,3-F-56,neutrophil,5,27,27
+bronchial smooth muscle cell,3-F-56,non-classical monocyte,1,27,27
+bronchial smooth muscle cell,3-F-56,pulmonary interstitial fibroblast,3,27,27
+bronchial smooth muscle cell,3-F-56,type II pneumocyte,7,27,27
+bronchial smooth muscle cell,3-F-57,B cell,3,27,27
+bronchial smooth muscle cell,3-F-57,NK cell,1,27,27
+bronchial smooth muscle cell,3-F-57,adventitial cell,7,27,27
+bronchial smooth muscle cell,3-F-57,fibroblast of lung,1,27,27
+bronchial smooth muscle cell,3-F-57,neutrophil,4,27,27
+bronchial smooth muscle cell,3-F-57,non-classical monocyte,1,27,27
+bronchial smooth muscle cell,3-F-57,pulmonary interstitial fibroblast,3,27,27
+bronchial smooth muscle cell,3-F-57,type II pneumocyte,7,27,27
+alveolar macrophage,18-F-51,B cell,2,17,17
+alveolar macrophage,18-F-51,adventitial cell,4,17,17
+alveolar macrophage,18-F-51,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,18-F-51,neutrophil,1,17,17
+alveolar macrophage,18-F-51,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,18-F-51,type II pneumocyte,5,17,17
+alveolar macrophage,18-M-52,B cell,2,17,17
+alveolar macrophage,18-M-52,adventitial cell,4,17,17
+alveolar macrophage,18-M-52,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,18-M-52,neutrophil,1,17,17
+alveolar macrophage,18-M-52,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,18-M-52,type II pneumocyte,5,17,17
+alveolar macrophage,18-M-53,B cell,2,17,17
+alveolar macrophage,18-M-53,adventitial cell,4,17,17
+alveolar macrophage,18-M-53,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,18-M-53,neutrophil,1,17,17
+alveolar macrophage,18-M-53,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,18-M-53,type II pneumocyte,5,17,17
+alveolar macrophage,21-F-54,B cell,2,17,17
+alveolar macrophage,21-F-54,adventitial cell,4,17,17
+alveolar macrophage,21-F-54,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,21-F-54,neutrophil,1,17,17
+alveolar macrophage,21-F-54,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,21-F-54,type II pneumocyte,5,17,17
+alveolar macrophage,21-F-55,B cell,2,17,17
+alveolar macrophage,21-F-55,adventitial cell,4,17,17
+alveolar macrophage,21-F-55,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,21-F-55,neutrophil,1,17,17
+alveolar macrophage,21-F-55,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,21-F-55,type II pneumocyte,5,17,17
+alveolar macrophage,30-M-2,B cell,2,17,17
+alveolar macrophage,30-M-2,adventitial cell,4,17,17
+alveolar macrophage,30-M-2,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,30-M-2,neutrophil,1,17,17
+alveolar macrophage,30-M-2,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,30-M-2,type II pneumocyte,5,17,17
+alveolar macrophage,30-M-3,B cell,2,17,17
+alveolar macrophage,30-M-3,adventitial cell,4,17,17
+alveolar macrophage,30-M-3,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,30-M-3,neutrophil,1,17,17
+alveolar macrophage,30-M-3,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,30-M-3,type II pneumocyte,5,17,17
+alveolar macrophage,30-M-4,B cell,2,17,17
+alveolar macrophage,30-M-4,adventitial cell,4,17,17
+alveolar macrophage,30-M-4,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,30-M-4,neutrophil,1,17,17
+alveolar macrophage,30-M-4,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,30-M-4,type II pneumocyte,5,17,17
+alveolar macrophage,30-M-5,B cell,2,17,17
+alveolar macrophage,30-M-5,adventitial cell,4,17,17
+alveolar macrophage,30-M-5,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,30-M-5,neutrophil,1,17,17
+alveolar macrophage,30-M-5,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,30-M-5,type II pneumocyte,5,17,17
+alveolar macrophage,1-M-62,B cell,3,18,18
+alveolar macrophage,1-M-62,adventitial cell,3,18,18
+alveolar macrophage,1-M-62,bronchial smooth muscle cell,1,18,18
+alveolar macrophage,1-M-62,neutrophil,1,18,18
+alveolar macrophage,1-M-62,pulmonary interstitial fibroblast,4,18,18
+alveolar macrophage,1-M-62,type II pneumocyte,6,18,18
+alveolar macrophage,1-M-63,B cell,2,13,13
+alveolar macrophage,1-M-63,adventitial cell,1,13,13
+alveolar macrophage,1-M-63,bronchial smooth muscle cell,1,13,13
+alveolar macrophage,1-M-63,pulmonary interstitial fibroblast,5,13,13
+alveolar macrophage,1-M-63,type II pneumocyte,4,13,13
+alveolar macrophage,3-F-56,B cell,2,17,17
+alveolar macrophage,3-F-56,adventitial cell,4,17,17
+alveolar macrophage,3-F-56,bronchial smooth muscle cell,1,17,17
+alveolar macrophage,3-F-56,neutrophil,1,17,17
+alveolar macrophage,3-F-56,pulmonary interstitial fibroblast,4,17,17
+alveolar macrophage,3-F-56,type II pneumocyte,5,17,17
+alveolar macrophage,3-F-57,B cell,3,18,18
+alveolar macrophage,3-F-57,adventitial cell,4,18,18
+alveolar macrophage,3-F-57,bronchial smooth muscle cell,1,18,18
+alveolar macrophage,3-F-57,neutrophil,1,18,18
+alveolar macrophage,3-F-57,pulmonary interstitial fibroblast,4,18,18
+alveolar macrophage,3-F-57,type II pneumocyte,5,18,18
+alveolar macrophage,3-M-7/8,B cell,2,18,18
+alveolar macrophage,3-M-7/8,adventitial cell,8,18,18
+alveolar macrophage,3-M-7/8,bronchial smooth muscle cell,1,18,18
+alveolar macrophage,3-M-7/8,fibroblast of lung,2,18,18
+alveolar macrophage,3-M-7/8,neutrophil,1,18,18
+alveolar macrophage,3-M-7/8,pulmonary interstitial fibroblast,4,18,18
+classical monocyte,18-F-50,B cell,1,21,21
+classical monocyte,18-F-50,adventitial cell,8,21,21
+classical monocyte,18-F-50,fibroblast of lung,1,21,21
+classical monocyte,18-F-50,neutrophil,1,21,21
+classical monocyte,18-F-50,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,18-F-50,type II pneumocyte,6,21,21
+classical monocyte,18-F-51,B cell,1,21,21
+classical monocyte,18-F-51,adventitial cell,8,21,21
+classical monocyte,18-F-51,fibroblast of lung,1,21,21
+classical monocyte,18-F-51,neutrophil,1,21,21
+classical monocyte,18-F-51,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,18-F-51,type II pneumocyte,6,21,21
+classical monocyte,18-M-52,B cell,1,21,21
+classical monocyte,18-M-52,adventitial cell,8,21,21
+classical monocyte,18-M-52,fibroblast of lung,1,21,21
+classical monocyte,18-M-52,neutrophil,1,21,21
+classical monocyte,18-M-52,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,18-M-52,type II pneumocyte,6,21,21
+classical monocyte,18-M-53,B cell,1,21,21
+classical monocyte,18-M-53,adventitial cell,8,21,21
+classical monocyte,18-M-53,fibroblast of lung,1,21,21
+classical monocyte,18-M-53,neutrophil,1,21,21
+classical monocyte,18-M-53,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,18-M-53,type II pneumocyte,6,21,21
+classical monocyte,21-F-54,B cell,1,21,21
+classical monocyte,21-F-54,adventitial cell,8,21,21
+classical monocyte,21-F-54,fibroblast of lung,1,21,21
+classical monocyte,21-F-54,neutrophil,1,21,21
+classical monocyte,21-F-54,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,21-F-54,type II pneumocyte,6,21,21
+classical monocyte,21-F-55,B cell,1,21,21
+classical monocyte,21-F-55,adventitial cell,8,21,21
+classical monocyte,21-F-55,fibroblast of lung,1,21,21
+classical monocyte,21-F-55,neutrophil,1,21,21
+classical monocyte,21-F-55,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,21-F-55,type II pneumocyte,6,21,21
+classical monocyte,30-M-2,B cell,1,21,21
+classical monocyte,30-M-2,adventitial cell,8,21,21
+classical monocyte,30-M-2,fibroblast of lung,1,21,21
+classical monocyte,30-M-2,neutrophil,1,21,21
+classical monocyte,30-M-2,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,30-M-2,type II pneumocyte,6,21,21
+classical monocyte,30-M-3,B cell,1,21,21
+classical monocyte,30-M-3,adventitial cell,8,21,21
+classical monocyte,30-M-3,fibroblast of lung,1,21,21
+classical monocyte,30-M-3,neutrophil,1,21,21
+classical monocyte,30-M-3,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,30-M-3,type II pneumocyte,6,21,21
+classical monocyte,30-M-4,B cell,1,21,21
+classical monocyte,30-M-4,adventitial cell,8,21,21
+classical monocyte,30-M-4,fibroblast of lung,1,21,21
+classical monocyte,30-M-4,neutrophil,1,21,21
+classical monocyte,30-M-4,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,30-M-4,type II pneumocyte,6,21,21
+classical monocyte,30-M-5,B cell,1,21,21
+classical monocyte,30-M-5,adventitial cell,8,21,21
+classical monocyte,30-M-5,fibroblast of lung,1,21,21
+classical monocyte,30-M-5,neutrophil,1,21,21
+classical monocyte,30-M-5,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,30-M-5,type II pneumocyte,6,21,21
+classical monocyte,1-M-62,B cell,1,17,17
+classical monocyte,1-M-62,adventitial cell,4,17,17
+classical monocyte,1-M-62,fibroblast of lung,1,17,17
+classical monocyte,1-M-62,pulmonary interstitial fibroblast,4,17,17
+classical monocyte,1-M-62,type II pneumocyte,7,17,17
+classical monocyte,1-M-63,B cell,1,17,17
+classical monocyte,1-M-63,adventitial cell,5,17,17
+classical monocyte,1-M-63,pulmonary interstitial fibroblast,5,17,17
+classical monocyte,1-M-63,type II pneumocyte,6,17,17
+classical monocyte,3-F-56,B cell,1,23,23
+classical monocyte,3-F-56,adventitial cell,9,23,23
+classical monocyte,3-F-56,fibroblast of lung,1,23,23
+classical monocyte,3-F-56,neutrophil,1,23,23
+classical monocyte,3-F-56,pulmonary interstitial fibroblast,4,23,23
+classical monocyte,3-F-56,type II pneumocyte,7,23,23
+classical monocyte,3-F-57,B cell,2,21,21
+classical monocyte,3-F-57,adventitial cell,7,21,21
+classical monocyte,3-F-57,fibroblast of lung,1,21,21
+classical monocyte,3-F-57,neutrophil,1,21,21
+classical monocyte,3-F-57,pulmonary interstitial fibroblast,4,21,21
+classical monocyte,3-F-57,type II pneumocyte,6,21,21
+intermediate monocyte,18-F-51,B cell,1,18,18
+intermediate monocyte,18-F-51,adventitial cell,6,18,18
+intermediate monocyte,18-F-51,fibroblast of lung,1,18,18
+intermediate monocyte,18-F-51,neutrophil,1,18,18
+intermediate monocyte,18-F-51,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,18-F-51,type II pneumocyte,5,18,18
+intermediate monocyte,18-M-52,B cell,1,18,18
+intermediate monocyte,18-M-52,adventitial cell,6,18,18
+intermediate monocyte,18-M-52,fibroblast of lung,1,18,18
+intermediate monocyte,18-M-52,neutrophil,1,18,18
+intermediate monocyte,18-M-52,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,18-M-52,type II pneumocyte,5,18,18
+intermediate monocyte,18-M-53,B cell,1,18,18
+intermediate monocyte,18-M-53,adventitial cell,6,18,18
+intermediate monocyte,18-M-53,fibroblast of lung,1,18,18
+intermediate monocyte,18-M-53,neutrophil,1,18,18
+intermediate monocyte,18-M-53,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,18-M-53,type II pneumocyte,5,18,18
+intermediate monocyte,30-M-2,B cell,1,18,18
+intermediate monocyte,30-M-2,adventitial cell,6,18,18
+intermediate monocyte,30-M-2,fibroblast of lung,1,18,18
+intermediate monocyte,30-M-2,neutrophil,1,18,18
+intermediate monocyte,30-M-2,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,30-M-2,type II pneumocyte,5,18,18
+intermediate monocyte,30-M-3,B cell,1,18,18
+intermediate monocyte,30-M-3,adventitial cell,6,18,18
+intermediate monocyte,30-M-3,fibroblast of lung,1,18,18
+intermediate monocyte,30-M-3,neutrophil,1,18,18
+intermediate monocyte,30-M-3,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,30-M-3,type II pneumocyte,5,18,18
+intermediate monocyte,30-M-4,B cell,1,18,18
+intermediate monocyte,30-M-4,adventitial cell,6,18,18
+intermediate monocyte,30-M-4,fibroblast of lung,1,18,18
+intermediate monocyte,30-M-4,neutrophil,1,18,18
+intermediate monocyte,30-M-4,pulmonary interstitial fibroblast,4,18,18
+intermediate monocyte,30-M-4,type II pneumocyte,5,18,18
+intermediate monocyte,1-M-62,B cell,1,20,20
+intermediate monocyte,1-M-62,adventitial cell,7,20,20
+intermediate monocyte,1-M-62,fibroblast of lung,1,20,20
+intermediate monocyte,1-M-62,neutrophil,2,20,20
+intermediate monocyte,1-M-62,pulmonary interstitial fibroblast,4,20,20
+intermediate monocyte,1-M-62,type II pneumocyte,5,20,20
+intermediate monocyte,1-M-63,B cell,1,15,15
+intermediate monocyte,1-M-63,adventitial cell,4,15,15
+intermediate monocyte,1-M-63,fibroblast of lung,1,15,15
+intermediate monocyte,1-M-63,pulmonary interstitial fibroblast,5,15,15
+intermediate monocyte,1-M-63,type II pneumocyte,4,15,15
+B cell,18-F-50,adventitial cell,13,30,30
+B cell,18-F-50,bronchial smooth muscle cell,1,30,30
+B cell,18-F-50,fibroblast of lung,2,30,30
+B cell,18-F-50,neutrophil,4,30,30
+B cell,18-F-50,pulmonary interstitial fibroblast,4,30,30
+B cell,18-F-50,type II pneumocyte,6,30,30
+B cell,18-F-51,adventitial cell,13,30,30
+B cell,18-F-51,bronchial smooth muscle cell,1,30,30
+B cell,18-F-51,fibroblast of lung,2,30,30
+B cell,18-F-51,neutrophil,4,30,30
+B cell,18-F-51,pulmonary interstitial fibroblast,4,30,30
+B cell,18-F-51,type II pneumocyte,6,30,30
+B cell,18-M-52,adventitial cell,13,30,30
+B cell,18-M-52,bronchial smooth muscle cell,1,30,30
+B cell,18-M-52,fibroblast of lung,2,30,30
+B cell,18-M-52,neutrophil,4,30,30
+B cell,18-M-52,pulmonary interstitial fibroblast,4,30,30
+B cell,18-M-52,type II pneumocyte,6,30,30
+B cell,18-M-53,adventitial cell,13,30,30
+B cell,18-M-53,bronchial smooth muscle cell,1,30,30
+B cell,18-M-53,fibroblast of lung,2,30,30
+B cell,18-M-53,neutrophil,4,30,30
+B cell,18-M-53,pulmonary interstitial fibroblast,4,30,30
+B cell,18-M-53,type II pneumocyte,6,30,30
+B cell,21-F-54,adventitial cell,13,30,30
+B cell,21-F-54,bronchial smooth muscle cell,1,30,30
+B cell,21-F-54,fibroblast of lung,2,30,30
+B cell,21-F-54,neutrophil,4,30,30
+B cell,21-F-54,pulmonary interstitial fibroblast,4,30,30
+B cell,21-F-54,type II pneumocyte,6,30,30
+B cell,21-F-55,adventitial cell,13,30,30
+B cell,21-F-55,bronchial smooth muscle cell,1,30,30
+B cell,21-F-55,fibroblast of lung,2,30,30
+B cell,21-F-55,neutrophil,4,30,30
+B cell,21-F-55,pulmonary interstitial fibroblast,4,30,30
+B cell,21-F-55,type II pneumocyte,6,30,30
+B cell,30-M-3,adventitial cell,13,30,30
+B cell,30-M-3,bronchial smooth muscle cell,1,30,30
+B cell,30-M-3,fibroblast of lung,2,30,30
+B cell,30-M-3,neutrophil,4,30,30
+B cell,30-M-3,pulmonary interstitial fibroblast,4,30,30
+B cell,30-M-3,type II pneumocyte,6,30,30
+B cell,30-M-4,adventitial cell,13,30,30
+B cell,30-M-4,bronchial smooth muscle cell,1,30,30
+B cell,30-M-4,fibroblast of lung,2,30,30
+B cell,30-M-4,neutrophil,4,30,30
+B cell,30-M-4,pulmonary interstitial fibroblast,4,30,30
+B cell,30-M-4,type II pneumocyte,6,30,30
+B cell,30-M-5,adventitial cell,13,30,30
+B cell,30-M-5,bronchial smooth muscle cell,1,30,30
+B cell,30-M-5,fibroblast of lung,2,30,30
+B cell,30-M-5,neutrophil,4,30,30
+B cell,30-M-5,pulmonary interstitial fibroblast,4,30,30
+B cell,30-M-5,type II pneumocyte,6,30,30
+B cell,1-M-62,adventitial cell,13,29,29
+B cell,1-M-62,fibroblast of lung,2,29,29
+B cell,1-M-62,neutrophil,4,29,29
+B cell,1-M-62,pulmonary interstitial fibroblast,4,29,29
+B cell,1-M-62,type II pneumocyte,6,29,29
+B cell,1-M-63,adventitial cell,13,26,26
+B cell,1-M-63,bronchial smooth muscle cell,1,26,26
+B cell,1-M-63,fibroblast of lung,2,26,26
+B cell,1-M-63,pulmonary interstitial fibroblast,5,26,26
+B cell,1-M-63,type II pneumocyte,5,26,26
+B cell,3-F-56,adventitial cell,13,31,31
+B cell,3-F-56,bronchial smooth muscle cell,1,31,31
+B cell,3-F-56,fibroblast of lung,2,31,31
+B cell,3-F-56,neutrophil,5,31,31
+B cell,3-F-56,pulmonary interstitial fibroblast,4,31,31
+B cell,3-F-56,type II pneumocyte,6,31,31
+B cell,3-F-57,NK cell,1,32,32
+B cell,3-F-57,adventitial cell,11,32,32
+B cell,3-F-57,bronchial smooth muscle cell,2,32,32
+B cell,3-F-57,fibroblast of lung,3,32,32
+B cell,3-F-57,neutrophil,5,32,32
+B cell,3-F-57,pulmonary interstitial fibroblast,4,32,32
+B cell,3-F-57,type II pneumocyte,6,32,32
+NK cell,18-F-50,B cell,3,28,28
+NK cell,18-F-50,adventitial cell,3,28,28
+NK cell,18-F-50,bronchial smooth muscle cell,4,28,28
+NK cell,18-F-50,fibroblast of lung,1,28,28
+NK cell,18-F-50,neutrophil,6,28,28
+NK cell,18-F-50,pulmonary interstitial fibroblast,4,28,28
+NK cell,18-F-50,type II pneumocyte,7,28,28
+NK cell,18-F-51,B cell,3,28,28
+NK cell,18-F-51,adventitial cell,3,28,28
+NK cell,18-F-51,bronchial smooth muscle cell,4,28,28
+NK cell,18-F-51,fibroblast of lung,1,28,28
+NK cell,18-F-51,neutrophil,6,28,28
+NK cell,18-F-51,pulmonary interstitial fibroblast,4,28,28
+NK cell,18-F-51,type II pneumocyte,7,28,28
+NK cell,18-M-52,B cell,3,28,28
+NK cell,18-M-52,adventitial cell,3,28,28
+NK cell,18-M-52,bronchial smooth muscle cell,4,28,28
+NK cell,18-M-52,fibroblast of lung,1,28,28
+NK cell,18-M-52,neutrophil,6,28,28
+NK cell,18-M-52,pulmonary interstitial fibroblast,4,28,28
+NK cell,18-M-52,type II pneumocyte,7,28,28
+NK cell,18-M-53,B cell,3,28,28
+NK cell,18-M-53,adventitial cell,3,28,28
+NK cell,18-M-53,bronchial smooth muscle cell,4,28,28
+NK cell,18-M-53,fibroblast of lung,1,28,28
+NK cell,18-M-53,neutrophil,6,28,28
+NK cell,18-M-53,pulmonary interstitial fibroblast,4,28,28
+NK cell,18-M-53,type II pneumocyte,7,28,28
+NK cell,21-F-54,B cell,3,28,28
+NK cell,21-F-54,adventitial cell,3,28,28
+NK cell,21-F-54,bronchial smooth muscle cell,4,28,28
+NK cell,21-F-54,fibroblast of lung,1,28,28
+NK cell,21-F-54,neutrophil,6,28,28
+NK cell,21-F-54,pulmonary interstitial fibroblast,4,28,28
+NK cell,21-F-54,type II pneumocyte,7,28,28
+NK cell,21-F-55,B cell,3,28,28
+NK cell,21-F-55,adventitial cell,3,28,28
+NK cell,21-F-55,bronchial smooth muscle cell,4,28,28
+NK cell,21-F-55,fibroblast of lung,1,28,28
+NK cell,21-F-55,neutrophil,6,28,28
+NK cell,21-F-55,pulmonary interstitial fibroblast,4,28,28
+NK cell,21-F-55,type II pneumocyte,7,28,28
+NK cell,30-M-3,B cell,3,28,28
+NK cell,30-M-3,adventitial cell,3,28,28
+NK cell,30-M-3,bronchial smooth muscle cell,4,28,28
+NK cell,30-M-3,fibroblast of lung,1,28,28
+NK cell,30-M-3,neutrophil,6,28,28
+NK cell,30-M-3,pulmonary interstitial fibroblast,4,28,28
+NK cell,30-M-3,type II pneumocyte,7,28,28
+NK cell,30-M-4,B cell,3,28,28
+NK cell,30-M-4,adventitial cell,3,28,28
+NK cell,30-M-4,bronchial smooth muscle cell,4,28,28
+NK cell,30-M-4,fibroblast of lung,1,28,28
+NK cell,30-M-4,neutrophil,6,28,28
+NK cell,30-M-4,pulmonary interstitial fibroblast,4,28,28
+NK cell,30-M-4,type II pneumocyte,7,28,28
+NK cell,30-M-5,B cell,3,28,28
+NK cell,30-M-5,adventitial cell,3,28,28
+NK cell,30-M-5,bronchial smooth muscle cell,4,28,28
+NK cell,30-M-5,fibroblast of lung,1,28,28
+NK cell,30-M-5,neutrophil,6,28,28
+NK cell,30-M-5,pulmonary interstitial fibroblast,4,28,28
+NK cell,30-M-5,type II pneumocyte,7,28,28
+NK cell,1-M-62,B cell,3,29,29
+NK cell,1-M-62,adventitial cell,3,29,29
+NK cell,1-M-62,bronchial smooth muscle cell,4,29,29
+NK cell,1-M-62,fibroblast of lung,1,29,29
+NK cell,1-M-62,neutrophil,6,29,29
+NK cell,1-M-62,pulmonary interstitial fibroblast,4,29,29
+NK cell,1-M-62,type II pneumocyte,8,29,29
+NK cell,1-M-63,B cell,3,23,23
+NK cell,1-M-63,adventitial cell,3,23,23
+NK cell,1-M-63,bronchial smooth muscle cell,6,23,23
+NK cell,1-M-63,pulmonary interstitial fibroblast,5,23,23
+NK cell,1-M-63,type II pneumocyte,6,23,23
+NK cell,3-F-56,B cell,3,30,30
+NK cell,3-F-56,adventitial cell,4,30,30
+NK cell,3-F-56,bronchial smooth muscle cell,4,30,30
+NK cell,3-F-56,fibroblast of lung,1,30,30
+NK cell,3-F-56,neutrophil,6,30,30
+NK cell,3-F-56,pulmonary interstitial fibroblast,4,30,30
+NK cell,3-F-56,type II pneumocyte,8,30,30
+NK cell,3-F-57,B cell,3,34,34
+NK cell,3-F-57,adventitial cell,3,34,34
+NK cell,3-F-57,bronchial smooth muscle cell,7,34,34
+NK cell,3-F-57,fibroblast of lung,1,34,34
+NK cell,3-F-57,myeloid dendritic cell,1,34,34
+NK cell,3-F-57,neutrophil,7,34,34
+NK cell,3-F-57,non-classical monocyte,1,34,34
+NK cell,3-F-57,pulmonary interstitial fibroblast,4,34,34
+NK cell,3-F-57,type II pneumocyte,7,34,34
+NK cell,3-M-5/6,B cell,3,23,23
+NK cell,3-M-5/6,adventitial cell,4,23,23
+NK cell,3-M-5/6,bronchial smooth muscle cell,4,23,23
+NK cell,3-M-5/6,fibroblast of lung,1,23,23
+NK cell,3-M-5/6,neutrophil,6,23,23
+NK cell,3-M-5/6,pulmonary interstitial fibroblast,5,23,23
+NK cell,3-M-7/8,B cell,3,22,22
+NK cell,3-M-7/8,adventitial cell,9,22,22
+NK cell,3-M-7/8,bronchial smooth muscle cell,2,22,22
+NK cell,3-M-7/8,fibroblast of lung,1,22,22
+NK cell,3-M-7/8,neutrophil,3,22,22
+NK cell,3-M-7/8,pulmonary interstitial fibroblast,4,22,22
+"CD8-positive, alpha-beta T cell",18-F-51,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",18-F-51,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",18-F-51,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",18-F-51,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",18-F-51,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",18-F-51,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",18-M-52,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",18-M-53,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",21-F-54,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",21-F-55,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-3,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-4,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,adventitial cell,9,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,bronchial smooth muscle cell,1,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,fibroblast of lung,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,neutrophil,2,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,pulmonary interstitial fibroblast,5,24,24
+"CD8-positive, alpha-beta T cell",30-M-5,type II pneumocyte,5,24,24
+"CD8-positive, alpha-beta T cell",1-M-63,adventitial cell,9,20,20
+"CD8-positive, alpha-beta T cell",1-M-63,fibroblast of lung,2,20,20
+"CD8-positive, alpha-beta T cell",1-M-63,pulmonary interstitial fibroblast,4,20,20
+"CD8-positive, alpha-beta T cell",1-M-63,type II pneumocyte,5,20,20

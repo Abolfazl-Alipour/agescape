@@ -14,7 +14,7 @@ The primary manuscript is [`report/manuscript-aging-mechanisms.md`](report/manus
 - In PsychAD cortex, the primary whole-cortex score was not associated with age before adjustment (slope +0.000186 per year, p = 0.3494) or after covariate adjustment (slope -0.000209, p = 0.4004).
 - Three of 252 primary human cell-type tests survived the shared BH correction: MSSM L2/3 neurons, MSSM oligodendrocytes, and PsychAD EN_L3_5_IT_3 neurons. No OPC or microglial result survived that primary correction. Glial transport is a candidate finding.
 - Across 13 adequately covered mouse organs, 8 had at least one age-associated cell-type fraction change at FDR 0.05. Three of 11 human cohort datasets had such a change. Naked mole-rat skin had no significant change, but five animals cannot establish stability. See `report/organ-cell-composition.md`.
-- Mouse lung fibroblast Cdkn1a increased with age (slope +0.1080 per month, q = 0.0322). The fibroblast transcriptional-noise increase was not reproducible across UMI sampling models.
+- Mouse lung fibroblast Cdkn1a increased with age (slope +0.1080 per month, q = 0.0322). Within-cell entropy showed no consistent age-related increase. Off-program expression had no FDR-significant cell-type result, while Bayesian hierarchical analysis gave a weak positive trend with intervals including zero. See `report/transcriptional-disorder.md` and `report/transcriptional-disorder-bayesian.md`.
 - The naked mole-rat comparison did not detect a slope in five animals. It cannot establish equivalence or senescence specificity.
 - Universal Clock 2 gave MAE 0.36 years in mouse liver and 5.06 years across 661 human tissue profiles. Predictive R-squared was 0.3169 and 0.6383, respectively. The evaluations are not presented as independent validation.
 
@@ -44,6 +44,16 @@ Run the core pipeline:
 ```bash
 python scripts/run_all.py
 ```
+
+Run the hierarchical Bayesian transcriptional-disorder analysis in its separate environment:
+
+```bash
+conda env create -f environment-bayesian.yml
+conda activate agescape-bayesian
+python scripts/run_h3_bayesian_disorder.py
+```
+
+The Bayesian stage uses a pinned public diagnostic-workflow revision. Large posterior NetCDF files and diagnostic plots stay local and are gitignored. Aggregate posterior and diagnostic tables are committed.
 
 Run the human public-cohort and composition stages with the supplemental dependencies:
 

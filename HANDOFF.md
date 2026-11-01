@@ -1,112 +1,123 @@
 # Current Project Handoff
 
-Last updated: 2026-10-25. This is the current operating handoff. The original milestone manual has been replaced because the project now includes the deployed app, M9/M10 human analyses, and the complete audited statistical pipeline.
+Last updated: 2026-11-01. This is the operating handoff for the scientific artifact. The public website is not the current development priority.
 
-## Current state
+## Repository and current state
 
-- Public explorer: https://rezaalipour.com/agescape/
-- Analysis repository: https://github.com/Abolfazl-Alipour/agescape
-- Website repository: `Abolfazl-Alipour/personalwebsite`, published by Cloudflare from `main`.
-- Core analysis, app exports, M9 public human cohorts, and M10 DLPFC aggregates are implemented.
-- Latest verification: 146 numeric, semantic, and provenance anchors pass (requires running `fetch_data.py` first for gitignored raw data).
-- Desktop and 360 px browser checks pass without JavaScript errors or page overflow.
-- Security and DUA status: `figures/m10-dlpfc-whole-score-vs-age.png` (per-donor scatter) was staged and deleted (`git rm`) to ensure strict DUA compliance without rewriting public git history.
-- External usability testing has not been performed. Browser checks are builder verification, not an independent usability study.
+- Repository: https://github.com/Abolfazl-Alipour/agescape
+- Branch: `master`
+- Main manuscript: `report/manuscript-aging-mechanisms.md`
+- Reviewer guide: `PROJECT_OVERVIEW.md`
+- Reproduction commands: `README.md`
+- Latest verification: 29 tests pass and all 146 app-data anchors pass.
+- Controlled-access donor-level DLPFC data, credentials, and derived donor-level values are not committed.
 
 ## Read in this order
 
-1. `README.md`: findings, layout, and reproduction commands.
-2. `PROJECT_OVERVIEW.md`: scientific question, design, evidence, and limitations.
-3. `report/conserved-aging-programs.md`: main scientific report.
-4. `report/m9-human-cohorts.md` and `report/m10-dlpfc-lifespan-atlas.md`: later human analyses.
-5. `app/DATA_CONTRACT.md`: app export schemas and figure/data constraints.
-6. `PLAN.md` and `KICKOFF.md`: historical pre-registration and initial instructions only.
+1. `README.md`: current findings and reproduction.
+2. `PROJECT_OVERVIEW.md`: scientific design, results, and limitations.
+3. `report/manuscript-aging-mechanisms.md`: current manuscript.
+4. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
+5. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
+6. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
+7. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
+8. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
 
 ## Non-negotiable rules
 
-1. Never invent data, statistics, citations, or availability claims. App numbers come from committed result tables through `scripts/export_app_data.py`.
-2. Do not treat eligibility as adequate power, non-significance as equivalence, or limited significant-list overlap as a heterogeneity test.
-3. Keep donor/animal replication distinct from cell-level associations.
-4. Never commit credentials, raw controlled-access data, or per-donor DLPFC values. Only M10 regression aggregates may be public.
-5. Preserve the distinction between raw-sum and CPM results, nominal and multiplicity-adjusted evidence, and scheme-specific versus sign-reversing results.
-6. Run the export and verification gates after changing results, app data, the data contract, or relevant copy.
-7. Do not deploy unverified changes. Reza has approved the current public repository and website deployment path; any new public destination still requires approval.
+1. Never invent data, statistics, citations, or availability claims. Quantitative claims must trace to committed result tables.
+2. Do not treat non-significance as equivalence or biological stability.
+3. Keep donor or animal replication distinct from cell-level measurements.
+4. Never commit credentials, raw controlled-access data, or per-donor DLPFC values. Only approved aggregate results may be public.
+5. Preserve the distinction between nominal and multiplicity-adjusted evidence, global and cell-type estimands, and exploratory and confirmatory analyses.
+6. Do not describe transcriptomic entropy or off-program expression as direct evidence of DNA damage, chromatin restoration, or epigenetic causation.
+7. Run tests and relevant verification gates after changing results or claims.
+8. Do not deploy or modify the personal website unless Reza explicitly asks.
+
+## Current scientific results
+
+### Signature transport
+
+The primary signature is `P1_Clean`, containing 139 genes: 89 up-regulated and 50 down-regulated. `P0_Raw257` is the 257-gene sensitivity score. P1 applies technical, biotype, ribosomal, mitochondrial, and ambient-RNA filters. It does not remove sex-dimorphic or immediate-early genes; those belong to P2 and P3.
+
+One BH family covers 252 primary human cell-type tests. Survivors are MSSM L2/3 neurons, MSSM oligodendrocytes, and PsychAD EN_L3_5_IT_3 neurons. No OPC or microglial result survives. Glial transport is a candidate, not an established mechanism.
+
+Primary PsychAD whole-cortex slopes are +0.000186 before adjustment, p = 0.3494, and -0.000209 after adjustment, p = 0.4004. Exact M9/M10 donor overlap is unresolved, so M10 is not independent replication.
+
+### Organ cell fractions
+
+The direct question was whether cell-type fractions within organs change with age. Eight of 13 adequately covered mouse organs and 3 of 11 human cohort datasets had at least one FDR-significant fraction change. NMR skin was inconclusive because five animals permit only ten age-label assignments. These are compositional associations, not evidence of fibrosis or organ destruction.
+
+See `results/organ-composition-age-tests.csv`, `results/organ-composition-summary.csv`, and `notes/organ-composition-methods.md`.
+
+### Transcriptional disorder
+
+The third hypothesis was separated into within-cell Shannon entropy, off-program expression, and the distinct earlier measurement of cell-to-cell variability.
+
+Cells were downsampled without replacement to 1,500 UMIs. Entropy was calculated per cell as `-sum(p_g * log(p_g))` after selected gene exclusions. Off-program genes were uncommon in young target cells but characteristic of another lung cell type. Young references were cross-fitted by leaving out the evaluated young animal. Animal means were the inferential units.
+
+No frequentist cell-type analysis detected an FDR-significant primary increase. Entropy estimates were sensitive to balancing at 20 cells per animal. The frequentist global entropy effect was -0.079 standard deviations over 15 months, p = 0.699. The Bayesian posterior mean was -0.060, with 94% HDI -0.508 to +0.356 and posterior probability of an increase 0.395.
+
+Off-program expression showed a weak positive average trend. The frequentist global effect was +0.244 standard deviations over 15 months, p = 0.278. The Bayesian posterior mean was +0.243, with 94% HDI -0.224 to +0.702 and posterior probability of an increase 0.841. Across sensitivity analyses, increase probabilities ranged from 0.731 to 0.857, and every interval included zero. No individual cell-type off-program result survived FDR correction.
+
+All 18 Bayesian models converged with zero divergences, but all had influential-observation warnings. The primary off-program model also had imperfect calibration. Frequentist analysis remains the confirmatory reference; Bayesian hierarchical estimates are exploratory. The third hypothesis is not established.
+
+### Methylation clock
+
+Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tissue evaluation. MAE was 0.36 years and 5.06 years, respectively. Mouse scoring used 724 of 816 probes. These were benchmark reproductions, not independent validations.
 
 ## Pipeline map
 
-| Stage | Entry point | Main committed outputs |
+| Stage | Entry point | Main outputs |
 |---|---|---|
-| M1 mouse QC and atlas | `scripts/run_m1_pipeline.py` | `results/m1-*.csv` |
-| M2 pseudobulk DE and ranking | `scripts/run_m2_pipeline.py`, `scripts/run_m2_audit.py` | `results/m2-*.csv` |
-| M3 trajectory and TMS agreement | `scripts/run_m3_pipeline.py`, `scripts/run_m3_agreement.py` | `results/m3-*.csv` |
-| M4 human power model | `scripts/run_m4_power.py` | `results/m4-*.csv` |
-| M5 signature hierarchy & heterogeneity | `scripts/run_m5_pipeline.py`, `scripts/run_m5_heterogeneity.py` | `results/m5-*.csv` |
-| M6 mouse, human skin, and NMR scores | `scripts/run_m6_pipeline.py` | `results/m6-*.csv` |
-| M9 public human cohorts | `scripts/run_m9_pipeline.py` | `results/m9-*.csv` |
-| M10 DLPFC lifespan atlas | `scripts/run_m10_pipeline.py` | `results/m10-*.csv` |
-| App export | `scripts/export_app_data.py` | `app/data/*.json` |
-| Verification | `scripts/check_app_data.py`, `scripts/check_app_assets.py` | 146 anchors |
+| Mouse QC and atlas | `scripts/run_m1_pipeline.py` | `results/m1-*.csv` |
+| Pseudobulk DE and ranking | `scripts/run_m2_pipeline.py`, `scripts/run_m2_audit.py` | `results/m2-*.csv` |
+| Trajectory and TMS agreement | `scripts/run_m3_pipeline.py`, `scripts/run_m3_agreement.py` | `results/m3-*.csv` |
+| Signature and heterogeneity | `scripts/run_m5_pipeline.py`, `scripts/run_m5_heterogeneity.py` | `results/m5-*.csv` |
+| Mouse, human skin, and NMR scores | `scripts/run_m6_pipeline.py` | `results/m6-*.csv` |
+| Public human cohorts | `scripts/run_m9_pipeline.py` | `results/m9-*.csv` |
+| DLPFC lifespan atlas | `scripts/run_m10_pipeline.py` | `results/m10-*.csv` |
+| Organ cell fractions | `scripts/run_organ_composition.py` | `results/organ-composition-*.csv` |
+| Cell-to-cell variability | `scripts/run_h3_entropy.py`, `scripts/run_d2_noise_sensitivity.py` | `results/h3-entropy-mouse-lung.csv`, `results/d2-noise-sensitivity.csv` |
+| Entropy and off-program expression | `scripts/run_h3_transcriptional_disorder.py` | `results/h3-transcriptional-disorder*.csv` |
+| Bayesian hierarchical analysis | `scripts/run_h3_bayesian_disorder.py` | `results/h3-bayesian-*.csv`, `results/h3-frequentist-global.csv` |
 
-`scripts/run_all.py` covers the core M1-M6 pipeline, notebooks 01-06, app export, and verification. It does not run M9 or M10; those have separate inputs and supplemental dependencies.
+`scripts/run_all.py` covers the core pipeline and the direct organ-fraction and transcriptional-disorder stages. M9, M10, and the Bayesian analysis have separate environments or inputs.
 
 ## Reproduction and verification
 
-Core environment and pipeline:
+Core analysis:
 
 ```bash
 conda create -n agescape --file environment.lock
 conda activate agescape
 python scripts/fetch_data.py
 python scripts/run_all.py
-```
-
-M9 and M10 additionally require the packages in `requirements-supplemental.txt` / `requirements-census.lock`. M9 downloads public CELLxGENE data. M10 requires authorized Synapse inputs under `data/external/dlpfc-atlas/`; do not ask for or commit another user's token.
-
-Fast app verification without recomputing the science:
-
-```bash
-python scripts/export_app_data.py
+pytest -v
 python scripts/check_app_data.py
-python scripts/check_app_assets.py
-python3 -m http.server 8080 --directory app
 ```
 
-Open `http://localhost:8080`. Browser `fetch()` means `file://` is not a supported launch path.
-
-## App architecture and deployment
-
-The app is static HTML, CSS, and vanilla JavaScript with vendored ECharts. There is no backend, account system, analytics, or runtime data analysis. `app/index.html` contains the story; `app/app.js` renders charts and interactions; `app/style.css` contains the visual system.
-
-Deployment from the analysis repository:
+Bayesian analysis:
 
 ```bash
-bash scripts/sync_to_website.sh ~/projects/personalwebsite
-cd ~/projects/personalwebsite
-git add agescape
-git commit -m "Describe the Agescape change"
-git push origin HEAD
+conda env create -f environment-bayesian.yml
+conda activate agescape-bayesian
+python scripts/run_h3_bayesian_disorder.py
 ```
 
-The sync script excludes internal provenance and data-contract files. Cloudflare publishes the website after the website-repository push. Verify the live page, including mobile layout and any changed interaction, before calling deployment complete.
+The Bayesian stage uses `bayesian-workflow` revision `18ab0de9b63b5bb03caa96146235e8f1534d45d4`. Large NetCDF files and machine-specific diagnostic artifacts stay local under `results/h3-bayesian/` and are gitignored. Aggregate posterior, diagnostic, and comparison tables are committed.
 
-## Important corrections to preserve
-
-- The TMS design has partial sex-by-age confounding, not complete confounding. The primary 3m versus 18m model adjusts for sex.
-- Calibration rests on the permutation null (exact Fisher-Pitman p=0.111 / 0.133) and the sex floor. Positive controls in the top unit (Apoe, Il6, Lgals3, Igfbp3) do not reach nominal significance.
-- Mouse signature: P0 catalog (257 genes), P1_Clean (139 genes: 82 up, 57 down), P2 (114 genes), P3 (110 genes). 54 genes show between-organ heterogeneity via covariance-calibrated $Q^*$.
-- Mouse score: whole-body Spec (a) slope 0.134 (p=0.015); Spec (c) cluster-robust CR2 slope 0.205 (p=0.00064, df 8.48); out-of-sample Spec (d1) slope 0.107 (p=0.012); late-adult plateau Spec (d2) slope -0.0056 (p=0.956); holdout tissues Spec (d3) slope 0.144 (p=0.0167, df 5.51).
-- NMR: slope 0.0035, TOST equivalence delta_min 0.202, 90% CI [-0.145, 0.157], p_TOST 0.027; slope difference 0.131 (p=0.202); permutation p=1.0. 5-animal pseudobulk Igfbp3 young 221.8 vs aged 223.8 CPM.
-- M9 MSSM is nominal p=0.028 and BH q=0.311 across 11 cohort tests.
-- M10 absent cell types must remain missing, never zero. Whole cortex unadjusted CPM slope is +0.00032/yr (p=0.0118); after confounder adjustment for brain bank, PMI, and technical PCs, it attenuates to null (p=0.8626).
-- M9 and M10 use different expression summaries; their slope magnitudes are not directly comparable.
+M9 downloads public CELLxGENE data. M10 requires separately authorized Synapse inputs under `data/external/dlpfc-atlas/`. Never commit Synapse credentials or controlled donor-level data.
 
 ## Remaining scientific work
 
-- Direct effect-heterogeneity tests across cross-species single-cell datasets.
-- A defensible cross-species comparison requires harmonized tissues, scoring, age coverage, and sufficient animals/donors.
-- Additional human replication should use comparable expression summaries and pre-specified multiple-testing and robustness criteria.
-- Independent usability testing remains outstanding: five computational-biology or hiring reviewers performing the timed tasks on their own phones.
+- Increase animal-level replication for transcriptional-disorder tests.
+- Add technical covariates and direct ambient-RNA estimates.
+- Predeclare future effect definitions and sensitivity analyses before evaluating new cohorts.
+- Use chromatin measurements and experimental perturbation to test the proposed DNA-repair mechanism; transcriptomics alone cannot do so.
+- Resolve cross-species comparisons with harmonized tissues, orthologs, age coverage, and expression summaries.
+- Obtain independent scientific review before presenting any exploratory off-program trend as a finding.
 
-## Repository hygiene check
+## Repository hygiene
 
-Before committing, inspect `git status`, keep `data/` and credentials out of the commit, run `git diff --check`, and rerun the relevant gates. Historical audit records remain under `notes/`; they are evidence of corrections, not current instructions.
+Before committing, inspect `git status`, keep data and credentials out of the commit, run `git diff --check`, and rerun relevant gates. Historical audits are records of corrections, not current instructions.
