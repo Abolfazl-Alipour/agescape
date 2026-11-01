@@ -153,6 +153,11 @@ def main():
         [PYTHON_BIN, "scripts/run_h3_transcriptional_disorder.py"],
     )
 
+    runtimes["h3_expression_vector"] = run_step(
+        "H3: Direct young-reference expression-vector distances without downsampling",
+        [PYTHON_BIN, "scripts/run_h3_expression_vector.py"],
+    )
+
     runtimes["fibroblast_markers"] = run_step(
         "Fibroblast candidate markers audit (11 markers, FDR BH)",
         [PYTHON_BIN, "scripts/run_fibroblast_markers.py"],

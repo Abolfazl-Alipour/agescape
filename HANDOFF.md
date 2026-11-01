@@ -9,19 +9,21 @@ Last updated: 2026-11-01. This is the operating handoff for the scientific artif
 - Main manuscript: `report/manuscript-aging-mechanisms.md`
 - Reviewer guide: `PROJECT_OVERVIEW.md`
 - Reproduction commands: `README.md`
-- Latest verification: 29 tests pass and all 146 app-data anchors pass.
+- Latest verification: 37 tests pass and all 146 app-data anchors pass.
 - Controlled-access donor-level DLPFC data, credentials, and derived donor-level values are not committed.
 
 ## Read in this order
 
 1. `README.md`: current findings and reproduction.
 2. `PROJECT_OVERVIEW.md`: scientific design, results, and limitations.
-3. `report/manuscript-aging-mechanisms.md`: current manuscript.
-4. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
-5. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
-6. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
-7. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
-8. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
+3. `report/manuscript-aging-mechanisms.md`: current manuscript. The new vector analysis has not yet been added.
+4. `report/cross-species-expression-vector.md`: direct whole-vector analysis in mouse, human, and NMR.
+5. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
+6. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
+7. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
+8. `notes/cross-species-expression-vector-methods.md`: whole-vector distances, species designs, and lifespan scaling.
+9. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
+10. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
 
 ## Non-negotiable rules
 
@@ -62,6 +64,18 @@ Off-program expression showed a weak positive average trend. The frequentist glo
 
 All 18 Bayesian models converged with zero divergences, but all had influential-observation warnings. The primary off-program model also had imperfect calibration. Frequentist analysis remains the confirmatory reference; Bayesian hierarchical estimates are exploratory. The third hypothesis is not established.
 
+### Whole-expression-vector displacement across species
+
+The direct vector analysis uses no UMI downsampling. It compares each complete within-cell expression-proportion vector with a cross-fitted young reference using Hellinger distance. Raw-count Euclidean distance is a separate depth-sensitive endpoint. Tissues and cohorts are analyzed independently, and species summaries use standardized effects per 10 percent of maximum lifespan.
+
+Mouse shows an overall positive association: effect +0.1028 SD, 95% CI +0.0678 to +0.1378, p = 0.00000398 across 62 tissue-by-cell-type units and 23 animals. It remains positive after UMI-depth adjustment and after excluding pooled identifiers. Five cell types pass FDR, all positive: bladder cells, kidney fenestrated cells, podocytes, limb-muscle mesenchymal stem cells, and lung fibroblasts.
+
+Human shows no overall association: effect +0.0365 SD, 95% CI -0.0221 to +0.0951, p = 0.2218 across 135 cohort-by-cell-type units and 479 cohort-specific adult donors. None of seven cohort summaries is significant. Six cell types pass within-cohort FDR: four positive MSSM GABAergic neuronal populations and two negative integrated-lung epithelial populations.
+
+NMR shows a negative point estimate of -0.4744 SD per 10 percent of maximum lifespan, exact p = 0.2, across basal and corneum skin compartments in five animals. Both compartment effects are negative. This does not establish stability or a significant between-species difference. The simple hypothesis of positive mouse and human effects with a weaker NMR effect is not observed because the overall human effect is null.
+
+See `report/cross-species-expression-vector.md`, `notes/cross-species-expression-vector-methods.md`, and `results/h3-cross-species-vector-*.csv`. The manuscript has not yet been updated with this analysis.
+
 ### Methylation clock
 
 Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tissue evaluation. MAE was 0.36 years and 5.06 years, respectively. Mouse scoring used 724 of 816 probes. These were benchmark reproductions, not independent validations.
@@ -81,8 +95,10 @@ Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tis
 | Cell-to-cell variability | `scripts/run_h3_entropy.py`, `scripts/run_d2_noise_sensitivity.py` | `results/h3-entropy-mouse-lung.csv`, `results/d2-noise-sensitivity.csv` |
 | Entropy and off-program expression | `scripts/run_h3_transcriptional_disorder.py` | `results/h3-transcriptional-disorder*.csv` |
 | Bayesian hierarchical analysis | `scripts/run_h3_bayesian_disorder.py` | `results/h3-bayesian-*.csv`, `results/h3-frequentist-global.csv` |
+| Mouse-lung direct vector analysis | `scripts/run_h3_expression_vector.py` | `results/h3-expression-vector*.csv` |
+| Cross-species direct vector analysis | `scripts/run_cross_species_expression_vector.py` | `results/h3-cross-species-vector-*.csv` |
 
-`scripts/run_all.py` covers the core pipeline and the direct organ-fraction and transcriptional-disorder stages. M9, M10, and the Bayesian analysis have separate environments or inputs.
+`scripts/run_all.py` covers the core pipeline, direct organ-fraction and transcriptional-disorder stages, and the mouse-lung vector analysis. M9, M10, the cross-species vector analysis, and the Bayesian analysis have separate environments or inputs.
 
 ## Reproduction and verification
 
@@ -91,11 +107,21 @@ Core analysis:
 ```bash
 conda create -n agescape --file environment.lock
 conda activate agescape
+python -m pip install -r requirements-supplemental.txt
 python scripts/fetch_data.py
 python scripts/run_all.py
 pytest -v
 python scripts/check_app_data.py
 ```
+
+Cross-species whole-vector analysis:
+
+```bash
+python scripts/run_cross_species_expression_vector.py
+python scripts/run_cross_species_expression_vector.py --summarize-only
+```
+
+The first command downloads public full-transcriptome human data and recomputes all species. The second recomputes statistics from committed public donor-level distances without downloading cells again.
 
 Bayesian analysis:
 
