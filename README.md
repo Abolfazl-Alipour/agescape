@@ -2,7 +2,7 @@
 
 **Subtitle:** within mouse; cross-species conservation not established
 
-Agescape is a reproducible analysis of mouse, human, and naked mole-rat aging data, with a static interactive explorer at [rezaalipour.com/agescape](https://rezaalipour.com/agescape/). It tests how a mouse-derived transcriptional signature behaves across cohorts and cell types, how cell-type fractions within organs change with age, how transcriptional noise depends on UMI sampling, and how a published mammalian methylation clock performs under explicit predictive metrics.
+Agescape is a reproducible analysis of mouse, human, naked mole-rat, fruit fly, worm, and zebrafish aging data. It tests how a mouse-derived transcriptional signature behaves across cohorts and cell types, how cell-type fractions within organs change with age, how whole-expression vectors move relative to young references, how transcriptional noise depends on UMI sampling, and how a published mammalian methylation clock performs under explicit predictive metrics. The static explorer is no longer the primary scientific artifact.
 
 ## Current manuscript
 
@@ -16,6 +16,7 @@ The primary manuscript is [`report/manuscript-aging-mechanisms.md`](report/manus
 - Across 13 adequately covered mouse organs, 8 had at least one age-associated cell-type fraction change at FDR 0.05. Three of 11 human cohort datasets had such a change. Naked mole-rat skin had no significant change, but five animals cannot establish stability. See `report/organ-cell-composition.md`.
 - Mouse lung fibroblast Cdkn1a increased with age (slope +0.1080 per month, q = 0.0322). Within-cell entropy showed no consistent age-related increase. Off-program expression had no FDR-significant cell-type result, while Bayesian hierarchical analysis gave a weak positive trend with intervals including zero. See `report/transcriptional-disorder.md` and `report/transcriptional-disorder-bayesian.md`.
 - The naked mole-rat comparison did not detect a slope in five animals. It cannot establish equivalence or senescence specificity.
+- Fly, worm, and zebrafish show cell-fraction changes and cell-type-specific expression changes, but not a universal increase in whole-transcriptome displacement. Worm has the strongest positive vector result, with a smaller and less secure effect under a balanced day-6 reference. Zebrafish has stronger evidence for immune-fraction change than cell-intrinsic drift. See `report/extended-cross-species-aging.md`.
 - Universal Clock 2 gave MAE 0.36 years in mouse liver and 5.06 years across 661 human tissue profiles. Predictive R-squared was 0.3169 and 0.6383, respectively. The evaluations are not presented as independent validation.
 
 Every public number is generated from a committed aggregate result table. The manuscript does not use the app as its source of evidence.
@@ -77,6 +78,24 @@ python scripts/audit_m9_m10_donor_overlap.py
 ```
 
 Do not commit Synapse credentials, controlled RDS files, donor-level scores, or donor identifiers from controlled data.
+
+Prepare and run the extended fly, worm, and zebrafish analyses:
+
+```bash
+python scripts/fetch_data.py --include-optional
+python scripts/prepare_extended_data.py
+python scripts/run_afca_aging.py
+python scripts/run_gao_worm_aging.py
+python scripts/run_gao_worm_aging.py --vector-only --reference-age 6
+python scripts/audit_gao_worm_vector.py
+python scripts/audit_gao_worm_vector.py --suffix=-reference6
+python scripts/run_roux_worm_aging.py
+python scripts/run_zebrafish_testis_aging.py
+python scripts/audit_zebrafish_aging.py
+python scripts/plot_extended_aging.py
+```
+
+Bayesian extended commands and input preparation are listed in `notes/extended-analysis-methods.md`. Optional manifests download large public objects, so use `python scripts/fetch_data.py --only <target-filename>` when only one arm is needed.
 
 ## Repository layout
 

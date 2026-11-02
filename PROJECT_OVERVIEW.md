@@ -16,6 +16,9 @@ The project is cross-sectional and observational. It is not a perturbation study
 | Public human cohorts | 11 CELLxGENE cohorts, 621 scored control donors | Donor | Library-normalized signature transport and organ cell-fraction analysis |
 | Human lifespan atlas | PsychAD DLPFC, 284 control donors, 27 cell types | Donor | Covariate-adjusted lifespan and adult-stratum sensitivity models |
 | Naked mole-rat | GSE152886, five animals | Animal | Descriptive skin comparison and equivalence bounds |
+| Fruit fly | AFCA GSE218661, 36 age-by-sex pools measured in head and body | Pool | Cell fractions and expression-vector displacement from 30 to 70 days |
+| C. elegans | Gao GSE229022, 12 wild-type pools; Roux GSE208154 technical series | Pool; descriptive technical series | Platform-adjusted composition and reference-sensitive vector analysis |
+| Zebrafish | GSE275361, ten male fish | Fish | Testis cell fractions and expression vectors with spermatogenesis sensitivity |
 | Methylation | GSE199979 and GSE184211, 1,000 array profiles | Array profile | Published Clock 2 benchmark with per-sample predictive metrics |
 | Longevity context | AnAge Build 14, 4,141 species | Species record | Lifespan context, not single-cell evidence for every species |
 
@@ -33,6 +36,7 @@ One BH family covers 225 public-cohort cell-type tests and 27 primary covariate-
 6. **Mouse fibroblast Cdkn1a increased with age.** The slope was +0.1080 per month with q = 0.0322. The nominal cell-to-cell noise increase depended on the UMI sampling model. Within-cell entropy showed no consistent age-related increase. Off-program expression had no FDR-significant cell-type result, while donor-adjusted Bayesian hierarchical analysis gave a weak positive trend with intervals including zero. See `report/transcriptional-disorder.md` and `report/transcriptional-disorder-bayesian.md`.
 7. **The NMR comparison is inconclusive.** The slope was +0.0058 per normalized lifespan with p = 0.9332 in five animals. The post hoc equivalence margin exceeded the mouse whole-body point estimate.
 8. **Clock correlation and prediction are distinct.** Mouse liver predictive R-squared was 0.3169, compared with squared Pearson correlation of 0.851. Human multi-tissue predictive R-squared was 0.6383. Consortium overlap prevents an independent-validation claim.
+9. **Extended atlases reject one universal direction of transcriptomic displacement.** Fly has significant cell types in both directions and a null global effect. Worm has a strong day-1-reference result that weakens with a balanced day-6 reference. Zebrafish shows an immune-fraction change that persists in sensitivity analyses, but no fine expression hit survives exact-permutation FDR. See `report/extended-cross-species-aging.md`.
 
 ## Donor overlap and data use
 
@@ -42,7 +46,7 @@ Only aggregate PsychAD regression results are public. Controlled donor-level dat
 
 ## Reviewer guide
 
-Start with `README.md` for reproduction and `report/manuscript-aging-mechanisms.md` for the current claims. `HANDOFF.md` describes operations. `notes/crucibles/` contains historical audits whose numerical claims may predate the current pipelines. `PLAN.md` and `KICKOFF.md` are historical planning documents, not evidence of preregistration.
+Start with `README.md` for reproduction and `report/manuscript-aging-mechanisms.md` for the current manuscript claims. Read `report/extended-cross-species-aging.md` for the integrated six-species composition and expression-vector analysis. `HANDOFF.md` describes operations. `notes/crucibles/` contains historical audits whose numerical claims may predate the current pipelines. `PLAN.md` and `KICKOFF.md` are historical planning documents, not evidence of preregistration.
 
 ## Principal limitations
 

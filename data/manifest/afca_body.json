@@ -1,0 +1,9 @@
+{
+  "filename": "afca/GSE218661_adata_body_S_v1.0.h5ad.gz",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE218nnn/GSE218661/suppl/GSE218661_adata_body_S_v1.0.h5ad.gz",
+  "size_bytes": 424596362,
+  "sha256": "a947f244ee55c4a43744dc8b192c7b802914bdfd5e54fb6567e0c3a13bbeb046",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Aging Fly Cell Atlas body H5AD from GEO GSE218661. Includes 5-day FCA and 30/50/70-day AFCA cells."
+}

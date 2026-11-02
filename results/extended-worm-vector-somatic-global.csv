@@ -1,0 +1,5 @@
+species,tissue,cohort,metric,model,donor_set,age_scale,n_donors,n_units,n_donor_units,effect_sd,se,ci95_low,ci95_high,pvalue,age_unit
+C. elegans,Whole animal,Gao_GSE229022,profile_hellinger,unadjusted,all_samples,14.0,12,10,106,2.064042879370062,0.42287801953375015,1.1332946338473355,2.994791124892788,0.00048615260004163504,day
+C. elegans,Whole animal,Gao_GSE229022,profile_hellinger,depth_adjusted,all_samples,14.0,12,10,106,1.5950013322124956,0.25576099657899976,1.0320751742118688,2.1579274902131225,6.381805227984165e-05,day
+C. elegans,All tested tissues,All cohorts,profile_hellinger,unadjusted,all_samples,14.0,12,10,106,2.064042879370062,0.42287801953375015,1.1332946338473355,2.994791124892788,0.00048615260004163504,day
+C. elegans,All tested tissues,All cohorts,profile_hellinger,depth_adjusted,all_samples,14.0,12,10,106,1.5950013322124956,0.25576099657899976,1.0320751742118688,2.1579274902131225,6.381805227984165e-05,day

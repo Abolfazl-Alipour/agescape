@@ -1,0 +1,9 @@
+{
+  "filename": "rat-ma/GSE137869_RAW.tar",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE137nnn/GSE137869/suppl/GSE137869_RAW.tar",
+  "size_bytes": 1138657280,
+  "sha256": "fe6e624a99ba3564c10993a0256e6800c6272d99f334d7585c674196efaf10df",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Ma et al. rat multi-tissue aging and caloric-restriction count matrices. One library per tissue, sex, and condition does not support animal-level inference."
+}

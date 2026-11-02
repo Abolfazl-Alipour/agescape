@@ -1,0 +1,67 @@
+species,tissue,cohort,cell_type,model,effect_per_day,r2,n_libraries,inference
+C. elegans,Whole animal,Roux_GSE208154,0_0:seam cell,unadjusted,0.03948618183948318,0.9186269628890352,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,0_0:seam cell,depth_adjusted,0.03672856053311521,0.9188282671355967,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,10_0:VD motor neurons,unadjusted,0.0064844508356111455,0.5104033931981408,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,10_0:VD motor neurons,depth_adjusted,0.006724299803825599,0.990080624315227,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,12_0:coelomocyte,unadjusted,0.0021325328863324748,0.17062468319655022,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,12_0:coelomocyte,depth_adjusted,0.0012908801987367609,0.8750996059393843,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,14_0:AS/VA motor neurons,unadjusted,0.006759587815399717,0.8368147094236027,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,14_0:AS/VA motor neurons,depth_adjusted,0.007847566845022018,0.9900397359338489,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,15_0:pharyngeal arcade?,unadjusted,0.016749815750477168,0.9178563296448677,9,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,15_0:pharyngeal arcade?,depth_adjusted,0.005779095022804834,0.9973955124340523,9,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,17_0:HSN motor neurons,unadjusted,0.009105006843169491,0.8494253879789624,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,17_0:HSN motor neurons,depth_adjusted,0.007188036806838459,0.9375010617047131,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,19_0:VC1-5 neurons,unadjusted,0.004730272174942825,0.8226703957433915,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,19_0:VC1-5 neurons,depth_adjusted,0.004590391004683614,0.8307320135324174,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,22_0:SIB neurons,unadjusted,0.013165678516938825,0.8098294275167608,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,22_0:SIB neurons,depth_adjusted,0.0075959929196680424,0.9956909420128972,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,23_0:GLR cells,unadjusted,0.007912384312124215,0.8829534315925602,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,23_0:GLR cells,depth_adjusted,0.005391898598725228,0.9948623651038084,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,24_0:pharyngeal epithelium,unadjusted,0.011683242397598218,0.9715239977979674,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,24_0:pharyngeal epithelium,depth_adjusted,0.005834755153115101,0.9906919188794138,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,25_0:IL2 neurons,unadjusted,0.004224066263930279,0.5218707028764386,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,25_0:IL2 neurons,depth_adjusted,0.0025703168904026574,0.9867146505818933,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,27_0:NA epithelium,unadjusted,0.01292754502918518,0.9284218219083408,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,27_0:NA epithelium,depth_adjusted,-0.001414074108385649,0.9986571279344296,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,29_0:NA interneurons,unadjusted,0.01262989785996733,0.7983274027444539,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,29_0:NA interneurons,depth_adjusted,0.008911399963782624,0.9973570093309776,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,2_0:posterior hypodermis,unadjusted,0.032546006056457195,0.8880895216421721,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,2_0:posterior hypodermis,depth_adjusted,0.045544137103888854,0.949343358379388,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,32_0:SMD motor neurons,unadjusted,0.0003400261862391146,0.03838254900464355,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,32_0:SMD motor neurons,depth_adjusted,0.000791175881579384,0.06365712966963366,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,37_0:CEP sheath,unadjusted,0.007896348546284584,0.9558569608474837,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,37_0:CEP sheath,depth_adjusted,0.009891982753315223,0.9632670055106544,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,40_0:XXX,unadjusted,0.004137478999686415,0.7752433517696804,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,40_0:XXX,depth_adjusted,0.004323404902600277,0.9924166528216434,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,48_0:RIC inter neurons,unadjusted,0.004907058579008309,0.4678866732660316,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,48_0:RIC inter neurons,depth_adjusted,0.00399461394717993,0.9699994895173369,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,49_0:AVD inter neurons,unadjusted,8.642813259174265e-05,0.0006846077831977881,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,49_0:AVD inter neurons,depth_adjusted,0.0021746808741442275,0.9498684036627868,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,4_0:BW muscles,unadjusted,0.009464501616450295,0.5316827940144759,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,4_0:BW muscles,depth_adjusted,0.00843309890940196,0.9016337519885779,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,4_1:BW muscles,unadjusted,0.011892123681865745,0.8072984597982034,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,4_1:BW muscles,depth_adjusted,0.008580643650294695,0.9859902846163535,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,5_0:CEP socket,unadjusted,0.013683626269295965,0.923829263237504,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,5_0:CEP socket,depth_adjusted,0.013375889174236134,0.9248503263539707,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,5_1:CEP socket,unadjusted,0.011574015372295191,0.9744404349615825,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,5_1:CEP socket,depth_adjusted,0.009818699935882455,0.9984364125280097,7,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,60_0:spermathecal-uterine valve,unadjusted,0.007765454823775367,0.4536080207576868,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,60_0:spermathecal-uterine valve,depth_adjusted,0.0034265396065800147,0.9988256738673046,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,65_0:URY neurons?,unadjusted,-0.0002784973163131865,0.0039683858790565685,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,65_0:URY neurons?,depth_adjusted,0.003390834076027291,0.9699252521880789,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,66_0:male inter neurons,unadjusted,0.002600221437224536,0.3302736878188962,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,66_0:male inter neurons,depth_adjusted,0.00420961722535417,0.9682072948404744,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_0:motor neurons,unadjusted,0.007634506790922702,0.9355171720319261,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_0:motor neurons,depth_adjusted,0.0076766983415856305,0.964612904956467,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_1:VA/VB motor neurons,unadjusted,0.008429932556847368,0.8890947190473633,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_1:VA/VB motor neurons,depth_adjusted,0.00806282983866572,0.9050246862314005,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_2:motor neurons,unadjusted,0.010637936304420711,0.919164470677551,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_2:motor neurons,depth_adjusted,0.010415914107063218,0.981746543200948,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_3:motor neurons,unadjusted,0.009886771173215896,0.9162639983994543,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,6_3:motor neurons,depth_adjusted,0.009648095356203056,0.9318443079892382,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,7_0:vulval muscle,unadjusted,0.0022235464450383047,0.08725014043496426,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,7_0:vulval muscle,depth_adjusted,0.009158694910805239,0.977081862203143,6,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,8_0:NA hypodermis,unadjusted,0.009125565248770607,0.9729583693306748,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,8_0:NA hypodermis,depth_adjusted,0.007827322329613732,0.9808573331107717,10,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,9_0:pharyngeal epithelium,unadjusted,0.011314217551365253,0.8690022066439242,8,descriptive_only_technical_replicates
+C. elegans,Whole animal,Roux_GSE208154,9_0:pharyngeal epithelium,depth_adjusted,0.0074000622663778146,0.998011672785232,8,descriptive_only_technical_replicates

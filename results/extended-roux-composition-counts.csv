@@ -1,0 +1,2036 @@
+donor,cell_type,n_cells
+TC2_d11_1,0_0:seam cell,28
+TC2_d11_1,100_0:OLL sensory neurons,2
+TC2_d11_1,101_0:AWB amphid neurons,0
+TC2_d11_1,102_0:sphincter muscle,26
+TC2_d11_1,103_0:DVA inter neurons,0
+TC2_d11_1,104_0:AIA inter neurons,3
+TC2_d11_1,105_0:I5 inter neurons,10
+TC2_d11_1,106_0:AWA amphid neurons,0
+TC2_d11_1,107_0:RMG motor neurons,3
+TC2_d11_1,108_0:LUA inter neurons,2
+TC2_d11_1,109_0:RME motor neurons,11
+TC2_d11_1,10_0:VD motor neurons,6
+TC2_d11_1,110_0:coelomocyte,3
+TC2_d11_1,110_1:hmc head mesoderm,0
+TC2_d11_1,111_0:RMD motor neurons,0
+TC2_d11_1,112_0:AIA/AIY inter neurons,0
+TC2_d11_1,113_0:NA inter neurons,2
+TC2_d11_1,114_0:DVC inter neurons,2
+TC2_d11_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",2
+TC2_d11_1,116_0:NSM motor neurons ,2
+TC2_d11_1,117_0:DD motor neurons,2
+TC2_d11_1,"118_0:AVL/DVB, RME motor neurons",0
+TC2_d11_1,119_0:GLR cells,2
+TC2_d11_1,11_0:vulva,10
+TC2_d11_1,11_1:uterus vulva interface,10
+TC2_d11_1,120_0:AVJ/RIM inter neurons,0
+TC2_d11_1,121_0:RIB inter neurons,0
+TC2_d11_1,122_0:RIG inter neurons,2
+TC2_d11_1,123_0:AVF inter neurons,0
+TC2_d11_1,124_0:I4 inter neurons,15
+TC2_d11_1,125_0:M3 motor neurons,11
+TC2_d11_1,126_0:M4 motor neurons,24
+TC2_d11_1,127_0:NA motor neurons,0
+TC2_d11_1,128_0:RIH inter neurons,16
+TC2_d11_1,129_0:RID motor neurons,13
+TC2_d11_1,12_0:coelomocyte,124
+TC2_d11_1,130_0:VD motor neurons,0
+TC2_d11_1,131_0:AVG inter neurons ,25
+TC2_d11_1,132_0:AS motor neurons,0
+TC2_d11_1,133_0:NA motor neurons,0
+TC2_d11_1,134_0:NA sensory neurons,1
+TC2_d11_1,135_0:I6 inter neurons,8
+TC2_d11_1,136_0:DA/PDA tail motor neurons,2
+TC2_d11_1,137_0:PVR inter neurons,2
+TC2_d11_1,138_0:PVT inter neurons,4
+TC2_d11_1,139_0:NA pharyngeal neurons,9
+TC2_d11_1,13_0:CEP socket?,10
+TC2_d11_1,140_0:ALA neurons,5
+TC2_d11_1,141_0:NA sheath glia,0
+TC2_d11_1,142_0:RIR inter neurons,0
+TC2_d11_1,14_0:AS/VA motor neurons,7
+TC2_d11_1,14_1:AS/VA/SAB motor neurons,3
+TC2_d11_1,15_0:pharyngeal arcade?,52
+TC2_d11_1,16_0:NA socket glia,47
+TC2_d11_1,17_0:HSN motor neurons,2
+TC2_d11_1,18_0:gonadal sheath cell,5
+TC2_d11_1,19_0:VC1-5 neurons,0
+TC2_d11_1,"1_0:germline, pharyngeal muscle pm8",21
+TC2_d11_1,1_1:BW muscles,7
+TC2_d11_1,1_2:intestinal muscles,1
+TC2_d11_1,20_0:touch neurons,4
+TC2_d11_1,20_1:neurons,2
+TC2_d11_1,20_2:PLM neurons,8
+TC2_d11_1,21_0:inner labial sheath,16
+TC2_d11_1,21_1:NA glia or tail hypodermis,12
+TC2_d11_1,22_0:SIB neurons,46
+TC2_d11_1,23_0:GLR cells,59
+TC2_d11_1,24_0:pharyngeal epithelium,29
+TC2_d11_1,24_1:pharyngeal muscle,25
+TC2_d11_1,25_0:IL2 neurons,3
+TC2_d11_1,25_1:IL2 neurons,2
+TC2_d11_1,26_0:pharyngeal muscle 7,57
+TC2_d11_1,26_1:pharyngeal muscle and epithelium,12
+TC2_d11_1,"26_2:pharyngeal muscle 6,7",1
+TC2_d11_1,27_0:NA epithelium,15
+TC2_d11_1,28_0:lumbar ganglion neurons,9
+TC2_d11_1,29_0:NA interneurons,60
+TC2_d11_1,2_0:posterior hypodermis,23
+TC2_d11_1,30_0:intestino-rectal valve,20
+TC2_d11_1,30_1:hypodermis?,17
+TC2_d11_1,30_2:hypodermis?,0
+TC2_d11_1,30_3:rectal glands,16
+TC2_d11_1,31_0:DTC distal tip,7
+TC2_d11_1,32_0:SMD motor neurons,2
+TC2_d11_1,33_0:hypodermis,9
+TC2_d11_1,33_1:hyp2,6
+TC2_d11_1,34_0:NA glia,16
+TC2_d11_1,34_1:PH socket,14
+TC2_d11_1,35_0:AFD amphid neurons,1
+TC2_d11_1,35_1:ASEL amphid neurons,0
+TC2_d11_1,35_2:AWC amphid neurons,0
+TC2_d11_1,35_3:AWC-ON amphid neurons,0
+TC2_d11_1,36_0:CEP neurons,6
+TC2_d11_1,36_3:PDE neurons,0
+TC2_d11_1,37_0:CEP sheath,16
+TC2_d11_1,"38_0:intestinal, and vulva muscles",10
+TC2_d11_1,38_1:anal muscle,6
+TC2_d11_1,39_0:URX neurons,0
+TC2_d11_1,39_1:URX neurons,2
+TC2_d11_1,3_0:germline,3
+TC2_d11_1,3_1:intestine,2
+TC2_d11_1,3_2:intestine,4
+TC2_d11_1,40_0:XXX,27
+TC2_d11_1,41_0:pharyngeal gland,39
+TC2_d11_1,41_1:NA pharyngeal epithelium,18
+TC2_d11_1,42_0:NA excretory,8
+TC2_d11_1,43_0:spermatheca,3
+TC2_d11_1,44_0:IL1 neurons ventral dorsal,2
+TC2_d11_1,44_1:IL1 neurons lateral,1
+TC2_d11_1,45_0:AM sheath,9
+TC2_d11_1,46_0:SIA/SIB inter neurons,9
+TC2_d11_1,47_0:PHA/PHB amphid neurons,6
+TC2_d11_1,47_1:ASH amphid neurons,0
+TC2_d11_1,48_0:RIC inter neurons,24
+TC2_d11_1,49_0:AVD inter neurons,11
+TC2_d11_1,4_0:BW muscles,178
+TC2_d11_1,4_1:BW muscles,22
+TC2_d11_1,4_2:head muscle,2
+TC2_d11_1,50_0:PVP anal neurons,11
+TC2_d11_1,51_0:SDQ inter neurons,0
+TC2_d11_1,51_1:SDQ inter neurons,2
+TC2_d11_1,52_0:RMD motor neurons,4
+TC2_d11_1,53_0:M2 motor neurons,31
+TC2_d11_1,54_0:PHC and PVM neurons,1
+TC2_d11_1,55_0:URA/B motor/inter neurons ,0
+TC2_d11_1,56_0:M2 motor neurons,52
+TC2_d11_1,57_0:dorsal uterine cell,0
+TC2_d11_1,58_0:pharyngeal inter neurons 2,18
+TC2_d11_1,58_1:pharyngeal inter neurons 1/3/6,12
+TC2_d11_1,59_0:MI neurons,19
+TC2_d11_1,5_0:CEP socket,36
+TC2_d11_1,5_1:CEP socket,27
+TC2_d11_1,60_0:spermathecal-uterine valve,27
+TC2_d11_1,61_0:AVA/B inter neurons,10
+TC2_d11_1,62_0:PVQ inter neurons,4
+TC2_d11_1,63_0:ASK amphid neurons,2
+TC2_d11_1,64_0:hypodermis,40
+TC2_d11_1,65_0:URY neurons?,0
+TC2_d11_1,66_0:male inter neurons,26
+TC2_d11_1,67_0:pharyngeal neurons,13
+TC2_d11_1,68_0:NA motor neurons,7
+TC2_d11_1,68_1:uterine-vulva cell,0
+TC2_d11_1,69_0:excretory canal neurons,0
+TC2_d11_1,6_0:motor neurons,1
+TC2_d11_1,6_1:VA/VB motor neurons,3
+TC2_d11_1,6_2:motor neurons,3
+TC2_d11_1,6_3:motor neurons,6
+TC2_d11_1,70_0:PVD inter neurons,0
+TC2_d11_1,70_1:FLP neurons,1
+TC2_d11_1,71_0:ASG amphid neurons,2
+TC2_d11_1,72_0:OLQ sensory neurons,0
+TC2_d11_1,73_0:PVC inter neurons,5
+TC2_d11_1,74_0:NA inter neurons,5
+TC2_d11_1,75_0:NA neurons,3
+TC2_d11_1,76_0:NA motor neurons,0
+TC2_d11_1,77_0:ASI amphid neurons,1
+TC2_d11_1,78_0:pharyngeal gland cell,47
+TC2_d11_1,79_0:PH sheath,22
+TC2_d11_1,79_1:excretory cell,7
+TC2_d11_1,7_0:vulval muscle,3
+TC2_d11_1,7_1:vulval muscle,17
+TC2_d11_1,7_2:anal and uterine muscles,7
+TC2_d11_1,80_0:BDU/PVW inter neurons,0
+TC2_d11_1,81_0:ADL amphid neurons,2
+TC2_d11_1,83_0:RIA inter neurons,0
+TC2_d11_1,84_0:ADF amphid neurons,1
+TC2_d11_1,85_0:BAG neurons,0
+TC2_d11_1,86_0:AVB inter neurons,3
+TC2_d11_1,87_0:AIZ amphid inter neurons,0
+TC2_d11_1,88_0:NA glia,11
+TC2_d11_1,89_0:excretory gland cell,26
+TC2_d11_1,8_0:NA hypodermis,57
+TC2_d11_1,90_0:AUA neurons,0
+TC2_d11_1,91_0:AIN inter neurons,0
+TC2_d11_1,92_0:AIM inter neurons,2
+TC2_d11_1,93_0:ADA inter neurons,4
+TC2_d11_1,94_0:RMH motor neurons,2
+TC2_d11_1,95_0:M1 motor neurons,9
+TC2_d11_1,96_0:M5 motor neurons,4
+TC2_d11_1,97_0:AIB inter neurons,1
+TC2_d11_1,"98_0:VC1-3,6 motor neurons",0
+TC2_d11_1,99_0:ASJ amphid neurons,5
+TC2_d11_1,9_0:pharyngeal epithelium,61
+TC2_d11_1,9_1:pharyngeal epithelium and marginal,66
+TC2_d11_1,9_2:pharyngeal epithelium and marginal,44
+TC2_d11_2,0_0:seam cell,24
+TC2_d11_2,100_0:OLL sensory neurons,3
+TC2_d11_2,101_0:AWB amphid neurons,0
+TC2_d11_2,102_0:sphincter muscle,28
+TC2_d11_2,103_0:DVA inter neurons,0
+TC2_d11_2,104_0:AIA inter neurons,2
+TC2_d11_2,105_0:I5 inter neurons,14
+TC2_d11_2,106_0:AWA amphid neurons,2
+TC2_d11_2,107_0:RMG motor neurons,3
+TC2_d11_2,108_0:LUA inter neurons,0
+TC2_d11_2,109_0:RME motor neurons,18
+TC2_d11_2,10_0:VD motor neurons,5
+TC2_d11_2,110_0:coelomocyte,13
+TC2_d11_2,110_1:hmc head mesoderm,0
+TC2_d11_2,111_0:RMD motor neurons,0
+TC2_d11_2,112_0:AIA/AIY inter neurons,0
+TC2_d11_2,113_0:NA inter neurons,0
+TC2_d11_2,114_0:DVC inter neurons,2
+TC2_d11_2,"115_0:RIV/SAA inter neurons, SMB motor neurons",0
+TC2_d11_2,116_0:NSM motor neurons ,3
+TC2_d11_2,117_0:DD motor neurons,1
+TC2_d11_2,"118_0:AVL/DVB, RME motor neurons",1
+TC2_d11_2,119_0:GLR cells,0
+TC2_d11_2,11_0:vulva,6
+TC2_d11_2,11_1:uterus vulva interface,6
+TC2_d11_2,120_0:AVJ/RIM inter neurons,0
+TC2_d11_2,121_0:RIB inter neurons,0
+TC2_d11_2,122_0:RIG inter neurons,0
+TC2_d11_2,123_0:AVF inter neurons,3
+TC2_d11_2,124_0:I4 inter neurons,29
+TC2_d11_2,125_0:M3 motor neurons,6
+TC2_d11_2,126_0:M4 motor neurons,14
+TC2_d11_2,127_0:NA motor neurons,0
+TC2_d11_2,128_0:RIH inter neurons,21
+TC2_d11_2,129_0:RID motor neurons,15
+TC2_d11_2,12_0:coelomocyte,119
+TC2_d11_2,130_0:VD motor neurons,0
+TC2_d11_2,131_0:AVG inter neurons ,19
+TC2_d11_2,132_0:AS motor neurons,2
+TC2_d11_2,133_0:NA motor neurons,1
+TC2_d11_2,134_0:NA sensory neurons,2
+TC2_d11_2,135_0:I6 inter neurons,10
+TC2_d11_2,136_0:DA/PDA tail motor neurons,0
+TC2_d11_2,137_0:PVR inter neurons,1
+TC2_d11_2,138_0:PVT inter neurons,0
+TC2_d11_2,139_0:NA pharyngeal neurons,3
+TC2_d11_2,13_0:CEP socket?,12
+TC2_d11_2,140_0:ALA neurons,3
+TC2_d11_2,141_0:NA sheath glia,0
+TC2_d11_2,142_0:RIR inter neurons,0
+TC2_d11_2,14_0:AS/VA motor neurons,5
+TC2_d11_2,14_1:AS/VA/SAB motor neurons,0
+TC2_d11_2,15_0:pharyngeal arcade?,44
+TC2_d11_2,16_0:NA socket glia,38
+TC2_d11_2,17_0:HSN motor neurons,3
+TC2_d11_2,18_0:gonadal sheath cell,7
+TC2_d11_2,19_0:VC1-5 neurons,0
+TC2_d11_2,"1_0:germline, pharyngeal muscle pm8",15
+TC2_d11_2,1_1:BW muscles,4
+TC2_d11_2,1_2:intestinal muscles,1
+TC2_d11_2,20_0:touch neurons,5
+TC2_d11_2,20_1:neurons,1
+TC2_d11_2,20_2:PLM neurons,7
+TC2_d11_2,21_0:inner labial sheath,17
+TC2_d11_2,21_1:NA glia or tail hypodermis,6
+TC2_d11_2,22_0:SIB neurons,71
+TC2_d11_2,23_0:GLR cells,55
+TC2_d11_2,24_0:pharyngeal epithelium,25
+TC2_d11_2,24_1:pharyngeal muscle,32
+TC2_d11_2,25_0:IL2 neurons,4
+TC2_d11_2,25_1:IL2 neurons,0
+TC2_d11_2,26_0:pharyngeal muscle 7,43
+TC2_d11_2,26_1:pharyngeal muscle and epithelium,8
+TC2_d11_2,"26_2:pharyngeal muscle 6,7",1
+TC2_d11_2,27_0:NA epithelium,16
+TC2_d11_2,28_0:lumbar ganglion neurons,11
+TC2_d11_2,29_0:NA interneurons,70
+TC2_d11_2,2_0:posterior hypodermis,25
+TC2_d11_2,30_0:intestino-rectal valve,33
+TC2_d11_2,30_1:hypodermis?,19
+TC2_d11_2,30_2:hypodermis?,1
+TC2_d11_2,30_3:rectal glands,15
+TC2_d11_2,31_0:DTC distal tip,10
+TC2_d11_2,32_0:SMD motor neurons,0
+TC2_d11_2,33_0:hypodermis,11
+TC2_d11_2,33_1:hyp2,3
+TC2_d11_2,34_0:NA glia,9
+TC2_d11_2,34_1:PH socket,13
+TC2_d11_2,35_0:AFD amphid neurons,1
+TC2_d11_2,35_1:ASEL amphid neurons,0
+TC2_d11_2,35_2:AWC amphid neurons,0
+TC2_d11_2,35_3:AWC-ON amphid neurons,0
+TC2_d11_2,36_0:CEP neurons,2
+TC2_d11_2,36_3:PDE neurons,0
+TC2_d11_2,37_0:CEP sheath,17
+TC2_d11_2,"38_0:intestinal, and vulva muscles",32
+TC2_d11_2,38_1:anal muscle,5
+TC2_d11_2,39_0:URX neurons,0
+TC2_d11_2,39_1:URX neurons,3
+TC2_d11_2,3_0:germline,0
+TC2_d11_2,3_1:intestine,0
+TC2_d11_2,3_2:intestine,2
+TC2_d11_2,40_0:XXX,31
+TC2_d11_2,41_0:pharyngeal gland,27
+TC2_d11_2,41_1:NA pharyngeal epithelium,16
+TC2_d11_2,42_0:NA excretory,15
+TC2_d11_2,43_0:spermatheca,4
+TC2_d11_2,44_0:IL1 neurons ventral dorsal,1
+TC2_d11_2,44_1:IL1 neurons lateral,0
+TC2_d11_2,45_0:AM sheath,4
+TC2_d11_2,46_0:SIA/SIB inter neurons,14
+TC2_d11_2,47_0:PHA/PHB amphid neurons,1
+TC2_d11_2,47_1:ASH amphid neurons,0
+TC2_d11_2,48_0:RIC inter neurons,27
+TC2_d11_2,49_0:AVD inter neurons,18
+TC2_d11_2,4_0:BW muscles,203
+TC2_d11_2,4_1:BW muscles,22
+TC2_d11_2,4_2:head muscle,2
+TC2_d11_2,50_0:PVP anal neurons,12
+TC2_d11_2,51_0:SDQ inter neurons,1
+TC2_d11_2,51_1:SDQ inter neurons,0
+TC2_d11_2,52_0:RMD motor neurons,3
+TC2_d11_2,53_0:M2 motor neurons,35
+TC2_d11_2,54_0:PHC and PVM neurons,1
+TC2_d11_2,55_0:URA/B motor/inter neurons ,1
+TC2_d11_2,56_0:M2 motor neurons,55
+TC2_d11_2,57_0:dorsal uterine cell,1
+TC2_d11_2,58_0:pharyngeal inter neurons 2,12
+TC2_d11_2,58_1:pharyngeal inter neurons 1/3/6,13
+TC2_d11_2,59_0:MI neurons,16
+TC2_d11_2,5_0:CEP socket,37
+TC2_d11_2,5_1:CEP socket,12
+TC2_d11_2,60_0:spermathecal-uterine valve,32
+TC2_d11_2,61_0:AVA/B inter neurons,8
+TC2_d11_2,62_0:PVQ inter neurons,4
+TC2_d11_2,63_0:ASK amphid neurons,4
+TC2_d11_2,64_0:hypodermis,34
+TC2_d11_2,65_0:URY neurons?,0
+TC2_d11_2,66_0:male inter neurons,28
+TC2_d11_2,67_0:pharyngeal neurons,20
+TC2_d11_2,68_0:NA motor neurons,8
+TC2_d11_2,68_1:uterine-vulva cell,1
+TC2_d11_2,69_0:excretory canal neurons,3
+TC2_d11_2,6_0:motor neurons,2
+TC2_d11_2,6_1:VA/VB motor neurons,0
+TC2_d11_2,6_2:motor neurons,2
+TC2_d11_2,6_3:motor neurons,0
+TC2_d11_2,70_0:PVD inter neurons,0
+TC2_d11_2,70_1:FLP neurons,0
+TC2_d11_2,71_0:ASG amphid neurons,1
+TC2_d11_2,72_0:OLQ sensory neurons,2
+TC2_d11_2,73_0:PVC inter neurons,4
+TC2_d11_2,74_0:NA inter neurons,13
+TC2_d11_2,75_0:NA neurons,5
+TC2_d11_2,76_0:NA motor neurons,0
+TC2_d11_2,77_0:ASI amphid neurons,1
+TC2_d11_2,78_0:pharyngeal gland cell,55
+TC2_d11_2,79_0:PH sheath,23
+TC2_d11_2,79_1:excretory cell,1
+TC2_d11_2,7_0:vulval muscle,12
+TC2_d11_2,7_1:vulval muscle,18
+TC2_d11_2,7_2:anal and uterine muscles,8
+TC2_d11_2,80_0:BDU/PVW inter neurons,1
+TC2_d11_2,81_0:ADL amphid neurons,7
+TC2_d11_2,83_0:RIA inter neurons,1
+TC2_d11_2,84_0:ADF amphid neurons,0
+TC2_d11_2,85_0:BAG neurons,0
+TC2_d11_2,86_0:AVB inter neurons,8
+TC2_d11_2,87_0:AIZ amphid inter neurons,1
+TC2_d11_2,88_0:NA glia,10
+TC2_d11_2,89_0:excretory gland cell,33
+TC2_d11_2,8_0:NA hypodermis,48
+TC2_d11_2,90_0:AUA neurons,6
+TC2_d11_2,91_0:AIN inter neurons,1
+TC2_d11_2,92_0:AIM inter neurons,2
+TC2_d11_2,93_0:ADA inter neurons,1
+TC2_d11_2,94_0:RMH motor neurons,1
+TC2_d11_2,95_0:M1 motor neurons,16
+TC2_d11_2,96_0:M5 motor neurons,4
+TC2_d11_2,97_0:AIB inter neurons,1
+TC2_d11_2,"98_0:VC1-3,6 motor neurons",0
+TC2_d11_2,99_0:ASJ amphid neurons,10
+TC2_d11_2,9_0:pharyngeal epithelium,77
+TC2_d11_2,9_1:pharyngeal epithelium and marginal,61
+TC2_d11_2,9_2:pharyngeal epithelium and marginal,42
+TC2_d15_1,0_0:seam cell,1
+TC2_d15_1,100_0:OLL sensory neurons,0
+TC2_d15_1,101_0:AWB amphid neurons,0
+TC2_d15_1,102_0:sphincter muscle,2
+TC2_d15_1,103_0:DVA inter neurons,0
+TC2_d15_1,104_0:AIA inter neurons,0
+TC2_d15_1,105_0:I5 inter neurons,0
+TC2_d15_1,106_0:AWA amphid neurons,0
+TC2_d15_1,107_0:RMG motor neurons,0
+TC2_d15_1,108_0:LUA inter neurons,0
+TC2_d15_1,109_0:RME motor neurons,0
+TC2_d15_1,10_0:VD motor neurons,0
+TC2_d15_1,110_0:coelomocyte,0
+TC2_d15_1,110_1:hmc head mesoderm,0
+TC2_d15_1,111_0:RMD motor neurons,0
+TC2_d15_1,112_0:AIA/AIY inter neurons,0
+TC2_d15_1,113_0:NA inter neurons,0
+TC2_d15_1,114_0:DVC inter neurons,0
+TC2_d15_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",0
+TC2_d15_1,116_0:NSM motor neurons ,0
+TC2_d15_1,117_0:DD motor neurons,0
+TC2_d15_1,"118_0:AVL/DVB, RME motor neurons",0
+TC2_d15_1,119_0:GLR cells,0
+TC2_d15_1,11_0:vulva,3
+TC2_d15_1,11_1:uterus vulva interface,2
+TC2_d15_1,120_0:AVJ/RIM inter neurons,0
+TC2_d15_1,121_0:RIB inter neurons,0
+TC2_d15_1,122_0:RIG inter neurons,0
+TC2_d15_1,123_0:AVF inter neurons,0
+TC2_d15_1,124_0:I4 inter neurons,0
+TC2_d15_1,125_0:M3 motor neurons,0
+TC2_d15_1,126_0:M4 motor neurons,0
+TC2_d15_1,127_0:NA motor neurons,0
+TC2_d15_1,128_0:RIH inter neurons,0
+TC2_d15_1,129_0:RID motor neurons,0
+TC2_d15_1,12_0:coelomocyte,13
+TC2_d15_1,130_0:VD motor neurons,0
+TC2_d15_1,131_0:AVG inter neurons ,1
+TC2_d15_1,132_0:AS motor neurons,0
+TC2_d15_1,133_0:NA motor neurons,0
+TC2_d15_1,134_0:NA sensory neurons,0
+TC2_d15_1,135_0:I6 inter neurons,1
+TC2_d15_1,136_0:DA/PDA tail motor neurons,0
+TC2_d15_1,137_0:PVR inter neurons,0
+TC2_d15_1,138_0:PVT inter neurons,0
+TC2_d15_1,139_0:NA pharyngeal neurons,0
+TC2_d15_1,13_0:CEP socket?,2
+TC2_d15_1,140_0:ALA neurons,0
+TC2_d15_1,141_0:NA sheath glia,0
+TC2_d15_1,142_0:RIR inter neurons,0
+TC2_d15_1,14_0:AS/VA motor neurons,0
+TC2_d15_1,14_1:AS/VA/SAB motor neurons,0
+TC2_d15_1,15_0:pharyngeal arcade?,0
+TC2_d15_1,16_0:NA socket glia,1
+TC2_d15_1,17_0:HSN motor neurons,0
+TC2_d15_1,18_0:gonadal sheath cell,0
+TC2_d15_1,19_0:VC1-5 neurons,0
+TC2_d15_1,"1_0:germline, pharyngeal muscle pm8",2
+TC2_d15_1,1_1:BW muscles,0
+TC2_d15_1,1_2:intestinal muscles,0
+TC2_d15_1,20_0:touch neurons,0
+TC2_d15_1,20_1:neurons,0
+TC2_d15_1,20_2:PLM neurons,0
+TC2_d15_1,21_0:inner labial sheath,0
+TC2_d15_1,21_1:NA glia or tail hypodermis,0
+TC2_d15_1,22_0:SIB neurons,0
+TC2_d15_1,23_0:GLR cells,0
+TC2_d15_1,24_0:pharyngeal epithelium,8
+TC2_d15_1,24_1:pharyngeal muscle,3
+TC2_d15_1,25_0:IL2 neurons,0
+TC2_d15_1,25_1:IL2 neurons,0
+TC2_d15_1,26_0:pharyngeal muscle 7,18
+TC2_d15_1,26_1:pharyngeal muscle and epithelium,1
+TC2_d15_1,"26_2:pharyngeal muscle 6,7",0
+TC2_d15_1,27_0:NA epithelium,0
+TC2_d15_1,28_0:lumbar ganglion neurons,0
+TC2_d15_1,29_0:NA interneurons,0
+TC2_d15_1,2_0:posterior hypodermis,2
+TC2_d15_1,30_0:intestino-rectal valve,30
+TC2_d15_1,30_1:hypodermis?,1
+TC2_d15_1,30_2:hypodermis?,0
+TC2_d15_1,30_3:rectal glands,0
+TC2_d15_1,31_0:DTC distal tip,4
+TC2_d15_1,32_0:SMD motor neurons,0
+TC2_d15_1,33_0:hypodermis,0
+TC2_d15_1,33_1:hyp2,0
+TC2_d15_1,34_0:NA glia,0
+TC2_d15_1,34_1:PH socket,0
+TC2_d15_1,35_0:AFD amphid neurons,0
+TC2_d15_1,35_1:ASEL amphid neurons,0
+TC2_d15_1,35_2:AWC amphid neurons,0
+TC2_d15_1,35_3:AWC-ON amphid neurons,0
+TC2_d15_1,36_0:CEP neurons,0
+TC2_d15_1,36_3:PDE neurons,0
+TC2_d15_1,37_0:CEP sheath,0
+TC2_d15_1,"38_0:intestinal, and vulva muscles",1
+TC2_d15_1,38_1:anal muscle,0
+TC2_d15_1,39_0:URX neurons,0
+TC2_d15_1,39_1:URX neurons,0
+TC2_d15_1,3_0:germline,0
+TC2_d15_1,3_1:intestine,0
+TC2_d15_1,3_2:intestine,1
+TC2_d15_1,40_0:XXX,1
+TC2_d15_1,41_0:pharyngeal gland,41
+TC2_d15_1,41_1:NA pharyngeal epithelium,4
+TC2_d15_1,42_0:NA excretory,0
+TC2_d15_1,43_0:spermatheca,1
+TC2_d15_1,44_0:IL1 neurons ventral dorsal,0
+TC2_d15_1,44_1:IL1 neurons lateral,1
+TC2_d15_1,45_0:AM sheath,0
+TC2_d15_1,46_0:SIA/SIB inter neurons,0
+TC2_d15_1,47_0:PHA/PHB amphid neurons,0
+TC2_d15_1,47_1:ASH amphid neurons,0
+TC2_d15_1,48_0:RIC inter neurons,0
+TC2_d15_1,49_0:AVD inter neurons,0
+TC2_d15_1,4_0:BW muscles,15
+TC2_d15_1,4_1:BW muscles,2
+TC2_d15_1,4_2:head muscle,0
+TC2_d15_1,50_0:PVP anal neurons,0
+TC2_d15_1,51_0:SDQ inter neurons,0
+TC2_d15_1,51_1:SDQ inter neurons,0
+TC2_d15_1,52_0:RMD motor neurons,0
+TC2_d15_1,53_0:M2 motor neurons,2
+TC2_d15_1,54_0:PHC and PVM neurons,0
+TC2_d15_1,55_0:URA/B motor/inter neurons ,0
+TC2_d15_1,56_0:M2 motor neurons,0
+TC2_d15_1,57_0:dorsal uterine cell,0
+TC2_d15_1,58_0:pharyngeal inter neurons 2,0
+TC2_d15_1,58_1:pharyngeal inter neurons 1/3/6,0
+TC2_d15_1,59_0:MI neurons,0
+TC2_d15_1,5_0:CEP socket,5
+TC2_d15_1,5_1:CEP socket,1
+TC2_d15_1,60_0:spermathecal-uterine valve,0
+TC2_d15_1,61_0:AVA/B inter neurons,0
+TC2_d15_1,62_0:PVQ inter neurons,0
+TC2_d15_1,63_0:ASK amphid neurons,0
+TC2_d15_1,64_0:hypodermis,0
+TC2_d15_1,65_0:URY neurons?,0
+TC2_d15_1,66_0:male inter neurons,0
+TC2_d15_1,67_0:pharyngeal neurons,0
+TC2_d15_1,68_0:NA motor neurons,0
+TC2_d15_1,68_1:uterine-vulva cell,0
+TC2_d15_1,69_0:excretory canal neurons,0
+TC2_d15_1,6_0:motor neurons,0
+TC2_d15_1,6_1:VA/VB motor neurons,0
+TC2_d15_1,6_2:motor neurons,1
+TC2_d15_1,6_3:motor neurons,0
+TC2_d15_1,70_0:PVD inter neurons,0
+TC2_d15_1,70_1:FLP neurons,0
+TC2_d15_1,71_0:ASG amphid neurons,0
+TC2_d15_1,72_0:OLQ sensory neurons,0
+TC2_d15_1,73_0:PVC inter neurons,0
+TC2_d15_1,74_0:NA inter neurons,0
+TC2_d15_1,75_0:NA neurons,0
+TC2_d15_1,76_0:NA motor neurons,0
+TC2_d15_1,77_0:ASI amphid neurons,0
+TC2_d15_1,78_0:pharyngeal gland cell,10
+TC2_d15_1,79_0:PH sheath,0
+TC2_d15_1,79_1:excretory cell,0
+TC2_d15_1,7_0:vulval muscle,2
+TC2_d15_1,7_1:vulval muscle,1
+TC2_d15_1,7_2:anal and uterine muscles,0
+TC2_d15_1,80_0:BDU/PVW inter neurons,0
+TC2_d15_1,81_0:ADL amphid neurons,0
+TC2_d15_1,83_0:RIA inter neurons,0
+TC2_d15_1,84_0:ADF amphid neurons,0
+TC2_d15_1,85_0:BAG neurons,0
+TC2_d15_1,86_0:AVB inter neurons,0
+TC2_d15_1,87_0:AIZ amphid inter neurons,0
+TC2_d15_1,88_0:NA glia,0
+TC2_d15_1,89_0:excretory gland cell,2
+TC2_d15_1,8_0:NA hypodermis,0
+TC2_d15_1,90_0:AUA neurons,0
+TC2_d15_1,91_0:AIN inter neurons,0
+TC2_d15_1,92_0:AIM inter neurons,0
+TC2_d15_1,93_0:ADA inter neurons,0
+TC2_d15_1,94_0:RMH motor neurons,0
+TC2_d15_1,95_0:M1 motor neurons,0
+TC2_d15_1,96_0:M5 motor neurons,0
+TC2_d15_1,97_0:AIB inter neurons,0
+TC2_d15_1,"98_0:VC1-3,6 motor neurons",0
+TC2_d15_1,99_0:ASJ amphid neurons,0
+TC2_d15_1,9_0:pharyngeal epithelium,14
+TC2_d15_1,9_1:pharyngeal epithelium and marginal,3
+TC2_d15_1,9_2:pharyngeal epithelium and marginal,4
+TC2_d1_1,0_0:seam cell,420
+TC2_d1_1,100_0:OLL sensory neurons,27
+TC2_d1_1,101_0:AWB amphid neurons,21
+TC2_d1_1,102_0:sphincter muscle,7
+TC2_d1_1,103_0:DVA inter neurons,14
+TC2_d1_1,104_0:AIA inter neurons,26
+TC2_d1_1,105_0:I5 inter neurons,16
+TC2_d1_1,106_0:AWA amphid neurons,8
+TC2_d1_1,107_0:RMG motor neurons,27
+TC2_d1_1,108_0:LUA inter neurons,25
+TC2_d1_1,109_0:RME motor neurons,26
+TC2_d1_1,10_0:VD motor neurons,220
+TC2_d1_1,110_0:coelomocyte,6
+TC2_d1_1,110_1:hmc head mesoderm,4
+TC2_d1_1,111_0:RMD motor neurons,15
+TC2_d1_1,112_0:AIA/AIY inter neurons,18
+TC2_d1_1,113_0:NA inter neurons,7
+TC2_d1_1,114_0:DVC inter neurons,17
+TC2_d1_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",18
+TC2_d1_1,116_0:NSM motor neurons ,36
+TC2_d1_1,117_0:DD motor neurons,24
+TC2_d1_1,"118_0:AVL/DVB, RME motor neurons",12
+TC2_d1_1,119_0:GLR cells,7
+TC2_d1_1,11_0:vulva,26
+TC2_d1_1,11_1:uterus vulva interface,0
+TC2_d1_1,120_0:AVJ/RIM inter neurons,8
+TC2_d1_1,121_0:RIB inter neurons,15
+TC2_d1_1,122_0:RIG inter neurons,22
+TC2_d1_1,123_0:AVF inter neurons,29
+TC2_d1_1,124_0:I4 inter neurons,29
+TC2_d1_1,125_0:M3 motor neurons,26
+TC2_d1_1,126_0:M4 motor neurons,11
+TC2_d1_1,127_0:NA motor neurons,13
+TC2_d1_1,128_0:RIH inter neurons,11
+TC2_d1_1,129_0:RID motor neurons,18
+TC2_d1_1,12_0:coelomocyte,36
+TC2_d1_1,130_0:VD motor neurons,11
+TC2_d1_1,131_0:AVG inter neurons ,7
+TC2_d1_1,132_0:AS motor neurons,12
+TC2_d1_1,133_0:NA motor neurons,20
+TC2_d1_1,134_0:NA sensory neurons,12
+TC2_d1_1,135_0:I6 inter neurons,8
+TC2_d1_1,136_0:DA/PDA tail motor neurons,6
+TC2_d1_1,137_0:PVR inter neurons,15
+TC2_d1_1,138_0:PVT inter neurons,2
+TC2_d1_1,139_0:NA pharyngeal neurons,11
+TC2_d1_1,13_0:CEP socket?,0
+TC2_d1_1,140_0:ALA neurons,12
+TC2_d1_1,141_0:NA sheath glia,1
+TC2_d1_1,142_0:RIR inter neurons,2
+TC2_d1_1,14_0:AS/VA motor neurons,154
+TC2_d1_1,14_1:AS/VA/SAB motor neurons,50
+TC2_d1_1,15_0:pharyngeal arcade?,65
+TC2_d1_1,16_0:NA socket glia,6
+TC2_d1_1,17_0:HSN motor neurons,53
+TC2_d1_1,18_0:gonadal sheath cell,7
+TC2_d1_1,19_0:VC1-5 neurons,112
+TC2_d1_1,"1_0:germline, pharyngeal muscle pm8",3
+TC2_d1_1,1_1:BW muscles,1
+TC2_d1_1,1_2:intestinal muscles,0
+TC2_d1_1,20_0:touch neurons,48
+TC2_d1_1,20_1:neurons,25
+TC2_d1_1,20_2:PLM neurons,13
+TC2_d1_1,21_0:inner labial sheath,5
+TC2_d1_1,21_1:NA glia or tail hypodermis,5
+TC2_d1_1,22_0:SIB neurons,83
+TC2_d1_1,23_0:GLR cells,84
+TC2_d1_1,24_0:pharyngeal epithelium,52
+TC2_d1_1,24_1:pharyngeal muscle,10
+TC2_d1_1,25_0:IL2 neurons,63
+TC2_d1_1,25_1:IL2 neurons,32
+TC2_d1_1,26_0:pharyngeal muscle 7,9
+TC2_d1_1,26_1:pharyngeal muscle and epithelium,15
+TC2_d1_1,"26_2:pharyngeal muscle 6,7",11
+TC2_d1_1,27_0:NA epithelium,76
+TC2_d1_1,28_0:lumbar ganglion neurons,58
+TC2_d1_1,29_0:NA interneurons,72
+TC2_d1_1,2_0:posterior hypodermis,279
+TC2_d1_1,30_0:intestino-rectal valve,2
+TC2_d1_1,30_1:hypodermis?,14
+TC2_d1_1,30_2:hypodermis?,9
+TC2_d1_1,30_3:rectal glands,2
+TC2_d1_1,31_0:DTC distal tip,6
+TC2_d1_1,32_0:SMD motor neurons,88
+TC2_d1_1,33_0:hypodermis,26
+TC2_d1_1,33_1:hyp2,0
+TC2_d1_1,34_0:NA glia,5
+TC2_d1_1,34_1:PH socket,0
+TC2_d1_1,35_0:AFD amphid neurons,14
+TC2_d1_1,35_1:ASEL amphid neurons,8
+TC2_d1_1,35_2:AWC amphid neurons,4
+TC2_d1_1,35_3:AWC-ON amphid neurons,7
+TC2_d1_1,36_0:CEP neurons,19
+TC2_d1_1,36_3:PDE neurons,2
+TC2_d1_1,37_0:CEP sheath,91
+TC2_d1_1,"38_0:intestinal, and vulva muscles",21
+TC2_d1_1,38_1:anal muscle,2
+TC2_d1_1,39_0:URX neurons,32
+TC2_d1_1,39_1:URX neurons,14
+TC2_d1_1,3_0:germline,0
+TC2_d1_1,3_1:intestine,23
+TC2_d1_1,3_2:intestine,3
+TC2_d1_1,40_0:XXX,49
+TC2_d1_1,41_0:pharyngeal gland,5
+TC2_d1_1,41_1:NA pharyngeal epithelium,8
+TC2_d1_1,42_0:NA excretory,2
+TC2_d1_1,43_0:spermatheca,4
+TC2_d1_1,44_0:IL1 neurons ventral dorsal,16
+TC2_d1_1,44_1:IL1 neurons lateral,10
+TC2_d1_1,45_0:AM sheath,29
+TC2_d1_1,46_0:SIA/SIB inter neurons,42
+TC2_d1_1,47_0:PHA/PHB amphid neurons,23
+TC2_d1_1,47_1:ASH amphid neurons,16
+TC2_d1_1,48_0:RIC inter neurons,59
+TC2_d1_1,49_0:AVD inter neurons,73
+TC2_d1_1,4_0:BW muscles,97
+TC2_d1_1,4_1:BW muscles,25
+TC2_d1_1,4_2:head muscle,2
+TC2_d1_1,50_0:PVP anal neurons,25
+TC2_d1_1,51_0:SDQ inter neurons,10
+TC2_d1_1,51_1:SDQ inter neurons,9
+TC2_d1_1,52_0:RMD motor neurons,55
+TC2_d1_1,53_0:M2 motor neurons,40
+TC2_d1_1,54_0:PHC and PVM neurons,24
+TC2_d1_1,55_0:URA/B motor/inter neurons ,47
+TC2_d1_1,56_0:M2 motor neurons,45
+TC2_d1_1,57_0:dorsal uterine cell,18
+TC2_d1_1,58_0:pharyngeal inter neurons 2,22
+TC2_d1_1,58_1:pharyngeal inter neurons 1/3/6,14
+TC2_d1_1,59_0:MI neurons,56
+TC2_d1_1,5_0:CEP socket,60
+TC2_d1_1,5_1:CEP socket,97
+TC2_d1_1,60_0:spermathecal-uterine valve,46
+TC2_d1_1,61_0:AVA/B inter neurons,59
+TC2_d1_1,62_0:PVQ inter neurons,24
+TC2_d1_1,63_0:ASK amphid neurons,24
+TC2_d1_1,64_0:hypodermis,0
+TC2_d1_1,65_0:URY neurons?,60
+TC2_d1_1,66_0:male inter neurons,32
+TC2_d1_1,67_0:pharyngeal neurons,53
+TC2_d1_1,68_0:NA motor neurons,13
+TC2_d1_1,68_1:uterine-vulva cell,14
+TC2_d1_1,69_0:excretory canal neurons,14
+TC2_d1_1,6_0:motor neurons,116
+TC2_d1_1,6_1:VA/VB motor neurons,138
+TC2_d1_1,6_2:motor neurons,95
+TC2_d1_1,6_3:motor neurons,66
+TC2_d1_1,70_0:PVD inter neurons,26
+TC2_d1_1,70_1:FLP neurons,11
+TC2_d1_1,71_0:ASG amphid neurons,32
+TC2_d1_1,72_0:OLQ sensory neurons,42
+TC2_d1_1,73_0:PVC inter neurons,28
+TC2_d1_1,74_0:NA inter neurons,34
+TC2_d1_1,75_0:NA neurons,21
+TC2_d1_1,76_0:NA motor neurons,49
+TC2_d1_1,77_0:ASI amphid neurons,28
+TC2_d1_1,78_0:pharyngeal gland cell,13
+TC2_d1_1,79_0:PH sheath,1
+TC2_d1_1,79_1:excretory cell,15
+TC2_d1_1,7_0:vulval muscle,51
+TC2_d1_1,7_1:vulval muscle,45
+TC2_d1_1,7_2:anal and uterine muscles,19
+TC2_d1_1,80_0:BDU/PVW inter neurons,33
+TC2_d1_1,81_0:ADL amphid neurons,17
+TC2_d1_1,83_0:RIA inter neurons,37
+TC2_d1_1,84_0:ADF amphid neurons,18
+TC2_d1_1,85_0:BAG neurons,18
+TC2_d1_1,86_0:AVB inter neurons,29
+TC2_d1_1,87_0:AIZ amphid inter neurons,38
+TC2_d1_1,88_0:NA glia,0
+TC2_d1_1,89_0:excretory gland cell,9
+TC2_d1_1,8_0:NA hypodermis,55
+TC2_d1_1,90_0:AUA neurons,26
+TC2_d1_1,91_0:AIN inter neurons,25
+TC2_d1_1,92_0:AIM inter neurons,33
+TC2_d1_1,93_0:ADA inter neurons,33
+TC2_d1_1,94_0:RMH motor neurons,39
+TC2_d1_1,95_0:M1 motor neurons,34
+TC2_d1_1,96_0:M5 motor neurons,27
+TC2_d1_1,97_0:AIB inter neurons,21
+TC2_d1_1,"98_0:VC1-3,6 motor neurons",27
+TC2_d1_1,99_0:ASJ amphid neurons,20
+TC2_d1_1,9_0:pharyngeal epithelium,98
+TC2_d1_1,9_1:pharyngeal epithelium and marginal,48
+TC2_d1_1,9_2:pharyngeal epithelium and marginal,23
+TC2_d1_2,0_0:seam cell,391
+TC2_d1_2,100_0:OLL sensory neurons,32
+TC2_d1_2,101_0:AWB amphid neurons,23
+TC2_d1_2,102_0:sphincter muscle,8
+TC2_d1_2,103_0:DVA inter neurons,15
+TC2_d1_2,104_0:AIA inter neurons,20
+TC2_d1_2,105_0:I5 inter neurons,26
+TC2_d1_2,106_0:AWA amphid neurons,15
+TC2_d1_2,107_0:RMG motor neurons,26
+TC2_d1_2,108_0:LUA inter neurons,29
+TC2_d1_2,109_0:RME motor neurons,15
+TC2_d1_2,10_0:VD motor neurons,233
+TC2_d1_2,110_0:coelomocyte,4
+TC2_d1_2,110_1:hmc head mesoderm,4
+TC2_d1_2,111_0:RMD motor neurons,31
+TC2_d1_2,112_0:AIA/AIY inter neurons,16
+TC2_d1_2,113_0:NA inter neurons,16
+TC2_d1_2,114_0:DVC inter neurons,21
+TC2_d1_2,"115_0:RIV/SAA inter neurons, SMB motor neurons",15
+TC2_d1_2,116_0:NSM motor neurons ,27
+TC2_d1_2,117_0:DD motor neurons,28
+TC2_d1_2,"118_0:AVL/DVB, RME motor neurons",20
+TC2_d1_2,119_0:GLR cells,7
+TC2_d1_2,11_0:vulva,22
+TC2_d1_2,11_1:uterus vulva interface,4
+TC2_d1_2,120_0:AVJ/RIM inter neurons,14
+TC2_d1_2,121_0:RIB inter neurons,13
+TC2_d1_2,122_0:RIG inter neurons,25
+TC2_d1_2,123_0:AVF inter neurons,20
+TC2_d1_2,124_0:I4 inter neurons,21
+TC2_d1_2,125_0:M3 motor neurons,33
+TC2_d1_2,126_0:M4 motor neurons,10
+TC2_d1_2,127_0:NA motor neurons,12
+TC2_d1_2,128_0:RIH inter neurons,11
+TC2_d1_2,129_0:RID motor neurons,16
+TC2_d1_2,12_0:coelomocyte,34
+TC2_d1_2,130_0:VD motor neurons,9
+TC2_d1_2,131_0:AVG inter neurons ,14
+TC2_d1_2,132_0:AS motor neurons,20
+TC2_d1_2,133_0:NA motor neurons,30
+TC2_d1_2,134_0:NA sensory neurons,19
+TC2_d1_2,135_0:I6 inter neurons,19
+TC2_d1_2,136_0:DA/PDA tail motor neurons,13
+TC2_d1_2,137_0:PVR inter neurons,13
+TC2_d1_2,138_0:PVT inter neurons,7
+TC2_d1_2,139_0:NA pharyngeal neurons,13
+TC2_d1_2,13_0:CEP socket?,0
+TC2_d1_2,140_0:ALA neurons,7
+TC2_d1_2,141_0:NA sheath glia,2
+TC2_d1_2,142_0:RIR inter neurons,9
+TC2_d1_2,14_0:AS/VA motor neurons,170
+TC2_d1_2,14_1:AS/VA/SAB motor neurons,39
+TC2_d1_2,15_0:pharyngeal arcade?,73
+TC2_d1_2,16_0:NA socket glia,15
+TC2_d1_2,17_0:HSN motor neurons,46
+TC2_d1_2,18_0:gonadal sheath cell,3
+TC2_d1_2,19_0:VC1-5 neurons,111
+TC2_d1_2,"1_0:germline, pharyngeal muscle pm8",10
+TC2_d1_2,1_1:BW muscles,2
+TC2_d1_2,1_2:intestinal muscles,0
+TC2_d1_2,20_0:touch neurons,52
+TC2_d1_2,20_1:neurons,21
+TC2_d1_2,20_2:PLM neurons,13
+TC2_d1_2,21_0:inner labial sheath,8
+TC2_d1_2,21_1:NA glia or tail hypodermis,0
+TC2_d1_2,22_0:SIB neurons,75
+TC2_d1_2,23_0:GLR cells,95
+TC2_d1_2,24_0:pharyngeal epithelium,56
+TC2_d1_2,24_1:pharyngeal muscle,15
+TC2_d1_2,25_0:IL2 neurons,63
+TC2_d1_2,25_1:IL2 neurons,47
+TC2_d1_2,26_0:pharyngeal muscle 7,14
+TC2_d1_2,26_1:pharyngeal muscle and epithelium,14
+TC2_d1_2,"26_2:pharyngeal muscle 6,7",14
+TC2_d1_2,27_0:NA epithelium,90
+TC2_d1_2,28_0:lumbar ganglion neurons,46
+TC2_d1_2,29_0:NA interneurons,44
+TC2_d1_2,2_0:posterior hypodermis,282
+TC2_d1_2,30_0:intestino-rectal valve,1
+TC2_d1_2,30_1:hypodermis?,16
+TC2_d1_2,30_2:hypodermis?,9
+TC2_d1_2,30_3:rectal glands,0
+TC2_d1_2,31_0:DTC distal tip,16
+TC2_d1_2,32_0:SMD motor neurons,72
+TC2_d1_2,33_0:hypodermis,36
+TC2_d1_2,33_1:hyp2,0
+TC2_d1_2,34_0:NA glia,3
+TC2_d1_2,34_1:PH socket,0
+TC2_d1_2,35_0:AFD amphid neurons,9
+TC2_d1_2,35_1:ASEL amphid neurons,13
+TC2_d1_2,35_2:AWC amphid neurons,9
+TC2_d1_2,35_3:AWC-ON amphid neurons,13
+TC2_d1_2,36_0:CEP neurons,24
+TC2_d1_2,36_3:PDE neurons,13
+TC2_d1_2,37_0:CEP sheath,71
+TC2_d1_2,"38_0:intestinal, and vulva muscles",16
+TC2_d1_2,38_1:anal muscle,6
+TC2_d1_2,39_0:URX neurons,38
+TC2_d1_2,39_1:URX neurons,8
+TC2_d1_2,3_0:germline,2
+TC2_d1_2,3_1:intestine,24
+TC2_d1_2,3_2:intestine,5
+TC2_d1_2,40_0:XXX,53
+TC2_d1_2,41_0:pharyngeal gland,12
+TC2_d1_2,41_1:NA pharyngeal epithelium,10
+TC2_d1_2,42_0:NA excretory,1
+TC2_d1_2,43_0:spermatheca,3
+TC2_d1_2,44_0:IL1 neurons ventral dorsal,18
+TC2_d1_2,44_1:IL1 neurons lateral,12
+TC2_d1_2,45_0:AM sheath,32
+TC2_d1_2,46_0:SIA/SIB inter neurons,37
+TC2_d1_2,47_0:PHA/PHB amphid neurons,18
+TC2_d1_2,47_1:ASH amphid neurons,13
+TC2_d1_2,48_0:RIC inter neurons,65
+TC2_d1_2,49_0:AVD inter neurons,53
+TC2_d1_2,4_0:BW muscles,103
+TC2_d1_2,4_1:BW muscles,26
+TC2_d1_2,4_2:head muscle,2
+TC2_d1_2,50_0:PVP anal neurons,24
+TC2_d1_2,51_0:SDQ inter neurons,18
+TC2_d1_2,51_1:SDQ inter neurons,31
+TC2_d1_2,52_0:RMD motor neurons,35
+TC2_d1_2,53_0:M2 motor neurons,61
+TC2_d1_2,54_0:PHC and PVM neurons,26
+TC2_d1_2,55_0:URA/B motor/inter neurons ,41
+TC2_d1_2,56_0:M2 motor neurons,51
+TC2_d1_2,57_0:dorsal uterine cell,20
+TC2_d1_2,58_0:pharyngeal inter neurons 2,27
+TC2_d1_2,58_1:pharyngeal inter neurons 1/3/6,7
+TC2_d1_2,59_0:MI neurons,46
+TC2_d1_2,5_0:CEP socket,66
+TC2_d1_2,5_1:CEP socket,86
+TC2_d1_2,60_0:spermathecal-uterine valve,47
+TC2_d1_2,61_0:AVA/B inter neurons,48
+TC2_d1_2,62_0:PVQ inter neurons,29
+TC2_d1_2,63_0:ASK amphid neurons,20
+TC2_d1_2,64_0:hypodermis,0
+TC2_d1_2,65_0:URY neurons?,57
+TC2_d1_2,66_0:male inter neurons,35
+TC2_d1_2,67_0:pharyngeal neurons,52
+TC2_d1_2,68_0:NA motor neurons,13
+TC2_d1_2,68_1:uterine-vulva cell,21
+TC2_d1_2,69_0:excretory canal neurons,18
+TC2_d1_2,6_0:motor neurons,113
+TC2_d1_2,6_1:VA/VB motor neurons,104
+TC2_d1_2,6_2:motor neurons,92
+TC2_d1_2,6_3:motor neurons,89
+TC2_d1_2,70_0:PVD inter neurons,29
+TC2_d1_2,70_1:FLP neurons,13
+TC2_d1_2,71_0:ASG amphid neurons,31
+TC2_d1_2,72_0:OLQ sensory neurons,48
+TC2_d1_2,73_0:PVC inter neurons,26
+TC2_d1_2,74_0:NA inter neurons,24
+TC2_d1_2,75_0:NA neurons,19
+TC2_d1_2,76_0:NA motor neurons,36
+TC2_d1_2,77_0:ASI amphid neurons,19
+TC2_d1_2,78_0:pharyngeal gland cell,11
+TC2_d1_2,79_0:PH sheath,0
+TC2_d1_2,79_1:excretory cell,15
+TC2_d1_2,7_0:vulval muscle,56
+TC2_d1_2,7_1:vulval muscle,52
+TC2_d1_2,7_2:anal and uterine muscles,19
+TC2_d1_2,80_0:BDU/PVW inter neurons,39
+TC2_d1_2,81_0:ADL amphid neurons,13
+TC2_d1_2,83_0:RIA inter neurons,29
+TC2_d1_2,84_0:ADF amphid neurons,19
+TC2_d1_2,85_0:BAG neurons,28
+TC2_d1_2,86_0:AVB inter neurons,26
+TC2_d1_2,87_0:AIZ amphid inter neurons,28
+TC2_d1_2,88_0:NA glia,0
+TC2_d1_2,89_0:excretory gland cell,2
+TC2_d1_2,8_0:NA hypodermis,69
+TC2_d1_2,90_0:AUA neurons,24
+TC2_d1_2,91_0:AIN inter neurons,30
+TC2_d1_2,92_0:AIM inter neurons,34
+TC2_d1_2,93_0:ADA inter neurons,29
+TC2_d1_2,94_0:RMH motor neurons,36
+TC2_d1_2,95_0:M1 motor neurons,27
+TC2_d1_2,96_0:M5 motor neurons,24
+TC2_d1_2,97_0:AIB inter neurons,18
+TC2_d1_2,"98_0:VC1-3,6 motor neurons",39
+TC2_d1_2,99_0:ASJ amphid neurons,16
+TC2_d1_2,9_0:pharyngeal epithelium,90
+TC2_d1_2,9_1:pharyngeal epithelium and marginal,58
+TC2_d1_2,9_2:pharyngeal epithelium and marginal,19
+TC2_d3_1,0_0:seam cell,215
+TC2_d3_1,100_0:OLL sensory neurons,37
+TC2_d3_1,101_0:AWB amphid neurons,55
+TC2_d3_1,102_0:sphincter muscle,3
+TC2_d3_1,103_0:DVA inter neurons,5
+TC2_d3_1,104_0:AIA inter neurons,12
+TC2_d3_1,105_0:I5 inter neurons,24
+TC2_d3_1,106_0:AWA amphid neurons,38
+TC2_d3_1,107_0:RMG motor neurons,9
+TC2_d3_1,108_0:LUA inter neurons,4
+TC2_d3_1,109_0:RME motor neurons,20
+TC2_d3_1,10_0:VD motor neurons,78
+TC2_d3_1,110_0:coelomocyte,3
+TC2_d3_1,110_1:hmc head mesoderm,9
+TC2_d3_1,111_0:RMD motor neurons,24
+TC2_d3_1,112_0:AIA/AIY inter neurons,11
+TC2_d3_1,113_0:NA inter neurons,24
+TC2_d3_1,114_0:DVC inter neurons,1
+TC2_d3_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",19
+TC2_d3_1,116_0:NSM motor neurons ,19
+TC2_d3_1,117_0:DD motor neurons,4
+TC2_d3_1,"118_0:AVL/DVB, RME motor neurons",29
+TC2_d3_1,119_0:GLR cells,3
+TC2_d3_1,11_0:vulva,9
+TC2_d3_1,11_1:uterus vulva interface,23
+TC2_d3_1,120_0:AVJ/RIM inter neurons,23
+TC2_d3_1,121_0:RIB inter neurons,26
+TC2_d3_1,122_0:RIG inter neurons,6
+TC2_d3_1,123_0:AVF inter neurons,6
+TC2_d3_1,124_0:I4 inter neurons,12
+TC2_d3_1,125_0:M3 motor neurons,9
+TC2_d3_1,126_0:M4 motor neurons,8
+TC2_d3_1,127_0:NA motor neurons,25
+TC2_d3_1,128_0:RIH inter neurons,9
+TC2_d3_1,129_0:RID motor neurons,22
+TC2_d3_1,12_0:coelomocyte,9
+TC2_d3_1,130_0:VD motor neurons,11
+TC2_d3_1,131_0:AVG inter neurons ,4
+TC2_d3_1,132_0:AS motor neurons,1
+TC2_d3_1,133_0:NA motor neurons,9
+TC2_d3_1,134_0:NA sensory neurons,3
+TC2_d3_1,135_0:I6 inter neurons,12
+TC2_d3_1,136_0:DA/PDA tail motor neurons,0
+TC2_d3_1,137_0:PVR inter neurons,2
+TC2_d3_1,138_0:PVT inter neurons,1
+TC2_d3_1,139_0:NA pharyngeal neurons,14
+TC2_d3_1,13_0:CEP socket?,3
+TC2_d3_1,140_0:ALA neurons,0
+TC2_d3_1,141_0:NA sheath glia,6
+TC2_d3_1,142_0:RIR inter neurons,11
+TC2_d3_1,14_0:AS/VA motor neurons,29
+TC2_d3_1,14_1:AS/VA/SAB motor neurons,7
+TC2_d3_1,15_0:pharyngeal arcade?,184
+TC2_d3_1,16_0:NA socket glia,189
+TC2_d3_1,17_0:HSN motor neurons,33
+TC2_d3_1,18_0:gonadal sheath cell,23
+TC2_d3_1,19_0:VC1-5 neurons,31
+TC2_d3_1,"1_0:germline, pharyngeal muscle pm8",69
+TC2_d3_1,1_1:BW muscles,32
+TC2_d3_1,1_2:intestinal muscles,14
+TC2_d3_1,20_0:touch neurons,12
+TC2_d3_1,20_1:neurons,7
+TC2_d3_1,20_2:PLM neurons,5
+TC2_d3_1,21_0:inner labial sheath,118
+TC2_d3_1,21_1:NA glia or tail hypodermis,21
+TC2_d3_1,22_0:SIB neurons,92
+TC2_d3_1,23_0:GLR cells,109
+TC2_d3_1,24_0:pharyngeal epithelium,70
+TC2_d3_1,24_1:pharyngeal muscle,35
+TC2_d3_1,25_0:IL2 neurons,121
+TC2_d3_1,25_1:IL2 neurons,47
+TC2_d3_1,26_0:pharyngeal muscle 7,18
+TC2_d3_1,26_1:pharyngeal muscle and epithelium,6
+TC2_d3_1,"26_2:pharyngeal muscle 6,7",17
+TC2_d3_1,27_0:NA epithelium,131
+TC2_d3_1,28_0:lumbar ganglion neurons,10
+TC2_d3_1,29_0:NA interneurons,44
+TC2_d3_1,2_0:posterior hypodermis,175
+TC2_d3_1,30_0:intestino-rectal valve,2
+TC2_d3_1,30_1:hypodermis?,2
+TC2_d3_1,30_2:hypodermis?,16
+TC2_d3_1,30_3:rectal glands,0
+TC2_d3_1,31_0:DTC distal tip,10
+TC2_d3_1,32_0:SMD motor neurons,64
+TC2_d3_1,33_0:hypodermis,51
+TC2_d3_1,33_1:hyp2,36
+TC2_d3_1,34_0:NA glia,3
+TC2_d3_1,34_1:PH socket,32
+TC2_d3_1,35_0:AFD amphid neurons,41
+TC2_d3_1,35_1:ASEL amphid neurons,19
+TC2_d3_1,35_2:AWC amphid neurons,25
+TC2_d3_1,35_3:AWC-ON amphid neurons,12
+TC2_d3_1,36_0:CEP neurons,79
+TC2_d3_1,36_3:PDE neurons,3
+TC2_d3_1,37_0:CEP sheath,63
+TC2_d3_1,"38_0:intestinal, and vulva muscles",1
+TC2_d3_1,38_1:anal muscle,2
+TC2_d3_1,39_0:URX neurons,31
+TC2_d3_1,39_1:URX neurons,12
+TC2_d3_1,3_0:germline,9
+TC2_d3_1,3_1:intestine,9
+TC2_d3_1,3_2:intestine,25
+TC2_d3_1,40_0:XXX,75
+TC2_d3_1,41_0:pharyngeal gland,2
+TC2_d3_1,41_1:NA pharyngeal epithelium,6
+TC2_d3_1,42_0:NA excretory,40
+TC2_d3_1,43_0:spermatheca,16
+TC2_d3_1,44_0:IL1 neurons ventral dorsal,50
+TC2_d3_1,44_1:IL1 neurons lateral,18
+TC2_d3_1,45_0:AM sheath,16
+TC2_d3_1,46_0:SIA/SIB inter neurons,34
+TC2_d3_1,47_0:PHA/PHB amphid neurons,4
+TC2_d3_1,47_1:ASH amphid neurons,36
+TC2_d3_1,48_0:RIC inter neurons,35
+TC2_d3_1,49_0:AVD inter neurons,28
+TC2_d3_1,4_0:BW muscles,59
+TC2_d3_1,4_1:BW muscles,168
+TC2_d3_1,4_2:head muscle,37
+TC2_d3_1,50_0:PVP anal neurons,9
+TC2_d3_1,51_0:SDQ inter neurons,12
+TC2_d3_1,51_1:SDQ inter neurons,6
+TC2_d3_1,52_0:RMD motor neurons,63
+TC2_d3_1,53_0:M2 motor neurons,53
+TC2_d3_1,54_0:PHC and PVM neurons,14
+TC2_d3_1,55_0:URA/B motor/inter neurons ,96
+TC2_d3_1,56_0:M2 motor neurons,26
+TC2_d3_1,57_0:dorsal uterine cell,6
+TC2_d3_1,58_0:pharyngeal inter neurons 2,36
+TC2_d3_1,58_1:pharyngeal inter neurons 1/3/6,12
+TC2_d3_1,59_0:MI neurons,66
+TC2_d3_1,5_0:CEP socket,262
+TC2_d3_1,5_1:CEP socket,290
+TC2_d3_1,60_0:spermathecal-uterine valve,35
+TC2_d3_1,61_0:AVA/B inter neurons,43
+TC2_d3_1,62_0:PVQ inter neurons,6
+TC2_d3_1,63_0:ASK amphid neurons,44
+TC2_d3_1,64_0:hypodermis,5
+TC2_d3_1,65_0:URY neurons?,50
+TC2_d3_1,66_0:male inter neurons,28
+TC2_d3_1,67_0:pharyngeal neurons,48
+TC2_d3_1,68_0:NA motor neurons,13
+TC2_d3_1,68_1:uterine-vulva cell,3
+TC2_d3_1,69_0:excretory canal neurons,8
+TC2_d3_1,6_0:motor neurons,39
+TC2_d3_1,6_1:VA/VB motor neurons,37
+TC2_d3_1,6_2:motor neurons,28
+TC2_d3_1,6_3:motor neurons,32
+TC2_d3_1,70_0:PVD inter neurons,4
+TC2_d3_1,70_1:FLP neurons,6
+TC2_d3_1,71_0:ASG amphid neurons,39
+TC2_d3_1,72_0:OLQ sensory neurons,65
+TC2_d3_1,73_0:PVC inter neurons,4
+TC2_d3_1,74_0:NA inter neurons,21
+TC2_d3_1,75_0:NA neurons,3
+TC2_d3_1,76_0:NA motor neurons,53
+TC2_d3_1,77_0:ASI amphid neurons,33
+TC2_d3_1,78_0:pharyngeal gland cell,8
+TC2_d3_1,79_0:PH sheath,5
+TC2_d3_1,79_1:excretory cell,2
+TC2_d3_1,7_0:vulval muscle,17
+TC2_d3_1,7_1:vulval muscle,10
+TC2_d3_1,7_2:anal and uterine muscles,14
+TC2_d3_1,80_0:BDU/PVW inter neurons,11
+TC2_d3_1,81_0:ADL amphid neurons,44
+TC2_d3_1,83_0:RIA inter neurons,32
+TC2_d3_1,84_0:ADF amphid neurons,47
+TC2_d3_1,85_0:BAG neurons,51
+TC2_d3_1,86_0:AVB inter neurons,25
+TC2_d3_1,87_0:AIZ amphid inter neurons,32
+TC2_d3_1,88_0:NA glia,33
+TC2_d3_1,89_0:excretory gland cell,8
+TC2_d3_1,8_0:NA hypodermis,470
+TC2_d3_1,90_0:AUA neurons,33
+TC2_d3_1,91_0:AIN inter neurons,35
+TC2_d3_1,92_0:AIM inter neurons,12
+TC2_d3_1,93_0:ADA inter neurons,10
+TC2_d3_1,94_0:RMH motor neurons,24
+TC2_d3_1,95_0:M1 motor neurons,16
+TC2_d3_1,96_0:M5 motor neurons,18
+TC2_d3_1,97_0:AIB inter neurons,27
+TC2_d3_1,"98_0:VC1-3,6 motor neurons",25
+TC2_d3_1,99_0:ASJ amphid neurons,19
+TC2_d3_1,9_0:pharyngeal epithelium,128
+TC2_d3_1,9_1:pharyngeal epithelium and marginal,103
+TC2_d3_1,9_2:pharyngeal epithelium and marginal,115
+TC2_d3_2,0_0:seam cell,218
+TC2_d3_2,100_0:OLL sensory neurons,44
+TC2_d3_2,101_0:AWB amphid neurons,51
+TC2_d3_2,102_0:sphincter muscle,1
+TC2_d3_2,103_0:DVA inter neurons,2
+TC2_d3_2,104_0:AIA inter neurons,6
+TC2_d3_2,105_0:I5 inter neurons,21
+TC2_d3_2,106_0:AWA amphid neurons,33
+TC2_d3_2,107_0:RMG motor neurons,5
+TC2_d3_2,108_0:LUA inter neurons,4
+TC2_d3_2,109_0:RME motor neurons,17
+TC2_d3_2,10_0:VD motor neurons,82
+TC2_d3_2,110_0:coelomocyte,2
+TC2_d3_2,110_1:hmc head mesoderm,6
+TC2_d3_2,111_0:RMD motor neurons,26
+TC2_d3_2,112_0:AIA/AIY inter neurons,19
+TC2_d3_2,113_0:NA inter neurons,26
+TC2_d3_2,114_0:DVC inter neurons,5
+TC2_d3_2,"115_0:RIV/SAA inter neurons, SMB motor neurons",30
+TC2_d3_2,116_0:NSM motor neurons ,28
+TC2_d3_2,117_0:DD motor neurons,7
+TC2_d3_2,"118_0:AVL/DVB, RME motor neurons",20
+TC2_d3_2,119_0:GLR cells,0
+TC2_d3_2,11_0:vulva,14
+TC2_d3_2,11_1:uterus vulva interface,28
+TC2_d3_2,120_0:AVJ/RIM inter neurons,9
+TC2_d3_2,121_0:RIB inter neurons,20
+TC2_d3_2,122_0:RIG inter neurons,4
+TC2_d3_2,123_0:AVF inter neurons,6
+TC2_d3_2,124_0:I4 inter neurons,18
+TC2_d3_2,125_0:M3 motor neurons,13
+TC2_d3_2,126_0:M4 motor neurons,10
+TC2_d3_2,127_0:NA motor neurons,31
+TC2_d3_2,128_0:RIH inter neurons,9
+TC2_d3_2,129_0:RID motor neurons,16
+TC2_d3_2,12_0:coelomocyte,19
+TC2_d3_2,130_0:VD motor neurons,14
+TC2_d3_2,131_0:AVG inter neurons ,2
+TC2_d3_2,132_0:AS motor neurons,0
+TC2_d3_2,133_0:NA motor neurons,6
+TC2_d3_2,134_0:NA sensory neurons,3
+TC2_d3_2,135_0:I6 inter neurons,13
+TC2_d3_2,136_0:DA/PDA tail motor neurons,3
+TC2_d3_2,137_0:PVR inter neurons,3
+TC2_d3_2,138_0:PVT inter neurons,3
+TC2_d3_2,139_0:NA pharyngeal neurons,10
+TC2_d3_2,13_0:CEP socket?,2
+TC2_d3_2,140_0:ALA neurons,0
+TC2_d3_2,141_0:NA sheath glia,21
+TC2_d3_2,142_0:RIR inter neurons,13
+TC2_d3_2,14_0:AS/VA motor neurons,39
+TC2_d3_2,14_1:AS/VA/SAB motor neurons,12
+TC2_d3_2,15_0:pharyngeal arcade?,194
+TC2_d3_2,16_0:NA socket glia,232
+TC2_d3_2,17_0:HSN motor neurons,46
+TC2_d3_2,18_0:gonadal sheath cell,32
+TC2_d3_2,19_0:VC1-5 neurons,30
+TC2_d3_2,"1_0:germline, pharyngeal muscle pm8",71
+TC2_d3_2,1_1:BW muscles,28
+TC2_d3_2,1_2:intestinal muscles,7
+TC2_d3_2,20_0:touch neurons,14
+TC2_d3_2,20_1:neurons,8
+TC2_d3_2,20_2:PLM neurons,1
+TC2_d3_2,21_0:inner labial sheath,100
+TC2_d3_2,21_1:NA glia or tail hypodermis,29
+TC2_d3_2,22_0:SIB neurons,87
+TC2_d3_2,23_0:GLR cells,108
+TC2_d3_2,24_0:pharyngeal epithelium,84
+TC2_d3_2,24_1:pharyngeal muscle,45
+TC2_d3_2,25_0:IL2 neurons,119
+TC2_d3_2,25_1:IL2 neurons,57
+TC2_d3_2,26_0:pharyngeal muscle 7,16
+TC2_d3_2,26_1:pharyngeal muscle and epithelium,12
+TC2_d3_2,"26_2:pharyngeal muscle 6,7",13
+TC2_d3_2,27_0:NA epithelium,131
+TC2_d3_2,28_0:lumbar ganglion neurons,9
+TC2_d3_2,29_0:NA interneurons,36
+TC2_d3_2,2_0:posterior hypodermis,202
+TC2_d3_2,30_0:intestino-rectal valve,1
+TC2_d3_2,30_1:hypodermis?,0
+TC2_d3_2,30_2:hypodermis?,14
+TC2_d3_2,30_3:rectal glands,0
+TC2_d3_2,31_0:DTC distal tip,20
+TC2_d3_2,32_0:SMD motor neurons,69
+TC2_d3_2,33_0:hypodermis,53
+TC2_d3_2,33_1:hyp2,32
+TC2_d3_2,34_0:NA glia,10
+TC2_d3_2,34_1:PH socket,21
+TC2_d3_2,35_0:AFD amphid neurons,40
+TC2_d3_2,35_1:ASEL amphid neurons,18
+TC2_d3_2,35_2:AWC amphid neurons,14
+TC2_d3_2,35_3:AWC-ON amphid neurons,13
+TC2_d3_2,36_0:CEP neurons,51
+TC2_d3_2,36_3:PDE neurons,3
+TC2_d3_2,37_0:CEP sheath,55
+TC2_d3_2,"38_0:intestinal, and vulva muscles",2
+TC2_d3_2,38_1:anal muscle,1
+TC2_d3_2,39_0:URX neurons,29
+TC2_d3_2,39_1:URX neurons,9
+TC2_d3_2,3_0:germline,5
+TC2_d3_2,3_1:intestine,7
+TC2_d3_2,3_2:intestine,22
+TC2_d3_2,40_0:XXX,78
+TC2_d3_2,41_0:pharyngeal gland,0
+TC2_d3_2,41_1:NA pharyngeal epithelium,6
+TC2_d3_2,42_0:NA excretory,37
+TC2_d3_2,43_0:spermatheca,5
+TC2_d3_2,44_0:IL1 neurons ventral dorsal,60
+TC2_d3_2,44_1:IL1 neurons lateral,29
+TC2_d3_2,45_0:AM sheath,15
+TC2_d3_2,46_0:SIA/SIB inter neurons,31
+TC2_d3_2,47_0:PHA/PHB amphid neurons,2
+TC2_d3_2,47_1:ASH amphid neurons,41
+TC2_d3_2,48_0:RIC inter neurons,43
+TC2_d3_2,49_0:AVD inter neurons,43
+TC2_d3_2,4_0:BW muscles,60
+TC2_d3_2,4_1:BW muscles,178
+TC2_d3_2,4_2:head muscle,53
+TC2_d3_2,50_0:PVP anal neurons,12
+TC2_d3_2,51_0:SDQ inter neurons,11
+TC2_d3_2,51_1:SDQ inter neurons,3
+TC2_d3_2,52_0:RMD motor neurons,62
+TC2_d3_2,53_0:M2 motor neurons,71
+TC2_d3_2,54_0:PHC and PVM neurons,20
+TC2_d3_2,55_0:URA/B motor/inter neurons ,88
+TC2_d3_2,56_0:M2 motor neurons,37
+TC2_d3_2,57_0:dorsal uterine cell,20
+TC2_d3_2,58_0:pharyngeal inter neurons 2,47
+TC2_d3_2,58_1:pharyngeal inter neurons 1/3/6,13
+TC2_d3_2,59_0:MI neurons,49
+TC2_d3_2,5_0:CEP socket,246
+TC2_d3_2,5_1:CEP socket,306
+TC2_d3_2,60_0:spermathecal-uterine valve,25
+TC2_d3_2,61_0:AVA/B inter neurons,32
+TC2_d3_2,62_0:PVQ inter neurons,3
+TC2_d3_2,63_0:ASK amphid neurons,55
+TC2_d3_2,64_0:hypodermis,5
+TC2_d3_2,65_0:URY neurons?,59
+TC2_d3_2,66_0:male inter neurons,37
+TC2_d3_2,67_0:pharyngeal neurons,64
+TC2_d3_2,68_0:NA motor neurons,15
+TC2_d3_2,68_1:uterine-vulva cell,3
+TC2_d3_2,69_0:excretory canal neurons,9
+TC2_d3_2,6_0:motor neurons,46
+TC2_d3_2,6_1:VA/VB motor neurons,46
+TC2_d3_2,6_2:motor neurons,23
+TC2_d3_2,6_3:motor neurons,24
+TC2_d3_2,70_0:PVD inter neurons,11
+TC2_d3_2,70_1:FLP neurons,13
+TC2_d3_2,71_0:ASG amphid neurons,61
+TC2_d3_2,72_0:OLQ sensory neurons,57
+TC2_d3_2,73_0:PVC inter neurons,6
+TC2_d3_2,74_0:NA inter neurons,19
+TC2_d3_2,75_0:NA neurons,5
+TC2_d3_2,76_0:NA motor neurons,35
+TC2_d3_2,77_0:ASI amphid neurons,42
+TC2_d3_2,78_0:pharyngeal gland cell,12
+TC2_d3_2,79_0:PH sheath,5
+TC2_d3_2,79_1:excretory cell,0
+TC2_d3_2,7_0:vulval muscle,8
+TC2_d3_2,7_1:vulval muscle,10
+TC2_d3_2,7_2:anal and uterine muscles,14
+TC2_d3_2,80_0:BDU/PVW inter neurons,12
+TC2_d3_2,81_0:ADL amphid neurons,35
+TC2_d3_2,83_0:RIA inter neurons,26
+TC2_d3_2,84_0:ADF amphid neurons,40
+TC2_d3_2,85_0:BAG neurons,55
+TC2_d3_2,86_0:AVB inter neurons,11
+TC2_d3_2,87_0:AIZ amphid inter neurons,39
+TC2_d3_2,88_0:NA glia,50
+TC2_d3_2,89_0:excretory gland cell,9
+TC2_d3_2,8_0:NA hypodermis,492
+TC2_d3_2,90_0:AUA neurons,28
+TC2_d3_2,91_0:AIN inter neurons,22
+TC2_d3_2,92_0:AIM inter neurons,16
+TC2_d3_2,93_0:ADA inter neurons,7
+TC2_d3_2,94_0:RMH motor neurons,15
+TC2_d3_2,95_0:M1 motor neurons,18
+TC2_d3_2,96_0:M5 motor neurons,20
+TC2_d3_2,97_0:AIB inter neurons,23
+TC2_d3_2,"98_0:VC1-3,6 motor neurons",29
+TC2_d3_2,99_0:ASJ amphid neurons,18
+TC2_d3_2,9_0:pharyngeal epithelium,104
+TC2_d3_2,9_1:pharyngeal epithelium and marginal,112
+TC2_d3_2,9_2:pharyngeal epithelium and marginal,129
+TC2_d5_1,0_0:seam cell,210
+TC2_d5_1,100_0:OLL sensory neurons,4
+TC2_d5_1,101_0:AWB amphid neurons,3
+TC2_d5_1,102_0:sphincter muscle,8
+TC2_d5_1,103_0:DVA inter neurons,12
+TC2_d5_1,104_0:AIA inter neurons,1
+TC2_d5_1,105_0:I5 inter neurons,5
+TC2_d5_1,106_0:AWA amphid neurons,0
+TC2_d5_1,107_0:RMG motor neurons,6
+TC2_d5_1,108_0:LUA inter neurons,7
+TC2_d5_1,109_0:RME motor neurons,0
+TC2_d5_1,10_0:VD motor neurons,202
+TC2_d5_1,110_0:coelomocyte,3
+TC2_d5_1,110_1:hmc head mesoderm,13
+TC2_d5_1,111_0:RMD motor neurons,0
+TC2_d5_1,112_0:AIA/AIY inter neurons,3
+TC2_d5_1,113_0:NA inter neurons,1
+TC2_d5_1,114_0:DVC inter neurons,12
+TC2_d5_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",3
+TC2_d5_1,116_0:NSM motor neurons ,4
+TC2_d5_1,117_0:DD motor neurons,2
+TC2_d5_1,"118_0:AVL/DVB, RME motor neurons",1
+TC2_d5_1,119_0:GLR cells,13
+TC2_d5_1,11_0:vulva,8
+TC2_d5_1,11_1:uterus vulva interface,20
+TC2_d5_1,120_0:AVJ/RIM inter neurons,0
+TC2_d5_1,121_0:RIB inter neurons,1
+TC2_d5_1,122_0:RIG inter neurons,2
+TC2_d5_1,123_0:AVF inter neurons,1
+TC2_d5_1,124_0:I4 inter neurons,1
+TC2_d5_1,125_0:M3 motor neurons,2
+TC2_d5_1,126_0:M4 motor neurons,0
+TC2_d5_1,127_0:NA motor neurons,3
+TC2_d5_1,128_0:RIH inter neurons,1
+TC2_d5_1,129_0:RID motor neurons,1
+TC2_d5_1,12_0:coelomocyte,24
+TC2_d5_1,130_0:VD motor neurons,2
+TC2_d5_1,131_0:AVG inter neurons ,1
+TC2_d5_1,132_0:AS motor neurons,14
+TC2_d5_1,133_0:NA motor neurons,0
+TC2_d5_1,134_0:NA sensory neurons,10
+TC2_d5_1,135_0:I6 inter neurons,4
+TC2_d5_1,136_0:DA/PDA tail motor neurons,12
+TC2_d5_1,137_0:PVR inter neurons,9
+TC2_d5_1,138_0:PVT inter neurons,14
+TC2_d5_1,139_0:NA pharyngeal neurons,1
+TC2_d5_1,13_0:CEP socket?,4
+TC2_d5_1,140_0:ALA neurons,11
+TC2_d5_1,141_0:NA sheath glia,6
+TC2_d5_1,142_0:RIR inter neurons,1
+TC2_d5_1,14_0:AS/VA motor neurons,98
+TC2_d5_1,14_1:AS/VA/SAB motor neurons,0
+TC2_d5_1,15_0:pharyngeal arcade?,17
+TC2_d5_1,16_0:NA socket glia,17
+TC2_d5_1,17_0:HSN motor neurons,90
+TC2_d5_1,18_0:gonadal sheath cell,21
+TC2_d5_1,19_0:VC1-5 neurons,72
+TC2_d5_1,"1_0:germline, pharyngeal muscle pm8",91
+TC2_d5_1,1_1:BW muscles,25
+TC2_d5_1,1_2:intestinal muscles,20
+TC2_d5_1,20_0:touch neurons,21
+TC2_d5_1,20_1:neurons,1
+TC2_d5_1,20_2:PLM neurons,21
+TC2_d5_1,21_0:inner labial sheath,12
+TC2_d5_1,21_1:NA glia or tail hypodermis,3
+TC2_d5_1,22_0:SIB neurons,11
+TC2_d5_1,23_0:GLR cells,6
+TC2_d5_1,24_0:pharyngeal epithelium,5
+TC2_d5_1,24_1:pharyngeal muscle,5
+TC2_d5_1,25_0:IL2 neurons,6
+TC2_d5_1,25_1:IL2 neurons,4
+TC2_d5_1,26_0:pharyngeal muscle 7,0
+TC2_d5_1,26_1:pharyngeal muscle and epithelium,3
+TC2_d5_1,"26_2:pharyngeal muscle 6,7",2
+TC2_d5_1,27_0:NA epithelium,26
+TC2_d5_1,28_0:lumbar ganglion neurons,35
+TC2_d5_1,29_0:NA interneurons,2
+TC2_d5_1,2_0:posterior hypodermis,283
+TC2_d5_1,30_0:intestino-rectal valve,1
+TC2_d5_1,30_1:hypodermis?,7
+TC2_d5_1,30_2:hypodermis?,9
+TC2_d5_1,30_3:rectal glands,1
+TC2_d5_1,31_0:DTC distal tip,23
+TC2_d5_1,32_0:SMD motor neurons,9
+TC2_d5_1,33_0:hypodermis,1
+TC2_d5_1,33_1:hyp2,1
+TC2_d5_1,34_0:NA glia,16
+TC2_d5_1,34_1:PH socket,2
+TC2_d5_1,35_0:AFD amphid neurons,0
+TC2_d5_1,35_1:ASEL amphid neurons,3
+TC2_d5_1,35_2:AWC amphid neurons,0
+TC2_d5_1,35_3:AWC-ON amphid neurons,1
+TC2_d5_1,36_0:CEP neurons,3
+TC2_d5_1,36_3:PDE neurons,8
+TC2_d5_1,37_0:CEP sheath,4
+TC2_d5_1,"38_0:intestinal, and vulva muscles",22
+TC2_d5_1,38_1:anal muscle,4
+TC2_d5_1,39_0:URX neurons,2
+TC2_d5_1,39_1:URX neurons,0
+TC2_d5_1,3_0:germline,3
+TC2_d5_1,3_1:intestine,3
+TC2_d5_1,3_2:intestine,17
+TC2_d5_1,40_0:XXX,6
+TC2_d5_1,41_0:pharyngeal gland,2
+TC2_d5_1,41_1:NA pharyngeal epithelium,2
+TC2_d5_1,42_0:NA excretory,26
+TC2_d5_1,43_0:spermatheca,13
+TC2_d5_1,44_0:IL1 neurons ventral dorsal,10
+TC2_d5_1,44_1:IL1 neurons lateral,1
+TC2_d5_1,45_0:AM sheath,10
+TC2_d5_1,46_0:SIA/SIB inter neurons,6
+TC2_d5_1,47_0:PHA/PHB amphid neurons,18
+TC2_d5_1,47_1:ASH amphid neurons,3
+TC2_d5_1,48_0:RIC inter neurons,7
+TC2_d5_1,49_0:AVD inter neurons,2
+TC2_d5_1,4_0:BW muscles,33
+TC2_d5_1,4_1:BW muscles,50
+TC2_d5_1,4_2:head muscle,3
+TC2_d5_1,50_0:PVP anal neurons,40
+TC2_d5_1,51_0:SDQ inter neurons,28
+TC2_d5_1,51_1:SDQ inter neurons,2
+TC2_d5_1,52_0:RMD motor neurons,9
+TC2_d5_1,53_0:M2 motor neurons,10
+TC2_d5_1,54_0:PHC and PVM neurons,49
+TC2_d5_1,55_0:URA/B motor/inter neurons ,5
+TC2_d5_1,56_0:M2 motor neurons,8
+TC2_d5_1,57_0:dorsal uterine cell,35
+TC2_d5_1,58_0:pharyngeal inter neurons 2,0
+TC2_d5_1,58_1:pharyngeal inter neurons 1/3/6,0
+TC2_d5_1,59_0:MI neurons,5
+TC2_d5_1,5_0:CEP socket,68
+TC2_d5_1,5_1:CEP socket,18
+TC2_d5_1,60_0:spermathecal-uterine valve,3
+TC2_d5_1,61_0:AVA/B inter neurons,0
+TC2_d5_1,62_0:PVQ inter neurons,26
+TC2_d5_1,63_0:ASK amphid neurons,6
+TC2_d5_1,64_0:hypodermis,22
+TC2_d5_1,65_0:URY neurons?,6
+TC2_d5_1,66_0:male inter neurons,2
+TC2_d5_1,67_0:pharyngeal neurons,4
+TC2_d5_1,68_0:NA motor neurons,2
+TC2_d5_1,68_1:uterine-vulva cell,7
+TC2_d5_1,69_0:excretory canal neurons,20
+TC2_d5_1,6_0:motor neurons,93
+TC2_d5_1,6_1:VA/VB motor neurons,55
+TC2_d5_1,6_2:motor neurons,91
+TC2_d5_1,6_3:motor neurons,55
+TC2_d5_1,70_0:PVD inter neurons,13
+TC2_d5_1,70_1:FLP neurons,2
+TC2_d5_1,71_0:ASG amphid neurons,4
+TC2_d5_1,72_0:OLQ sensory neurons,3
+TC2_d5_1,73_0:PVC inter neurons,17
+TC2_d5_1,74_0:NA inter neurons,2
+TC2_d5_1,75_0:NA neurons,25
+TC2_d5_1,76_0:NA motor neurons,1
+TC2_d5_1,77_0:ASI amphid neurons,0
+TC2_d5_1,78_0:pharyngeal gland cell,2
+TC2_d5_1,79_0:PH sheath,0
+TC2_d5_1,79_1:excretory cell,6
+TC2_d5_1,7_0:vulval muscle,20
+TC2_d5_1,7_1:vulval muscle,16
+TC2_d5_1,7_2:anal and uterine muscles,27
+TC2_d5_1,80_0:BDU/PVW inter neurons,2
+TC2_d5_1,81_0:ADL amphid neurons,2
+TC2_d5_1,83_0:RIA inter neurons,4
+TC2_d5_1,84_0:ADF amphid neurons,4
+TC2_d5_1,85_0:BAG neurons,1
+TC2_d5_1,86_0:AVB inter neurons,4
+TC2_d5_1,87_0:AIZ amphid inter neurons,3
+TC2_d5_1,88_0:NA glia,2
+TC2_d5_1,89_0:excretory gland cell,7
+TC2_d5_1,8_0:NA hypodermis,26
+TC2_d5_1,90_0:AUA neurons,2
+TC2_d5_1,91_0:AIN inter neurons,2
+TC2_d5_1,92_0:AIM inter neurons,3
+TC2_d5_1,93_0:ADA inter neurons,2
+TC2_d5_1,94_0:RMH motor neurons,2
+TC2_d5_1,95_0:M1 motor neurons,8
+TC2_d5_1,96_0:M5 motor neurons,12
+TC2_d5_1,97_0:AIB inter neurons,2
+TC2_d5_1,"98_0:VC1-3,6 motor neurons",2
+TC2_d5_1,99_0:ASJ amphid neurons,2
+TC2_d5_1,9_0:pharyngeal epithelium,18
+TC2_d5_1,9_1:pharyngeal epithelium and marginal,9
+TC2_d5_1,9_2:pharyngeal epithelium and marginal,5
+TC2_d5_2,0_0:seam cell,239
+TC2_d5_2,100_0:OLL sensory neurons,4
+TC2_d5_2,101_0:AWB amphid neurons,2
+TC2_d5_2,102_0:sphincter muscle,19
+TC2_d5_2,103_0:DVA inter neurons,9
+TC2_d5_2,104_0:AIA inter neurons,2
+TC2_d5_2,105_0:I5 inter neurons,4
+TC2_d5_2,106_0:AWA amphid neurons,6
+TC2_d5_2,107_0:RMG motor neurons,0
+TC2_d5_2,108_0:LUA inter neurons,21
+TC2_d5_2,109_0:RME motor neurons,5
+TC2_d5_2,10_0:VD motor neurons,227
+TC2_d5_2,110_0:coelomocyte,5
+TC2_d5_2,110_1:hmc head mesoderm,11
+TC2_d5_2,111_0:RMD motor neurons,2
+TC2_d5_2,112_0:AIA/AIY inter neurons,2
+TC2_d5_2,113_0:NA inter neurons,1
+TC2_d5_2,114_0:DVC inter neurons,12
+TC2_d5_2,"115_0:RIV/SAA inter neurons, SMB motor neurons",0
+TC2_d5_2,116_0:NSM motor neurons ,1
+TC2_d5_2,117_0:DD motor neurons,6
+TC2_d5_2,"118_0:AVL/DVB, RME motor neurons",1
+TC2_d5_2,119_0:GLR cells,15
+TC2_d5_2,11_0:vulva,8
+TC2_d5_2,11_1:uterus vulva interface,22
+TC2_d5_2,120_0:AVJ/RIM inter neurons,3
+TC2_d5_2,121_0:RIB inter neurons,2
+TC2_d5_2,122_0:RIG inter neurons,5
+TC2_d5_2,123_0:AVF inter neurons,4
+TC2_d5_2,124_0:I4 inter neurons,2
+TC2_d5_2,125_0:M3 motor neurons,5
+TC2_d5_2,126_0:M4 motor neurons,0
+TC2_d5_2,127_0:NA motor neurons,1
+TC2_d5_2,128_0:RIH inter neurons,1
+TC2_d5_2,129_0:RID motor neurons,0
+TC2_d5_2,12_0:coelomocyte,28
+TC2_d5_2,130_0:VD motor neurons,0
+TC2_d5_2,131_0:AVG inter neurons ,1
+TC2_d5_2,132_0:AS motor neurons,8
+TC2_d5_2,133_0:NA motor neurons,2
+TC2_d5_2,134_0:NA sensory neurons,7
+TC2_d5_2,135_0:I6 inter neurons,3
+TC2_d5_2,136_0:DA/PDA tail motor neurons,8
+TC2_d5_2,137_0:PVR inter neurons,15
+TC2_d5_2,138_0:PVT inter neurons,18
+TC2_d5_2,139_0:NA pharyngeal neurons,0
+TC2_d5_2,13_0:CEP socket?,3
+TC2_d5_2,140_0:ALA neurons,9
+TC2_d5_2,141_0:NA sheath glia,10
+TC2_d5_2,142_0:RIR inter neurons,0
+TC2_d5_2,14_0:AS/VA motor neurons,124
+TC2_d5_2,14_1:AS/VA/SAB motor neurons,2
+TC2_d5_2,15_0:pharyngeal arcade?,22
+TC2_d5_2,16_0:NA socket glia,16
+TC2_d5_2,17_0:HSN motor neurons,95
+TC2_d5_2,18_0:gonadal sheath cell,35
+TC2_d5_2,19_0:VC1-5 neurons,83
+TC2_d5_2,"1_0:germline, pharyngeal muscle pm8",86
+TC2_d5_2,1_1:BW muscles,23
+TC2_d5_2,1_2:intestinal muscles,29
+TC2_d5_2,20_0:touch neurons,18
+TC2_d5_2,20_1:neurons,5
+TC2_d5_2,20_2:PLM neurons,14
+TC2_d5_2,21_0:inner labial sheath,9
+TC2_d5_2,21_1:NA glia or tail hypodermis,2
+TC2_d5_2,22_0:SIB neurons,8
+TC2_d5_2,23_0:GLR cells,14
+TC2_d5_2,24_0:pharyngeal epithelium,4
+TC2_d5_2,24_1:pharyngeal muscle,5
+TC2_d5_2,25_0:IL2 neurons,9
+TC2_d5_2,25_1:IL2 neurons,3
+TC2_d5_2,26_0:pharyngeal muscle 7,10
+TC2_d5_2,26_1:pharyngeal muscle and epithelium,4
+TC2_d5_2,"26_2:pharyngeal muscle 6,7",0
+TC2_d5_2,27_0:NA epithelium,19
+TC2_d5_2,28_0:lumbar ganglion neurons,46
+TC2_d5_2,29_0:NA interneurons,3
+TC2_d5_2,2_0:posterior hypodermis,283
+TC2_d5_2,30_0:intestino-rectal valve,1
+TC2_d5_2,30_1:hypodermis?,5
+TC2_d5_2,30_2:hypodermis?,11
+TC2_d5_2,30_3:rectal glands,1
+TC2_d5_2,31_0:DTC distal tip,12
+TC2_d5_2,32_0:SMD motor neurons,6
+TC2_d5_2,33_0:hypodermis,6
+TC2_d5_2,33_1:hyp2,6
+TC2_d5_2,34_0:NA glia,25
+TC2_d5_2,34_1:PH socket,6
+TC2_d5_2,35_0:AFD amphid neurons,4
+TC2_d5_2,35_1:ASEL amphid neurons,2
+TC2_d5_2,35_2:AWC amphid neurons,1
+TC2_d5_2,35_3:AWC-ON amphid neurons,0
+TC2_d5_2,36_0:CEP neurons,0
+TC2_d5_2,36_3:PDE neurons,18
+TC2_d5_2,37_0:CEP sheath,3
+TC2_d5_2,"38_0:intestinal, and vulva muscles",21
+TC2_d5_2,38_1:anal muscle,4
+TC2_d5_2,39_0:URX neurons,2
+TC2_d5_2,39_1:URX neurons,1
+TC2_d5_2,3_0:germline,9
+TC2_d5_2,3_1:intestine,4
+TC2_d5_2,3_2:intestine,21
+TC2_d5_2,40_0:XXX,5
+TC2_d5_2,41_0:pharyngeal gland,1
+TC2_d5_2,41_1:NA pharyngeal epithelium,3
+TC2_d5_2,42_0:NA excretory,39
+TC2_d5_2,43_0:spermatheca,14
+TC2_d5_2,44_0:IL1 neurons ventral dorsal,4
+TC2_d5_2,44_1:IL1 neurons lateral,3
+TC2_d5_2,45_0:AM sheath,14
+TC2_d5_2,46_0:SIA/SIB inter neurons,4
+TC2_d5_2,47_0:PHA/PHB amphid neurons,12
+TC2_d5_2,47_1:ASH amphid neurons,3
+TC2_d5_2,48_0:RIC inter neurons,4
+TC2_d5_2,49_0:AVD inter neurons,8
+TC2_d5_2,4_0:BW muscles,44
+TC2_d5_2,4_1:BW muscles,52
+TC2_d5_2,4_2:head muscle,2
+TC2_d5_2,50_0:PVP anal neurons,34
+TC2_d5_2,51_0:SDQ inter neurons,36
+TC2_d5_2,51_1:SDQ inter neurons,8
+TC2_d5_2,52_0:RMD motor neurons,5
+TC2_d5_2,53_0:M2 motor neurons,10
+TC2_d5_2,54_0:PHC and PVM neurons,49
+TC2_d5_2,55_0:URA/B motor/inter neurons ,9
+TC2_d5_2,56_0:M2 motor neurons,8
+TC2_d5_2,57_0:dorsal uterine cell,33
+TC2_d5_2,58_0:pharyngeal inter neurons 2,6
+TC2_d5_2,58_1:pharyngeal inter neurons 1/3/6,2
+TC2_d5_2,59_0:MI neurons,7
+TC2_d5_2,5_0:CEP socket,67
+TC2_d5_2,5_1:CEP socket,16
+TC2_d5_2,60_0:spermathecal-uterine valve,2
+TC2_d5_2,61_0:AVA/B inter neurons,10
+TC2_d5_2,62_0:PVQ inter neurons,29
+TC2_d5_2,63_0:ASK amphid neurons,4
+TC2_d5_2,64_0:hypodermis,18
+TC2_d5_2,65_0:URY neurons?,8
+TC2_d5_2,66_0:male inter neurons,5
+TC2_d5_2,67_0:pharyngeal neurons,4
+TC2_d5_2,68_0:NA motor neurons,3
+TC2_d5_2,68_1:uterine-vulva cell,11
+TC2_d5_2,69_0:excretory canal neurons,21
+TC2_d5_2,6_0:motor neurons,96
+TC2_d5_2,6_1:VA/VB motor neurons,66
+TC2_d5_2,6_2:motor neurons,96
+TC2_d5_2,6_3:motor neurons,53
+TC2_d5_2,70_0:PVD inter neurons,14
+TC2_d5_2,70_1:FLP neurons,3
+TC2_d5_2,71_0:ASG amphid neurons,3
+TC2_d5_2,72_0:OLQ sensory neurons,3
+TC2_d5_2,73_0:PVC inter neurons,18
+TC2_d5_2,74_0:NA inter neurons,4
+TC2_d5_2,75_0:NA neurons,26
+TC2_d5_2,76_0:NA motor neurons,6
+TC2_d5_2,77_0:ASI amphid neurons,2
+TC2_d5_2,78_0:pharyngeal gland cell,1
+TC2_d5_2,79_0:PH sheath,0
+TC2_d5_2,79_1:excretory cell,4
+TC2_d5_2,7_0:vulval muscle,24
+TC2_d5_2,7_1:vulval muscle,15
+TC2_d5_2,7_2:anal and uterine muscles,33
+TC2_d5_2,80_0:BDU/PVW inter neurons,8
+TC2_d5_2,81_0:ADL amphid neurons,6
+TC2_d5_2,83_0:RIA inter neurons,4
+TC2_d5_2,84_0:ADF amphid neurons,1
+TC2_d5_2,85_0:BAG neurons,2
+TC2_d5_2,86_0:AVB inter neurons,3
+TC2_d5_2,87_0:AIZ amphid inter neurons,6
+TC2_d5_2,88_0:NA glia,3
+TC2_d5_2,89_0:excretory gland cell,9
+TC2_d5_2,8_0:NA hypodermis,42
+TC2_d5_2,90_0:AUA neurons,3
+TC2_d5_2,91_0:AIN inter neurons,5
+TC2_d5_2,92_0:AIM inter neurons,2
+TC2_d5_2,93_0:ADA inter neurons,1
+TC2_d5_2,94_0:RMH motor neurons,2
+TC2_d5_2,95_0:M1 motor neurons,6
+TC2_d5_2,96_0:M5 motor neurons,10
+TC2_d5_2,97_0:AIB inter neurons,2
+TC2_d5_2,"98_0:VC1-3,6 motor neurons",5
+TC2_d5_2,99_0:ASJ amphid neurons,3
+TC2_d5_2,9_0:pharyngeal epithelium,10
+TC2_d5_2,9_1:pharyngeal epithelium and marginal,6
+TC2_d5_2,9_2:pharyngeal epithelium and marginal,6
+TC2_d8_1,0_0:seam cell,213
+TC2_d8_1,100_0:OLL sensory neurons,16
+TC2_d8_1,101_0:AWB amphid neurons,12
+TC2_d8_1,102_0:sphincter muscle,23
+TC2_d8_1,103_0:DVA inter neurons,34
+TC2_d8_1,104_0:AIA inter neurons,21
+TC2_d8_1,105_0:I5 inter neurons,12
+TC2_d8_1,106_0:AWA amphid neurons,11
+TC2_d8_1,107_0:RMG motor neurons,24
+TC2_d8_1,108_0:LUA inter neurons,34
+TC2_d8_1,109_0:RME motor neurons,8
+TC2_d8_1,10_0:VD motor neurons,175
+TC2_d8_1,110_0:coelomocyte,5
+TC2_d8_1,110_1:hmc head mesoderm,9
+TC2_d8_1,111_0:RMD motor neurons,6
+TC2_d8_1,112_0:AIA/AIY inter neurons,25
+TC2_d8_1,113_0:NA inter neurons,10
+TC2_d8_1,114_0:DVC inter neurons,14
+TC2_d8_1,"115_0:RIV/SAA inter neurons, SMB motor neurons",17
+TC2_d8_1,116_0:NSM motor neurons ,2
+TC2_d8_1,117_0:DD motor neurons,24
+TC2_d8_1,"118_0:AVL/DVB, RME motor neurons",10
+TC2_d8_1,119_0:GLR cells,16
+TC2_d8_1,11_0:vulva,18
+TC2_d8_1,11_1:uterus vulva interface,16
+TC2_d8_1,120_0:AVJ/RIM inter neurons,23
+TC2_d8_1,121_0:RIB inter neurons,9
+TC2_d8_1,122_0:RIG inter neurons,18
+TC2_d8_1,123_0:AVF inter neurons,11
+TC2_d8_1,124_0:I4 inter neurons,4
+TC2_d8_1,125_0:M3 motor neurons,8
+TC2_d8_1,126_0:M4 motor neurons,6
+TC2_d8_1,127_0:NA motor neurons,11
+TC2_d8_1,128_0:RIH inter neurons,17
+TC2_d8_1,129_0:RID motor neurons,8
+TC2_d8_1,12_0:coelomocyte,86
+TC2_d8_1,130_0:VD motor neurons,2
+TC2_d8_1,131_0:AVG inter neurons ,12
+TC2_d8_1,132_0:AS motor neurons,28
+TC2_d8_1,133_0:NA motor neurons,14
+TC2_d8_1,134_0:NA sensory neurons,13
+TC2_d8_1,135_0:I6 inter neurons,4
+TC2_d8_1,136_0:DA/PDA tail motor neurons,18
+TC2_d8_1,137_0:PVR inter neurons,13
+TC2_d8_1,138_0:PVT inter neurons,11
+TC2_d8_1,139_0:NA pharyngeal neurons,10
+TC2_d8_1,13_0:CEP socket?,18
+TC2_d8_1,140_0:ALA neurons,5
+TC2_d8_1,141_0:NA sheath glia,6
+TC2_d8_1,142_0:RIR inter neurons,6
+TC2_d8_1,14_0:AS/VA motor neurons,94
+TC2_d8_1,14_1:AS/VA/SAB motor neurons,17
+TC2_d8_1,15_0:pharyngeal arcade?,53
+TC2_d8_1,16_0:NA socket glia,68
+TC2_d8_1,17_0:HSN motor neurons,75
+TC2_d8_1,18_0:gonadal sheath cell,13
+TC2_d8_1,19_0:VC1-5 neurons,104
+TC2_d8_1,"1_0:germline, pharyngeal muscle pm8",66
+TC2_d8_1,1_1:BW muscles,17
+TC2_d8_1,1_2:intestinal muscles,7
+TC2_d8_1,20_0:touch neurons,53
+TC2_d8_1,20_1:neurons,34
+TC2_d8_1,20_2:PLM neurons,37
+TC2_d8_1,21_0:inner labial sheath,24
+TC2_d8_1,21_1:NA glia or tail hypodermis,16
+TC2_d8_1,22_0:SIB neurons,59
+TC2_d8_1,23_0:GLR cells,47
+TC2_d8_1,24_0:pharyngeal epithelium,7
+TC2_d8_1,24_1:pharyngeal muscle,11
+TC2_d8_1,25_0:IL2 neurons,37
+TC2_d8_1,25_1:IL2 neurons,8
+TC2_d8_1,26_0:pharyngeal muscle 7,38
+TC2_d8_1,26_1:pharyngeal muscle and epithelium,0
+TC2_d8_1,"26_2:pharyngeal muscle 6,7",5
+TC2_d8_1,27_0:NA epithelium,25
+TC2_d8_1,28_0:lumbar ganglion neurons,95
+TC2_d8_1,29_0:NA interneurons,60
+TC2_d8_1,2_0:posterior hypodermis,108
+TC2_d8_1,30_0:intestino-rectal valve,7
+TC2_d8_1,30_1:hypodermis?,11
+TC2_d8_1,30_2:hypodermis?,8
+TC2_d8_1,30_3:rectal glands,7
+TC2_d8_1,31_0:DTC distal tip,25
+TC2_d8_1,32_0:SMD motor neurons,35
+TC2_d8_1,33_0:hypodermis,5
+TC2_d8_1,33_1:hyp2,20
+TC2_d8_1,34_0:NA glia,34
+TC2_d8_1,34_1:PH socket,21
+TC2_d8_1,35_0:AFD amphid neurons,12
+TC2_d8_1,35_1:ASEL amphid neurons,9
+TC2_d8_1,35_2:AWC amphid neurons,4
+TC2_d8_1,35_3:AWC-ON amphid neurons,4
+TC2_d8_1,36_0:CEP neurons,14
+TC2_d8_1,36_3:PDE neurons,4
+TC2_d8_1,37_0:CEP sheath,30
+TC2_d8_1,"38_0:intestinal, and vulva muscles",32
+TC2_d8_1,38_1:anal muscle,20
+TC2_d8_1,39_0:URX neurons,22
+TC2_d8_1,39_1:URX neurons,4
+TC2_d8_1,3_0:germline,20
+TC2_d8_1,3_1:intestine,7
+TC2_d8_1,3_2:intestine,19
+TC2_d8_1,40_0:XXX,18
+TC2_d8_1,41_0:pharyngeal gland,8
+TC2_d8_1,41_1:NA pharyngeal epithelium,1
+TC2_d8_1,42_0:NA excretory,35
+TC2_d8_1,43_0:spermatheca,9
+TC2_d8_1,44_0:IL1 neurons ventral dorsal,27
+TC2_d8_1,44_1:IL1 neurons lateral,9
+TC2_d8_1,45_0:AM sheath,18
+TC2_d8_1,46_0:SIA/SIB inter neurons,45
+TC2_d8_1,47_0:PHA/PHB amphid neurons,32
+TC2_d8_1,47_1:ASH amphid neurons,7
+TC2_d8_1,48_0:RIC inter neurons,35
+TC2_d8_1,49_0:AVD inter neurons,34
+TC2_d8_1,4_0:BW muscles,151
+TC2_d8_1,4_1:BW muscles,109
+TC2_d8_1,4_2:head muscle,9
+TC2_d8_1,50_0:PVP anal neurons,43
+TC2_d8_1,51_0:SDQ inter neurons,15
+TC2_d8_1,51_1:SDQ inter neurons,14
+TC2_d8_1,52_0:RMD motor neurons,35
+TC2_d8_1,53_0:M2 motor neurons,10
+TC2_d8_1,54_0:PHC and PVM neurons,38
+TC2_d8_1,55_0:URA/B motor/inter neurons ,16
+TC2_d8_1,56_0:M2 motor neurons,3
+TC2_d8_1,57_0:dorsal uterine cell,22
+TC2_d8_1,58_0:pharyngeal inter neurons 2,11
+TC2_d8_1,58_1:pharyngeal inter neurons 1/3/6,3
+TC2_d8_1,59_0:MI neurons,13
+TC2_d8_1,5_0:CEP socket,116
+TC2_d8_1,5_1:CEP socket,58
+TC2_d8_1,60_0:spermathecal-uterine valve,35
+TC2_d8_1,61_0:AVA/B inter neurons,26
+TC2_d8_1,62_0:PVQ inter neurons,40
+TC2_d8_1,63_0:ASK amphid neurons,22
+TC2_d8_1,64_0:hypodermis,57
+TC2_d8_1,65_0:URY neurons?,25
+TC2_d8_1,66_0:male inter neurons,31
+TC2_d8_1,67_0:pharyngeal neurons,13
+TC2_d8_1,68_0:NA motor neurons,12
+TC2_d8_1,68_1:uterine-vulva cell,9
+TC2_d8_1,69_0:excretory canal neurons,16
+TC2_d8_1,6_0:motor neurons,53
+TC2_d8_1,6_1:VA/VB motor neurons,53
+TC2_d8_1,6_2:motor neurons,66
+TC2_d8_1,6_3:motor neurons,60
+TC2_d8_1,70_0:PVD inter neurons,7
+TC2_d8_1,70_1:FLP neurons,7
+TC2_d8_1,71_0:ASG amphid neurons,21
+TC2_d8_1,72_0:OLQ sensory neurons,16
+TC2_d8_1,73_0:PVC inter neurons,32
+TC2_d8_1,74_0:NA inter neurons,27
+TC2_d8_1,75_0:NA neurons,40
+TC2_d8_1,76_0:NA motor neurons,28
+TC2_d8_1,77_0:ASI amphid neurons,18
+TC2_d8_1,78_0:pharyngeal gland cell,5
+TC2_d8_1,79_0:PH sheath,6
+TC2_d8_1,79_1:excretory cell,2
+TC2_d8_1,7_0:vulval muscle,26
+TC2_d8_1,7_1:vulval muscle,37
+TC2_d8_1,7_2:anal and uterine muscles,33
+TC2_d8_1,80_0:BDU/PVW inter neurons,35
+TC2_d8_1,81_0:ADL amphid neurons,31
+TC2_d8_1,83_0:RIA inter neurons,29
+TC2_d8_1,84_0:ADF amphid neurons,12
+TC2_d8_1,85_0:BAG neurons,15
+TC2_d8_1,86_0:AVB inter neurons,19
+TC2_d8_1,87_0:AIZ amphid inter neurons,24
+TC2_d8_1,88_0:NA glia,17
+TC2_d8_1,89_0:excretory gland cell,14
+TC2_d8_1,8_0:NA hypodermis,109
+TC2_d8_1,90_0:AUA neurons,22
+TC2_d8_1,91_0:AIN inter neurons,23
+TC2_d8_1,92_0:AIM inter neurons,19
+TC2_d8_1,93_0:ADA inter neurons,30
+TC2_d8_1,94_0:RMH motor neurons,26
+TC2_d8_1,95_0:M1 motor neurons,4
+TC2_d8_1,96_0:M5 motor neurons,16
+TC2_d8_1,97_0:AIB inter neurons,14
+TC2_d8_1,"98_0:VC1-3,6 motor neurons",13
+TC2_d8_1,99_0:ASJ amphid neurons,13
+TC2_d8_1,9_0:pharyngeal epithelium,22
+TC2_d8_1,9_1:pharyngeal epithelium and marginal,19
+TC2_d8_1,9_2:pharyngeal epithelium and marginal,11
+TC2_d8_2,0_0:seam cell,243
+TC2_d8_2,100_0:OLL sensory neurons,20
+TC2_d8_2,101_0:AWB amphid neurons,13
+TC2_d8_2,102_0:sphincter muscle,42
+TC2_d8_2,103_0:DVA inter neurons,56
+TC2_d8_2,104_0:AIA inter neurons,22
+TC2_d8_2,105_0:I5 inter neurons,12
+TC2_d8_2,106_0:AWA amphid neurons,15
+TC2_d8_2,107_0:RMG motor neurons,14
+TC2_d8_2,108_0:LUA inter neurons,27
+TC2_d8_2,109_0:RME motor neurons,23
+TC2_d8_2,10_0:VD motor neurons,200
+TC2_d8_2,110_0:coelomocyte,6
+TC2_d8_2,110_1:hmc head mesoderm,9
+TC2_d8_2,111_0:RMD motor neurons,14
+TC2_d8_2,112_0:AIA/AIY inter neurons,11
+TC2_d8_2,113_0:NA inter neurons,12
+TC2_d8_2,114_0:DVC inter neurons,25
+TC2_d8_2,"115_0:RIV/SAA inter neurons, SMB motor neurons",21
+TC2_d8_2,116_0:NSM motor neurons ,1
+TC2_d8_2,117_0:DD motor neurons,24
+TC2_d8_2,"118_0:AVL/DVB, RME motor neurons",19
+TC2_d8_2,119_0:GLR cells,19
+TC2_d8_2,11_0:vulva,16
+TC2_d8_2,11_1:uterus vulva interface,22
+TC2_d8_2,120_0:AVJ/RIM inter neurons,15
+TC2_d8_2,121_0:RIB inter neurons,8
+TC2_d8_2,122_0:RIG inter neurons,23
+TC2_d8_2,123_0:AVF inter neurons,12
+TC2_d8_2,124_0:I4 inter neurons,3
+TC2_d8_2,125_0:M3 motor neurons,7
+TC2_d8_2,126_0:M4 motor neurons,8
+TC2_d8_2,127_0:NA motor neurons,10
+TC2_d8_2,128_0:RIH inter neurons,17
+TC2_d8_2,129_0:RID motor neurons,16
+TC2_d8_2,12_0:coelomocyte,93
+TC2_d8_2,130_0:VD motor neurons,12
+TC2_d8_2,131_0:AVG inter neurons ,21
+TC2_d8_2,132_0:AS motor neurons,18
+TC2_d8_2,133_0:NA motor neurons,8
+TC2_d8_2,134_0:NA sensory neurons,17
+TC2_d8_2,135_0:I6 inter neurons,2
+TC2_d8_2,136_0:DA/PDA tail motor neurons,8
+TC2_d8_2,137_0:PVR inter neurons,23
+TC2_d8_2,138_0:PVT inter neurons,23
+TC2_d8_2,139_0:NA pharyngeal neurons,11
+TC2_d8_2,13_0:CEP socket?,9
+TC2_d8_2,140_0:ALA neurons,29
+TC2_d8_2,141_0:NA sheath glia,8
+TC2_d8_2,142_0:RIR inter neurons,17
+TC2_d8_2,14_0:AS/VA motor neurons,94
+TC2_d8_2,14_1:AS/VA/SAB motor neurons,16
+TC2_d8_2,15_0:pharyngeal arcade?,63
+TC2_d8_2,16_0:NA socket glia,51
+TC2_d8_2,17_0:HSN motor neurons,65
+TC2_d8_2,18_0:gonadal sheath cell,15
+TC2_d8_2,19_0:VC1-5 neurons,83
+TC2_d8_2,"1_0:germline, pharyngeal muscle pm8",82
+TC2_d8_2,1_1:BW muscles,14
+TC2_d8_2,1_2:intestinal muscles,10
+TC2_d8_2,20_0:touch neurons,61
+TC2_d8_2,20_1:neurons,28
+TC2_d8_2,20_2:PLM neurons,27
+TC2_d8_2,21_0:inner labial sheath,35
+TC2_d8_2,21_1:NA glia or tail hypodermis,19
+TC2_d8_2,22_0:SIB neurons,60
+TC2_d8_2,23_0:GLR cells,69
+TC2_d8_2,24_0:pharyngeal epithelium,6
+TC2_d8_2,24_1:pharyngeal muscle,11
+TC2_d8_2,25_0:IL2 neurons,36
+TC2_d8_2,25_1:IL2 neurons,14
+TC2_d8_2,26_0:pharyngeal muscle 7,48
+TC2_d8_2,26_1:pharyngeal muscle and epithelium,3
+TC2_d8_2,"26_2:pharyngeal muscle 6,7",0
+TC2_d8_2,27_0:NA epithelium,18
+TC2_d8_2,28_0:lumbar ganglion neurons,101
+TC2_d8_2,29_0:NA interneurons,66
+TC2_d8_2,2_0:posterior hypodermis,124
+TC2_d8_2,30_0:intestino-rectal valve,10
+TC2_d8_2,30_1:hypodermis?,15
+TC2_d8_2,30_2:hypodermis?,9
+TC2_d8_2,30_3:rectal glands,13
+TC2_d8_2,31_0:DTC distal tip,28
+TC2_d8_2,32_0:SMD motor neurons,50
+TC2_d8_2,33_0:hypodermis,6
+TC2_d8_2,33_1:hyp2,22
+TC2_d8_2,34_0:NA glia,34
+TC2_d8_2,34_1:PH socket,19
+TC2_d8_2,35_0:AFD amphid neurons,11
+TC2_d8_2,35_1:ASEL amphid neurons,3
+TC2_d8_2,35_2:AWC amphid neurons,5
+TC2_d8_2,35_3:AWC-ON amphid neurons,3
+TC2_d8_2,36_0:CEP neurons,9
+TC2_d8_2,36_3:PDE neurons,8
+TC2_d8_2,37_0:CEP sheath,27
+TC2_d8_2,"38_0:intestinal, and vulva muscles",38
+TC2_d8_2,38_1:anal muscle,12
+TC2_d8_2,39_0:URX neurons,18
+TC2_d8_2,39_1:URX neurons,6
+TC2_d8_2,3_0:germline,20
+TC2_d8_2,3_1:intestine,10
+TC2_d8_2,3_2:intestine,14
+TC2_d8_2,40_0:XXX,22
+TC2_d8_2,41_0:pharyngeal gland,2
+TC2_d8_2,41_1:NA pharyngeal epithelium,2
+TC2_d8_2,42_0:NA excretory,45
+TC2_d8_2,43_0:spermatheca,11
+TC2_d8_2,44_0:IL1 neurons ventral dorsal,27
+TC2_d8_2,44_1:IL1 neurons lateral,7
+TC2_d8_2,45_0:AM sheath,18
+TC2_d8_2,46_0:SIA/SIB inter neurons,28
+TC2_d8_2,47_0:PHA/PHB amphid neurons,30
+TC2_d8_2,47_1:ASH amphid neurons,7
+TC2_d8_2,48_0:RIC inter neurons,22
+TC2_d8_2,49_0:AVD inter neurons,38
+TC2_d8_2,4_0:BW muscles,159
+TC2_d8_2,4_1:BW muscles,96
+TC2_d8_2,4_2:head muscle,9
+TC2_d8_2,50_0:PVP anal neurons,43
+TC2_d8_2,51_0:SDQ inter neurons,18
+TC2_d8_2,51_1:SDQ inter neurons,24
+TC2_d8_2,52_0:RMD motor neurons,29
+TC2_d8_2,53_0:M2 motor neurons,10
+TC2_d8_2,54_0:PHC and PVM neurons,47
+TC2_d8_2,55_0:URA/B motor/inter neurons ,18
+TC2_d8_2,56_0:M2 motor neurons,2
+TC2_d8_2,57_0:dorsal uterine cell,25
+TC2_d8_2,58_0:pharyngeal inter neurons 2,5
+TC2_d8_2,58_1:pharyngeal inter neurons 1/3/6,5
+TC2_d8_2,59_0:MI neurons,17
+TC2_d8_2,5_0:CEP socket,125
+TC2_d8_2,5_1:CEP socket,74
+TC2_d8_2,60_0:spermathecal-uterine valve,28
+TC2_d8_2,61_0:AVA/B inter neurons,27
+TC2_d8_2,62_0:PVQ inter neurons,40
+TC2_d8_2,63_0:ASK amphid neurons,33
+TC2_d8_2,64_0:hypodermis,74
+TC2_d8_2,65_0:URY neurons?,20
+TC2_d8_2,66_0:male inter neurons,29
+TC2_d8_2,67_0:pharyngeal neurons,12
+TC2_d8_2,68_0:NA motor neurons,16
+TC2_d8_2,68_1:uterine-vulva cell,12
+TC2_d8_2,69_0:excretory canal neurons,26
+TC2_d8_2,6_0:motor neurons,59
+TC2_d8_2,6_1:VA/VB motor neurons,33
+TC2_d8_2,6_2:motor neurons,94
+TC2_d8_2,6_3:motor neurons,47
+TC2_d8_2,70_0:PVD inter neurons,10
+TC2_d8_2,70_1:FLP neurons,2
+TC2_d8_2,71_0:ASG amphid neurons,29
+TC2_d8_2,72_0:OLQ sensory neurons,17
+TC2_d8_2,73_0:PVC inter neurons,50
+TC2_d8_2,74_0:NA inter neurons,33
+TC2_d8_2,75_0:NA neurons,47
+TC2_d8_2,76_0:NA motor neurons,28
+TC2_d8_2,77_0:ASI amphid neurons,20
+TC2_d8_2,78_0:pharyngeal gland cell,9
+TC2_d8_2,79_0:PH sheath,8
+TC2_d8_2,79_1:excretory cell,3
+TC2_d8_2,7_0:vulval muscle,30
+TC2_d8_2,7_1:vulval muscle,31
+TC2_d8_2,7_2:anal and uterine muscles,31
+TC2_d8_2,80_0:BDU/PVW inter neurons,43
+TC2_d8_2,81_0:ADL amphid neurons,22
+TC2_d8_2,83_0:RIA inter neurons,12
+TC2_d8_2,84_0:ADF amphid neurons,18
+TC2_d8_2,85_0:BAG neurons,11
+TC2_d8_2,86_0:AVB inter neurons,16
+TC2_d8_2,87_0:AIZ amphid inter neurons,22
+TC2_d8_2,88_0:NA glia,9
+TC2_d8_2,89_0:excretory gland cell,17
+TC2_d8_2,8_0:NA hypodermis,89
+TC2_d8_2,90_0:AUA neurons,16
+TC2_d8_2,91_0:AIN inter neurons,24
+TC2_d8_2,92_0:AIM inter neurons,26
+TC2_d8_2,93_0:ADA inter neurons,34
+TC2_d8_2,94_0:RMH motor neurons,19
+TC2_d8_2,95_0:M1 motor neurons,9
+TC2_d8_2,96_0:M5 motor neurons,29
+TC2_d8_2,97_0:AIB inter neurons,16
+TC2_d8_2,"98_0:VC1-3,6 motor neurons",20
+TC2_d8_2,99_0:ASJ amphid neurons,10
+TC2_d8_2,9_0:pharyngeal epithelium,20
+TC2_d8_2,9_1:pharyngeal epithelium and marginal,19
+TC2_d8_2,9_2:pharyngeal epithelium and marginal,6

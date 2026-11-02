@@ -1,0 +1,9 @@
+{
+  "filename": "worm-gao/GSE229022_integrated_seurat_revision.rds.gz",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE229nnn/GSE229022/suppl/GSE229022_integrated_seurat_revision.rds.gz",
+  "size_bytes": 8215744742,
+  "sha256": "57b8b1d3e83a53e1686a7687c406304df13fdb789c7e461ec5ddbf0f4f1488fa",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Gao et al. integrated Seurat atlas with raw RNA counts and cell annotations from GEO GSE229022. Normal-aging analysis uses wild-type N2 fed OP50."
+}

@@ -1,0 +1,9 @@
+{
+  "filename": "zebrafish-testis/seurat/testis_5_12_20_22.rds",
+  "url": "https://drive.usercontent.google.com/download?id=1XEFHbI0cxR0YiwYRFFJff_xWQ_QN0CFw&export=download&confirm=t",
+  "size_bytes": 9256986844,
+  "sha256": "ba932560147d1ab7e493229df20a913c5eaf6519b099ab9c77db32e1d844c2c9",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Authors' annotated 5-to-22-month zebrafish testis Seurat object, linked from the public analysis repository."
+}

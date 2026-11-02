@@ -22,7 +22,7 @@ ARTIFACTS = RESULTS / "h3-cross-species-bayesian"
 SEED = sum(map(ord, "agescape-cross-species-expression-vector-bayes-v1"))
 
 
-def prepare_data(donors, species, depth_adjusted):
+def prepare_data(donors, species, depth_adjusted, covariate_column="sex_male"):
     part = donors[donors["species"] == species].copy()
     part["unit"] = part["tissue"] + " | " + part["cohort"] + " | " + part["cell_type"]
     part["group"] = part["cohort"] if species == "Human" else part["tissue"]
@@ -35,10 +35,17 @@ def prepare_data(donors, species, depth_adjusted):
     unit_map = {value: index for index, value in enumerate(units)}
     group_map = {value: index for index, value in enumerate(groups)}
     donor_map = {value: index for index, value in enumerate(donor_levels)}
-    age_scale = {"Mouse": 0.4, "Human": 12.25, "Naked mole-rat": 3.1}[species]
-    reference_age = {"Mouse": 0.0, "Human": 40.0, "Naked mole-rat": 0.0}[species]
+    age_scale = {
+        "Mouse": 0.4, "Human": 12.25, "Naked mole-rat": 3.1,
+        "Fruit fly": 40.0, "C. elegans": 14.0, "Zebrafish": 22.0,
+    }[species]
+    reference_age = {
+        "Mouse": 0.0, "Human": 40.0, "Naked mole-rat": 0.0,
+        "Fruit fly": 30.0, "C. elegans": 1.0, "Zebrafish": 5.0,
+    }[species]
     part["age_scaled"] = (part["age"] - reference_age) / age_scale
-    part["sex_centered"] = part["sex_male"] - part.groupby("unit")["sex_male"].transform("mean")
+    part["sex_centered"] = (part[covariate_column]
+                            - part.groupby("unit")[covariate_column].transform("mean"))
     part["depth_centered"] = part["mean_log_umi"] - part.groupby("unit")["mean_log_umi"].transform("mean")
     means = part.groupby("unit")["profile_hellinger"].transform("mean")
     sds = part.groupby("unit")["profile_hellinger"].transform("std")
@@ -141,14 +148,16 @@ def posterior_rows(idata, part, coords, species, model_name, prior_sd):
 
 
 def fit_model(donors, species, depth_adjusted, prior_sd, diagnostics=True, draws=2000,
-              fixed_group_effects=False):
+              fixed_group_effects=False, covariate_column="sex_male"):
     model_name = "depth_adjusted" if depth_adjusted else "unadjusted"
     if fixed_group_effects:
         model_name += "_fixed_group"
+    if covariate_column != "sex_male":
+        model_name += f"_{covariate_column}"
     label = f"{species.lower().replace(' ', '-')}-{model_name}-prior-{prior_sd:.2f}"
     slug = ARTIFACTS / label
     slug.mkdir(parents=True, exist_ok=True)
-    part, coords, data = prepare_data(donors, species, depth_adjusted)
+    part, coords, data = prepare_data(donors, species, depth_adjusted, covariate_column)
     rng = np.random.default_rng(SEED + sum(map(ord, label)))
     model = build_model(coords, data, prior_sd, depth_adjusted, fixed_group_effects)
     with model:

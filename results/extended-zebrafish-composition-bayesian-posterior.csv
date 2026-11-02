@@ -1,0 +1,9 @@
+species,model,prior_sd,scope,unit,n_donors,posterior_mean,posterior_sd,hdi94_low,hdi94_high,prob_positive
+Zebrafish,unadjusted,0.5,species,ALL,10,0.033815910428195414,0.41858273116422606,-0.746148522148591,0.8325156335629482,0.5395
+Zebrafish,unadjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | blood_and_somatic,10,-0.3724782004309884,0.6212431637611752,-1.570991930553335,0.7972475912184795,0.282375
+Zebrafish,unadjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | germ cells,10,-0.37832937853563275,0.6584002667394578,-1.6182733167485936,0.8555856102666994,0.28625
+Zebrafish,unadjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | immune,10,0.9328355196785743,0.7010751142837809,-0.3750888845474207,2.2190594027695054,0.90375
+Zebrafish,depth_adjusted,0.5,species,ALL,10,0.10268150310755945,0.42815193306099836,-0.710542555010668,0.8957490657136238,0.606
+Zebrafish,depth_adjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | blood_and_somatic,10,-0.341180158222033,0.6292517969352754,-1.53212376177631,0.8461329067848083,0.287125
+Zebrafish,depth_adjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | germ cells,10,-0.2756257152800631,0.7282449559961404,-1.665864519783341,1.077570800120802,0.3545
+Zebrafish,depth_adjusted,0.5,cell_type_unit,Testis broad compartments | GSE275361 | immune,10,1.2958328351872577,0.6985686562129517,-0.14218684362362558,2.3992684279490804,0.95175

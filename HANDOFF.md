@@ -1,6 +1,6 @@
 # Current Project Handoff
 
-Last updated: 2026-11-01. This is the operating handoff for the scientific artifact. The public website is not the current development priority.
+Last updated: 2026-11-02. This is the operating handoff for the scientific artifact. The public website is not the current development priority.
 
 ## Repository and current state
 
@@ -9,7 +9,7 @@ Last updated: 2026-11-01. This is the operating handoff for the scientific artif
 - Main manuscript: `report/manuscript-aging-mechanisms.md`
 - Reviewer guide: `PROJECT_OVERVIEW.md`
 - Reproduction commands: `README.md`
-- Latest verification: 43 tests pass and all 146 app-data anchors pass. One Bayesian-only test is skipped in the core environment.
+- Latest verification: 48 tests pass and all 146 app-data anchors pass. One Bayesian-only test is skipped in the core environment. All raw-data checksums pass.
 - Controlled-access donor-level DLPFC data, credentials, and derived donor-level values are not committed.
 
 ## Read in this order
@@ -17,15 +17,17 @@ Last updated: 2026-11-01. This is the operating handoff for the scientific artif
 1. `README.md`: current findings and reproduction.
 2. `PROJECT_OVERVIEW.md`: scientific design, results, and limitations.
 3. `report/manuscript-aging-mechanisms.md`: current manuscript. The new vector analysis has not yet been added.
-4. `report/cross-species-expression-vector.md`: direct whole-vector analysis in mouse, human, and NMR.
-5. `report/human-expression-vector-interpretation.md`: depth, assay, power, gene drivers, and HBCC replication.
-6. `report/cross-species-bayesian-vector.md`: Bayesian effects, prior sensitivity, and diagnostics.
-7. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
-8. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
-9. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
-10. `notes/cross-species-expression-vector-methods.md` and `notes/cross-species-bayesian-vector-methods.md`: vector methods.
-11. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
-12. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
+4. `report/extended-cross-species-aging.md`: integrated fly, worm, zebrafish, mouse, human, and NMR interpretation.
+5. `report/cross-species-expression-vector.md`: direct whole-vector analysis in mouse, human, and NMR.
+6. `report/human-expression-vector-interpretation.md`: depth, assay, power, gene drivers, and HBCC replication.
+7. `report/cross-species-bayesian-vector.md`: Bayesian effects, prior sensitivity, and diagnostics.
+8. `report/organ-cell-composition.md`: direct three-species cell-fraction analysis.
+9. `report/transcriptional-disorder.md`: entropy and off-program definitions and frequentist results.
+10. `report/transcriptional-disorder-bayesian.md`: matching frequentist and Bayesian global comparison.
+11. `notes/extended-analysis-methods.md` and `notes/extended-dataset-inventory.md`: extended calculations, designs, and reproduction.
+12. `notes/cross-species-expression-vector-methods.md` and `notes/cross-species-bayesian-vector-methods.md`: original vector methods.
+13. `notes/transcriptional-disorder-methods.md`: detailed calculations, priors, diagnostics, and output map.
+14. `PLAN.md`, `KICKOFF.md`, and `notes/crucibles/`: historical material, not current evidence or preregistration.
 
 ## Non-negotiable rules
 
@@ -82,6 +84,18 @@ Bayesian analysis is consistent with these qualifications. Mouse posterior means
 
 See `report/cross-species-expression-vector.md`, `report/human-expression-vector-interpretation.md`, `report/cross-species-bayesian-vector.md`, and the corresponding `notes/` and `results/` files. The manuscript has not yet been updated with this analysis.
 
+### Extended fly, worm, and zebrafish analyses
+
+The extended analysis tests the same cell-fraction and whole-expression-vector questions in three new model systems. It supports cell-type-specific aging, not a universal increase in transcriptomic displacement. Full interpretation is in `report/extended-cross-species-aging.md`, with methods in `notes/extended-analysis-methods.md` and dataset decisions in `notes/extended-dataset-inventory.md`.
+
+Fruit fly AFCA shows FDR-significant fraction changes in 36 of 162 tested cell types. All 36 retain direction in observed-record sensitivity analysis, 30 retain FDR, and 31 retain FDR after total-nuclei adjustment. Thirty-eight cell types pass depth-adjusted expression-vector FDR in both directions, but the global effect is -0.0467 SD over 40 days, p = 0.7958. Bayesian global HDIs cross zero at every tested prior.
+
+Gao worm shows ARSC and spermatheca fraction changes after platform adjustment. Germline also passes FDR in the whole-animal model. With a day-1 expression reference, the platform-adjusted global vector effect is +1.6755 SD over 14 days, with platform-stratified permutation p = 0.0025. With the more balanced day-6 reference, the effect is +0.5319, permutation p = 0.0535, and no individual cell group passes FDR. Somatic day-6 analysis is not significant. The independent Roux atlas gives positive descriptive slopes in 32 of 33 cell groups but has technical rather than biological replication. The analyses support worm expression displacement, but its magnitude and somatic evidence are reference-dependent.
+
+Zebrafish testis shows an immune-fraction increase of +0.0926 CLR units per month, q = 0.0203. It remains significant after total-cell and incomplete-spermatogenesis adjustment. No fine germ-cell fraction change passes FDR. Fine expression-vector hits do not survive exact age-permutation FDR, and Bayesian global HDIs cross zero. Immune-fraction change is stronger evidence than cell-intrinsic drift in this dataset.
+
+The rat accession is verified as `GSE137869`, but one library per tissue, sex, and condition does not support animal-level significance tests. The primate cardiopulmonary accessions are `CRA002577` and `CRA002689`; they are not yet ingested. The 55-animal rhesus preprint still lacks a verified public accession. Genome-only and bulk long-lived species are not used as H2 or H3 evidence.
+
 ### Methylation clock
 
 Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tissue evaluation. MAE was 0.36 years and 5.06 years, respectively. Mouse scoring used 724 of 816 probes. These were benchmark reproductions, not independent validations.
@@ -106,8 +120,9 @@ Predictive R-squared was 0.3169 in mouse liver and 0.6383 in the human multi-tis
 | Human depth and assay audits | `scripts/audit_human_expression_vector.py`, `scripts/audit_human_vector_assay.py` | `results/h3-human-*-audit.csv` |
 | Human gene drivers and HBCC replication | `scripts/run_human_vector_gene_drivers.py`, `scripts/run_human_neuronal_gene_replication.py` | `results/h3-human-*gene*.csv` |
 | Bayesian vector models | `scripts/run_cross_species_bayesian_vector.py`, `scripts/run_human_bayesian_global_vector.py` | `results/h3-*bayesian*.csv` |
+| Extended fly, worm, and zebrafish analyses | `scripts/run_afca_aging.py`, `scripts/run_gao_worm_aging.py`, `scripts/run_roux_worm_aging.py`, `scripts/run_zebrafish_testis_aging.py` | `results/extended-*.csv` |
 
-`scripts/run_all.py` covers the core pipeline, direct organ-fraction and transcriptional-disorder stages, and the mouse-lung vector analysis. M9, M10, the cross-species vector analysis, human follow-up analyses, and Bayesian analyses have separate environments or inputs.
+`scripts/run_all.py` covers the core pipeline, direct organ-fraction and transcriptional-disorder stages, and the mouse-lung vector analysis. M9, M10, the cross-species vector analysis, human follow-up analyses, extended atlas analyses, and Bayesian analyses have separate environments or inputs. Extended reproduction commands are in `notes/extended-analysis-methods.md`.
 
 ## Reproduction and verification
 

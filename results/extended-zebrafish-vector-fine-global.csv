@@ -1,0 +1,5 @@
+species,tissue,cohort,metric,model,donor_set,age_scale,n_donors,n_units,n_donor_units,effect_sd,se,ci95_low,ci95_high,pvalue,age_unit
+Zebrafish,Testis fine cell types,GSE275361,profile_hellinger,unadjusted,all_samples,22.0,6,12,72,-0.5689014270262508,1.182924407431285,-3.609705421699963,2.4719025676474615,0.650874634002446,month
+Zebrafish,Testis fine cell types,GSE275361,profile_hellinger,depth_adjusted,all_samples,22.0,6,12,72,0.2210511494047185,0.22558249252299653,-0.3588271083124611,0.8009294071218981,0.3721318486662295,month
+Zebrafish,All tested tissues,All cohorts,profile_hellinger,unadjusted,all_samples,22.0,6,12,72,-0.5689014270262508,1.182924407431285,-3.609705421699963,2.4719025676474615,0.650874634002446,month
+Zebrafish,All tested tissues,All cohorts,profile_hellinger,depth_adjusted,all_samples,22.0,6,12,72,0.2210511494047185,0.22558249252299653,-0.3588271083124611,0.8009294071218981,0.3721318486662295,month

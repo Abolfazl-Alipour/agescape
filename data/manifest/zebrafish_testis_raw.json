@@ -1,0 +1,9 @@
+{
+  "filename": "zebrafish-testis/GSE275361_RAW.tar",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE275nnn/GSE275361/suppl/GSE275361_RAW.tar",
+  "size_bytes": 527769600,
+  "sha256": "12f65151b0c92371795a6aa9918ca1b4869bd3d421487805475566cf9601f461",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Sposato et al. zebrafish testis aging filtered count matrices from GEO GSE275361. Technical channels are aggregated by fish."
+}

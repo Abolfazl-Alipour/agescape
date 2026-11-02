@@ -1,0 +1,9 @@
+{
+  "filename": "worm-roux/ad_worm_aging.h5ad",
+  "url": "https://storage.googleapis.com/worm_public/ad_worm_aging.h5ad",
+  "size_bytes": 4127662802,
+  "sha256": "40d6e882462dbda8da133ea525951987db2f4ae5b09bdcf6f72d7af96fbcbac4",
+  "downloaded": "2026-11-02T00:00:00Z",
+  "optional": true,
+  "notes": "Roux et al. annotated whole-worm aging atlas linked from the paper portal and GEO GSE208154. GEO labels libraries as technical replicates."
+}

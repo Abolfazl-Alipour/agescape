@@ -20,6 +20,7 @@ app/node_modules/
 app/dist/
 results/h3-bayesian/
 results/h3-cross-species-bayesian/
+results/extended-composition-bayesian/
 results/h3-human-vector-gene-drivers-all.csv
 results/h3-human-hbcc-gene-replication-all.csv
 results/h3-human-hbcc-gene-replication-depth.csv

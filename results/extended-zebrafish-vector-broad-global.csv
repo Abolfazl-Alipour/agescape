@@ -1,0 +1,5 @@
+species,tissue,cohort,metric,model,donor_set,age_scale,n_donors,n_units,n_donor_units,effect_sd,se,ci95_low,ci95_high,pvalue,age_unit
+Zebrafish,Testis broad compartments,GSE275361,profile_hellinger,unadjusted,all_samples,22.0,10,3,26,1.0069550441778266,0.4007208930276113,0.10046140573252238,1.9134486826231307,0.033154866511460976,month
+Zebrafish,Testis broad compartments,GSE275361,profile_hellinger,depth_adjusted,all_samples,22.0,10,3,26,0.7519492174877882,0.19794377995406728,0.3041692778333432,1.1997291571422333,0.004225131674823432,month
+Zebrafish,All tested tissues,All cohorts,profile_hellinger,unadjusted,all_samples,22.0,10,3,26,1.0069550441778266,0.4007208930276113,0.10046140573252238,1.9134486826231307,0.033154866511460976,month
+Zebrafish,All tested tissues,All cohorts,profile_hellinger,depth_adjusted,all_samples,22.0,10,3,26,0.7519492174877882,0.19794377995406728,0.3041692778333432,1.1997291571422333,0.004225131674823432,month

@@ -1,0 +1,309 @@
+species,model,prior_sd,scope,unit,n_donors,posterior_mean,posterior_sd,hdi94_low,hdi94_high,prob_positive
+Fruit fly,unadjusted_fixed_group,0.5,species,ALL,36,-0.1306051569783674,0.17758667503785558,-0.4547918016693624,0.20296867459311058,0.23475
+Fruit fly,unadjusted_fixed_group,0.5,tissue_or_cohort,body,36,-0.1707304377606752,0.0667117661765943,-0.30439142211202086,-0.051544333017643204,0.005375
+Fruit fly,unadjusted_fixed_group,0.5,tissue_or_cohort,head,36,-0.12782041576016984,0.06518981534347372,-0.24674754839338794,-0.003648021330757034,0.022875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | 16-cell germline cyst in germarium region 2a and 2b,36,-0.11117792751293075,0.18239267243489887,-0.44369049994269977,0.24640992289748798,0.26675
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | CNS surface associated glial cell,36,-0.16879625717610852,0.1603219529470921,-0.4692382594769174,0.13157904684938543,0.14825
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult alary muscle,36,-0.2478304412336562,0.1328927346339244,-0.48756954293632804,0.012384728352634395,0.031
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult fat body_body,36,-0.38358936606028543,0.17680772658617722,-0.715894177738204,-0.05318339251538733,0.01475
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult glial cell,36,-0.025024257168139087,0.13975105304249688,-0.2880467925423605,0.2345403879173279,0.431
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult heart ventral longitudinal muscle,36,-0.30331664125585517,0.16474712043440704,-0.6112521616053154,0.00809455369925734,0.0325
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult hindgut,36,-0.11327326148723414,0.1708414718060706,-0.4441624695982228,0.19393195258944693,0.254375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult midgut enterocyte,36,-0.11345303746476364,0.17153836762079394,-0.44527020382237553,0.20150484900593402,0.251125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult midgut-hindgut hybrid zone,36,-0.1593124424213113,0.15225345315625258,-0.44963113410579103,0.1264627318925255,0.144
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult oenocyte,36,-0.10615939120916187,0.16238710505920737,-0.4101933675553598,0.19786707419981545,0.255
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult peripheral nervous system,36,-0.16556993953046556,0.15051897296239303,-0.43766862568922893,0.1236084130937097,0.134875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult reticular neuropil associated glial cell_body,36,-0.18618997350409297,0.16253216313496346,-0.48563390696330816,0.11708702335724185,0.120125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult salivary gland,36,-0.1687683709711456,0.17293121252612223,-0.49225593007371854,0.1507712082628436,0.161625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult tracheal cell,36,0.008932109440663052,0.09191628882934628,-0.1685541109327071,0.17310098588703704,0.54475
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult ventral nervous system,36,-0.3702495301542848,0.15199167846987957,-0.6559484418790612,-0.08864684583759815,0.00675
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | anterior ejaculatory duct,36,-0.2266965951581736,0.16706268771042534,-0.5466629064520224,0.08311906213383385,0.08275
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | antimicrobial peptide-producing cell,36,-0.1694792603147884,0.17383642902782642,-0.5047892979702723,0.15129664105368323,0.160875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cardia (1),36,-0.10310141192994192,0.16497845329113345,-0.41653536129074814,0.20188055555049753,0.265
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cell body glial cell,36,0.05747859315664607,0.0924641351581526,-0.11576464513607466,0.23367331948990464,0.73975
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | copper cell,36,-0.2865299931217397,0.17571843093051856,-0.6322506432610612,0.03175103062837315,0.050875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | crop,36,-0.1744781422761882,0.09296905829638306,-0.3471827317031976,-0.0010427172971740814,0.026625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cyst cell,36,-0.1793100737853307,0.17026910674618218,-0.4811082540985538,0.15584929033569223,0.144125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | ejaculatory bulb,36,-0.20704439686309495,0.16367691439857388,-0.509298473123972,0.10252631914181705,0.1065
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | ejaculatory bulb epithelium,36,-0.21127403714930268,0.1656479267256798,-0.5176580865637063,0.10299258973264365,0.097625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enteroblast,36,-0.1301239906914276,0.16758610469091534,-0.4453546422641872,0.18239742811508658,0.21775
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte of anterior adult midgut epithelium,36,-0.2895722274414577,0.17424487539126934,-0.6237829130281457,0.03076565202083803,0.04725
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte of posterior adult midgut epithelium,36,-0.2681800631968486,0.1726415987683219,-0.5976515502878144,0.0537810484580847,0.059375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte-like,36,-0.19748042542895697,0.17055423239815717,-0.5203422821726491,0.12266485654219017,0.119375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enteroendocrine cell,36,0.03493885637527034,0.17817270777336436,-0.3065187775276575,0.36562313107383265,0.570625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | eo support cell,36,-0.051116657721129215,0.13367927421986905,-0.30015929734069763,0.19981128777559842,0.35
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | epidermal cell that specialized in antimicrobial response,36,-0.19330560211284673,0.1778179149564866,-0.5332965383385806,0.12993979286683918,0.137375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | epithelial cell_body,36,0.09691781756749196,0.09703518229478295,-0.07752175643963355,0.28806680120804673,0.8465
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | escort cell,36,-0.13629902302631777,0.1800100482791152,-0.4931327515152602,0.18346164304564666,0.223375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | female reproductive system,36,-0.13680101436380587,0.17889659806126662,-0.4810503680533468,0.20072128634774775,0.218375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | follicle cell,36,-0.16631265859519523,0.17722583330173564,-0.4979221851786336,0.16439462215615971,0.176125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | follicle stem cell and prefollicle cell,36,-0.13424918744171851,0.1860166426955309,-0.47079073113354675,0.23217539719143784,0.232375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | germline cell,36,-0.15468867389902982,0.17783737311952286,-0.47843105218926524,0.18699606825811735,0.1875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | gustatory receptor neuron,36,-0.15164039405707427,0.15903192708314742,-0.4494140814789108,0.15201741859414974,0.16825
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | hemocyte_body,36,-0.39273361734316264,0.1710345312369252,-0.733337526408901,-0.08435993976165981,0.00875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | indirect flight muscle,36,-0.3173904655414906,0.14474637039715205,-0.5827120708505698,-0.039546116907547446,0.013625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | intestinal stem cell,36,-0.16316470367506752,0.18171235016870427,-0.5060048341131084,0.17472467792935248,0.184
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | leg muscle motor neuron,36,-0.1167486957311954,0.16265377043909912,-0.42005144830717067,0.19189374952416433,0.234375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | male accessory gland main cell,36,-0.19806163867743595,0.1666429652241537,-0.513447871266227,0.11334886257817488,0.116375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | mechanosensory neuron of haltere,36,-0.32319018659239784,0.16127707889392698,-0.6282198626403788,-0.02889003601731353,0.022625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | midgut large flat cell,36,-0.2760794243463676,0.1738837784977142,-0.5990489273226484,0.05278884360060634,0.054625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | multidendritic neuron,36,-0.21995678490704793,0.1697214860701275,-0.5363666904675178,0.10363778845729402,0.093
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | muscle cell,36,-0.20611343425021372,0.11740065485804006,-0.4391045270203439,0.002440502017418347,0.039875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | oviduct,36,-0.15408138620043416,0.18009986269279496,-0.49357495281150765,0.18865365614963364,0.19275
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | perineurial glial sheath,36,0.01481284688461432,0.14991154900018175,-0.28420698527836946,0.28093684384316714,0.539
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | pheromone-sensing neuron,36,-0.20981860103199473,0.15833776282631062,-0.5201401113063712,0.0739245796337139,0.0885
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | polar follicle cell,36,-0.16981446892512328,0.1783729948733535,-0.510426977761495,0.1646822463813692,0.16675
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | posterior midgut*,36,-0.35247335871802365,0.17286456683365942,-0.6781610259865655,-0.025305319006431154,0.020375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | prefollicle cell/stalk follicle cell,36,-0.11291569368437533,0.178924803979217,-0.44051072783193285,0.23388298685026554,0.26175
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | principal cell*,36,-0.0889513304987164,0.1632961488037937,-0.40487901434308887,0.20890939397329666,0.2955
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | scolopidial neuron,36,-0.3604730927078685,0.16075042403081385,-0.6783098599165798,-0.07133577488127768,0.013625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | seminal vesicle & testis epithelia,36,-0.1626475132485078,0.1706336722607731,-0.46616593340171514,0.17451771605158384,0.168875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | spermatid,36,-0.19399714026004333,0.16639200529765152,-0.4930895603994037,0.13391143514222273,0.124125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | spermatocyte,36,-0.17466689446307998,0.17120947750488946,-0.48594226648826816,0.15177413705838597,0.149125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | stalk follicle cell,36,-0.10822197746829927,0.18088121879229208,-0.435023024736357,0.24776500261063825,0.269875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | subperineurial glial cell_body,36,0.05334357580211516,0.147182711883816,-0.22794223432028068,0.3245152919289793,0.6505
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | visceral muscle of the crop,36,-0.27961731181717575,0.14355875078526728,-0.5509613940341214,-0.011044488612038671,0.025875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | visceral muscle of the midgut,36,-0.1495004515824012,0.12441283912667146,-0.3827418391100799,0.0843988362518317,0.111875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,body | AFCA | young germ cell,36,-0.1487033713457215,0.17615959330388936,-0.48831286770347354,0.17314949003116667,0.1955
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | Johnston organ neuron,36,-0.14833483381206786,0.1669946796889707,-0.4524369027179275,0.1814822384579067,0.185875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | Poxn neuron,36,-0.2609058257054253,0.15936013579640648,-0.5795348299658585,0.02676215589767224,0.05
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T2,36,-0.07360384460871103,0.16261725452393447,-0.3732120627522072,0.23198057523297874,0.32325
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T2a,36,-0.003824029065833204,0.17367061141855059,-0.3249319086075975,0.32291717413818655,0.493
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T3,36,0.06476632977211255,0.1661915371982818,-0.23521658859112618,0.3883452610142818,0.6485
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5,36,-0.19746669773766753,0.16596511316334703,-0.49719395490516516,0.12346883015735267,0.114
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5a-b,36,-0.025657142789446776,0.17482463148091976,-0.35523042334919747,0.29844604015743204,0.438
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5c-d,36,-0.08617507946165184,0.17063647428840867,-0.39477954359502887,0.23640448597889308,0.307875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult brain cell body glial cell,36,-0.22302121783694623,0.16358988745595376,-0.5393146083036503,0.0754424036676364,0.085625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult brain perineurial glial cell,36,-0.13450206493734077,0.16182800764238678,-0.443153275881657,0.16160520309256352,0.199875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult fat body_head,36,-0.11638625069367649,0.1780778167431786,-0.4449907860408616,0.2169016655325965,0.259875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult lamina epithelial/marginal glial cell,36,-0.08475309958579307,0.171695957749877,-0.40877851394813325,0.23266976156451571,0.3085
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult optic chiasma glial cell,36,-0.06372721683463188,0.1660361170777903,-0.37925240956486794,0.2447083253830451,0.349875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult reticular neuropil associated glial cell_head,36,0.0459630917719303,0.17655165817206916,-0.28031349813593887,0.37712730709605924,0.601375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | alpha'/beta' Kenyon cell,36,-0.256460404610626,0.16041114953381164,-0.5591143253422471,0.042767309837138716,0.054625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | alpha/beta Kenyon cell,36,-0.26117989247482554,0.1629180930874295,-0.5797629769066047,0.030984656839321206,0.0545
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | antennal lobe projection neuron,36,-0.20215690076867304,0.15877096188001827,-0.4934861382315828,0.09198680071922155,0.099625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | auditory sensory neuron,36,-0.18559030248317548,0.16024477188057362,-0.49470971046850865,0.10735629139380568,0.122875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | centrifugal neuron C2,36,0.07854928653499463,0.16450159184112725,-0.23447787728373123,0.3845579954535875,0.68625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | centrifugal neuron C3,36,-0.010651473905722787,0.17023317533129798,-0.32279051841480483,0.3186096431600978,0.47675
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | columnar neuron T1,36,-0.24575528839829508,0.15418405557672604,-0.5262902487599226,0.057189863182326224,0.05325
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | cone cell,36,-0.013544749702724209,0.15920572906579433,-0.3085366466385383,0.2893894700613285,0.466625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm10,36,-0.04200830388834038,0.1680685657867711,-0.37330626853413074,0.26548352155636923,0.40075
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm12,36,0.0006963944479252513,0.16355927454072197,-0.3025736430070046,0.3166869406928991,0.496125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm3,36,0.034965966980612065,0.17378812727185744,-0.2967341890647073,0.3528612689722418,0.5835
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm8,36,0.06428006480448906,0.16707091554622397,-0.24733537011352696,0.3836725586468099,0.654375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm9,36,-0.24483029629554548,0.16812987934601603,-0.5740218338343188,0.05551539361168933,0.068375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | dopaminergic PAM neuron,36,-0.34376060449195517,0.16396943351773183,-0.6514497859698264,-0.03638978256854626,0.017625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | ensheathing glial cell,36,-0.16094859898208472,0.16102593817232658,-0.46627413650854155,0.1347921678667449,0.151625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | epithelial cell_head,36,0.1771466410040924,0.18289893772834567,-0.16763398920290418,0.5152380549044013,0.83325
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | gamma Kenyon cell,36,-0.3676772897644847,0.16072440170227348,-0.6563977529559197,-0.05960044854812298,0.013
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | hemocyte_head,36,-0.18023320234154278,0.16755968548845715,-0.4865773798819081,0.13936468083615727,0.139875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina intrinsic amacrine neuron Lai,36,-0.2343060734471305,0.16473956475048843,-0.5435039592180029,0.07551074259564752,0.077
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L1,36,-0.21526794517323106,0.16915173214275336,-0.5317566726936976,0.10729962933994347,0.098
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L2,36,-0.24519250176822266,0.16179347373904146,-0.5680464181150425,0.04500411253461317,0.0645
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L3,36,-0.2742447268166095,0.172665468171974,-0.5987934222078191,0.04476101559964566,0.0565
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L4,36,-0.22263953958073693,0.16534863217329343,-0.5362887503660385,0.0899984888410758,0.086625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L5,36,-0.015133634383978006,0.17147102703038175,-0.33658881367254984,0.3053910287529831,0.46625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina wide-field 1 neuron,36,-0.2975315522792373,0.16871096404729746,-0.6207821745381932,0.013701109161817366,0.035875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina wide-field 2 neuron,36,-0.2465972726271329,0.17196720355345027,-0.5617019204511079,0.07871320061105788,0.07325
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lobula columnar neuron LC10,36,-0.24595990495063136,0.1665583577794443,-0.5485847142142559,0.0733340210280957,0.068125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lobula columnar neuron LC17,36,-0.2049567814433077,0.16349402101989632,-0.5060246919379684,0.11190621125810013,0.106
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi1,36,-0.23956846108712535,0.17045451067709164,-0.5733949279050322,0.06595869563757169,0.081875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi15,36,0.01986883790810766,0.1717342430366294,-0.2980168336040268,0.3480299975359161,0.548125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi4,36,-0.0473219735109364,0.17040230572623136,-0.3626956257129037,0.2795884688124023,0.39125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi9,36,-0.11668250020944394,0.1655403470619607,-0.41407517323061804,0.21164163500228153,0.2355
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 1,36,0.05322072957205463,0.17273943904215736,-0.29254009595337954,0.3585207642141008,0.62475
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 10,36,-0.2555459573645723,0.16583148902977135,-0.573378292835563,0.05085234069757837,0.05975
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 11,36,-0.1422528888730144,0.16238652984867566,-0.44688513288264714,0.16205978736432095,0.188375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 12,36,-0.043706266268059596,0.1602203415437146,-0.3267929664066938,0.27613639815326146,0.39125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 13,36,-0.23217863218539675,0.16147744996341348,-0.5471706382304728,0.06531977205053817,0.0775
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 14,36,-0.19354651388517669,0.16036209425797737,-0.4982851454144975,0.10335527283495831,0.112375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 15,36,-0.19399288660069078,0.16368588086094119,-0.4890270357927857,0.13078359155637,0.11575
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 16,36,-0.09210839705837832,0.16125667138325747,-0.395980778586928,0.2097877799783437,0.2855
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 17,36,-0.06351703181363291,0.16550294787050374,-0.37732862427855823,0.24738178217406648,0.34575
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 2,36,-0.1532542868631889,0.16936269427882103,-0.47479412241784963,0.16688273463919298,0.173625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 3,36,-0.0863183123221013,0.17273643331776425,-0.41936864738151164,0.23237235709126697,0.308
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 4,36,-0.13155735033064953,0.16830704752490722,-0.44196312276681665,0.1958291654914266,0.21275
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 5,36,-0.019841877405601074,0.1726716330868447,-0.34317691132267714,0.30466889993624896,0.455125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 6,36,0.0024602968683518343,0.17233565820849175,-0.3195880797588352,0.33589254428028703,0.5115
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 7,36,-0.1357558085353768,0.1706562550604118,-0.4584559425351805,0.1809983659763161,0.215
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 8,36,0.01419317492895398,0.17537408514134858,-0.33719650833152176,0.32517120009460654,0.532625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 9,36,-0.2603848355638095,0.15766109396259412,-0.5518093361380555,0.0339753008827074,0.049125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | ocellus retinula cell,36,-0.30672935254931905,0.16704177153042127,-0.6238874135468905,0.0002523668362429297,0.030875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | octopaminergic/tyraminergic neuron,36,-0.11839943566074605,0.1686079935316015,-0.4328617561837229,0.1985882270584717,0.2395
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | olfactory receptor neuron,36,-0.35066991140694836,0.15418888457220614,-0.6503036642085636,-0.06758938302884947,0.012375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | optic-lobe-associated cortex glial cell,36,-0.1567637213998076,0.15733367920164099,-0.4607000266378543,0.13564224009530632,0.153625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | outer photoreceptor cell,36,-0.35359474161585147,0.15041644449576477,-0.6457257726846553,-0.08567557399809692,0.009125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | pericerebral adult fat mass,36,-0.08561415397241064,0.1709194143090549,-0.4181879603228759,0.2315854360749499,0.298875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | photoreceptor cell R7,36,-0.4188660199371037,0.1667560945151688,-0.7180409764608605,-0.0967752389309599,0.00425
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | photoreceptor cell R8,36,-0.3204140298781681,0.15836910726582246,-0.6166203314805987,-0.019757530835337517,0.020875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | pigment cell,36,0.10448786543310495,0.17339018918741939,-0.22305602235091643,0.4313322993737633,0.728
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | proximal medullary amacrine neuron Pm2,36,-0.09311282594047496,0.16014177613036099,-0.3989199347840657,0.2061389181755603,0.279625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | proximal medullary amacrine neuron Pm4,36,-0.13670961281507646,0.16543489863517344,-0.4563858508016642,0.1670090127494707,0.202625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | skeletal muscle of head,36,0.158277171705636,0.17673180348231418,-0.17737089662978475,0.48710364048751426,0.81875
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | subperineurial glial cell_head,36,0.002444102517859166,0.16741925715155817,-0.285594025083345,0.3420627217901907,0.50525
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY14,36,-0.19635260717169656,0.1645593123842416,-0.48958628439840296,0.12209221693215594,0.115
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY4,36,0.016264621803195687,0.16442287149085497,-0.29907348530094535,0.32115378584853466,0.53925
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY5a,36,0.046296426348647085,0.16067825497686453,-0.2460997276832685,0.3558570194643479,0.615375
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY8,36,0.001354257287525233,0.16799667100091473,-0.3222666992786746,0.31025589998589326,0.501625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm1,36,-0.22078761490603552,0.16607184938584693,-0.530208702553293,0.094790987472643,0.094125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm2,36,-0.140060320136102,0.16597659137448242,-0.45129773476225044,0.1760326065490885,0.195
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm20,36,-0.09414361692580873,0.17402512940521336,-0.4191217056651066,0.2377249698975459,0.293125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm29,36,-0.33340308120938084,0.1617137263036945,-0.6421355403558424,-0.036748358958667265,0.019125
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm3a,36,-0.06626797749375689,0.15829039613441315,-0.36758135780907275,0.22448311467522608,0.34075
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm4,36,-0.1503699434131041,0.17479861499242916,-0.47261597443719644,0.18823621060624587,0.196625
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm5c,36,-0.03255522415564819,0.17182786770999975,-0.34938943462675925,0.2966979074421604,0.41975
+Fruit fly,unadjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm9,36,-0.008775442465164414,0.17287607047911638,-0.32845340639993637,0.32523552953851853,0.47625
+Fruit fly,depth_adjusted_fixed_group,0.5,species,ALL,36,-0.10336126228809588,0.1732291438375754,-0.42110864899625045,0.23321909391769907,0.27775
+Fruit fly,depth_adjusted_fixed_group,0.5,tissue_or_cohort,body,36,-0.11032165183528751,0.06615699796715752,-0.22674373497854405,0.024450178436910136,0.0465
+Fruit fly,depth_adjusted_fixed_group,0.5,tissue_or_cohort,head,36,-0.0912311989106404,0.062358737728653295,-0.20958282739180203,0.027288616198467938,0.069625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | 16-cell germline cyst in germarium region 2a and 2b,36,-0.05154160307694751,0.174908508518944,-0.37855323696533183,0.27701090572805037,0.38275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | CNS surface associated glial cell,36,-0.10519802629343397,0.16509414340657813,-0.4013738791265216,0.2207708653690107,0.26375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult alary muscle,36,-0.19128446016875875,0.13069115686250227,-0.4411889712919238,0.051855393976672215,0.07375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult fat body_body,36,-0.327154123829046,0.17937162803961101,-0.6780559894785488,-0.0027599326198243707,0.032
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult glial cell,36,0.04145532554073965,0.1386301277680153,-0.21671362955633802,0.3049221685959814,0.625375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult heart ventral longitudinal muscle,36,-0.2414864204096089,0.16465148281504263,-0.5435013672625292,0.0821323157715054,0.069125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult hindgut,36,-0.05717970240419353,0.1659715157752684,-0.37550836341636945,0.24546322918608396,0.364
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult midgut enterocyte,36,-0.051179236081413795,0.17546264169723733,-0.3813454374312408,0.2814328329465595,0.3835
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult midgut-hindgut hybrid zone,36,-0.09659749628088796,0.152703941835684,-0.3718992304881246,0.20587232361700789,0.260875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult oenocyte,36,-0.045718445209715866,0.16831581897886852,-0.36014312428923295,0.26620685524996707,0.391125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult peripheral nervous system,36,-0.10324260310311649,0.15171876765664521,-0.39984954030511694,0.17318762180175243,0.24825
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult reticular neuropil associated glial cell_body,36,-0.12716517715886744,0.1576742894238297,-0.42588267901122884,0.16483393936456092,0.208625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult salivary gland,36,-0.10881864699983204,0.17491896631567658,-0.45439155833830364,0.19878464877535382,0.267625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult tracheal cell,36,0.07823217411050705,0.08742631873200377,-0.08342488783795662,0.24281273290865293,0.815375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | adult ventral nervous system,36,-0.3131463684147275,0.15151167680124059,-0.5946043033155858,-0.03359630759565835,0.01875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | anterior ejaculatory duct,36,-0.1636055321063484,0.16771716651080276,-0.47908209921075934,0.1507029710490471,0.16475
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | antimicrobial peptide-producing cell,36,-0.10913939288274349,0.17193131368552822,-0.42186955186023495,0.2163972171173923,0.256625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cardia (1),36,-0.0437443389132373,0.16545876057280565,-0.36152043906528947,0.2610136585866739,0.397
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cell body glial cell,36,0.12498837159093897,0.0866455571878582,-0.04072426943810633,0.28524524344585306,0.924125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | copper cell,36,-0.22488388724067876,0.17720982144546213,-0.564607784262867,0.10796753326467695,0.10275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | crop,36,-0.1183376676109658,0.09041288284641236,-0.2900956942569376,0.046903608313296055,0.093875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | cyst cell,36,-0.11866188118225203,0.1708282585564146,-0.44290587166460177,0.19850911046294556,0.240125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | ejaculatory bulb,36,-0.14357599991393494,0.16826561371154236,-0.4573699885130596,0.1749370343515113,0.19625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | ejaculatory bulb epithelium,36,-0.1487529977922402,0.1640183554014758,-0.4519393796812983,0.16106521475270788,0.179
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enteroblast,36,-0.06898459301932633,0.17209180328397197,-0.38766352651488023,0.2620157803651964,0.338625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte of anterior adult midgut epithelium,36,-0.22365061698144714,0.1750094440575663,-0.5662263547406003,0.0932310343772855,0.099125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte of posterior adult midgut epithelium,36,-0.20511901439727462,0.17717819992794523,-0.5336930341245115,0.13765620290827005,0.119875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enterocyte-like,36,-0.13638110300636716,0.1747489047902677,-0.46447225615159793,0.19413526725474262,0.214125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | enteroendocrine cell,36,0.10428699058158224,0.17378580912553288,-0.2132597254987804,0.44020714209347034,0.72625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | eo support cell,36,0.015519615839826199,0.12872120935835307,-0.23684636101266993,0.2517304213458346,0.552125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | epidermal cell that specialized in antimicrobial response,36,-0.13188018141695898,0.17808536843036685,-0.4666499089577546,0.2033644135775367,0.224
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | epithelial cell_body,36,0.16665609118634503,0.09368857289017682,-0.0026750785282809632,0.35103055337753925,0.956625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | escort cell,36,-0.07730945668058928,0.17757596481086144,-0.40749049292728834,0.2579650909176186,0.331625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | female reproductive system,36,-0.07527940258901265,0.17862041068985343,-0.40955082993679426,0.25721945249006867,0.336375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | follicle cell,36,-0.10218283879277858,0.18331928254003815,-0.4362808804543389,0.24821388759195853,0.29375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | follicle stem cell and prefollicle cell,36,-0.07270975788305278,0.176725083345335,-0.43092716407552134,0.23725630439792572,0.338375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | germline cell,36,-0.09350528634486059,0.18090712538657597,-0.4227829504096546,0.25853504016767576,0.304375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | gustatory receptor neuron,36,-0.09187150415959326,0.16112030259277418,-0.39565707432699365,0.2097190766586647,0.287125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | hemocyte_body,36,-0.33787909810140127,0.1704039104759461,-0.6629788844587213,-0.01854844818356268,0.023375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | indirect flight muscle,36,-0.258576686326691,0.14378983401841972,-0.5209786153684505,0.023651324366332997,0.036
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | intestinal stem cell,36,-0.10357200584032616,0.1824632578713184,-0.44829757682398264,0.23472156130824193,0.287625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | leg muscle motor neuron,36,-0.059371565964689926,0.16944847579965347,-0.362794591962333,0.27388594661795895,0.369375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | male accessory gland main cell,36,-0.13825279372896443,0.1667376027663515,-0.44025635698051646,0.1900587682226668,0.200375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | mechanosensory neuron of haltere,36,-0.2675672191324179,0.16710000467114194,-0.5781317312942523,0.049234527072733666,0.054875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | midgut large flat cell,36,-0.21317413693746273,0.1730648853212439,-0.534691008700693,0.11105932506077483,0.107875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | multidendritic neuron,36,-0.158900589366387,0.1699073059311125,-0.47890113791064254,0.15904891227277065,0.172375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | muscle cell,36,-0.14933920682166177,0.11644052729983423,-0.3745171207762581,0.0652415492104961,0.09675
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | oviduct,36,-0.09250652321535191,0.178065969413119,-0.44731046595797036,0.2233860834533667,0.299625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | perineurial glial sheath,36,0.08350042928938282,0.14896689836988325,-0.2018248421428763,0.3601130740711379,0.713625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | pheromone-sensing neuron,36,-0.15042784898166373,0.16001937122889454,-0.46038481060363795,0.13629446214808483,0.173
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | polar follicle cell,36,-0.1075154963725303,0.17746413999817814,-0.43447103944893567,0.23289418548838242,0.271125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | posterior midgut*,36,-0.28998986543423944,0.17660491003931666,-0.6116280588108925,0.05098021582705699,0.047625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | prefollicle cell/stalk follicle cell,36,-0.04808815143364224,0.17732893716921488,-0.3832663270983032,0.28453971756464425,0.395
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | principal cell*,36,-0.026580571827920868,0.16619933070376355,-0.335291718991243,0.2931922033523424,0.43375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | scolopidial neuron,36,-0.3060640409597712,0.1592460805669776,-0.6066047362840506,-0.011349318389198094,0.026375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | seminal vesicle & testis epithelia,36,-0.0981165939247532,0.16999282225645954,-0.41875376542030424,0.21795023902101857,0.28225
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | spermatid,36,-0.12888617763293547,0.1755645269359147,-0.4753306028536573,0.18512948088950035,0.232
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | spermatocyte,36,-0.1140733169410843,0.1718074879095452,-0.4466506819116197,0.19837668153845264,0.25275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | stalk follicle cell,36,-0.04769056194358471,0.18328349184677006,-0.3926020727978868,0.29475327405961255,0.394875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | subperineurial glial cell_body,36,0.12160919923212359,0.14562118034653956,-0.14947820936447,0.3954950868491505,0.801625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | visceral muscle of the crop,36,-0.22032092836192874,0.14312699782909435,-0.49190676990194415,0.040831553310636905,0.05925
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | visceral muscle of the midgut,36,-0.08292296875233814,0.12480598317054276,-0.31546605045798837,0.1512182522627799,0.252375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,body | AFCA | young germ cell,36,-0.08687680722910955,0.17952121040222788,-0.42552899862823684,0.25276039456017246,0.320375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | Johnston organ neuron,36,-0.11036895383588942,0.16357993935149645,-0.41379585361573473,0.19431408150604326,0.2525
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | Poxn neuron,36,-0.22414230990150724,0.1642504584129641,-0.5337649782779051,0.09037047515511182,0.083875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T2,36,-0.03568362266399022,0.1614804274153783,-0.34915081724685093,0.25950000015875563,0.41775
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T2a,36,0.036850878834535264,0.17192423788826444,-0.2880562554882178,0.35644503515740966,0.58275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T3,36,0.10351408081178687,0.16378945605299483,-0.19449243792725981,0.4185937178312611,0.7345
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5,36,-0.16286572168425095,0.16277408684991906,-0.4808070086447281,0.1288988651487061,0.157875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5a-b,36,0.009519064135282158,0.1691491447169256,-0.2971611315266478,0.33228240096861056,0.522375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | T neuron T4/T5c-d,36,-0.04943871357420131,0.16989951059242286,-0.3715595790610639,0.26797167288045487,0.383375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult brain cell body glial cell,36,-0.18332798712813433,0.1653533496244694,-0.4762310261996351,0.14472142615620995,0.1315
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult brain perineurial glial cell,36,-0.10197876543239427,0.16310724474599372,-0.40749449122213804,0.20488187178449663,0.260875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult fat body_head,36,-0.08332891433840021,0.1752427215195071,-0.4019134287634866,0.2552806990558824,0.314
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult lamina epithelial/marginal glial cell,36,-0.049621960342463516,0.1689898420620681,-0.36241091806284403,0.27158792990034947,0.383375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult optic chiasma glial cell,36,-0.028888060284404438,0.165708932647147,-0.3612158413563627,0.26528141744932593,0.430375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | adult reticular neuropil associated glial cell_head,36,0.08642445754394425,0.17033030544778072,-0.23878489889191643,0.4083272430360976,0.69725
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | alpha'/beta' Kenyon cell,36,-0.22126604918225942,0.15898034714257414,-0.5084062101077691,0.08392081442937403,0.08175
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | alpha/beta Kenyon cell,36,-0.22304830912967322,0.16740956983626584,-0.5401807373460628,0.07946540307797263,0.094125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | antennal lobe projection neuron,36,-0.1693394552345453,0.16198612521829894,-0.4737554578239223,0.1352518480223971,0.145625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | auditory sensory neuron,36,-0.15116748373204558,0.15764960148171084,-0.4492801069905557,0.14021846690966464,0.1665
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | centrifugal neuron C2,36,0.11628420626048498,0.15924541459913416,-0.1911494456269414,0.4104732104856809,0.772
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | centrifugal neuron C3,36,0.030850546246227996,0.1675499567648386,-0.28387193683161666,0.3461550362971264,0.575625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | columnar neuron T1,36,-0.2073141477153595,0.15987756575611545,-0.5127138571586848,0.08633482313325197,0.0945
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | cone cell,36,0.020334205769640786,0.15776240680563916,-0.28601151111729084,0.3091690996073704,0.552
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm10,36,-0.0059204214401192045,0.16285353392300006,-0.3091843558598059,0.29993751975944044,0.48425
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm12,36,0.03528403254164135,0.15871527162163218,-0.2438570305801804,0.3588431708214722,0.58575
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm3,36,0.08038689465005526,0.17593914623291246,-0.24885828423794887,0.4030458254894552,0.672875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm8,36,0.1003494685756684,0.16771502326418028,-0.2170266287885476,0.41399380858381407,0.7245
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | distal medullary amacrine neuron Dm9,36,-0.20759915828640635,0.16898762117812838,-0.5291571573670479,0.11870216699862597,0.10575
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | dopaminergic PAM neuron,36,-0.30655467019599203,0.16506792316883706,-0.6102912317993257,0.0054026741913476,0.031
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | ensheathing glial cell,36,-0.1259797561701286,0.16740216155186013,-0.4420773480091466,0.18822709771875845,0.224375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | epithelial cell_head,36,0.21879520926227458,0.17872696315199382,-0.13695018573623144,0.5322659707808035,0.89175
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | gamma Kenyon cell,36,-0.3290047560664651,0.1623841444773354,-0.6410343154079702,-0.029248132546509993,0.022375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | hemocyte_head,36,-0.14415069049052365,0.16918763184902222,-0.469466334914126,0.1736135016565247,0.189
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina intrinsic amacrine neuron Lai,36,-0.20085155756419976,0.16823717323391174,-0.5103484105786954,0.12946346502593556,0.11275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L1,36,-0.18191047576353003,0.1705774862535912,-0.495722989731868,0.14476718950798176,0.143375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L2,36,-0.20606560564637466,0.16215017254889133,-0.5136734738636413,0.09141919423666749,0.099
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L3,36,-0.2405940698900394,0.16629024419117738,-0.5471904266072051,0.07312694482632684,0.0695
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L4,36,-0.1870158123005808,0.16339170303930092,-0.5157403956922761,0.10504919658471745,0.123875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina monopolar neuron L5,36,0.021434110397400456,0.17227997316178262,-0.31582232611230643,0.3259388800976005,0.544125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina wide-field 1 neuron,36,-0.2596494854340898,0.16835125849035093,-0.5876257026346585,0.03931001751210888,0.060875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lamina wide-field 2 neuron,36,-0.2119702362395766,0.17132338096772662,-0.5400916924564615,0.10267682284463092,0.10475
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lobula columnar neuron LC10,36,-0.212473104744051,0.1667506515933604,-0.5260739096941629,0.1028809921877084,0.09925
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | lobula columnar neuron LC17,36,-0.17347604636991054,0.1652103530254248,-0.4848868284460116,0.12919750611361916,0.1475
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi1,36,-0.20053156760613722,0.17012134146763877,-0.527121444711977,0.11418513766293602,0.117375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi15,36,0.06094867364709781,0.1738957956698393,-0.25797297629934285,0.3896550607465571,0.632
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi4,36,-0.006285301298747396,0.16787413942710697,-0.3138005162869131,0.3157252784708087,0.485875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | medullary intrinsic neuron Mi9,36,-0.07954478486767481,0.1660651538648257,-0.39360778571487454,0.22471828284713533,0.3215
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 1,36,0.094975095274651,0.16818845782817654,-0.22007756313050209,0.4106357091564568,0.716
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 10,36,-0.22129528428936865,0.16996672280281255,-0.5311864381941821,0.10027137392965854,0.09575
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 11,36,-0.10426753420753036,0.16293021534221785,-0.4089164206858557,0.1958731303854002,0.26525
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 12,36,-0.008678581192340332,0.15645006838986897,-0.3183282081194418,0.2770528256780851,0.477
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 13,36,-0.19707802051459544,0.16177227714884368,-0.49603293082419025,0.11131259988270834,0.106625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 14,36,-0.1609938370601893,0.16211064939950354,-0.46606782595309526,0.13693436718738805,0.15625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 15,36,-0.16077736976923035,0.15996397514162417,-0.46063420078774014,0.14178010836753102,0.155625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 16,36,-0.05642763694630461,0.15779822040832178,-0.34274298770370704,0.25330205346358053,0.35875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 17,36,-0.029402122776607684,0.1629077854936034,-0.33929748304280255,0.2676651837308984,0.430375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 2,36,-0.12259237064048385,0.17085159355449578,-0.4363200461477396,0.20711932965418464,0.227625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 3,36,-0.04904661333043403,0.16952564735357453,-0.3746924295743772,0.26317624621488456,0.389625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 4,36,-0.09486897954446899,0.16463416766153943,-0.3951259691184652,0.23001671808038737,0.27975
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 5,36,0.018731812895798013,0.17173996638863254,-0.30852670163467333,0.3325256208818966,0.54225
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 6,36,0.03894199722983142,0.17301702632027036,-0.28582183597906796,0.36471274196069725,0.588875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 7,36,-0.10215360589056185,0.17438651098368507,-0.4194222736511433,0.23231013578174764,0.27625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 8,36,0.054416029479916174,0.17121237033858838,-0.2517270351626156,0.3878151521899846,0.619375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | neuron 9,36,-0.2256867201025463,0.15858624185758388,-0.5192035030564343,0.07620581573993206,0.075375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | ocellus retinula cell,36,-0.2754288525728875,0.16786579922129,-0.5719522283990924,0.06265154584302692,0.049375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | octopaminergic/tyraminergic neuron,36,-0.08232853411708105,0.1663732974609912,-0.398630696540475,0.22514125400964113,0.30925
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | olfactory receptor neuron,36,-0.31459811954403255,0.15436777743647576,-0.5965392724527745,-0.01772374476701371,0.0205
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | optic-lobe-associated cortex glial cell,36,-0.12444327286925991,0.16265374785404135,-0.44995419870550324,0.16878189759805823,0.216375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | outer photoreceptor cell,36,-0.3165334854960221,0.15295156940029794,-0.6143341601807881,-0.03958401431139046,0.019
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | pericerebral adult fat mass,36,-0.046775160815449,0.1653343103650827,-0.34971319422176667,0.26978753081419854,0.386625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | photoreceptor cell R7,36,-0.3813307731347152,0.16934547823260968,-0.7053699484967656,-0.06274999362523294,0.011875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | photoreceptor cell R8,36,-0.28681810602240054,0.15668566514399057,-0.5747565553029818,0.007900881936488389,0.032125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | pigment cell,36,0.144850556500452,0.17260894792396733,-0.16351471514839996,0.48122000666736586,0.800875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | proximal medullary amacrine neuron Pm2,36,-0.05922859073169044,0.16395980463372015,-0.37040187988400397,0.23962988854823122,0.359875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | proximal medullary amacrine neuron Pm4,36,-0.10598151090891575,0.16664812816846813,-0.4284764537419734,0.19789440084735646,0.26325
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | skeletal muscle of head,36,0.19892097413065737,0.17826094434467585,-0.12686676695759946,0.5403629566074852,0.8665
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | subperineurial glial cell_head,36,0.03809410943512024,0.16823635668320752,-0.2917407828144506,0.34504316904117355,0.590375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY14,36,-0.16281834379456936,0.16559309283484297,-0.47333791834892236,0.1452674248462278,0.156625
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY4,36,0.05301929441200498,0.1639688298693211,-0.24483520777836362,0.37387883534781735,0.630875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY5a,36,0.08624425269216564,0.16023473713805003,-0.20374036135122606,0.39336190407868826,0.70275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary Y neuron TmY8,36,0.03987781548315153,0.16906702398960835,-0.2881575127837649,0.3426185656860033,0.590375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm1,36,-0.18579030968573984,0.1700376402521465,-0.5023008738004842,0.13736391049098823,0.134875
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm2,36,-0.10264392066488799,0.16614671172152387,-0.41818600074531515,0.20712272497327405,0.267
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm20,36,-0.05927433829140527,0.16934112495677772,-0.38479029594366065,0.2469546664425099,0.3665
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm29,36,-0.29847055771439124,0.16290692335556403,-0.5920631228239734,0.021608025922775116,0.03275
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm3a,36,-0.03229292015767868,0.15679441275581163,-0.33397509999809877,0.2498320525059229,0.41725
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm4,36,-0.11790343263439508,0.17240001911543826,-0.45360113042422034,0.19548610100781563,0.248125
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm5c,36,0.005820809426416726,0.1675923130674143,-0.3071414537126142,0.3206497471065487,0.51375
+Fruit fly,depth_adjusted_fixed_group,0.5,cell_type_unit,head | AFCA | transmedullary neuron Tm9,36,0.031536646939881376,0.16924608415709766,-0.2741081588543468,0.36036724427631467,0.574375

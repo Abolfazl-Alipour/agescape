@@ -1,0 +1,17 @@
+donor,age,n_annotated_cells,analysis
+mo12_fish1,12.0,7849,broad_all_ages
+mo12_fish2,12.0,6235,broad_all_ages
+mo20_fish1,20.0,2615,broad_all_ages
+mo22_fish1,22.0,3286,broad_all_ages
+mo27_fish1,27.0,12781,broad_all_ages
+mo27_fish2,27.0,11591,broad_all_ages
+mo27_fish3,27.0,3040,broad_all_ages
+mo27_fish4,27.0,5641,broad_all_ages
+mo5_fish1,5.0,8891,broad_all_ages
+mo5_fish2,5.0,7647,broad_all_ages
+mo12_fish1,12.0,7849,fine_5_to_22_months
+mo12_fish2,12.0,6235,fine_5_to_22_months
+mo20_fish1,20.0,2615,fine_5_to_22_months
+mo22_fish1,22.0,3286,fine_5_to_22_months
+mo5_fish1,5.0,8891,fine_5_to_22_months
+mo5_fish2,5.0,7647,fine_5_to_22_months

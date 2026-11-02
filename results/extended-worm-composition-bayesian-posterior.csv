@@ -1,0 +1,35 @@
+species,model,prior_sd,scope,unit,n_donors,posterior_mean,posterior_sd,hdi94_low,hdi94_high,prob_positive
+C. elegans,unadjusted_platform_nextseq,0.5,species,ALL,12,-0.09770023836841213,0.27502380588634795,-0.5719721430019241,0.4687239304958423,0.3615
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | ARSC,12,0.8636804601083214,0.8703652853081812,-0.40272002716545235,2.4949064072463867,0.829
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Coelomocyte,12,-0.2717172685395221,0.46770588235489063,-1.1331512830497517,0.6117832133928208,0.2705
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Embroynic_cells,12,0.3463355621364111,0.5624664427499053,-0.6886731612359706,1.3832850916796566,0.711625
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Excretory_gland_cell_and_DTC,12,-0.13317909420769886,0.47133558439902057,-1.0217966059507937,0.7889690224841782,0.375
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Germline,12,-0.5317892439050447,0.5251823037653889,-1.6002729496091863,0.35100807483150126,0.1455
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Glia,12,-0.19411231655350952,0.4789606531986423,-1.1266119207518348,0.7107577188185594,0.3255
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Gonadal_sheath_cell,12,-0.5318785623025234,0.4989632883068739,-1.4794169852153642,0.4115151436181165,0.129
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Hypodermis,12,-0.018158568538474,0.48218317272671973,-0.8903935711287689,0.9505976676608484,0.465625
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Intestine,12,-0.4123105775282786,0.5030093653509826,-1.3819378265365398,0.5178556713309586,0.19775
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Muscle,12,0.09227152581172135,0.49067985272718256,-0.79568507724197,1.0535907257711308,0.552
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Neuron,12,0.39667767615485605,0.5813463616867277,-0.6427742831930324,1.5179226241145751,0.74
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Pharynx,12,-0.06825909257183949,0.46045747313157714,-0.9450900175963285,0.8212432868737443,0.429625
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Spermatheca,12,-0.9422590165163104,0.6969929720983488,-2.2715175687239575,0.18672994631630896,0.064
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Sperms,12,-0.15693764997571377,0.47159261946799674,-1.020279617145699,0.767824732096042,0.35325
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Uterine_seam_cell,12,0.20619439399418996,0.4858678932521907,-0.6973800318142253,1.1185163952681052,0.649875
+C. elegans,unadjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Vulva_uterus,12,-0.37388322859783896,0.4884869748038715,-1.3089290650696597,0.5224527679981475,0.217
+C. elegans,depth_adjusted_platform_nextseq,0.5,species,ALL,12,-0.10401582496202727,0.2937644022529835,-0.677159295612402,0.43556554472331344,0.36325
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | ARSC,12,0.6945466910375055,0.8057948025557647,-0.49343348254325753,2.3571046139786915,0.797625
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Coelomocyte,12,-0.26108598317261633,0.45533521532451976,-1.1047851081634092,0.6007271786279869,0.273625
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Embroynic_cells,12,0.2779607711541421,0.5345555540885416,-0.6749667904559478,1.327362259076679,0.679625
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Excretory_gland_cell_and_DTC,12,-0.12792338173868395,0.47060940968562226,-1.057925965093499,0.7243580234802985,0.379
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Germline,12,-0.4800681737409489,0.5130527153935935,-1.5132160399311094,0.414604934557039,0.166125
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Glia,12,-0.1846913556562847,0.4678569367899992,-1.0856751360527326,0.6851065650576467,0.336
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Gonadal_sheath_cell,12,-0.48409216089783924,0.4952031240251065,-1.4544790340438534,0.41517844796566983,0.15675
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Hypodermis,12,-0.042605521867145814,0.4677270180347327,-0.8721664298654617,0.8948559734395535,0.452375
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Intestine,12,-0.3698030104938795,0.4959698571466194,-1.3293234535844782,0.5482015137745844,0.22025
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Muscle,12,0.062077886267169265,0.4927819102793065,-0.8521954292932916,0.9910533369635609,0.534375
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Neuron,12,0.3301126891582958,0.5639531296631111,-0.5979725867821801,1.4962958274708889,0.70825
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Pharynx,12,-0.07419873658035304,0.45685727128365217,-0.8972882472694095,0.8419720743642964,0.42325
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Spermatheca,12,-0.8211643629922197,0.6763926905413151,-2.15464599966367,0.2995837542516247,0.086875
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Sperms,12,-0.1524751357293414,0.461414309595118,-0.9963350508274477,0.7672787355389982,0.35825
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Uterine_seam_cell,12,0.1707171454100172,0.4874429206985237,-0.6835259748926963,1.147021632221154,0.62675
+C. elegans,depth_adjusted_platform_nextseq,0.5,cell_type_unit,Whole animal | Gao_GSE229022 | Vulva_uterus,12,-0.34201486589579383,0.48481132420932194,-1.2379246424652595,0.5778824687460932,0.232

@@ -54,6 +54,7 @@ def main():
             continue
 
         target_path = raw_dir / filename
+        target_path.parent.mkdir(parents=True, exist_ok=True)
         expected_sha = meta["sha256"]
         url = meta.get("url")
 
@@ -70,6 +71,7 @@ def main():
             sys.exit(1)
 
         partial_path = partial_dir / filename
+        partial_path.parent.mkdir(parents=True, exist_ok=True)
         print(f"[FETCH] Downloading {filename} from {url}...")
         cmd = ["curl", "-f", "-C", "-", "-L", "--retry", "5", "--retry-delay", "2", "-o", str(partial_path), url]
         res = subprocess.run(cmd)
