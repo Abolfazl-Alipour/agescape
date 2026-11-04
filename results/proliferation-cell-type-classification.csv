@@ -1,0 +1,434 @@
+species,cell_type,proliferation_class,classification_basis
+C. elegans,ARSC,post_mitotic,adult C. elegans somatic cell
+C. elegans,Coelomocyte,post_mitotic,adult C. elegans somatic cell
+C. elegans,Embroynic_cells,proliferative_capable,dividing embryonic cells
+C. elegans,Excretory_gland_cell_and_DTC,post_mitotic,adult C. elegans somatic cell
+C. elegans,Germline,meiotic_or_mixed,"mixed mitotic, meiotic, and developing germline"
+C. elegans,Glia,post_mitotic,adult C. elegans somatic cell
+C. elegans,Gonadal_sheath_cell,post_mitotic,adult C. elegans somatic cell
+C. elegans,Hypodermis,post_mitotic,adult C. elegans somatic cell
+C. elegans,Intestine,post_mitotic,adult C. elegans somatic cell
+C. elegans,Muscle,post_mitotic,adult C. elegans somatic cell
+C. elegans,Neuron,post_mitotic,adult C. elegans somatic cell
+C. elegans,Pharynx,post_mitotic,adult C. elegans somatic cell
+C. elegans,Spermatheca,post_mitotic,adult C. elegans somatic cell
+C. elegans,Sperms,post_mitotic,terminally differentiated sperm
+C. elegans,Uterine_seam_cell,post_mitotic,adult C. elegans somatic cell
+C. elegans,Vulva_uterus,post_mitotic,adult C. elegans somatic cell
+Fruit fly,16-cell germline cyst in germarium region 2a and 2b,proliferative_capable,"stem, progenitor, or mitotic germ-cell stage"
+Fruit fly,CNS surface associated glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,Johnston organ neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,Poxn neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T2a,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T3,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T4/T5,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T4/T5a-b,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,T neuron T4/T5c-d,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult alary muscle,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult brain cell body glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult brain perineurial glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult fat body_body,post_mitotic,differentiated adult fly cell
+Fruit fly,adult fat body_head,post_mitotic,differentiated adult fly cell
+Fruit fly,adult glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult heart ventral longitudinal muscle,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult hindgut,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,adult lamina epithelial/marginal glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult midgut enterocyte,post_mitotic,differentiated adult intestinal cell
+Fruit fly,adult midgut-hindgut hybrid zone,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,adult oenocyte,post_mitotic,differentiated adult fly cell
+Fruit fly,adult optic chiasma glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult peripheral nervous system,post_mitotic,adult nervous-system compartment
+Fruit fly,adult reticular neuropil associated glial cell_body,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult reticular neuropil associated glial cell_head,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,adult salivary gland,post_mitotic,differentiated adult fly cell
+Fruit fly,adult tracheal cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,adult ventral nervous system,post_mitotic,adult nervous-system compartment
+Fruit fly,alpha'/beta' Kenyon cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,alpha/beta Kenyon cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,antennal lobe projection neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,anterior ejaculatory duct,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,antimicrobial peptide-producing cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,auditory sensory neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,cardia (1),uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,cell body glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,centrifugal neuron C2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,centrifugal neuron C3,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,columnar neuron T1,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,cone cell,post_mitotic,differentiated adult fly cell
+Fruit fly,copper cell,post_mitotic,differentiated adult intestinal cell
+Fruit fly,crop,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,cyst cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,distal medullary amacrine neuron Dm10,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,distal medullary amacrine neuron Dm12,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,distal medullary amacrine neuron Dm3,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,distal medullary amacrine neuron Dm8,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,distal medullary amacrine neuron Dm9,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,dopaminergic PAM neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,ejaculatory bulb,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,ejaculatory bulb epithelium,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,ensheathing glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,enteroblast,proliferative_capable,"stem, progenitor, or mitotic germ-cell stage"
+Fruit fly,enterocyte of anterior adult midgut epithelium,post_mitotic,differentiated adult intestinal cell
+Fruit fly,enterocyte of posterior adult midgut epithelium,post_mitotic,differentiated adult intestinal cell
+Fruit fly,enterocyte-like,post_mitotic,differentiated adult intestinal cell
+Fruit fly,enteroendocrine cell,post_mitotic,differentiated adult intestinal cell
+Fruit fly,eo support cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,epidermal cell that specialized in antimicrobial response,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,epithelial cell_body,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,epithelial cell_head,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,escort cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,female reproductive system,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,follicle cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,follicle stem cell and prefollicle cell,proliferative_capable,"stem, progenitor, or mitotic germ-cell stage"
+Fruit fly,gamma Kenyon cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,germline cell,meiotic_or_mixed,mixed or meiotic germ-cell annotation
+Fruit fly,gustatory receptor neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,hemocyte_body,proliferative_capable,adult fly immune cell with proliferative capacity
+Fruit fly,hemocyte_head,proliferative_capable,adult fly immune cell with proliferative capacity
+Fruit fly,indirect flight muscle,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,intestinal stem cell,proliferative_capable,"stem, progenitor, or mitotic germ-cell stage"
+Fruit fly,lamina intrinsic amacrine neuron Lai,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina monopolar neuron L1,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina monopolar neuron L2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina monopolar neuron L3,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina monopolar neuron L4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina monopolar neuron L5,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina wide-field 1 neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lamina wide-field 2 neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,leg muscle motor neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lobula columnar neuron LC10,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,lobula columnar neuron LC17,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,male accessory gland main cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,mechanosensory neuron of haltere,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,medullary intrinsic neuron Mi1,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,medullary intrinsic neuron Mi15,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,medullary intrinsic neuron Mi4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,medullary intrinsic neuron Mi9,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,midgut large flat cell,post_mitotic,differentiated adult intestinal cell
+Fruit fly,multidendritic neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,muscle cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 1,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 10,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 11,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 12,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 13,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 14,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 15,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 16,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 17,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 3,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 5,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 6,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 7,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 8,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,neuron 9,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,ocellus retinula cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,octopaminergic/tyraminergic neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,olfactory receptor neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,optic-lobe-associated cortex glial cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,outer photoreceptor cell,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,oviduct,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,pericerebral adult fat mass,post_mitotic,differentiated adult fly cell
+Fruit fly,perineurial glial sheath,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,pheromone-sensing neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,photoreceptor cell R7,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,photoreceptor cell R8,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,pigment cell,post_mitotic,differentiated adult fly cell
+Fruit fly,polar follicle cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,posterior midgut*,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,prefollicle cell/stalk follicle cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,principal cell*,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,proximal medullary amacrine neuron Pm2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,proximal medullary amacrine neuron Pm4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,scolopidial neuron,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,seminal vesicle & testis epithelia,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,skeletal muscle of head,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,spermatid,post_mitotic,post-meiotic male germ cell
+Fruit fly,spermatocyte,meiotic_or_mixed,mixed or meiotic germ-cell annotation
+Fruit fly,stalk follicle cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Fruit fly,subperineurial glial cell_body,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,subperineurial glial cell_head,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary Y neuron TmY14,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary Y neuron TmY4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary Y neuron TmY5a,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary Y neuron TmY8,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm1,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm2,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm20,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm29,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm3a,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm4,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm5c,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,transmedullary neuron Tm9,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,visceral muscle of the crop,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,visceral muscle of the midgut,post_mitotic,"adult neural, glial, or muscle cell"
+Fruit fly,young germ cell,proliferative_capable,"stem, progenitor, or mitotic germ-cell stage"
+Human,B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD16-negative, CD56-bright natural killer cell, human",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD16-positive, CD56-dim natural killer cell, human",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,CD1c-positive myeloid dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD4-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD4-positive, alpha-beta memory T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD8-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD8-positive, alpha-beta cytotoxic T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"CD8-positive, alpha-beta memory T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,GABAergic neuron,post_mitotic,mature neuron
+Human,L2/3 intratelencephalic projecting glutamatergic neuron,post_mitotic,mature neuron
+Human,L2/3-6 intratelencephalic projecting glutamatergic neuron,post_mitotic,mature neuron
+Human,L5 extratelencephalic projecting glutamatergic cortical neuron,post_mitotic,mature neuron
+Human,L5/6 near-projecting glutamatergic neuron,post_mitotic,mature neuron
+Human,L6 corticothalamic-projecting glutamatergic cortical neuron,post_mitotic,mature neuron
+Human,L6 intratelencephalic projecting glutamatergic neuron,post_mitotic,mature neuron
+Human,L6b glutamatergic cortical neuron,post_mitotic,mature neuron
+Human,L6b glutamatergic neuron of the primary motor cortex,post_mitotic,mature neuron
+Human,T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,VIP GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,acinar cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Human,alternatively activated macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,alveolar adventitial fibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,alveolar capillary type 1 endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,alveolar capillary type 2 endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,alveolar macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,alveolar type 1 fibroblast cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,astrocyte,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,astrocyte of the cerebral cortex,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,basal cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,bronchial goblet cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,bronchus fibroblast of lung,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,brush cell of tracheobronchial tree,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,capillary endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,caudal ganglionic eminence derived cortical interneuron,post_mitotic,mature neuron
+Human,"central memory CD4-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"central memory CD8-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,cerebral cortex endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,chandelier pvalb GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,ciliated cell,post_mitotic,terminally differentiated ciliated cell
+Human,classical monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,club cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,conventional dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,corticothalamic-projecting glutamatergic cortical neuron,post_mitotic,mature neuron
+Human,cytotoxic T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,"effector memory CD4-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"effector memory CD4-positive, alpha-beta T cell, terminally differentiated",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"effector memory CD8-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,elicited macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,endothelial cell of artery,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,endothelial cell of lymphatic vessel,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,endothelial cell of respiratory system lymphatic vessel,proliferative_capable,"stem, progenitor, or developing cell"
+Human,epithelial cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,epithelial cell of lower respiratory tract,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,epithelial cell of proximal tubule,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,fibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,gamma-delta T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,germinal center B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,goblet cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,group 1 innate lymphoid cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,group 3 innate lymphoid cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,helper T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,hematopoietic stem cell,proliferative_capable,"stem, progenitor, or developing cell"
+Human,immature innate lymphoid cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,ionocyte,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,kidney capillary endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,kidney collecting duct intercalated cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney collecting duct principal cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney connecting tubule epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney cortex collecting duct epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney distal convoluted tubule epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney interstitial alternatively activated macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,kidney interstitial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney interstitial fibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,kidney loop of Henle cortical thick ascending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney loop of Henle descending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney loop of Henle thick ascending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney loop of Henle thin ascending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,kidney loop of Henle thin descending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,lamp5 GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,leukocyte,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,lung interstitial macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,lung macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,lung pericyte,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,lung secretory cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,mast cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,mature NK T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,memory B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,mesangial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,mesothelial cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Human,microglial cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,mononuclear phagocyte,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,mucosal invariant T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,mucus secreting cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,multiciliated columnar cell of tracheobronchial tree,post_mitotic,terminally differentiated ciliated cell
+Human,multiciliated epithelial cell,post_mitotic,terminally differentiated ciliated cell
+Human,myofibroblast cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,naive B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"naive thymus-derived CD4-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,"naive thymus-derived CD8-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,nasal mucosa goblet cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,natural killer cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,near-projecting glutamatergic cortical neuron,post_mitotic,mature neuron
+Human,neural cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,neutrophil,post_mitotic,terminally differentiated mature cell
+Human,non-classical monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,oligodendrocyte,post_mitotic,terminally differentiated mature cell
+Human,oligodendrocyte precursor cell,proliferative_capable,"stem, progenitor, or developing cell"
+Human,papillary tips cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,parietal epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,pericyte,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,perivascular macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,plasma cell,post_mitotic,terminally differentiated mature cell
+Human,plasmablast,proliferative_capable,"stem, progenitor, or developing cell"
+Human,plasmacytoid dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,"plasmacytoid dendritic cell, human",proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Human,podocyte,post_mitotic,terminally differentiated mature cell
+Human,progenitor cell,proliferative_capable,"stem, progenitor, or developing cell"
+Human,pulmonary alveolar epithelial cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,pulmonary alveolar type 1 cell,post_mitotic,terminally differentiated mature cell
+Human,pulmonary alveolar type 2 cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,pulmonary artery endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,pulmonary neuroendocrine cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,pvalb GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,renal alpha-intercalated cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,renal beta-intercalated cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,renal interstitial pericyte,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,renal principal cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Human,respiratory basal cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,respiratory tract hillock cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,respiratory tract suprabasal cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,secondary crest myofibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,secretory cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,serous secreting cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Human,smooth muscle cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,sncg GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,sst GABAergic cortical interneuron,post_mitotic,mature neuron
+Human,stromal cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,tracheobronchial goblet cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Human,tracheobronchial serous cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Human,tracheobronchial smooth muscle cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,vascular associated smooth muscle cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,vascular leptomeningeal cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,vein endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Human,vein endothelial cell of respiratory system,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,"CD4-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,"CD8-positive, alpha-beta T cell",proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,DN3 thymocyte,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,DN4 thymocyte,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,Kupffer cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,Langerhans cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,NK cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,Schwann cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Mouse,T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,adventitial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,alveolar macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,basal cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Mouse,basal cell of epidermis,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Mouse,basophil,post_mitotic,terminally differentiated mature cell
+Mouse,bladder cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,bladder urothelial cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,bronchial smooth muscle cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,brush cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,cardiac neuron,post_mitotic,mature neuron
+Mouse,cardiomyocyte,post_mitotic,terminally differentiated mature cell
+Mouse,ciliated columnar cell of tracheobronchial tree,post_mitotic,terminally differentiated ciliated cell
+Mouse,classical monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,club cell of bronchiole,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Mouse,dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,double negative T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,endocardial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,endothelial cell of coronary artery,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,endothelial cell of hepatic sinusoid,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,endothelial cell of lymphatic vessel,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,epithelial cell of proximal tubule,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,erythroblast,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,erythrocyte,post_mitotic,terminally differentiated mature cell
+Mouse,erythroid progenitor,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,fenestrated cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,fibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,fibroblast of cardiac tissue,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,fibroblast of lung,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,granulocyte,post_mitotic,terminally differentiated mature cell
+Mouse,granulocytopoietic cell,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,hematopoietic precursor cell,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,hepatic stellate cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,hepatocyte,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,immature B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,immature NKT cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,immature T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,intermediate monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,keratinocyte,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,kidney capillary endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,kidney collecting duct principal cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,kidney cortex artery cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,kidney distal convoluted tubule epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,kidney loop of Henle ascending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,kidney loop of Henle thick ascending limb epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,kidney mesangial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,kidney proximal convoluted tubule epithelial cell,proliferative_capable,renal epithelial or vascular cell with proliferative capacity
+Mouse,late pro-B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,leukocyte,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,luminal epithelial cell of mammary gland,proliferative_capable,epithelial or vascular cell with proliferative capacity
+Mouse,lung macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,lymphocyte,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,macrophage,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,macrophage dendritic cell progenitor,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,mature NK T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,megakaryocyte-erythroid progenitor cell,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,mesenchymal stem cell,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,mesenchymal stem cell of adipose,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,myeloid cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,myeloid dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,myeloid leukocyte,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,naive B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,naive T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,neutrophil,post_mitotic,terminally differentiated mature cell
+Mouse,non-classical monocyte,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,pancreatic A cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,pancreatic B cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,pancreatic D cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,pancreatic acinar cell,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,pancreatic ductal cel,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,pancreatic stellate cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,pericyte cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,plasma cell,post_mitotic,terminally differentiated mature cell
+Mouse,plasmacytoid dendritic cell,proliferative_capable,myeloid or innate immune cell with proliferative capacity
+Mouse,podocyte,post_mitotic,terminally differentiated mature cell
+Mouse,precursor B cell,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,proerythroblast,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,professional antigen presenting cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,promonocyte,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,pulmonary interstitial fibroblast,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,regulatory T cell,proliferative_capable,lymphoid cell with activation-associated proliferation
+Mouse,skeletal muscle cell,post_mitotic,terminally differentiated mature cell
+Mouse,skeletal muscle satellite cell,proliferative_capable,facultative progenitor or proliferative-capable mature cell
+Mouse,smooth muscle cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,smooth muscle cell of the pulmonary artery,proliferative_capable,stromal or vascular cell with proliferative capacity
+Mouse,stromal cell,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Mouse,thymocyte,proliferative_capable,"stem, progenitor, or developing cell"
+Mouse,type II pneumocyte,proliferative_capable,epithelial or parenchymal cell with proliferative capacity
+Mouse,vein endothelial cell,proliferative_capable,stromal or vascular cell with proliferative capacity
+Zebrafish,Sertoli & Leydig,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Zebrafish,blood & SMC-like,uncertain,"mixed, generic, or insufficiently resolved annotation"
+Zebrafish,early round spermatids,post_mitotic,post-meiotic male germ cell
+Zebrafish,elongating spermatids,post_mitotic,post-meiotic male germ cell
+Zebrafish,immune,proliferative_capable,immune or somatic gonadal cell with proliferative capacity
+Zebrafish,late round spermatids,post_mitotic,post-meiotic male germ cell
+Zebrafish,middle round spermatids,post_mitotic,post-meiotic male germ cell
+Zebrafish,spermatocytes 1,meiotic_or_mixed,meiotic germ-cell stage
+Zebrafish,spermatocytes 2,meiotic_or_mixed,meiotic germ-cell stage
+Zebrafish,spermatocytes 3,meiotic_or_mixed,meiotic germ-cell stage
+Zebrafish,spermatogonia 1,proliferative_capable,mitotic spermatogonial stage
+Zebrafish,spermatogonia 2,proliferative_capable,mitotic spermatogonial stage
+Zebrafish,spermatogonia 3,proliferative_capable,mitotic spermatogonial stage
+Zebrafish,spermatogonia 4,proliferative_capable,mitotic spermatogonial stage
+Zebrafish,spermatozoa,post_mitotic,post-meiotic male germ cell

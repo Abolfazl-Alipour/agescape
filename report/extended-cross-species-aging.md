@@ -89,6 +89,16 @@ The zebrafish result illustrates why broad compartments can mislead: an age-rela
 
 None of these transcriptomic measurements directly tests DNA damage, chromatin restoration, or failed re-establishment of epigenetic marks. They also do not show that fibrosis takes over organs. Fibroblast-specific expansion and extracellular-matrix deposition must be demonstrated separately in adequately replicated tissues.
 
+## Does proliferation status explain the differences?
+
+A post hoc analysis classified annotated cell types as proliferative-capable, post-mitotic, meiotic or mixed, or uncertain using biological identity alone. Post-mitotic cells have exited the cell cycle and normally do not divide. This differs from quiescence and from tissue turnover supported by progenitor cells.
+
+Proliferation class did not explain aging-effect magnitude. Across species, the post-mitotic minus proliferative-capable difference in absolute cell-fraction effects was -0.0033 SD per 10% of maximum lifespan, with within-stratum permutation p = 0.9220. For depth-adjusted expression vectors, the difference was -0.0051 SD, with permutation p = 0.9530. No per-species absolute cell-fraction contrast passed correction. Fly had a signed expression difference, but not an absolute-effect difference. Mouse expression inference had only two post-mitotic units, and worm had only one proliferative unit.
+
+Bayesian random-effects analysis also gave no consistent signed expression difference. The mammalian depth-adjusted posterior mean was +0.0035 SD with 94% HDI -0.0149 to +0.0211. A small positive Bayesian contrast for signed cell-fraction slopes does not imply larger absolute compositional changes.
+
+These results do not support dividing versus non-dividing status as a general explanation for which cell types change with age. They do not measure actual cell-turnover rates. Full methods and results are in `report/proliferation-and-aging.md` and `notes/proliferation-moderator-methods.md`.
+
 ## Limitations
 
 - Fly, worm, and some other atlas samples are pools, not individually tracked animals.

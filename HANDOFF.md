@@ -1,6 +1,6 @@
 # Current Project Handoff
 
-Last updated: 2026-11-02. This is the operating handoff for the scientific artifact. The public website is not the current development priority.
+Last updated: 2026-11-04. This is the operating handoff for the scientific artifact. The public website is not the current development priority.
 
 ## Repository and current state
 
@@ -9,7 +9,7 @@ Last updated: 2026-11-02. This is the operating handoff for the scientific artif
 - Main manuscript: `report/manuscript-aging-mechanisms.md`
 - Reviewer guide: `PROJECT_OVERVIEW.md`
 - Reproduction commands: `README.md`
-- Latest verification: 48 tests pass and all 146 app-data anchors pass. One Bayesian-only test is skipped in the core environment. All raw-data checksums pass.
+- Latest verification: 52 tests pass and all 146 app-data anchors pass. One Bayesian-only test is skipped in the core environment. All raw-data checksums pass.
 - Controlled-access donor-level DLPFC data, credentials, and derived donor-level values are not committed.
 
 ## Read in this order
@@ -95,6 +95,24 @@ Gao worm shows ARSC and spermatheca fraction changes after platform adjustment. 
 Zebrafish testis shows an immune-fraction increase of +0.0926 CLR units per month, q = 0.0203. It remains significant after total-cell and incomplete-spermatogenesis adjustment. No fine germ-cell fraction change passes FDR. Fine expression-vector hits do not survive exact age-permutation FDR, and Bayesian global HDIs cross zero. Immune-fraction change is stronger evidence than cell-intrinsic drift in this dataset.
 
 The rat accession is verified as `GSE137869`, but one library per tissue, sex, and condition does not support animal-level significance tests. The primate cardiopulmonary accessions are `CRA002577` and `CRA002689`; they are not yet ingested. The 55-animal rhesus preprint still lacks a verified public accession. Genome-only and bulk long-lived species are not used as H2 or H3 evidence.
+
+### Proliferation-class moderator analysis
+
+A post hoc analysis classified cell types by biological proliferative capacity without using aging outcomes. Post-mitotic cells normally cannot divide; proliferative-capable cells include stem cells, progenitors, and mature cells able to divide during homeostasis, activation, or injury. Mixed and uncertain labels were excluded.
+
+Proliferation class did not explain aging-effect magnitude. The all-species post-mitotic minus proliferative-capable absolute-effect contrast was -0.0033 SD for cell fractions, permutation p = 0.9220, and -0.0051 SD for depth-adjusted expression vectors, permutation p = 0.9530. The mammalian Bayesian depth-adjusted expression contrast was +0.0035 SD with 94% HDI -0.0149 to +0.0211. Bayesian signed fraction contrasts were slightly positive, but this is not evidence of greater absolute compositional change.
+
+Mouse expression had only two post-mitotic units and worm had one proliferative unit. NMR was not evaluable for this moderator. The analysis does not measure actual cell-turnover rates and is not preregistered. Read `report/proliferation-and-aging.md` and `notes/proliferation-moderator-methods.md`.
+
+Reproduce with:
+
+```bash
+python scripts/run_proliferation_moderator.py --permutations 2000
+python scripts/run_proliferation_bayesian.py --draws 2000
+python scripts/plot_proliferation_moderator.py
+```
+
+The Bayesian command uses the separate Bayesian environment.
 
 ### Methylation clock
 

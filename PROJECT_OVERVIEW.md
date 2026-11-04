@@ -37,6 +37,7 @@ One BH family covers 225 public-cohort cell-type tests and 27 primary covariate-
 7. **The NMR comparison is inconclusive.** The slope was +0.0058 per normalized lifespan with p = 0.9332 in five animals. The post hoc equivalence margin exceeded the mouse whole-body point estimate.
 8. **Clock correlation and prediction are distinct.** Mouse liver predictive R-squared was 0.3169, compared with squared Pearson correlation of 0.851. Human multi-tissue predictive R-squared was 0.6383. Consortium overlap prevents an independent-validation claim.
 9. **Extended atlases reject one universal direction of transcriptomic displacement.** Fly has significant cell types in both directions and a null global effect. Worm has a strong day-1-reference result that weakens with a balanced day-6 reference. Zebrafish shows an immune-fraction change that persists in sensitivity analyses, but no fine expression hit survives exact-permutation FDR. See `report/extended-cross-species-aging.md`.
+10. **Proliferation class does not explain aging-effect magnitude.** A post hoc biological classification found no post-mitotic versus proliferative-capable difference in absolute cell-fraction or depth-adjusted expression effects across species. Permutation p-values were 0.9220 and 0.9530. This does not measure actual cell-turnover rates. See `report/proliferation-and-aging.md`.
 
 ## Donor overlap and data use
 
