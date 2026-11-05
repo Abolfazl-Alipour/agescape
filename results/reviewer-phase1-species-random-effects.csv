@@ -1,0 +1,15 @@
+worm_reference_day,scope,species,effect,se,source,n_species,pooled_effect,ci95_low,ci95_high,pvalue,tau2,q,q_df,q_pvalue
+1,species_input,Mouse,0.1027967050093445,0.016888686366216,results/h3-cross-species-vector-global.csv:114,,,,,,,,,
+1,species_input,Human,0.0364830448794911,0.0298249754889596,results/h3-cross-species-vector-global.csv:110,,,,,,,,,
+1,species_input,Naked mole-rat,-0.3582215971834873,0.19434907019419517,results/h3-cross-species-vector-donors.csv; clustered refit,,,,,,,,,
+1,species_input,Fruit fly,-0.0466848017168282,0.1790560195126392,results/extended-afca-vector-global.csv:7,,,,,,,,,
+1,species_input,C. elegans,1.6754876901201718,0.2577831283454559,results/extended-worm-vector-global-platform-audit.csv:2,,,,,,,,,
+1,species_input,Zebrafish,0.2210511494047185,0.2255824925229965,results/extended-zebrafish-vector-fine-global.csv; depth-adjusted all-tissues row,,,,,,,,,
+1,random_effects_meta,All six,,0.08348283556870106,six species rows in this table,6.0,0.14541745301481182,-0.018205898027121664,0.3090408040567453,0.08152866566076825,0.023145116286557365,47.855996849861235,5.0,3.800633162216584e-09
+6,species_input,Mouse,0.1027967050093445,0.016888686366216,results/h3-cross-species-vector-global.csv:114,,,,,,,,,
+6,species_input,Human,0.0364830448794911,0.0298249754889596,results/h3-cross-species-vector-global.csv:110,,,,,,,,,
+6,species_input,Naked mole-rat,-0.3582215971834873,0.19434907019419517,results/h3-cross-species-vector-donors.csv; clustered refit,,,,,,,,,
+6,species_input,Fruit fly,-0.0466848017168282,0.1790560195126392,results/extended-afca-vector-global.csv:7,,,,,,,,,
+6,species_input,C. elegans,0.5319289961353565,0.1933497444219883,results/extended-worm-vector-global-platform-audit-reference6.csv:2,,,,,,,,,
+6,species_input,Zebrafish,0.2210511494047185,0.2255824925229965,results/extended-zebrafish-vector-fine-global.csv; depth-adjusted all-tissues row,,,,,,,,,
+6,random_effects_meta,All six,,0.048626782626530606,six species rows in this table,6.0,0.07207685289715111,-0.02322988973490689,0.16738359552920912,0.1382748571505435,0.005451427803936961,15.195885951902985,5.0,0.009557332146339192

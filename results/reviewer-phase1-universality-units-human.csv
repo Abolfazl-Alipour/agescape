@@ -1,0 +1,136 @@
+species,tissue,cohort,cell_type,n_donors,n_genes,mean_age_slope,median_age_slope,fraction_positive
+Human,brain,HBCC_DLPFC,GABAergic neuron,71,59523,-4.4990122846738446e-05,0.0,0.20644120760042337
+Human,brain,HBCC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,81,59523,3.4691035231482665e-06,0.0,0.2486769820069553
+Human,brain,HBCC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,80,59523,-4.071179638885652e-06,0.0,0.24467852762797573
+Human,brain,HBCC_DLPFC,L5/6 near-projecting glutamatergic neuron,58,59523,-7.864719737781272e-06,0.0,0.2516506224484653
+Human,brain,HBCC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,62,59523,-1.0326232002135897e-05,0.0,0.2398064613678746
+Human,brain,HBCC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,59,59523,3.7342655735177602e-06,0.0,0.2617139593098466
+Human,brain,HBCC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,51,59523,-1.8758738040678027e-05,0.0,0.24068007324899618
+Human,brain,HBCC_DLPFC,VIP GABAergic cortical interneuron,80,59523,-5.058607220957021e-05,0.0,0.19688187759353526
+Human,brain,HBCC_DLPFC,astrocyte,86,59523,1.8649245987653983e-05,0.0,0.2860574903818692
+Human,brain,HBCC_DLPFC,endothelial cell,82,59523,-3.859379155417667e-06,0.0,0.24199049107067855
+Human,brain,HBCC_DLPFC,lamp5 GABAergic cortical interneuron,79,59523,-3.908145373110125e-05,0.0,0.2033331653310485
+Human,brain,HBCC_DLPFC,microglial cell,82,59523,1.036663409856315e-05,0.0,0.24906338726206675
+Human,brain,HBCC_DLPFC,oligodendrocyte,88,59523,2.468369454791908e-07,0.0,0.258337113384742
+Human,brain,HBCC_DLPFC,oligodendrocyte precursor cell,87,59523,9.940276418764497e-06,0.0,0.27806058162391006
+Human,brain,HBCC_DLPFC,pericyte,66,59523,2.266695013147905e-05,0.0,0.2583035129277758
+Human,brain,HBCC_DLPFC,perivascular macrophage,15,59523,3.1236271992874164e-05,0.0,0.18288728726710685
+Human,brain,HBCC_DLPFC,pvalb GABAergic cortical interneuron,80,59523,-2.926646676937149e-05,0.0,0.20119953631369386
+Human,brain,HBCC_DLPFC,smooth muscle cell,10,59523,2.9815954331237087e-05,0.0,0.19500025200342724
+Human,brain,HBCC_DLPFC,sst GABAergic cortical interneuron,82,59523,-1.898404405106264e-05,0.0,0.2188565764494397
+Human,brain,HBCC_DLPFC,vascular leptomeningeal cell,46,59523,-1.2708212308788984e-05,0.0,0.21616853989214252
+Human,lung,ImmuneAging_BAL,"CD16-negative, CD56-bright natural killer cell, human",12,59523,-8.078722792977877e-05,0.0,0.17678880432773886
+Human,lung,ImmuneAging_BAL,"CD16-positive, CD56-dim natural killer cell, human",12,59523,-3.1614284426076366e-05,0.0,0.21075886632058197
+Human,lung,ImmuneAging_BAL,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",12,59523,-4.0902933459125333e-05,0.0,0.19387463669505905
+Human,lung,ImmuneAging_BAL,"CD4-positive, alpha-beta memory T cell",12,59523,-7.965650019394744e-05,0.0,0.1848697142281135
+Human,lung,ImmuneAging_BAL,"CD8-positive, alpha-beta memory T cell",12,59523,-7.046540676491386e-05,0.0,0.18834736152411674
+Human,lung,ImmuneAging_BAL,"central memory CD4-positive, alpha-beta T cell",12,59523,-6.52233117604903e-05,0.0,0.21757975908472355
+Human,lung,ImmuneAging_BAL,"central memory CD8-positive, alpha-beta T cell",11,59523,-7.151639765623847e-05,0.0,0.1755455874199889
+Human,lung,ImmuneAging_BAL,classical monocyte,12,59523,-5.514724020529442e-06,0.0,0.19889790501150817
+Human,lung,ImmuneAging_BAL,conventional dendritic cell,12,59523,-3.0375422909408688e-05,0.0,0.1807032575643029
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell",12,59523,-6.260278471595717e-05,0.0,0.2021907497941972
+Human,lung,ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell, terminally differentiated",9,59523,-7.813139237069438e-05,0.0,0.1261025149942039
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell",12,59523,-6.554455675586001e-05,0.0,0.15924936579137478
+Human,lung,ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",12,59523,-6.12417218384497e-05,0.0,0.15602372192261815
+Human,lung,ImmuneAging_BAL,gamma-delta T cell,12,59523,-9.25595507754243e-05,0.0,0.14814441476404078
+Human,lung,ImmuneAging_BAL,germinal center B cell,6,59523,0.00015805020404853487,0.0,0.15439409975975674
+Human,lung,ImmuneAging_BAL,group 1 innate lymphoid cell,12,59523,-4.439027335943449e-05,0.0,0.20096433311493037
+Human,lung,ImmuneAging_BAL,group 3 innate lymphoid cell,12,59523,-7.303300079702196e-05,0.0,0.1593333669337903
+Human,lung,ImmuneAging_BAL,immature innate lymphoid cell,12,59523,-3.8520063638878717e-05,0.0,0.20744922130940982
+Human,lung,ImmuneAging_BAL,macrophage,12,59523,-2.6472901452059054e-06,0.0,0.23248156174923978
+Human,lung,ImmuneAging_BAL,mast cell,12,59523,-4.172460320989466e-05,0.0,0.18520571879777564
+Human,lung,ImmuneAging_BAL,memory B cell,12,59523,-9.524389182943807e-05,0.0,0.1887169665507451
+Human,lung,ImmuneAging_BAL,mucosal invariant T cell,12,59523,-8.683833632279635e-05,0.0,0.13119298422458545
+Human,lung,ImmuneAging_BAL,naive B cell,12,59523,-7.417150464043062e-05,0.0,0.16954790585151958
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD4-positive, alpha-beta T cell",12,59523,-7.04208916553471e-05,0.0,0.17331115703173564
+Human,lung,ImmuneAging_BAL,"naive thymus-derived CD8-positive, alpha-beta T cell",12,59523,-6.1034379727482604e-05,0.0,0.14515397409404768
+Human,lung,ImmuneAging_BAL,non-classical monocyte,12,59523,-1.9177723831122996e-05,0.0,0.21166607865866977
+Human,lung,ImmuneAging_BAL,plasma cell,12,59523,-5.465423994902555e-05,0.0,0.20089713220099795
+Human,lung,ImmuneAging_BAL,plasmablast,12,59523,-5.575482903918433e-05,0.0,0.19802429313038658
+Human,lung,ImmuneAging_BAL,progenitor cell,12,59523,-7.483553804208588e-05,0.0,0.18488651445659662
+Human,kidney,Kidney_LivingDonor,T cell,9,59523,-4.611886105207406e-06,0.0,0.13551064294474405
+Human,kidney,Kidney_LivingDonor,epithelial cell of proximal tubule,19,59523,4.442808893052632e-05,0.0,0.22960872267862842
+Human,kidney,Kidney_LivingDonor,kidney capillary endothelial cell,10,59523,0.00015570356293742867,0.0,0.1599717756161484
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle cortical thick ascending limb epithelial cell,14,59523,0.00011554705739686543,0.0,0.1819296742435697
+Human,kidney,Kidney_LivingDonor,kidney loop of Henle descending limb epithelial cell,10,59523,0.0001365221478950517,0.0,0.1730087529190397
+Human,kidney,Kidney_LivingDonor,mononuclear phagocyte,8,59523,3.192090802096527e-05,0.0,0.14569158140550711
+Human,kidney,Kidney_SCR_v15,T cell,9,59523,5.259585827304225e-05,0.0,0.1240024864338155
+Human,kidney,Kidney_SCR_v15,endothelial cell,18,59523,1.7715099229087155e-05,0.0,0.1880449574114208
+Human,kidney,Kidney_SCR_v15,epithelial cell of proximal tubule,18,59523,7.3484980996613e-05,0.0,0.2117500798010853
+Human,kidney,Kidney_SCR_v15,kidney collecting duct intercalated cell,17,59523,0.00018101870605489315,0.0,0.2161349394351763
+Human,kidney,Kidney_SCR_v15,kidney collecting duct principal cell,17,59523,8.913937554134902e-05,0.0,0.21710935268719656
+Human,kidney,Kidney_SCR_v15,kidney connecting tubule epithelial cell,12,59523,-0.00011717894747236862,0.0,0.17441997211162072
+Human,kidney,Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,14,59523,6.703350224758351e-05,0.0,0.19368983418174487
+Human,kidney,Kidney_SCR_v15,kidney interstitial cell,16,59523,-4.321998352774909e-05,0.0,0.16600305764158393
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,18,59523,-6.0078666347027344e-05,0.0,0.199032306839373
+Human,lung,Lung_CellRef,alveolar adventitial fibroblast,11,59523,1.413093994302106e-05,0.0,0.13485543403390285
+Human,lung,Lung_CellRef,alveolar capillary type 1 endothelial cell,12,59523,-4.198762963765489e-05,0.0,0.13577944660047378
+Human,lung,Lung_CellRef,alveolar capillary type 2 endothelial cell,9,59523,-5.111319291516203e-05,0.0,0.10397661408195151
+Human,lung,Lung_CellRef,alveolar macrophage,12,59523,2.0843035687620577e-05,0.0,0.16865749374191488
+Human,lung,Lung_CellRef,alveolar type 1 fibroblast cell,9,59523,5.065833371521735e-05,0.0,0.13727466693547033
+Human,lung,Lung_CellRef,ciliated cell,13,59523,5.8206399079796646e-05,0.0,0.18139206693211027
+Human,lung,Lung_CellRef,endothelial cell of artery,13,59523,-2.480882493343653e-05,0.0,0.14439796381230785
+Human,lung,Lung_CellRef,endothelial cell of respiratory system lymphatic vessel,11,59523,-2.2861953613414525e-05,0.0,0.12198645901584261
+Human,lung,Lung_CellRef,lung interstitial macrophage,7,59523,-7.903904613762855e-05,0.0,0.11955042588579205
+Human,lung,Lung_CellRef,lung secretory cell,12,59523,-5.795701917592422e-05,0.0,0.1340658232951968
+Human,lung,Lung_CellRef,plasma cell,6,59523,-0.0001925558774715574,0.0,0.08060749626194916
+Human,lung,Lung_CellRef,pulmonary alveolar type 1 cell,12,59523,2.4474831928594552e-05,0.0,0.1306721771416091
+Human,lung,Lung_CellRef,pulmonary alveolar type 2 cell,13,59523,1.4498095045428599e-05,0.0,0.15736774020126673
+Human,lung,Lung_CellRef,secretory cell,10,59523,-2.4002701952413677e-05,0.0,0.14258353913613225
+Human,lung,Lung_CellRef,vascular associated smooth muscle cell,13,59523,2.178125764811656e-05,0.0,0.13559464408715957
+Human,lung,Lung_CellRef,vein endothelial cell,13,59523,-3.860246840741196e-05,0.0,0.12746333350133562
+Human,lung,Lung_CellRef,vein endothelial cell of respiratory system,14,59523,-2.418208617562769e-05,0.0,0.13695546259429128
+Human,lung,Lung_Integrated,B cell,18,59523,-6.502156400974892e-05,0.0,0.17020311476236077
+Human,lung,Lung_Integrated,CD1c-positive myeloid dendritic cell,59,59523,0.00010200010343795911,0.0,0.18329049275070142
+Human,lung,Lung_Integrated,"CD4-positive, alpha-beta T cell",38,59523,9.430977546313998e-06,0.0,0.19918350889572098
+Human,lung,Lung_Integrated,"CD8-positive, alpha-beta T cell",42,59523,2.6918950441749723e-05,0.0,0.19138820287955916
+Human,lung,Lung_Integrated,acinar cell,16,59523,0.00018938728657090734,0.0,0.20936444735648405
+Human,lung,Lung_Integrated,alveolar adventitial fibroblast,18,59523,-4.268234740904982e-05,0.0,0.15825815231087142
+Human,lung,Lung_Integrated,alveolar macrophage,66,59523,0.00014749861434512463,0.0,0.2643179947247283
+Human,lung,Lung_Integrated,alveolar type 1 fibroblast cell,21,59523,-3.868772481199054e-05,0.0,0.13939149572434184
+Human,lung,Lung_Integrated,bronchus fibroblast of lung,8,59523,9.293042973598946e-05,0.0,0.17962804294138401
+Human,lung,Lung_Integrated,capillary endothelial cell,28,59523,-5.669629034369481e-05,0.0,0.13210019656267324
+Human,lung,Lung_Integrated,classical monocyte,52,59523,-5.128270447038812e-05,0.0,0.12647212002083227
+Human,lung,Lung_Integrated,club cell,43,59523,0.0002744540619194614,0.0,0.23995766342422256
+Human,lung,Lung_Integrated,elicited macrophage,58,59523,4.139389654780266e-05,0.0,0.1791240360868908
+Human,lung,Lung_Integrated,endothelial cell of lymphatic vessel,21,59523,6.588381381152872e-06,0.0,0.1540916956470608
+Human,lung,Lung_Integrated,epithelial cell of lower respiratory tract,31,59523,0.00021420452552031873,0.0,0.22102380592376056
+Human,lung,Lung_Integrated,lung macrophage,36,59523,4.948418143113821e-05,0.0,0.15674613174739177
+Human,lung,Lung_Integrated,lung pericyte,8,59523,0.00017065296099227066,0.0,0.2655108109470289
+Human,lung,Lung_Integrated,mast cell,29,59523,1.956950152859682e-05,0.0,0.15380609176284799
+Human,lung,Lung_Integrated,multiciliated columnar cell of tracheobronchial tree,80,59523,5.506581051747561e-05,0.0,0.2174621574853418
+Human,lung,Lung_Integrated,multiciliated epithelial cell,18,59523,-0.0002014014447776464,0.0,0.13892108932681485
+Human,lung,Lung_Integrated,nasal mucosa goblet cell,37,59523,8.453161947909001e-05,0.0,0.2267862842934664
+Human,lung,Lung_Integrated,natural killer cell,33,59523,8.731185484792498e-06,0.0,0.14448196495472337
+Human,lung,Lung_Integrated,non-classical monocyte,40,59523,5.095135266406143e-05,0.0,0.16109739092451658
+Human,lung,Lung_Integrated,plasma cell,20,59523,-0.0005573438638310327,0.0,0.053491927490213864
+Human,lung,Lung_Integrated,pulmonary alveolar epithelial cell,13,59523,-1.8604030373164372e-05,0.0,0.13638425482586564
+Human,lung,Lung_Integrated,pulmonary alveolar type 1 cell,33,59523,5.546306345564309e-06,0.0,0.15471330410093578
+Human,lung,Lung_Integrated,pulmonary alveolar type 2 cell,61,59523,-1.4305300982737476e-05,0.0,0.18386170051912706
+Human,lung,Lung_Integrated,pulmonary artery endothelial cell,32,59523,-5.9966147123341065e-05,0.0,0.13806427767417637
+Human,lung,Lung_Integrated,respiratory basal cell,38,59523,-1.6364992836335795e-06,0.0,0.16496144347563127
+Human,lung,Lung_Integrated,respiratory tract hillock cell,18,59523,5.7921966895012504e-05,0.0,0.23192715420929724
+Human,lung,Lung_Integrated,tracheobronchial goblet cell,6,59523,0.00025443520008147495,0.0,0.1326714043310989
+Human,lung,Lung_Integrated,tracheobronchial serous cell,7,59523,0.00047256725564162117,0.0,0.14009710532063235
+Human,lung,Lung_Integrated,tracheobronchial smooth muscle cell,13,59523,9.70931255288779e-05,0.0,0.1497572366984191
+Human,lung,Lung_Integrated,vein endothelial cell,41,59523,-3.354086851779904e-05,0.0,0.13619945231255146
+Human,brain,MSSM_DLPFC,GABAergic neuron,155,59523,-1.004831798900063e-05,0.0,0.2551114695159854
+Human,brain,MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,199,59523,-1.9630474751805936e-05,0.0,0.2252406632730205
+Human,brain,MSSM_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,197,59523,-1.085952407363295e-05,0.0,0.26201636342254253
+Human,brain,MSSM_DLPFC,L5/6 near-projecting glutamatergic neuron,88,59523,-1.3099585063344591e-05,0.0,0.2712396888597685
+Human,brain,MSSM_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,127,59523,1.5152410477109998e-05,0.0,0.3143658753759051
+Human,brain,MSSM_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,126,59523,-1.6881430508967434e-05,0.0,0.2508946121667255
+Human,brain,MSSM_DLPFC,L6b glutamatergic neuron of the primary motor cortex,75,59523,-6.7605675843119185e-06,0.0,0.2769349663155419
+Human,brain,MSSM_DLPFC,VIP GABAergic cortical interneuron,197,59523,-2.6358931225124658e-05,0.0,0.228600708969642
+Human,brain,MSSM_DLPFC,astrocyte,207,59523,1.3941904692543938e-05,0.0,0.3045881423987366
+Human,brain,MSSM_DLPFC,endothelial cell,90,59523,-6.077054160735285e-07,0.0,0.25354904826705643
+Human,brain,MSSM_DLPFC,lamp5 GABAergic cortical interneuron,179,59523,-2.9623905574095645e-05,0.0,0.23560640424709775
+Human,brain,MSSM_DLPFC,microglial cell,199,59523,2.7997147671836175e-05,0.0,0.30667137073064193
+Human,brain,MSSM_DLPFC,oligodendrocyte,210,59523,1.675193656058926e-05,0.0,0.3468743174907179
+Human,brain,MSSM_DLPFC,oligodendrocyte precursor cell,209,59523,6.884639585111884e-06,0.0,0.294323202795558
+Human,brain,MSSM_DLPFC,pericyte,84,59523,2.5738667886963688e-05,0.0,0.26344438284360666
+Human,brain,MSSM_DLPFC,perivascular macrophage,24,59523,-6.765231696529141e-05,0.0,0.20837323387598072
+Human,brain,MSSM_DLPFC,pvalb GABAergic cortical interneuron,189,59523,-3.10212926539504e-05,0.0,0.21729415520051074
+Human,brain,MSSM_DLPFC,smooth muscle cell,7,59523,-8.935827826566621e-06,0.0,0.16496144347563127
+Human,brain,MSSM_DLPFC,sst GABAergic cortical interneuron,177,59523,-1.6342008067777627e-05,0.0,0.24346891117719202
+Human,brain,MSSM_DLPFC,vascular leptomeningeal cell,43,59523,8.525587355363928e-06,0.0,0.2758765519211061

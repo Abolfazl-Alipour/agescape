@@ -1,0 +1,17 @@
+hypothesis,family,correction,threshold,status,source
+Mouse aging DE,M2 within unit and gene,BH within cell type,0.05,primary,results/m2_de_*.csv
+Mouse aging ranking,M2 cell-type aging signal,BH and permutation audit,0.05,primary,results/m2-aging-signal-ranked.csv
+Human signature transport,252 M9/M10 cell-type tests,BH across 252,0.05,primary,results/human-transport-global-multiplicity.csv
+PsychAD adult signature transport,27 adult cell types,BH across 27,0.05,secondary,results/m10-celltype-stratified-summary.csv
+Core organ composition,"Mouse, human, NMR cell types",BH within organ or cohort; global recheck added,0.05,primary,results/organ-composition-age-tests.csv
+Core expression vectors,Cell types within tissue or cohort,BH within tissue or cohort,0.05,primary,results/h3-cross-species-vector-tests.csv
+Entropy and off-program,Nine cell types per metric,BH within metric,0.05,primary,results/h3-transcriptional-disorder.csv
+Entropy and off-program sensitivity,"Alternative cells, genes, and endpoints",BH within sensitivity family,0.05,secondary,results/h3-transcriptional-disorder.csv
+Bayesian disorder and vector models,Posterior effects,94% HDI; no p-value correction,,exploratory,results/h3-bayesian-posterior.csv
+Fly composition and vectors,Cell types within head or body,BH within tissue and endpoint,0.05,primary,results/extended-afca-*.csv
+Gao worm composition and vectors,Cell groups,BH plus platform-stratified permutation,0.05,primary,results/extended-worm-*.csv
+Roux worm,Technical replicate series,No inferential correction,,exploratory,results/extended-roux-*.csv
+Zebrafish composition and vectors,Broad and fine cell types,BH and exact permutation,0.05,primary,results/extended-zebrafish-*.csv
+Proliferation moderator,Species-specific signed and absolute contrasts,BH across five species per response,0.05,exploratory,results/proliferation-moderator-tests.csv
+Methylation clock,Predictive performance,Not applicable,,benchmark,results/h1-epigenetic-clock-*.csv
+Reviewer Phase 1,All new reviewer-response tests,Specified per output family,0.05,exploratory,results/reviewer-phase1-*.csv

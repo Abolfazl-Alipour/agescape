@@ -1,0 +1,7 @@
+species,n_tests,n_within_stratum_fdr,n_global_fdr,n_strata_with_fdr,n_strata_with_global_fdr
+C. elegans,16,3,3,1,1
+Fruit fly,162,52,39,2,2
+Human,291,10,12,3,4
+Mouse,136,15,11,6,6
+Naked mole-rat,4,0,0,0,0
+Zebrafish,3,2,1,1,1

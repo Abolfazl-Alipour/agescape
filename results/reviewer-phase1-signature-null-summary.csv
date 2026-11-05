@@ -1,0 +1,2 @@
+n_cell_types,n_q_below_05,min_q,n_random_per_cell_type,coverage_min,coverage_max,mean_actual_depth_r,mean_random_depth_r
+27,0,0.1007462686567164,200,0.9576271186440678,0.9576271186440678,0.15433463053482727,0.3020570143011423

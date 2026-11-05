@@ -1,0 +1,5 @@
+cell_type_1,cell_type_2,n_1,n_2,overlap,jaccard,expected_overlap_under_independence,hypergeometric_p,n_universe
+VIP GABAergic cortical interneuron,pvalb GABAergic cortical interneuron,294,333,34,0.05733558178752108,1.6447759689531778,5.109831832539568e-34,59523
+VIP GABAergic cortical interneuron,sst GABAergic cortical interneuron,294,123,14,0.034739454094292806,0.6075298624061287,2.2471173000533457e-15,59523
+pvalb GABAergic cortical interneuron,sst GABAergic cortical interneuron,333,123,22,0.05069124423963134,0.6881205584395947,9.635107973320239e-27,59523
+VIP,pvalb and sst,294,434,7,,,,59523

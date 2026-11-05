@@ -1,0 +1,15 @@
+species,tissue,cohort,cell_type,n_donors,n_genes,mean_age_slope,median_age_slope,fraction_positive
+Zebrafish,Testis fine cell types,GSE275361,blood & SMC-like,6,30390,-0.0021336197908434795,0.0,0.20273116156630472
+Zebrafish,Testis fine cell types,GSE275361,early round spermatids,6,30390,-0.00045417118502078674,0.0,0.41329384666008556
+Zebrafish,Testis fine cell types,GSE275361,elongating spermatids,6,30390,0.0002444824895962023,0.0,0.43274103323461666
+Zebrafish,Testis fine cell types,GSE275361,immune,6,30390,-6.789261563805542e-05,0.0,0.32875946034879894
+Zebrafish,Testis fine cell types,GSE275361,late round spermatids,6,30390,6.17620122942838e-05,0.0,0.43126028298782493
+Zebrafish,Testis fine cell types,GSE275361,middle round spermatids,6,30390,3.6842131846225226e-05,0.0,0.44596906877262255
+Zebrafish,Testis fine cell types,GSE275361,spermatocytes 1,6,30390,-0.0005696473582846257,-6.835321503632925e-05,0.3870681145113524
+Zebrafish,Testis fine cell types,GSE275361,spermatocytes 2,6,30390,-0.00041769135431329413,0.0,0.39720302731161566
+Zebrafish,Testis fine cell types,GSE275361,spermatocytes 3,6,30390,-0.00042016032853773444,0.0,0.28594932543599866
+Zebrafish,Testis fine cell types,GSE275361,spermatogonia 1,6,30390,-0.0007359671411354038,-0.00011556829754957015,0.3262915432708128
+Zebrafish,Testis fine cell types,GSE275361,spermatogonia 2,6,30390,-0.0005295813349330092,-7.226700368445508e-05,0.37877591312931885
+Zebrafish,Testis fine cell types,GSE275361,spermatogonia 3,6,30390,-0.0008261589701538221,0.0,0.31872326423165515
+Zebrafish,Testis fine cell types,GSE275361,spermatogonia 4,6,30390,-0.0006270872460125239,-7.042766813703875e-05,0.3727871010200724
+Zebrafish,Testis fine cell types,GSE275361,spermatozoa,6,30390,0.000741948071492576,0.0,0.4811122079631458

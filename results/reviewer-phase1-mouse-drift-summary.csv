@@ -1,0 +1,2 @@
+n_units,n_positive,fraction_positive,sign_test_p,full_effect_sd,loo_min_effect_sd,loo_max_effect_sd,max_absolute_loo_delta
+62,45,0.7258064516129032,0.0004970915863810334,0.10279670500934458,0.09700496781397927,0.11191344573852274,0.00911674072917816
