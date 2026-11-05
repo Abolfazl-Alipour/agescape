@@ -1,0 +1,2 @@
+dataset,evaluation_samples,source_checked,supplementary_sheets_checked,accession_mentions,tested_sample_id_mentions,tested_sample_title_mentions,training_overlap_status
+GSE199979,339,https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-023-00462-6/MediaObjects/43587_2023_462_MOESM3_ESM.xlsx,93,0,0,0,"sample-level training membership unresolved; benchmark reproduction, not independent validation"
