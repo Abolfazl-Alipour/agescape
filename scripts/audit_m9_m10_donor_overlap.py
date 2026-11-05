@@ -8,6 +8,17 @@ import pandas as pd
 REPO = Path(__file__).resolve().parent.parent
 
 
+def identifier_overlap(public, controlled):
+    matched = public.merge(
+        controlled, left_on="donor_id", right_on="anonymID", suffixes=("_public", "_controlled")
+    )
+    concordant = matched[
+        (matched["age_public"] == matched["age_controlled"])
+        & (matched["sex_public"] == matched["sex_controlled"])
+    ]
+    return len(matched), len(concordant)
+
+
 def main():
     m9 = pd.read_csv(REPO / "results" / "m9-donor-cell-counts-prethreshold.csv")
     m9 = m9[m9["cohort"].isin(["MSSM_DLPFC", "HBCC_DLPFC", "RADC_DLPFC", "SEAAD_DLPFC"])]
@@ -22,7 +33,9 @@ def main():
     for cohort in ["MSSM_DLPFC", "HBCC_DLPFC", "RADC_DLPFC", "SEAAD_DLPFC"]:
         public = m9[m9["cohort"] == cohort].copy()
         bank = "MSSM" if cohort == "MSSM_DLPFC" else "HBCC"
-        controlled = m10[m10["Brain_bank"] == bank] if cohort in ("MSSM_DLPFC", "HBCC_DLPFC") else m10.iloc[0:0]
+        comparable = cohort in ("MSSM_DLPFC", "HBCC_DLPFC")
+        controlled = m10[m10["Brain_bank"] == bank] if comparable else m10.iloc[0:0]
+        exact_strings, exact_concordant = identifier_overlap(public, controlled)
         candidate_counts = []
         unique_controlled_ids = set()
         for donor in public.itertuples():
@@ -33,16 +46,20 @@ def main():
         counts = pd.Series(candidate_counts, dtype=int)
         rows.append({
             "cohort": cohort,
-            "brain_bank_compared": bank if cohort in ("MSSM_DLPFC", "HBCC_DLPFC") else "not applicable",
+            "brain_bank_compared": bank if comparable else "not applicable",
             "m9_donors": len(public),
             "m10_donors_in_bank": len(controlled),
-            "exact_identifier_overlap": 0,
+            "exact_identifier_overlap": exact_concordant,
+            "exact_identifier_string_overlap": exact_strings,
             "m9_with_any_age_sex_bank_match": int((counts > 0).sum()),
             "m9_with_unique_age_sex_bank_match": int((counts == 1).sum()),
             "m9_with_ambiguous_age_sex_bank_match": int((counts > 1).sum()),
             "m9_without_age_sex_bank_match": int((counts == 0).sum()),
             "distinct_m10_ids_in_unique_matches": len(unique_controlled_ids),
-            "overlap_status": "bounded by age, sex, and bank; identifiers not shared across sources",
+            "overlap_status": (
+                "exact identifiers with concordant age and sex confirm overlap"
+                if comparable else "no corresponding M10 brain-bank arm"
+            ),
         })
     result = pd.DataFrame(rows)
     result.to_csv(REPO / "results" / "m9-m10-donor-overlap-audit.csv", index=False)
