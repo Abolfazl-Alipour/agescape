@@ -36,7 +36,8 @@ def test_species_analysis_uses_one_row_per_donor_per_unit():
         expression = rng.normal(size=(6, 20)) + metadata["age"].to_numpy()[:, None] + offset
         units.append({"metadata": metadata.copy(), "expression": expression})
     strata = [("Tissue", "Cohort", np.array([f"g{i}" for i in range(20)]), units)]
-    summary, rows = joint.analyze_species("Human", strata, permutations=20, seed=13)
+    summary, rows, null = joint.analyze_species("Human", strata, permutations=20, seed=13)
+    assert len(null) == 20
     assert summary["n_donors"] == 6
     assert summary["n_units"] == 2
     assert summary["n_pairs"] == 1

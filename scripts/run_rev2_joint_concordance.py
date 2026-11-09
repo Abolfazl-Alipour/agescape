@@ -68,8 +68,8 @@ def human_strata():
             donors = sorted(obs["donor_id"].astype(str).unique())
             collected = {}
             genes = None
-            for start in range(0, len(donors), 5):
-                batch = donors[start:start + 5]
+            for start in range(0, len(donors), 1):
+                batch = donors[start:start + 1]
                 batch_rows = np.sort(obs.loc[obs["donor_id"].isin(batch), "row"].to_numpy())
                 adata = atlas[batch_rows].to_memory()
                 for cell_type in selected["cell_type"]:
@@ -81,7 +81,7 @@ def human_strata():
                     genes = gene_names
                     if len(metadata):
                         collected.setdefault(cell_type, []).append((expression, metadata))
-                print(f"Human {cohort}: donors {start + 1}-{min(start + 5, len(donors))} "
+                print(f"Human {cohort}: donors {start + 1}-{min(start + 1, len(donors))} "
                       f"of {len(donors)}", flush=True)
                 del adata
                 gc.collect()
@@ -249,7 +249,7 @@ def analyze_species(species, strata, permutations, seed):
                               "within cohort, sex, and platform strata",
         "status": "redone_joint",
     }
-    return summary, stratum_rows
+    return summary, stratum_rows, null
 
 
 def main():
@@ -263,11 +263,35 @@ def main():
     seed = args.seed if args.seed is not None else 20261108 + sum(map(ord, args.species))
     source = cached_strata(args.species) if args.analysis_only else load_strata(
         args.species, refresh=args.refresh_cache)
-    strata = list(source)
     expected = {"Human": 7, "Fruit fly": 2, "C. elegans": 1, "Zebrafish": 1}[args.species]
-    if len(strata) != expected:
-        raise ValueError(f"{args.species}: expected {expected} strata, found {len(strata)}")
-    summary, rows = analyze_species(args.species, strata, args.permutations, seed)
+    rows = []
+    nulls = []
+    n_donors = 0
+    summary = None
+    for index, stratum in enumerate(source):
+        stratum_summary, stratum_rows, null = analyze_species(
+            args.species, [stratum], args.permutations, seed + index)
+        rows.extend(stratum_rows)
+        nulls.append(null)
+        n_donors += stratum_summary["n_donors"]
+        summary = stratum_summary
+        del stratum, stratum_summary, null
+        gc.collect()
+    if len(rows) != expected:
+        raise ValueError(f"{args.species}: expected {expected} strata, found {len(rows)}")
+    weights = np.array([row["n_pairs"] for row in rows], dtype=float)
+    observed = float(np.average([row["observed_mean_pearson"] for row in rows], weights=weights))
+    null = np.average(np.vstack(nulls), axis=0, weights=weights)
+    summary.update({
+        "observed_mean_pearson": observed, "n_pairs": int(weights.sum()),
+        "n_units": sum(row["n_units"] for row in rows), "n_donors": n_donors,
+        "n_strata": len(rows), "joint_null_mean": float(null.mean()),
+        "joint_null_sd": float(null.std(ddof=1)),
+        "joint_null_ci95_low": float(np.quantile(null, 0.025)),
+        "joint_null_ci95_high": float(np.quantile(null, 0.975)),
+        "joint_p_greater": float((1 + (null >= observed).sum()) / (len(null) + 1)),
+        "random_seed": seed,
+    })
     slug = SLUGS[args.species]
     pd.DataFrame([summary]).to_csv(RESULTS / f"reviewer-rev2-joint-concordance-{slug}.csv",
                                    index=False)
