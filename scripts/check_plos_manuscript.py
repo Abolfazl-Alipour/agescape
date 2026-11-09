@@ -43,8 +43,10 @@ def main():
                r"\boriginal analysis\b", r"\bthis revision\b"]
     for pattern in residue:
         assert not re.search(pattern, text, re.I), f"Process residue: {pattern}"
-    assert "Affiliation: [blank, pending author decision]" in text
-    assert text.count("Pending author confirmation.") == 2
+    assert "Affiliation: Kavox Labs" in text
+    assert "The computational analyses were performed on the Kavox Labs cloud computing infrastructure (Amazon Web Services)." in text
+    assert "The author is the founder of Kavox Labs." in text
+    assert text.count("Pending author confirmation.") == 0
     assert "Draft statement, pending author confirmation." in text
 
     pages = None
