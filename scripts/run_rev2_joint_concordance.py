@@ -40,7 +40,13 @@ def human_strata():
                      & (tests["model"] == "depth_adjusted")][
         ["cohort", "tissue", "cell_type"]].drop_duplicates()
     directory = CACHE.parent / "human-h5ads"
+    cohort_order = sorted(eligible["cohort"].unique())
     for cohort, selected in eligible.groupby("cohort"):
+        cache_path = CACHE / "human" / f"stratum-{cohort_order.index(cohort)}.pkl"
+        if cache_path.exists():
+            with cache_path.open("rb") as handle:
+                yield pickle.load(handle)
+            continue
         dataset_id = next(key for key, value in COHORTS.items() if value[0] == cohort)
         path = directory / f"{dataset_id}.h5ad"
         if not path.exists():
@@ -72,6 +78,7 @@ def human_strata():
                 batch = donors[start:start + 1]
                 batch_rows = np.sort(obs.loc[obs["donor_id"].isin(batch), "row"].to_numpy())
                 adata = atlas[batch_rows].to_memory()
+                adata.uns = {}
                 for cell_type in selected["cell_type"]:
                     part = adata[adata.obs["cell_type"].astype(str) == cell_type]
                     if part.n_obs == 0 or not (
@@ -108,6 +115,9 @@ LOADERS = {"Human": human_strata, "Fruit fly": phase1.fly_strata,
 def load_strata(species: str, refresh: bool = False):
     directory = CACHE / SLUGS[species]
     directory.mkdir(parents=True, exist_ok=True)
+    if refresh:
+        for path in directory.glob("stratum-*.pkl"):
+            path.unlink()
     for index, (tissue, cohort, genes, units) in enumerate(LOADERS[species]()):
         path = directory / f"stratum-{index}.pkl"
         if path.exists() and not refresh:
