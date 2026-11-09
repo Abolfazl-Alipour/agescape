@@ -163,11 +163,26 @@ def main():
         raise SystemExit(f"h5ad obs missing columns: {missing}")
     obs = obs[keep].copy()
     obs["_row"] = np.arange(len(obs))  # positional row in the full h5ad
-    for c in ["donor_id", "cell_type", "sex", "disease"]:
-        obs[c] = obs[c].astype(str)
-    obs["age"] = obs["development_stage"].astype(str).str.extract(r"(\d+)-year-old").astype(float)
-    obs = obs[(obs["is_primary_data"].astype(str).isin(["True", "true", "1"]))
-              & (obs["disease"] == "normal") & obs["age"].notna()].copy()
+    # Keep categorical dtypes: astype(str) on 4.1M rows materialises ~1 GB
+    # of Python strings per column and was the OOM spike that killed the
+    # sibling MSSM fetch twice (exit 137). Categorical == / groupby give
+    # identical selection; age is extracted on the ~62 distinct stage
+    # categories and mapped back via codes.
+    if isinstance(obs["development_stage"].dtype, pd.CategoricalDtype):
+        _cats = (obs["development_stage"].cat.categories.astype(str)
+                 .str.extract(r"(\d+)-year-old").iloc[:, 0].astype(float))
+        _codes = obs["development_stage"].cat.codes.to_numpy()
+        _age = np.full(len(obs), np.nan)
+        _ok = _codes >= 0
+        _age[_ok] = _cats.to_numpy()[_codes[_ok]]
+        obs["age"] = _age
+    else:
+        obs["age"] = obs["development_stage"].astype(str).str.extract(r"(\d+)-year-old").astype(float)
+    _primary = obs["is_primary_data"]
+    _primary_ok = (_primary.to_numpy() if _primary.dtype == bool else
+                   _primary.astype(str).isin(["True", "true", "1"]).to_numpy())
+    obs = obs[_primary_ok & (obs["disease"] == "normal").to_numpy()
+              & obs["age"].notna().to_numpy()].copy()
     obs["row"] = obs["_row"].to_numpy()
     # Library per cell from X row sums (computed per chunk); obs raw_sum, if
     # present, is used only as a cross-check inside the builder.
@@ -177,7 +192,7 @@ def main():
                   .agg(age=("age", "first"), sex=("sex", lambda s: str(s.iloc[0])))
                   .reset_index())
     print(f"Normal control donors with numeric age: {len(donor_meta)}", flush=True)
-    counts = (obs[obs["cell_type"].astype(str) != "unknown"]
+    counts = (obs[obs["cell_type"] != "unknown"]
               .groupby(["donor_id", "cell_type"], observed=True).size()
               .rename("n_cells").reset_index())
     obs_small = obs[["row", "donor_id", "cell_type", "age", "sex", "raw_sum"]].copy()
@@ -197,7 +212,7 @@ def main():
         # raw_sum is NaN if the h5ad lacks the column; the builder then
         # skips the cross-check and uses X row sums as the library.
         path = build_pseudobulk_h5ad(adata, sub, cell_type, donors, scratch)
-        z = np.load(path, allow_pickle=False)
+        z = np.load(path, allow_pickle=True)  # sex is an object str array; own pipeline file
         genes = np.array([str(g) for g in z["genes"]])
         matrix = z["pseudobulk"].astype(np.float64).T  # genes x donors
         age = z["age"].astype(float)
