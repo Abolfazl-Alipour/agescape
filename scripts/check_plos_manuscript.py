@@ -16,7 +16,7 @@ def main():
     plain = re.sub(r"\\[a-zA-Z]+|[{}]", " ", abstract)
     words = re.findall(r"\b[\w'-]+\b", plain)
     assert len(words) <= 300, f"Abstract has {len(words)} words"
-    assert not re.search(r"\b[qp]\s*=|\b[+-]?\d+\.\d+\b", abstract, re.I)
+    # 2026-11-09: Reza ordered p-values and Bayesian results INTO the abstract; the no-statistics rule is retired.
     assert "—" not in text and "–" not in text
     assert "Figure 5" not in text and "S1" not in text
 
