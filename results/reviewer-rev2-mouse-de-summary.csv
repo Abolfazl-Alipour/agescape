@@ -1,0 +1,18 @@
+unit,tissue,cell_type,n_mice,n_cells_3m,n_cells_18m,n_genes_tested,n_de_wls_fdr05_log2fc025,n_p1_genes_in_unit,nb_wls_sign_agreement_p1,lodo_max_delta_over_se_p1,lodo_p1_any_sign_flip
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,6,195,400,1367,0,40,0.6,11.293132382731294,23
+Kidney::fenestrated cell,Kidney,fenestrated cell,6,181,187,1642,1,51,0.9215686274509803,2.5325178485264237,30
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,6,111,117,1539,0,52,0.9423076923076923,1.4415224265664293,12
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,6,61,71,1534,0,50,0.74,1.7691835199733932,27
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,6,125,197,1437,0,50,1.0,2.2042194175203202,12
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,6,310,246,1445,0,49,0.8367346938775511,2.467273589747203,17
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,6,680,1113,1389,0,49,0.9387755102040817,4.000978010423468,20
+Kidney::macrophage,Kidney,macrophage,6,139,264,1126,0,52,0.8461538461538461,2.819541757897066,34
+Lung::B cell,Lung,B cell,8,168,499,953,0,23,0.8695652173913043,3.4051775101276913,15
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",7,123,72,993,0,25,0.96,2.189921823149439,11
+Lung::NK cell,Lung,NK cell,8,534,158,1181,0,26,0.8846153846153846,1.95657267311962,10
+Lung::adventitial cell,Lung,adventitial cell,8,375,56,1439,0,66,0.8333333333333334,2.0508720676844274,16
+Lung::alveolar macrophage,Lung,alveolar macrophage,8,208,200,1363,0,41,0.9024390243902439,2.3484172835789976,12
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,8,156,756,1788,0,54,0.7962962962962963,1.6778280524216491,29
+Lung::classical monocyte,Lung,classical monocyte,8,125,980,1161,0,37,0.7567567567567568,2.0274929904328407,19
+Lung::fibroblast of lung,Lung,fibroblast of lung,8,1143,166,1474,0,64,0.828125,2.4004487287893745,24
+Lung::non-classical monocyte,Lung,non-classical monocyte,8,185,187,1256,0,36,0.9166666666666666,1.6011473046575087,10

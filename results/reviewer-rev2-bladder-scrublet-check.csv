@@ -1,0 +1,5 @@
+tissue,cell_type,n_donors_scrublet_on,n_donors_scrublet_off,n_genes,slope_pearson,slope_spearman,mean_abs_slope_diff,max_abs_slope_diff,slope_sd_scrublet_on,note
+Bladder,bladder cell,8,8,19955,0.9980301620746546,0.9895629881018532,0.00014882827896974487,0.015799257528535365,0.006169045428089723,Slopes on all genes after the technical mask; diff in log1p(CP10K) per month.
+Bladder,bladder urothelial cell,8,8,19955,0.9999790090974139,0.9992025152567857,1.1729725921072435e-05,0.0003049584931606522,0.0032543682743004804,Slopes on all genes after the technical mask; diff in log1p(CP10K) per month.
+Bladder,endothelial cell,7,7,19955,0.9998274658602458,0.9926314306738802,6.261707043436006e-05,0.004501514314463157,0.0065586489905956145,Slopes on all genes after the technical mask; diff in log1p(CP10K) per month.
+Bladder,leukocyte,6,6,19955,0.9961603693002867,0.9807056317534666,0.0001911546575960415,0.008513947034226609,0.0048236879311478855,Slopes on all genes after the technical mask; diff in log1p(CP10K) per month.
