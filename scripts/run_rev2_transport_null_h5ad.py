@@ -20,7 +20,7 @@ random signatures, seed 20261105, M9 age-plus-sex OLS, centred two-sided
 empirical p, BH over the 21 MSSM cell types) is imported verbatim from
 run_rev2_transport_null so the two routes cannot diverge.
 
-Writes results/reviewer-rev2-transport-null.csv and caches per-cell-type
+Writes results/reviewer-rev2-transport-null-mssm.csv and caches per-cell-type
 pseudobulk .npz files in the same scratch dir / format as the SOMA route,
 so the two routes share intermediates and the null phase.
 
@@ -113,10 +113,10 @@ def build_pseudobulk_h5ad(adata, obs_index, cell_type, donors, scratch: Path) ->
     meta = obs_index.groupby("donor_id").agg(age=("age", "first"), sex=("sex", "first"))
     meta = meta.loc[donors]
     save_npz_retry(
-        out, genes=genes, donors=np.array(donors),
+        out, genes=np.asarray(genes, dtype=str), donors=np.asarray(donors, dtype=str),
         pseudobulk=pseudobulk, n_cells=counts, library=library,
         age=meta["age"].to_numpy(float),
-        sex=meta["sex"].astype(str).to_numpy(),
+        sex=meta["sex"].astype(str).to_numpy(dtype=str),
     )
     print(f"  [{cell_type}] saved {out.name}: {len(donors)} donors x {n_genes} genes", flush=True)
     return out
@@ -276,7 +276,7 @@ def main():
             "survivor", "mean_log_library", "actual_score_depth_r",
             "random_score_depth_r_mean"]
     result = result[cols].sort_values("empirical_p_two_sided").reset_index(drop=True)
-    out = RESULTS / "reviewer-rev2-transport-null.csv"
+    out = RESULTS / "reviewer-rev2-transport-null-mssm.csv"
     import time as _time
     for _attempt in range(1, 9):
         try:
