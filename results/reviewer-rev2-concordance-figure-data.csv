@@ -1,0 +1,8 @@
+species_scope,observed,null_mean,null_ci95_low,null_ci95_high,p_value,status
+"Mouse, within tissue",0.1868,0.1378,0.0973,0.1952,0.043,redone_joint
+"Mouse, cross tissue",0.0363,0.0234,0.003,0.0614,0.155,redone_joint
+"Naked mole rat, within tissue",0.6146,0.6423,0.5346,0.7402,0.7,already_joint
+"Human, within tissue",0.1981,,,,,reference_only
+"Fruit fly, within tissue",0.1936,,,,,reference_only
+"C. elegans, within tissue",0.3537,,,,,reference_only
+"Zebrafish, within tissue",0.3393,,,,,reference_only
