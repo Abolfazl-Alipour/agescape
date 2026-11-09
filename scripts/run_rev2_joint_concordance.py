@@ -30,41 +30,48 @@ SLUGS = {"Human": "human", "Fruit fly": "fly", "C. elegans": "worm", "Zebrafish"
 
 
 def human_strata():
-    import cellxgene_census
+    import anndata as ad
     from scripts.run_human_vector_gene_drivers import pseudobulk
     from scripts.run_m9_pipeline import COHORTS
-    from scripts.run_rev2_transport_null import tiledb_config_from_env
 
     tests = pd.read_csv(RESULTS / "h3-cross-species-vector-tests.csv")
     eligible = tests[(tests["species"] == "Human")
                      & (tests["metric"] == "profile_hellinger")
                      & (tests["model"] == "depth_adjusted")][
         ["cohort", "tissue", "cell_type"]].drop_duplicates()
-    census = cellxgene_census.open_soma(
-        census_version="2025-11-08", tiledb_config=tiledb_config_from_env())
-    try:
-        for cohort, selected in eligible.groupby("cohort"):
-            dataset_id = next(key for key, value in COHORTS.items() if value[0] == cohort)
-            cell_filter = ",".join(f"'{value}'" for value in selected["cell_type"])
-            base_filter = (f"dataset_id == '{dataset_id}' and is_primary_data == True "
-                           f"and disease == 'normal' and raw_sum >= 1500 "
-                           f"and cell_type in [{cell_filter}]")
-            obs = cellxgene_census.get_obs(
-                census, "Homo sapiens", value_filter=base_filter,
-                column_names=["donor_id", "development_stage"])
+    directory = CACHE.parent / "human-h5ads"
+    for cohort, selected in eligible.groupby("cohort"):
+        dataset_id = next(key for key, value in COHORTS.items() if value[0] == cohort)
+        path = directory / f"{dataset_id}.h5ad"
+        if not path.exists():
+            raise FileNotFoundError(f"Missing Census 2025-11-08 source file: {path}")
+        atlas = ad.read_h5ad(path, backed="r")
+        try:
+            columns = ["donor_id", "development_stage", "disease", "cell_type", "sex",
+                       "is_primary_data"]
+            obs = atlas.obs[columns].copy()
+            obs["row"] = np.arange(len(obs))
             obs["age"] = obs["development_stage"].astype(str).str.extract(
-                r"(\d+)-year-old").astype(float)
-            donors = sorted(obs.loc[obs["age"].between(20, 120), "donor_id"].astype(str).unique())
+                r"(\d+)-year-old", expand=False).astype(float)
+            keep = (obs["is_primary_data"].astype(str).str.lower().eq("true")
+                    & obs["disease"].astype(str).eq("normal")
+                    & obs["cell_type"].astype(str).isin(set(selected["cell_type"]))
+                    & obs["age"].between(20, 120))
+            obs = obs.loc[keep].copy().sort_values("row")
+            rows = obs["row"].to_numpy()
+            library = np.empty(len(rows), dtype=np.float64)
+            for start in range(0, len(rows), 10000):
+                chunk = rows[start:start + 10000]
+                library[start:start + len(chunk)] = np.asarray(
+                    atlas.X[chunk].sum(axis=1)).ravel()
+            obs = obs.loc[library >= 1500].copy()
+            donors = sorted(obs["donor_id"].astype(str).unique())
             collected = {}
             genes = None
             for start in range(0, len(donors), 5):
                 batch = donors[start:start + 5]
-                donor_filter = ",".join(f"'{donor}'" for donor in batch)
-                adata = cellxgene_census.get_anndata(
-                    census, "Homo sapiens",
-                    obs_value_filter=f"{base_filter} and donor_id in [{donor_filter}]",
-                    obs_column_names=["donor_id", "development_stage", "sex", "cell_type"],
-                    var_column_names=["feature_name"])
+                batch_rows = np.sort(obs.loc[obs["donor_id"].isin(batch), "row"].to_numpy())
+                adata = atlas[batch_rows].to_memory()
                 for cell_type in selected["cell_type"]:
                     part = adata[adata.obs["cell_type"].astype(str) == cell_type]
                     if part.n_obs == 0 or not (
@@ -90,8 +97,8 @@ def human_strata():
                                   "cohort": cohort, "cell_type": row.cell_type,
                                   "expression": expression, "metadata": metadata})
             yield selected["tissue"].iloc[0], cohort, genes, units
-    finally:
-        census.close()
+        finally:
+            atlas.file.close()
 
 
 LOADERS = {"Human": human_strata, "Fruit fly": phase1.fly_strata,
