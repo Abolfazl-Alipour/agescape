@@ -448,12 +448,12 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
           f"missing={sorted(phase1_mouse - mine)} extra={sorted(mine - phase1_mouse)}", flush=True)
     # Primary analysis uses exactly the Phase 1 unit set (78 units), so the
     # ONLY change vs Phase 1 is the permutation scheme (+ detection rule).
-    # The 2 extra units exist only because this run omits scrublet (see the
-    # --no-scrublet note); they are reported separately, not in the primary.
+    # Extra units can occur when QC changes donor coverage; keep the primary
+    # analysis restricted to the prespecified Phase 1 unit set.
     extra_units = sorted(mine - phase1_mouse)
     if extra_units:
-        print(f"Excluding {len(extra_units)} extra (no-scrublet-only) units from the "
-              f"primary analysis: {extra_units}", flush=True)
+        print(f"Excluding {len(extra_units)} units outside the prespecified primary set: "
+              f"{extra_units}", flush=True)
         keep_idx = [i for i, u in enumerate(all_units)
                     if (u["tissue"], u["cell_type"]) in phase1_mouse]
         all_units = [all_units[i] for i in keep_idx]
@@ -575,6 +575,7 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
         if (iteration + 1) % 100 == 0:
             print(f"  permutations {iteration + 1}/{permutations}", flush=True)
         if (iteration + 1) % 200 == 0 or iteration + 1 == permutations:
+            Path(checkpoint_path).parent.mkdir(parents=True, exist_ok=True)
             np.savez(checkpoint_path, permutations=permutations,
                      iterations_done=iteration + 1,
                      joint_within=joint_within, joint_cross=joint_cross,
@@ -703,8 +704,7 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
                             "pseudobulk age slopes negligibly; see the Bladder scrublet "
                             "sensitivity in the coordinator report.")
                          + " Donor pool is 22 mice: pooled donor 3-M-8/9 contributes to "
-                           "no Phase 1 unit (it appears only in Liver hepatocyte, one of "
-                           "the 2 no-scrublet-only units excluded from the primary set).",
+                           "no unit in the prespecified primary set.",
             })
     return rows, stratum_rows
 
