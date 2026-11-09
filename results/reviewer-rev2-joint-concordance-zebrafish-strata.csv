@@ -1,0 +1,2 @@
+species,tissue,cohort,n_units,n_pairs,n_donors_in_stratum,n_genes,observed_mean_pearson,joint_null_mean,joint_null_sd,joint_null_ci95_low,joint_null_ci95_high,joint_p_greater,n_permutations
+Zebrafish,Testis fine cell types,GSE275361,14,91,6,18923,0.34148481240104106,0.32541785900412734,0.05340313740268387,0.24002194668662308,0.4364804330781586,0.36063936063936064,1000
