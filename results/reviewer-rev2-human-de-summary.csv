@@ -1,4 +1,8 @@
 cohort,cell_type,n_donors,n_genes_total,n_genes_tested,n_genes_technical_dropped,design,n_fdr_wls,n_fdr_ols_same_genes,spearman_slope_wls_vs_ols,median_n_cells,age_sd,age_min,age_max
+MSSM_DLPFC,VIP GABAergic cortical interneuron,197,34176,1933,792,intercept + age + sex_male + mean_log_umi,218,235,0.9454445108139774,196.0,15.287349204007842,20.0,89.0
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,189,34176,1872,792,intercept + age + sex_male + mean_log_umi,152,237,0.9128076073701022,145.0,15.493760841515266,20.0,89.0
+MSSM_DLPFC,sst GABAergic cortical interneuron,177,34176,1904,792,intercept + age + sex_male + mean_log_umi,400,230,0.9307699617514426,155.0,15.300929758148374,24.0,89.0
+MSSM_DLPFC,GABAergic neuron,155,34176,1884,792,intercept + age + sex_male + mean_log_umi,75,53,0.9347143838454359,79.0,14.848185805036243,27.0,89.0
 HBCC_DLPFC,VIP GABAergic cortical interneuron,80,34176,1913,792,intercept + age + sex_male + mean_log_umi,224,236,0.9305220796355913,235.5,16.019746517377005,20.0,85.0
 HBCC_DLPFC,pvalb GABAergic cortical interneuron,80,34176,1860,792,intercept + age + sex_male + mean_log_umi,232,219,0.9669065953373732,213.5,16.019746517377005,20.0,85.0
 HBCC_DLPFC,sst GABAergic cortical interneuron,82,34176,1882,792,intercept + age + sex_male + mean_log_umi,604,540,0.9759226796071542,231.0,15.834819024101487,20.0,85.0
