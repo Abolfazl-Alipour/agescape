@@ -94,6 +94,34 @@ MIN_CELLS_PER_DONOR_CT = 20
 MIN_DONORS = 10
 SEED = 20261108
 
+
+def _cat_eq(series, value):
+    """Cheap equality for obs columns. Categorical/bool columns compare by
+    code (no 4.1M-row str materialisation); object columns fall back to
+    astype(str). The astype(str) temporaries were the OOM spike that killed
+    the MSSM fetch twice (exit 137): each one allocates ~1 GB of Python
+    strings over the full 4.1M-row obs."""
+    if isinstance(series.dtype, pd.CategoricalDtype):
+        return series == value
+    if series.dtype == bool:
+        return series == (str(value).lower() == "true")
+    return series.astype(str) == value
+
+
+def _age_from_stage(series):
+    """Parse ages from development_stage. Category-level extract: the column
+    has ~62 distinct values, so extract on the categories and map back via
+    codes instead of str.extract over 4.1M rows (same OOM spike)."""
+    if isinstance(series.dtype, pd.CategoricalDtype):
+        cats = (series.cat.categories.astype(str).str.extract(AGE_RE)
+                .iloc[:, 0].astype(float))
+        codes = series.cat.codes.to_numpy()
+        out = np.full(len(series), np.nan)
+        ok = codes >= 0
+        out[ok] = cats.to_numpy()[codes[ok]]
+        return pd.Series(out, index=series.index)
+    return series.astype(str).str.extract(AGE_RE).iloc[:, 0].astype(float)
+
 INTERNEURON_TYPES = [
     "VIP GABAergic cortical interneuron",
     "pvalb GABAergic cortical interneuron",
@@ -249,7 +277,11 @@ def pseudobulk_counts(adata):
     """
     adata.obs["donor_id"] = adata.obs["donor_id"].astype(str)
     adata.obs["age"] = adata.obs["development_stage"].astype(str).str.extract(AGE_RE).astype(float)
-    adata = adata[adata.obs["age"].between(20, 120)].copy()
+    # The caller already age-filters; copying the whole slice again here
+    # doubles peak RSS on the big MSSM slices. Only subset when needed.
+    _age_ok = adata.obs["age"].between(20, 120)
+    if not bool(_age_ok.all()):
+        adata = adata[_age_ok].copy()
     adata.var["symbol"] = adata.var["feature_name"].astype(str)
     adata.var_names = adata.var["symbol"].values
     adata.var_names_make_unique()
@@ -542,7 +574,7 @@ def fetch_unit(census, dataset_id, cell_type, scratch: Path, tag: str, donor_bat
     safe = f"{tag}_{cell_type}".replace(" ", "_").replace("/", "_")
     cache = scratch / f"counts_{safe}.npz"
     if cache.exists():
-        z = np.load(cache, allow_pickle=False)
+        z = np.load(cache, allow_pickle=True)
         meta = pd.DataFrame({k: z[k] for k in ("donor", "age", "sex_male", "n_cells", "mean_log_umi", "library")})
         return z["counts"], meta, np.array([str(g) for g in z["genes"]]), cache
     import cellxgene_census
@@ -642,21 +674,26 @@ def fetch_unit_h5ad(h5ad_path: Path, cell_type: str, scratch: Path, tag: str):
     safe = f"{tag}_{cell_type}".replace(" ", "_").replace("/", "_")
     cache = scratch / f"counts_{safe}.npz"
     if cache.exists():
-        z = np.load(cache, allow_pickle=False)
+        z = np.load(cache, allow_pickle=True)
         meta = pd.DataFrame({k: z[k] for k in ("donor", "age", "sex_male", "n_cells", "mean_log_umi", "library")})
         return z["counts"], meta, np.array([str(g) for g in z["genes"]]), cache
     b = ad.read_h5ad(h5ad_path, backed="r")
     obs = b.obs
     cols = set(obs.columns)
     mask = pd.Series(True, index=obs.index)
-    mask &= obs["cell_type"].astype(str) == cell_type
+    mask &= _cat_eq(obs["cell_type"], cell_type)
     if "disease" in cols:
-        mask &= obs["disease"].astype(str) == "normal"
+        mask &= _cat_eq(obs["disease"], "normal")
     if "is_primary_data" in cols:
-        mask &= obs["is_primary_data"].astype(str).str.lower() == "true"
+        mask &= _cat_eq(obs["is_primary_data"], "true")
     if "raw_sum" in cols:
         mask &= pd.to_numeric(obs["raw_sum"], errors="coerce") >= 1500
-    age = obs["development_stage"].astype(str).str.extract(AGE_RE).iloc[:, 0].astype(float)
+    elif "n_counts" in cols:
+        # Census h5ad files carry n_counts (= per-cell raw sum) instead of
+        # raw_sum. Pre-filtering on it avoids the post-slice X row-sum pass
+        # and the extra full-slice copy that OOM-killed the MSSM fetch.
+        mask &= pd.to_numeric(obs["n_counts"], errors="coerce") >= 1500
+    age = _age_from_stage(obs["development_stage"])
     mask &= age.between(20, 120).to_numpy()
     sub_obs = obs[mask]
     per_donor = sub_obs.groupby("donor_id", observed=True).size()
@@ -664,17 +701,56 @@ def fetch_unit_h5ad(h5ad_path: Path, cell_type: str, scratch: Path, tag: str):
     if len(donors) < MIN_DONORS:
         log(f"  [{tag} | {cell_type}] too few donors ({len(donors)} < {MIN_DONORS}); skipped")
         return None, None, None, None
-    keep = mask & obs["donor_id"].astype(str).isin(donors)
-    sub = b[keep].to_memory()
+    keep = mask & obs["donor_id"].isin(donors)
+    # Donor batches capped at ~15k cells: a single slice for a big type
+    # (oligodendrocytes ~314k cells, L2/3 ~89k) peaks past the VM limit
+    # (the VIP slice alone hit 5.9 GB RSS). Donors are never split.
+    n_per_donor = {str(k): int(v) for k, v in per_donor.items()}
+    batches, _cur, _cur_n = [], [], 0
+    for _d in donors:
+        _n = n_per_donor[_d]
+        if _cur and _cur_n + _n > 15000:
+            batches.append(_cur)
+            _cur, _cur_n = [], 0
+        _cur.append(_d)
+        _cur_n += _n
+    if _cur:
+        batches.append(_cur)
+    batch_masks = [(keep & obs["donor_id"].isin(_batch)).to_numpy()
+                   for _batch in batches]
+    # Free the full 4.1M-row obs (and mask temporaries) BEFORE any X slice
+    # loads: holding both at once was the other half of the OOM peak.
+    del obs, mask, sub_obs, per_donor, age, keep
+    import gc
+    gc.collect()
+    counts = None
+    genes = None
+    meta_rows = []
+    for _bi, _batch in enumerate(batches):
+        sub = b[batch_masks[_bi]].to_memory()
+        if "raw_sum" not in cols and "n_counts" not in cols:
+            X = sub.X.tocsr() if sp.issparse(sub.X) else sp.csr_matrix(sub.X)
+            rs = np.asarray(X.sum(axis=1)).ravel()
+            sub = sub[rs >= 1500].copy()
+            log(f"  [{tag} | {cell_type}] raw_sum computed from X; "
+                f"{int((rs >= 1500).sum())}/{len(rs)} cells kept")
+        bc, bm, bg = pseudobulk_counts(sub)
+        del sub
+        gc.collect()
+        if genes is None:
+            genes = bg
+            counts = np.zeros((len(donors), len(genes)), dtype=np.int64)
+        else:
+            assert list(bg) == list(genes), f"var changed between batches for {cell_type}"
+        pos = {d: i for i, d in enumerate(donors)}
+        for j, d in enumerate(bm["donor"]):
+            counts[pos[d]] = bc[j]
+        meta_rows.append(bm)
+        log(f"  [{tag} | {cell_type}] batch {_bi + 1}/{len(batches)}: "
+            f"donors {sum(len(x) for x in batches[:_bi + 1])}/{len(donors)}")
     del b
-    if "raw_sum" not in cols:
-        X = sub.X.tocsr() if sp.issparse(sub.X) else sp.csr_matrix(sub.X)
-        rs = np.asarray(X.sum(axis=1)).ravel()
-        sub = sub[rs >= 1500].copy()
-        log(f"  [{tag} | {cell_type}] raw_sum computed from X; "
-            f"{int((rs >= 1500).sum())}/{len(rs)} cells kept")
-    counts, meta, genes = pseudobulk_counts(sub)
-    del sub
+    meta = pd.concat(meta_rows, ignore_index=True)
+    meta = meta.set_index("donor").loc[donors].reset_index()
     log(f"  [{tag} | {cell_type}] {len(meta)} donors, {len(genes)} genes, "
         f"{int(counts.sum())} total counts")
     if len(meta) < MIN_DONORS:
@@ -871,13 +947,19 @@ def enumerate_cell_types_h5ad(h5ad_path: Path):
     cols = set(obs.columns)
     mask = pd.Series(True, index=obs.index)
     if "is_primary_data" in cols:
-        mask &= obs["is_primary_data"].astype(str).str.lower() == "true"
+        mask &= _cat_eq(obs["is_primary_data"], "true")
     if "disease" in cols:
-        mask &= obs["disease"].astype(str) == "normal"
-    age = obs["development_stage"].astype(str).str.extract(AGE_RE).iloc[:, 0].astype(float)
+        mask &= _cat_eq(obs["disease"], "normal")
+    age = _age_from_stage(obs["development_stage"])
     mask &= age.between(20, 120).to_numpy()
     if "raw_sum" in cols:
         mask &= pd.to_numeric(obs["raw_sum"], errors="coerce") >= 1500
+        obs = obs[mask].copy()
+        obs["age"] = age[mask].to_numpy()
+    elif "n_counts" in cols:
+        # Same quantity as raw_sum in the Census h5ad; avoids the slow
+        # chunked X row-sum pass over the whole masked set.
+        mask &= pd.to_numeric(obs["n_counts"], errors="coerce") >= 1500
         obs = obs[mask].copy()
         obs["age"] = age[mask].to_numpy()
     else:
@@ -915,6 +997,20 @@ def stage_all_celltypes_h5ad(scratch: Path, n_perms: int = 5):
         "HBCC_DLPFC": scratch / "hbcc.h5ad",
     }
     rows = []
+    # Resume: the VM reboots ~every 2 h and this stage holds all rows in
+    # memory until the end, so a kill loses the whole stage. Rows are saved
+    # after each type (below) and completed (cohort, cell_type) pairs are
+    # skipped on re-entry. A truncated CSV (kill mid-write) falls back to
+    # a fresh start.
+    _done = set()
+    try:
+        _prev = pd.read_csv(scratch / "all_celltypes.csv")
+        if {"cohort", "cell_type"}.issubset(_prev.columns) and len(_prev):
+            rows = _prev.to_dict("records")
+            _done = {(str(r["cohort"]), str(r["cell_type"])) for r in rows}
+            log(f"[all-celltypes] resuming with {len(rows)} completed types")
+    except Exception:
+        pass
     for cohort, tag in (("MSSM_DLPFC", "mssm"), ("HBCC_DLPFC", "hbcc")):
         path = h5ad_paths[cohort]
         if not path.exists():
@@ -926,6 +1022,9 @@ def stage_all_celltypes_h5ad(scratch: Path, n_perms: int = 5):
             f">= {MIN_DONORS} donors")
         for _, r in per_type[per_type["n_donors"] >= MIN_DONORS].iterrows():
             cell_type = str(r["cell_type"])
+            if (cohort, cell_type) in _done:
+                log(f"  [{cohort} | {cell_type}] already done; skipped")
+                continue
             counts, meta, genes, _ = fetch_unit_h5ad(path, cell_type, scratch, tag)
             if counts is None:
                 continue
@@ -957,6 +1056,9 @@ def stage_all_celltypes_h5ad(scratch: Path, n_perms: int = 5):
                 f"{int(wls.attrs['n_genes_tested'])} FDR {n_fdr} null-mean "
                 f"{np.mean(null_counts):.1f} obs/exp {n_fdr / max(np.mean(null_counts), 1e-9):.2f}")
             emit_json("all_celltypes_unit", rows[-1])
+            _df = pd.DataFrame(rows)
+            save_csv_retry(_df, scratch / "all_celltypes.csv")
+            save_csv_retry(_df, RESULTS / "reviewer-rev2-interneuron-all-celltypes.csv")
     df = pd.DataFrame(rows)
     save_csv_retry(df, scratch / "all_celltypes.csv")
     save_csv_retry(df, RESULTS / "reviewer-rev2-interneuron-all-celltypes.csv")
@@ -1027,7 +1129,7 @@ def stage_all_celltypes(scratch: Path, n_perms: int = 5):
 
 def load_de_npz(scratch: Path, tag: str, cell_type: str):
     safe = f"{tag}_{cell_type}".replace(" ", "_").replace("/", "_")
-    z = np.load(scratch / f"de_{safe}.npz", allow_pickle=False)
+    z = np.load(scratch / f"de_{safe}.npz", allow_pickle=True)
     return pd.DataFrame({k: z[k] for k in
                          ("gene", "slope", "se", "pvalue", "q_bh", "ci95_low", "ci95_high",
                           "slope_ols", "se_ols", "pvalue_ols", "q_bh_ols",
@@ -1036,7 +1138,7 @@ def load_de_npz(scratch: Path, tag: str, cell_type: str):
 
 def load_counts_npz(scratch: Path, tag: str, cell_type: str):
     safe = f"{tag}_{cell_type}".replace(" ", "_").replace("/", "_")
-    z = np.load(scratch / f"counts_{safe}.npz", allow_pickle=False)
+    z = np.load(scratch / f"counts_{safe}.npz", allow_pickle=True)
     meta = pd.DataFrame({k: z[k] for k in ("donor", "age", "sex_male", "n_cells", "mean_log_umi", "library")})
     return z["counts"], meta, np.array([str(g) for g in z["genes"]])
 

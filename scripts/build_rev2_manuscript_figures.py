@@ -62,14 +62,15 @@ def concordance_figure():
 
 
 def interneuron_figure():
-    genes = pd.read_csv(RESULTS / "reviewer-rev2-interneuron-genes.csv")
+    genes = pd.read_csv(RESULTS / "reviewer-rev2-interneuron-genes-moderated.csv")
     plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False})
-    fig, axes = plt.subplots(1, 3, figsize=(11.5, 3.8), sharex=False, sharey=False)
-    for ax, short in zip(axes, ("VIP", "pvalb", "sst")):
+    fig, axes = plt.subplots(2, 2, figsize=(8.5, 7.2))
+    for ax, short in zip(axes.ravel(), ("VIP", "pvalb", "sst", "GABA")):
         part = genes[genes["short_type"] == short]
         both = part["tier"] == "both_FDR"
+        base_color = "#a0a0a0" if short == "GABA" else "#4478a6"
         ax.scatter(part.loc[~both, "slope_mssm"], part.loc[~both, "slope_hbcc"],
-                   s=10, color="#a0a0a0", alpha=0.65, linewidths=0)
+                   s=10, color=base_color, alpha=0.55, linewidths=0)
         ax.scatter(part.loc[both, "slope_mssm"], part.loc[both, "slope_hbcc"],
                    s=22, facecolors="none", edgecolors="#147d82", linewidths=0.9)
         ax.axhline(0, color="#dddddd", lw=0.7)
@@ -77,12 +78,13 @@ def interneuron_figure():
         lim = max(np.abs(part[["slope_mssm", "slope_hbcc"]].to_numpy()).max(), 1e-6) * 1.05
         ax.set_xlim(-lim, lim)
         ax.set_ylim(-lim, lim)
-        ax.set_title(f"{short} interneurons")
+        ax.set_title("Broad GABAergic neurons" if short == "GABA" else f"{short} interneurons")
         ax.set_xlabel("MSSM age slope")
         ax.set_ylabel("HBCC age slope")
-    fig.suptitle("Age-effect slopes for MSSM FDR genes; rings mark same-direction HBCC FDR replication")
+    fig.suptitle("Moderated MSSM FDR genes; rings mark same-direction HBCC FDR replication")
     fig.tight_layout()
     fig.savefig(FIGURES / "fig4-interneuron.png", dpi=300)
+    fig.savefig(FIGURES / "fig4-interneuron.pdf")
     plt.close(fig)
 
 
