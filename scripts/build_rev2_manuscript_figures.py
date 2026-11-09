@@ -13,7 +13,30 @@ FIGURES = REPO / "report" / "plos-one" / "figures-v2"
 
 
 def concordance_figure():
-    old = pd.read_csv(RESULTS / "reviewer-rev2-concordance.csv")
+    combined = pd.read_csv(RESULTS / "reviewer-rev2-concordance.csv")
+    combined = combined[combined["species"].isin(["Mouse", "Naked mole-rat"])]
+    additions = []
+    for slug, species in (("human", "Human"), ("fly", "Fruit fly"),
+                          ("worm", "C. elegans"), ("zebrafish", "Zebrafish")):
+        source = pd.read_csv(RESULTS / f"reviewer-rev2-joint-concordance-{slug}.csv").iloc[0]
+        row = {column: pd.NA for column in combined.columns}
+        row.update({"species": species, "scope": "within_tissue",
+                    "gene_set": source["gene_set"],
+                    "observed_mean_pearson": source["observed_mean_pearson"],
+                    "n_pairs": source["n_pairs"], "n_units": source["n_units"],
+                    "n_donors": source["n_donors"],
+                    "detection_rule": source["detection_rule"],
+                    "joint_null_mean": source["joint_null_mean"],
+                    "joint_null_sd": source["joint_null_sd"],
+                    "joint_null_ci95_low": source["joint_null_ci95_low"],
+                    "joint_null_ci95_high": source["joint_null_ci95_high"],
+                    "joint_p_greater": source["joint_p_greater"],
+                    "n_permutations_joint": source["n_permutations_joint"],
+                    "status": source["status"], "notes": source["permutation_scheme"]})
+        additions.append(row)
+    combined = pd.concat([combined, pd.DataFrame(additions)], ignore_index=True)
+    combined.to_csv(RESULTS / "reviewer-rev2-concordance.csv", index=False)
+    old = combined
     rows = []
     for scope, label in (("within_tissue", "Mouse, within tissue"),
                          ("cross_tissue", "Mouse, cross tissue")):
@@ -46,9 +69,9 @@ def concordance_figure():
     fig, ax = plt.subplots(figsize=(9, 5.6))
     y = np.arange(len(data))[::-1]
     ax.scatter(data["observed"], y, color="#147d82", s=58, zorder=3,
-               label="Observed mean pairwise Pearson correlation")
+               label="Observed")
     ax.scatter(data["null_mean"], y, color="#737373", marker="s", s=38, zorder=3,
-               label="Joint donor-permutation null mean")
+               label="Joint null mean")
     for yi, row in zip(y, data.itertuples()):
         ax.plot([row.null_ci95_low, row.null_ci95_high], [yi, yi], color="#737373", lw=1.4)
     ax.set_yticks(y, data["species_scope"])
@@ -78,6 +101,7 @@ def interneuron_figure():
         lim = max(np.abs(part[["slope_mssm", "slope_hbcc"]].to_numpy()).max(), 1e-6) * 1.05
         ax.set_xlim(-lim, lim)
         ax.set_ylim(-lim, lim)
+        ax.locator_params(axis="both", nbins=4)
         ax.set_title("Broad GABAergic neurons" if short == "GABA" else f"{short} interneurons")
         ax.set_xlabel("MSSM age slope")
         ax.set_ylabel("HBCC age slope")

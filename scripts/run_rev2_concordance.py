@@ -704,8 +704,7 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
                             "pseudobulk age slopes negligibly; see the Bladder scrublet "
                             "sensitivity in the coordinator report.")
                          + " Donor pool is 22 mice: pooled donor 3-M-8/9 contributes to "
-                           "no Phase 1 unit (it appears only in Liver hepatocyte, one of "
-                           "the 2 no-scrublet-only units excluded from the primary set).",
+                           "no unit in the prespecified primary set.",
             })
     return rows, stratum_rows
 
