@@ -2,9 +2,9 @@
 
 Manuscript: "Cell-type-specific compositional and transcriptional changes in mouse and human aging", sole author Abolfazl Alipour.
 
-- `final-plos-one.tex` — LaTeX source, standard IMRaD order (Materials and Methods after the Introduction). Abstract 230 words, no statistical results.
-- `final-plos-one.pdf` — compiled PDF (Tectonic).
-- `figures-v2/` — data figures 1 to 4. Figure 3 was rebuilt in Rev2 stage 1 from the joint donor-level concordance null; see `results/reviewer-rev2-concordance-figure-data.csv`.
+- `final-plos-one.tex`  -  LaTeX source, standard IMRaD order (Materials and Methods after the Introduction). Abstract 230 words, no statistical results.
+- `final-plos-one.pdf`  -  compiled PDF (Tectonic).
+- `figures-v2/`  -  data figures 1 to 4. Figure 3 was rebuilt in Rev2 stage 1 from the joint donor-level concordance null; see `results/reviewer-rev2-concordance-figure-data.csv`.
 
 Status: draft, NOT submitted anywhere. Affiliation is blank and the Funding, Competing Interests, and Ethics Statement sections are marked pending author confirmation. The older manuscript at `report/manuscript-aging-mechanisms.md` is untouched.
 
