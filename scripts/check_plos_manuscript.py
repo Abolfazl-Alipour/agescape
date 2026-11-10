@@ -47,7 +47,7 @@ def main():
     assert "The computational analyses were performed on the Kavox Labs cloud computing infrastructure (Amazon Web Services)." in text
     assert "The author is the founder of Kavox Labs." in text
     assert text.count("Pending author confirmation.") == 0
-    assert "Draft statement, pending author confirmation." in text
+    assert "pending author confirmation" not in text  # ethics confirmed by author 2026-11-09
 
     pages = None
     try:
