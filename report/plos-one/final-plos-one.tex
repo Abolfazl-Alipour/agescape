@@ -114,6 +114,8 @@ A cell fraction is the share of one specific cell type among recovered cells in 
 
 For donor i and cell type j, counts were transformed with pseudocount a and the centered log ratio: CLR\_ij = log((count\_ij + a) / sum\_j(count\_ij + a)) minus the mean over j of the same logged shares. The primary pseudocount was 0.5. Primary regressions included age and sex when identifiable. Sensitivity models added log total recovered cells and evaluated pseudocounts 0.1, 0.5, and 1.0, and a global Benjamini-Hochberg recheck applied one correction across the core mouse, human, and naked mole rat tests. Propeller provided a donor level count model check: proportions were transformed as logit((count + 0.5) / rowSum(count + 0.5)), followed by limma empirical Bayes regression with age, log total cells, sex when variable, and platform for Gao worm [19, 20]. Recovered composition was not interpreted as absolute tissue cell number. Study-aware models for human lung added study fixed effects, per-study slopes, and fixed and random effects meta-combination across studies, as reported in the Results.
 
+A mature-only refit repeated the same pipeline using only mice aged 18 months and older and human donors aged 30 years and older, with no other rule changed. Mouse 18 months is the paper's mature reference for the drift analysis and corresponds to middle age in human terms, not to human age 30; human 30 years is the age by which brain development is complete.
+
 
 \subsection*{Whole expression vector displacement}
 
@@ -165,6 +167,15 @@ In the pooled integrated lung cohort [10] of 119 donors and 44 cell types, club-
 Study and sampling differences further limit interpretation. Recovered club fractions ranged from 0.00009 to 0.3075 across studies, and young and old studies sampled different anatomical sites. The excluded-cell fraction increased from 16.1 percent at ages 20 to 39 to 34.6 percent at ages 60 to 81. Club-cell identity loss was not validly tested because a B-cell marker rule preceded the club-cell rule. A separate lung cohort of 17 donors had opposite-sign slopes in its nearest airway analogues. These pooled lung results are therefore between-study associations, not established within-study age effects.
 
 
+\subsection*{Mature-only refit: human fraction shifts hold from maturity, mouse shifts are unconfirmed, not refuted}
+
+The 15 fraction shifts above were measured across the full age range, including young animals and donors. A mature-only refit repeated the same pipeline using only mice aged 18 months and older and human donors aged 30 years and older. Five of the 15 shifts survive at q below 0.05 under the original global correction family, and all five are human. Lung club cells decline (slope minus 0.080, q = 0.012), lung multiciliated cells decline (minus 0.047, q = 0.028), brain L6b glutamatergic neurons rise (plus 0.020, q = 0.012), brain oligodendrocytes rise (plus 0.017, q = 0.012), and brain oligodendrocyte precursor cells decline (minus 0.012, q = 0.012). The mature-only slopes are slightly larger than the originals. Survival under the age restriction does not override the study-aware lung reanalysis: club and multiciliated cells still do not hold within individual studies.
+
+Nine shifts die in the refit, all mouse. All nine keep their original direction, and the median mature-only slope is 0.89 times the original, while standard errors inflate by a median factor of 3.3, because the mature-only subset spans 12 months (18 to 30) instead of 29 months (1 to 30) and holds 7 to 13 donors per tissue instead of 8 to 17. Only marrow late pro-B cells shrink substantially (0.39 times the original slope); the other eight keep 0.81 to 2.60 times their original slope. Failure to clear q below 0.05 here therefore does not prove these shifts are maturation artifacts. It shows the mature-only mouse data cannot confirm or refute them at this bar. Bladder cells are untestable: only four mature mice are available, and the rule requires at least six donors.
+
+Three further cell types clear the global bar only in the mature-only refit. Mouse limb muscle macrophages decline (slope minus 0.143, p = 0.00044, q = 0.028) and limb muscle mesenchymal stem cells decline (minus 0.100, p = 0.00021, q = 0.018). Both age curves are hump-shaped, rising from 1 to 18 months and then falling from 18 to 30 months, so the full-range straight-line fit is flat (p about 0.65) while the mature-only slope is strongly negative. Leave-one-donor-out slopes stay between minus 0.08 and minus 0.12 for both types, so no single mouse drives them. Human lung conventional dendritic cells rise (plus 0.023, p = 0.00061, q = 0.033), from a mean centered log ratio of minus 1.54 at ages 30 to 39 to minus 0.51 at ages 70 to 81.
+
+
 \subsection*{A mouse-derived signature does not exceed matched random-signature nulls}
 
 The primary signature, P1, contains 139 mouse-derived genes, 89 up-regulated and 50 down-regulated with age, after technical and biotype filtering. The 257-gene P0 signature is a sensitivity analysis. P1 was derived from mouse differential expression before human transport evaluation, and no human result was used to choose its membership. One-to-one mouse-to-human mapping yields 118 genes, 76 up and 42 down, with missing genes omitted rather than imputed.
@@ -198,7 +209,7 @@ The concordance test compares gene-level age-effect vectors between cell types w
 
 Human concordance was plus 0.1891 against a null mean of plus 0.2076 (null 95 percent interval plus 0.1548 to plus 0.2702; p = 0.7003) across 131 units and 480 donors in seven cohorts. No excess human concordance was detected. In fruit fly, concordance was plus 0.2191 against plus 0.0384 (p = 0.001) across 99 units and 72 pools. In worm, it was plus 0.3718 against plus 0.1841 (p = 0.003) across 13 units and 12 pools. In zebrafish, it was plus 0.3415 against plus 0.3254 (p = 0.361) across 14 units and six fish. Naked mole rat concordance was plus 0.6146 against plus 0.6423 (exact p = 0.70) in five animals. Thus fly and worm showed excess concordance, whereas human, zebrafish, and naked mole rat did not (Figure 3).
 
-Shared direction of gene-level effects is not evidence that every gene changes, that whole-vector distance increases, or that the same genes respond across species. A conserved AP-1 immune aging signature has been reported previously [12], but concordance here does not establish a universal program.
+Shared direction of gene-level effects is not evidence that every gene changes, that whole-vector distance increases, or that the same genes respond across species. A conserved AP-1 immune aging signature has been reported previously [12], but concordance here does not establish a universal response.
 
 \begin{figure}[htbp]\centering\includegraphics[width=0.92\textwidth]{figures-v2/fig3-concordance.png}\caption{Figure 3. Observed mean pairwise Pearson correlations between cell-type gene-effect vectors (circles) and joint donor-permutation null means with 95 percent intervals (squares and bars).}\end{figure}
 
@@ -259,8 +270,12 @@ The worm vector result was reference-sensitive. A day-1 reference gave depth-adj
 
 \section*{Discussion}
 
-The measured pattern was cell-type-specific. Fraction associations were local; mouse whole-profile displacement was distributed but concentrated in the young-to-mature transition; the overall human displacement estimate was imprecise; and human brain analyses showed replicated gene-level change in three interneuron subtypes amid broader expression change. The mouse-derived P1 signature did not exceed expression-matched random-signature nulls. No uniform transcriptomic program was detected in the surveyed datasets. Shared upstream mechanisms with cell-type-specific consequences remain possible.
+The measured pattern was cell-type-specific. Fraction associations were local; mouse whole-profile displacement was distributed but concentrated in the young-to-mature transition; the overall human displacement estimate was imprecise; and human brain analyses showed replicated gene-level change in three interneuron subtypes amid broader expression change. The mouse-derived P1 signature did not exceed expression-matched random-signature nulls. No uniform transcriptional response was detected in the surveyed datasets. Shared upstream mechanisms with cell-type-specific consequences remain possible.
 Within-tissue concordance in mouse, fly, and worm adds a narrower coordination result: some gene-level age effects share direction across cell types within each species. Zebrafish does not show this. This is not equivalent to universal whole-profile deterioration, cross-tissue coordination, or shared genes across species.
+
+Restricting the fraction analysis to mature animals and donors sharpens the human results and leaves the mouse results undecided. All five human shifts hold from maturity, with slightly larger slopes, so they are not driven by young donors. The nine mouse shifts that fail do so on power: their effects keep their direction and most of their size while standard errors roughly triple on a 12-month span, so the mature-only mouse data neither confirm nor refute them. The two limb-muscle types that appear only in the mature-only refit show why the alignment matters: their age curves rise then fall, so a straight line across the full range misses them entirely.
+
+Organs may also age on different schedules, which could hide a shared mechanism behind different apparent rates. Plasma protein clocks for 11 organs in 5,676 people show that organ age gaps correlate only r = 0.29 with each other, about 18 percent of people age fast in exactly one organ while under 2 percent age fast in many, and an older heart predicts heart failure at about 2.4-fold risk per standard deviation of extra heart age, roughly 4 years, while an older brain predicts Alzheimer's disease [27]. Longitudinal profiling of 106 people found the same pattern at the pathway level: individuals age fastest along different combinations of immune, metabolic, liver, and kidney pathways, called ageotypes [28]. In mice, the same aging hallmarks turn on in all organs but at different ages and strengths [29]. Three points from this paper limit how far that explanation goes here. First, the lung-versus-brain example runs backwards in our data: by the drift measure neither human lung nor brain drifts, and the average per-unit slope is slightly larger in lung than brain. Second, the signature was tested in human brain, the organ that should age fastest on this view, and still failed. Third, concordance is measured within tissue, so different rates across organs cannot explain the human concordance null. The human drift null is still compatible with a smaller real effect under our power, and the mature-only muscle findings support the alignment logic. The clean test, stratifying donors by organ age instead of chronological age and re-running the signature and drift tests, is not possible with the data in this paper: there are no plasma proteomic measurements for these donors, and the brain, kidney, and lung samples come from different people, so no within-person organ comparison exists. That test needs a cohort with proteomic organ ages and single-cell data from the same donors.
 
 \subsection*{Predictions}
 
@@ -405,6 +420,15 @@ No supporting figures are included.
 
 
 26. Saul D, Kosinsky RL, Atkinson EJ, Doolittle ML, Zhang X, LeBrasseur NK, et al. (2022). A new gene set identifies senescent cells and predicts senescence-associated pathways across tissues. Nature Communications. https://doi.org/10.1038/s41467-022-32552-1
+
+
+27. Oh HS, Rutledge J, Nachun D, P\'alovics R, Abiose O, Moran-Losada P, et al. (2023). Organ aging signatures in the plasma proteome track health and disease. Nature. https://doi.org/10.1038/s41586-023-06802-1
+
+
+28. Ahadi S, Zhou W, Sch\"ussler-Fiorenza Rose SM, Sailani MR, Contrepois K, Avina M, et al. (2020). Personal aging markers and ageotypes revealed by deep longitudinal profiling. Nature Medicine. https://doi.org/10.1038/s41591-019-0719-5
+
+
+29. Schaum N, Lehallier B, Hahn O, P\'alovics R, Hosseinzadeh S, Lee SE, et al. (2020). Ageing hallmarks exhibit organ-specific temporal signatures. Nature. https://doi.org/10.1038/s41586-020-2499-y
 
 
 \end{document}
