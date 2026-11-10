@@ -41,6 +41,12 @@ Aging is often described as one process with one cause, yet organs and cell type
 
 Two views of aging predict different transcriptomes in old tissue. In the first view, one upstream failure drives the rest, so old cells of every type should show the same broad pattern: weakened identity, transcription of genes that do not belong to their program, and movement away from the young state in a shared direction. In the second view, aging comprises time-associated processes that co-occur and interact with different weights in different tissues and cell types. That view predicts heterogeneity: some cell types change and others do not, directions differ, and no single pattern appears everywhere. Recent work has claimed universal transcriptomic hallmarks of mammalian aging [11]. Single-cell studies have reported cell-type-specific aging in worm [5], increased transcriptional variability in immune cells [15], and human aging signatures that differ by cell type in pancreas [16].
 
+Theory itself is split on whether a uniform response should exist. The current hallmarks framework lists twelve shared mechanisms of aging, from genomic instability to chronic inflammation, and requires each hallmark to appear with age, to accelerate aging when accentuated, and to slow aging when targeted [30]. That framework predicts shared upstream processes, but it does not predict that their transcriptomic readout is uniform: the hallmarks are interconnected, and their relative contributions differ. Evolutionary theory points the other way. Antagonistic pleiotropy holds that genes favored for early-life benefit cause harm late in life, so senescence begins after reproductive maturity and aging is a byproduct of different genes acting in different tissues at different times [31]. The disposable soma theory makes the same prediction from energetics: organisms invest in reproduction over somatic maintenance, so damage accumulates unevenly by tissue and cell turnover [32]. The strongest prediction of uniformity comes from hyperfunction theory, which holds that the developmental growth program stays on after maturity, driven by nutrient sensing through mTOR, and causes aging disease [33]. These positions make different predictions about the transcriptome, which is why the question is empirical rather than settled by theory.
+
+Age is plainly encoded in the transcriptome. A whole-blood meta-analysis of 14,983 people found 1,497 genes changing with age and built a transcriptomic age predictor whose gap from chronological age tracked blood pressure, cholesterol, glucose, and body mass [34]. But age predictors do not necessarily travel. A mouse DNA methylation clock built from 90 CpG sites detects calorie restriction and growth hormone effects in mice, yet its contributing sites are distinct in human and mouse [35]. The same divergence appears in RNA: a direct mouse-versus-human comparison of aging skeletal muscle found 2,760 age-associated genes in mouse but only 613 in human, with under 5 percent of enriched pathways shared [36]. A multi-species analysis gives the vocabulary for this split, distinguishing universal, species-specific, and tissue-specific transcriptomic biomarkers of aging, and it warns that longevity signatures and aging signatures are not the same thing: signatures of long-lived species correlate positively with age-related change rather than reversing it [37]. A mouse-derived signature therefore cannot be assumed to match human aging, even when it predicts age well within mouse.
+
+Single-cell studies have made the specificity concrete. In mouse brain, aging follows a distinct transcriptional course in each cell population, with some signatures coordinated across types and others cell-type-specific, at times in opposite directions [38]. A re-analysis of the mouse atlas found 330 genes changing with age in over half of all tissue-cell types, a shared core that changes congruently, alongside tissue- and cell-type-specific genes [39]. In human brain, no neuron subtype is lost in non-pathological aging, yet 124 genes fall across all cell types, mostly housekeeping genes for translation and metabolism, while neuron-specific genes stay stable [40]. In human lung, aging is concentrated in a few cell types: capillary and alveolar type II cells show the largest transcriptional change, and transcriptional entropy rises with age [41]. And within a single human cell lineage, endothelial cells age differently by tissue and vascular bed [42]. The literature therefore supports both a shared core and pervasive specificity, and it leaves open whether any signature transports across species.
+
 
 There is no agreed operational definition of aging in general. Intuitively, aging is loss of function after passage of time: tissues work less well as time passes, repair weakens, and the risk of disease and death rises. That intuition is not yet an operational definition, because it does not say what to measure. This paper therefore states its working operational definition plainly. In this study, aging is measured as three things: (a) cell-type fractions, the share of each cell type within an organ; (b) gene expression within specific cell types; and (c) the distance of a whole expression profile from a young reference. That is the paper's working definition for the analyses reported here, not a final word on aging itself. Any claim in this paper about aging is a claim about those three measurements, and any theory the paper constrains is constrained through them.
 
@@ -275,7 +281,15 @@ Within-tissue concordance in mouse, fly, and worm adds a narrower coordination r
 
 Restricting the fraction analysis to mature animals and donors sharpens the human results and leaves the mouse results undecided. All five human shifts hold from maturity, with slightly larger slopes, so they are not driven by young donors. The nine mouse shifts that fail do so on power: their effects keep their direction and most of their size while standard errors roughly triple on a 12-month span, so the mature-only mouse data neither confirm nor refute them. The two limb-muscle types that appear only in the mature-only refit show why the alignment matters: their age curves rise then fall, so a straight line across the full range misses them entirely.
 
-Organs may also age on different schedules, which could hide a shared mechanism behind different apparent rates. Plasma protein clocks for 11 organs in 5,676 people show that organ age gaps correlate only r = 0.29 with each other, about 18 percent of people age fast in exactly one organ while under 2 percent age fast in many, and an older heart predicts heart failure at about 2.4-fold risk per standard deviation of extra heart age, roughly 4 years, while an older brain predicts Alzheimer's disease [27]. Longitudinal profiling of 106 people found the same pattern at the pathway level: individuals age fastest along different combinations of immune, metabolic, liver, and kidney pathways, called ageotypes [28]. In mice, the same aging hallmarks turn on in all organs but at different ages and strengths [29]. Three points from this paper limit how far that explanation goes here. First, the lung-versus-brain example runs backwards in our data: by the drift measure neither human lung nor brain drifts, and the average per-unit slope is slightly larger in lung than brain. Second, the signature was tested in human brain, the organ that should age fastest on this view, and still failed. Third, concordance is measured within tissue, so different rates across organs cannot explain the human concordance null. The human drift null is still compatible with a smaller real effect under our power, and the mature-only muscle findings support the alignment logic. The clean test, stratifying donors by organ age instead of chronological age and re-running the signature and drift tests, is not possible with the data in this paper: there are no plasma proteomic measurements for these donors, and the brain, kidney, and lung samples come from different people, so no within-person organ comparison exists. That test needs a cohort with proteomic organ ages and single-cell data from the same donors.
+What do these results mean for the theories? Antagonistic pleiotropy and disposable soma predict exactly this pattern: if aging is the side effect of different genes acting in different tissues at different times, and if damage accumulates unevenly by maintenance investment and turnover, no uniform transcriptomic response should exist [31, 32]. The hallmarks framework is compatible for a different reason: its twelve mechanisms are shared upstream processes, and its own premises test manipulation of those mechanisms, not uniformity of their transcriptomic readout [30]. The hyperfunction view is the one our data most directly challenge, and only at the transcriptomic level: if a single mTOR-driven growth program ran in all cells, a shared signature should have transported and drift should have been uniform, and neither happened [33]. But the upstream claim survives our data, because a single regulator can extend lifespan organism-wide without producing a uniform transcriptome: rapamycin fed late in life extends lifespan by 14 percent in female and 9 percent in male genetically heterogeneous mice [43]. The same logic holds for senescence: clearing p16-positive senescent cells delays age-related disorders in mice, yet senescent cells accumulate unevenly across tissues and act locally, so a causal senescence mechanism predicts tissue-specific change [44]. Our headline is therefore a claim about the transcriptomic readout, not about upstream causes, and the theories that posit shared upstream mechanisms remain standing.
+
+The signature's failure also has a simpler explanation than any flaw in the signature: age-predictor features are species-specific. A mouse methylation clock's contributing sites are distinct in human and mouse [35], and a direct mouse-human muscle comparison finds near-total divergence in age-associated genes and pathways [36]. Longevity signatures and aging signatures are different things, and signatures of long-lived species correlate positively with age-related change rather than reversing it, so a mouse signature should not be expected to match human aging [37]. One counterpoint must be faced: cell-type-specific aging clocks trained in mouse brain generalize across species [45]. The difference is instructive. Those clocks are trained within a cell type and validated on age prediction, a different task from transporting a fixed gene set; our signature is a single 139-gene set tested against matched random sets in two human cohorts. A signature can therefore be valid within its training context and still fail to transport, and the failure is informative about cross-species biology rather than about the quality of the original derivation.
+
+The interneuron result must be read against a shared background, not instead of one. In healthy human brain, 124 housekeeping genes fall across all cell types with age, mostly translation and metabolism, while neuron-specific genes stay stable and no neuron subtype is lost [40]. Our 381 replicated interneuron genes are therefore targeted change on top of a shared background: the subtypes that change most and earliest, not the only cells that change. The disease literature gives that change its stakes. In healthy prefrontal cortex, the somatostatin transcript per cell falls more than somatostatin cell density, so expression change precedes loss [46]. In Alzheimer's disease, somatostatin neuron loss is the earliest neuronal event, preceding the exponential rise in plaques and tangles, while parvalbumin and VIP loss comes later, the same three subtypes in the same order as our finding [47]. Our replicated age-related expression change in these subtypes is therefore plausibly the preclinical footprint of an ordered vulnerability sequence, not a uniform neuronal decline. Two guardrails apply. First, the change is expression, not loss: no neuron subtype is lost in healthy aging [40], and our own fraction analysis finds no interneuron fraction shift. Second, the signal is not exclusive to interneurons: microglia and oligodendrocytes carry hundreds of age-associated genes in our data, so the replicated interneuron signal sits alongside a large glial aging signal.
+
+Organs may also age on different schedules, which could hide a shared mechanism behind different apparent rates. Plasma protein clocks for 11 organs in 5,676 people show that organ age gaps correlate only r = 0.29 with each other, about 18 percent of people age fast in exactly one organ while under 2 percent age fast in many, and an older heart predicts heart failure at about 2.4-fold risk per standard deviation of extra heart age, roughly 4 years, while an older brain predicts Alzheimer's disease [27]. The replication in 44,498 UK Biobank participants on an independent protein platform finds the same weak correlation between organ gaps (r = 0.21) and the same brain association: an extremely aged brain carries about three times the Alzheimer's risk, similar to one APOE4 allele [48]. Longitudinal profiling of 106 people found the same pattern at the pathway level: individuals age fastest along different combinations of immune, metabolic, liver, and kidney pathways, called ageotypes [28]. In mice, the same aging hallmarks turn on in all organs but at different ages and strengths [29]. The premise is partial, not clean: in Whitehall II, large organ gaps predicted 30 diseases, but only 6 were exclusively associated with their own organ's gap [49]. Genetics gives the same duality: variants affecting organ age are mostly organ-specific, with pleiotropic links between organs [50]. Three points from this paper limit how far that explanation goes here. First, the lung-versus-brain example runs backwards in our data: by the drift measure neither human lung nor brain drifts, and the average per-unit slope is slightly larger in lung than brain. Second, the signature was tested in human brain, the organ that should age fastest on this view, and still failed. Third, concordance is measured within tissue, so different rates across organs cannot explain the human concordance null. The human drift null is still compatible with a smaller real effect under our power, and the mature-only muscle findings support the alignment logic. The clean test, stratifying donors by organ age instead of chronological age and re-running the signature and drift tests, is not possible with the data in this paper: there are no plasma proteomic measurements for these donors, and the brain, kidney, and lung samples come from different people, so no within-person organ comparison exists. That test needs a cohort with proteomic organ ages and single-cell data from the same donors.
+
+One recent result must be acknowledged directly. A single-cell atlas of human lung aging reports that transcriptional entropy rises with age and independently predicts age [41]. That finding does not contradict our off-program null, because the two measurements differ: entropy is the spread of expression across genes within a cell, while off-program expression is the fraction of transcripts from genes characteristic of other cell types. Our null is about the second measurement in mouse lung, with wide intervals, and it does not exclude an entropy increase in human lung. The distinction matters because the two measurements test different ideas: entropy tests whether expression becomes noisier, off-program expression tests whether cells lose identity by transcribing other types' genes.
 
 \subsection*{Predictions}
 
@@ -284,6 +298,8 @@ First, cell types with replicated RNA changes should show coupled regulatory cha
 Second, genuine age-associated fraction changes should replicate across studies with the same anatomical sampling and donor-level inference. Study-matched lung sampling should clarify whether the club-cell association persists independently of study composition.
 
 Third, larger depth-controlled cohorts should distinguish whether the wide off-program intervals conceal a meaningful increase. Such studies should report off-program expression, entropy, and whole-profile displacement as separate endpoints.
+
+Fourth, a mouse-derived signature should be tested in an accelerated-aging model, where a senescence-driven program would be strongest. Our paper has no progeroid or accelerated-aging positive control, so it cannot say whether a signature would transport from a fast-aging mouse. If it still fails there, the transport failure is about cross-species biology; if it succeeds, the failure is specific to normal aging.
 
 
 \subsection*{Limitations}
@@ -313,6 +329,8 @@ Depth, sequencing platform, and reference choice affect the measurements through
 
 
 Cross species effect sizes are standardized within each dataset. They are not directly comparable as measures of biological importance, because tissues, age windows, assays, annotation resolution, and lifespan coverage differ between species.
+
+No progeroid or accelerated-aging model was included, so the transport test covers normal aging only. A signature derived from a fast-aging mouse might behave differently, and this paper cannot distinguish those cases.
 
 
 \section*{Conclusions}
@@ -429,6 +447,69 @@ No supporting figures are included.
 
 
 29. Schaum N, Lehallier B, Hahn O, P\'alovics R, Hosseinzadeh S, Lee SE, et al. (2020). Ageing hallmarks exhibit organ-specific temporal signatures. Nature. https://doi.org/10.1038/s41586-020-2499-y
+
+
+30. L\'opez-Ot\'in C, Blasco MA, Partridge L, Serrano M, Kroemer G (2023). Hallmarks of aging: An expanding universe. Cell. https://doi.org/10.1016/j.cell.2022.11.001
+
+
+31. Williams GC (1957). Pleiotropy, natural selection, and the evolution of senescence. Evolution. https://doi.org/10.2307/2406060
+
+
+32. Kirkwood TBL (1977). Evolution of ageing. Nature. https://doi.org/10.1038/270301a0
+
+
+33. Blagosklonny MV (2006). Aging and immortality: quasi-programmed senescence and its pharmacologic inhibition. Cell Cycle. https://doi.org/10.4161/cc.5.18.3288
+
+
+34. Peters MJ, Joehanes R, Pilling LC, Schurmann C, Conneely KN, Powell J, et al. (2015). The transcriptional landscape of age in human peripheral blood. Nature Communications. https://doi.org/10.1038/ncomms9570
+
+
+35. Petkovich DA, Podolskiy DI, Lobanov AV, Lee SG, Miller RA, Gladyshev VN (2017). Using DNA methylation profiling to evaluate biological age and longevity interventions. Cell Metabolism. https://doi.org/10.1016/j.cmet.2017.03.016
+
+
+36. Hwang CD, Rahmayanti S, Endo Y, Caragher SP, Weber L, Mroueh J, et al. (2026). Transcriptional programs diverge in aging mouse and human skeletal muscle. Aging. https://doi.org/10.18632/aging.206382
+
+
+37. Tyshkovskiy A, Ma S, Shindyapina AV, Tikhonov S, Lee SG, Bozaykut P, et al. (2023). Distinct longevity mechanisms across and within species and their association with aging. Cell. https://doi.org/10.1016/j.cell.2023.05.002
+
+
+38. Ximerakis M, Lipnick SL, Innes BT, Simmons SK, Adiconis X, Dionne D, et al. (2019). Single-cell transcriptomic profiling of the aging mouse brain. Nature Neuroscience. https://doi.org/10.1038/s41593-019-0491-3
+
+
+39. Zhang MJ, Pisco AO, Darmanis S, Zou J (2021). Mouse aging cell atlas analysis reveals global and cell type-specific aging signatures. eLife. https://doi.org/10.7554/eLife.62293
+
+
+40. Jeffries AM, Yu T, Ziegenfuss JS, Tolles AK, Baer CE, Bautista Sotelo C, et al. (2025). Single-cell transcriptomic and genomic changes in the ageing human brain. Nature. https://doi.org/10.1038/s41586-025-09435-8
+
+
+41. De Man R, McDonough JE, Adams TS, Nikola F, Rangel R, Anderson S, et al. (2026). Single-cell atlas of human lung aging identifies cell type dyssynchrony and increased transcriptional entropy. Nature Communications. https://doi.org/10.1038/s41467-026-68810-9
+
+
+42. Dobner S, Kleissl L, T\'oth F, Paxton RL, Yordanova I, Brazdilova K, et al. (2026). Uncovering the transcriptional hallmarks of endothelial cell aging via integrated single-cell analysis. Nature Aging. https://doi.org/10.1038/s43587-026-01247-3
+
+
+43. Harrison DE, Strong R, Sharp ZD, Nelson JF, Astle CM, Flurkey K, et al. (2009). Rapamycin fed late in life extends lifespan in genetically heterogeneous mice. Nature. https://doi.org/10.1038/nature08221
+
+
+44. Baker DJ, Wijshake T, Tchkonia T, LeBrasseur NK, Childs BG, van de Sluis B, et al. (2011). Clearance of p16Ink4a-positive senescent cells delays ageing-associated disorders. Nature. https://doi.org/10.1038/nature10600
+
+
+45. Buckley MT, Sun ED, George BM, Liu L, Schaum N, Xu L, et al. (2023). Cell-type-specific aging clocks to quantify aging and rejuvenation in neurogenic regions of the brain. Nature Aging. https://doi.org/10.1038/s43587-022-00335-4
+
+
+46. Sloan NX, Mares J, Daly AC, Grier S, Haq I, Jackson CA, et al. (2026). Uncovering the signatures of aging and senescence in the human dorsolateral prefrontal cortex. Cell Genomics. https://doi.org/10.1016/j.xgen.2025.101127
+
+
+47. Gabitto MI, Travaglini KJ, Rachleff VM, Kaplan ES, Long B, Ariza J, et al. (2024). Integrated multimodal cell atlas of Alzheimer's disease. Nature Neuroscience. https://doi.org/10.1038/s41593-024-01774-5
+
+
+48. Oh HS-H, Le Guen Y, Rappoport N, Urey DY, Farinas A, Rutledge J, et al. (2025). Plasma proteomics links brain and immune system aging with healthspan and longevity. Nature Medicine. https://doi.org/10.1038/s41591-025-03798-1
+
+
+49. Kivim\"aki M, Frank P, Pentti J, Jokela M, Nyberg ST, Blake A, et al. (2025). Proteomic organ-specific ageing signatures and 20-year risk of age-related diseases: the Whitehall II observational cohort study. The Lancet Digital Health. https://doi.org/10.1016/j.landig.2025.01.006
+
+
+50. Wen J, Tian YE, Skampardoni I, Yang Z, Cui Y, Anagnostakis F, et al. (2024). The genetic architecture of biological age in nine human organ systems. Nature Aging. https://doi.org/10.1038/s43587-024-00662-8
 
 
 \end{document}
