@@ -67,7 +67,7 @@ The scope is stated at the outset. Every measurement here is transcriptomic. Chr
 
 \subsection*{Datasets and inferential units}
 
-The mouse atlas was Tabula Muris Senis droplet data distributed through CZ CELLxGENE [1]. Public human brain, kidney, and lung data came from CZ CELLxGENE Census release 2025-11-08 [2]. The human lifespan cortex arm was the PsychAD dorsolateral prefrontal cortex atlas (Synapse syn52396927 and pseudobulk resource syn62064518) [9]. Exploratory arms were naked mole rat skin (GEO GSE152886) [7, 8], the Aging Fly Cell Atlas (GEO GSE218661) [3], the Gao worm atlas (GEO GSE229022) [4], and zebrafish testis (GEO GSE275361) [6]. Table 1 summarizes the analysis cohorts, and Table 2 gives the public human dataset identifiers. Only primary, normal-disease human cells were included. Public human vector and composition analyses used donors aged at least 20 years. Donors, animals, fish, or pools were the inferential units, not individual cells. Depth is the total number of RNA molecules captured per cell, summarized as mean log UMI.
+The mouse atlas was Tabula Muris Senis droplet data distributed through CZ CELLxGENE [1]. Public human brain, kidney, and lung data came from CZ CELLxGENE Census release 2025-11-08 [2]. The human lifespan cortex arm was the PsychAD dorsolateral prefrontal cortex atlas (Synapse syn52396927 and pseudobulk resource syn62064518) [9]. Exploratory arms were naked mole rat skin (GEO GSE152886) [7, 8], the Aging Fly Cell Atlas (GEO GSE218661) [3], the Gao worm atlas (GEO GSE229022) [4], and zebrafish testis (GEO GSE275361) [6]. Table 1 summarizes the analysis cohorts, and Table 2 lists the public human cohorts used for signature scoring. Only primary, normal-disease human cells were included. Public human vector and composition analyses used donors aged at least 20 years. Donors, animals, fish, or pools were the inferential units, not individual cells. Depth is the total number of RNA molecules captured per cell, summarized as mean log UMI.
 
 {\scriptsize\setlength{\tabcolsep}{3pt}\begin{longtable}{p{0.14\textwidth}p{0.09\textwidth}p{0.10\textwidth}p{0.07\textwidth}p{0.10\textwidth}p{0.14\textwidth}p{0.10\textwidth}p{0.18\textwidth}}
 \caption{Analysis cohorts. Cell counts are specific to the listed analysis and are not total atlas sizes.}\label{tab:cohorts}\\
@@ -84,23 +84,23 @@ Worm, Gao atlas & 12 pools & 1, 6, 12, and 14 days & Not used as a covariate & W
 Zebrafish & 10 fish broad; 6 fish fine & 5 to 27 months broad; 5 to 22 months fine & Male & Testis & Single-cell RNA-seq & 69,576 broad; 36,523 fine & Sposato and colleagues; technical channels aggregated by fish \\ \hline
 \end{longtable}}
 
-{\scriptsize\setlength{\tabcolsep}{3pt}\begin{longtable}{p{0.14\textwidth}p{0.29\textwidth}p{0.05\textwidth}p{0.08\textwidth}p{0.08\textwidth}p{0.09\textwidth}p{0.19\textwidth}}
+{\scriptsize\setlength{\tabcolsep}{3pt}\begin{longtable}{p{0.20\textwidth}p{0.08\textwidth}p{0.14\textwidth}p{0.10\textwidth}p{0.14\textwidth}p{0.26\textwidth}}
 \caption{Public human cohorts used for signature scoring. Donor, age, sex, and cell counts describe the scored control set. Later analyses used their prespecified eligible subsets.}\label{tab:human-cohorts}\\
-Cohort & Census dataset identifier & Donors & Ages, years & Sex, M/F & Cells & Assays \\ \hline
+Cohort & Donors & Ages, years & Sex, M/F & Cells & Assays \\ \hline
 \endfirsthead
-Cohort & Census dataset identifier & Donors & Ages, years & Sex, M/F & Cells & Assays \\ \hline
+Cohort & Donors & Ages, years & Sex, M/F & Cells & Assays \\ \hline
 \endhead
-MSSM DLPFC & \path{37a17b78-4864-4a42-b67b-31c00962795a} & 213 & 19 to 89 & 131/82 & 842,777 & 10x 3' v3 \\ \hline
-HBCC DLPFC & \path{5c97eeeb-7e52-44b3-b010-b832b1f5424c} & 134 & 2 to 85 & 85/49 & 688,828 & 10x 3' v3 \\ \hline
-RADC DLPFC & \path{5e57cd50-8e42-42d6-940d-5c1660d06864} & 18 & 64 to 89 & 7/11 & 82,782 & 10x 3' v3 \\ \hline
-SEA-AD DLPFC & \path{6f7fd0f1-a2ed-4ff1-80d3-33dde731cbc3} & 21 & 29 to 89 & 10/11 & 397,577 & 10x 3' v3; 10x multiome \\ \hline
-Kidney Normal Adult & \path{0b4a15a7-4e9e-4555-9733-2423e5c66469} & 18 & 43 to 74 & 13/5 & 48,783 & 10x 3' v3 \\ \hline
-Kidney Living Donor & \path{0bae7ebf-eb54-46a6-be9a-3461cecefa4c} & 19 & 33 to 65 & 9/10 & 27,568 & 10x 3' v3 \\ \hline
-Kidney SN & \path{a12ccb9b-4fbe-457d-8590-ac78053259ef} & 10 & 14 to 76 & 4/6 & 62,655 & 10x 3' v3 \\ \hline
-Kidney SCR & \path{dea717d4-7bc0-4e46-950f-fd7e1cc8df7d} & 18 & 30 to 66 & 7/11 & 25,317 & 10x 3' v3 \\ \hline
-Lung CellRef & \path{eb499fd8-7000-419f-8854-926b9b61b11f} & 21 & 12 to 76 & 10/11 & 122,445 & 10x 3' v2 and v3 \\ \hline
-Lung Integrated & \path{9f222629-9e39-47d0-b83f-e08d610c7479} & 137 & 2 to 81 & 83/54 & 597,855 & 10x 3' and 5'; Drop-seq; Seq-Well \\ \hline
-Immune Aging BAL & \path{1b350d0a-4535-4879-beb6-1142f3f94947} & 12 & 20 to 75 & 6/6 & 826,117 & 10x 5' v2 and 3' v3 \\ \hline
+MSSM DLPFC & 213 & 19 to 89 & 131/82 & 842,777 & 10x 3' v3 \\ \hline
+HBCC DLPFC & 134 & 2 to 85 & 85/49 & 688,828 & 10x 3' v3 \\ \hline
+RADC DLPFC & 18 & 64 to 89 & 7/11 & 82,782 & 10x 3' v3 \\ \hline
+SEA-AD DLPFC & 21 & 29 to 89 & 10/11 & 397,577 & 10x 3' v3; 10x multiome \\ \hline
+Kidney Normal Adult & 18 & 43 to 74 & 13/5 & 48,783 & 10x 3' v3 \\ \hline
+Kidney Living Donor & 19 & 33 to 65 & 9/10 & 27,568 & 10x 3' v3 \\ \hline
+Kidney SN & 10 & 14 to 76 & 4/6 & 62,655 & 10x 3' v3 \\ \hline
+Kidney SCR & 18 & 30 to 66 & 7/11 & 25,317 & 10x 3' v3 \\ \hline
+Lung CellRef & 21 & 12 to 76 & 10/11 & 122,445 & 10x 3' v2 and v3 \\ \hline
+Lung Integrated & 137 & 2 to 81 & 83/54 & 597,855 & 10x 3' and 5'; Drop-seq; Seq-Well \\ \hline
+Immune Aging BAL & 12 & 20 to 75 & 6/6 & 826,117 & 10x 5' v2 and 3' v3 \\ \hline
 \end{longtable}}
 
 
