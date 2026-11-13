@@ -1,0 +1,113 @@
+{
+  "created": "2026-11-13",
+  "study": {
+    "citation": "Lake et al. An atlas of healthy and injured cell states and niches in the human kidney. Nature 619, 585-594 (2023).",
+    "paper_url": "https://www.nature.com/articles/s41586-023-05769-3",
+    "doi": "10.1038/s41586-023-05769-3",
+    "full_processed_superseries": "GSE183279",
+    "healthy_reference_donors": 45,
+    "diseased_donors": 48,
+    "subseries": {
+      "GSE183273": "SNARE-Seq2",
+      "GSE183274": "Slide-seq2",
+      "GSE183275": "Visium",
+      "GSE183276": "scCv3",
+      "GSE183277": "snCv3"
+    },
+    "note": "GSE183276 is only the scCv3 subseries, not the full-study accession."
+  },
+  "public_sc_sn_gate": {
+    "healthy_donors": 31,
+    "exact_age_donors": 28,
+    "decade_only_donors": 3,
+    "additional_full_study_reference_donors_without_verified_public_exact_age_mapping": 14,
+    "scCv3": {
+      "accession": "GSE183276",
+      "healthy_donors": 18,
+      "healthy_specimens": 20,
+      "healthy_libraries": 20,
+      "exact_age_donors": 18,
+      "decade_only_donors": 0,
+      "metadata_cells": 109741,
+      "cellxgene_dataset_id": "32b9bdce-2481-4c85-ba1b-6ad5fcea844c",
+      "cellxgene_dataset_version_id": "3ae68468-89f7-4941-a945-f7bae9b2cbea",
+      "cellxgene_cells": 107344,
+      "counts_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183276/suppl/GSE183276_Kidney_Healthy-Injury_Cell_Atlas_scCv3_Counts_03282022.RDS.gz",
+      "counts_size_bytes_from_head": 1409085514,
+      "counts_downloaded": false
+    },
+    "snCv3": {
+      "accession": "GSE183277",
+      "healthy_donors": 13,
+      "healthy_specimens": 18,
+      "healthy_libraries": 21,
+      "exact_age_donors": 10,
+      "decade_only_donors": 3,
+      "decade_only_donor_ids": [
+        "18-142",
+        "18-162",
+        "18-312"
+      ],
+      "metadata_cells": 203702,
+      "cellxgene_dataset_id": "07854d9c-5375-4a9b-ac34-fa919d3c3686",
+      "cellxgene_dataset_version_id": "5dc03d39-ac5f-49e1-8630-a64d2e6e293b",
+      "cellxgene_cells": 172847,
+      "counts_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183277/suppl/GSE183277_Kidney_Healthy-Injury_Cell_Atlas_snCv3_Counts_03282022.RDS.gz",
+      "counts_size_bytes_from_head": 910246297,
+      "counts_downloaded": false
+    },
+    "age_source": {
+      "collection_url": "https://api.cellxgene.cziscience.com/curation/v1/collections/bcb61471-2a44-4d00-a0af-ff085512674c",
+      "method": "Public collection API plus metadata-only CELLxGENE Census latest obs queries on 2026-11-13; donor_id, development_stage, disease, and suspension_type only.",
+      "expression_values_read": false,
+      "geo_age_field_present": false
+    },
+    "catalog_discrepancy": "GSE183276 overall design says 20 healthy individuals, but released metadata contain 18 healthy donors across 20 specimens/libraries."
+  },
+  "authorization": {
+    "processed_geo_count_matrices": "public_no_KPMP_NIDDK_authorization",
+    "kpmp_raw_sequencing": "restricted_KPMP_DUA_not_requested",
+    "hubmap_raw_sequencing": "restricted_dbGaP_phs002249_NIH_DAC_authorization_not_requested",
+    "kpmp_collection": "https://doi.org/10.48698/3z31-8924",
+    "dbgap_study": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002249",
+    "external_contact_made": false
+  },
+  "verdict": {
+    "full_45_reference_donor_analysis": "blocked_public_exact_age_and_common_single_cell_mapping_incomplete",
+    "restricted_assay_specific_signature_and_donor_CLR": "ready_for_count_matrix_validation_using_18_scCv3_and_10_snCv3_exact_age_donors",
+    "Hellinger": "blocked_pending_young_reference_definition_and_donor_and_reference_cell_floors",
+    "raw_sequencing": "blocked_pending_user_authorization_decisions",
+    "expression_analysis_performed": false
+  },
+  "local_metadata": {
+    "directory": "/home/reza/projects/agescape-revision-data/lake_kidney",
+    "total_size_bytes": 36690103,
+    "files": {
+      "41586_2023_5769_MOESM6_ESM.zip": {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-05769-3/MediaObjects/41586_2023_5769_MOESM6_ESM.zip",
+        "size_bytes": 6803426,
+        "sha256": "a0ef4883e4591bff769005036334d5e372063fe3ab5c179562389b33f8690be6"
+      },
+      "GSE183276_scCv3_Metadata_03282022.txt.gz": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183276/suppl/GSE183276_Kidney_Healthy-Injury_Cell_Atlas_scCv3_Metadata_03282022.txt.gz",
+        "size_bytes": 10126725,
+        "sha256": "7f90d8d00b0ebe4b52bcb01d1d87b0f291777706d4ef166f8903bf430b9592fe"
+      },
+      "GSE183276_scCv3_Metadata_Field_Descriptions.txt.gz": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183276/suppl/GSE183276_Kidney_Healthy-Injury_Cell_Atlas_scCv3_Metadata_Field_Descriptions.txt.gz",
+        "size_bytes": 1125,
+        "sha256": "48ab7d2fc48af8800ab3acc5b0d7f3006bd516daa598a8f7f86351befb5e2f18"
+      },
+      "GSE183277_snCv3_Metadata_03282022.txt.gz": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183277/suppl/GSE183277_Kidney_Healthy-Injury_Cell_Atlas_snCv3_Metadata_03282022.txt.gz",
+        "size_bytes": 19757814,
+        "sha256": "dbf2ed1a793d9fe2f1894f490b44ca71c527c8155def378c984fbb00e520d44c"
+      },
+      "GSE183277_snCv3_Metadata_Field_Descriptions.txt.gz": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183277/suppl/GSE183277_Kidney_Healthy-Injury_Cell_Atlas_snCv3_Metadata_Field_Descriptions.txt.gz",
+        "size_bytes": 1013,
+        "sha256": "c691e2077d235039eec0f287662b0cfc94fe9afb7d138e245f1b705c5de6f608"
+      }
+    }
+  }
+}
