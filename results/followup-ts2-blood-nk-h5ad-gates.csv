@@ -1,0 +1,11 @@
+gate,passes,observed,requirement_or_scope
+file_size_sha256,True,2568875081,exact approved asset and SHA-256
+raw_X_integer_counts,True,201330996,all stored values finite nonnegative integers
+observation_and_join_ids_unique,True,85233,no duplicate within the single blood object
+is_primary_data,True,all_False,verified; no cross-object concatenation or primary-only claim
+NK_donor_counts_age_sex,True,2985,exact supplementary agreement for nine donors
+NK_disease_assay_suspension,True,normal;10x_3prime_v3_and_5prime_v2;cell,per-cell H5AD metadata
+seven_donor_20_cell_floor,True,7,"2,960 eligible cells; TSP8/TSP27 excluded"
+continuous_age_design,True,rank_5_of_5_residual_df_2,age/sex/assay5/depth identifiable
+P1_signature_and_null_pools,True,76_up;42_down,nonempty directions and sufficient matched pools
+young_reference,False,1_donors;285_cells;min_remaining_0,at least two young donors and 50 remaining cells for every donor

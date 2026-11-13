@@ -2,8 +2,8 @@
 """Freeze the TS2 blood NK plan and record the CELLxGENE access gate.
 
 This script queries collection metadata only. It never downloads or opens an
-H5AD and never computes expression outcomes. The expected blood asset is
-larger than the 2 GiB task ceiling, so the expression arm remains blocked.
+H5AD and never computes expression outcomes. The approved 3 GiB ceiling
+admits the blood asset; H5AD analysis is implemented separately.
 """
 
 from __future__ import annotations
@@ -28,14 +28,14 @@ COLLECTION_URL = (
 DATASET_ID = "983d5ec9-40e8-4512-9e65-a572a9c486cb"
 DATASET_VERSION_ID = "1bf55482-ad49-446a-87c6-f3442bebcef1"
 GIB = 1024 ** 3
-MAX_FILE_GIB = 2
+MAX_FILE_GIB = 3
 MIN_FREE_GB = 30
 EXPECTED_DONORS = {
     "TSP1", "TSP2", "TSP7", "TSP8", "TSP10", "TSP14", "TSP21", "TSP25", "TSP27",
 }
 EXPECTED_CANDIDATES = {"TSP1", "TSP2", "TSP7", "TSP10", "TSP14", "TSP21", "TSP25"}
-BLOCKER = "blood_H5AD_exceeds_2_GiB_download_cap"
-H5AD_VERIFICATION = "not_run_blood_H5AD_exceeds_2_GiB_download_cap"
+BLOCKER = ""
+H5AD_VERIFICATION = "pending_H5AD_verification"
 
 
 def fetch_collection(url=COLLECTION_URL):
@@ -125,7 +125,7 @@ def build_donor_eligibility(coverage):
     selected["raw_counts_verified"] = False
     selected["primary_data_deduplication_verified"] = False
     selected["expression_eligible"] = False
-    selected["status"] = "blocked_before_H5AD_verification"
+    selected["status"] = "pending_H5AD_verification"
     selected.loc[~selected["supplementary_candidate"], "status"] = (
         "excluded_supplementary_20_cell_floor"
     )
@@ -141,9 +141,9 @@ def build_donor_eligibility(coverage):
 
 def build_endpoint_status():
     common_reason = (
-        "The sole blood H5AD exceeds the 2 GiB ceiling; raw counts, primary-data "
-        "deduplication, per-cell donor/age/sex/assay/disease fields, and endpoint floors "
-        "cannot be verified. No outcomes were examined."
+        "The blood asset is approved under the 3 GiB ceiling. Raw counts, primary-data "
+        "deduplication, per-cell metadata, and endpoint floors require the separate "
+        "H5AD analysis script; this metadata-only step examines no outcomes."
     )
     designs = {
         "donor_pseudobulk_gene_models": (
@@ -176,7 +176,7 @@ def build_endpoint_status():
             "donor_family": "TSP1;TSP2;TSP7;TSP10;TSP14;TSP21;TSP25",
             "donor_family_status": "seven_donor_exploratory_supplementary_screen_only",
             "frozen_design": design,
-            "status": "untestable",
+            "status": "pending_H5AD_verification",
             "reason": common_reason,
             "outcomes_examined": False,
         }
@@ -224,12 +224,12 @@ def build_manifest(collection, dataset, asset, size, donors):
             "maximum_file_gib": MAX_FILE_GIB,
             "minimum_free_gb": MIN_FREE_GB,
             "within_file_cap": within_file_cap(size),
-            "download_permitted": False,
+            "download_permitted": within_file_cap(size),
             "local_H5AD": None,
-            "download_command_if_policy_changes": (
+            "guarded_download_command": (
                 "python scripts/resource_guard.py download --url " + asset["url"]
                 + " --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad"
-                + " --min-free-gb 30 --max-file-gb 2"
+                + " --min-free-gb 30 --max-file-gb 3"
             ),
         },
         "supplementary_coverage": {
@@ -255,9 +255,8 @@ def build_manifest(collection, dataset, asset, size, donors):
             "Hellinger_reference_floors": False,
         },
         "expression_analysis": {
-            "status": "blocked_before_H5AD_access",
+            "status": "pending_H5AD_verification",
             "outcomes_examined": False,
-            "reason": BLOCKER,
         },
     }
 
@@ -271,9 +270,7 @@ def main():
     else:
         collection = fetch_collection()
     collection, dataset, asset, size = resolve_blood_asset(collection)
-    assert not within_file_cap(size), (
-        "blood asset now meets the size cap; stop and review a separate H5AD analysis plan"
-    )
+    assert within_file_cap(size), "blood asset exceeds the approved 3 GiB ceiling"
     donors = build_donor_eligibility(pd.read_csv(COVERAGE))
     endpoints = build_endpoint_status()
     asset_row = build_asset_row(collection, dataset, asset, size)
@@ -290,7 +287,7 @@ def main():
         build_manifest(collection, dataset, asset, size, donors), indent=2, sort_keys=True
     ) + "\n")
     print(f"wrote {MANIFEST.relative_to(REPO)}")
-    print(f"BLOCKED: {size} bytes ({size / GIB:.3f} GiB) exceeds {MAX_FILE_GIB} GiB; no download or outcomes")
+    print(f"APPROVED: {size} bytes ({size / GIB:.3f} GiB) within {MAX_FILE_GIB} GiB; metadata only")
 
 
 if __name__ == "__main__":

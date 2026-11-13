@@ -2,7 +2,7 @@
 
 ## Status
 
-The supplementary-table metadata gate is complete. It used only the two released workbooks below. The abandoned 45 GB all-cells file was not downloaded or opened, and no expression analysis was run. All resulting tables are marked `supplementary_tables_only_no_H5AD_verification`; supplementary cell counts are not raw expression counts.
+The supplementary-table metadata gate used only the two released workbooks below. The abandoned 45 GB all-cells file was not downloaded or opened. The supplementary tables are marked `supplementary_tables_only_no_H5AD_verification`; supplementary cell counts are not raw expression counts. The subsequently approved blood NK H5AD arm is reported separately below.
 
 ## Sources and scope
 
@@ -48,9 +48,9 @@ Columns derived from `media-18.xlsx` are labelled `supplementary` or `method_sup
 
 ## Unresolved fields and blocked analyses
 
-The workbooks do not verify cell barcodes, duplicate cells across release objects, exact assay/chemistry, H5AD disease harmonization, anatomical position, enrichment or suspension type, raw-count layers, `is_primary_data`, per-cell QC/depth, or concordance between workbook and H5AD labels. Curated clinical columns in `media-24.xlsx` are not substitutes for a per-cell H5AD disease field. TSP9/TSP20 ages and sex also remain unresolved.
+The workbooks alone did not verify cell barcodes, duplicate cells across release objects, exact assay/chemistry, H5AD disease harmonization, anatomical position, enrichment or suspension type, raw-count layers, `is_primary_data`, per-cell QC/depth, or concordance between workbook and H5AD labels. Curated clinical columns in `media-24.xlsx` are not substitutes for a per-cell H5AD disease field. The blood H5AD checks below resolve the relevant fields only for the blood NK arm; TSP9/TSP20 ages and sex and other-organ H5AD fields remain unresolved.
 
-Consequently, no P1/off-program expression, Hellinger displacement, direct Shannon entropy, CLR composition, covariate-adjusted aging model, or exploratory RNA organ-age model was run. Any otherwise eligible within-organ analysis remains blocked pending small per-organ TS2 release objects that permit cell-level metadata reconciliation, deduplication, raw-count checks, QC, and donor-level inference. Smart-seq must remain separate from the primary 10x arm. Confirmatory paired-organ interaction analyses are already blocked by the supplementary shared-donor/age screen. Skin-specific aging analyses are blocked by both the four-donor floor and the absence of an authenticated small TS2 skin object. No plasma-proteomic organ-age claim is possible from these transcriptomic summaries.
+No expression analysis was run at the supplementary-only stage. Other within-organ analyses remain pending suitable per-organ objects and their own gates. Smart-seq must remain separate from the primary 10x arm. Confirmatory paired-organ interaction analyses are blocked by the supplementary shared-donor/age screen. Skin-specific aging analyses are blocked by both the four-donor floor and the absence of an authenticated TS2 skin analysis. No plasma-proteomic organ-age claim is possible from these transcriptomic summaries.
 
 ## Execution and validation
 
@@ -65,64 +65,68 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 
 It exited 0 in 0.56 seconds with maximum resident set size 127,160 kB (about 124.2 MiB). An independent CSV audit rechecked row counts, key uniqueness, all five cell-total reconciliations, method-specific totals, the two missing donor identities, the TSP30 conflict, sex agreement, and the absence of passing organ-pair screens; all assertions passed. No large file was accessed, and no download was started.
 
-## Blood 10x natural-killer-cell expression gate
+## Blood 10x natural-killer-cell expression analysis
 
-### Public asset and access decision
+### Approved asset and authentication
 
-The public [CELLxGENE collection API](https://api.cellxgene.cziscience.com/curation/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5) was queried on 2026-11-13. Collection `e5f58829-1a66-40b5-a624-9046778e74f5`, collection version `61d34250-a255-4c7c-b2f0-0e012fbe2e78`, contains one organ-specific blood dataset:
+The public [CELLxGENE collection API](https://api.cellxgene.cziscience.com/curation/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5), collection version `61d34250-a255-4c7c-b2f0-0e012fbe2e78`, contains one organ-specific blood dataset: dataset `983d5ec9-40e8-4512-9e65-a572a9c486cb`, version `1bf55482-ad49-446a-87c6-f3442bebcef1`. Its sole H5AD is `https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad`.
 
-- Dataset: `983d5ec9-40e8-4512-9e65-a572a9c486cb`, titled `Tabula Sapiens - Blood`.
-- Dataset version: `1bf55482-ad49-446a-87c6-f3442bebcef1`, published 2023-06-16 and revised 2026-06-11.
-- Sole H5AD asset: `https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad`.
-- Exact API/HEAD size: 2,568,875,081 bytes (2.568875081 decimal GB; 2.392451354 GiB), with 85,233 cells in the catalog.
+After the 3 GiB maximum was explicitly approved, the file was downloaded with `scripts/resource_guard.py download --min-free-gb 30 --max-file-gb 3` to `/home/reza/projects/agescape-revision-data/ts2/blood.h5ad`. The download completed in about 23 seconds. Authentication found:
 
-This is an authenticated public per-organ object, but it is not small enough for the required maximum 2 GiB file. The guarded command
+- Exact size: 2,568,875,081 bytes (2.392451354 GiB).
+- SHA-256: `667680ecdb017d3b4f3393ad4b668ff82345a9297aa38d7ab2b2830df0d1aa52`.
+- Dimensions: 85,233 cells × 60,606 features.
+- `raw.X`: CSR with 201,330,996 stored values; every value was checked in chunks and was finite, nonnegative, and integer-valued. Normalized `X`, `decontXcounts`, and `scale_data` were not used for expression outcomes.
 
-```bash
-/home/reza/miniconda3/envs/agescape/bin/python scripts/resource_guard.py download \
-  --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad \
-  --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad \
-  --min-free-gb 30 --max-file-gb 2
-```
+The 45 GB all-cells object and old `skin.h5ad` were not used.
 
-refused the transfer before creating an output file: `download size 2.39 GB exceeds maximum file size 2.00 GB` (exit 1). No blood H5AD was downloaded or opened. The 45 GB all-cells object and old `skin.h5ad` were not used.
+### H5AD metadata and eligibility gates
 
-The catalog lists donors TSP1, TSP2, TSP7, TSP8, TSP10, TSP14, TSP21, TSP25, and TSP27; assays 10x 3' v3, 10x 5' v2, and Smart-seq2; disease `normal`; and cell suspensions. These are catalog leads only. Without the H5AD, raw integer counts, the raw-count layer, `is_primary_data`, cross-object deduplication, per-cell donor/age/sex/assay/disease concordance, chemistry, and actual UMI depth remain unverified.
+The object contains 2,985 10x natural-killer cells. Donor counts exactly reproduce the supplementary table for all nine donors: TSP1 71, TSP2 243, TSP7 1,641, TSP8 14, TSP10 285, TSP14 64, TSP21 250, TSP25 406, and TSP27 11. Age and sex agree with the curated supplementary values for every donor. All NK cells are blood, immune compartment, normal disease, and cell suspension. Assays are 10x 3' v3 and 10x 5' v2; Smart-seq was not pooled into the analysis.
 
-### Frozen donor family and endpoint disposition
+The frozen seven-donor family is unchanged: TSP1, TSP2, TSP7, TSP10, TSP14, TSP21, and TSP25, with 2,960 cells. TSP8 and TSP27 remain excluded by the 20-cell floor. Raw NK depths range from 2,601 to 38,867 UMIs, and depth is computed from `raw.X`, not assumed from the release's `total_counts` column.
 
-Before any expression outcome was accessed, the 10x blood natural-killer-cell donor family was frozen from `results/followup-ts2-celltype-coverage.csv`:
+All 85,233 observation indices and `observation_joinid` values are unique within this single blood object. However, `is_primary_data` is false for every row, including all NK cells. The analysis therefore makes no `is_primary_data=True` or primary-only claim: it analyzes each observation once in this per-organ object and never concatenates overlapping release objects. This scope is recorded in the gate CSV and manifest rather than silently filtering to zero cells or relabelling the flag.
 
-| Donor | Age (years) | Sex | Supplementary cells | 20-cell screen |
-|---|---:|---|---:|---|
-| TSP1 | 59 | F | 71 | pass |
-| TSP2 | 61 | F | 243 | pass |
-| TSP7 | 69 | F | 1,641 | pass |
-| TSP8 | 56 | M | 14 | fail |
-| TSP10 | 33 | M | 285 | pass |
-| TSP14 | 59 | M | 64 | pass |
-| TSP21 | 45 | F | 250 | pass |
-| TSP25 | 60 | M | 406 | pass |
-| TSP27 | 56 | F | 11 | fail |
+The full donor design was checked before outcomes and is rank 5 of 5 with two residual degrees of freedom: intercept, continuous age per 10 years, sex, any 5′ assay contribution from that donor, and donor mean log raw UMI. All models are exploratory donor-level OLS; no cell-level inference was used.
 
-The seven supplementary candidates are TSP1, TSP2, TSP7, TSP10, TSP14, TSP21, and TSP25 (4 female, 3 male; ages 33–69, mean 55.14, sample SD 12.0614 years; 2,960 supplementary cells). Any analysis with these donors was prespecified as exploratory, with donors—not cells—as inferential units. These counts and covariates remain supplementary-table values, not H5AD-verified analysis eligibility.
+### Gene-wise donor-pseudobulk results
 
-`results/followup-ts2-blood-nk-endpoint-status.csv` freezes the intended designs and records every endpoint as **untestable**, not null:
+For each donor and gene, the outcome is the mean of cell-level log1p(CPM), exactly as frozen. All 32,830 variable genes with finite donor values and positive standard error were tested. Effects are changes in mean cell-level log1p(CPM) per 10 years of age with ordinary OLS 95% confidence intervals; Benjamini-Hochberg correction was applied once across all 32,830 genes.
 
-- Donor-pseudobulk gene models: mean cell-level log1p(CPM) per donor and gene, continuous-age OLS with effects per 10 years and 95% confidence intervals; sex, mean log actual UMI, and nonconstant assay terms only with a full-rank design and positive residual degrees of freedom; BH across all successfully fitted variable genes with finite donor values. No cell-level inference was permitted.
-- P1 transport: the established P1_Clean signature and expression-matched random-null procedure only after detected up/down genes and valid null pools were verified.
-- Off-program expression: the established off-program definition and technical exclusions only after its gene/signature floors were verified.
-- Hellinger displacement: the established leave-one-donor-out young-reference endpoint only with at least 50 remaining reference cells, at least 20 cells per donor, and identifiable donor-level covariates.
+**No gene had BH q < 0.05.** The smallest q-value was 0.8876988605. Complete effect sizes, standard errors, intervals, p-values, q-values, and model diagnostics are in `results/followup-ts2-blood-nk-gene-models.csv`. With only seven donors and two residual degrees of freedom, these are imprecise exploratory estimates, not evidence of transcriptome-wide stability.
 
-The asset-size block prevented all raw-count and metadata checks, so P1 detection, off-program, and Hellinger reference floors were **not evaluated and do not pass by assumption**. No pseudobulk matrix, gene model, effect size, confidence interval, p-value, BH q-value, P1/off-program score, or Hellinger distance was computed. There is no expression result from this arm.
+### P1 transport and matched-null result
 
-### Reproducible blocked-arm deliverables
+All 76 P1_Clean up genes and 42 down genes were present in `raw.var`, and every expression-decile random-signature pool exceeded its required size. The established 200-draw expression-matched null used seed 20261105 and the same donor design.
 
-- `scripts/prepare_ts2_blood_nk_gate.py`: metadata-only, fail-closed script for the exact collection/dataset/version, size gate, donor freeze, endpoint disposition, and manifest. It never downloads or opens an H5AD.
-- `data/manifest/tabula_sapiens_2_0_blood.json`: exact asset identity/size, catalog metadata, coverage-file SHA-256, access decision, and unverified gates.
-- `results/followup-ts2-blood-nk-asset.csv`: one-row asset inventory.
-- `results/followup-ts2-blood-nk-donor-eligibility.csv`: nine-donor supplementary screen with all expression-eligibility and H5AD-verification flags false.
-- `results/followup-ts2-blood-nk-endpoint-status.csv`: four frozen endpoints, all untestable with `outcomes_examined=False`.
-- `tests/test_ts2_blood_nk_gate.py`: six offline tests covering exact asset resolution, the inclusive size boundary, fail-closed version/duplicate handling, the seven-donor freeze, and absence of outcome fields.
+- Covariate-adjusted P1 age effect: **+0.0317244765 per 10 years**.
+- Standard error: 0.0384871379; residual df = 2.
+- Ordinary 95% CI: **−0.1338723124 to +0.1973212655**; ordinary OLS p = **0.4964344685**.
+- Matched-null mean effect: −0.0026493494; null SD: 0.0127062044.
+- Centered two-sided empirical p: **0.009950248756** (one of 200 null draws met or exceeded the centered observed magnitude; `(1 + 1)/201`). The single-endpoint BH value is numerically the same.
 
-The script completed with exit 0 and printed the 2.392 GiB block. The focused test command `/home/reza/miniconda3/envs/agescape/bin/python -m pytest tests/test_ts2_blood_nk_gate.py -q` completed with `6 passed`. Base HEAD was `983b37e`; no commit or push was made. Other TS2 organs, Smart-seq, skin, and paired-organ expression analyses were not attempted. Unlocking this arm requires a different authenticated blood object that satisfies the 2 GiB ceiling or an explicit policy decision from Reza; no access request or external contact was made.
+These tests answer different questions. The ordinary regression does not distinguish the P1 age slope from zero. The matched null asks whether the P1 slope is unusual relative to expression-matched random gene sets and is small. The latter is a **signature-specificity result, not an FDR-significant chronological-aging association**, and it does not override the wide direct-age confidence interval. Donor scores, the fitted model, gene coverage, pool floors, and all 200 null effects are committed in the aggregate CSVs.
+
+### Off-program and Hellinger dispositions
+
+The established human young-reference rule requires at least two eligible donors aged 20–40 years. Only TSP10 (age 33) qualifies. Although TSP10 contributes 285 NK cells, leave-one-donor-out reference construction leaves zero young reference cells for TSP10 itself. The two-young-donor and minimum-50-remaining-reference-cell requirements therefore fail.
+
+- **Hellinger displacement: untestable.** No distances or age model were computed.
+- **Off-program expression: untestable.** No cross-fitted reference markers or off-program outcomes were computed.
+
+These are eligibility failures, not null results, and criteria were not relaxed after seeing expression outcomes.
+
+### Outputs, execution, and limitations
+
+- `scripts/run_followup_ts2_blood_nk.py`: streamed raw-count validation, donor pseudobulk construction, gene models, P1 null, gates, and manifest updates.
+- `results/followup-ts2-blood-nk-h5ad-gates.csv`: ten explicit H5AD and endpoint gates.
+- `results/followup-ts2-blood-nk-donor-summary.csv`: seven donor rows with covariates, depth, and P1 scores.
+- `results/followup-ts2-blood-nk-gene-models.csv`: 32,830 tested genes.
+- `results/followup-ts2-blood-nk-p1-model.csv`, `-p1-null.csv`, `-p1-gene-coverage.csv`, and `-p1-null-pools.csv`: P1 estimates and reproducibility inputs/outputs.
+- Updated asset, donor-eligibility, endpoint-status, and manifest files record the 3 GiB approval, exact hash, H5AD checks, and endpoint dispositions.
+- External caches are under `/home/reza/projects/agescape-revision-data/ts2/`; only committed-size aggregate CSVs are in `results/`.
+
+The final guarded run used `resource_guard.py run --min-free-gb 30 --memory-gb 4`, backed HDF5 group reads, 128-cell CSR batches, and single-threaded numerical libraries. The final cache-reuse verification run exited 0 in 5.04 seconds with maximum RSS 361,640 kB (about 353 MiB). Independent checks reproduced the P1 OLS estimate/CI/null p-value, recomputed all gene BH values, refitted four genes from the safe `allow_pickle=False` cache, and verified 32,830 unique tested genes.
+
+The analysis remains cross-sectional and exploratory: seven donors, two residual degrees of freedom, unequal donor cell counts, mixed 3′/5′ assays, and multiple enrichment/sample-preparation histories limit inference. No equivalence, longitudinal, causal, or independent TS1-to-TS2 replication claim is made. Other organs, Smart-seq, skin, and paired-organ expression analyses were not attempted. No Lake file was modified, and no commit or push was made.

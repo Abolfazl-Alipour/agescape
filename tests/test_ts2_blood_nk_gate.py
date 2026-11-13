@@ -35,19 +35,19 @@ def collection_fixture():
     }
 
 
-def test_exact_blood_asset_is_resolved_and_blocked():
+def test_exact_blood_asset_is_resolved_and_approved():
     collection, dataset, asset, size = resolve_blood_asset(collection_fixture())
     assert collection["collection_id"] == COLLECTION_ID
     assert dataset["dataset_id"] == DATASET_ID
     assert asset["filetype"] == "H5AD"
     assert size == 2568875081
-    assert size > 2 * GIB
-    assert not within_file_cap(size)
+    assert 2 * GIB < size < 3 * GIB
+    assert within_file_cap(size)
 
 
 def test_size_cap_boundary_is_inclusive():
-    assert within_file_cap(2 * GIB)
-    assert not within_file_cap(2 * GIB + 1)
+    assert within_file_cap(3 * GIB)
+    assert not within_file_cap(3 * GIB + 1)
 
 
 def test_changed_dataset_version_fails_closed():
@@ -64,7 +64,7 @@ def test_duplicate_blood_dataset_fails_closed():
         resolve_blood_asset(collection)
 
 
-def test_supplementary_donor_freeze_has_seven_candidates_and_no_expression_eligibility():
+def test_supplementary_donor_freeze_has_seven_candidates_and_no_preanalysis_eligibility():
     coverage = pd.read_csv("results/followup-ts2-celltype-coverage.csv")
     donors = build_donor_eligibility(coverage)
     candidates = donors[donors["supplementary_candidate"]]
@@ -79,12 +79,12 @@ def test_supplementary_donor_freeze_has_seven_candidates_and_no_expression_eligi
     assert set(excluded["status"]) == {"excluded_supplementary_20_cell_floor"}
 
 
-def test_all_expression_endpoints_are_untestable_without_outcomes():
+def test_metadata_only_endpoints_are_pending_without_outcomes():
     endpoints = build_endpoint_status()
     assert set(endpoints["endpoint"]) == {
         "donor_pseudobulk_gene_models", "P1_transport", "off_program_expression",
         "Hellinger_displacement",
     }
-    assert set(endpoints["status"]) == {"untestable"}
+    assert set(endpoints["status"]) == {"pending_H5AD_verification"}
     assert not endpoints["outcomes_examined"].any()
     assert not {"effect", "pvalue", "qvalue"}.intersection(endpoints.columns)

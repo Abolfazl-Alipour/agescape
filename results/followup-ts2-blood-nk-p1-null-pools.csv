@@ -1,0 +1,13 @@
+direction,decile,signature_genes_needed,available_pool_genes,passes
+up,5,28,6022,True
+up,4,14,6041,True
+up,3,14,6040,True
+up,0,8,30288,True
+up,2,7,6049,True
+up,1,5,6048,True
+down,5,11,6022,True
+down,1,8,6048,True
+down,0,7,30288,True
+down,3,7,6040,True
+down,4,5,6041,True
+down,2,4,6049,True

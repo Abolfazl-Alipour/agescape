@@ -1,11 +1,13 @@
 {
   "access_gate": {
-    "download_command_if_policy_changes": "python scripts/resource_guard.py download --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad --min-free-gb 30 --max-file-gb 2",
-    "download_permitted": false,
-    "local_H5AD": null,
-    "maximum_file_gib": 2,
+    "download_permitted": true,
+    "guarded_download_command": "python scripts/resource_guard.py download --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad --min-free-gb 30 --max-file-gb 3",
+    "local_H5AD": "/home/reza/projects/agescape-revision-data/ts2/blood.h5ad",
+    "local_filesize_bytes": 2568875081,
+    "maximum_file_gib": 3,
     "minimum_free_gb": 30,
-    "within_file_cap": false
+    "sha256": "667680ecdb017d3b4f3393ad4b668ff82345a9297aa38d7ab2b2830df0d1aa52",
+    "within_file_cap": true
   },
   "collection_api_url": "https://api.cellxgene.cziscience.com/curation/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
   "collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5",
@@ -98,7 +100,7 @@
   },
   "donor_gate": {
     "analysis_label": "exploratory",
-    "candidate_ages_are_H5AD_verified": false,
+    "candidate_ages_are_H5AD_verified": true,
     "candidate_donors": [
       "TSP1",
       "TSP2",
@@ -115,9 +117,20 @@
     "tissue": "Blood"
   },
   "expression_analysis": {
-    "outcomes_examined": false,
-    "reason": "blood_H5AD_exceeds_2_GiB_download_cap",
-    "status": "blocked_before_H5AD_access"
+    "P1_null_iterations": 200,
+    "P1_null_seed": 20261105,
+    "analysis_label": "exploratory",
+    "design": "age_per_10y_plus_sex_assay5_presence_mean_log_raw_UMI_full_rank",
+    "endpoint_statuses": {
+      "Hellinger_displacement": "untestable",
+      "P1_transport": "completed",
+      "donor_pseudobulk_gene_models": "completed",
+      "off_program_expression": "untestable"
+    },
+    "gene_models_q_lt_0_05": 0,
+    "gene_models_tested": 32830,
+    "residual_df": 2,
+    "status": "completed_eligible_endpoints"
   },
   "study": "Tabula Sapiens 2.0 blood natural-killer-cell arm",
   "supplementary_coverage": {
@@ -126,10 +139,12 @@
   },
   "verification": {
     "Hellinger_reference_floors": false,
-    "P1_signature_floors": false,
+    "P1_signature_floors": true,
+    "deduplication_scope": "single_blood_object_unique_observation_and_join_ids",
+    "is_primary_data_all_false": true,
     "off_program_floors": false,
-    "per_cell_donor_age_sex_assay_disease": false,
-    "primary_data_and_deduplication": false,
-    "raw_counts": false
+    "per_cell_donor_age_sex_assay_disease": true,
+    "primary_data_and_deduplication": true,
+    "raw_counts": true
   }
 }

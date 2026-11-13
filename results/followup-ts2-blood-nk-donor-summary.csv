@@ -1,0 +1,8 @@
+donor_id,age_years,sex,male,assay_labels,assay_5prime_present,n_cells,mean_log_umi,minimum_cell_umi,maximum_cell_umi,disease,is_primary_data_all_false,within_object_observation_ids_unique,P1_score
+TSP1,59,female,0,10x 3' v3,0,71,8.947126571712941,4796.0,17087.0,normal,True,True,-0.07383747422126463
+TSP2,61,female,0,10x 3' v3;10x 5' v2,1,243,8.78202416905357,2846.0,17962.0,normal,True,True,-0.10506562597599634
+TSP7,69,female,0,10x 3' v3,0,1641,9.070187117353726,2923.0,38867.0,normal,True,True,0.14542190751215123
+TSP10,33,male,1,10x 3' v3,0,285,8.900843288904692,2837.0,31249.0,normal,True,True,0.005971072712342984
+TSP14,59,male,1,10x 3' v3;10x 5' v2,1,64,8.79482147004494,3313.0,25822.0,normal,True,True,0.09008492098898468
+TSP21,45,female,0,10x 3' v3;10x 5' v2,1,250,8.761938934924359,2601.0,17715.0,normal,True,True,-0.01529615033393883
+TSP25,60,male,1,10x 3' v3;10x 5' v2,1,406,8.41101332801633,2629.0,16262.0,normal,True,True,-0.016651309822056648
