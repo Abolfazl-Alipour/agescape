@@ -1,0 +1,135 @@
+{
+  "access_gate": {
+    "download_command_if_policy_changes": "python scripts/resource_guard.py download --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad --min-free-gb 30 --max-file-gb 2",
+    "download_permitted": false,
+    "local_H5AD": null,
+    "maximum_file_gib": 2,
+    "minimum_free_gb": 30,
+    "within_file_cap": false
+  },
+  "collection_api_url": "https://api.cellxgene.cziscience.com/curation/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+  "collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5",
+  "collection_revised_at": "2026-06-11T16:54:33+00:00",
+  "collection_version_id": "61d34250-a255-4c7c-b2f0-0e012fbe2e78",
+  "dataset": {
+    "assay_catalog": [
+      {
+        "label": "10x 3' v3",
+        "ontology_term_id": "EFO:0009922"
+      },
+      {
+        "label": "10x 5' v2",
+        "ontology_term_id": "EFO:0009900"
+      },
+      {
+        "label": "Smart-seq2",
+        "ontology_term_id": "EFO:0008931"
+      }
+    ],
+    "assets": [
+      {
+        "filesize_bytes": 2568875081,
+        "filesize_gib": 2.392451354302466,
+        "filetype": "H5AD",
+        "url": "https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad"
+      }
+    ],
+    "catalog_metadata_is_not_H5AD_verification": true,
+    "cell_count_catalog": 85233,
+    "dataset_id": "983d5ec9-40e8-4512-9e65-a572a9c486cb",
+    "dataset_version_id": "1bf55482-ad49-446a-87c6-f3442bebcef1",
+    "development_stage_catalog": [
+      {
+        "label": "33-year-old stage",
+        "ontology_term_id": "HsapDv:0000127"
+      },
+      {
+        "label": "45-year-old stage",
+        "ontology_term_id": "HsapDv:0000139"
+      },
+      {
+        "label": "56-year-old stage",
+        "ontology_term_id": "HsapDv:0000150"
+      },
+      {
+        "label": "59-year-old stage",
+        "ontology_term_id": "HsapDv:0000153"
+      },
+      {
+        "label": "60-year-old stage",
+        "ontology_term_id": "HsapDv:0000154"
+      },
+      {
+        "label": "61-year-old stage",
+        "ontology_term_id": "HsapDv:0000155"
+      },
+      {
+        "label": "69-year-old stage",
+        "ontology_term_id": "HsapDv:0000163"
+      }
+    ],
+    "disease_catalog": [
+      {
+        "label": "normal",
+        "ontology_term_id": "PATO:0000461"
+      }
+    ],
+    "donor_ids_catalog": [
+      "TSP2",
+      "TSP14",
+      "TSP7",
+      "TSP1",
+      "TSP25",
+      "TSP21",
+      "TSP8",
+      "TSP10",
+      "TSP27"
+    ],
+    "published_at": "2023-06-16T22:56:49+00:00",
+    "revised_at": "2026-06-11T16:54:33+00:00",
+    "tissue_catalog": [
+      {
+        "label": "blood",
+        "ontology_term_id": "UBERON:0000178",
+        "tissue_type": "tissue"
+      }
+    ],
+    "title": "Tabula Sapiens - Blood"
+  },
+  "donor_gate": {
+    "analysis_label": "exploratory",
+    "candidate_ages_are_H5AD_verified": false,
+    "candidate_donors": [
+      "TSP1",
+      "TSP2",
+      "TSP7",
+      "TSP10",
+      "TSP14",
+      "TSP21",
+      "TSP25"
+    ],
+    "cell_type": "natural killer cell",
+    "method": "10X",
+    "minimum_cells_per_donor": 20,
+    "n_candidate_donors": 7,
+    "tissue": "Blood"
+  },
+  "expression_analysis": {
+    "outcomes_examined": false,
+    "reason": "blood_H5AD_exceeds_2_GiB_download_cap",
+    "status": "blocked_before_H5AD_access"
+  },
+  "study": "Tabula Sapiens 2.0 blood natural-killer-cell arm",
+  "supplementary_coverage": {
+    "path": "results/followup-ts2-celltype-coverage.csv",
+    "sha256": "8b2c691bbc6fa45627306264b7da4a031d766ffa147c3776eaa3a1f4fc2f4755"
+  },
+  "verification": {
+    "Hellinger_reference_floors": false,
+    "P1_signature_floors": false,
+    "off_program_floors": false,
+    "per_cell_donor_age_sex_assay_disease": false,
+    "primary_data_and_deduplication": false,
+    "raw_counts": false
+  }
+}

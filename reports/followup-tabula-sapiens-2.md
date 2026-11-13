@@ -64,3 +64,65 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```
 
 It exited 0 in 0.56 seconds with maximum resident set size 127,160 kB (about 124.2 MiB). An independent CSV audit rechecked row counts, key uniqueness, all five cell-total reconciliations, method-specific totals, the two missing donor identities, the TSP30 conflict, sex agreement, and the absence of passing organ-pair screens; all assertions passed. No large file was accessed, and no download was started.
+
+## Blood 10x natural-killer-cell expression gate
+
+### Public asset and access decision
+
+The public [CELLxGENE collection API](https://api.cellxgene.cziscience.com/curation/v1/collections/e5f58829-1a66-40b5-a624-9046778e74f5) was queried on 2026-11-13. Collection `e5f58829-1a66-40b5-a624-9046778e74f5`, collection version `61d34250-a255-4c7c-b2f0-0e012fbe2e78`, contains one organ-specific blood dataset:
+
+- Dataset: `983d5ec9-40e8-4512-9e65-a572a9c486cb`, titled `Tabula Sapiens - Blood`.
+- Dataset version: `1bf55482-ad49-446a-87c6-f3442bebcef1`, published 2023-06-16 and revised 2026-06-11.
+- Sole H5AD asset: `https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad`.
+- Exact API/HEAD size: 2,568,875,081 bytes (2.568875081 decimal GB; 2.392451354 GiB), with 85,233 cells in the catalog.
+
+This is an authenticated public per-organ object, but it is not small enough for the required maximum 2 GiB file. The guarded command
+
+```bash
+/home/reza/miniconda3/envs/agescape/bin/python scripts/resource_guard.py download \
+  --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad \
+  --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad \
+  --min-free-gb 30 --max-file-gb 2
+```
+
+refused the transfer before creating an output file: `download size 2.39 GB exceeds maximum file size 2.00 GB` (exit 1). No blood H5AD was downloaded or opened. The 45 GB all-cells object and old `skin.h5ad` were not used.
+
+The catalog lists donors TSP1, TSP2, TSP7, TSP8, TSP10, TSP14, TSP21, TSP25, and TSP27; assays 10x 3' v3, 10x 5' v2, and Smart-seq2; disease `normal`; and cell suspensions. These are catalog leads only. Without the H5AD, raw integer counts, the raw-count layer, `is_primary_data`, cross-object deduplication, per-cell donor/age/sex/assay/disease concordance, chemistry, and actual UMI depth remain unverified.
+
+### Frozen donor family and endpoint disposition
+
+Before any expression outcome was accessed, the 10x blood natural-killer-cell donor family was frozen from `results/followup-ts2-celltype-coverage.csv`:
+
+| Donor | Age (years) | Sex | Supplementary cells | 20-cell screen |
+|---|---:|---|---:|---|
+| TSP1 | 59 | F | 71 | pass |
+| TSP2 | 61 | F | 243 | pass |
+| TSP7 | 69 | F | 1,641 | pass |
+| TSP8 | 56 | M | 14 | fail |
+| TSP10 | 33 | M | 285 | pass |
+| TSP14 | 59 | M | 64 | pass |
+| TSP21 | 45 | F | 250 | pass |
+| TSP25 | 60 | M | 406 | pass |
+| TSP27 | 56 | F | 11 | fail |
+
+The seven supplementary candidates are TSP1, TSP2, TSP7, TSP10, TSP14, TSP21, and TSP25 (4 female, 3 male; ages 33–69, mean 55.14, sample SD 12.0614 years; 2,960 supplementary cells). Any analysis with these donors was prespecified as exploratory, with donors—not cells—as inferential units. These counts and covariates remain supplementary-table values, not H5AD-verified analysis eligibility.
+
+`results/followup-ts2-blood-nk-endpoint-status.csv` freezes the intended designs and records every endpoint as **untestable**, not null:
+
+- Donor-pseudobulk gene models: mean cell-level log1p(CPM) per donor and gene, continuous-age OLS with effects per 10 years and 95% confidence intervals; sex, mean log actual UMI, and nonconstant assay terms only with a full-rank design and positive residual degrees of freedom; BH across all successfully fitted variable genes with finite donor values. No cell-level inference was permitted.
+- P1 transport: the established P1_Clean signature and expression-matched random-null procedure only after detected up/down genes and valid null pools were verified.
+- Off-program expression: the established off-program definition and technical exclusions only after its gene/signature floors were verified.
+- Hellinger displacement: the established leave-one-donor-out young-reference endpoint only with at least 50 remaining reference cells, at least 20 cells per donor, and identifiable donor-level covariates.
+
+The asset-size block prevented all raw-count and metadata checks, so P1 detection, off-program, and Hellinger reference floors were **not evaluated and do not pass by assumption**. No pseudobulk matrix, gene model, effect size, confidence interval, p-value, BH q-value, P1/off-program score, or Hellinger distance was computed. There is no expression result from this arm.
+
+### Reproducible blocked-arm deliverables
+
+- `scripts/prepare_ts2_blood_nk_gate.py`: metadata-only, fail-closed script for the exact collection/dataset/version, size gate, donor freeze, endpoint disposition, and manifest. It never downloads or opens an H5AD.
+- `data/manifest/tabula_sapiens_2_0_blood.json`: exact asset identity/size, catalog metadata, coverage-file SHA-256, access decision, and unverified gates.
+- `results/followup-ts2-blood-nk-asset.csv`: one-row asset inventory.
+- `results/followup-ts2-blood-nk-donor-eligibility.csv`: nine-donor supplementary screen with all expression-eligibility and H5AD-verification flags false.
+- `results/followup-ts2-blood-nk-endpoint-status.csv`: four frozen endpoints, all untestable with `outcomes_examined=False`.
+- `tests/test_ts2_blood_nk_gate.py`: six offline tests covering exact asset resolution, the inclusive size boundary, fail-closed version/duplicate handling, the seven-donor freeze, and absence of outcome fields.
+
+The script completed with exit 0 and printed the 2.392 GiB block. The focused test command `/home/reza/miniconda3/envs/agescape/bin/python -m pytest tests/test_ts2_blood_nk_gate.py -q` completed with `6 passed`. Base HEAD was `983b37e`; no commit or push was made. Other TS2 organs, Smart-seq, skin, and paired-organ expression analyses were not attempted. Unlocking this arm requires a different authenticated blood object that satisfies the 2 GiB ceiling or an explicit policy decision from Reza; no access request or external contact was made.
