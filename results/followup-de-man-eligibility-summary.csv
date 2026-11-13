@@ -1,0 +1,3 @@
+source,n_subjects,age_min,age_max,age_sd,n_cells,n_qc_gene_pass,n_libraries,age_11_to_80,annotation_note
+Baylor,32,11,72,16.30641571739133,0,0,0,True,Raw matrices downloaded; cell annotations and integrated object not present in GEO raw tar
+IPF_Cell_Atlas,28,20,80,17.660039188149728,96303,92049,38,True,Released control annotations present; libraries pooled by subject for inference
