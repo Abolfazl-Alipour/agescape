@@ -1,0 +1,36 @@
+donor,scope,included_in_inferential_n,gsm,library,primary_age,geo_age,primary_decade,geo_decade,bmi,age_discrepancy,mapping_note
+Donor1,external_atlas_only,0,,,21,,20s,,20.1,False,reused external atlas donor; excluded
+Donor2,external_atlas_only,0,,,22,,20s,,22.8,False,reused external atlas donor; excluded
+Donor3,external_atlas_only,0,,,22,,20s,,34.0,False,reused external atlas donor; excluded
+Donor4,GSE254315,1,GSM8037606,20149X1,30,30,30s,30s,20.9,False,separate donor library
+Donor5,GSE254315,1,GSM8037607,20188X1,32,32,30s,30s,25.6,False,separate donor library
+Donor6,GSE254315,1,GSM8037621,20206X3,33,33,30s,30s,30.7,False,separate donor library
+Donor7,GSE254315,1,GSM8037610,20188X4,38,38,30s,30s,30.8,False,separate donor library
+Donor8,GSE254315,1,GSM8037622,20206X4,40,39,40s,30s,31.6,True,separate donor library
+Donor9,GSE254315,1,GSM8037623,20206X5,42,42,40s,40s,31.9,False,separate donor library
+Donor10,GSE254315,1,GSM8037624,20206X6,43,43,40s,40s,20.0,False,separate donor library
+Donor11,GSE254315,1,GSM8037608,20188X2,43,43,40s,40s,30.1,False,separate donor library
+Donor12,GSE254315,1,GSM8037611,20196X1,43,43,40s,40s,31.9,False,separate donor library
+Donor13,GSE254315,1,GSM8037625,20207X1,43,43,40s,40s,32.0,False,separate donor library
+Donor14,GSE254315,1,GSM8037626,20207X2,44,44,40s,40s,25.8,False,separate donor library
+Donor15,GSE254315,1,GSM8037619,20206X1,44,44,40s,40s,44.9,False,separate donor library
+Donor16,GSE254315,1,GSM8037615,20197X1,46,46,40s,40s,41.5,False,separate donor library
+Donor17,GSE254315,1,GSM8037616,20197X2,48,48,40s,40s,32.4,False,separate donor library
+Donor18,GSE254315,1,GSM8037612,20196X2,52,52,50s,50s,37.7,False,separate donor library
+Donor19,GSE254315,1,GSM8037627,20207X3,53,53,50s,50s,34.3,False,separate donor library
+Donor20,GSE254315,1,GSM8037613,20196X3,55,55,50s,50s,20.8,False,separate donor library
+Donor21,GSE254315,1,GSM8037609,20188X3,55,55,50s,50s,32.6,False,separate donor library
+Donor22,GSE254315,1,GSM8037617,20197X3,57,57,50s,50s,35.7,False,separate donor library
+Donor23,GSE254315,1,GSM8037618,20197X4,57,57,50s,50s,46.5,False,separate donor library
+Donor24,GSE254315,1,GSM8037614,20196X4,59,59,50s,50s,25.4,False,separate donor library
+Donor25,GSE254315,1,GSM8037620,20206X2,59,59,50s,50s,34.5,False,separate donor library
+Donor26,external_atlas_only,0,,,62,,60s,,24.0,False,reused external atlas donor; excluded
+Donor27,external_atlas_only,0,,,64,,60s,,32.9,False,reused external atlas donor; excluded
+Donor28,external_atlas_only,0,,,66,,60s,,24.1,False,reused external atlas donor; excluded
+Donor29,external_atlas_only,0,,,66,,60s,,24.2,False,reused external atlas donor; excluded
+Donor30,GSE254315,1,GSM8037629,20207X5,66,66,60s,60s,26.2,False,separate donor library
+Donor31,external_atlas_only,0,,,66,,60s,,35.1,False,reused external atlas donor; excluded
+Donor32,external_atlas_only,0,,,66,,60s,,26.6,False,reused external atlas donor; excluded
+Donor33,external_atlas_only,0,,,67,,60s,,23.8,False,reused external atlas donor; excluded
+Donor34,GSE254315,1,GSM8037630,20207X6,67,67,60s,60s,30.8,False,separate donor library
+Donor35,GSE254315,1,GSM8037628,20207X4,69,69,60s,60s,38.4,False,separate donor library

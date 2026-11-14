@@ -1,0 +1,119 @@
+{
+  "accession": "GSE254315",
+  "donor_count": 25,
+  "raw_barcodes_total": 148740,
+  "geo_summary_cell_count": 99130,
+  "raw_barcode_count_matches_geo_summary": false,
+  "paper_qc_pass_cells": 95521,
+  "geo_summary_minus_paper_qc_pass": 3609,
+  "published_cell_count_reconciled": false,
+  "feature_reference_identical_decompressed_content": true,
+  "feature_reference_sha256": "28fa7d6a0994e5fe6c1d2a39a3363ee1655916481e3ee240efd6cc8a361959c9",
+  "donors": [
+    {
+      "donor": "Donor4",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor5",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor6",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor7",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor8",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor9",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor10",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor11",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor12",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor13",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor14",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor15",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor16",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor17",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor18",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor19",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor20",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor21",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor22",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor23",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor24",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor25",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor30",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor34",
+      "checkpoint_verified": true
+    },
+    {
+      "donor": "Donor35",
+      "checkpoint_verified": true
+    }
+  ],
+  "public_barcode_to_cell_type_crosswalk": false,
+  "expression_outcomes_computed": false,
+  "age_associations_computed": false,
+  "cell_level_pvalues_computed": false,
+  "caveat": "Changing germ-cell-stage composition can mimic broad expression displacement; testis hits/nulls cannot support general whole-body aging claims."
+}

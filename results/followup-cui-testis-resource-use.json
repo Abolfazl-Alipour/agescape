@@ -1,0 +1,9 @@
+{
+  "guard_memory_gb": 8,
+  "guard_min_free_gb": 30,
+  "parallel_heavy_jobs": 1,
+  "maximum_single_file_gb": 0.2,
+  "max_rss_kib": 907224,
+  "sequential_donor_processing": true,
+  "external_checkpoints": "../agescape-revision-data/cui-testis/interim/qc"
+}

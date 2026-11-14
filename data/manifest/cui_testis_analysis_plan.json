@@ -1,0 +1,132 @@
+{
+  "frozen_at_repository_head": "8cd58bdfc0921636ba2846f898fc6d0ab96d3ccb",
+  "frozen_on": "2026-11-14",
+  "frozen_after_sample_donor_mapping_and_before_expression_download_or_outcomes": true,
+  "accession": "GSE254315",
+  "scope": {
+    "included": "The 25 separately measured, named GSE254315 donors only.",
+    "external_atlas_donors": "Donor1-3, Donor26-29, and Donor31-33 are reused external atlas samples, not additional GSE254315 libraries; they are excluded from this step.",
+    "inferential_unit": "donor/library",
+    "maximum_independent_n": 25,
+    "donor_level_measurements_demonstrated": true,
+    "pooled_libraries": false,
+    "cell_level_inference": false,
+    "external_donor_ages_used_as_additional_observations": false,
+    "general_whole_body_aging_claims": false
+  },
+  "mandatory_caveat": "Changing germ-cell-stage composition can mimic broad expression displacement without cell-intrinsic aging drift. Testis hits or nulls cannot support general whole-body aging claims.",
+  "mapping": {
+    "primary_age_source": "Current primary Fig. 1a source data, whose row order is Donor1 through Donor35 and agrees with GEO for 24 of 25 GSE donors.",
+    "donor8_discrepancy": "Primary Fig. 1a says 40 years/40s; GEO GSM8037622 says 39 years. Primary analyses use 40/40s and a complete GEO-39 sensitivity changes both exact age and decade.",
+    "released_cell_annotations": "No public barcode-to-cell-type annotation or annotated expression object was found in GEO, primary supplements, or the released code repository. Aggregate age-level cell totals are not a per-donor barcode crosswalk.",
+    "consequence": "P1, cell-type pseudobulk, CLR, and Hellinger are blocked pending a released donor-and-barcode annotation crosswalk. Raw-count QC and released descriptive metadata are permitted; no whole-testis expression model will substitute for comparable cell types or germ-cell stages."
+  },
+  "contrasts_if_annotations_become_available": {
+    "primary": {
+      "name": "ordinal_decade_depth",
+      "design": "All 25 donors; ordinal scores 3, 4, 5, 6 for primary-source 30s, 40s, 50s, 60s; effect per one-decade increase with donor mean natural-log actual raw UMI adjustment.",
+      "young_middle_old": "No group is discarded. The 30s are the young reference for Hellinger, 40s are middle, and 50s/60s are older decades in the ordered trend."
+    },
+    "sensitivities": [
+      {
+        "name": "ordinal_decade_unadjusted",
+        "design": "Primary ordinal decade without depth or other covariates."
+      },
+      {
+        "name": "ordinal_decade_bmi_depth",
+        "design": "Primary ordinal decade plus depth and primary-source continuous BMI; no BMI categories or interaction."
+      },
+      {
+        "name": "categorical_decade_depth",
+        "design": "Depth-adjusted indicators for 40s, 50s, and 60s with 30s as reference; all 25 donors."
+      },
+      {
+        "name": "old_young_depth",
+        "design": "Old 50s/60s versus young 30s, depth-adjusted; middle 40s excluded only from this contrast."
+      },
+      {
+        "name": "exact_age_depth",
+        "design": "Primary-source exact age per 10 years plus depth, all 25 donors; no midpoint imputation."
+      },
+      {
+        "name": "geo_donor8_39",
+        "design": "Repeat ordinal_decade_depth, categorical_decade_depth, old_young_depth, and exact_age_depth after changing only Donor8 from 40/40s to 39/30s."
+      },
+      {
+        "name": "spermatogenesis_adjusted",
+        "design": "If a released donor-linked incomplete-spermatogenesis field exists, repeat ordinal_decade_depth with that field; otherwise record not released. Do not infer the field from expression or germ-cell fractions."
+      },
+      {
+        "name": "complete_spermatogenesis_only",
+        "design": "If and only if a released donor-linked incomplete-spermatogenesis field exists, repeat ordinal_decade_depth among complete-spermatogenesis donors; otherwise untestable."
+      }
+    ],
+    "model_gate": "Full rank, at least six donors overall, at least three donors in every retained group, and at least two residual degrees of freedom. All-male cohort: no sex covariate. Failed fits are untestable, not null."
+  },
+  "annotation_and_eligibility": {
+    "released_annotations_only": true,
+    "reclustering_or_marker_imputation": false,
+    "somatic_labels": ["Sertoli", "TPC", "Leydig", "SMC", "Endothelial", "Macrophage", "Lymphocyte", "B"],
+    "germ_cell_stage_labels": ["Undifferentiated spermatogonia", "Differentiating spermatogonia", "Early primary spermatocytes", "Late primary spermatocytes", "Round spermatids", "Elongating spermatids"],
+    "minimum_cells_per_donor_cell_type": 20,
+    "minimum_donors_per_cell_type": 6,
+    "minimum_donors_per_group": 3,
+    "composition_universe": "All released known labels for a donor, retaining zeros after a label passes the cell-type eligibility gate; somatic and germ-cell-stage analyses remain separate.",
+    "current_status": "Every cell-resolved endpoint and label is blocked before eligibility because the required annotation crosswalk is not public."
+  },
+  "endpoints_if_unblocked": {
+    "P1_transport": {
+      "program": "Established human P1_Clean from src.aging_programs.load_program_tiers(target='human').",
+      "normalization": "Per-cell log1p(CPM) using actual full-feature raw library size; arithmetic donor mean within released cell label; up mean minus down mean. Ambiguous duplicate gene symbols are excluded from P1.",
+      "detection_gate": "At least one uniquely mapped detected P1 up gene and one down gene per donor/cell-type analysis.",
+      "matched_null": "Primary ordinal model only: 200 draws, seed 20261114; donor-mean logCPM expression deciles per cell type, up/down matched separately, all detected P1 genes excluded, sampling without replacement, one RNG stream over sorted cell types. Centered two-sided empirical p=(1+exceedances)/201.",
+      "models": "Primary plus every declared applicable sensitivity; no cell-level tests."
+    },
+    "donor_pseudobulk": {
+      "aggregation": "Sum raw counts within donor and released cell label; log2CPM=log2((count+0.5)/(total+1)*1e6). Never sum donors before modeling.",
+      "gene_filter": "At least 10 summed counts and detection in at least 20 percent of eligible donors, fixed without age outcomes.",
+      "models": "Ordinal primary and all declared applicable sensitivities with donor-level OLS effect, standard error, two-sided t 95 percent CI and p-value.",
+      "scope": "Somatic labels and each comparable germ-cell stage separately; no mixed germ-stage pseudobulk primary endpoint."
+    },
+    "CLR_composition": {
+      "transform": "Add 0.5 cell to each released known label per donor, normalize within donor, centered log-ratio.",
+      "models": "Ordinal primary and all declared applicable sensitivities; raw fractions descriptive only.",
+      "scope": "Report somatic labels and germ-cell stages separately and preserve the germ-stage confounding caveat."
+    },
+    "Hellinger": {
+      "technical_exclusions": "MT-/RPL/RPS/MRPL/MRPS prefixes and XIST, TSIX, DDX3Y, EIF2S3Y, UTY, KDM5D.",
+      "cell_filter": "Actual raw UMI >=1500 and positive nontechnical UMI.",
+      "reference": "Primary-source 30s young donors only within cell type; pool reference counts and subtract the evaluated young donor's own counts (cross-fitting).",
+      "endpoint": "Arithmetic donor mean per-cell Hellinger distance, no UMI downsampling.",
+      "floors": "At least two young reference donors, 20 qualifying cells per scored donor, 50 cross-fitted reference cells for every donor, six scored donors, and model rank/df gates.",
+      "models": "Depth-adjusted primary and declared applicable sensitivities; unadjusted as sensitivity only.",
+      "scope": "Each comparable somatic label and germ-cell stage separately."
+    }
+  },
+  "multiplicity_families_if_unblocked": {
+    "P1_CLR_Hellinger": "BH at 0.05 over eligible cell types separately by endpoint, design, and model. Somatic and germ-stage results remain labeled and are never pooled into a whole-body claim.",
+    "P1_matched_null": "BH at 0.05 over primary eligible cell types, separate from conventional P1 model p-values.",
+    "pseudobulk": "BH at 0.05 over tested genes separately by design, model, and released cell type.",
+    "untestable": "Excluded from BH denominator but retained in output with the failed annotation/floor/rank reason."
+  },
+  "descriptive_qc_while_blocked": {
+    "allowed": "Per-donor raw barcode count, finite nonnegative integer validation, UMI and detected-feature summaries, mitochondrial fraction, and counts passing the paper's released QC thresholds.",
+    "paper_qc_thresholds": "200-5500 detected features, 800-17000 UMI, mitochondrial fraction <=25 percent.",
+    "not_allowed": "Age-associated QC modeling, expression signatures, pseudobulk outcomes, composition reconstruction, marker-based labels, or cell-level p-values."
+  },
+  "resources": {
+    "guard": "scripts/resource_guard.py for every download and expression-QC job",
+    "minimum_free_gb": 30,
+    "analysis_memory_gb": 8,
+    "maximum_single_file_gb": 0.2,
+    "parallel_heavy_jobs": 1,
+    "order": "GSM8037606 through GSM8037630; matrix, barcodes, features per donor, then one-donor-at-a-time QC.",
+    "raw_tar_or_fastq": false,
+    "external_data_root": "../agescape-revision-data/cui-testis"
+  },
+  "outputs": {
+    "metadata_manifest": "data/manifest/GSE254315.json",
+    "aggregate_prefix": "results/followup-cui-testis",
+    "report": "reports/followup-cui-testis.md"
+  }
+}
