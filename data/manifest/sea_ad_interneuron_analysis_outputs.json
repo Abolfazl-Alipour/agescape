@@ -1,0 +1,32 @@
+{
+  "analysis": "Step 9 SEA-AD interneuron extension",
+  "frozen_plan_sha256": "791c1079cb512ced8db560049caf885569fea94f8e100b7d33eebc9832d79390",
+  "script_sha256": "8e5ef3001be149db1252addeea14cb7789a8fce8605d69ba1a9739ee97b78061",
+  "source_manifest_sha256": "48e071795da051db60ba67dfe6c66a7619a16d307215a85bd35abb00516a4eaa",
+  "report_sha256": "3fe907269fa48a9a36b63684bc814112b78d30ce822661f8d97d14b298509e0b",
+  "permutations": 1000,
+  "block_bootstraps": 1000,
+  "outputs": {
+    "followup-sea-ad-eligibility.csv": {
+      "sha256": "7baf4bc982b19dd38bb861bef76188e2e7c14a84da3f63594f30a07ee3ed80f4"
+    },
+    "followup-sea-ad-gene-effects.csv": {
+      "sha256": "dd31582f809af6088dcc37092a44e1b1cbb77e45302e7db1d3600073638a5fe6"
+    },
+    "followup-sea-ad-genome-wide.csv": {
+      "sha256": "398b6fadfba4032255b3e6e2a99e125c0bdad8442c3dda437c280a1530626ba0"
+    },
+    "followup-sea-ad-replication-summary.csv": {
+      "sha256": "8c559747d2c1c8e9f8a46ccde34fb88894ac97d1db22676288a7b4697ea5d450"
+    },
+    "followup-sea-ad-sensitivities.csv": {
+      "sha256": "578691b02fcd429ed5efd522a26776194552afb72aa62e2a0eba1913dbfb253d"
+    },
+    "followup-sea-ad-lodo-summary.csv": {
+      "sha256": "16570d497da4353d8e84ad65a2d88b4e363e518c6df83b52a9e5c0507de542e6"
+    },
+    "followup-sea-ad-lodo-genes.csv": {
+      "sha256": "af82da1d27ef32a0860831d9438120ffcd92f0dee6e45c5d14e2406386619067"
+    }
+  }
+}

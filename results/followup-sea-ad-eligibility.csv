@@ -1,0 +1,4 @@
+subtype,metadata_eligible_donors,eligible_donors_20_nuclei,eligible_donors_50_nuclei,singleome_eligible_donors_20_nuclei,excluded_donors_below_20,total_eligible_nuclei,median_nuclei_per_donor,minimum_nuclei_per_donor,maximum_nuclei_per_donor,age_min,age_max,age_sd,female_donors,male_donors,not_ad_donors,low_adnc_donors,multiome_contributing_donors,annotation_mapping,raw_count_layer,qc_rule
+VIP,15,15,15,15,0,18699,1222.0,515,2505,72.0,102.0,9.348796714016194,8,7,8,7,5,Vip; Class=Neuronal: GABAergic,UMIs,"released final nuclei, preparation flags pass, Number of UMIs >=1500"
+pvalb,15,15,15,15,0,15688,1012.0,459,2288,72.0,102.0,9.348796714016194,8,7,8,7,5,Pvalb; Class=Neuronal: GABAergic,UMIs,"released final nuclei, preparation flags pass, Number of UMIs >=1500"
+sst,15,15,15,15,0,9914,427.0,241,1495,72.0,102.0,9.348796714016194,8,7,8,7,5,Sst; Class=Neuronal: GABAergic,UMIs,"released final nuclei, preparation flags pass, Number of UMIs >=1500"

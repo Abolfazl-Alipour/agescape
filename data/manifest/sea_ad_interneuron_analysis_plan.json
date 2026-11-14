@@ -1,0 +1,74 @@
+{
+  "step": 9,
+  "analysis": "SEA-AD MTG donor-pseudobulk interneuron extension",
+  "frozen_before_expression_outcomes": true,
+  "frozen_plan": "notes/followup-sea-ad-interneurons-plan.md",
+  "frozen_plan_sha256": "791c1079cb512ced8db560049caf885569fea94f8e100b7d33eebc9832d79390",
+  "pre_outcome_corrections": [
+    "Use the retained original OLS aggregate for genome-wide MSSM effects because the Rev2 all-gene table was not retained; targeted Rev2 sets are unchanged.",
+    "P1_Clean has 139 mouse genes and 118 mapped unique human symbols, not 139 human symbols."
+  ],
+  "mouse_p1": {"mouse_genes": 139, "mapped_human_symbols": 118, "human_up": 76, "human_down": 42},
+  "release": "2024-02-13",
+  "region": "MTG",
+  "raw_layer": "UMIs",
+  "subclass_map": {
+    "Vip": "VIP",
+    "Pvalb": "pvalb",
+    "Sst": "sst"
+  },
+  "donor_gate": {
+    "cognitive_status": "No dementia",
+    "consensus_control": "Checked",
+    "adnc": ["Not AD", "Low"],
+    "metadata_eligible_donors": 15,
+    "minimum_donors_per_subtype": 10,
+    "minimum_nuclei_per_donor_subtype": 20,
+    "minimum_residual_dof": 5
+  },
+  "nucleus_gate": {
+    "used_in_analysis": true,
+    "minimum_umis": 1500,
+    "released_preparation_flags_must_pass": true,
+    "new_doublet_threshold": false
+  },
+  "primary_model": {
+    "method": "Rev2 one-iteration voom-style WLS",
+    "response": "log1p(CP10K)",
+    "terms": ["age", "sex_male", "mean_log_umi", "multiome_fraction", "adnc_low"],
+    "gene_bh_family": "all filtered genes within each SEA-AD subtype"
+  },
+  "genome_wide_discovery_source": {
+    "path": "../agescape/results/h3-human-neuronal-gene-replication-all.csv",
+    "sha256": "710fd931f28b4d77667f9ff6380ea66830db55c473d7fe34e3af7e775e79fe8e",
+    "model": "age_plus_sex_depth",
+    "method": "original donor-pseudobulk OLS",
+    "sea_ad_primary_comparator": "OLS",
+    "sea_ad_secondary_comparator": "WLS"
+  },
+  "targeted_set_source": {
+    "path": "results/reviewer-rev2-interneuron-genes.csv",
+    "sha256": "6bf8b892f68bbbfbb351cc6a067f4193d93331faf2acde961b4faa8dea6e6dfa",
+    "method": "unmoderated Rev2 voom-style WLS",
+    "both_fdr_expected": {"VIP": 76, "pvalb": 66, "sst": 249},
+    "psychad_discovery_expected": {"VIP": 202, "pvalb": 143, "sst": 375}
+  },
+  "ortholog_source": {
+    "path": "data/reference/orthologs-mouse-human.csv",
+    "sha256": "942c5b563f62ceb0aac410987c32943fa5cb080bab6109dba1b3527a63378074"
+  },
+  "permutations": 1000,
+  "block_bootstraps": 1000,
+  "coexpression_blocks": 30,
+  "permutation_seed": 20261108,
+  "bootstrap_seed": 20261208,
+  "forbidden": [
+    "Hellinger displacement",
+    "alternative young reference",
+    "signature transport",
+    "cell-fraction models",
+    "MSSM/HBCC expression refitting",
+    "GTEx expression analysis",
+    "equivalence from non-significance"
+  ]
+}

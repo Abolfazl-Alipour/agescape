@@ -1,0 +1,163 @@
+{
+  "accession": "SEA-AD MTG RNAseq final nuclei 2024-02-13",
+  "paper": {
+    "title": "Integrated multimodal cell atlas of Alzheimer's disease",
+    "doi": "10.1038/s41593-024-01774-5"
+  },
+  "data_page": "https://brain-map.org/consortia/sea-ad/our-data",
+  "bucket_inventory": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/?list-type=2&prefix=MTG/RNAseq/previous_objects/",
+  "created_from_frozen_plan": "data/manifest/sea_ad_interneuron_analysis_plan.json",
+  "release": "2024-02-13",
+  "region": "MTG",
+  "assay": {
+    "singleome": "10Xv3.1",
+    "multiome": "10xMulti"
+  },
+  "raw_count_layer": "UMIs",
+  "normalized_X_used": false,
+  "donor_filter": "No dementia; consensus Control; ADNC Not AD or Low",
+  "donor_count": 15,
+  "annotation_mapping": {
+    "VIP": "Vip",
+    "pvalb": "Pvalb",
+    "sst": "Sst"
+  },
+  "sources": [
+    {
+      "kind": "donor_metadata",
+      "url": "https://cdn.prod.website-files.com/689cfbd308fa7373b604d290/68debdfdd1b8e9f8fd64dab0_sea-ad_cohort_donor_metadata_072524.xlsx",
+      "local_path": "../agescape-revision-data/sea-ad/metadata/sea-ad_cohort_donor_metadata_072524.xlsx",
+      "size_bytes": 45189,
+      "sha256": "d18faa1c51f426bb2bf17ce431878cfacce673729c1ee185be84a51d31271146"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H19.33.004",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H19.33.004_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H19.33.004_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 694987548,
+      "sha256": "153aa47b466e92c989dc16623dceaddabce4ed947ee4af9002efaf9df61e2b11"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H20.33.001",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H20.33.001_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H20.33.001_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 553171249,
+      "sha256": "bcef46c5fcdca2ca40bebac313329da77105cff5e39d337b87ca16de20184676"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H20.33.002",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H20.33.002_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H20.33.002_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 541027982,
+      "sha256": "50d0a7088d2136d80836fc49a14d794a1afacd9d7a94c92066a9544187b7e4aa"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H20.33.012",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H20.33.012_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H20.33.012_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 453457012,
+      "sha256": "16840a26cc454d0aa0bff46e24e56113da871b954cc186ee1924ffd6e1046ff8"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H20.33.035",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H20.33.035_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H20.33.035_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 261800696,
+      "sha256": "8df6b61e7a161ffd19de365032e3ce353d91871e1b69a6f59dd1d868ea7dbacc"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H20.33.044",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H20.33.044_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H20.33.044_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 416774282,
+      "sha256": "774db395578da6d35b5cb4d0dcf976672a928c4e08acfa1bf4be34a4f7ecf2a6"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.003",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.003_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.003_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 582731796,
+      "sha256": "ba982206eeb0b315dd5e1687781c1d31d4f315fc8911ac73af035e29758a0c3d"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.004",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.004_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.004_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 488831062,
+      "sha256": "486ac25fed2b209d5c064d16bcd1ec48a4d914eb059fd8019de5267c21ba0597"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.015",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.015_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.015_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 502884092,
+      "sha256": "a5abae63cd5be6215fece162940bb63f7d3811e48c091e197b725257661d79c7"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.023",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.023_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.023_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 461805041,
+      "sha256": "887b05dbd16115234c8584a2e35e0207eac25d53e5ee84d373e5170ef15a53f9"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.028",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.028_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.028_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 307848288,
+      "sha256": "3966234abe324c0eb7ca5b680da7d6b4b63aec0f79c57cf0d2b8989c143e85da"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.032",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.032_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.032_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 430433767,
+      "sha256": "bf5a3b33efd709d4769ed71e0bb325db31a0c96cfd3c8e16c8073785af0e3703"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.037",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.037_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.037_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 246267451,
+      "sha256": "aae7b3bf46d9af51fe4b4a5435d321238a85f62d8e16c6337b81466b7bc9f4c1"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.038",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.038_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.038_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 180354491,
+      "sha256": "fa40327a14c3656d7dfae42173db029f679f99148770c026d1164635d09752ff"
+    },
+    {
+      "kind": "donor_h5ad",
+      "donor": "H21.33.041",
+      "url": "https://sea-ad-single-cell-profiling.s3.us-west-2.amazonaws.com/MTG/RNAseq/previous_objects/donor_objects/H21.33.041_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "local_path": "../agescape-revision-data/sea-ad/donor-h5ad/H21.33.041_SEAAD_MTG_RNAseq_final-nuclei.2024-02-13.h5ad",
+      "size_bytes": 375949901,
+      "sha256": "4cbd0b580af7ffd4f50e2174a06911460accc57005de7e0485006189c35fba3b"
+    }
+  ],
+  "resource_guard": {
+    "guard": "scripts/resource_guard.py for acquisition and expression jobs",
+    "minimum_free_gb": 30,
+    "analysis_memory_gb": 8,
+    "maximum_single_donor_file_gb": 2,
+    "parallel_heavy_jobs": 1,
+    "external_data_root": "../agescape-revision-data/sea-ad"
+  },
+  "public_outputs_contain_donor_expression": false
+}
