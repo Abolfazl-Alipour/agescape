@@ -352,7 +352,7 @@ def update_static_outputs(asset_hash, donors, young, p1, statuses):
     asset["maximum_file_gib"] = 3
     asset["within_file_cap"] = True
     asset["H5AD_verification"] = "verified_size_sha256_raw_counts_and_metadata"
-    asset["local_H5AD"] = str(H5AD)
+    asset["local_H5AD"] = str(Path("..") / H5AD.relative_to(REPO.parent))
     asset["sha256"] = asset_hash
     write_csv(asset, asset_path.name)
 
@@ -386,12 +386,12 @@ def update_static_outputs(asset_hash, donors, young, p1, statuses):
     manifest["access_gate"].pop("download_command_if_policy_changes", None)
     manifest["access_gate"].update({
         "maximum_file_gib": 3, "within_file_cap": True,
-        "download_permitted": True, "local_H5AD": str(H5AD),
+        "download_permitted": True, "local_H5AD": str(Path("..") / H5AD.relative_to(REPO.parent)),
         "local_filesize_bytes": EXPECTED_SIZE, "sha256": asset_hash,
         "guarded_download_command": (
             "python scripts/resource_guard.py download --url "
             "https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad "
-            "--output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad "
+            f"--output {Path('..') / H5AD.relative_to(REPO.parent)} "
             "--min-free-gb 30 --max-file-gb 3"
         ),
     })

@@ -1,8 +1,8 @@
 {
   "access_gate": {
     "download_permitted": true,
-    "guarded_download_command": "python scripts/resource_guard.py download --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad --output /home/reza/projects/agescape-revision-data/ts2/blood.h5ad --min-free-gb 30 --max-file-gb 3",
-    "local_H5AD": "/home/reza/projects/agescape-revision-data/ts2/blood.h5ad",
+    "guarded_download_command": "python scripts/resource_guard.py download --url https://datasets.cellxgene.cziscience.com/1bf55482-ad49-446a-87c6-f3442bebcef1.h5ad --output ../agescape-revision-data/ts2/blood.h5ad --min-free-gb 30 --max-file-gb 3",
+    "local_H5AD": "../agescape-revision-data/ts2/blood.h5ad",
     "local_filesize_bytes": 2568875081,
     "maximum_file_gib": 3,
     "minimum_free_gb": 30,
