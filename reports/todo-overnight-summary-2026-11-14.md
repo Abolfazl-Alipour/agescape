@@ -1,8 +1,8 @@
 # Agescape Overnight Revision Summary (2026-11-14)
 
 - **Repository**: `/home/reza/projects/agescape-revision` (`master`, base `origin/master` = `4009829`)
-- **Starting `HEAD`**: `4009829` -> **Last Item Commit (`Item 8`)**: `7fb9488` (followed by this Morning Summary commit on `master`)
-- **Push Status**: **BLOCKED (awaiting fresh GitHub PAT)** (`git push origin master` returned `Invalid username or token`; 9 item commits `dae5a98` through `7fb9488` plus summary commit are saved locally on `master`)
+- **Starting `HEAD`**: `4009829` -> **Last Item Commit (`Item 8`)**: `7fb9488` -> **Morning Summary**: `27a61fc` (followed by CI/hygiene/`PRJNA1058087` update on `master`)
+- **Push Status**: **PUSHED to `origin/master`** (`27a61fc` pushed earlier, plus CI/hygiene/PRJNA1058087 follow-up commit synchronized cleanly on `master`)
 - **Frozen Files Status**: Verified untouched (`git diff --exit-code -- report/plos-one/ report/manuscript-aging-mechanisms.md` exited `0`)
 
 ---
@@ -26,7 +26,7 @@
 
 - **Commit**: `33da505`
 - **Report**: [rev3-laca-nmr-verification-REPORT.md](file:///home/reza/projects/agescape-revision/results/rev3-laca-nmr-verification-REPORT.md)
-- **Headline**: Live inspection of LACA (`LACA-2024-002` `1.2M` cells and `"NMR Full Atlas v2.1"` `660K` cells) established that `0` downloadable files exist on `download.php`, `SP239` endpoints return `403 Forbidden`, site JS contains developer comment `SP239 unpublished self-test` redirecting to human `data/SP121/umap`, and `0` public multi-tissue NMR aging atlases exist on GEO/BioProject/PubMed/CELLxGENE; no download was attempted.
+- **Headline**: Live inspection established `LACA-2024-002` (`1.2M` cells) and `"NMR Full Atlas v2.1"` (`660K` cells) have `0` downloadable files on `download.php`, `SP239` endpoints return `403 Forbidden`, site JS contains developer comment `SP239 unpublished self-test` redirecting to human `data/SP121/umap`, `0` public multi-tissue NMR aging atlases exist on GEO/BioProject/PubMed/CELLxGENE, and direct NCBI/CNCB/PMC inspection of `PRJNA1058087` (`PRJCA014972` / `PMC10652311`) confirmed it only generated new bat (`Myotis pilosus`) spleen scRNA-seq while reusing Hilton et al. 2019 (`GSE132642`) for NMR (zero new or aged NMR single-cell data); no download was attempted.
 
 ## Item 3. Audit of Young-vs-Mature Comparisons in Manuscript (`DONE`, Audit Only)
 
@@ -39,7 +39,7 @@
 - **Commit**: `4d28640`
 - **Report**: [rev3-entropy-mature-only-mouse-lung-REPORT.md](file:///home/reza/projects/agescape-revision/results/rev3-entropy-mature-only-mouse-lung-REPORT.md)
 - **Tables**: [rev3-entropy-mature-only-mouse-lung.csv](file:///home/reza/projects/agescape-revision/results/rev3-entropy-mature-only-mouse-lung.csv) (`1,593` rows), [rev3-entropy-mature-only-mouse-lung-donors.csv](file:///home/reza/projects/agescape-revision/results/rev3-entropy-mature-only-mouse-lung-donors.csv) (`449` rows)
-- **Headline**: Across `n=10` mature TMS lung mice (`18m` 2F+2M, `21m` 2F only, `30m` 4M only), zero global donor-clustered models reach significance (`1500` UMI `manuscript_target_n6` `shannon +0.1380 SD p=0.7783 MDE_80=1.4963`; `deman_kl_methods -0.1613 p=0.7411`; `deman_kl_sqrt -0.6464 p=0.3308`), and structural age-sex collinearity explains why per-cell-type `CD8+ T` `shannon_entropy` nominal `age_sex` hits at `1500` UMI (`all_mature_eligible_n6 q=0.0286`, `manuscript_target_n6 q=0.0208`) disappear under `age_only` (`q=0.2779` and `0.2021`).
+- **Headline**: Across `n=10` mature TMS lung mice (`18m` 2F+2M, `21m` 2F only, `30m` 4M only), `0/96` global donor-clustered models under `age_sex` or `age_only` and `0/108` rarefied models reach `p < 0.05` (`1500` UMI `manuscript_target_n6` `shannon +0.1380 SD p=0.7783 MDE_80=1.4963`; `deman_kl_methods -0.1613 p=0.7411`; `deman_kl_sqrt -0.6464 p=0.3308`; only unrarefied `full`-depth `deman_kl_sqrt` `age_sex_library` hits nominal `p=0.0150 to 0.0270` across the `4` eligibility families), and structural age-sex collinearity explains why per-cell-type `CD8+ T` `shannon_entropy` nominal `age_sex` hits at `1500` UMI (`all_mature_eligible_n6 q=0.0286`, `manuscript_target_n6 q=0.0208`) disappear under `age_only` (`q=0.2779` and `0.2021`).
 
 ## Item 5. De Man Human Lung Replication on `GSE281219` (`BLOCKED`)
 
@@ -77,7 +77,7 @@
 ## Blocked Items Summary
 
 1. **Item 5 (`GSE281219` 32 Baylor Human Lungs)**: Public GEO/CELLxGENE/`rubendeman/Lung-Aging-Cell-Atlas` repositories do not contain `agingseurat.RData` or barcode-level `predicted.id` annotations; only raw matrices (`GSE281219_RAW.tar`) are public.
-2. **Remote Push (`git push origin master`)**: Local git credential helper lacks a valid GitHub PAT (`Invalid username or token`); commits `dae5a98` through `7fb9488` (+ summary commit) are safe locally on `master`.
+2. **Remote Push (`git push origin master`)**: Resolved; `master` is synchronized with `origin/master`.
 3. **Item 9 (Manuscript Revisions) & Frozen Files**: Held untouched by explicit instruction.
 
 ---

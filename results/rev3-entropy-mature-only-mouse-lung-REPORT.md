@@ -28,7 +28,7 @@ Does within-cell transcriptional entropy increase from maturity to old age in mo
 
 ## 2. Headline Global Results (`n = 10` Mature Mice, Donor-Clustered OLS)
 
-Across all rarefied depths (`500`, `1500`, `3000` UMIs) and unrarefied `full` depth, **no global mature-only shift in transcriptional disorder reaches statistical significance under `age_sex` or `age_only`**, and 80%-power MDEs span **`1.41 to 2.27` standard deviations per 15 months** (`1.13 to 1.82` SD across the observed `12`-month `18m -> 30m` interval), confirming low statistical power rather than evidence of absence.
+Across all `144` global donor-clustered models (`4` eligibility families x `4` depths x `3` metrics x `3` covariate specs), **`0/96` models under `age_sex` or `age_only` and `0/108` models at rarefied depths (`500`, `1500`, `3000` UMIs) reach `p < 0.05`**. Across `age_sex` and `age_only`, 80%-power MDEs span **`1.42 to 2.62` standard deviations per 15 months** (`1.42 to 2.56` SD in `manuscript_target_n6`; `0.77 to 2.62` SD across all `144` global rows), confirming low statistical power rather than evidence of absence.
 
 | Family (`n` types) | Depth | Metric | Model | `Effect_15mo_SD` | `SE` | `MDE80_15mo_SD` | `pvalue` |
 |---|---:|---|---|---:|---:|---:|---:|
@@ -43,7 +43,7 @@ Across all rarefied depths (`500`, `1500`, `3000` UMIs) and unrarefied `full` de
 | `manuscript_target_n6` (8) | `full` | `shannon_entropy` | `age_sex_library` | `+0.2969` | `0.2968` | `0.9336` | `0.3433` |
 | `manuscript_target_n6` (8) | `full` | `deman_kl_sqrt` | `age_sex_library` | `-0.9894` | `0.3408` | `1.0721` | `0.0175` |
 
-Only one global model across the entire grid (`manuscript_target_n6`, `full` depth, `deman_kl_sqrt`, `age_sex_library`) reaches nominal `p = 0.0175` (`-0.9894 SD`), and it disappears when rarefied (`1500` `p = 0.0825`, `3000` `p = 0.1060`), when `sqrt` is omitted (`deman_kl_methods` `p = 0.1221`, `shannon_entropy` `p = 0.3433`), or when `sex` is omitted (`deman_kl_sqrt age_only` `p = 0.6898`).
+Across all `144` global rows, only the `4` eligibility-family rows of the unrarefied `full`-depth `deman_kl_sqrt` `age_sex_library` specification reach `p < 0.05` (`manuscript_target_n6`: `-0.9894 SD, p = 0.0175`; `manuscript_target_include_fibroblast_n5`: `-0.9538 SD, p = 0.0270`; `all_mature_eligible_n6`: `-0.9948 SD, p = 0.0174`; `all_mature_eligible_n5`: `-1.0076 SD, p = 0.0150`), and all `4` disappear when rarefied (`1500` `p = 0.0825 to 0.1407`, `3000` `p = 0.1060 to 0.1594`), when `sqrt` is omitted (`deman_kl_methods` `p = 0.1221 to 0.2410`, `shannon_entropy` `p = 0.3433 to 0.5626`), or when `sex` is omitted (`deman_kl_sqrt age_only` `p = 0.4463 to 0.7097`; `0.6898` in `manuscript_target_n6`).
 
 ---
 
@@ -54,12 +54,12 @@ At rarefied `1500` UMIs in `all_mature_eligible_n6` (`age_sex` model, `m = 11`):
 | Cell Type | `n` Mice | `shannon` Slope/mo (`SE`) | `12mo` MDE80 | `p` | `q_bh` | `age_only p` (`q_bh`) |
 |---|---:|---:|---:|---:|---:|---:|
 | `CD8-positive, alpha-beta T cell` | `8` | `+0.01724` (`0.00310`) | `0.1300` | `0.00260` | `0.0286` | `0.0665` (`0.2779`) |
-| `bronchial smooth muscle cell` | `9` | `-0.00759` (`0.00210`) | `0.0844` | `0.01112` | `0.0611` | `0.0216` (`0.2380`) |
-| `B cell` | `9` | `+0.01041` (`0.00337`) | `0.1357` | `0.02148` | `0.0788` | `0.2282` (`deman_kl`) |
-| `vein endothelial cell` | `7` | `-0.00818` (`0.00293`) | `0.1307` | `0.04916` | `0.1352` | `0.6600` (`full`) |
-| `alveolar macrophage` | `9` | `-0.00014` (`0.00629`) | `0.2532` | `0.9830` | `0.9979` | - |
+| `bronchial smooth muscle cell` | `9` | `-0.00759` (`0.00210`) | `0.0844` | `0.01111` | `0.0611` | `0.0216` (`0.2380`) |
+| `B cell` | `9` | `+0.01041` (`0.00337`) | `0.1357` | `0.02148` | `0.0788` | `0.1011` (`0.2779`) |
+| `vein endothelial cell` | `7` | `-0.00818` (`0.00293`) | `0.1307` | `0.04916` | `0.1352` | `0.0858` (`0.2779`) |
+| `alveolar macrophage` | `9` | `-0.00014` (`0.00629`) | `0.2532` | `0.9830` | `0.9979` | `0.6880` (`0.7568`) |
 | `classical monocyte` | `10` | `-0.00001` (`0.00360`) | `0.1409` | `0.9979` | `0.9979` | `0.6281` (`0.7568`) |
-| `fibroblast of lung` (`n>=5` arm) | `5` | `+0.02384` (`0.01941`) | `1.2493` | `0.3444` | `0.6198` (`m=9`) | - |
+| `fibroblast of lung` (`n>=5` arm) | `5` | `+0.02384` (`0.01941`) | `1.2493` | `0.3444` | `0.6198` (`m=9`) | `0.7707` (`0.7707`) |
 
 Two structural artifacts explain why per-cell-type `q < 0.05` hits are unstable across specifications:
 1. **`CD8-positive, alpha-beta T cell` (`+0.0172/mo`, `age_sex q = 0.0286` at `1500`; `0.0208` in `m = 8`)** goes in the **opposite** direction of `bronchial smooth muscle cell` (`-0.0076/mo`, `q = 0.0445` in `m = 8`) and depends directly on sex collinearity: at `18m`, male mice (`18-M-52/53`) have lower Shannon entropy (`5.7081` and `5.6926`) than females (`18-F-51` `5.8700`, `21-F-54/55` `5.8889` and `5.8668`) and `30m` males (`5.8665` to `5.9793`). With `21m` 100% female and `30m` 100% male, fitting `sex_male` absorbs `-0.18` baseline male difference into an apparent upward slope; in `age_only`, **`CD8+` has zero `q < 0.05` hits at any depth (`q = 0.087 to 0.278`)**.

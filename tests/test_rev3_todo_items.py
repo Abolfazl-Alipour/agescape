@@ -119,6 +119,7 @@ def test_item6_bayesian_vector_mature_only_deliverables():
     assert len(freq) == 10 and len(post) == 507
     txt = (REPO / "report" / "cross-species-bayesian-vector-mature-only.md").read_text(encoding="utf-8")
     assert "0.0389" in txt and "0.7068" in txt and "male_ge_24m" in txt
+    assert "0.2775" not in txt
     assert "\u2014" not in txt and "\u2013" not in txt
 
 
@@ -183,3 +184,12 @@ def test_item8_randomness_variability_deliverables():
     ]:
         assert tok in txt
     assert "\u2014" not in txt and "\u2013" not in txt
+
+
+def test_requirements_ci_includes_all_test_imports():
+    req = (REPO / "requirements-ci.txt").read_text(encoding="utf-8")
+    for pkg in ["scanpy", "h5py", "rdata", "anndata", "matplotlib", "pytest"]:
+        assert pkg in req
+    nmr_txt = (RESULTS / "rev3-laca-nmr-verification-REPORT.md").read_text(encoding="utf-8")
+    assert "PRJNA1058087" in nmr_txt and "Myotis pilosus" in nmr_txt
+    assert "\u2014" not in nmr_txt and "\u2013" not in nmr_txt

@@ -7,3 +7,6 @@ openpyxl>=3.1
 anndata>=0.10
 matplotlib>=3.8
 pytest>=8.0
+scanpy>=1.10
+h5py>=3.10
+rdata>=1.0
