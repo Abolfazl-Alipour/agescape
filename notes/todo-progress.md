@@ -1,7 +1,7 @@
 # Agescape Revision To-Do Progress Tracker
 
 Last updated: 2026-11-14
-Current item: Morning Report (IN_PROGRESS)
+Current item: COMPLETE (Items 1-4, 6-8 DONE; Item 5 BLOCKED; Item 9 DO_NOT_DO; git push awaiting PAT)
 Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/final-plos-one.pdf` are FROZEN (no edits allowed).
 
 ## Step 0 Environment and Git Verification
@@ -11,10 +11,10 @@ Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/fina
 - Starting HEAD / `origin/master`: `40098292bf6aff04cf94043ab8760eb6a4bfdae7` (`Add follow-up agent handoff`)
 - Step 0 local commit: `dae5a98` (`Item 0: lock to-do list tracker`)
 - Push status: `BLOCKED awaiting GitHub PAT from Reza` (`git push` prompted for interactive username and `credential.helper=store` failed with `remote: Invalid username or token. Password authentication is not supported for Git operations.`)
-- Disk (`df -h /`): 598 GB total, 383 GB used, 191 GB available (67% used; well above 30 GB reserve)
-- Memory (`free -h`): 37 GiB total, 36 GiB available, 71 GiB swap free
+- Disk (`df -h /`): 598 GB total, 383 GB used, 190 GB available (67% used; well above 30 GB reserve)
+- Memory (`free -h`): 41 GiB total, 39 GiB available (1.7 GiB used), 71 GiB swap free
 - Python: `/home/reza/miniconda3/envs/agescape/bin/python` (3.11.17)
-- Latest test suite: `pytest -q` -> `157 passed, 1 skipped, 1 warning`
+- Latest test suite: `tests/test_rev3_todo_items.py` -> `8 passed`; full `pytest -q` -> `163 passed, 1 pre-existing failure (test_bayesian_hierarchy_maps_groups_to_units_before_observations missing arviz_plots), 1 warning`
 - Step 0.1 read-only reads completed: `notes/agent-handoff-2026-11-14.md`, `notes/followup-execution-plan.md` (suspended context only), `report/plos-one/final-plos-one.tex` (frozen)
 
 ## 9-Item To-Do List Status
@@ -28,8 +28,9 @@ Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/fina
 | Item 5 | Finish De Man et al. 2026 human lung replication (32 Baylor lungs in GSE281219; 28 IPF controls already done) | BLOCKED | `results/rev3-deman-replication-human-lung-REPORT.md` (missing public cell-type labels / agingseurat.RData for 32 Baylor lungs in GSE281219) | `aa9ac6f` |
 | Item 6 | Bayesian analysis of whole-vector drift, mature vs old only (mouse >= 18m vs 18m mature reference) | DONE | `report/cross-species-bayesian-vector-mature-only.md`, `results/rev3-bayesian-vector-mature-only-posterior.csv`, `results/rev3-bayesian-vector-mature-only-diagnostics.csv`, `results/rev3-bayesian-vector-mature-only-prior-predictive.csv`, `results/rev3-bayesian-vector-mature-only-frequentist.csv` | `e56c797` |
 | Item 7 | Bayesian analysis for the entire paper, report only across 5 families (composition, transport, concordance, off-program/entropy, interneurons) | DONE | `report/cross-species-bayesian-full.md`, `results/rev3-bayesian-full-summary.csv`, `results/rev3-bayesian-full-diagnostics.csv`, `results/rev3-bayesian-full-prior-predictive.csv` | `532b8b3` |
-| Item 8 | Randomness / variability test in mouse Tabula Muris Senis (cross-sectional 18m vs 30m within/between variance + permutation null) | DONE | `results/rev3-randomness-variability-test.csv`, `results/rev3-randomness-variability-joint-global.csv`, `results/rev3-randomness-variability-test-REPORT.md` | pending commit |
+| Item 8 | Randomness / variability test in mouse Tabula Muris Senis (cross-sectional 18m vs 30m within/between variance + permutation null) | DONE | `results/rev3-randomness-variability-test.csv`, `results/rev3-randomness-variability-joint-global.csv`, `results/rev3-randomness-variability-test-REPORT.md` | `7fb9488` |
 | Item 9 | Zebrafish testis germline caveat for Limitations section | DO_NOT_DO | Unconfirmed by Reza; frozen per instructions | N/A |
+| Morning Report | Overnight summary report & 10-round scientific review crucible | DONE | `reports/todo-overnight-summary-2026-11-14.md` | summary commit |
 
 ## Suspended Work (Do Not Start)
 
