@@ -1,0 +1,2465 @@
+{
+  "created": "2026-11-14",
+  "base_revision": "8cd58bdfc0921636ba2846f898fc6d0ab96d3ccb",
+  "scope": {
+    "metadata_and_public_access_only": true,
+    "expression_matrices_downloaded": false,
+    "biological_outcomes_analyzed": false,
+    "heavy_jobs_run": false,
+    "external_data_root": "../agescape-revision-data/ovary-metadata",
+    "cohorts": [
+      "GSE202601",
+      "GSE329417"
+    ],
+    "note": "Only SOFT/file inventories, primary text, 439 KB of Jin cell metadata, and 15.5 KB of GSE329417 donor/sample metadata were acquired. Large objects were checked by HEAD/filelist only."
+  },
+  "common_analysis_rules": {
+    "inferential_unit": "donor; nuclei, tissue pieces and technical replicates are not independent donors",
+    "cross_cohort_pooling": "prohibited; never pool Jin with GSE329417 or construct a premenopausal comparison",
+    "causal_language": "All designs are cross-sectional associations. Do not call RNA-chromatin coupling chronological causal coupling.",
+    "future_resources": "Any later acquisition/analysis requires parent approval and sequential resource-guarded jobs; 30 GB disk reserve and <=8 GB analysis memory. Do not use either series RAW tar by default."
+  },
+  "GSE202601": {
+    "title": "Molecular and genetic insights into human ovarian aging from single-nuclei multi-omics analyses",
+    "citation": "Jin C, Wang X, Yang J, et al. Nature Aging 5, 275-290 (2025); first published 2024-11-22.",
+    "doi": "10.1038/s43587-024-00762-5",
+    "pubmed_id": "39578560",
+    "pmcid": "PMC11839473",
+    "geo_status": "Public on 2023-03-12; last update 2025-03-11",
+    "verdicts": {
+      "metadata_access": "ready_with_conditions",
+      "eight_donor_young_vs_reproductively_aged_contrast": "ready_with_conditions: four young and four aged donors; validate counts/barcodes and resolve or bracket the ovary5 47/49 metadata conflict without changing group labels",
+      "continuous_chronological_age_model": "not_planned",
+      "same_nucleus_RNA_chromatin_coupling": "blocked: separate snRNA and snATAC assays/BioSamples, not matched nuclei",
+      "donor_matched_exploratory_RNA_chromatin_linkage": "blocked_pending_validation: permissible only after valid GRCh38 peak-gene links and harmonized cell types are established; donor-matched pseudobulk only, exploratory and non-causal"
+    },
+    "sources": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_family.soft.gz",
+        "used_for": "Series and all 16 GSM records: exact GEO ages, sex, tissue, assay, processing and raw file links",
+        "size_bytes": 3167,
+        "sha256": "b340a687e23a3b8db499dcecd4b5a51c4936892bce04122a06adad611f1c2483",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE202601/GSE202601_family.soft.gz"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/filelist.txt",
+        "used_for": "Exact raw inventory and file sizes",
+        "size_bytes": 3003,
+        "sha256": "3c4fd89320b44aee73ac3b4ff7209827371e43253556ecc39d588620788edd9f",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE202601/filelist.txt"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snRNA-seq_metadata.txt.gz",
+        "used_for": "Nucleus counts, donor labels, groups, annotations and ovary47 discrepancy",
+        "size_bytes": 238912,
+        "sha256": "58edc9fec6fba66715b3a3c273e413f73191b8c392e5ec5db55444a8a6d93423",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE202601/GSE202601_human_ovary_snRNA-seq_metadata.txt.gz"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snATAC-seq_metadata.txt.gz",
+        "used_for": "Nucleus counts, donor labels, groups and annotations",
+        "size_bytes": 210481,
+        "sha256": "65b2fa4fc7097823dcf6cbf56194f866a4ea9a9f162a90f79a29cd904483f248",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE202601/GSE202601_human_ovary_snATAC-seq_metadata.txt.gz"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11839473/fullTextXML",
+        "used_for": "Primary publication, normal histology, procurement, assay pairing, processing and linkage methods",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE202601/PMC11839473.xml",
+        "size_bytes": 241301,
+        "sha256": "4992c04fd3b773d396b850d48f344be92c5372cd18524d7855b5cdd9a73c66cc"
+      },
+      {
+        "url": "https://www.nature.com/articles/s43587-024-00762-5",
+        "used_for": "Primary paper and publication status"
+      }
+    ],
+    "design": {
+      "donors": 8,
+      "rna_libraries": 8,
+      "atac_libraries": 8,
+      "young": {
+        "n": 4,
+        "paper_range": "23-29",
+        "exact_geo_ages": [
+          23,
+          27,
+          28,
+          29
+        ]
+      },
+      "reproductively_aged": {
+        "n": 4,
+        "paper_range": "49-54",
+        "exact_geo_ages": [
+          49,
+          51,
+          52,
+          54
+        ],
+        "metadata_conflict": "snRNA cell metadata labels ovary5 as ovary47"
+      },
+      "sex": "female for all 16 GSM records",
+      "tissue": "ovary for all 16 GSM records",
+      "histology": "Primary paper states all eight had normal ovarian histology; H&E was performed on all eight (3-5 slides/sample).",
+      "procurement": "Fresh-frozen normal ovaries purchased from BioIVT and Cureline; sudden-death or bilateral salpingo-oophorectomy sources; frozen within 16 h post-mortem/post-surgery.",
+      "assays": "Separate 10x Chromium 3prime v3 snRNA and 10x Chromium ATAC v1 snATAC preparations, NextSeq 550, GRCh38. One library of each assay per donor.",
+      "pairing_conclusion": "Donor/tissue matched, not same-nucleus RNA+ATAC multiome. Distinct BioSample accessions and assay-specific extraction protocols confirm separate libraries."
+    },
+    "donors": [
+      {
+        "donor": "ovary1",
+        "rna_gsm": "GSM6125533",
+        "atac_gsm": "GSM6125541",
+        "rna_biosample": "SAMN28173476",
+        "atac_biosample": "SAMN28173468",
+        "geo_exact_age_years": 23,
+        "snrna_metadata_age_years": 23,
+        "snatac_metadata_age_years": 23,
+        "exact_age_status": "consistent",
+        "group": "young",
+        "released_group_label": "young",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 9151,
+        "snatac_metadata_nuclei": 4488,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125533/suppl/GSM6125533_ovary1_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 25500068,
+          "released_time": "05/07/2022 14:24:33",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125541/suppl/GSM6125541_ovary1_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 12694738,
+          "released_time": "05/07/2022 13:57:01",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125541/suppl/GSM6125541_ovary1_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1780831731,
+          "released_time": "05/07/2022 15:12:46",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125541/suppl/GSM6125541_ovary1_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 1036411,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary2",
+        "rna_gsm": "GSM6125534",
+        "atac_gsm": "GSM6125542",
+        "rna_biosample": "SAMN28173475",
+        "atac_biosample": "SAMN28173467",
+        "geo_exact_age_years": 27,
+        "snrna_metadata_age_years": 27,
+        "snatac_metadata_age_years": 27,
+        "exact_age_status": "consistent",
+        "group": "young",
+        "released_group_label": "young",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 4615,
+        "snatac_metadata_nuclei": 6466,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125534/suppl/GSM6125534_ovary2_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 12986146,
+          "released_time": "05/07/2022 14:24:47",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125542/suppl/GSM6125542_ovary2_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 36892661,
+          "released_time": "05/07/2022 13:57:33",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125542/suppl/GSM6125542_ovary2_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1474130525,
+          "released_time": "05/07/2022 14:17:13",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125542/suppl/GSM6125542_ovary2_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 950174,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary3",
+        "rna_gsm": "GSM6125535",
+        "atac_gsm": "GSM6125543",
+        "rna_biosample": "SAMN28173474",
+        "atac_biosample": "SAMN28173466",
+        "geo_exact_age_years": 28,
+        "snrna_metadata_age_years": 28,
+        "snatac_metadata_age_years": 28,
+        "exact_age_status": "consistent",
+        "group": "young",
+        "released_group_label": "young",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 5916,
+        "snatac_metadata_nuclei": 4375,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125535/suppl/GSM6125535_ovary3_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 15001166,
+          "released_time": "05/07/2022 14:48:31",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125543/suppl/GSM6125543_ovary3_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 6639184,
+          "released_time": "05/07/2022 14:24:54",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125543/suppl/GSM6125543_ovary3_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1813549077,
+          "released_time": "05/07/2022 14:47:59",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125543/suppl/GSM6125543_ovary3_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 1170046,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary4",
+        "rna_gsm": "GSM6125536",
+        "atac_gsm": "GSM6125544",
+        "rna_biosample": "SAMN28173473",
+        "atac_biosample": "SAMN28173465",
+        "geo_exact_age_years": 29,
+        "snrna_metadata_age_years": 29,
+        "snatac_metadata_age_years": 29,
+        "exact_age_status": "consistent",
+        "group": "young",
+        "released_group_label": "young",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 3852,
+        "snatac_metadata_nuclei": 4675,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125536/suppl/GSM6125536_ovary4_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 10261190,
+          "released_time": "05/07/2022 14:50:07",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125544/suppl/GSM6125544_ovary4_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 23428410,
+          "released_time": "05/07/2022 14:49:54",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125544/suppl/GSM6125544_ovary4_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1352851643,
+          "released_time": "05/07/2022 15:08:53",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125544/suppl/GSM6125544_ovary4_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 907896,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary5",
+        "rna_gsm": "GSM6125537",
+        "atac_gsm": "GSM6125545",
+        "rna_biosample": "SAMN28173472",
+        "atac_biosample": "SAMN28173464",
+        "geo_exact_age_years": 49,
+        "snrna_metadata_age_years": 47,
+        "snatac_metadata_age_years": 49,
+        "exact_age_status": "CONFLICT: GEO/snATAC say 49; snRNA metadata says ovary47; primary paper gives aged range 49-54",
+        "group": "reproductively_aged",
+        "released_group_label": "old",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 4724,
+        "snatac_metadata_nuclei": 5660,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125537/suppl/GSM6125537_ovary5_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 15959899,
+          "released_time": "05/07/2022 15:14:06",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125545/suppl/GSM6125545_ovary5_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 34027296,
+          "released_time": "05/07/2022 15:14:14",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125545/suppl/GSM6125545_ovary5_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1268312518,
+          "released_time": "05/07/2022 16:18:03",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125545/suppl/GSM6125545_ovary5_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 849795,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary6",
+        "rna_gsm": "GSM6125538",
+        "atac_gsm": "GSM6125546",
+        "rna_biosample": "SAMN28173471",
+        "atac_biosample": "SAMN28173463",
+        "geo_exact_age_years": 51,
+        "snrna_metadata_age_years": 51,
+        "snatac_metadata_age_years": 51,
+        "exact_age_status": "consistent",
+        "group": "reproductively_aged",
+        "released_group_label": "old",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 4930,
+        "snatac_metadata_nuclei": 6183,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125538/suppl/GSM6125538_ovary6_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 11194813,
+          "released_time": "05/07/2022 15:15:12",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125546/suppl/GSM6125546_ovary6_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 28276049,
+          "released_time": "05/07/2022 15:14:49",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125546/suppl/GSM6125546_ovary6_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1345584431,
+          "released_time": "05/07/2022 17:19:27",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125546/suppl/GSM6125546_ovary6_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 903581,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary7",
+        "rna_gsm": "GSM6125539",
+        "atac_gsm": "GSM6125547",
+        "rna_biosample": "SAMN28173470",
+        "atac_biosample": "SAMN28173462",
+        "geo_exact_age_years": 52,
+        "snrna_metadata_age_years": 52,
+        "snatac_metadata_age_years": 52,
+        "exact_age_status": "consistent",
+        "group": "reproductively_aged",
+        "released_group_label": "old",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 4908,
+        "snatac_metadata_nuclei": 5423,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125539/suppl/GSM6125539_ovary7_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 13820952,
+          "released_time": "05/07/2022 15:41:36",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125547/suppl/GSM6125547_ovary7_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 13469751,
+          "released_time": "05/07/2022 17:03:38",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125547/suppl/GSM6125547_ovary7_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1498233980,
+          "released_time": "05/07/2022 15:34:54",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125547/suppl/GSM6125547_ovary7_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 1047494,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      },
+      {
+        "donor": "ovary8",
+        "rna_gsm": "GSM6125540",
+        "atac_gsm": "GSM6125548",
+        "rna_biosample": "SAMN28173469",
+        "atac_biosample": "SAMN28173461",
+        "geo_exact_age_years": 54,
+        "snrna_metadata_age_years": 54,
+        "snatac_metadata_age_years": 54,
+        "exact_age_status": "consistent",
+        "group": "reproductively_aged",
+        "released_group_label": "old",
+        "sex": "female",
+        "tissue": "ovary",
+        "histology": "normal ovarian histology (primary paper; all eight)",
+        "modality_pairing": "Same donor and flash-frozen tissue, but separate RNA and ATAC libraries/BioSamples; not same-nucleus paired multiome.",
+        "snrna_metadata_nuclei": 4472,
+        "snatac_metadata_nuclei": 4280,
+        "rna_filtered_count_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125540/suppl/GSM6125540_ovary8_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "size_bytes": 13564001,
+          "released_time": "05/07/2022 16:03:20",
+          "type": "H5"
+        },
+        "atac_filtered_peak_matrix": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125548/suppl/GSM6125548_ovary8_snATAC-seq_filtered_peak_bc_matrix.h5",
+          "size_bytes": 15221871,
+          "released_time": "05/07/2022 16:03:03",
+          "type": "H5"
+        },
+        "atac_fragments": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125548/suppl/GSM6125548_ovary8_snATAC-seq_fragments.tsv.gz",
+          "size_bytes": 1537816458,
+          "released_time": "05/07/2022 16:02:32",
+          "type": "TSV"
+        },
+        "atac_fragment_index": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125548/suppl/GSM6125548_ovary8_snATAC-seq_fragments.tsv.gz.tbi.gz",
+          "size_bytes": 1070986,
+          "released_time": "05/10/2022 07:14:41",
+          "type": "TBI"
+        }
+      }
+    ],
+    "raw_counts": {
+      "status": "public Cell Ranger filtered feature-barcode H5 for each RNA donor and filtered peak-barcode H5 plus fragments/index for each ATAC donor",
+      "series_raw_tar": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_RAW.tar",
+        "size_bytes": 12368220160,
+        "released_time": "03/12/2023 17:12:14",
+        "type": "TAR",
+        "downloaded": false
+      },
+      "validation_not_done": "No matrix was downloaded; finite/nonnegative/integer values, dimensions and barcode joins remain future gates."
+    },
+    "annotations": {
+      "snrna": {
+        "metadata_rows": 42568,
+        "fields": [
+          "age",
+          "group",
+          "celltype1",
+          "celltype2"
+        ],
+        "broad_celltype2_labels": [
+          "BEC",
+          "EpiC",
+          "GC",
+          "IC",
+          "LEC",
+          "SC",
+          "SMC",
+          "TC"
+        ],
+        "note": "celltype1 has _Y/_O group suffixes and must not be treated as extra independent cell types."
+      },
+      "snatac": {
+        "metadata_rows": 41550,
+        "fields": [
+          "age",
+          "group",
+          "celltype"
+        ],
+        "labels": [
+          "EC",
+          "EpiC",
+          "GC",
+          "IC",
+          "SC",
+          "SMC",
+          "TC"
+        ],
+        "note": "Seven transferred RNA-derived classes; EC combines endothelial labels unlike RNA BEC/LEC. Harmonize before cross-modality work."
+      }
+    },
+    "public_processed_objects": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snRNA-seq_count.rds.gz",
+        "content": "snRNA count RDS; not downloaded or inspected",
+        "size_bytes": 154322091,
+        "downloaded": false
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snATAC-seq_count.rds.gz",
+        "content": "snATAC count RDS; not downloaded or inspected",
+        "size_bytes": 1072649963,
+        "downloaded": false
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snRNA-seq_metadata.txt.gz",
+        "content": "42,568 nucleus metadata rows with age/group/celltype1/celltype2",
+        "size_bytes": 238912,
+        "downloaded": true
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202601/suppl/GSE202601_human_ovary_snATAC-seq_metadata.txt.gz",
+        "content": "41,550 nucleus metadata rows with age/group/celltype",
+        "size_bytes": 210481,
+        "downloaded": true
+      }
+    ],
+    "peak_gene_links": {
+      "status": "not_released_as_a_standalone_link_table_in_the_GEO_file_inventory",
+      "paper_method": "Cicero co-accessible cis-regulatory networks within 500 kb and ATAC gene activity from gene bodies plus 2 kb upstream; these are inferred links, not experimental causal evidence.",
+      "requirement": "Validate exact peak coordinates/genome build, gene identifiers, link version and cell-type mapping before any donor-matched exploratory linkage."
+    },
+    "analysis_plan": {
+      "primary": "Only reproductively_aged-minus-young donor-level contrasts, four versus four. Use each donor once per endpoint; no cell-level p-values and no continuous-age slope.",
+      "eligibility": "Before outcomes, validate raw counts and barcode/annotation joins; require >=20 annotated nuclei per donor-cell type and all four donors per group for the small primary contrast, otherwise descriptive only. P1 needs detected up/down genes; Hellinger needs >=50 cross-fitted young-reference nuclei and >=20 passing nuclei per scored donor.",
+      "endpoints": "Keep P1, CLR composition, pseudobulk gene expression and Hellinger separate. Report old-minus-young effects with uncertainty and BH within each prespecified endpoint/cell-type family. No outcome has been computed here.",
+      "sensitivity": "Check procurement/PMI metadata and technical depth before modeling; do not add unidentifiable covariates to four-versus-four models. The ovary5 47/49 discrepancy does not alter its aged group but must remain explicit and blocks any exact-age use for that donor.",
+      "coupling": "No same-nucleus coupling. If valid links are later established, aggregate RNA and linked peak accessibility within donor and harmonized cell type and describe exploratory donor-matched associations only; never chronological causal coupling."
+    }
+  },
+  "GSE329417": {
+    "title": "Single-nucleus profiling reveals age-associated remodeling opposed by parity in the postmenopausal human ovary",
+    "citation": "Byrne J, Martin N, Soygur B, et al. bioRxiv 2026.05.11.724381.",
+    "doi": "10.64898/2026.05.11.724381",
+    "pubmed_id": "42182191",
+    "pmcid": "PMC13193008",
+    "publication_status": "Preprint, not a verified peer-reviewed journal article. bioRxiv DOI first posted 2026-05-14; v2 is available. PMC XML labels it preprint. Crossref still calls it posted-content/subtype preprint with no journal container, while recording accepted 2026-11-01; this does not establish journal publication.",
+    "geo_status": "Public on 2026-05-11; last update 2026-08-03",
+    "verdicts": {
+      "metadata_access": "ready_with_conditions",
+      "within_postmenopausal_age_associations": "ready_with_conditions: 28 exact-age donors (50-84) and full 64-sample donor/plex mapping; validate corrected counts, atlas joins, per-donor eligibility and identifiable covariates before outcomes",
+      "descriptive_qc": "ready",
+      "premenopausal_or_cross_cohort_contrast": "blocked_by_design: all donors are postmenopausal and pooling with Jin is prohibited"
+    },
+    "sources": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_family.soft.gz",
+        "used_for": "Four GEO multiplexed library records, assay, processing, raw count-layer and object descriptions",
+        "size_bytes": 6317,
+        "sha256": "2e9d2f86edc9e2e60d95b847c7ad61ef7b3eaa7c87ecf0e5adc428c479f36292",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE329417/GSE329417_family.soft.gz"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/filelist.txt",
+        "used_for": "64 CellBender H5AD files, four multiconfig files and exact file sizes",
+        "size_bytes": 5386,
+        "sha256": "c2de31f79735a184ea5e47d9c742d7c6535c010935cc80e19143e8aef1c731eb",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE329417/filelist.txt"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_public_donor_metadata.tsv.gz",
+        "used_for": "28 exact ages and public clinical covariates",
+        "size_bytes": 809,
+        "sha256": "0bb4462487eeff9ac6b76b7fb83b22f6cebf952c34db0f85d6bed05d990dc048",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE329417/GSE329417_human_ovary_snucRNAseq_public_donor_metadata.tsv.gz"
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_10xFlex_sample_processing_metadata.xlsx",
+        "used_for": "64-sample demultiplexing, plex/barcode mapping and shared-aliquot note",
+        "size_bytes": 14658,
+        "sha256": "fc8fe8c0493d7319468ec74399a595c5a62b1304b1da696bf33a7f9381d69623",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE329417/GSE329417_human_ovary_snucRNAseq_10xFlex_sample_processing_metadata.xlsx"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13193008/fullTextXML",
+        "used_for": "Primary preprint, cohort/histology, donor-unit conventions and publication type",
+        "local_path": "../agescape-revision-data/ovary-metadata/GSE329417/PMC13193008.xml",
+        "size_bytes": 187793,
+        "sha256": "8d9544161171393a34d81dc24ea9bfb5048fce6dc5e50eee312a661150748be4"
+      },
+      {
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.11.724381v2.full",
+        "used_for": "Current preprint version and data availability"
+      },
+      {
+        "url": "https://api.crossref.org/works/10.64898/2026.05.11.724381",
+        "used_for": "DOI posted-content status and accepted-date nuance"
+      }
+    ],
+    "design": {
+      "donors": 28,
+      "demultiplexed_tissue_piece_samples": 64,
+      "geo_libraries": 4,
+      "geo_library_map": {
+        "GSM9703623": "plex 1 (16 samples)",
+        "GSM9703624": "plex 2 (16 samples)",
+        "GSM9703625": "plex 3 (16 samples)",
+        "GSM9703626": "plex 4 (16 samples)"
+      },
+      "exact_age_range": [
+        50,
+        84
+      ],
+      "assay": "10x Chromium Fixed RNA Profiling/Flex multiplexed snucRNA-seq, 16 unique probe barcodes per plex; Element AVITI; Cell Ranger multi 8.0.0; GRCh38-2024-A.",
+      "sex_tissue_histology": "Women with postmenopausal ovary, cortex and medulla. Ovarian neoplasia and endometriosis excluded; pathologist confirmed no premalignant/malignant ovarian pathology. Non-ovarian benign/premalignant/malignant indications remain and are public covariates.",
+      "technical_replicate_caveat": "Processing samples 3_4 and 16_4 (SN_0086) shared one digested tissue/nuclei isolation aliquot; do not count them as independent biological samples. The log says all other samples used independent tissue chunks/dissociations.",
+      "mapping_validation": "All 64 processing rows matched one unique released H5AD filename, one of four GSMs, one donor and one exact age. Donor tissue-piece counts sum to 64."
+    },
+    "donors": [
+      {
+        "donor": "SN_0076",
+        "exact_age_years": 56,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 3,
+        "sample_ids": [
+          "1_1",
+          "2_1",
+          "1_4"
+        ],
+        "plexes": [
+          1,
+          4
+        ],
+        "BMI": 23.0,
+        "parity_live_births": 3,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0079",
+        "exact_age_years": 63,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "3_1",
+          "4_1"
+        ],
+        "plexes": [
+          1
+        ],
+        "BMI": 28.9,
+        "parity_live_births": 3,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0080",
+        "exact_age_years": 57,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "5_1",
+          "1_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 41.5,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "Y",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0082",
+        "exact_age_years": 54,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "6_1",
+          "2_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 33.5,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0083",
+        "exact_age_years": 63,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "7_1",
+          "3_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 30.0,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Pre-malignant",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0085",
+        "exact_age_years": 70,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 4,
+        "sample_ids": [
+          "8_1",
+          "4_2",
+          "1_3",
+          "2_4"
+        ],
+        "plexes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "BMI": 27.8,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 6,
+        "sample_ids": [
+          "9_1",
+          "5_2",
+          "14_2",
+          "2_3",
+          "3_4",
+          "16_4"
+        ],
+        "plexes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "BMI": 25.1,
+        "parity_live_births": 3,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0087",
+        "exact_age_years": 68,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "10_1",
+          "6_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 24.4,
+        "parity_live_births": 4,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0088",
+        "exact_age_years": 60,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "11_1",
+          "7_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 26.7,
+        "parity_live_births": 5,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0092",
+        "exact_age_years": 63,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "12_1",
+          "8_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 22.5,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Pre-malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0093",
+        "exact_age_years": 65,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "13_1",
+          "9_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 30.5,
+        "parity_live_births": 1,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0094",
+        "exact_age_years": 63,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "14_1",
+          "10_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 42.8,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0095",
+        "exact_age_years": 69,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "15_1",
+          "11_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 22.7,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0106",
+        "exact_age_years": 63,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "16_1",
+          "12_2"
+        ],
+        "plexes": [
+          1,
+          2
+        ],
+        "BMI": 38.2,
+        "parity_live_births": 1,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0153",
+        "exact_age_years": 84,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 1,
+        "sample_ids": [
+          "13_2"
+        ],
+        "plexes": [
+          2
+        ],
+        "BMI": 27.9,
+        "parity_live_births": 1,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0155",
+        "exact_age_years": 58,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "15_2",
+          "3_3"
+        ],
+        "plexes": [
+          2,
+          3
+        ],
+        "BMI": 30.2,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0161",
+        "exact_age_years": 74,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "16_2",
+          "4_3"
+        ],
+        "plexes": [
+          2,
+          3
+        ],
+        "BMI": 28.0,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0163",
+        "exact_age_years": 50,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "5_3",
+          "5_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 34.2,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0164",
+        "exact_age_years": 54,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "6_3",
+          "6_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 19.8,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0168",
+        "exact_age_years": 54,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 3,
+        "sample_ids": [
+          "7_3",
+          "9_3",
+          "4_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 25.6,
+        "parity_live_births": 3,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "Y",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0169",
+        "exact_age_years": 71,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "8_3",
+          "7_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 24.4,
+        "parity_live_births": 3,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0170",
+        "exact_age_years": 62,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 1,
+        "sample_ids": [
+          "8_4"
+        ],
+        "plexes": [
+          4
+        ],
+        "BMI": 36.4,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Pre-malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0238",
+        "exact_age_years": 67,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "10_3",
+          "9_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 56.9,
+        "parity_live_births": 1,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0244",
+        "exact_age_years": 65,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "11_3",
+          "10_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 23.0,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Pre-malignant",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0245",
+        "exact_age_years": 75,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "12_3",
+          "11_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 23.4,
+        "parity_live_births": 4,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0249",
+        "exact_age_years": 75,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 4,
+        "sample_ids": [
+          "13_3",
+          "14_3",
+          "12_4",
+          "13_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 23.2,
+        "parity_live_births": 4,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "Y",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0253",
+        "exact_age_years": 61,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "15_3",
+          "14_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 25.8,
+        "parity_live_births": 2,
+        "non_ovarian_cancer_state": "Benign",
+        "smoking_status_former": "No",
+        "ovarian_specific_benign_finding": "N",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      },
+      {
+        "donor": "SN_0263",
+        "exact_age_years": 54,
+        "sex": "female (study population; ovarian tissue from women)",
+        "tissue": "postmenopausal ovary; pieces contain cortex and medulla",
+        "tissue_pieces_analyzed": 2,
+        "sample_ids": [
+          "16_3",
+          "15_4"
+        ],
+        "plexes": [
+          3,
+          4
+        ],
+        "BMI": 29.3,
+        "parity_live_births": 0,
+        "non_ovarian_cancer_state": "Malignant",
+        "smoking_status_former": "Former",
+        "ovarian_specific_benign_finding": "Y",
+        "ovarian_pathology": "No ovarian neoplasia; pathologist-confirmed free of premalignant/malignant ovarian pathology; endometriosis excluded."
+      }
+    ],
+    "samples": [
+      {
+        "processing_sample_id": "1_1",
+        "donor": "SN_0076",
+        "exact_age_years": 56,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_001",
+        "target_nuclei_loaded": 2000,
+        "tissue_mass_processed_mg": 20.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0076_1_p1_cellbender.h5ad",
+          "size_bytes": 19013086,
+          "released_time": "04/24/2026 21:55:15",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "2_1",
+        "donor": "SN_0076",
+        "exact_age_years": 56,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_002",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 24.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0076_2_p1_cellbender.h5ad",
+          "size_bytes": 176126616,
+          "released_time": "04/24/2026 21:55:15",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "3_1",
+        "donor": "SN_0079",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_003",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 28.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0079_1_p1_cellbender.h5ad",
+          "size_bytes": 291461792,
+          "released_time": "04/24/2026 21:55:16",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "4_1",
+        "donor": "SN_0079",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_004",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 21.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0079_2_p1_cellbender.h5ad",
+          "size_bytes": 258284330,
+          "released_time": "04/24/2026 21:55:16",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "5_1",
+        "donor": "SN_0080",
+        "exact_age_years": 57,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_005",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 33.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0080_p1_cellbender.h5ad",
+          "size_bytes": 267670178,
+          "released_time": "04/24/2026 21:55:16",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "6_1",
+        "donor": "SN_0082",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_006",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0082_p1_cellbender.h5ad",
+          "size_bytes": 178312984,
+          "released_time": "04/24/2026 21:55:17",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "7_1",
+        "donor": "SN_0083",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_007",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 21.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0083_p1_cellbender.h5ad",
+          "size_bytes": 131559942,
+          "released_time": "04/24/2026 21:55:17",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "8_1",
+        "donor": "SN_0085",
+        "exact_age_years": 70,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_008",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 18.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0085_p1_cellbender.h5ad",
+          "size_bytes": 79014160,
+          "released_time": "04/24/2026 21:55:17",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "9_1",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_009",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 29.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0086_p1_cellbender.h5ad",
+          "size_bytes": 186127156,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "10_1",
+        "donor": "SN_0087",
+        "exact_age_years": 68,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_010",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 20.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0087_p1_cellbender.h5ad",
+          "size_bytes": 142449628,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "11_1",
+        "donor": "SN_0088",
+        "exact_age_years": 60,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_011",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 20.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0088_p1_cellbender.h5ad",
+          "size_bytes": 284947366,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "12_1",
+        "donor": "SN_0092",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_012",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0092_p1_cellbender.h5ad",
+          "size_bytes": 205798206,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "13_1",
+        "donor": "SN_0093",
+        "exact_age_years": 65,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_013",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0093_p1_cellbender.h5ad",
+          "size_bytes": 104539420,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "14_1",
+        "donor": "SN_0094",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_014",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 18.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0094_p1_cellbender.h5ad",
+          "size_bytes": 407586376,
+          "released_time": "04/24/2026 21:55:21",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "15_1",
+        "donor": "SN_0095",
+        "exact_age_years": 69,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_015",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 24.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0095_p1_cellbender.h5ad",
+          "size_bytes": 286323980,
+          "released_time": "04/24/2026 21:55:21",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "16_1",
+        "donor": "SN_0106",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703623",
+        "plex": 1,
+        "probe_barcode": "BC_016",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 21.9,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_SN_0106_p1_cellbender.h5ad",
+          "size_bytes": 284795812,
+          "released_time": "04/24/2026 21:55:22",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "1_2",
+        "donor": "SN_0080",
+        "exact_age_years": 57,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_001",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 25.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0080_p2_cellbender.h5ad",
+          "size_bytes": 350992866,
+          "released_time": "04/24/2026 21:55:16",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "2_2",
+        "donor": "SN_0082",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_002",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 33.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0082_p2_cellbender.h5ad",
+          "size_bytes": 305612128,
+          "released_time": "04/24/2026 21:55:17",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "3_2",
+        "donor": "SN_0083",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_003",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 30.7,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0083_p2_cellbender.h5ad",
+          "size_bytes": 305349452,
+          "released_time": "04/24/2026 21:55:17",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "4_2",
+        "donor": "SN_0085",
+        "exact_age_years": 70,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_004",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 22.7,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0085_p2_cellbender.h5ad",
+          "size_bytes": 361981784,
+          "released_time": "04/24/2026 21:55:18",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "5_2",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_005",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 30.4,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0086_1_p2_cellbender.h5ad",
+          "size_bytes": 287122902,
+          "released_time": "04/24/2026 21:55:18",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "6_2",
+        "donor": "SN_0087",
+        "exact_age_years": 68,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_006",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 27.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0087_p2_cellbender.h5ad",
+          "size_bytes": 294661120,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "7_2",
+        "donor": "SN_0088",
+        "exact_age_years": 60,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_007",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 24.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0088_p2_cellbender.h5ad",
+          "size_bytes": 327083124,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "8_2",
+        "donor": "SN_0092",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_008",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 28.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0092_p2_cellbender.h5ad",
+          "size_bytes": 183209684,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "9_2",
+        "donor": "SN_0093",
+        "exact_age_years": 65,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_009",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 29.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0093_p2_cellbender.h5ad",
+          "size_bytes": 51853862,
+          "released_time": "04/24/2026 21:55:20",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "10_2",
+        "donor": "SN_0094",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_010",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 34.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0094_p2_cellbender.h5ad",
+          "size_bytes": 210087022,
+          "released_time": "04/24/2026 21:55:21",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "11_2",
+        "donor": "SN_0095",
+        "exact_age_years": 69,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_011",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 20.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0095_p2_cellbender.h5ad",
+          "size_bytes": 349744304,
+          "released_time": "04/24/2026 21:55:22",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "12_2",
+        "donor": "SN_0106",
+        "exact_age_years": 63,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_012",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 14.3,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0106_p2_cellbender.h5ad",
+          "size_bytes": 318005590,
+          "released_time": "04/24/2026 21:55:22",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "13_2",
+        "donor": "SN_0153",
+        "exact_age_years": 84,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_013",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 24.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0153_p2_cellbender.h5ad",
+          "size_bytes": 236025528,
+          "released_time": "04/24/2026 21:55:22",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "14_2",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_014",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 22.7,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0086_2_p2_cellbender.h5ad",
+          "size_bytes": 228347098,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "15_2",
+        "donor": "SN_0155",
+        "exact_age_years": 58,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_015",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 19.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0155_p2_cellbender.h5ad",
+          "size_bytes": 273410156,
+          "released_time": "04/24/2026 21:55:22",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "16_2",
+        "donor": "SN_0161",
+        "exact_age_years": 74,
+        "geo_library_gsm": "GSM9703624",
+        "plex": 2,
+        "probe_barcode": "BC_016",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 23.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_SN_0161_p2_cellbender.h5ad",
+          "size_bytes": 274528184,
+          "released_time": "04/24/2026 21:55:23",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "1_3",
+        "donor": "SN_0085",
+        "exact_age_years": 70,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_001",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 16.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0085_p3_cellbender.h5ad",
+          "size_bytes": 310842860,
+          "released_time": "04/24/2026 21:55:18",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "2_3",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_002",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 28.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0086_p3_cellbender.h5ad",
+          "size_bytes": 226612382,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "3_3",
+        "donor": "SN_0155",
+        "exact_age_years": 58,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_003",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 23.3,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0155_p3_cellbender.h5ad",
+          "size_bytes": 295867648,
+          "released_time": "04/24/2026 21:55:23",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "4_3",
+        "donor": "SN_0161",
+        "exact_age_years": 74,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_004",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 24.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0161_p3_cellbender.h5ad",
+          "size_bytes": 319741710,
+          "released_time": "04/24/2026 21:55:23",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "5_3",
+        "donor": "SN_0163",
+        "exact_age_years": 50,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_005",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 21.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0163_p3_cellbender.h5ad",
+          "size_bytes": 387542796,
+          "released_time": "04/24/2026 21:55:24",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "6_3",
+        "donor": "SN_0164",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_006",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 32.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0164_p3_cellbender.h5ad",
+          "size_bytes": 306160536,
+          "released_time": "04/24/2026 21:55:24",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "7_3",
+        "donor": "SN_0168",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_007",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 21.3,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0168_1_p3_cellbender.h5ad",
+          "size_bytes": 230205906,
+          "released_time": "04/24/2026 21:55:24",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "8_3",
+        "donor": "SN_0169",
+        "exact_age_years": 71,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_008",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 25.3,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0169_p3_cellbender.h5ad",
+          "size_bytes": 319548996,
+          "released_time": "04/24/2026 21:55:25",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "9_3",
+        "donor": "SN_0168",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_009",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 30.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0168_2_p3_cellbender.h5ad",
+          "size_bytes": 201437570,
+          "released_time": "04/24/2026 21:55:25",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "10_3",
+        "donor": "SN_0238",
+        "exact_age_years": 67,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_010",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 32.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0238_p3_cellbender.h5ad",
+          "size_bytes": 221902878,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "11_3",
+        "donor": "SN_0244",
+        "exact_age_years": 65,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_011",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 28.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0244_p3_cellbender.h5ad",
+          "size_bytes": 191001846,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "12_3",
+        "donor": "SN_0245",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_012",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 25.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0245_p3_cellbender.h5ad",
+          "size_bytes": 182539286,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "13_3",
+        "donor": "SN_0249",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_013",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 34.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0249_1_p3_cellbender.h5ad",
+          "size_bytes": 232420898,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "14_3",
+        "donor": "SN_0249",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_014",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 30.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0249_2_p3_cellbender.h5ad",
+          "size_bytes": 197792448,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "15_3",
+        "donor": "SN_0253",
+        "exact_age_years": 61,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_015",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 18.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0253_p3_cellbender.h5ad",
+          "size_bytes": 57376910,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "16_3",
+        "donor": "SN_0263",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703625",
+        "plex": 3,
+        "probe_barcode": "BC_016",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.5,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_SN_0263_p3_cellbender.h5ad",
+          "size_bytes": 202888304,
+          "released_time": "04/24/2026 21:55:28",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "1_4",
+        "donor": "SN_0076",
+        "exact_age_years": 56,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_001",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 31.4,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0076_p4_cellbender.h5ad",
+          "size_bytes": 350057106,
+          "released_time": "04/24/2026 21:55:15",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "2_4",
+        "donor": "SN_0085",
+        "exact_age_years": 70,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_002",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 13.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0085_p4_cellbender.h5ad",
+          "size_bytes": 186692590,
+          "released_time": "04/24/2026 21:55:18",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "3_4",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_003",
+        "target_nuclei_loaded": 2000,
+        "tissue_mass_processed_mg": 7.4,
+        "independence_note": "Samples 3_4 and 16_4 from SN_0086 shared the same digested tissue/nuclei isolation aliquot before multiplexing. All other samples represent unique tissue dissociation with independent tissue chunks.",
+        "technical_replicate_group": "SN_0086_plex4_shared_digest_3_4_16_4",
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0086_1_p4_cellbender.h5ad",
+          "size_bytes": 53978457,
+          "released_time": "04/24/2026 21:55:18",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "4_4",
+        "donor": "SN_0168",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_004",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 20.2,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0168_p4_cellbender.h5ad",
+          "size_bytes": 334046168,
+          "released_time": "04/24/2026 21:55:25",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "5_4",
+        "donor": "SN_0163",
+        "exact_age_years": 50,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_005",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 22.7,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0163_p4_cellbender.h5ad",
+          "size_bytes": 342363050,
+          "released_time": "04/24/2026 21:55:24",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "6_4",
+        "donor": "SN_0164",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_006",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 30.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0164_p4_cellbender.h5ad",
+          "size_bytes": 319243142,
+          "released_time": "04/24/2026 21:55:24",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "7_4",
+        "donor": "SN_0169",
+        "exact_age_years": 71,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_007",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 18.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0169_p4_cellbender.h5ad",
+          "size_bytes": 316437410,
+          "released_time": "04/24/2026 21:55:25",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "8_4",
+        "donor": "SN_0170",
+        "exact_age_years": 62,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_008",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 31.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0170_p4_cellbender.h5ad",
+          "size_bytes": 145859868,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "9_4",
+        "donor": "SN_0238",
+        "exact_age_years": 67,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_009",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 36.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0238_p4_cellbender.h5ad",
+          "size_bytes": 291276380,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "10_4",
+        "donor": "SN_0244",
+        "exact_age_years": 65,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_010",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 27.8,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0244_p4_cellbender.h5ad",
+          "size_bytes": 252460384,
+          "released_time": "04/24/2026 21:55:26",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "11_4",
+        "donor": "SN_0245",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_011",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 27.0,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0245_p4_cellbender.h5ad",
+          "size_bytes": 271046854,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "12_4",
+        "donor": "SN_0249",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_012",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.6,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0249_1_p4_cellbender.h5ad",
+          "size_bytes": 218097740,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "13_4",
+        "donor": "SN_0249",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_013",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 28.7,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0249_2_p4_cellbender.h5ad",
+          "size_bytes": 196563210,
+          "released_time": "04/24/2026 21:55:27",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "14_4",
+        "donor": "SN_0253",
+        "exact_age_years": 61,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_014",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 29.1,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0253_p4_cellbender.h5ad",
+          "size_bytes": 293742706,
+          "released_time": "04/24/2026 21:55:28",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "15_4",
+        "donor": "SN_0263",
+        "exact_age_years": 54,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_015",
+        "target_nuclei_loaded": 8000,
+        "tissue_mass_processed_mg": 26.3,
+        "independence_note": "Independent tissue dissociation/chunk according to processing log.",
+        "technical_replicate_group": null,
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0263_p4_cellbender.h5ad",
+          "size_bytes": 311372980,
+          "released_time": "04/24/2026 21:55:28",
+          "type": "H5AD"
+        }
+      },
+      {
+        "processing_sample_id": "16_4",
+        "donor": "SN_0086",
+        "exact_age_years": 75,
+        "geo_library_gsm": "GSM9703626",
+        "plex": 4,
+        "probe_barcode": "BC_016",
+        "target_nuclei_loaded": 2000,
+        "tissue_mass_processed_mg": 7.4,
+        "independence_note": "Samples 3_4 and 16_4 from SN_0086 shared the same digested tissue/nuclei isolation aliquot before multiplexing. All other samples represent unique tissue dissociation with independent tissue chunks.",
+        "technical_replicate_group": "SN_0086_plex4_shared_digest_3_4_16_4",
+        "cellbender_h5ad": {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_SN_0086_2_p4_cellbender.h5ad",
+          "size_bytes": 59204974,
+          "released_time": "04/24/2026 21:55:19",
+          "type": "H5AD"
+        }
+      }
+    ],
+    "multiconfig_files": [
+      {
+        "geo_library_gsm": "GSM9703623",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703623/suppl/GSM9703623_plex1_multiconfig.csv.gz",
+        "size_bytes": 432,
+        "released_time": "04/28/2026 15:12:10",
+        "type": "CSV"
+      },
+      {
+        "geo_library_gsm": "GSM9703624",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703624/suppl/GSM9703624_plex2_multiconfig.csv.gz",
+        "size_bytes": 430,
+        "released_time": "04/28/2026 15:12:10",
+        "type": "CSV"
+      },
+      {
+        "geo_library_gsm": "GSM9703625",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703625/suppl/GSM9703625_plex3_multiconfig.csv.gz",
+        "size_bytes": 432,
+        "released_time": "04/28/2026 15:12:10",
+        "type": "CSV"
+      },
+      {
+        "geo_library_gsm": "GSM9703626",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9703nnn/GSM9703626/suppl/GSM9703626_plex4_multiconfig.csv.gz",
+        "size_bytes": 432,
+        "released_time": "04/28/2026 15:12:10",
+        "type": "CSV"
+      }
+    ],
+    "raw_counts": {
+      "status": "Public unnormalized but CellBender-corrected UMI count layers, not original uncorrected Cell Ranger raw-count matrices.",
+      "per_sample": "Each CellBender H5AD has corrected UMI counts in X and layers[raw_counts], restricted to Cell Ranger filtered features/barcodes.",
+      "atlas": "Final H5AD/SCE raw_counts layer likewise contains CellBender-corrected UMI counts; log1p_norm is separate and must not be used as raw counts.",
+      "series_raw_tar": {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_RAW.tar",
+        "size_bytes": 15488409600,
+        "released_time": "05/12/2026 00:23:44",
+        "type": "TAR",
+        "downloaded": false
+      },
+      "validation_not_done": "No H5AD was downloaded; corrected-count integer/value checks, original-vs-corrected count implications and donor/atlas barcode joins remain future gates."
+    },
+    "annotations": {
+      "status": "Public in final atlas H5AD/SCE; preprint reports 21 coarse cell types and 37 fine cell states.",
+      "immune_object": "Separate immune-compartment H5AD includes immune annotations and scVI/UMAP/milo information.",
+      "validation_not_done": "Annotation field names, barcode uniqueness and per-donor cell floors were not inspected because expression objects were not downloaded."
+    },
+    "public_processed_objects": [
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz",
+        "size_bytes": 5746830392,
+        "content": "Final post-QC annotated atlas; corrected counts, log-normalized layer, public obs/var, annotations and embeddings; not downloaded",
+        "downloaded": false
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas_SCE.rds.gz",
+        "size_bytes": 6009522227,
+        "content": "SingleCellExperiment export of final atlas; not downloaded",
+        "downloaded": false
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_immune_compartment_annotated_scVI_milo.h5ad.gz",
+        "size_bytes": 60181789,
+        "content": "Immune compartment object with corrected counts, annotations and embeddings; not downloaded",
+        "downloaded": false
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_public_donor_metadata.tsv.gz",
+        "size_bytes": 809,
+        "content": "28 exact-age donor records and public clinical covariates",
+        "downloaded": true
+      },
+      {
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_10xFlex_sample_processing_metadata.xlsx",
+        "size_bytes": 14658,
+        "content": "64 demultiplexed sample records: donor, probe barcode, plex, loading, mass and independence notes",
+        "downloaded": true
+      }
+    ],
+    "analysis_plan": {
+      "primary": "Only within-postmenopausal continuous-exact-age associations, with donor as the inferential unit. No premenopausal comparison and no pooling with Jin.",
+      "repeated_samples": "Aggregate to one donor value per endpoint or use sample-level models with donor random effects/donor-clustered uncertainty. Treat SN_0086 samples 3_4 and 16_4 as technical replicates and combine/select them before biological modeling.",
+      "eligibility": "Validate exact donor joins, corrected-count integrity and annotation coverage before outcomes. Require >=20 annotated nuclei per donor-cell type and at least 20 eligible donors with residual degrees of freedom for a parsimonious primary model; otherwise report descriptive QC only.",
+      "covariates": "Freeze a small identifiable set before outcomes, considering plex/processing batch and prespecified clinical modifiers (BMI, parity and non-ovarian cancer state). Do not fit 64 samples as independent or overfit 28 donors. Parity analyses are secondary and separate from chronological age.",
+      "endpoints": "Keep donor-pseudobulk expression, CLR composition and any eligible vector endpoint separate; report age effects per 10 years with 95% intervals and BH within each prespecified endpoint/cell-type family. Corrected-count sensitivity is required because uncorrected Cell Ranger matrices are not separately released.",
+      "fallback": "If future count/atlas joins or donor mapping fail, restrict this cohort to descriptive annotation and QC. No association or outcome has been computed here."
+    }
+  }
+}
