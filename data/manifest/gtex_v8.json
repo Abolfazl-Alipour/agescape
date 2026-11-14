@@ -1,0 +1,319 @@
+{
+  "created": "2026-11-14",
+  "base_revision": "2bb297e43f55b954d31ec1d93bf0dffc85a86eef",
+  "step": 10,
+  "release": {
+    "project": "Adult Genotype-Tissue Expression",
+    "version": "GTEx Analysis V8",
+    "dataset_id": "gtex_v8",
+    "protected_study_accession": "phs000424.v8.p2",
+    "portal_downloads": "https://www.gtexportal.org/home/downloads/adult-gtex/bulk_tissue_expression",
+    "metadata_downloads": "https://www.gtexportal.org/home/downloads/adult-gtex/metadata",
+    "official_file_inventory_api": "https://gtexportal.org/api/v2/dataset/openAccessFilesMetadata?project_id=adult-gtex"
+  },
+  "scope": {
+    "metadata_and_public_access_only": true,
+    "expression_matrices_downloaded": false,
+    "expression_values_read": false,
+    "matrix_headers_or_ranges_read": false,
+    "biological_outcomes_analyzed": false,
+    "heavy_jobs_run": false,
+    "external_authorization_requested": false,
+    "exact_ages_sought_or_imputed": false,
+    "SEA_AD_files_modified": false,
+    "commit_or_push_performed": false,
+    "external_data_root": "../agescape-revision-data/gtex-metadata",
+    "expression_verification_method": "Official GTEx Portal file-inventory records plus unauthenticated HTTP HEAD status, size and object metadata only; no expression bytes were downloaded."
+  },
+  "files": {
+    "gene_reads": {
+      "name": "GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz",
+      "description_from_GTEx": "Gene read counts.",
+      "url": "https://storage.googleapis.com/adult-gtex/bulk-gex/v8/rna-seq/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz",
+      "size_bytes": 917091994,
+      "portal_and_head_sizes_agree": true,
+      "http_head_status": 200,
+      "last_modified": "Mon, 20 Mar 2023 18:05:25 GMT",
+      "etag": "\"1d6ec97318a477d7fd82ba72143925ee\"",
+      "content_md5_base64_from_object_header": "HW7Jcxikd9f9grpyFDkl7g==",
+      "downloaded": false,
+      "sha256": null,
+      "future_use": "Primary raw-count input only after separate approval and resource-guarded acquisition; matrix/header/count integrity remain unverified."
+    },
+    "gene_tpm": {
+      "name": "GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz",
+      "description_from_GTEx": "Gene TPMs.",
+      "url": "https://storage.googleapis.com/adult-gtex/bulk-gex/v8/rna-seq/GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz",
+      "size_bytes": 1625807147,
+      "portal_and_head_sizes_agree": true,
+      "http_head_status": 200,
+      "last_modified": "Mon, 20 Mar 2023 18:05:56 GMT",
+      "etag": "\"ff6aade0ef5b55e38af9fef98bad760b\"",
+      "content_md5_base64_from_object_header": "/2qt4O9bVeOK+f75i612Cw==",
+      "downloaded": false,
+      "sha256": null,
+      "future_use": "Not a primary count-model input; no TPM analysis is authorized by this metadata gate."
+    },
+    "sample_attributes": {
+      "name": "GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt",
+      "description_from_GTEx": "A de-identified, open access version of the sample annotations available in dbGaP.",
+      "url": "https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt",
+      "size_bytes": 11512258,
+      "sha256": "74f6ab4c34ed2648d708a0ae6e6dff324f6c86ea723ae7d1c37d76f5221148f0",
+      "local_path": "../agescape-revision-data/gtex-metadata/GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt",
+      "rows": 22951,
+      "columns": 63
+    },
+    "sample_attributes_dictionary": {
+      "name": "GTEx_Analysis_v8_Annotations_SampleAttributesDD.xlsx",
+      "url": "https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files/GTEx_Analysis_v8_Annotations_SampleAttributesDD.xlsx",
+      "size_bytes": 15760,
+      "sha256": "f58e1cb659ec066db085d6972eac8da613c4797c1b1e7f72d49b3b5d04dcffba",
+      "local_path": "../agescape-revision-data/gtex-metadata/GTEx_Analysis_v8_Annotations_SampleAttributesDD.xlsx"
+    },
+    "subject_phenotypes": {
+      "name": "GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt",
+      "description_from_GTEx": "A de-identified, open access version of the subject phenotypes available in dbGaP.",
+      "url": "https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt",
+      "size_bytes": 20271,
+      "sha256": "821bdaff39e7a9a1d166919b3c786724c2b79c2861aeb936a2537a0f59b066f7",
+      "local_path": "../agescape-revision-data/gtex-metadata/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDS.txt",
+      "rows": 980,
+      "columns": 4
+    },
+    "subject_phenotypes_dictionary": {
+      "name": "GTEx_Analysis_v8_Annotations_SubjectPhenotypesDD.xlsx",
+      "url": "https://storage.googleapis.com/adult-gtex/annotations/v8/metadata-files/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDD.xlsx",
+      "size_bytes": 10605,
+      "sha256": "4d019b73e7b6c1d4b7ae0c5a56a0eb2fe72dcf51a1e9d2a8e21380d898f53c61",
+      "local_path": "../agescape-revision-data/gtex-metadata/GTEx_Analysis_v8_Annotations_SubjectPhenotypesDD.xlsx"
+    }
+  },
+  "access_terms": {
+    "public_status": "The expression matrices and de-identified annotation tables listed here are GTEx Portal open-access files; unauthenticated downloads and HEAD requests require no credential.",
+    "license_url": "https://gtexportal.org/home/license",
+    "faq_url": "https://gtexportal.org/home/faq",
+    "protected_access_url": "https://gtexportal.org/home/protectedDataAccess",
+    "conditions_read": [
+      "Downloading Portal data indicates acceptance of the GTEx Portal terms; no charges, usage fees or royalties are paid to the Portal.",
+      "Acknowledge the GTEx Portal as the data source using its requested acknowledgment wording and do not imply Portal endorsement.",
+      "Redistributors must maintain the current version or clearly state that their product does not reflect the most current/accurate Portal data.",
+      "GTEx disclaims warranties and liability as stated in the Portal license; users must review the full terms before redistribution."
+    ],
+    "exact_age_rule": "The GTEx FAQ states that exact donor age is protected because of donor consent; public age is available only in 10-year brackets. Exact age requires approved protected-data access through dbGaP/AnVIL.",
+    "exact_age_action": "Not requested, sought, inferred from expression, or replaced with bin midpoints. Reza alone would decide and complete any future dbGaP authorization.",
+    "raw_sequence_rule": "Raw DNA/RNA sequence and full donor metadata are protected; none was requested or accessed."
+  },
+  "public_metadata_verification": {
+    "analysis_freeze_field": "SMAFRZE",
+    "rnaseq_value": "RNASEQ",
+    "rnaseq_samples": 17382,
+    "rnaseq_donors": 948,
+    "subject_rows_all_assays": 980,
+    "sample_ids_unique": true,
+    "subject_ids_unique": true,
+    "sample_to_donor_rule": "For each SAMPID, join the first two hyphen-delimited fields (for example, GTEX-1117F-0226-SM-5GZZ7 to GTEX-1117F) to SubjectPhenotypesDS.SUBJID.",
+    "unmatched_rnaseq_samples": 0,
+    "one_sample_per_donor_within_each_requested_tissue": true,
+    "age_field": "SubjectPhenotypesDS.AGE",
+    "age_bins": ["20-29", "30-39", "40-49", "50-59", "60-69", "70-79"],
+    "age_bin_counts_all_980_public_subjects": {
+      "20-29": 84,
+      "30-39": 78,
+      "40-49": 153,
+      "50-59": 315,
+      "60-69": 317,
+      "70-79": 33
+    },
+    "missing_age_or_sex_among_980_public_subjects": 0,
+    "sex_field": "SubjectPhenotypesDS.SEX",
+    "sex_encoding": {"1": "Male", "2": "Female"},
+    "sex_definition_from_dictionary": "Donor identification of sex based upon self-report, family/next of kin, or medical record abstraction.",
+    "hardy_scale_field": "DTHHRDY; optional death-circumstance sensitivity covariate, not a technical primary covariate",
+    "derived_summary": "../agescape-revision-data/gtex-metadata/derived_public_metadata_summary.json",
+    "derived_summary_sha256": "240a840fd62b205601a8429339433747b287017ca557cacd1ac1445573eccfcb"
+  },
+  "technical_covariates": {
+    "primary_usable": {
+      "SMRIN": "RNA Integrity Number; continuous; observed in every requested-tissue sample.",
+      "SMTSISCH": "Released total sample ischemic time in minutes; continuous divided by 60 in the model; complete-case without imputation. Whole Blood has 9 missing and 329 negative source values; preserve signed values in primary and predeclare a nonnegative sensitivity.",
+      "SMEXNCRT": "RNA-SeQC exonic mapping fraction; continuous; observed in every requested-tissue sample.",
+      "SMCENTER": "BSS collection site; categorical B1/C1/D1; one missing Muscle - Skeletal value.",
+      "SMNABTCHT": "Nucleic-acid isolation protocol; categorical. One level in Whole Blood and two in each other requested tissue.",
+      "library_size_factor": "Per-tissue median-of-ratio count-model offset estimated after the fixed gene filter; SMRDTTL total reads is retained for QC/depth sensitivity rather than duplicated as a primary fixed effect."
+    },
+    "verified_but_not_primary_fixed_effects": {
+      "SMGEBTCHT": "Invariant TruSeq.v1 in all six tissues; no estimable contrast.",
+      "SMRDLGTH": "76 bp except for two Whole Blood, one Muscle - Skeletal and two Lung samples at 101 bp; use a 76-bp-only sensitivity, not a primary coefficient.",
+      "SMNABTCH": "Isolation batch IDs are available but high-cardinality (73 to 344 levels per tissue); not a primary fixed effect.",
+      "SMGEBTCH": "Expression batch IDs are available but high-cardinality (68 to 208 levels per tissue), with one missing Muscle value; not a primary fixed effect.",
+      "SMATSSCR": "Autolysis score; entirely absent for all 755 Whole Blood samples and missing for 4 Muscle and 5 Lung samples. Exclude from primary; nonblood extended-covariate sensitivity only.",
+      "DTHHRDY": "Hardy death classification; not a technical covariate. Optional complete-case sensitivity only; missing 13 Whole Blood, 12 Muscle, 2 Lung and 2 Ovary samples.",
+      "SMGAPPCT": "Entirely missing in all six requested tissues; unusable.",
+      "SM350NRM_SM550NRM_SMNUMGPS": "Entirely missing in all six requested tissues; unusable."
+    }
+  },
+  "tissue_motivation": {
+    "Whole Blood": "Completed open-GEO PBMC follow-up; bulk blood gene-level context only, not a PBMC cell-fraction replication.",
+    "Muscle - Skeletal": "Kedlian and Perez muscle follow-ups; independent bulk muscle context only.",
+    "Lung": "De Man lung follow-up and completed integrated-lung work; bulk lung gene-level context only.",
+    "Kidney - Cortex": "Existing kidney cohorts and restricted/blocked Lake kidney arms; bulk cortex context only.",
+    "Ovary": "Jin and postmenopausal ovary follow-ups; bulk ovary gene-level context only.",
+    "Testis": "Cui testis follow-up and zebrafish testis context; human bulk testis gene-level context only."
+  },
+  "tissues": {
+    "Whole Blood": {
+      "samples": 755,
+      "donors": 755,
+      "donor_sex_counts": {"male": 501, "female": 254},
+      "donor_age_bin_counts": {"20-29": 68, "30-39": 68, "40-49": 113, "50-59": 234, "60-69": 249, "70-79": 23},
+      "primary_core_complete_donors": 746,
+      "isolation_batch_ids": 335,
+      "expression_batch_ids": 138,
+      "readiness": "metadata_ready_ordinal_with_conditions",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "SMATSSCR is absent for every sample; autolysis adjustment is unavailable.",
+        "Nine SMTSISCH values are missing and 329 are negative; no imputation or silent truncation is permitted.",
+        "DTHHRDY is missing for 13 samples; any Hardy-adjusted sensitivity is complete-case."
+      ]
+    },
+    "Muscle - Skeletal": {
+      "samples": 803,
+      "donors": 803,
+      "donor_sex_counts": {"male": 543, "female": 260},
+      "donor_age_bin_counts": {"20-29": 67, "30-39": 65, "40-49": 124, "50-59": 255, "60-69": 264, "70-79": 28},
+      "primary_core_complete_donors": 802,
+      "isolation_batch_ids": 344,
+      "expression_batch_ids": 208,
+      "readiness": "metadata_ready_ordinal_with_conditions",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "One SMCENTER value is missing, leaving 802 primary complete-case donors before expression/QC exclusions.",
+        "SMATSSCR is missing for 4 samples, DTHHRDY for 12 and SMGEBTCH for 1; extended/batch sensitivity analyses must account for this."
+      ]
+    },
+    "Lung": {
+      "samples": 578,
+      "donors": 578,
+      "donor_sex_counts": {"male": 395, "female": 183},
+      "donor_age_bin_counts": {"20-29": 33, "30-39": 40, "40-49": 93, "50-59": 200, "60-69": 190, "70-79": 22},
+      "primary_core_complete_donors": 578,
+      "isolation_batch_ids": 317,
+      "expression_batch_ids": 208,
+      "readiness": "metadata_ready_ordinal_with_conditions",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "SMATSSCR is missing for 5 samples and DTHHRDY for 2; extended-covariate sensitivity is complete-case."
+      ]
+    },
+    "Kidney - Cortex": {
+      "samples": 85,
+      "donors": 85,
+      "donor_sex_counts": {"male": 66, "female": 19},
+      "donor_age_bin_counts": {"20-29": 1, "30-39": 8, "40-49": 8, "50-59": 29, "60-69": 35, "70-79": 4},
+      "primary_core_complete_donors": 85,
+      "isolation_batch_ids": 73,
+      "expression_batch_ids": 68,
+      "readiness": "metadata_ready_limited_power_and_sparse_extreme_bins",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "Only 85 donors are available; 20-29 has 1 donor and 70-79 has 4. Age trend estimates may be tail-driven and require the frozen tail sensitivity.",
+        "The categorical sensitivity is ineligible under the frozen minimum-10-donors-per-level rule because 20-29 has only 1 donor.",
+        "Sex and site/batch strata are sparse; do not overinterpret adjusted effects or add high-cardinality batch fixed effects."
+      ]
+    },
+    "Ovary": {
+      "samples": 180,
+      "donors": 180,
+      "donor_sex_counts": {"male": 0, "female": 180},
+      "donor_age_bin_counts": {"20-29": 22, "30-39": 14, "40-49": 37, "50-59": 61, "60-69": 42, "70-79": 4},
+      "primary_core_complete_donors": 180,
+      "isolation_batch_ids": 145,
+      "expression_batch_ids": 111,
+      "readiness": "metadata_ready_single_sex_sparse_oldest_bin",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "All donors are female; omit the sex coefficient rather than treating sex as an estimable adjustment.",
+        "Only 4 donors are 70-79; tail sensitivity and cautious effect interpretation are required.",
+        "DTHHRDY is missing for 2 samples; Hardy-adjusted sensitivity is complete-case."
+      ]
+    },
+    "Testis": {
+      "samples": 361,
+      "donors": 361,
+      "donor_sex_counts": {"male": 361, "female": 0},
+      "donor_age_bin_counts": {"20-29": 36, "30-39": 31, "40-49": 52, "50-59": 117, "60-69": 116, "70-79": 9},
+      "primary_core_complete_donors": 361,
+      "isolation_batch_ids": 221,
+      "expression_batch_ids": 150,
+      "readiness": "metadata_ready_single_sex_sparse_oldest_bin",
+      "blockers_or_limits": [
+        "Expression values and GCT-to-metadata header concordance are unchecked because no expression matrix was acquired.",
+        "All donors are male; omit the sex coefficient rather than treating sex as an estimable adjustment.",
+        "Only 9 donors are 70-79; tail sensitivity and cautious effect interpretation are required.",
+        "Bulk testis expression cannot separate germ-cell-stage composition from cell-intrinsic expression change."
+      ]
+    }
+  },
+  "frozen_future_design": {
+    "status": "frozen_before_any_GTEx_expression_or_outcome_access",
+    "design_name": "GTEx_v8_bulk_six_tissue_ordinal_age_gene_model_v1",
+    "inferential_unit": "One RNA-seq tissue sample from one donor; no cells are inferential units and donors repeated across tissues are not pooled into one cross-tissue test.",
+    "scope": "Six separate tissue-specific bulk gene-level analyses. No cell fractions, per-cell drift, single-cell composition, Hellinger displacement, entropy, or deconvolution-as-measured-composition endpoint.",
+    "primary_input": "Gene read-count GCT only. Before outcomes, verify unique sample columns, exact correspondence to the 17,382 public RNASEQ IDs, one selected sample per tissue donor, finite nonnegative integer counts, unique gene identifiers, and the released gene build. Any mismatch stops affected tissues.",
+    "analysis_samples": "Within each tissue, complete cases for AGE, SEX where estimable, SMRIN, SMTSISCH, SMEXNCRT, SMCENTER and SMNABTCHT; no covariate or exact-age imputation. Metadata-only complete-case counts are 746 Whole Blood, 802 Muscle - Skeletal, 578 Lung, 85 Kidney - Cortex, 180 Ovary and 361 Testis before expression/QC gates.",
+    "gene_filter": "Within each tissue and fixed before looking at age coefficients, retain a gene when raw count >=10 in at least ceil(10 percent of analysis samples) samples. Apply no age-associated filtering and no post-hoc significant-gene filtering.",
+    "normalization": "Estimate per-tissue median-of-ratio size factors on the retained count matrix and use their log as the count-model offset.",
+    "primary_model": "Negative-binomial gene-wise GLM with empirical-Bayes dispersion sharing and a Wald test for the age coefficient. On the log-count scale: expression ~ age_bin_order + SEX + SMRIN + SMTSISCH/60 + SMEXNCRT + categorical(SMCENTER) + categorical(SMNABTCHT) + offset(log size factor).",
+    "age_encoding": {"20-29": 1, "30-39": 2, "40-49": 3, "50-59": 4, "60-69": 5, "70-79": 6},
+    "age_estimand": "log2 fold-change per one-decade-bin step, with 95 percent Wald interval and BH-adjusted p-value. This is an ordinal association, not an exact-age slope in years, a longitudinal effect, or evidence of equivalence when null.",
+    "sex_rule": "Categorical male reference/female contrast in Whole Blood, Muscle - Skeletal, Lung and Kidney - Cortex; omit SEX in Ovary and Testis because it is invariant.",
+    "continuous_covariate_rule": "Center SMRIN, SMTSISCH/60 and SMEXNCRT within the analysis tissue for numerical stability without changing the age estimand; do not use age-bin midpoints.",
+    "eligibility_and_identifiability": "Require at least 50 complete-case donors, at least 3 occupied age bins, positive residual degrees of freedom, a full-rank design and finite dispersion/model fit. Report sparse-level and leverage diagnostics. Failure is untestable, not a null result.",
+    "primary_multiplicity": "One Benjamini-Hochberg family over every retained gene-by-tissue primary age Wald test across all six tissues, with q<0.05. Do not substitute within-tissue corrections or select favorable tissues/genes after seeing outcomes.",
+    "sensitivity_analyses": [
+      {
+        "name": "categorical_age",
+        "design": "Replace ordinal age with categorical 20-29, 30-39, 40-49, 50-59 and pooled 60-79 (20-29 reference), keeping all other primary terms; use a joint age likelihood-ratio test. Require at least 10 donors in every level, making Kidney - Cortex ineligible from current metadata.",
+        "multiplicity": "A separate BH family over all gene-by-tissue tests in eligible tissues; label secondary."
+      },
+      {
+        "name": "oldest_bin_tail",
+        "design": "Repeat the primary ordinal model without 70-79 donors to assess leverage from sparse oldest bins; do not interpret this as the same age-range estimand.",
+        "multiplicity": "A separate BH family over all gene-by-tissue tests; label secondary."
+      },
+      {
+        "name": "extended_sample_quality_and_death",
+        "design": "Add categorical SMATSSCR in nonblood tissues and categorical DTHHRDY in all tissues, complete-case within each arm; do not add these to Whole Blood autolysis models.",
+        "multiplicity": "A separate BH family over all gene-by-tissue tests in each prespecified sensitivity arm; label secondary."
+      },
+      {
+        "name": "blood_signed_ischemic_time",
+        "design": "Repeat Whole Blood primary after restricting to nonnegative released SMTSISCH values; no negative-to-zero conversion or imputation.",
+        "multiplicity": "A separate BH family over Whole Blood gene tests; label secondary."
+      },
+      {
+        "name": "read_length_76bp",
+        "design": "Repeat all tissue models after excluding the five 101-bp samples (two Whole Blood, one Muscle - Skeletal, two Lung).",
+        "multiplicity": "A separate BH family over all gene-by-tissue tests; label secondary."
+      }
+    ],
+    "prohibitions": [
+      "No exact continuous ages, age-bin midpoint substitution, or protected-metadata request by the agent.",
+      "No cell-fraction, per-cell displacement, entropy, single-cell composition, or observed cell-type composition claim from bulk expression.",
+      "No deconvolution presented as measured composition; none is included in this design.",
+      "No causal, longitudinal, cross-tissue pooled, or direct single-cell replication claim.",
+      "No expression acquisition or heavy job under this metadata-only step; any future work requires parent approval and sequential resource guards with 30 GB disk reserve and at most 8 GB analysis memory."
+    ]
+  },
+  "verification_provenance": {
+    "official_inventory_local_path": "../agescape-revision-data/gtex-metadata/gtex-api-v2-openAccessFilesMetadata.json",
+    "official_inventory_size_bytes": 316258,
+    "official_inventory_sha256": "2fdd364014099d716e8af20eac2ae92a8838cb052a51c180ca05df5031e31e5c",
+    "expression_head_local_path": "../agescape-revision-data/gtex-metadata/expression_head_verification.json",
+    "expression_head_sha256": "e4c0d660517959f570863ae6a260c3d6d751031900b89a82da06d1ed46f29c7a",
+    "portal_javascript_used_for_license_faq_text": "../agescape-revision-data/gtex-metadata/gtex-portal-app.c5f9f113.js",
+    "portal_javascript_sha256": "9d01ec9290b0cee98b0b73ec90861a028e922f7284c7798abb6ea3e1de0de0b6"
+  }
+}
