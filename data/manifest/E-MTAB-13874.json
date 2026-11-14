@@ -1,0 +1,205 @@
+{
+  "created": "2026-11-14",
+  "base_revision": "a33576495be8fa4b4c53701c2418f86eb85e140b",
+  "study": {
+    "citation": "Kedlian et al. Human skeletal muscle aging atlas. Nature Aging 4, 727-744 (2024).",
+    "doi": "10.1038/s43587-024-00613-3",
+    "accession": "E-MTAB-13874",
+    "ena_project": "ERP158366",
+    "tissue": "intercostal muscle",
+    "design": "cross-sectional deceased transplant organ donor atlas",
+    "public_release_date": "2024-03-07"
+  },
+  "scope": {
+    "metadata_and_access_only": true,
+    "expression_matrices_downloaded": false,
+    "expression_values_read": false,
+    "biological_outcomes_examined": false,
+    "external_authorization_requested": false
+  },
+  "sources_read": [
+    {
+      "url": "https://www.nature.com/articles/s43587-024-00613-3",
+      "used_for": "primary study design, donor source, assays, and data availability"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00613-3/MediaObjects/43587_2024_613_MOESM3_ESM.xlsx",
+      "used_for": "Supplementary Table 1 donor and sample metadata",
+      "size_bytes": 301754
+    },
+    {
+      "url": "https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-13874",
+      "used_for": "BioStudies study, protocols, sample characteristics, and file inventory"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-13874/info",
+      "used_for": "public status and release timestamp"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-13874/files",
+      "used_for": "exact IDF and SDRF sizes"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/biostudies/files/E-MTAB-13874/E-MTAB-13874.sdrf.txt",
+      "used_for": "43 human library mappings, age bands, sex, assay, chemistry, injury, and ENA accessions",
+      "size_bytes": 132328
+    },
+    {
+      "url": "https://www.ebi.ac.uk/biostudies/files/E-MTAB-13874/E-MTAB-13874.idf.txt",
+      "used_for": "experimental groups and protocols",
+      "size_bytes": 14339
+    },
+    {
+      "url": "https://www.muscleageingcellatlas.org/",
+      "used_for": "primary atlas processed and raw H5AD links"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11108788/fullTextXML",
+      "used_for": "documented Perez dataset reuse"
+    }
+  ],
+  "donor_gate": {
+    "donors": 17,
+    "young_donors": 8,
+    "old_donors": 9,
+    "male_donors": 10,
+    "female_donors": 7,
+    "exact_numeric_ages_available": false,
+    "age_representation": "per-donor bands: 17-20, 20-25, 25-30, 35-40, 50-55, 55-60, 60-65, 65-70, 70-75",
+    "continuous_age_verdict": "blocked_no_exact_public_ages_do_not_impute_band_midpoints",
+    "group_contrast_verdict": "ready_after_count_and_eligibility_validation",
+    "health_status": "No clean healthy/disease flag is released. SDRF injury is terminal injury/cause-of-death information, not muscle-disease status.",
+    "donor_type_values": ["DBD", "DCD"]
+  },
+  "assays": {
+    "scRNA": {
+      "source_cell_type_field": "cell",
+      "libraries": 21,
+      "donors": 12,
+      "young_donors": 5,
+      "old_donors": 7,
+      "chemistries": ["10x 3' v2", "10x 3' v3"]
+    },
+    "snRNA": {
+      "source_cell_type_field": "nuclei",
+      "libraries": 22,
+      "donors": 13,
+      "young_donors": 6,
+      "old_donors": 7,
+      "chemistries": ["10x 3' v2", "10x 3' v3"]
+    },
+    "note": "Assay-specific donor sets overlap; do not add them. Libraries are not independent donor replicates."
+  },
+  "donors": [
+    {"id": "470BR", "age_band": "17-20", "group": "young", "sex": "M", "donor_type": "DBD", "injury": "hypoxic brain damage", "scRNA_sample_ids": ["5386STDY8090404", "5386STDY8090405"], "snRNA_sample_ids": ["5386STDY8090406", "5386STDY8090407", "5386STDY8552709"]},
+    {"id": "398B", "age_band": "20-25", "group": "young", "sex": "F", "donor_type": "DBD", "injury": "Trauma RTA - car", "scRNA_sample_ids": [], "snRNA_sample_ids": ["5386STDY7796286", "5386STDY7796287"]},
+    {"id": "583B", "age_band": "25-30", "group": "young", "sex": "M", "donor_type": "DBD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["WS_A_SKM9845427", "WS_A_SKM9845428"], "snRNA_sample_ids": ["WS_A_SKM10691778"]},
+    {"id": "566B", "age_band": "25-30", "group": "young", "sex": "F", "donor_type": "DBD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": [], "snRNA_sample_ids": ["WS_A_SKM9426499", "WS_A_SKM9426500"]},
+    {"id": "411C", "age_band": "25-30", "group": "young", "sex": "M", "donor_type": "DCD", "injury": "Hypoxic brain damage", "scRNA_sample_ids": ["5386STDY7835292", "5386STDY7835293"], "snRNA_sample_ids": []},
+    {"id": "464C", "age_band": "35-40", "group": "young", "sex": "M", "donor_type": "DCD", "injury": "Hypoxic brain damage", "scRNA_sample_ids": ["5386STDY8047212"], "snRNA_sample_ids": ["5386STDY8552613", "5386STDY8552614"]},
+    {"id": "529C", "age_band": "35-40", "group": "young", "sex": "M", "donor_type": "DCD", "injury": "Intracranial thrombosis", "scRNA_sample_ids": [], "snRNA_sample_ids": ["WS_A_SKM9426501", "WS_A_SKM9426502"]},
+    {"id": "591C", "age_band": "35-40", "group": "young", "sex": "M", "donor_type": "DCD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["WS_A_SKM9845429", "WS_A_SKM9845430"], "snRNA_sample_ids": []},
+    {"id": "621B", "age_band": "50-55", "group": "old", "sex": "M", "donor_type": "DBD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["WS_A_SKM10490125", "WS_A_SKM10490126"], "snRNA_sample_ids": []},
+    {"id": "582C", "age_band": "55-60", "group": "old", "sex": "F", "donor_type": "DCD", "injury": "hypoxic brain damage", "scRNA_sample_ids": ["WS_A_SKM9845425", "WS_A_SKM9845426"], "snRNA_sample_ids": ["WS_A_SKM10691779"]},
+    {"id": "362C", "age_band": "60-65", "group": "old", "sex": "M", "donor_type": "DCD", "injury": "Other", "scRNA_sample_ids": ["5386STDY7600838", "5386STDY7600839"], "snRNA_sample_ids": ["5386STDY7600836", "5386STDY7600837", "WS_A_SKM9426496"]},
+    {"id": "502B", "age_band": "60-65", "group": "old", "sex": "F", "donor_type": "DBD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": [], "snRNA_sample_ids": ["WS_A_SKM9426495"]},
+    {"id": "500C", "age_band": "60-65", "group": "old", "sex": "M", "donor_type": "DCD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": [], "snRNA_sample_ids": ["5386STDY8493510"]},
+    {"id": "343B", "age_band": "70-75", "group": "old", "sex": "F", "donor_type": "DBD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["mus_SNuc7511880"], "snRNA_sample_ids": ["WS_A_SKM9426497", "WS_A_SKM9426498"]},
+    {"id": "367C", "age_band": "65-70", "group": "old", "sex": "M", "donor_type": "DCD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["5386STDY7645353", "5386STDY7645354"], "snRNA_sample_ids": ["5386STDY7645355"]},
+    {"id": "339C", "age_band": "70-75", "group": "old", "sex": "F", "donor_type": "DCD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["mus_SNuc7468112"], "snRNA_sample_ids": ["mus_SNuc7468111"]},
+    {"id": "640C", "age_band": "70-75", "group": "old", "sex": "F", "donor_type": "DCD", "injury": "Intracranial haemorrhage", "scRNA_sample_ids": ["WS_A_SKM10490127", "WS_A_SKM10490128"], "snRNA_sample_ids": []}
+  ],
+  "library_to_ena": [
+    {"sample_id": "5386STDY7600836", "donor_id": "362C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399654", "ena_run": "ERR12724471"},
+    {"sample_id": "5386STDY7600837", "donor_id": "362C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399655", "ena_run": "ERR12724439"},
+    {"sample_id": "5386STDY7600838", "donor_id": "362C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399656", "ena_run": "ERR12724449"},
+    {"sample_id": "5386STDY7600839", "donor_id": "362C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399657", "ena_run": "ERR12724436"},
+    {"sample_id": "5386STDY7645353", "donor_id": "367C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399658", "ena_run": "ERR12724444"},
+    {"sample_id": "5386STDY7645354", "donor_id": "367C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399659", "ena_run": "ERR12724454"},
+    {"sample_id": "5386STDY7645355", "donor_id": "367C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399660", "ena_run": "ERR12724460"},
+    {"sample_id": "5386STDY7796286", "donor_id": "398B", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399661", "ena_run": "ERR12724470"},
+    {"sample_id": "5386STDY7796287", "donor_id": "398B", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399662", "ena_run": "ERR12724462"},
+    {"sample_id": "5386STDY7835292", "donor_id": "411C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399663", "ena_run": "ERR12724435"},
+    {"sample_id": "5386STDY7835293", "donor_id": "411C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399664", "ena_run": "ERR12724425"},
+    {"sample_id": "5386STDY8047212", "donor_id": "464C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399665", "ena_run": "ERR12724446"},
+    {"sample_id": "5386STDY8090404", "donor_id": "470BR", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399666", "ena_run": "ERR12724432"},
+    {"sample_id": "5386STDY8090405", "donor_id": "470BR", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399667", "ena_run": "ERR12724441"},
+    {"sample_id": "5386STDY8090406", "donor_id": "470BR", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399668", "ena_run": "ERR12724442"},
+    {"sample_id": "5386STDY8090407", "donor_id": "470BR", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399669", "ena_run": "ERR12724416"},
+    {"sample_id": "5386STDY8493510", "donor_id": "500C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399670", "ena_run": "ERR12724443"},
+    {"sample_id": "5386STDY8552613", "donor_id": "464C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399671", "ena_run": "ERR12724433"},
+    {"sample_id": "5386STDY8552614", "donor_id": "464C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399672", "ena_run": "ERR12724447"},
+    {"sample_id": "5386STDY8552709", "donor_id": "470BR", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399673", "ena_run": "ERR12724448"},
+    {"sample_id": "mus_SNuc7468111", "donor_id": "339C", "assay": "snRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399675", "ena_run": "ERR12724450"},
+    {"sample_id": "mus_SNuc7468112", "donor_id": "339C", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399676", "ena_run": "ERR12724428"},
+    {"sample_id": "mus_SNuc7511880", "donor_id": "343B", "assay": "scRNA", "chemistry": "10x 3' v2", "ena_sample": "ERS18399679", "ena_run": "ERR12724453"},
+    {"sample_id": "WS_A_SKM10490125", "donor_id": "621B", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399680", "ena_run": "ERR12724430"},
+    {"sample_id": "WS_A_SKM10490126", "donor_id": "621B", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399681", "ena_run": "ERR12724452"},
+    {"sample_id": "WS_A_SKM10490127", "donor_id": "640C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399682", "ena_run": "ERR12724461"},
+    {"sample_id": "WS_A_SKM10490128", "donor_id": "640C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399683", "ena_run": "ERR12724423"},
+    {"sample_id": "WS_A_SKM10691778", "donor_id": "583B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399684", "ena_run": "ERR12724427"},
+    {"sample_id": "WS_A_SKM10691779", "donor_id": "582C", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399685", "ena_run": "ERR12724456"},
+    {"sample_id": "WS_A_SKM9426495", "donor_id": "502B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399686", "ena_run": "ERR12724422"},
+    {"sample_id": "WS_A_SKM9426496", "donor_id": "362C", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399687", "ena_run": "ERR12724434"},
+    {"sample_id": "WS_A_SKM9426497", "donor_id": "343B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399688", "ena_run": "ERR12724466"},
+    {"sample_id": "WS_A_SKM9426498", "donor_id": "343B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399689", "ena_run": "ERR12724463"},
+    {"sample_id": "WS_A_SKM9426499", "donor_id": "566B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399690", "ena_run": "ERR12724468"},
+    {"sample_id": "WS_A_SKM9426500", "donor_id": "566B", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399691", "ena_run": "ERR12724419"},
+    {"sample_id": "WS_A_SKM9426501", "donor_id": "529C", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399692", "ena_run": "ERR12724467"},
+    {"sample_id": "WS_A_SKM9426502", "donor_id": "529C", "assay": "snRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399693", "ena_run": "ERR12724451"},
+    {"sample_id": "WS_A_SKM9845425", "donor_id": "582C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399694", "ena_run": "ERR12724458"},
+    {"sample_id": "WS_A_SKM9845426", "donor_id": "582C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399695", "ena_run": "ERR12724420"},
+    {"sample_id": "WS_A_SKM9845427", "donor_id": "583B", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399696", "ena_run": "ERR12724421"},
+    {"sample_id": "WS_A_SKM9845428", "donor_id": "583B", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399697", "ena_run": "ERR12724472"},
+    {"sample_id": "WS_A_SKM9845429", "donor_id": "591C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399698", "ena_run": "ERR12724464"},
+    {"sample_id": "WS_A_SKM9845430", "donor_id": "591C", "assay": "scRNA", "chemistry": "10x 3' v3", "ena_sample": "ERS18399699", "ena_run": "ERR12724424"}
+  ],
+  "files": {
+    "human_raw_h5ad": {
+      "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/raw/SKM_human_raw_cells2nuclei_2023-06-22.h5ad",
+      "size_bytes_from_head": 4025846616,
+      "http_head_status": 200,
+      "accept_ranges": "bytes",
+      "downloaded": false,
+      "schema_only_range_requests": 55,
+      "schema_only_range_bytes": 3544752,
+      "X_data_dtype": "float32",
+      "layers": ["counts"],
+      "layers_counts_data_dtype": "float32",
+      "raw_count_layer_present": true,
+      "integer_valued_counts_verified": false,
+      "expression_values_read": false
+    },
+    "human_processed_h5ad": {
+      "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_human_pp_cells2nuclei_2023-06-22.h5ad",
+      "size_bytes_from_head": 2022042678,
+      "http_head_status": 200,
+      "downloaded": false
+    },
+    "cell_type_h5ads": [
+      {"name": "SKM_MuSC_human_2023-06-22.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_MuSC_human_2023-06-22.h5ad", "size_bytes_from_head": 235029240, "http_head_status": 200},
+      {"name": "SKM_myonuclei2myofiber_human_2023-06-22.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_myonuclei2myofiber_human_2023-06-22.h5ad", "size_bytes_from_head": 766049888, "http_head_status": 200},
+      {"name": "SKM_myonuclei_human_2024-04-14.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_myonuclei_human_2024-04-14.h5ad", "size_bytes_from_head": 649019946, "http_head_status": 200},
+      {"name": "SKM_immune_human_2023-06-22.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_immune_human_2023-06-22.h5ad", "size_bytes_from_head": 224028501, "http_head_status": 200},
+      {"name": "SKM_fibroblasts_Schwann_human_2023-06-22.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_fibroblasts_Schwann_human_2023-06-22.h5ad", "size_bytes_from_head": 325448911, "http_head_status": 200},
+      {"name": "SKM_Endothelium_SMC_human_2023-06-22.h5ad", "url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/SKM_Endothelium_SMC_human_2023-06-22.h5ad", "size_bytes_from_head": 282584411, "http_head_status": 200}
+    ]
+  },
+  "cross_study": {
+    "perez_accession": "GSE167186",
+    "shared_donor_ids_documented": false,
+    "individual_donor_disjointness_proven": false,
+    "perez_dataset_reused_by_kedlian": true,
+    "reuse_description": "Kedlian obtained and reprocessed Perez quadriceps data for intercostal-versus-leg myonuclei comparisons.",
+    "independent_replication_label": "blocked_pending_overlap_adjudication_and_no_double_counting"
+  },
+  "verdict": {
+    "metadata": "ready",
+    "public_access": "ready",
+    "donor_sample_mapping": "ready_17_donors_43_libraries",
+    "young_old_group_analysis": "ready_for_guarded_count_validation_and_eligibility_checks",
+    "continuous_age_analysis": "blocked_no_exact_public_ages",
+    "raw_count_value_validation": "blocked_pending_guarded_read_float32_layers_counts",
+    "expression_analysis_performed": false
+  }
+}

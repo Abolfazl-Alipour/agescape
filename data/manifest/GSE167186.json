@@ -1,0 +1,162 @@
+{
+  "created": "2026-11-14",
+  "base_revision": "a33576495be8fa4b4c53701c2418f86eb85e140b",
+  "study": {
+    "citation": "Perez et al. Single nuclei profiling identifies cell specific markers of skeletal muscle aging, frailty, and senescence. Aging 14, 9393-9422 (2022).",
+    "doi": "10.18632/aging.204435",
+    "accession": "GSE167186",
+    "pubmed_id": "36516485",
+    "bioproject": "PRJNA703726",
+    "sra_project": "SRP307390",
+    "tissue": "vastus lateralis",
+    "geo_public_date": "2022-03-31",
+    "geo_last_update": "2024-03-19"
+  },
+  "scope": {
+    "metadata_and_access_only": true,
+    "expression_matrices_downloaded": false,
+    "h5_expression_values_read": false,
+    "biological_outcomes_examined": false,
+    "external_authorization_requested": false
+  },
+  "sources_read": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167186&targ=self&form=text&view=full",
+      "used_for": "GEO series design, public status, platforms, and series files"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/soft/GSE167186_family.soft.gz",
+      "used_for": "all GSM mappings, exact snRNA ages, Young/Old groups, and per-GSM file URLs",
+      "size_bytes": 11012
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/",
+      "used_for": "public series supplementary-file inventory"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/filelist.txt",
+      "used_for": "exact RAW tar, CSV, and H5 byte sizes",
+      "size_bytes": 2498
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/GSE167186_SimplifiedMetadataSheet.xlsx",
+      "used_for": "independent GSM/HM/filtered-H5 mapping",
+      "size_bytes": 10124
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9792217/fullTextXML",
+      "used_for": "primary methods, 72-man source cohort, snRNA processing, and bulk/snRNA distinction"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9792217/supplementaryFiles",
+      "used_for": "primary Supplementary Materials and Methods and Supplementary Tables 1-2",
+      "size_bytes": 2388235,
+      "members_read": ["aging-14-204435-s001.pdf", "aging-14-204435-s003.pdf"]
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/GSE167186_counts.csv.gz",
+      "used_for": "HEAD access check and bulk Symbol-plus-72-X-samples header only",
+      "size_bytes_from_head": 1335795,
+      "matrix_downloaded": false
+    }
+  ],
+  "snrna_arm": {
+    "donors": 17,
+    "young_donors": 6,
+    "old_donors": 11,
+    "exact_numeric_age_for_every_donor": true,
+    "young_age_range": [19, 22],
+    "old_age_range": [70, 90],
+    "groups_released": ["Young", "Old"],
+    "sarcopenic_labels_released_for_snrna": false,
+    "assay": "10x Chromium Single Cell 5' Library and Gel Bead Kit v1",
+    "geo_platform": "GPL24676",
+    "instrument": "Illumina NovaSeq 6000",
+    "sex_restriction": {
+      "source_cohort": "The primary paper states that the source biopsies were from 72 adult men.",
+      "mixed_sex_analysis_supported": false,
+      "per_snrna_gsm_sex_field_present": false,
+      "hm_to_bulk_x_crosswalk_public": false,
+      "caveat": "Male status is a study-level source-cohort assignment, not an independently released per-snRNA-sample field."
+    },
+    "released_filtered_nuclei": 134486,
+    "filtered_nuclei_method": "Sum of /matrix/barcodes dimensions in the 17 current public filtered H5 files; no secondary total substituted.",
+    "h5_schema": {
+      "files_checked": 17,
+      "all_matrix_data_dtype": "int32",
+      "barcode_dimensions_match_matrix_shape": true,
+      "range_requests": 55,
+      "range_bytes": 3589111,
+      "count_values_read": false
+    }
+  },
+  "donors": [
+    {"gsm": "GSM5098737", "hm_id": "HM1", "sample_title": "OldHM1", "group": "Old", "age": 75, "filtered_nuclei": 6587, "csv_size_bytes": 9077523, "h5_size_bytes": 3016762, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098737/suppl/GSM5098737_HM1.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098737/suppl/GSM5098737_HM1_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098738", "hm_id": "HM2", "sample_title": "OldHM2", "group": "Old", "age": 76, "filtered_nuclei": 7626, "csv_size_bytes": 11950749, "h5_size_bytes": 3130748, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098738/suppl/GSM5098738_HM2.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098738/suppl/GSM5098738_HM2_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098739", "hm_id": "HM3", "sample_title": "OldHM3", "group": "Old", "age": 75, "filtered_nuclei": 4206, "csv_size_bytes": 6477572, "h5_size_bytes": 2861643, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098739/suppl/GSM5098739_HM3.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098739/suppl/GSM5098739_HM3_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098740", "hm_id": "HM4", "sample_title": "OldHM4", "group": "Old", "age": 79, "filtered_nuclei": 11512, "csv_size_bytes": 9426872, "h5_size_bytes": 2957839, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098740/suppl/GSM5098740_HM4.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098740/suppl/GSM5098740_HM4_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098741", "hm_id": "HM5", "sample_title": "YouHM5", "group": "Young", "age": 20, "filtered_nuclei": 5877, "csv_size_bytes": 7808502, "h5_size_bytes": 3003523, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098741/suppl/GSM5098741_HM5.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098741/suppl/GSM5098741_HM5_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098742", "hm_id": "HM6", "sample_title": "OldHM6", "group": "Old", "age": 82, "filtered_nuclei": 7311, "csv_size_bytes": 7372139, "h5_size_bytes": 3155099, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098742/suppl/GSM5098742_HM6.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098742/suppl/GSM5098742_HM6_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098743", "hm_id": "HM7", "sample_title": "OldHM7", "group": "Old", "age": 72, "filtered_nuclei": 4478, "csv_size_bytes": 6021744, "h5_size_bytes": 2723950, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098743/suppl/GSM5098743_HM7.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098743/suppl/GSM5098743_HM7_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098744", "hm_id": "HM8", "sample_title": "YouHM8", "group": "Young", "age": 21, "filtered_nuclei": 5510, "csv_size_bytes": 5034109, "h5_size_bytes": 2855478, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098744/suppl/GSM5098744_HM8.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098744/suppl/GSM5098744_HM8_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098745", "hm_id": "HM9", "sample_title": "OldHM9", "group": "Old", "age": 70, "filtered_nuclei": 9552, "csv_size_bytes": 14068517, "h5_size_bytes": 3670266, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098745/suppl/GSM5098745_HM9.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098745/suppl/GSM5098745_HM9_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098746", "hm_id": "HM10", "sample_title": "YouHM10", "group": "Young", "age": 21, "filtered_nuclei": 4739, "csv_size_bytes": 7820931, "h5_size_bytes": 2999165, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098746/suppl/GSM5098746_HM10.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098746/suppl/GSM5098746_HM10_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098747", "hm_id": "HM11", "sample_title": "OldHM11", "group": "Old", "age": 75, "filtered_nuclei": 3991, "csv_size_bytes": 6038507, "h5_size_bytes": 2675123, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098747/suppl/GSM5098747_HM11.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098747/suppl/GSM5098747_HM11_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098748", "hm_id": "HM12", "sample_title": "OldHM12", "group": "Old", "age": 72, "filtered_nuclei": 5342, "csv_size_bytes": 8464293, "h5_size_bytes": 3147965, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098748/suppl/GSM5098748_HM12.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098748/suppl/GSM5098748_HM12_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098749", "hm_id": "HM13", "sample_title": "YouHM13", "group": "Young", "age": 19, "filtered_nuclei": 3623, "csv_size_bytes": 6384026, "h5_size_bytes": 2467164, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098749/suppl/GSM5098749_HM13.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098749/suppl/GSM5098749_HM13_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098750", "hm_id": "HM15", "sample_title": "OldHM15", "group": "Old", "age": 79, "filtered_nuclei": 3537, "csv_size_bytes": 4670888, "h5_size_bytes": 2343927, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098750/suppl/GSM5098750_HM15.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098750/suppl/GSM5098750_HM15_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098751", "hm_id": "HM21", "sample_title": "YouHM21", "group": "Young", "age": 22, "filtered_nuclei": 14685, "csv_size_bytes": 21072996, "h5_size_bytes": 26004630, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098751/suppl/GSM5098751_HM21.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098751/suppl/GSM5098751_HM21_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098752", "hm_id": "HM22", "sample_title": "YouHM22", "group": "Young", "age": 21, "filtered_nuclei": 13829, "csv_size_bytes": 15836519, "h5_size_bytes": 19284317, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098752/suppl/GSM5098752_HM22.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098752/suppl/GSM5098752_HM22_filtered_feature_bc_matrix.h5"},
+    {"gsm": "GSM5098753", "hm_id": "HM23", "sample_title": "OldHM23", "group": "Old", "age": 90, "filtered_nuclei": 22081, "csv_size_bytes": 26626284, "h5_size_bytes": 32048595, "h5_data_dtype": "int32", "csv_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098753/suppl/GSM5098753_HM23.csv.gz", "h5_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5098nnn/GSM5098753/suppl/GSM5098753_HM23_filtered_feature_bc_matrix.h5"}
+  ],
+  "raw_count_files": {
+    "preferred_snrna": "The 17 per-GSM filtered_feature_bc_matrix.h5 files listed under donors; each has int32 /matrix/data.",
+    "per_donor_csv": "The 17 corresponding HM CSV gzip files have gene-by-barcode layouts; no full matrix download or H5 value comparison was performed.",
+    "series_raw_tar": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/GSE167186_RAW.tar",
+      "size_bytes_from_head": 292526080,
+      "http_head_status": 200,
+      "contents": "17 per-donor CSV files and 17 per-donor filtered H5 files",
+      "downloaded": false
+    },
+    "bulk_counts_not_snrna": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE167nnn/GSE167186/suppl/GSE167186_counts.csv.gz",
+      "size_bytes_from_head": 1335795,
+      "http_head_status": 200,
+      "header": "Symbol plus 72 bulk X sample labels",
+      "matrix_downloaded": false
+    }
+  },
+  "bulk_arm_separate": {
+    "samples": 72,
+    "gsm_first": "GSM5098661",
+    "gsm_last": "GSM5098736",
+    "assay": "bulk RNA-seq",
+    "geo_platform": "GPL20301",
+    "instrument": "Illumina HiSeq 4000",
+    "sex": "72 adult men according to the primary paper",
+    "primary_supplement_groups": {"Young": 19, "Old healthy": 29, "Frail": 24},
+    "single_cell_or_single_nucleus": false,
+    "include_in_snrna_inferential_n": false,
+    "hm_to_bulk_x_crosswalk_public": false
+  },
+  "cross_study": {
+    "kedlian_accession": "E-MTAB-13874",
+    "shared_donor_ids_documented": false,
+    "individual_donor_disjointness_proven": false,
+    "this_dataset_reused_by_kedlian": true,
+    "reuse_description": "Kedlian obtained and reprocessed this quadriceps dataset for intercostal-versus-leg myonuclei comparisons.",
+    "independent_replication_label": "blocked_pending_overlap_adjudication_and_no_double_counting"
+  },
+  "verdict": {
+    "metadata": "ready",
+    "public_access": "ready",
+    "snrna_donor_mapping": "ready_17_donors_one_gsm_and_filtered_h5_per_donor",
+    "exact_age_analysis": "ready_after_guarded_count_and_eligibility_validation",
+    "snrna_raw_counts": "ready_int32_schema_verified_in_17_public_h5_files",
+    "released_filtered_nuclei": 134486,
+    "bulk_arm": "excluded_from_single_cell_analysis",
+    "replication_label": "blocked_pending_donor_overlap_adjudication",
+    "expression_analysis_performed": false
+  }
+}
