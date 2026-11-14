@@ -1,0 +1,22 @@
+cell_type,n_donors_observed,n_donors_ge20,n_cells_total,eligible,reason
+ArtEnd,28,28,4007,True,pass
+ArtSMC,28,28,28547,True,pass
+B Cell,10,0,11,False,failed_20_donors_with_20_nuclei_floor
+CapEnd,28,28,4474,True,pass
+Epithelium,23,15,1384,False,failed_20_donors_with_20_nuclei_floor
+LympEnd,28,26,1438,True,pass
+Macrophage,28,28,2590,True,pass
+Mast,5,0,19,False,failed_20_donors_with_20_nuclei_floor
+Mono,14,0,32,False,failed_20_donors_with_20_nuclei_floor
+Myofibroblast,26,18,4854,False,failed_20_donors_with_20_nuclei_floor
+NK Cell,27,5,354,False,failed_20_donors_with_20_nuclei_floor
+Pericyte,28,28,1981,True,pass
+Plasma B,22,1,154,False,failed_20_donors_with_20_nuclei_floor
+Schwann,27,20,1404,True,pass
+SpecSMC,27,15,5943,False,failed_20_donors_with_20_nuclei_floor
+Steroidogenic Stromal,25,5,605,False,failed_20_donors_with_20_nuclei_floor
+Stromal 1,28,28,371998,True,pass
+T Cell,28,18,1587,False,failed_20_donors_with_20_nuclei_floor
+VenEnd,28,24,4497,True,pass
+VenSMC,26,14,2895,False,failed_20_donors_with_20_nuclei_floor
+cDC,26,2,237,False,failed_20_donors_with_20_nuclei_floor

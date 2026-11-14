@@ -1,0 +1,38 @@
+{
+  "all_counts_finite_nonnegative_integer_valued": true,
+  "atlas_genes": 18099,
+  "atlas_nuclei": 439011,
+  "cache_bytes": 129999182,
+  "coarse_cell_types": 21,
+  "cohort": "GSE329417",
+  "corrected_count_sum": 1594284678.0,
+  "donors": 28,
+  "duplicate_gene_name_rows": 0,
+  "elapsed_seconds": 63.9109525680542,
+  "feature_ids_unique": true,
+  "gene_name_field": "var/_index",
+  "join": {
+    "all_28_donors_present": true,
+    "all_64_samples_present": true,
+    "all_observations_exactly_mapped": true,
+    "coarse_annotation_field": "cell_type_coarse1",
+    "donor_field": "SenNet_ID",
+    "sample_crosswalk": "released per-sample CellBender filename stem plus its _p1-_p4 suffix; exact one-to-one map to processing_sample_ID",
+    "sample_field": "unique_sample_ID",
+    "technical_replicates_combined_within_donor": [
+      "3_4",
+      "16_4"
+    ]
+  },
+  "memory_limit_gb": 8,
+  "minimum_free_gb": 30,
+  "outcomes_examined": false,
+  "peak_rss_bytes": 865349632,
+  "samples": 64,
+  "stored_corrected_count_values_checked": 877413549,
+  "uncorrected_cell_ranger_counts_available": false,
+  "uncorrected_sensitivity_performed": false,
+  "unknown_annotation_nuclei_excluded": 0,
+  "x_identical_to_log1p_norm_in_every_chunk": true,
+  "x_used_as_raw_counts": false
+}

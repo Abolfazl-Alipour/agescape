@@ -1,0 +1,94 @@
+{
+  "created": "2026-11-14",
+  "step": 7,
+  "cohort": "GSE329417",
+  "execution_order": 2,
+  "frozen_at_repository_head": "0610c34bde6c176efc1c225cc8d817231e9ce54a",
+  "models_frozen_before_expression_download_or_outcomes": true,
+  "current_plan_frozen_before_outcomes": true,
+  "amendment_scope": "Only join/count-transformation gates were clarified after expression schema inspection and before outcomes; donor sets, endpoints, models, covariates, floors, and BH families were not changed",
+  "resources": {
+    "script": "scripts/resource_guard.py",
+    "minimum_free_gb": 30,
+    "analysis_memory_gb": 8,
+    "sequential_downloads_and_heavy_jobs": true,
+    "backed_or_streamed_expression_reads": true,
+    "raw_tars_permitted": false,
+    "fastq_permitted": false,
+    "maximum_compressed_atlas_download_gb": 7,
+    "maximum_decompressed_atlas_gb": 40
+  },
+  "common": {
+    "inferential_unit": "donor",
+    "cell_level_inference": false,
+    "cross_cohort_pooling": false,
+    "premenopausal_claims": false,
+    "causal_claims": false,
+    "minimum_cells_per_donor_cell_type": 20,
+    "released_annotations_only": true,
+    "minimum_residual_degrees_of_freedom": 2,
+    "confidence_interval": "two-sided donor-level OLS t 95 percent",
+    "p1_signature": "Established human P1_Clean from src.aging_programs.load_program_tiers",
+    "p1_summary": "Mean per-cell log1p(CPM) within donor and released broad cell type; detected P1 up mean minus detected P1 down mean",
+    "p1_matched_null": "200 expression-decile-matched random-signature draws without replacement, excluding detected P1 genes, seed 20261105; centered two-sided empirical p=(1+extreme)/201",
+    "pseudobulk": "Sum released corrected/raw UMI counts across all pieces and cells within donor-cell type, then log1p(CPM); filter to >=10 summed counts and detection in >=2 included donors without using age outcomes",
+    "clr": "All released non-unknown coarse labels define the donor composition universe, including zero counts; 0.5-cell pseudocount",
+    "effect_reporting": "Effect, standard error, 95% CI, nominal p and BH q; non-significance is not equivalence"
+  },
+  "publication_status": "bioRxiv preprint; no peer-reviewed journal publication verified",
+  "input": "Public final annotated atlas H5AD with released annotations and layers/raw_counts CellBender-corrected unnormalized UMI counts; public donor and processing metadata",
+  "count_and_join_gate": "Stream every stored layers/raw_counts value and require finite nonnegative integers; unique feature IDs and observation IDs; exact donor/sample/plex reconciliation to the 64-row processing log and 28-donor clinical table; use only released annotations. Atlas unique_sample_ID values are reconciled one-to-one through each released per-sample CellBender H5AD filename stem and its _p1-_p4 suffix, not fuzzy joins. This filename-crosswalk clarification was frozen before outcomes after schema inspection.",
+  "count_processing": {
+    "primary": "layers/raw_counts CellBender-corrected counts",
+    "x_check": "Require atlas X to equal layers/log1p_norm in streamed chunks; X is log-normalized and is never used as raw counts. Only layers/raw_counts enters endpoints. This transformation clarification was frozen before outcomes after direct HDF5 inspection.",
+    "uncorrected_sensitivity": "blocked: original uncorrected Cell Ranger count matrices are not separately released"
+  },
+  "donor_aggregation": "Sum counts and average per-cell summaries over all annotated nuclei across repeated tissue pieces within donor-cell type; one donor row per endpoint. SN_0086 samples 3_4 and 16_4 are pooled as technical replicates within that donor aggregation, never treated as independent samples",
+  "eligibility": ">=20 annotated nuclei per donor-cell type and >=20 eligible donors; each model must also be finite, full rank and have >=2 residual degrees of freedom",
+  "technical_covariates": "mean_log_umi plus nuclei-weighted fractions of the donor-cell type in plexes 1, 2 and 3, with plex 4 as reference; composition uses all annotated donor nuclei for depth and plex fractions",
+  "clinical_covariates": "BMI continuous and non_ovarian_abnormal indicator (released Pre-malignant or Malignant versus Benign); preserve original three-state labels in donor output",
+  "models": {
+    "primary_depth_plex_clinical": "intercept + exact_age_per_10y + mean_log_umi + plex_fraction_1 + plex_fraction_2 + plex_fraction_3 + BMI + non_ovarian_abnormal",
+    "technical_depth_plex_sensitivity": "intercept + exact_age_per_10y + mean_log_umi + plex_fraction_1 + plex_fraction_2 + plex_fraction_3",
+    "unadjusted_sensitivity": "intercept + exact_age_per_10y",
+    "secondary_primary_plus_parity": "primary model + parity_live_births; age remains the inferential effect and parity adjustment is secondary",
+    "effect": "within-postmenopausal exact-age association per 10 years"
+  },
+  "endpoints": {
+    "P1_transport": {
+      "models": [
+        "primary_depth_plex_clinical",
+        "technical_depth_plex_sensitivity",
+        "unadjusted_sensitivity",
+        "secondary_primary_plus_parity"
+      ],
+      "matched_null": "primary model; conventional and matched-null p-values receive separate BH families"
+    },
+    "donor_pseudobulk_gene": {
+      "models": [
+        "primary_depth_plex_clinical",
+        "technical_depth_plex_sensitivity",
+        "unadjusted_sensitivity",
+        "secondary_primary_plus_parity"
+      ],
+      "multiplicity": "BH across every tested cell-type-by-gene combination within model"
+    },
+    "donor_CLR_composition": {
+      "models": [
+        "primary_depth_plex_clinical",
+        "technical_depth_plex_sensitivity",
+        "unadjusted_sensitivity",
+        "secondary_primary_plus_parity"
+      ]
+    },
+    "Hellinger_displacement": {
+      "status": "untestable_no_20_to_40_year_reference",
+      "outcomes_examined": false
+    },
+    "premenopausal_or_Jin_pooled_analysis": {
+      "status": "blocked_by_design",
+      "outcomes_examined": false
+    }
+  },
+  "multiplicity": "BH separately by endpoint and model; P1 conventional and matched-null families separate; pseudobulk BH is across all cell-type-by-gene tests in each model; sensitivity and secondary parity-adjusted families are not pooled with primary families"
+}

@@ -1,0 +1,20 @@
+{
+  "cohort": "GSE329417",
+  "download_bytes": 5746830392,
+  "elapsed_seconds": 2947.6026380062103,
+  "execution_order": 2,
+  "fastq_downloaded": false,
+  "files": [
+    {
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE329417/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz",
+      "maximum_file_gb": 7,
+      "minimum_free_gb": 30,
+      "sha256": "444960c1f56ca73e89bd8854b591199a633f733c3db034b07ef55de6d076f504",
+      "size_bytes": 5746830392,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz"
+    }
+  ],
+  "raw_tar_downloaded": false,
+  "sequential_resource_guarded_downloads": true
+}

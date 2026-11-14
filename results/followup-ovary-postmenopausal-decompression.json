@@ -1,0 +1,12 @@
+{
+  "atlas_path": "/home/reza/projects/agescape-revision-data/ovary/GSE329417/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad",
+  "compressed_path": "/home/reza/projects/agescape-revision-data/ovary/GSE329417/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz",
+  "compressed_size_bytes": 5746830392,
+  "decompressed_sha256": "873c0525d2b9655328d8fb9d129d69f24e00529578720ced8168356cc055b71c",
+  "decompressed_size_bytes": 21429914240,
+  "elapsed_seconds": 85.43108582496643,
+  "maximum_decompressed_gb": 40,
+  "memory_limit_gb": 8,
+  "minimum_free_gb": 30,
+  "peak_rss_bytes": 181555200
+}

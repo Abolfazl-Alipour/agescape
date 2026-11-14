@@ -1,0 +1,169 @@
+cell_type,endpoint_class,model,identifiable,n_donors,n_design_columns,residual_df,design_columns,reason
+ArtEnd,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+ArtEnd,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+ArtEnd,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+ArtEnd,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+ArtEnd,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+ArtEnd,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+ArtEnd,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+ArtEnd,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+ArtSMC,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+ArtSMC,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+ArtSMC,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+ArtSMC,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+ArtSMC,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+ArtSMC,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+ArtSMC,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+ArtSMC,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+B Cell,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+B Cell,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+CapEnd,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+CapEnd,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+CapEnd,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+CapEnd,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+CapEnd,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+CapEnd,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+CapEnd,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+CapEnd,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Epithelium,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Epithelium,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+LympEnd,expression,primary_depth_plex_clinical,True,26,8.0,18.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+LympEnd,expression,technical_depth_plex_sensitivity,True,26,6.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+LympEnd,expression,unadjusted_sensitivity,True,26,2.0,24.0,intercept;age_per_10y,pass
+LympEnd,expression,secondary_primary_plus_parity,True,26,9.0,17.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+LympEnd,composition,primary_depth_plex_clinical,True,26,8.0,18.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+LympEnd,composition,technical_depth_plex_sensitivity,True,26,6.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+LympEnd,composition,unadjusted_sensitivity,True,26,2.0,24.0,intercept;age_per_10y,pass
+LympEnd,composition,secondary_primary_plus_parity,True,26,9.0,17.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Macrophage,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Macrophage,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Macrophage,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Macrophage,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Macrophage,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Macrophage,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Macrophage,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Macrophage,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Mast,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Mast,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mast,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mast,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Mast,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Mast,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mast,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mast,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Mono,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Mono,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Mono,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Myofibroblast,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+NK Cell,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Pericyte,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Pericyte,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Pericyte,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Pericyte,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Pericyte,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Pericyte,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Pericyte,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Pericyte,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Plasma B,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Plasma B,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Schwann,expression,primary_depth_plex_clinical,True,20,8.0,12.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Schwann,expression,technical_depth_plex_sensitivity,True,20,6.0,14.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Schwann,expression,unadjusted_sensitivity,True,20,2.0,18.0,intercept;age_per_10y,pass
+Schwann,expression,secondary_primary_plus_parity,True,20,9.0,11.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Schwann,composition,primary_depth_plex_clinical,True,20,8.0,12.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Schwann,composition,technical_depth_plex_sensitivity,True,20,6.0,14.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Schwann,composition,unadjusted_sensitivity,True,20,2.0,18.0,intercept;age_per_10y,pass
+Schwann,composition,secondary_primary_plus_parity,True,20,9.0,11.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+SpecSMC,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+SpecSMC,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+Steroidogenic Stromal,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+Stromal 1,expression,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Stromal 1,expression,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Stromal 1,expression,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Stromal 1,expression,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+Stromal 1,composition,primary_depth_plex_clinical,True,28,8.0,20.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+Stromal 1,composition,technical_depth_plex_sensitivity,True,28,6.0,22.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+Stromal 1,composition,unadjusted_sensitivity,True,28,2.0,26.0,intercept;age_per_10y,pass
+Stromal 1,composition,secondary_primary_plus_parity,True,28,9.0,19.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+T Cell,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+T Cell,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+VenEnd,expression,primary_depth_plex_clinical,True,24,8.0,16.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+VenEnd,expression,technical_depth_plex_sensitivity,True,24,6.0,18.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+VenEnd,expression,unadjusted_sensitivity,True,24,2.0,22.0,intercept;age_per_10y,pass
+VenEnd,expression,secondary_primary_plus_parity,True,24,9.0,15.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+VenEnd,composition,primary_depth_plex_clinical,True,24,8.0,16.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal,pass
+VenEnd,composition,technical_depth_plex_sensitivity,True,24,6.0,18.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3,pass
+VenEnd,composition,unadjusted_sensitivity,True,24,2.0,22.0,intercept;age_per_10y,pass
+VenEnd,composition,secondary_primary_plus_parity,True,24,9.0,15.0,intercept;age_per_10y;mean_log_umi;plex_fraction_1;plex_fraction_2;plex_fraction_3;BMI;non_ovarian_abnormal;parity_live_births,pass
+VenSMC,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+VenSMC,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,expression,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+cDC,expression,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,expression,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,expression,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,composition,primary_depth_plex_clinical,False,0,,,,failed_base_donor_nuclei_floors
+cDC,composition,technical_depth_plex_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,composition,unadjusted_sensitivity,False,0,,,,failed_base_donor_nuclei_floors
+cDC,composition,secondary_primary_plus_parity,False,0,,,,failed_base_donor_nuclei_floors

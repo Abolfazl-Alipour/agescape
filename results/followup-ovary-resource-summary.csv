@@ -1,0 +1,3 @@
+cohort,download_files,download_bytes,decompressed_bytes,build_cache_seconds,build_cache_peak_rss_bytes,analysis_seconds,analysis_peak_rss_bytes
+GSE202601,8,118288235,,8.042945384979248,967151616,26.43657374382019,1098383360
+GSE329417,1,5746830392,21429914240.0,63.9109525680542,865349632,36.73133730888367,682827776

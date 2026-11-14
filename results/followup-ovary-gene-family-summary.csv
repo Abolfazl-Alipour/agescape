@@ -1,0 +1,7 @@
+cohort,model,endpoint,tests,nominal_p_lt_0.05,bh_q_lt_0.05,minimum_q_bh
+GSE202601,primary_group_depth_adjusted,donor_pseudobulk_gene,100009,6741,3,0.0447438317516113
+GSE202601,unadjusted_group_sensitivity,donor_pseudobulk_gene,100009,6775,7,0.0041106314915198
+GSE329417,primary_depth_plex_clinical,donor_pseudobulk_gene,119819,7404,1,0.0451659298557863
+GSE329417,technical_depth_plex_sensitivity,donor_pseudobulk_gene,119819,6645,0,0.3539827018697129
+GSE329417,unadjusted_sensitivity,donor_pseudobulk_gene,119819,7957,0,0.1183927664103089
+GSE329417,secondary_primary_plus_parity,donor_pseudobulk_gene,119819,8994,0,0.3203069129735352

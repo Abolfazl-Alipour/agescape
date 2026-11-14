@@ -1,0 +1,91 @@
+{
+  "cohort": "GSE202601",
+  "download_bytes": 118288235,
+  "elapsed_seconds": 182.15194463729858,
+  "execution_order": 1,
+  "fastq_downloaded": false,
+  "files": [
+    {
+      "donor": "ovary1",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125533_ovary1_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "f3c1ee3aebfc22ca3d323449e13e25de4f65dd115d988f4037b5fa866707f374",
+      "size_bytes": 25500068,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125533/suppl/GSM6125533_ovary1_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary2",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125534_ovary2_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "a5a813efda10ceb6caad3368a84252c6566f9de1416a5d7fb51a472e48a60421",
+      "size_bytes": 12986146,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125534/suppl/GSM6125534_ovary2_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary3",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125535_ovary3_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "41f8d0f15f42e17de2f1e55d1c4af6325a66188e2003b7fc2ae1206e4a3ccf5c",
+      "size_bytes": 15001166,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125535/suppl/GSM6125535_ovary3_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary4",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125536_ovary4_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "d10c398990abf3cb1558cab4dcb4e6a4e90d3897080efb77f128c25a0068ba2e",
+      "size_bytes": 10261190,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125536/suppl/GSM6125536_ovary4_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary5",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125537_ovary5_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "9f8cd0b10aeac508c6da04cc7b974f637abc9ae8718784dff2064f0eedf77ded",
+      "size_bytes": 15959899,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125537/suppl/GSM6125537_ovary5_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary6",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125538_ovary6_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "358ae217968a4872ab3bdc33c143fd9484bbc1a8202d97b92a626d88cd2ddb51",
+      "size_bytes": 11194813,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125538/suppl/GSM6125538_ovary6_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary7",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125539_ovary7_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "4e00a8d8ea496afa0700101873ac6f6542fc6be01eb0195a58e5387b186802c7",
+      "size_bytes": 13820952,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125539/suppl/GSM6125539_ovary7_snRNA-seq_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "donor": "ovary8",
+      "guarded_download": true,
+      "local_path": "/home/reza/projects/agescape-revision-data/ovary/GSE202601/GSM6125540_ovary8_snRNA-seq_filtered_feature_bc_matrix.h5",
+      "maximum_file_gb": 1,
+      "minimum_free_gb": 30,
+      "sha256": "0150e9345c4d8cbccbe008583ca1488d4a0262790af03052631bfc7c31c47bb9",
+      "size_bytes": 13564001,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125540/suppl/GSM6125540_ovary8_snRNA-seq_filtered_feature_bc_matrix.h5"
+    }
+  ],
+  "raw_tar_downloaded": false,
+  "sequential_resource_guarded_downloads": true
+}

@@ -1,0 +1,9 @@
+cell_type,n_donors_qc20,hellinger_eligible,reason,n_donors_after_reference_floors,n_young_after_reference_floors,n_reproductively_aged_after_reference_floors,min_cross_fitted_reference_cells
+BEC,8,True,pass,8.0,4.0,4.0,917.0
+EpiC,6,False,failed_all_four_per_group_or_50_cross_fitted_reference_nuclei,5.0,1.0,4.0,75.0
+GC,8,True,pass,8.0,4.0,4.0,570.0
+IC,8,True,pass,8.0,4.0,4.0,151.0
+LEC,0,False,failed_base_or_20_qualifying_nuclei_per_donor_floors,,,,
+SC,8,True,pass,8.0,4.0,4.0,7379.0
+SMC,8,True,pass,8.0,4.0,4.0,270.0
+TC,0,False,failed_base_or_20_qualifying_nuclei_per_donor_floors,,,,

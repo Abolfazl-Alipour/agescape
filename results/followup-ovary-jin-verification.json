@@ -1,0 +1,22 @@
+{
+  "all_annotations_matched_one_to_one": true,
+  "all_counts_finite_nonnegative_integer_valued": true,
+  "annotated_nuclei": 42568,
+  "cache_bytes": 47103134,
+  "cohort": "GSE202601",
+  "continuous_age_model": false,
+  "donors": 8,
+  "elapsed_seconds": 8.042945384979248,
+  "feature_order_identical_across_donors": true,
+  "memory_limit_gb": 8,
+  "metadata_rows": 42568,
+  "minimum_free_gb": 30,
+  "outcomes_examined": false,
+  "ovary5_numeric_age_used": false,
+  "peak_rss_bytes": 967151616,
+  "raw_h5_barcodes": 43494,
+  "reproductively_aged_donors": 4,
+  "stored_count_values_checked": 69548923,
+  "unannotated_h5_barcodes": 926,
+  "young_donors": 4
+}

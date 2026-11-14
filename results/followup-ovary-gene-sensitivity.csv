@@ -1,0 +1,5 @@
+cohort,model,primary_hits,same_direction,same_direction_fraction,q_lt_0.05_in_model
+GSE202601,unadjusted_group_sensitivity,3,3,1.0,2
+GSE329417,technical_depth_plex_sensitivity,1,1,1.0,0
+GSE329417,unadjusted_sensitivity,1,1,1.0,0
+GSE329417,secondary_primary_plus_parity,1,1,1.0,0

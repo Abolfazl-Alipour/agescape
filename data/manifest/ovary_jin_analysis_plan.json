@@ -1,0 +1,104 @@
+{
+  "created": "2026-11-14",
+  "step": 7,
+  "cohort": "GSE202601",
+  "execution_order": 1,
+  "frozen_at_repository_head": "0610c34bde6c176efc1c225cc8d817231e9ce54a",
+  "models_frozen_before_expression_download_or_outcomes": true,
+  "current_plan_frozen_before_outcomes": true,
+  "amendment_scope": "Only join/count-transformation gates were clarified after expression schema inspection and before outcomes; donor sets, endpoints, models, covariates, floors, and BH families were not changed",
+  "resources": {
+    "script": "scripts/resource_guard.py",
+    "minimum_free_gb": 30,
+    "analysis_memory_gb": 8,
+    "sequential_downloads_and_heavy_jobs": true,
+    "backed_or_streamed_expression_reads": true,
+    "raw_tars_permitted": false,
+    "fastq_permitted": false,
+    "maximum_individual_download_gb": 1
+  },
+  "common": {
+    "inferential_unit": "donor",
+    "cell_level_inference": false,
+    "cross_cohort_pooling": false,
+    "premenopausal_claims": false,
+    "causal_claims": false,
+    "minimum_cells_per_donor_cell_type": 20,
+    "released_annotations_only": true,
+    "minimum_residual_degrees_of_freedom": 2,
+    "confidence_interval": "two-sided donor-level OLS t 95 percent",
+    "p1_signature": "Established human P1_Clean from src.aging_programs.load_program_tiers",
+    "p1_summary": "Mean per-cell log1p(CPM) within donor and released broad cell type; detected P1 up mean minus detected P1 down mean",
+    "p1_matched_null": "200 expression-decile-matched random-signature draws without replacement, excluding detected P1 genes, seed 20261105; centered two-sided empirical p=(1+extreme)/201",
+    "pseudobulk": "Sum released corrected/raw UMI counts across all pieces and cells within donor-cell type, then log1p(CPM); filter to >=10 summed counts and detection in >=2 included donors without using age outcomes",
+    "clr": "All released non-unknown coarse labels define the donor composition universe, including zero counts; 0.5-cell pseudocount",
+    "effect_reporting": "Effect, standard error, 95% CI, nominal p and BH q; non-significance is not equivalence"
+  },
+  "input": "Eight public per-donor Cell Ranger filtered feature-barcode H5 files and released snRNA metadata celltype2 broad annotations; no ATAC expression/peak download",
+  "count_and_join_gate": "Stream every stored matrix value and require finite nonnegative integers; unique feature IDs and per-donor barcodes; exact one-to-one donor-specific H5/metadata barcode reconciliation after converting each matrix '-1' suffix to the released donor-specific metadata suffix '.1' through '.8'. Raw H5 matrices may contain additional unannotated barcodes; every released annotated barcode must match uniquely and only annotated nuclei enter biological summaries. This join clarification was frozen before outcomes after schema inspection.",
+  "donors": {
+    "young": [
+      "ovary1",
+      "ovary2",
+      "ovary3",
+      "ovary4"
+    ],
+    "reproductively_aged": [
+      "ovary5",
+      "ovary6",
+      "ovary7",
+      "ovary8"
+    ],
+    "each_donor_used_once": true,
+    "continuous_age_model": "blocked_not_planned",
+    "ovary5_exact_age": "UNRESOLVED_47_SNRNA_49_GEO_AND_SNATAC; group retained as reproductively aged; numeric age never used"
+  },
+  "eligibility": "Every one of four young and four reproductively-aged donors must have >=20 annotated nuclei in the broad cell type; otherwise all cell-type inferential endpoints are untestable",
+  "models": {
+    "primary_group_depth_adjusted": "intercept + reproductively_aged + mean_log_umi",
+    "unadjusted_group_sensitivity": "intercept + reproductively_aged",
+    "additional_covariates": "none; all donors female and no usable donor-level procurement/PMI measurements are released",
+    "effect": "reproductively-aged minus young"
+  },
+  "endpoints": {
+    "P1_transport": {
+      "models": [
+        "primary_group_depth_adjusted",
+        "unadjusted_group_sensitivity"
+      ],
+      "matched_null": "primary model; conventional and matched-null p-values receive separate BH families"
+    },
+    "donor_pseudobulk_gene": {
+      "models": [
+        "primary_group_depth_adjusted",
+        "unadjusted_group_sensitivity"
+      ],
+      "multiplicity": "BH across every tested cell-type-by-gene combination within model"
+    },
+    "donor_CLR_composition": {
+      "models": [
+        "primary_group_depth_adjusted",
+        "unadjusted_group_sensitivity"
+      ],
+      "depth": "mean log raw UMI over all annotated donor nuclei"
+    },
+    "Hellinger_displacement": {
+      "models": [
+        "primary_group_depth_adjusted",
+        "unadjusted_group_sensitivity"
+      ],
+      "reference": "Cross-fitted young-group raw-count reference within broad cell type after technical-gene exclusions; leave evaluated young donor out and use all eligible young donors for aged donors",
+      "cell_filter": ">=1500 raw UMI and positive nontechnical UMI",
+      "technical_exclusions": "MT-, RPL/RPS/MRPL/MRPS prefixes and XIST, TSIX, DDX3Y, EIF2S3Y, UTY, KDM5D",
+      "floors": "20 qualifying nuclei per scored donor, >=50 cross-fitted young-reference nuclei per donor, and all four donors per group after filtering",
+      "otherwise": "untestable; never substitute zero or a null result"
+    },
+    "same_nucleus_RNA_ATAC_coupling": {
+      "status": "blocked_separate_assays_and_biosamples"
+    },
+    "donor_matched_RNA_ATAC_linkage": {
+      "status": "blocked_no_valid_released_peak_gene_link_table_and_no_validated_EC_BEC_LEC_harmonization"
+    }
+  },
+  "multiplicity": "BH separately by endpoint and model; P1 conventional and matched-null families separate; pseudobulk BH is across all cell-type-by-gene tests in each model; sensitivity families are not pooled with primary families"
+}

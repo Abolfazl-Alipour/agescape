@@ -1,0 +1,9 @@
+donor,rna_gsm,snrna_metadata_age_label,geo_exact_age_years,snrna_metadata_age_years,exact_age_status,group,old,raw_h5_barcodes,annotated_nuclei,unannotated_h5_barcodes,stored_count_values,total_raw_umi_all_h5_barcodes,total_raw_umi_annotated,mean_umi_annotated,median_umi_annotated,mean_log_umi_annotated,all_counts_finite_nonnegative_integer_valued,all_annotations_matched_one_to_one
+ovary1,GSM6125533,ovary23,23,23,consistent,young,0,9442,9151,291,16246662,33957510,32476724,3548.98087640695,2578.0,7.845312815628436,True,True
+ovary2,GSM6125534,ovary27,27,27,consistent,young,0,4726,4615,111,7565882,17525996,14254128,3088.6517876489706,2138.0,7.709764671338918,True,True
+ovary3,GSM6125535,ovary28,28,28,consistent,young,0,5997,5916,81,8646882,19075565,18878429,3191.0799526707233,2810.0,7.8154777813424605,True,True
+ovary4,GSM6125536,ovary29,29,29,consistent,young,0,3912,3852,60,5603433,12255836,10855559,2818.161734164071,1893.5,7.614745904459339,True,True
+ovary5,GSM6125537,ovary47,49,47,CONFLICT: GEO/snATAC say 49; snRNA metadata says ovary47; primary paper gives aged range 49-54,reproductively_aged,1,4943,4724,219,9592150,24594087,19134734,4050.5364098221844,3215.5,7.93528848109222,True,True
+ovary6,GSM6125538,ovary51,51,51,consistent,reproductively_aged,1,4938,4930,8,6161880,11118606,11100855,2251.6947261663286,1949.0,7.5366643432680975,True,True
+ovary7,GSM6125539,ovary52,52,52,consistent,reproductively_aged,1,5011,4908,103,7836212,18029184,17045768,3473.0578647106763,3058.5,7.96370399332798,True,True
+ovary8,GSM6125540,ovary54,54,54,consistent,reproductively_aged,1,4525,4472,53,7895822,16986273,16844098,3766.569320214669,3445.5,8.00246679300901,True,True

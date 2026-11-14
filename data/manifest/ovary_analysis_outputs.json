@@ -1,0 +1,270 @@
+{
+  "created": "2026-11-14",
+  "step": 7,
+  "repository_head_at_plan_freeze": "0610c34bde6c176efc1c225cc8d817231e9ce54a",
+  "verification": "149 passed, 1 skipped",
+  "commit_or_push_performed": false,
+  "heart_files_modified": false,
+  "artifacts": [
+    {
+      "path": "data/manifest/ovary_cohorts.json",
+      "size_bytes": 107835,
+      "sha256": "6608664c73a31e666dad1e31799caece0f7ac0935edbcacb705549301f72bab6"
+    },
+    {
+      "path": "data/manifest/ovary_jin_analysis_plan.json",
+      "size_bytes": 5743,
+      "sha256": "1d5514b3c894237940a6d01ae578b061661017b2ae2b30fd5028e6b9c590f692"
+    },
+    {
+      "path": "data/manifest/ovary_postmenopausal_analysis_plan.json",
+      "size_bytes": 6297,
+      "sha256": "2305260278a7e54f8e9caa8a6496836e469cce815029ff77a8705628a52162d5"
+    },
+    {
+      "path": "reports/followup-ovary-analysis.md",
+      "size_bytes": 15245,
+      "sha256": "940ca0fbe22864e9664bbc65115344ad5322dd5da503eedcf58c924570e9e29c"
+    },
+    {
+      "path": "src/followup_ovary.py",
+      "size_bytes": 5608,
+      "sha256": "ae075d46ae6ea9f725c9791252d378eb95ad9c50809cce6a8fb46db32cf46ac5"
+    },
+    {
+      "path": "tests/test_followup_ovary.py",
+      "size_bytes": 14233,
+      "sha256": "2564903a8e67e561a5f85c2cdba6a3bb4120921df43b855c7af5ea0218ec14ad"
+    },
+    {
+      "path": "scripts/fetch_followup_ovary.py",
+      "size_bytes": 3088,
+      "sha256": "4801874f423b02f938e2da845d5cf6e5f0ab741d541645df0a9c4499ba9e0a9b"
+    },
+    {
+      "path": "scripts/prepare_followup_ovary.py",
+      "size_bytes": 10874,
+      "sha256": "db9364c5a0808a25bef64eccfd0fcae60c7be21264cc125a27082ce6e623fbdf"
+    },
+    {
+      "path": "scripts/prepare_followup_ovary_postmenopausal.py",
+      "size_bytes": 5670,
+      "sha256": "33a28464fadfe1bb3cc2a7875a6b937e1e880e825cdc4ecb04af5eec891d3861"
+    },
+    {
+      "path": "scripts/report_followup_ovary.py",
+      "size_bytes": 24514,
+      "sha256": "e5c4268a8e2e5a2695928babade169877b582934665796c3afa8d2137e95203d"
+    },
+    {
+      "path": "scripts/run_followup_ovary_jin.py",
+      "size_bytes": 32157,
+      "sha256": "b4f2539ab23a6c553e80699e1640c2ce0508efdf057a8ef2ca1fd0f2e285aa0d"
+    },
+    {
+      "path": "scripts/run_followup_ovary_postmenopausal.py",
+      "size_bytes": 38537,
+      "sha256": "4eb3c4bc08b6a3efb459ca30a5758edb5c29ff517fe55f3f749d441d0cdf68d2"
+    },
+    {
+      "path": "results/followup-ovary-GSE202601-download.json",
+      "size_bytes": 4434,
+      "sha256": "4d1665b3a0997ea2426a55f811abda8f5db908e3c9e27b9a42d77608c2161235"
+    },
+    {
+      "path": "results/followup-ovary-GSE329417-download.json",
+      "size_bytes": 758,
+      "sha256": "8677f334078b99286df9f27a8aaf7210b085706468987952b027dda8972d36c8"
+    },
+    {
+      "path": "results/followup-ovary-endpoint-summary.csv",
+      "size_bytes": 38464,
+      "sha256": "6883946321ae633b9ea1323f849912f1fb4fe58fbe37d4413b1e34f733a22a8b"
+    },
+    {
+      "path": "results/followup-ovary-gene-family-summary.csv",
+      "size_bytes": 634,
+      "sha256": "d396effc8371cb1d8e5e53d1b2f5dfba926532695967ce43d3d59f32552c17ab"
+    },
+    {
+      "path": "results/followup-ovary-gene-sensitivity.csv",
+      "size_bytes": 279,
+      "sha256": "1bad0327fb47b0b9173da6282e77a79f7f1b802ff12c5003b1b385098093acf7"
+    },
+    {
+      "path": "results/followup-ovary-jin-analysis-resource.json",
+      "size_bytes": 155,
+      "sha256": "2b3ee3c0a4d2d9ee72fb1708c02c8d5ac1dd030e1632192074d1f40ed9b2ce12"
+    },
+    {
+      "path": "results/followup-ovary-jin-celltype-donor-counts.csv",
+      "size_bytes": 3170,
+      "sha256": "3c2ba9c3d1cc0d76d6b1fe836afca4b83e1cb3932599265e3d42613c12580396"
+    },
+    {
+      "path": "results/followup-ovary-jin-celltype-eligibility.csv",
+      "size_bytes": 406,
+      "sha256": "52303145683c0ee258b0209814b00c8ae7380204e7a749a2c6c86be83a9c6dda"
+    },
+    {
+      "path": "results/followup-ovary-jin-composition-models.csv",
+      "size_bytes": 3440,
+      "sha256": "7f3d5cd4553447d8ae46a0b09db76c60a296f1a7d707851bd443b00a26ea86e3"
+    },
+    {
+      "path": "results/followup-ovary-jin-donor-qc.csv",
+      "size_bytes": 1676,
+      "sha256": "9b0abbf135aeff85396b80fd021b42ecfbddccb4832f12a99062d809a6f4fc1a"
+    },
+    {
+      "path": "results/followup-ovary-jin-gene-models.csv",
+      "size_bytes": 65909963,
+      "sha256": "1b5aac9ea556ac7ceb728c3dc7feab0aa4539155fa681a20bef9d3b3c2d1d9ca"
+    },
+    {
+      "path": "results/followup-ovary-jin-hellinger-donors.csv",
+      "size_bytes": 3630,
+      "sha256": "e4d48bf95f33e046457f29e728fe8cb9f780ea9594b42e399d6237a87ccf6a78"
+    },
+    {
+      "path": "results/followup-ovary-jin-hellinger-eligibility.csv",
+      "size_bytes": 588,
+      "sha256": "37729b436a32d6c45886a543cc0005397ef4448b1f6ee34dedd0284e4266c170"
+    },
+    {
+      "path": "results/followup-ovary-jin-hellinger-models.csv",
+      "size_bytes": 2974,
+      "sha256": "d3cbfabe0b0003ad41fb8e3d00b7e0425c8ac45d6965c21065473eea01fc5451"
+    },
+    {
+      "path": "results/followup-ovary-jin-model-status.csv",
+      "size_bytes": 6680,
+      "sha256": "1a196a0789c0f67a5eb5c66ec0d049bae2a7b0efb25aaffc220a96bc2b8a5d6e"
+    },
+    {
+      "path": "results/followup-ovary-jin-p1-donor-scores.csv",
+      "size_bytes": 3649,
+      "sha256": "1fa2c2c3309fa9bb8018b8d05bd9c51159e8e786e1058c857bd9c9fbc1fa1beb"
+    },
+    {
+      "path": "results/followup-ovary-jin-p1-models.csv",
+      "size_bytes": 4467,
+      "sha256": "0f26943142b58d5c0aad019010d12aae840f5f38dd5811676c59f98543683ff1"
+    },
+    {
+      "path": "results/followup-ovary-jin-p1-null.csv",
+      "size_bytes": 44425,
+      "sha256": "3bc33e852d9322bd6de0d33c9c7ad1ea64a0e6744193f8c3c29f04de168ce4de"
+    },
+    {
+      "path": "results/followup-ovary-jin-verification.json",
+      "size_bytes": 656,
+      "sha256": "ce559609183496660c2bdaa15700b46f66075bb2b0b9e28ecd02bc6df353c342"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-analysis-resource.json",
+      "size_bytes": 163,
+      "sha256": "443947ba84cc80b78724c2c34a1fa3a885b8bfafe9488b500b8a942df60d95e7"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-celltype-donor-counts.csv",
+      "size_bytes": 29378,
+      "sha256": "886e8c9c2bc5c33d1a67c6829ca2cf1184bf297be9027cd7efef89a62e6cc6b8"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-celltype-eligibility.csv",
+      "size_bytes": 1087,
+      "sha256": "48cf1f112c629ac45c16b7a3b6e21cf87afa784ec0088d0e06949f9e6bdc9d37"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-composition-models.csv",
+      "size_bytes": 12532,
+      "sha256": "3387a0ade2bed75b08e334e25f539e5507961748783d2b48ca6b17145df7a5c4"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-covariate-identifiability.csv",
+      "size_bytes": 20104,
+      "sha256": "42b5024de28d5d59292b72e4558a6165238e4b24a94671595b44ab7a064be399"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-decompression.json",
+      "size_bytes": 614,
+      "sha256": "1acf4a675133803ebc09361a1491e8746a907e4fc663a38954f6ed861fbbe9f1"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-donor-qc.csv",
+      "size_bytes": 3634,
+      "sha256": "e0d922c62b7960ab5cfde0206fe0840cf0a3d8cf34ecb6e8786260cc30282847"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-gene-models-primary_depth_plex_clinical.csv",
+      "size_bytes": 52727700,
+      "sha256": "31dd6b0ae8d179258bdff90ae448f28786bfa9475dec0bbe2d92ffbe47046ce0"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-gene-models-secondary_primary_plus_parity.csv",
+      "size_bytes": 55226559,
+      "sha256": "29da97bdaa68dd72b9c099638cc87902968c73b27903acddd72ca9a6c52800a8"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-gene-models-technical_depth_plex_sensitivity.csv",
+      "size_bytes": 50350074,
+      "sha256": "c176a237dfe60d8d6afff6161b34a3395b0ca706df240c5274d18b1545c24dd4"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-gene-models-unadjusted_sensitivity.csv",
+      "size_bytes": 41995234,
+      "sha256": "93c535d036596b48b1752e54ce0fdb2e690cca43650e5093f6cfd266fbdc79d2"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-model-status.csv",
+      "size_bytes": 29460,
+      "sha256": "4501d661aed3b509898f12870bfb60409a3dd4d26211d0046dea9b5831324651"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-p1-donor-scores.csv",
+      "size_bytes": 29561,
+      "sha256": "26f6c8a998d71daf76156bddd8006b2aa82fa1c6dcd3a8c2c23825f84f6b0ae9"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-p1-models.csv",
+      "size_bytes": 14172,
+      "sha256": "6546dc5759411e2bc0602cdd6e041a7b5fffca687ac347d8730d8ed9a43990a0"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-p1-null.csv",
+      "size_bytes": 75674,
+      "sha256": "2c2fdc51229c0b8d66c5cff5241773adf8d80b16c4ba57aba980c3558bcc6206"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-sample-qc.csv",
+      "size_bytes": 1451,
+      "sha256": "32f9456a185eba5f3bc00048da266873d21222108efaa297e77fa41d766f1962"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-schema.json",
+      "size_bytes": 47217,
+      "sha256": "d75851cb46ca37ecd3744a1a455ae3ae25871a3c3af7d36da6ab1c3f76ce9f84"
+    },
+    {
+      "path": "results/followup-ovary-postmenopausal-verification.json",
+      "size_bytes": 1272,
+      "sha256": "79a6c3eae11bb7053744aad6b5cb28f47983c868d090c68f8ea2e8043e1adbac"
+    },
+    {
+      "path": "results/followup-ovary-primary-gene-fdr-hits.csv",
+      "size_bytes": 1725,
+      "sha256": "2643e5b2a31e0c73b4fa9fc86f57c3d4d880601fc6bdf97d22ceb2900b629bbe"
+    },
+    {
+      "path": "results/followup-ovary-resource-summary.csv",
+      "size_bytes": 316,
+      "sha256": "eca81f070c957c206b84df4ded460cbf312a605531432d063ab823ec862645c2"
+    },
+    {
+      "path": "results/followup-ovary-untestable-arms.csv",
+      "size_bytes": 21776,
+      "sha256": "b84debd7135992fa4c31c1c28b9aa5770a4166907ec45976d4bc185ea1fbed1a"
+    }
+  ]
+}

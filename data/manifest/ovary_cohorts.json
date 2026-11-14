@@ -2,16 +2,17 @@
   "created": "2026-11-14",
   "base_revision": "8cd58bdfc0921636ba2846f898fc6d0ab96d3ccb",
   "scope": {
-    "metadata_and_public_access_only": true,
-    "expression_matrices_downloaded": false,
-    "biological_outcomes_analyzed": false,
-    "heavy_jobs_run": false,
+    "metadata_and_public_access_only": false,
+    "expression_matrices_downloaded": true,
+    "biological_outcomes_analyzed": true,
+    "heavy_jobs_run": true,
     "external_data_root": "../agescape-revision-data/ovary-metadata",
     "cohorts": [
       "GSE202601",
       "GSE329417"
     ],
-    "note": "Only SOFT/file inventories, primary text, 439 KB of Jin cell metadata, and 15.5 KB of GSE329417 donor/sample metadata were acquired. Large objects were checked by HEAD/filelist only."
+    "note": "Metadata remain under ../agescape-revision-data/ovary-metadata. Step 7 Jin per-donor H5 files and the GSE329417 final atlas were acquired sequentially under ../agescape-revision-data/ovary; raw-count gates and eligible donor-level outcomes are complete. No RAW tar was downloaded.",
+    "expression_data_root": "../agescape-revision-data/ovary"
   },
   "common_analysis_rules": {
     "inferential_unit": "donor; nuclei, tissue pieces and technical replicates are not independent donors",
@@ -129,7 +130,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125533/suppl/GSM6125533_ovary1_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 25500068,
           "released_time": "05/07/2022 14:24:33",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125533_ovary1_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "f3c1ee3aebfc22ca3d323449e13e25de4f65dd115d988f4037b5fa866707f374",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125541/suppl/GSM6125541_ovary1_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -172,7 +177,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125534/suppl/GSM6125534_ovary2_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 12986146,
           "released_time": "05/07/2022 14:24:47",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125534_ovary2_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "a5a813efda10ceb6caad3368a84252c6566f9de1416a5d7fb51a472e48a60421",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125542/suppl/GSM6125542_ovary2_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -215,7 +224,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125535/suppl/GSM6125535_ovary3_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 15001166,
           "released_time": "05/07/2022 14:48:31",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125535_ovary3_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "41f8d0f15f42e17de2f1e55d1c4af6325a66188e2003b7fc2ae1206e4a3ccf5c",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125543/suppl/GSM6125543_ovary3_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -258,7 +271,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125536/suppl/GSM6125536_ovary4_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 10261190,
           "released_time": "05/07/2022 14:50:07",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125536_ovary4_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "d10c398990abf3cb1558cab4dcb4e6a4e90d3897080efb77f128c25a0068ba2e",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125544/suppl/GSM6125544_ovary4_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -301,7 +318,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125537/suppl/GSM6125537_ovary5_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 15959899,
           "released_time": "05/07/2022 15:14:06",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125537_ovary5_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "9f8cd0b10aeac508c6da04cc7b974f637abc9ae8718784dff2064f0eedf77ded",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125545/suppl/GSM6125545_ovary5_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -344,7 +365,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125538/suppl/GSM6125538_ovary6_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 11194813,
           "released_time": "05/07/2022 15:15:12",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125538_ovary6_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "358ae217968a4872ab3bdc33c143fd9484bbc1a8202d97b92a626d88cd2ddb51",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125546/suppl/GSM6125546_ovary6_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -387,7 +412,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125539/suppl/GSM6125539_ovary7_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 13820952,
           "released_time": "05/07/2022 15:41:36",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125539_ovary7_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "4e00a8d8ea496afa0700101873ac6f6542fc6be01eb0195a58e5387b186802c7",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125547/suppl/GSM6125547_ovary7_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -430,7 +459,11 @@
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125540/suppl/GSM6125540_ovary8_snRNA-seq_filtered_feature_bc_matrix.h5",
           "size_bytes": 13564001,
           "released_time": "05/07/2022 16:03:20",
-          "type": "H5"
+          "type": "H5",
+          "downloaded": true,
+          "local_path": "../agescape-revision-data/ovary/GSE202601/GSM6125540_ovary8_snRNA-seq_filtered_feature_bc_matrix.h5",
+          "sha256": "0150e9345c4d8cbccbe008583ca1488d4a0262790af03052631bfc7c31c47bb9",
+          "count_values_validated": true
         },
         "atac_filtered_peak_matrix": {
           "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6125nnn/GSM6125548/suppl/GSM6125548_ovary8_snATAC-seq_filtered_peak_bc_matrix.h5",
@@ -461,7 +494,8 @@
         "type": "TAR",
         "downloaded": false
       },
-      "validation_not_done": "No matrix was downloaded; finite/nonnegative/integer values, dimensions and barcode joins remain future gates."
+      "validation_not_done": false,
+      "validation": "results/followup-ovary-jin-verification.json"
     },
     "annotations": {
       "snrna": {
@@ -540,6 +574,21 @@
       "endpoints": "Keep P1, CLR composition, pseudobulk gene expression and Hellinger separate. Report old-minus-young effects with uncertainty and BH within each prespecified endpoint/cell-type family. No outcome has been computed here.",
       "sensitivity": "Check procurement/PMI metadata and technical depth before modeling; do not add unidentifiable covariates to four-versus-four models. The ovary5 47/49 discrepancy does not alter its aged group but must remain explicit and blocks any exact-age use for that donor.",
       "coupling": "No same-nucleus coupling. If valid links are later established, aggregate RNA and linked peak accessibility within donor and harmonized cell type and describe exploratory donor-matched associations only; never chronological causal coupling."
+    },
+    "analysis": {
+      "completed": "2026-11-14",
+      "frozen_plan": "data/manifest/ovary_jin_analysis_plan.json",
+      "script": "scripts/run_followup_ovary_jin.py",
+      "report": "reports/followup-ovary-analysis.md",
+      "inferential_unit": "donor",
+      "continuous_age_used": false,
+      "ovary5_conflict_preserved": true,
+      "annotated_nuclei": 42568,
+      "all_raw_counts_validated": true,
+      "same_nucleus_coupling": "blocked",
+      "donor_matched_linkage": "blocked_no_valid_peak_gene_links_or_label_harmonization",
+      "peak_rss_bytes_build_cache": 967151616,
+      "peak_rss_bytes_analysis": 1098383360
     }
   },
   "GSE329417": {
@@ -2414,19 +2463,28 @@
         "type": "TAR",
         "downloaded": false
       },
-      "validation_not_done": "No H5AD was downloaded; corrected-count integer/value checks, original-vs-corrected count implications and donor/atlas barcode joins remain future gates."
+      "validation_not_done": false,
+      "validation": "results/followup-ovary-postmenopausal-verification.json",
+      "uncorrected_cell_ranger_counts_unavailable": true
     },
     "annotations": {
       "status": "Public in final atlas H5AD/SCE; preprint reports 21 coarse cell types and 37 fine cell states.",
       "immune_object": "Separate immune-compartment H5AD includes immune annotations and scVI/UMAP/milo information.",
-      "validation_not_done": "Annotation field names, barcode uniqueness and per-donor cell floors were not inspected because expression objects were not downloaded."
+      "validation_not_done": false,
+      "validated_field": "cell_type_coarse1"
     },
     "public_processed_objects": [
       {
         "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz",
         "size_bytes": 5746830392,
-        "content": "Final post-QC annotated atlas; corrected counts, log-normalized layer, public obs/var, annotations and embeddings; not downloaded",
-        "downloaded": false
+        "content": "Final post-QC annotated atlas; CellBender-corrected raw_counts and log-normalized layers, public obs/var, annotations and embeddings; downloaded and validated in Step 7",
+        "downloaded": true,
+        "local_path": "../agescape-revision-data/ovary/GSE329417/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad.gz",
+        "sha256": "444960c1f56ca73e89bd8854b591199a633f733c3db034b07ef55de6d076f504",
+        "decompressed_local_path": "../agescape-revision-data/ovary/GSE329417/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas.h5ad",
+        "decompressed_size_bytes": 21429914240,
+        "decompressed_sha256": "873c0525d2b9655328d8fb9d129d69f24e00529578720ced8168356cc055b71c",
+        "count_values_validated": true
       },
       {
         "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE329nnn/GSE329417/suppl/GSE329417_human_ovary_snucRNAseq_final_annotated_atlas_SCE.rds.gz",
@@ -2460,6 +2518,23 @@
       "covariates": "Freeze a small identifiable set before outcomes, considering plex/processing batch and prespecified clinical modifiers (BMI, parity and non-ovarian cancer state). Do not fit 64 samples as independent or overfit 28 donors. Parity analyses are secondary and separate from chronological age.",
       "endpoints": "Keep donor-pseudobulk expression, CLR composition and any eligible vector endpoint separate; report age effects per 10 years with 95% intervals and BH within each prespecified endpoint/cell-type family. Corrected-count sensitivity is required because uncorrected Cell Ranger matrices are not separately released.",
       "fallback": "If future count/atlas joins or donor mapping fail, restrict this cohort to descriptive annotation and QC. No association or outcome has been computed here."
+    },
+    "analysis": {
+      "completed": "2026-11-14",
+      "publication_status": "preprint",
+      "frozen_plan": "data/manifest/ovary_postmenopausal_analysis_plan.json",
+      "script": "scripts/run_followup_ovary_postmenopausal.py",
+      "report": "reports/followup-ovary-analysis.md",
+      "inferential_unit": "donor",
+      "effect": "exact_age_per_10_years_within_postmenopausal_cohort",
+      "technical_replicates_combined": true,
+      "x_identical_to_log1p_norm": true,
+      "x_used_as_raw_counts": false,
+      "uncorrected_sensitivity": "blocked_counts_unavailable",
+      "Hellinger": "untestable_no_20_to_40_reference",
+      "cross_cohort_pooling": false,
+      "peak_rss_bytes_build_cache": 865349632,
+      "peak_rss_bytes_analysis": 682827776
     }
   }
 }
