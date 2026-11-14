@@ -1,0 +1,80 @@
+{
+  "frozen_before_expression_download_or_outcomes": "2026-11-14",
+  "head_at_freeze": "a33576495be8fa4b4c53701c2418f86eb85e140b",
+  "scope": "Restricted public Lake kidney scCv3 and snCv3 CELLxGENE per-assay releases; no controlled raw sequencing and no pooling of assays.",
+  "release": {
+    "collection_id": "bcb61471-2a44-4d00-a0af-ff085512674c",
+    "collection_version_id": "379e9a9b-8436-496f-9370-042491bc27d6",
+    "scCv3": {
+      "dataset_id": "32b9bdce-2481-4c85-ba1b-6ad5fcea844c",
+      "dataset_version_id": "3ae68468-89f7-4941-a945-f7bae9b2cbea",
+      "h5ad_url": "https://datasets.cellxgene.cziscience.com/3ae68468-89f7-4941-a945-f7bae9b2cbea.h5ad",
+      "expected_cells": 107344,
+      "expected_healthy_exact_age_donors": 18
+    },
+    "snCv3": {
+      "dataset_id": "07854d9c-5375-4a9b-ac34-fa919d3c3686",
+      "dataset_version_id": "5dc03d39-ac5f-49e1-8630-a64d2e6e293b",
+      "h5ad_url": "https://datasets.cellxgene.cziscience.com/5dc03d39-ac5f-49e1-8630-a64d2e6e293b.h5ad",
+      "expected_cells": 172847,
+      "expected_healthy_exact_age_donors": 10
+    }
+  },
+  "metadata_gate": {
+    "required_obs_fields": ["donor_id", "development_stage", "disease", "assay", "suspension_type", "cell_type", "sex", "is_primary_data"],
+    "raw_counts": "raw.X must exist, have the released dimensions, and every stored value must be finite, nonnegative, and integer-valued; implicit zeros are integer counts.",
+    "healthy": "disease == normal only; verify exact expected donor-age mappings and reconcile donor IDs to GEO patient/specimen/library metadata without treating libraries as donors.",
+    "annotations": "Use released cell_type labels; exclude only unknown/unassigned labels. Do not re-cluster or re-annotate.",
+    "primary_data_flag": "Record release-wide values. Do not drop the entire current release solely because its API declares is_primary_data=false; each per-assay object is analyzed independently and no cross-assay cell concatenation is allowed.",
+    "stop_rules": "Stop the affected assay for missing/ambiguous donor ages, disease or assay identity, non-integer/negative raw counts, absent raw counts, or failure of the expected healthy-donor mapping."
+  },
+  "donor_sets": {
+    "primary": "Exact-age healthy donors aged 20 through 120 years, analyzed separately by assay. This excludes snCv3 donor 3490 (14 years) and all decade-only donors.",
+    "sensitivity_all_exact_age": "Repeat P1 and CLR primary models including all exact-age healthy donors; for snCv3 this adds only donor 3490 at 14 years. Decade labels are never converted to numeric ages.",
+    "inferential_unit": "One donor; all cells, specimens, and libraries from a donor are aggregated before fitting. No cell-level p-values."
+  },
+  "eligibility": {
+    "min_donors_per_cell_type": 6,
+    "min_cells_per_donor_cell_type": 20,
+    "covariates": "Age must vary and the design must be full rank with residual degrees of freedom. Include male indicator only when both sexes occur; omit it otherwise. No unidentifiable covariate is retained.",
+    "composition_universe": "For each assay, use every primary-eligible donor and all released non-unknown cell_type labels for donor fractions and CLR. Fit only cell types passing the six-donor/20-cell rule.",
+    "p1_universe": "Fit each released non-unknown cell type passing the six-donor/20-cell rule among primary-eligible donors."
+  },
+  "endpoints": {
+    "P1_transport": {
+      "status": "primary",
+      "program": "Established human P1_Clean from src.aging_programs.load_program_tiers; require at least one detected up and one detected down gene per fitted cell type.",
+      "normalization": "Per-cell log1p(CPM) using raw.X row sums, then arithmetic donor mean within cell type; score is mean up expression minus mean down expression.",
+      "primary_model": " donor score ~ 1 + age_years + male_if_identifiable (ordinary least squares; one row per donor).",
+      "depth_sensitivity": "Add donor mean log(actual raw UMI per cell), if identifiable.",
+      "matched_random_null": "200 draws, seed 20261105, expression deciles of mean donor logCPM pseudobulk across all released genes, up/down matched separately, all detected P1 genes excluded from the pool, sampling without replacement, one RNG stream across sorted cell types. Centered two-sided empirical p=(1+exceedances)/(200+1).",
+      "multiplicity": "BH at 0.05 separately within each assay for (a) primary donor-model p-values and (b) matched-null empirical p-values across eligible tested cell types. Depth and all-exact-age sensitivities form separate labeled families."
+    },
+    "CLR_composition": {
+      "status": "primary",
+      "transform": "Add 0.5 cell to every released non-unknown cell-type count for every primary-eligible donor, normalize within donor, then centered log-ratio. Zero cells therefore remain in the composition without infinite logits.",
+      "primary_model": "donor CLR ~ 1 + age_years + male_if_identifiable.",
+      "sensitivity": "Add log(total released annotated cells) if identifiable; repeat all-exact-age donor set. Raw-fraction slopes are descriptive sensitivity, not replacements for CLR.",
+      "multiplicity": "BH at 0.05 separately by assay and labeled model family across eligible tested cell types."
+    },
+    "Hellinger": {
+      "status": "conditional secondary; untestable wherever any floor fails",
+      "cell_filter": "Actual raw UMI >=1500 and released non-unknown cell_type; remove established technical genes MT-/RPL/RPS/MRPL/MRPS and XIST/TSIX/DDX3Y/EIF2S3Y/UTY/KDM5D.",
+      "reference": "Healthy primary adults aged 20 through 40 years, at least two reference donors with >=20 passing cells in the cell type; pooled raw-count gene profile with leave-one-donor-out subtraction for reference donors.",
+      "cross_fit_floors": "Each scored donor needs >=20 passing cells and its cross-fitted young reference needs >=50 cells and positive counts. Fit only cell types with at least six scored donors and an identifiable design.",
+      "endpoint": "Donor mean per-cell Hellinger distance to cross-fitted young-reference profile.",
+      "primary_model": "distance ~ 1 + age_years + male_if_identifiable + donor mean log(actual raw UMI), if identifiable; unadjusted age+sex model is sensitivity.",
+      "multiplicity": "BH at 0.05 separately by assay for the depth-adjusted primary family; unadjusted sensitivity is a separate family."
+    },
+    "donor_pseudobulk_gene_models": {
+      "status": "not_predeclared_not_performed",
+      "reason": "No all-gene donor-pseudobulk inferential arm is added after seeing the data; this avoids an unplanned large multiplicity family in 18- and 9-adult-donor studies."
+    }
+  },
+  "reporting": {
+    "effects": "Per-year slope with model-based 95% CI, plus per-30-year slope. For compatibility with established M9 reporting, norm_slope_30y=slope_per_year*30/122.5 is a deterministic lifespan-scaled effect, not another hypothesis test. No lifespan analysis beyond this declared scaling and the all-exact-age sensitivity.",
+    "non_significance": "Never call non-significance replication, equivalence, or evidence of no effect. Report untestable endpoints explicitly.",
+    "existing_kidney_comparison": "Compare only exact cell_type labels and compatible donor-level P1 age+sex or Hellinger estimands. Treat Kidney_SCR_v15/Kidney_SN_v15 as overlapping prior releases, not independent replication. Kidney_NormalAdult/Kidney_LivingDonor remain separate studies. CLR comparisons require the same released composition universe and are otherwise descriptive only.",
+    "resources": "scCv3 download and all processing complete before snCv3 download. Every expression download/job uses scripts/resource_guard.py with 30 GB free reserve, 3 GB per-file download cap, and 6 GB memory per job; one guarded job at a time."
+  }
+}

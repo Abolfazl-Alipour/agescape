@@ -1,0 +1,23 @@
+assay_release,cell_type,n_donors_qc20,n_young_reference_donors,hellinger_eligible,reason,n_donors_after_reference_floors,min_cross_fitted_reference_cells
+scCv3,T cell,8.0,3.0,True,pass,8.0,64.0
+scCv3,endothelial cell,18.0,7.0,True,pass,18.0,682.0
+scCv3,epithelial cell of proximal tubule,17.0,7.0,True,pass,17.0,878.0
+scCv3,kidney collecting duct intercalated cell,14.0,7.0,True,pass,14.0,639.0
+scCv3,kidney collecting duct principal cell,17.0,7.0,True,pass,17.0,307.0
+scCv3,kidney connecting tubule epithelial cell,13.0,7.0,True,pass,13.0,573.0
+scCv3,kidney distal convoluted tubule epithelial cell,13.0,7.0,True,pass,13.0,510.0
+scCv3,kidney interstitial cell,16.0,7.0,True,pass,16.0,266.0
+scCv3,kidney loop of Henle thick ascending limb epithelial cell,18.0,7.0,True,pass,18.0,583.0
+snCv3,T cell,5.0,0.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,endothelial cell,9.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,epithelial cell of proximal tubule,9.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney collecting duct intercalated cell,9.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney collecting duct principal cell,9.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney connecting tubule epithelial cell,6.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney interstitial alternatively activated macrophage,5.0,0.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney interstitial fibroblast,8.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney loop of Henle thick ascending limb epithelial cell,9.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney loop of Henle thin ascending limb epithelial cell,7.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,kidney loop of Henle thin descending limb epithelial cell,8.0,1.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,mononuclear phagocyte,4.0,0.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,
+snCv3,renal interstitial pericyte,7.0,0.0,False,fewer_than_two_young_reference_donors_with_20_qc_cells,,

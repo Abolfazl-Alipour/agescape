@@ -1,0 +1,32 @@
+assay_release,cellxgene_donor_id,development_stage,age,disease,sex,assay,suspension_type,n_cells,geo_patient,geo_specimens,geo_libraries,geo_sex_values,geo_assay_values,geo_patient_expected,exact_age,primary_adult,sensitivity_all_exact_age
+scCv3,PRE018-1,56-year-old stage,56.0,normal,male,10x 3' v3,cell,965,PRE018,1,1,M,10X scRNA-seq,PRE018,True,True,True
+scCv3,PRE019,53-year-old stage,53.0,normal,female,10x 3' v3,cell,2971,PRE019,3,3,F,10X scRNA-seq,PRE019,True,True,True
+scCv3,PRE027,31-year-old stage,31.0,normal,female,10x 3' v3,cell,1637,PRE027,1,1,F,10X scRNA-seq,PRE027,True,True,True
+scCv3,PRE038,42-year-old stage,42.0,normal,female,10x 3' v3,cell,1559,PRE038,1,1,F,10X scRNA-seq,PRE038,True,True,True
+scCv3,PRE055-1,66-year-old stage,66.0,normal,male,10x 3' v3,cell,520,PRE055,1,1,M,10X scRNA-seq,PRE055,True,True,True
+scCv3,PRE062-1,40-year-old stage,40.0,normal,female,10x 3' v3,cell,647,PRE062,1,1,F,10X scRNA-seq,PRE062,True,True,True
+scCv3,PRE98sc,57-year-old stage,57.0,normal,female,10x 3' v3,cell,1337,PRE098,1,1,F,10X scRNA-seq,PRE098,True,True,True
+scCv3,Sample1153-EO1,35-year-old stage,35.0,normal,female,10x 3' v3,cell,834,1153EO1,1,1,F,10X scRNA-seq,1153EO1,True,True,True
+scCv3,Sample1153-EO2,35-year-old stage,35.0,normal,female,10x 3' v3,cell,851,1153EO2,1,1,F,10X scRNA-seq,1153EO2,True,True,True
+scCv3,Sample1153-EO3,30-year-old stage,30.0,normal,female,10x 3' v3,cell,1338,1153EO3,1,1,F,10X scRNA-seq,1153EO3,True,True,True
+scCv3,Sample1157-EO1,49-year-old stage,49.0,normal,male,10x 3' v3,cell,1045,1157EO1,1,1,M,10X scRNA-seq,1157EO1,True,True,True
+scCv3,Sample1157-EO2,41-year-old stage,41.0,normal,female,10x 3' v3,cell,1204,1157EO2,1,1,F,10X scRNA-seq,1157EO2,True,True,True
+scCv3,Sample1157-EO3,47-year-old stage,47.0,normal,male,10x 3' v3,cell,779,1157EO3,1,1,M,10X scRNA-seq,1157EO3,True,True,True
+scCv3,Sample1158-EO1,48-year-old stage,48.0,normal,female,10x 3' v3,cell,524,1158EO1,1,1,F,10X scRNA-seq,1158EO1,True,True,True
+scCv3,Sample1158-EO2,56-year-old stage,56.0,normal,male,10x 3' v3,cell,985,1158EO2,1,1,M,10X scRNA-seq,1158EO2,True,True,True
+scCv3,Sample1158-EO3,35-year-old stage,35.0,normal,female,10x 3' v3,cell,974,1158EO3,1,1,F,10X scRNA-seq,1158EO3,True,True,True
+scCv3,Sample1162-EO1,39-year-old stage,39.0,normal,male,10x 3' v3,cell,982,1162EO1,1,1,M,10X scRNA-seq,1162EO1,True,True,True
+scCv3,Sample1162-EO2,52-year-old stage,52.0,normal,male,10x 3' v3,cell,1345,1162EO2,1,1,M,10X scRNA-seq,1162EO2,True,True,True
+snCv3,18-142,seventh decade stage,,normal,female,10x 3' v3,nucleus,7481,18-142,1,1,F,10X snRNA-seq,18-142,False,False,False
+snCv3,18-162,seventh decade stage,,normal,female,10x 3' v3,nucleus,4765,18-162,1,1,F,10X snRNA-seq,18-162,False,False,False
+snCv3,18-312,eighth decade stage,,normal,male,10x 3' v3,nucleus,7775,18-312,1,1,M,10X snRNA-seq,18-312,False,False,False
+snCv3,3490,14-year-old stage,14.0,normal,female,10x 3' v3,nucleus,2256,3490,1,1,F,10X snRNA-Seq,3490,True,False,True
+snCv3,3499,57-year-old stage,57.0,normal,female,10x 3' v3,nucleus,1291,3499,1,1,F,10X snRNA-Seq,3499,True,True,True
+snCv3,3504,45-year-old stage,45.0,normal,female,10x 3' v3,nucleus,2468,3504,1,1,F,10X snRNA-Seq,3504,True,True,True
+snCv3,3535,76-year-old stage,76.0,normal,male,10x 3' v3,nucleus,20400,3535,2,5,M,10X snRNA-Seq,3535,True,True,True
+snCv3,3593,66-year-old stage,66.0,normal,male,10x 3' v3,nucleus,11467,3593,2,2,M,10X snRNA-Seq,3593,True,True,True
+snCv3,3613,59-year-old stage,59.0,normal,female,10x 3' v3,nucleus,6488,3613,1,1,F,10X snRNA-Seq,3613,True,True,True
+snCv3,KRP446,29-year-old stage,29.0,normal,male,10x 3' v3,nucleus,5105,KRP446,2,2,M,10X snRNA-Seq,KRP446,True,True,True
+snCv3,KRP460,63-year-old stage,63.0,normal,female,10x 3' v3,nucleus,10807,KRP460,2,2,F,10X snRNA-seq,KRP460,True,True,True
+snCv3,KRP461,54-year-old stage,54.0,normal,male,10x 3' v3,nucleus,2013,KRP461,1,1,M,10X snRNA-seq,KRP461,True,True,True
+snCv3,KRP462,69-year-old stage,69.0,normal,female,10x 3' v3,nucleus,5151,KRP462,2,2,F,10X snRNA-seq,KRP462,True,True,True

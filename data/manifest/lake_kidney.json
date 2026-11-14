@@ -34,7 +34,18 @@
       "cellxgene_cells": 107344,
       "counts_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183276/suppl/GSE183276_Kidney_Healthy-Injury_Cell_Atlas_scCv3_Counts_03282022.RDS.gz",
       "counts_size_bytes_from_head": 1409085514,
-      "counts_downloaded": false
+      "counts_downloaded": false,
+      "cellxgene_h5ad_url": "https://datasets.cellxgene.cziscience.com/3ae68468-89f7-4941-a945-f7bae9b2cbea.h5ad",
+      "cellxgene_collection_version_id": "379e9a9b-8436-496f-9370-042491bc27d6",
+      "cellxgene_h5ad_downloaded": true,
+      "cellxgene_h5ad_size_bytes": 2188322452,
+      "cellxgene_h5ad_sha256": "e76eebce1324379f8b6f2341010c96d54c8026a3e297238d09fccd972c884703",
+      "cellxgene_h5ad_local_path": "../agescape-revision-data/lake_kidney/expression/lake_scCv3_3ae68468.h5ad",
+      "raw_integer_counts_verified": true,
+      "released_annotations_verified": true,
+      "donor_age_disease_assay_mapping_verified": true,
+      "primary_adult_exact_age_donors": 18,
+      "analysis_verification": "results/followup-lake-kidney-scCv3-verification.json"
     },
     "snCv3": {
       "accession": "GSE183277",
@@ -54,7 +65,18 @@
       "cellxgene_cells": 172847,
       "counts_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE183nnn/GSE183277/suppl/GSE183277_Kidney_Healthy-Injury_Cell_Atlas_snCv3_Counts_03282022.RDS.gz",
       "counts_size_bytes_from_head": 910246297,
-      "counts_downloaded": false
+      "counts_downloaded": false,
+      "cellxgene_h5ad_url": "https://datasets.cellxgene.cziscience.com/5dc03d39-ac5f-49e1-8630-a64d2e6e293b.h5ad",
+      "cellxgene_collection_version_id": "379e9a9b-8436-496f-9370-042491bc27d6",
+      "cellxgene_h5ad_downloaded": true,
+      "cellxgene_h5ad_size_bytes": 1567520311,
+      "cellxgene_h5ad_sha256": "199d66aef69a1605f018e62459867da52783d4b0d64dc454a4a6c8d0b6a9eac2",
+      "cellxgene_h5ad_local_path": "../agescape-revision-data/lake_kidney/expression/lake_snCv3_5dc03d39.h5ad",
+      "raw_integer_counts_verified": true,
+      "released_annotations_verified": true,
+      "donor_age_disease_assay_mapping_verified": true,
+      "primary_adult_exact_age_donors": 9,
+      "analysis_verification": "results/followup-lake-kidney-snCv3-verification.json"
     },
     "age_source": {
       "collection_url": "https://api.cellxgene.cziscience.com/curation/v1/collections/bcb61471-2a44-4d00-a0af-ff085512674c",
@@ -74,13 +96,13 @@
   },
   "verdict": {
     "full_45_reference_donor_analysis": "blocked_public_exact_age_and_common_single_cell_mapping_incomplete",
-    "restricted_assay_specific_signature_and_donor_CLR": "ready_for_count_matrix_validation_using_18_scCv3_and_10_snCv3_exact_age_donors",
-    "Hellinger": "blocked_pending_young_reference_definition_and_donor_and_reference_cell_floors",
+    "restricted_assay_specific_signature_and_donor_CLR": "completed_public_per_assay_H5AD",
+    "Hellinger": "evaluated_under_frozen_floors_see_eligibility_and_report",
     "raw_sequencing": "blocked_pending_user_authorization_decisions",
-    "expression_analysis_performed": false
+    "expression_analysis_performed": true
   },
   "local_metadata": {
-    "directory": "/home/reza/projects/agescape-revision-data/lake_kidney",
+    "directory": "../agescape-revision-data/lake_kidney",
     "total_size_bytes": 36690103,
     "files": {
       "41586_2023_5769_MOESM6_ESM.zip": {
@@ -109,5 +131,22 @@
         "sha256": "c691e2077d235039eec0f287662b0cfc94fe9afb7d138e245f1b705c5de6f608"
       }
     }
+  },
+  "analysis": {
+    "completed": "2026-11-14",
+    "frozen_plan": "data/manifest/lake_kidney_analysis_plan.json",
+    "script": "scripts/run_followup_lake_kidney.py",
+    "report": "reports/followup-lake-kidney-analysis.md",
+    "assays_pooled": false,
+    "inferential_unit": "donor",
+    "primary_adult_age_range": [
+      20,
+      120
+    ],
+    "snCv3_14_year_old": "excluded_primary_included_predeclared_all_exact_age_sensitivity",
+    "p1_random_null_iterations": 200,
+    "p1_random_seed": 20261105,
+    "donor_pseudobulk_gene_models": "not_predeclared_not_performed",
+    "controlled_raw_sequencing_pursued": false
   }
 }

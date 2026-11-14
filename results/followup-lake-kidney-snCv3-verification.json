@@ -1,0 +1,70 @@
+{
+  "aggregation_units": 128,
+  "assay_labels": [
+    "10x 3' v3"
+  ],
+  "assay_release": "snCv3",
+  "cache_bytes": 44585128,
+  "cache_path": "/home/reza/projects/agescape-revision-data/lake_kidney/interim/snCv3_donor_aggregates.npz",
+  "dataset_id": "07854d9c-5375-4a9b-ac34-fa919d3c3686",
+  "dataset_version_id": "5dc03d39-ac5f-49e1-8630-a64d2e6e293b",
+  "decade_only_healthy_donors": 3,
+  "donor_age_source": "H5AD development_stage, verified against frozen public mapping",
+  "exact_age_healthy_donors": 10,
+  "geo_age_field_used": false,
+  "geo_reference_donors_specimens_libraries": [
+    13,
+    18,
+    21
+  ],
+  "healthy_donors": 13,
+  "is_primary_data_labels": [
+    "False"
+  ],
+  "n_obs": 172847,
+  "n_vars_X": 28813,
+  "primary_adult_donors": 9,
+  "raw_X_all_stored_values_finite_nonnegative_integer": true,
+  "raw_X_nnz": 326679849,
+  "raw_X_present": true,
+  "raw_X_shape": [
+    172847,
+    28813
+  ],
+  "raw_X_sum": 670189517.0,
+  "raw_duplicate_feature_name_rows": 14,
+  "raw_feature_ids_unique": true,
+  "raw_unique_feature_names": 28806,
+  "released_annotation_labels": [
+    "B cell",
+    "T cell",
+    "conventional dendritic cell",
+    "endothelial cell",
+    "epithelial cell of proximal tubule",
+    "kidney collecting duct intercalated cell",
+    "kidney collecting duct principal cell",
+    "kidney connecting tubule epithelial cell",
+    "kidney distal convoluted tubule epithelial cell",
+    "kidney interstitial alternatively activated macrophage",
+    "kidney interstitial fibroblast",
+    "kidney loop of Henle thick ascending limb epithelial cell",
+    "kidney loop of Henle thin ascending limb epithelial cell",
+    "kidney loop of Henle thin descending limb epithelial cell",
+    "mast cell",
+    "mature NK T cell",
+    "mononuclear phagocyte",
+    "neural cell",
+    "neutrophil",
+    "non-classical monocyte",
+    "papillary tips cell",
+    "parietal epithelial cell",
+    "plasma cell",
+    "plasmacytoid dendritic cell, human",
+    "podocyte",
+    "renal interstitial pericyte"
+  ],
+  "source_url": "https://datasets.cellxgene.cziscience.com/5dc03d39-ac5f-49e1-8630-a64d2e6e293b.h5ad",
+  "suspension_labels": [
+    "nucleus"
+  ]
+}

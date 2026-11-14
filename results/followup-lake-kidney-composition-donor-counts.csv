@@ -1,0 +1,711 @@
+assay_release,donor_id,cell_type,n_cells,age,sex,primary_adult,total_cells
+scCv3,PRE018-1,B cell,7,56.0,male,True,965
+scCv3,PRE018-1,T cell,37,56.0,male,True,965
+scCv3,PRE018-1,conventional dendritic cell,0,56.0,male,True,965
+scCv3,PRE018-1,cytotoxic T cell,0,56.0,male,True,965
+scCv3,PRE018-1,endothelial cell,113,56.0,male,True,965
+scCv3,PRE018-1,epithelial cell of proximal tubule,177,56.0,male,True,965
+scCv3,PRE018-1,kidney collecting duct intercalated cell,51,56.0,male,True,965
+scCv3,PRE018-1,kidney collecting duct principal cell,167,56.0,male,True,965
+scCv3,PRE018-1,kidney connecting tubule epithelial cell,79,56.0,male,True,965
+scCv3,PRE018-1,kidney distal convoluted tubule epithelial cell,69,56.0,male,True,965
+scCv3,PRE018-1,kidney interstitial alternatively activated macrophage,0,56.0,male,True,965
+scCv3,PRE018-1,kidney interstitial cell,58,56.0,male,True,965
+scCv3,PRE018-1,kidney loop of Henle thick ascending limb epithelial cell,139,56.0,male,True,965
+scCv3,PRE018-1,kidney loop of Henle thin ascending limb epithelial cell,5,56.0,male,True,965
+scCv3,PRE018-1,kidney loop of Henle thin descending limb epithelial cell,3,56.0,male,True,965
+scCv3,PRE018-1,mature NK T cell,1,56.0,male,True,965
+scCv3,PRE018-1,monocyte,0,56.0,male,True,965
+scCv3,PRE018-1,mononuclear phagocyte,28,56.0,male,True,965
+scCv3,PRE018-1,natural killer cell,11,56.0,male,True,965
+scCv3,PRE018-1,non-classical monocyte,0,56.0,male,True,965
+scCv3,PRE018-1,parietal epithelial cell,13,56.0,male,True,965
+scCv3,PRE018-1,plasma cell,0,56.0,male,True,965
+scCv3,PRE018-1,"plasmacytoid dendritic cell, human",0,56.0,male,True,965
+scCv3,PRE018-1,podocyte,6,56.0,male,True,965
+scCv3,PRE018-1,regulatory T cell,1,56.0,male,True,965
+scCv3,PRE019,B cell,55,53.0,female,True,2971
+scCv3,PRE019,T cell,92,53.0,female,True,2971
+scCv3,PRE019,conventional dendritic cell,1,53.0,female,True,2971
+scCv3,PRE019,cytotoxic T cell,0,53.0,female,True,2971
+scCv3,PRE019,endothelial cell,451,53.0,female,True,2971
+scCv3,PRE019,epithelial cell of proximal tubule,511,53.0,female,True,2971
+scCv3,PRE019,kidney collecting duct intercalated cell,218,53.0,female,True,2971
+scCv3,PRE019,kidney collecting duct principal cell,375,53.0,female,True,2971
+scCv3,PRE019,kidney connecting tubule epithelial cell,178,53.0,female,True,2971
+scCv3,PRE019,kidney distal convoluted tubule epithelial cell,289,53.0,female,True,2971
+scCv3,PRE019,kidney interstitial alternatively activated macrophage,0,53.0,female,True,2971
+scCv3,PRE019,kidney interstitial cell,239,53.0,female,True,2971
+scCv3,PRE019,kidney loop of Henle thick ascending limb epithelial cell,445,53.0,female,True,2971
+scCv3,PRE019,kidney loop of Henle thin ascending limb epithelial cell,36,53.0,female,True,2971
+scCv3,PRE019,kidney loop of Henle thin descending limb epithelial cell,10,53.0,female,True,2971
+scCv3,PRE019,mature NK T cell,0,53.0,female,True,2971
+scCv3,PRE019,monocyte,0,53.0,female,True,2971
+scCv3,PRE019,mononuclear phagocyte,38,53.0,female,True,2971
+scCv3,PRE019,natural killer cell,6,53.0,female,True,2971
+scCv3,PRE019,non-classical monocyte,0,53.0,female,True,2971
+scCv3,PRE019,parietal epithelial cell,10,53.0,female,True,2971
+scCv3,PRE019,plasma cell,1,53.0,female,True,2971
+scCv3,PRE019,"plasmacytoid dendritic cell, human",0,53.0,female,True,2971
+scCv3,PRE019,podocyte,16,53.0,female,True,2971
+scCv3,PRE019,regulatory T cell,0,53.0,female,True,2971
+scCv3,PRE027,B cell,2,31.0,female,True,1637
+scCv3,PRE027,T cell,6,31.0,female,True,1637
+scCv3,PRE027,conventional dendritic cell,1,31.0,female,True,1637
+scCv3,PRE027,cytotoxic T cell,0,31.0,female,True,1637
+scCv3,PRE027,endothelial cell,166,31.0,female,True,1637
+scCv3,PRE027,epithelial cell of proximal tubule,447,31.0,female,True,1637
+scCv3,PRE027,kidney collecting duct intercalated cell,201,31.0,female,True,1637
+scCv3,PRE027,kidney collecting duct principal cell,276,31.0,female,True,1637
+scCv3,PRE027,kidney connecting tubule epithelial cell,109,31.0,female,True,1637
+scCv3,PRE027,kidney distal convoluted tubule epithelial cell,232,31.0,female,True,1637
+scCv3,PRE027,kidney interstitial alternatively activated macrophage,0,31.0,female,True,1637
+scCv3,PRE027,kidney interstitial cell,42,31.0,female,True,1637
+scCv3,PRE027,kidney loop of Henle thick ascending limb epithelial cell,108,31.0,female,True,1637
+scCv3,PRE027,kidney loop of Henle thin ascending limb epithelial cell,5,31.0,female,True,1637
+scCv3,PRE027,kidney loop of Henle thin descending limb epithelial cell,0,31.0,female,True,1637
+scCv3,PRE027,mature NK T cell,0,31.0,female,True,1637
+scCv3,PRE027,monocyte,0,31.0,female,True,1637
+scCv3,PRE027,mononuclear phagocyte,21,31.0,female,True,1637
+scCv3,PRE027,natural killer cell,3,31.0,female,True,1637
+scCv3,PRE027,non-classical monocyte,0,31.0,female,True,1637
+scCv3,PRE027,parietal epithelial cell,7,31.0,female,True,1637
+scCv3,PRE027,plasma cell,0,31.0,female,True,1637
+scCv3,PRE027,"plasmacytoid dendritic cell, human",0,31.0,female,True,1637
+scCv3,PRE027,podocyte,11,31.0,female,True,1637
+scCv3,PRE027,regulatory T cell,0,31.0,female,True,1637
+scCv3,PRE038,B cell,2,42.0,female,True,1559
+scCv3,PRE038,T cell,31,42.0,female,True,1559
+scCv3,PRE038,conventional dendritic cell,0,42.0,female,True,1559
+scCv3,PRE038,cytotoxic T cell,0,42.0,female,True,1559
+scCv3,PRE038,endothelial cell,224,42.0,female,True,1559
+scCv3,PRE038,epithelial cell of proximal tubule,961,42.0,female,True,1559
+scCv3,PRE038,kidney collecting duct intercalated cell,2,42.0,female,True,1559
+scCv3,PRE038,kidney collecting duct principal cell,10,42.0,female,True,1559
+scCv3,PRE038,kidney connecting tubule epithelial cell,5,42.0,female,True,1559
+scCv3,PRE038,kidney distal convoluted tubule epithelial cell,2,42.0,female,True,1559
+scCv3,PRE038,kidney interstitial alternatively activated macrophage,0,42.0,female,True,1559
+scCv3,PRE038,kidney interstitial cell,110,42.0,female,True,1559
+scCv3,PRE038,kidney loop of Henle thick ascending limb epithelial cell,173,42.0,female,True,1559
+scCv3,PRE038,kidney loop of Henle thin ascending limb epithelial cell,1,42.0,female,True,1559
+scCv3,PRE038,kidney loop of Henle thin descending limb epithelial cell,0,42.0,female,True,1559
+scCv3,PRE038,mature NK T cell,1,42.0,female,True,1559
+scCv3,PRE038,monocyte,0,42.0,female,True,1559
+scCv3,PRE038,mononuclear phagocyte,16,42.0,female,True,1559
+scCv3,PRE038,natural killer cell,8,42.0,female,True,1559
+scCv3,PRE038,non-classical monocyte,0,42.0,female,True,1559
+scCv3,PRE038,parietal epithelial cell,8,42.0,female,True,1559
+scCv3,PRE038,plasma cell,0,42.0,female,True,1559
+scCv3,PRE038,"plasmacytoid dendritic cell, human",2,42.0,female,True,1559
+scCv3,PRE038,podocyte,3,42.0,female,True,1559
+scCv3,PRE038,regulatory T cell,0,42.0,female,True,1559
+scCv3,PRE055-1,B cell,7,66.0,male,True,520
+scCv3,PRE055-1,T cell,60,66.0,male,True,520
+scCv3,PRE055-1,conventional dendritic cell,0,66.0,male,True,520
+scCv3,PRE055-1,cytotoxic T cell,0,66.0,male,True,520
+scCv3,PRE055-1,endothelial cell,98,66.0,male,True,520
+scCv3,PRE055-1,epithelial cell of proximal tubule,90,66.0,male,True,520
+scCv3,PRE055-1,kidney collecting duct intercalated cell,18,66.0,male,True,520
+scCv3,PRE055-1,kidney collecting duct principal cell,20,66.0,male,True,520
+scCv3,PRE055-1,kidney connecting tubule epithelial cell,6,66.0,male,True,520
+scCv3,PRE055-1,kidney distal convoluted tubule epithelial cell,6,66.0,male,True,520
+scCv3,PRE055-1,kidney interstitial alternatively activated macrophage,2,66.0,male,True,520
+scCv3,PRE055-1,kidney interstitial cell,42,66.0,male,True,520
+scCv3,PRE055-1,kidney loop of Henle thick ascending limb epithelial cell,55,66.0,male,True,520
+scCv3,PRE055-1,kidney loop of Henle thin ascending limb epithelial cell,59,66.0,male,True,520
+scCv3,PRE055-1,kidney loop of Henle thin descending limb epithelial cell,4,66.0,male,True,520
+scCv3,PRE055-1,mature NK T cell,1,66.0,male,True,520
+scCv3,PRE055-1,monocyte,0,66.0,male,True,520
+scCv3,PRE055-1,mononuclear phagocyte,22,66.0,male,True,520
+scCv3,PRE055-1,natural killer cell,8,66.0,male,True,520
+scCv3,PRE055-1,non-classical monocyte,0,66.0,male,True,520
+scCv3,PRE055-1,parietal epithelial cell,0,66.0,male,True,520
+scCv3,PRE055-1,plasma cell,0,66.0,male,True,520
+scCv3,PRE055-1,"plasmacytoid dendritic cell, human",0,66.0,male,True,520
+scCv3,PRE055-1,podocyte,21,66.0,male,True,520
+scCv3,PRE055-1,regulatory T cell,1,66.0,male,True,520
+scCv3,PRE062-1,B cell,13,40.0,female,True,647
+scCv3,PRE062-1,T cell,44,40.0,female,True,647
+scCv3,PRE062-1,conventional dendritic cell,2,40.0,female,True,647
+scCv3,PRE062-1,cytotoxic T cell,0,40.0,female,True,647
+scCv3,PRE062-1,endothelial cell,53,40.0,female,True,647
+scCv3,PRE062-1,epithelial cell of proximal tubule,84,40.0,female,True,647
+scCv3,PRE062-1,kidney collecting duct intercalated cell,43,40.0,female,True,647
+scCv3,PRE062-1,kidney collecting duct principal cell,101,40.0,female,True,647
+scCv3,PRE062-1,kidney connecting tubule epithelial cell,57,40.0,female,True,647
+scCv3,PRE062-1,kidney distal convoluted tubule epithelial cell,62,40.0,female,True,647
+scCv3,PRE062-1,kidney interstitial alternatively activated macrophage,0,40.0,female,True,647
+scCv3,PRE062-1,kidney interstitial cell,74,40.0,female,True,647
+scCv3,PRE062-1,kidney loop of Henle thick ascending limb epithelial cell,53,40.0,female,True,647
+scCv3,PRE062-1,kidney loop of Henle thin ascending limb epithelial cell,3,40.0,female,True,647
+scCv3,PRE062-1,kidney loop of Henle thin descending limb epithelial cell,0,40.0,female,True,647
+scCv3,PRE062-1,mature NK T cell,1,40.0,female,True,647
+scCv3,PRE062-1,monocyte,0,40.0,female,True,647
+scCv3,PRE062-1,mononuclear phagocyte,31,40.0,female,True,647
+scCv3,PRE062-1,natural killer cell,7,40.0,female,True,647
+scCv3,PRE062-1,non-classical monocyte,0,40.0,female,True,647
+scCv3,PRE062-1,parietal epithelial cell,6,40.0,female,True,647
+scCv3,PRE062-1,plasma cell,0,40.0,female,True,647
+scCv3,PRE062-1,"plasmacytoid dendritic cell, human",0,40.0,female,True,647
+scCv3,PRE062-1,podocyte,12,40.0,female,True,647
+scCv3,PRE062-1,regulatory T cell,1,40.0,female,True,647
+scCv3,PRE98sc,B cell,1,57.0,female,True,1337
+scCv3,PRE98sc,T cell,15,57.0,female,True,1337
+scCv3,PRE98sc,conventional dendritic cell,1,57.0,female,True,1337
+scCv3,PRE98sc,cytotoxic T cell,0,57.0,female,True,1337
+scCv3,PRE98sc,endothelial cell,123,57.0,female,True,1337
+scCv3,PRE98sc,epithelial cell of proximal tubule,235,57.0,female,True,1337
+scCv3,PRE98sc,kidney collecting duct intercalated cell,110,57.0,female,True,1337
+scCv3,PRE98sc,kidney collecting duct principal cell,266,57.0,female,True,1337
+scCv3,PRE98sc,kidney connecting tubule epithelial cell,170,57.0,female,True,1337
+scCv3,PRE98sc,kidney distal convoluted tubule epithelial cell,83,57.0,female,True,1337
+scCv3,PRE98sc,kidney interstitial alternatively activated macrophage,0,57.0,female,True,1337
+scCv3,PRE98sc,kidney interstitial cell,46,57.0,female,True,1337
+scCv3,PRE98sc,kidney loop of Henle thick ascending limb epithelial cell,153,57.0,female,True,1337
+scCv3,PRE98sc,kidney loop of Henle thin ascending limb epithelial cell,104,57.0,female,True,1337
+scCv3,PRE98sc,kidney loop of Henle thin descending limb epithelial cell,0,57.0,female,True,1337
+scCv3,PRE98sc,mature NK T cell,0,57.0,female,True,1337
+scCv3,PRE98sc,monocyte,0,57.0,female,True,1337
+scCv3,PRE98sc,mononuclear phagocyte,12,57.0,female,True,1337
+scCv3,PRE98sc,natural killer cell,4,57.0,female,True,1337
+scCv3,PRE98sc,non-classical monocyte,0,57.0,female,True,1337
+scCv3,PRE98sc,parietal epithelial cell,13,57.0,female,True,1337
+scCv3,PRE98sc,plasma cell,0,57.0,female,True,1337
+scCv3,PRE98sc,"plasmacytoid dendritic cell, human",1,57.0,female,True,1337
+scCv3,PRE98sc,podocyte,0,57.0,female,True,1337
+scCv3,PRE98sc,regulatory T cell,0,57.0,female,True,1337
+scCv3,Sample1153-EO1,B cell,13,35.0,female,True,834
+scCv3,Sample1153-EO1,T cell,38,35.0,female,True,834
+scCv3,Sample1153-EO1,conventional dendritic cell,11,35.0,female,True,834
+scCv3,Sample1153-EO1,cytotoxic T cell,5,35.0,female,True,834
+scCv3,Sample1153-EO1,endothelial cell,135,35.0,female,True,834
+scCv3,Sample1153-EO1,epithelial cell of proximal tubule,142,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney collecting duct intercalated cell,86,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney collecting duct principal cell,20,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney connecting tubule epithelial cell,152,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney distal convoluted tubule epithelial cell,100,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney interstitial alternatively activated macrophage,3,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney interstitial cell,36,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney loop of Henle thick ascending limb epithelial cell,45,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney loop of Henle thin ascending limb epithelial cell,9,35.0,female,True,834
+scCv3,Sample1153-EO1,kidney loop of Henle thin descending limb epithelial cell,2,35.0,female,True,834
+scCv3,Sample1153-EO1,mature NK T cell,5,35.0,female,True,834
+scCv3,Sample1153-EO1,monocyte,14,35.0,female,True,834
+scCv3,Sample1153-EO1,mononuclear phagocyte,1,35.0,female,True,834
+scCv3,Sample1153-EO1,natural killer cell,3,35.0,female,True,834
+scCv3,Sample1153-EO1,non-classical monocyte,3,35.0,female,True,834
+scCv3,Sample1153-EO1,parietal epithelial cell,3,35.0,female,True,834
+scCv3,Sample1153-EO1,plasma cell,2,35.0,female,True,834
+scCv3,Sample1153-EO1,"plasmacytoid dendritic cell, human",0,35.0,female,True,834
+scCv3,Sample1153-EO1,podocyte,5,35.0,female,True,834
+scCv3,Sample1153-EO1,regulatory T cell,1,35.0,female,True,834
+scCv3,Sample1153-EO2,B cell,1,35.0,female,True,851
+scCv3,Sample1153-EO2,T cell,12,35.0,female,True,851
+scCv3,Sample1153-EO2,conventional dendritic cell,7,35.0,female,True,851
+scCv3,Sample1153-EO2,cytotoxic T cell,10,35.0,female,True,851
+scCv3,Sample1153-EO2,endothelial cell,65,35.0,female,True,851
+scCv3,Sample1153-EO2,epithelial cell of proximal tubule,69,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney collecting duct intercalated cell,150,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney collecting duct principal cell,43,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney connecting tubule epithelial cell,202,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney distal convoluted tubule epithelial cell,103,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney interstitial alternatively activated macrophage,6,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney interstitial cell,44,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney loop of Henle thick ascending limb epithelial cell,75,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney loop of Henle thin ascending limb epithelial cell,6,35.0,female,True,851
+scCv3,Sample1153-EO2,kidney loop of Henle thin descending limb epithelial cell,3,35.0,female,True,851
+scCv3,Sample1153-EO2,mature NK T cell,2,35.0,female,True,851
+scCv3,Sample1153-EO2,monocyte,12,35.0,female,True,851
+scCv3,Sample1153-EO2,mononuclear phagocyte,1,35.0,female,True,851
+scCv3,Sample1153-EO2,natural killer cell,11,35.0,female,True,851
+scCv3,Sample1153-EO2,non-classical monocyte,1,35.0,female,True,851
+scCv3,Sample1153-EO2,parietal epithelial cell,6,35.0,female,True,851
+scCv3,Sample1153-EO2,plasma cell,0,35.0,female,True,851
+scCv3,Sample1153-EO2,"plasmacytoid dendritic cell, human",0,35.0,female,True,851
+scCv3,Sample1153-EO2,podocyte,22,35.0,female,True,851
+scCv3,Sample1153-EO2,regulatory T cell,0,35.0,female,True,851
+scCv3,Sample1153-EO3,B cell,1,30.0,female,True,1338
+scCv3,Sample1153-EO3,T cell,75,30.0,female,True,1338
+scCv3,Sample1153-EO3,conventional dendritic cell,11,30.0,female,True,1338
+scCv3,Sample1153-EO3,cytotoxic T cell,44,30.0,female,True,1338
+scCv3,Sample1153-EO3,endothelial cell,213,30.0,female,True,1338
+scCv3,Sample1153-EO3,epithelial cell of proximal tubule,187,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney collecting duct intercalated cell,141,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney collecting duct principal cell,36,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney connecting tubule epithelial cell,105,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney distal convoluted tubule epithelial cell,91,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney interstitial alternatively activated macrophage,50,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney interstitial cell,56,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney loop of Henle thick ascending limb epithelial cell,243,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney loop of Henle thin ascending limb epithelial cell,12,30.0,female,True,1338
+scCv3,Sample1153-EO3,kidney loop of Henle thin descending limb epithelial cell,6,30.0,female,True,1338
+scCv3,Sample1153-EO3,mature NK T cell,5,30.0,female,True,1338
+scCv3,Sample1153-EO3,monocyte,12,30.0,female,True,1338
+scCv3,Sample1153-EO3,mononuclear phagocyte,6,30.0,female,True,1338
+scCv3,Sample1153-EO3,natural killer cell,25,30.0,female,True,1338
+scCv3,Sample1153-EO3,non-classical monocyte,4,30.0,female,True,1338
+scCv3,Sample1153-EO3,parietal epithelial cell,12,30.0,female,True,1338
+scCv3,Sample1153-EO3,plasma cell,1,30.0,female,True,1338
+scCv3,Sample1153-EO3,"plasmacytoid dendritic cell, human",0,30.0,female,True,1338
+scCv3,Sample1153-EO3,podocyte,0,30.0,female,True,1338
+scCv3,Sample1153-EO3,regulatory T cell,2,30.0,female,True,1338
+scCv3,Sample1157-EO1,B cell,1,49.0,male,True,1045
+scCv3,Sample1157-EO1,T cell,17,49.0,male,True,1045
+scCv3,Sample1157-EO1,conventional dendritic cell,12,49.0,male,True,1045
+scCv3,Sample1157-EO1,cytotoxic T cell,9,49.0,male,True,1045
+scCv3,Sample1157-EO1,endothelial cell,97,49.0,male,True,1045
+scCv3,Sample1157-EO1,epithelial cell of proximal tubule,247,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney collecting duct intercalated cell,250,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney collecting duct principal cell,27,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney connecting tubule epithelial cell,64,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney distal convoluted tubule epithelial cell,95,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney interstitial alternatively activated macrophage,6,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney interstitial cell,85,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney loop of Henle thick ascending limb epithelial cell,94,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney loop of Henle thin ascending limb epithelial cell,2,49.0,male,True,1045
+scCv3,Sample1157-EO1,kidney loop of Henle thin descending limb epithelial cell,0,49.0,male,True,1045
+scCv3,Sample1157-EO1,mature NK T cell,3,49.0,male,True,1045
+scCv3,Sample1157-EO1,monocyte,5,49.0,male,True,1045
+scCv3,Sample1157-EO1,mononuclear phagocyte,2,49.0,male,True,1045
+scCv3,Sample1157-EO1,natural killer cell,16,49.0,male,True,1045
+scCv3,Sample1157-EO1,non-classical monocyte,2,49.0,male,True,1045
+scCv3,Sample1157-EO1,parietal epithelial cell,9,49.0,male,True,1045
+scCv3,Sample1157-EO1,plasma cell,0,49.0,male,True,1045
+scCv3,Sample1157-EO1,"plasmacytoid dendritic cell, human",0,49.0,male,True,1045
+scCv3,Sample1157-EO1,podocyte,1,49.0,male,True,1045
+scCv3,Sample1157-EO1,regulatory T cell,1,49.0,male,True,1045
+scCv3,Sample1157-EO2,B cell,1,41.0,female,True,1204
+scCv3,Sample1157-EO2,T cell,6,41.0,female,True,1204
+scCv3,Sample1157-EO2,conventional dendritic cell,2,41.0,female,True,1204
+scCv3,Sample1157-EO2,cytotoxic T cell,4,41.0,female,True,1204
+scCv3,Sample1157-EO2,endothelial cell,98,41.0,female,True,1204
+scCv3,Sample1157-EO2,epithelial cell of proximal tubule,473,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney collecting duct intercalated cell,32,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney collecting duct principal cell,85,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney connecting tubule epithelial cell,2,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney distal convoluted tubule epithelial cell,48,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney interstitial alternatively activated macrophage,5,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney interstitial cell,29,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney loop of Henle thick ascending limb epithelial cell,381,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney loop of Henle thin ascending limb epithelial cell,0,41.0,female,True,1204
+scCv3,Sample1157-EO2,kidney loop of Henle thin descending limb epithelial cell,1,41.0,female,True,1204
+scCv3,Sample1157-EO2,mature NK T cell,10,41.0,female,True,1204
+scCv3,Sample1157-EO2,monocyte,7,41.0,female,True,1204
+scCv3,Sample1157-EO2,mononuclear phagocyte,0,41.0,female,True,1204
+scCv3,Sample1157-EO2,natural killer cell,5,41.0,female,True,1204
+scCv3,Sample1157-EO2,non-classical monocyte,0,41.0,female,True,1204
+scCv3,Sample1157-EO2,parietal epithelial cell,9,41.0,female,True,1204
+scCv3,Sample1157-EO2,plasma cell,0,41.0,female,True,1204
+scCv3,Sample1157-EO2,"plasmacytoid dendritic cell, human",0,41.0,female,True,1204
+scCv3,Sample1157-EO2,podocyte,6,41.0,female,True,1204
+scCv3,Sample1157-EO2,regulatory T cell,0,41.0,female,True,1204
+scCv3,Sample1157-EO3,B cell,7,47.0,male,True,779
+scCv3,Sample1157-EO3,T cell,21,47.0,male,True,779
+scCv3,Sample1157-EO3,conventional dendritic cell,7,47.0,male,True,779
+scCv3,Sample1157-EO3,cytotoxic T cell,14,47.0,male,True,779
+scCv3,Sample1157-EO3,endothelial cell,69,47.0,male,True,779
+scCv3,Sample1157-EO3,epithelial cell of proximal tubule,225,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney collecting duct intercalated cell,52,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney collecting duct principal cell,70,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney connecting tubule epithelial cell,1,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney distal convoluted tubule epithelial cell,20,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney interstitial alternatively activated macrophage,1,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney interstitial cell,17,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney loop of Henle thick ascending limb epithelial cell,250,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney loop of Henle thin ascending limb epithelial cell,4,47.0,male,True,779
+scCv3,Sample1157-EO3,kidney loop of Henle thin descending limb epithelial cell,0,47.0,male,True,779
+scCv3,Sample1157-EO3,mature NK T cell,3,47.0,male,True,779
+scCv3,Sample1157-EO3,monocyte,6,47.0,male,True,779
+scCv3,Sample1157-EO3,mononuclear phagocyte,1,47.0,male,True,779
+scCv3,Sample1157-EO3,natural killer cell,8,47.0,male,True,779
+scCv3,Sample1157-EO3,non-classical monocyte,1,47.0,male,True,779
+scCv3,Sample1157-EO3,parietal epithelial cell,1,47.0,male,True,779
+scCv3,Sample1157-EO3,plasma cell,0,47.0,male,True,779
+scCv3,Sample1157-EO3,"plasmacytoid dendritic cell, human",1,47.0,male,True,779
+scCv3,Sample1157-EO3,podocyte,0,47.0,male,True,779
+scCv3,Sample1157-EO3,regulatory T cell,0,47.0,male,True,779
+scCv3,Sample1158-EO1,B cell,1,48.0,female,True,524
+scCv3,Sample1158-EO1,T cell,4,48.0,female,True,524
+scCv3,Sample1158-EO1,conventional dendritic cell,0,48.0,female,True,524
+scCv3,Sample1158-EO1,cytotoxic T cell,1,48.0,female,True,524
+scCv3,Sample1158-EO1,endothelial cell,103,48.0,female,True,524
+scCv3,Sample1158-EO1,epithelial cell of proximal tubule,21,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney collecting duct intercalated cell,7,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney collecting duct principal cell,52,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney connecting tubule epithelial cell,2,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney distal convoluted tubule epithelial cell,0,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney interstitial alternatively activated macrophage,2,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney interstitial cell,60,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney loop of Henle thick ascending limb epithelial cell,246,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney loop of Henle thin ascending limb epithelial cell,2,48.0,female,True,524
+scCv3,Sample1158-EO1,kidney loop of Henle thin descending limb epithelial cell,16,48.0,female,True,524
+scCv3,Sample1158-EO1,mature NK T cell,0,48.0,female,True,524
+scCv3,Sample1158-EO1,monocyte,3,48.0,female,True,524
+scCv3,Sample1158-EO1,mononuclear phagocyte,0,48.0,female,True,524
+scCv3,Sample1158-EO1,natural killer cell,2,48.0,female,True,524
+scCv3,Sample1158-EO1,non-classical monocyte,2,48.0,female,True,524
+scCv3,Sample1158-EO1,parietal epithelial cell,0,48.0,female,True,524
+scCv3,Sample1158-EO1,plasma cell,0,48.0,female,True,524
+scCv3,Sample1158-EO1,"plasmacytoid dendritic cell, human",0,48.0,female,True,524
+scCv3,Sample1158-EO1,podocyte,0,48.0,female,True,524
+scCv3,Sample1158-EO1,regulatory T cell,0,48.0,female,True,524
+scCv3,Sample1158-EO2,B cell,0,56.0,male,True,985
+scCv3,Sample1158-EO2,T cell,8,56.0,male,True,985
+scCv3,Sample1158-EO2,conventional dendritic cell,8,56.0,male,True,985
+scCv3,Sample1158-EO2,cytotoxic T cell,5,56.0,male,True,985
+scCv3,Sample1158-EO2,endothelial cell,33,56.0,male,True,985
+scCv3,Sample1158-EO2,epithelial cell of proximal tubule,182,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney collecting duct intercalated cell,10,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney collecting duct principal cell,144,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney connecting tubule epithelial cell,32,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney distal convoluted tubule epithelial cell,7,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney interstitial alternatively activated macrophage,6,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney interstitial cell,35,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney loop of Henle thick ascending limb epithelial cell,447,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney loop of Henle thin ascending limb epithelial cell,16,56.0,male,True,985
+scCv3,Sample1158-EO2,kidney loop of Henle thin descending limb epithelial cell,6,56.0,male,True,985
+scCv3,Sample1158-EO2,mature NK T cell,0,56.0,male,True,985
+scCv3,Sample1158-EO2,monocyte,3,56.0,male,True,985
+scCv3,Sample1158-EO2,mononuclear phagocyte,3,56.0,male,True,985
+scCv3,Sample1158-EO2,natural killer cell,3,56.0,male,True,985
+scCv3,Sample1158-EO2,non-classical monocyte,0,56.0,male,True,985
+scCv3,Sample1158-EO2,parietal epithelial cell,36,56.0,male,True,985
+scCv3,Sample1158-EO2,plasma cell,0,56.0,male,True,985
+scCv3,Sample1158-EO2,"plasmacytoid dendritic cell, human",0,56.0,male,True,985
+scCv3,Sample1158-EO2,podocyte,1,56.0,male,True,985
+scCv3,Sample1158-EO2,regulatory T cell,0,56.0,male,True,985
+scCv3,Sample1158-EO3,B cell,1,35.0,female,True,974
+scCv3,Sample1158-EO3,T cell,5,35.0,female,True,974
+scCv3,Sample1158-EO3,conventional dendritic cell,3,35.0,female,True,974
+scCv3,Sample1158-EO3,cytotoxic T cell,3,35.0,female,True,974
+scCv3,Sample1158-EO3,endothelial cell,178,35.0,female,True,974
+scCv3,Sample1158-EO3,epithelial cell of proximal tubule,145,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney collecting duct intercalated cell,118,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney collecting duct principal cell,24,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney connecting tubule epithelial cell,132,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney distal convoluted tubule epithelial cell,97,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney interstitial alternatively activated macrophage,5,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney interstitial cell,67,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney loop of Henle thick ascending limb epithelial cell,163,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney loop of Henle thin ascending limb epithelial cell,4,35.0,female,True,974
+scCv3,Sample1158-EO3,kidney loop of Henle thin descending limb epithelial cell,3,35.0,female,True,974
+scCv3,Sample1158-EO3,mature NK T cell,3,35.0,female,True,974
+scCv3,Sample1158-EO3,monocyte,5,35.0,female,True,974
+scCv3,Sample1158-EO3,mononuclear phagocyte,1,35.0,female,True,974
+scCv3,Sample1158-EO3,natural killer cell,5,35.0,female,True,974
+scCv3,Sample1158-EO3,non-classical monocyte,1,35.0,female,True,974
+scCv3,Sample1158-EO3,parietal epithelial cell,4,35.0,female,True,974
+scCv3,Sample1158-EO3,plasma cell,0,35.0,female,True,974
+scCv3,Sample1158-EO3,"plasmacytoid dendritic cell, human",0,35.0,female,True,974
+scCv3,Sample1158-EO3,podocyte,7,35.0,female,True,974
+scCv3,Sample1158-EO3,regulatory T cell,0,35.0,female,True,974
+scCv3,Sample1162-EO1,B cell,0,39.0,male,True,982
+scCv3,Sample1162-EO1,T cell,1,39.0,male,True,982
+scCv3,Sample1162-EO1,conventional dendritic cell,2,39.0,male,True,982
+scCv3,Sample1162-EO1,cytotoxic T cell,0,39.0,male,True,982
+scCv3,Sample1162-EO1,endothelial cell,142,39.0,male,True,982
+scCv3,Sample1162-EO1,epithelial cell of proximal tubule,333,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney collecting duct intercalated cell,109,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney collecting duct principal cell,85,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney connecting tubule epithelial cell,26,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney distal convoluted tubule epithelial cell,73,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney interstitial alternatively activated macrophage,5,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney interstitial cell,26,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney loop of Henle thick ascending limb epithelial cell,160,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney loop of Henle thin ascending limb epithelial cell,0,39.0,male,True,982
+scCv3,Sample1162-EO1,kidney loop of Henle thin descending limb epithelial cell,3,39.0,male,True,982
+scCv3,Sample1162-EO1,mature NK T cell,0,39.0,male,True,982
+scCv3,Sample1162-EO1,monocyte,2,39.0,male,True,982
+scCv3,Sample1162-EO1,mononuclear phagocyte,1,39.0,male,True,982
+scCv3,Sample1162-EO1,natural killer cell,5,39.0,male,True,982
+scCv3,Sample1162-EO1,non-classical monocyte,1,39.0,male,True,982
+scCv3,Sample1162-EO1,parietal epithelial cell,3,39.0,male,True,982
+scCv3,Sample1162-EO1,plasma cell,0,39.0,male,True,982
+scCv3,Sample1162-EO1,"plasmacytoid dendritic cell, human",0,39.0,male,True,982
+scCv3,Sample1162-EO1,podocyte,5,39.0,male,True,982
+scCv3,Sample1162-EO1,regulatory T cell,0,39.0,male,True,982
+scCv3,Sample1162-EO2,B cell,1,52.0,male,True,1345
+scCv3,Sample1162-EO2,T cell,11,52.0,male,True,1345
+scCv3,Sample1162-EO2,conventional dendritic cell,7,52.0,male,True,1345
+scCv3,Sample1162-EO2,cytotoxic T cell,2,52.0,male,True,1345
+scCv3,Sample1162-EO2,endothelial cell,143,52.0,male,True,1345
+scCv3,Sample1162-EO2,epithelial cell of proximal tubule,371,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney collecting duct intercalated cell,126,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney collecting duct principal cell,121,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney connecting tubule epithelial cell,111,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney distal convoluted tubule epithelial cell,132,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney interstitial alternatively activated macrophage,8,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney interstitial cell,36,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney loop of Henle thick ascending limb epithelial cell,235,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney loop of Henle thin ascending limb epithelial cell,9,52.0,male,True,1345
+scCv3,Sample1162-EO2,kidney loop of Henle thin descending limb epithelial cell,0,52.0,male,True,1345
+scCv3,Sample1162-EO2,mature NK T cell,1,52.0,male,True,1345
+scCv3,Sample1162-EO2,monocyte,3,52.0,male,True,1345
+scCv3,Sample1162-EO2,mononuclear phagocyte,1,52.0,male,True,1345
+scCv3,Sample1162-EO2,natural killer cell,9,52.0,male,True,1345
+scCv3,Sample1162-EO2,non-classical monocyte,0,52.0,male,True,1345
+scCv3,Sample1162-EO2,parietal epithelial cell,18,52.0,male,True,1345
+scCv3,Sample1162-EO2,plasma cell,0,52.0,male,True,1345
+scCv3,Sample1162-EO2,"plasmacytoid dendritic cell, human",0,52.0,male,True,1345
+scCv3,Sample1162-EO2,podocyte,0,52.0,male,True,1345
+scCv3,Sample1162-EO2,regulatory T cell,0,52.0,male,True,1345
+snCv3,3490,B cell,0,14.0,female,False,2256
+snCv3,3490,T cell,14,14.0,female,False,2256
+snCv3,3490,conventional dendritic cell,1,14.0,female,False,2256
+snCv3,3490,endothelial cell,254,14.0,female,False,2256
+snCv3,3490,epithelial cell of proximal tubule,12,14.0,female,False,2256
+snCv3,3490,kidney collecting duct intercalated cell,66,14.0,female,False,2256
+snCv3,3490,kidney collecting duct principal cell,142,14.0,female,False,2256
+snCv3,3490,kidney connecting tubule epithelial cell,7,14.0,female,False,2256
+snCv3,3490,kidney distal convoluted tubule epithelial cell,1,14.0,female,False,2256
+snCv3,3490,kidney interstitial alternatively activated macrophage,70,14.0,female,False,2256
+snCv3,3490,kidney interstitial fibroblast,232,14.0,female,False,2256
+snCv3,3490,kidney loop of Henle thick ascending limb epithelial cell,1000,14.0,female,False,2256
+snCv3,3490,kidney loop of Henle thin ascending limb epithelial cell,11,14.0,female,False,2256
+snCv3,3490,kidney loop of Henle thin descending limb epithelial cell,394,14.0,female,False,2256
+snCv3,3490,mast cell,0,14.0,female,False,2256
+snCv3,3490,mature NK T cell,4,14.0,female,False,2256
+snCv3,3490,mononuclear phagocyte,18,14.0,female,False,2256
+snCv3,3490,neural cell,0,14.0,female,False,2256
+snCv3,3490,neutrophil,0,14.0,female,False,2256
+snCv3,3490,non-classical monocyte,3,14.0,female,False,2256
+snCv3,3490,papillary tips cell,1,14.0,female,False,2256
+snCv3,3490,parietal epithelial cell,2,14.0,female,False,2256
+snCv3,3490,plasma cell,1,14.0,female,False,2256
+snCv3,3490,"plasmacytoid dendritic cell, human",0,14.0,female,False,2256
+snCv3,3490,podocyte,5,14.0,female,False,2256
+snCv3,3490,renal interstitial pericyte,18,14.0,female,False,2256
+snCv3,3499,B cell,2,57.0,female,True,1291
+snCv3,3499,T cell,6,57.0,female,True,1291
+snCv3,3499,conventional dendritic cell,0,57.0,female,True,1291
+snCv3,3499,endothelial cell,180,57.0,female,True,1291
+snCv3,3499,epithelial cell of proximal tubule,129,57.0,female,True,1291
+snCv3,3499,kidney collecting duct intercalated cell,23,57.0,female,True,1291
+snCv3,3499,kidney collecting duct principal cell,155,57.0,female,True,1291
+snCv3,3499,kidney connecting tubule epithelial cell,8,57.0,female,True,1291
+snCv3,3499,kidney distal convoluted tubule epithelial cell,2,57.0,female,True,1291
+snCv3,3499,kidney interstitial alternatively activated macrophage,22,57.0,female,True,1291
+snCv3,3499,kidney interstitial fibroblast,147,57.0,female,True,1291
+snCv3,3499,kidney loop of Henle thick ascending limb epithelial cell,392,57.0,female,True,1291
+snCv3,3499,kidney loop of Henle thin ascending limb epithelial cell,8,57.0,female,True,1291
+snCv3,3499,kidney loop of Henle thin descending limb epithelial cell,164,57.0,female,True,1291
+snCv3,3499,mast cell,4,57.0,female,True,1291
+snCv3,3499,mature NK T cell,0,57.0,female,True,1291
+snCv3,3499,mononuclear phagocyte,8,57.0,female,True,1291
+snCv3,3499,neural cell,1,57.0,female,True,1291
+snCv3,3499,neutrophil,1,57.0,female,True,1291
+snCv3,3499,non-classical monocyte,1,57.0,female,True,1291
+snCv3,3499,papillary tips cell,0,57.0,female,True,1291
+snCv3,3499,parietal epithelial cell,0,57.0,female,True,1291
+snCv3,3499,plasma cell,3,57.0,female,True,1291
+snCv3,3499,"plasmacytoid dendritic cell, human",0,57.0,female,True,1291
+snCv3,3499,podocyte,0,57.0,female,True,1291
+snCv3,3499,renal interstitial pericyte,35,57.0,female,True,1291
+snCv3,3504,B cell,0,45.0,female,True,2468
+snCv3,3504,T cell,14,45.0,female,True,2468
+snCv3,3504,conventional dendritic cell,0,45.0,female,True,2468
+snCv3,3504,endothelial cell,420,45.0,female,True,2468
+snCv3,3504,epithelial cell of proximal tubule,275,45.0,female,True,2468
+snCv3,3504,kidney collecting duct intercalated cell,200,45.0,female,True,2468
+snCv3,3504,kidney collecting duct principal cell,238,45.0,female,True,2468
+snCv3,3504,kidney connecting tubule epithelial cell,19,45.0,female,True,2468
+snCv3,3504,kidney distal convoluted tubule epithelial cell,16,45.0,female,True,2468
+snCv3,3504,kidney interstitial alternatively activated macrophage,18,45.0,female,True,2468
+snCv3,3504,kidney interstitial fibroblast,199,45.0,female,True,2468
+snCv3,3504,kidney loop of Henle thick ascending limb epithelial cell,537,45.0,female,True,2468
+snCv3,3504,kidney loop of Henle thin ascending limb epithelial cell,92,45.0,female,True,2468
+snCv3,3504,kidney loop of Henle thin descending limb epithelial cell,288,45.0,female,True,2468
+snCv3,3504,mast cell,0,45.0,female,True,2468
+snCv3,3504,mature NK T cell,6,45.0,female,True,2468
+snCv3,3504,mononuclear phagocyte,8,45.0,female,True,2468
+snCv3,3504,neural cell,1,45.0,female,True,2468
+snCv3,3504,neutrophil,2,45.0,female,True,2468
+snCv3,3504,non-classical monocyte,2,45.0,female,True,2468
+snCv3,3504,papillary tips cell,0,45.0,female,True,2468
+snCv3,3504,parietal epithelial cell,5,45.0,female,True,2468
+snCv3,3504,plasma cell,6,45.0,female,True,2468
+snCv3,3504,"plasmacytoid dendritic cell, human",1,45.0,female,True,2468
+snCv3,3504,podocyte,31,45.0,female,True,2468
+snCv3,3504,renal interstitial pericyte,90,45.0,female,True,2468
+snCv3,3535,B cell,245,76.0,male,True,20400
+snCv3,3535,T cell,533,76.0,male,True,20400
+snCv3,3535,conventional dendritic cell,30,76.0,male,True,20400
+snCv3,3535,endothelial cell,1586,76.0,male,True,20400
+snCv3,3535,epithelial cell of proximal tubule,5237,76.0,male,True,20400
+snCv3,3535,kidney collecting duct intercalated cell,1784,76.0,male,True,20400
+snCv3,3535,kidney collecting duct principal cell,1222,76.0,male,True,20400
+snCv3,3535,kidney connecting tubule epithelial cell,1338,76.0,male,True,20400
+snCv3,3535,kidney distal convoluted tubule epithelial cell,1010,76.0,male,True,20400
+snCv3,3535,kidney interstitial alternatively activated macrophage,313,76.0,male,True,20400
+snCv3,3535,kidney interstitial fibroblast,1219,76.0,male,True,20400
+snCv3,3535,kidney loop of Henle thick ascending limb epithelial cell,4078,76.0,male,True,20400
+snCv3,3535,kidney loop of Henle thin ascending limb epithelial cell,91,76.0,male,True,20400
+snCv3,3535,kidney loop of Henle thin descending limb epithelial cell,439,76.0,male,True,20400
+snCv3,3535,mast cell,29,76.0,male,True,20400
+snCv3,3535,mature NK T cell,31,76.0,male,True,20400
+snCv3,3535,mononuclear phagocyte,307,76.0,male,True,20400
+snCv3,3535,neural cell,14,76.0,male,True,20400
+snCv3,3535,neutrophil,27,76.0,male,True,20400
+snCv3,3535,non-classical monocyte,43,76.0,male,True,20400
+snCv3,3535,papillary tips cell,2,76.0,male,True,20400
+snCv3,3535,parietal epithelial cell,110,76.0,male,True,20400
+snCv3,3535,plasma cell,50,76.0,male,True,20400
+snCv3,3535,"plasmacytoid dendritic cell, human",17,76.0,male,True,20400
+snCv3,3535,podocyte,306,76.0,male,True,20400
+snCv3,3535,renal interstitial pericyte,339,76.0,male,True,20400
+snCv3,3593,B cell,2,66.0,male,True,11467
+snCv3,3593,T cell,31,66.0,male,True,11467
+snCv3,3593,conventional dendritic cell,0,66.0,male,True,11467
+snCv3,3593,endothelial cell,1537,66.0,male,True,11467
+snCv3,3593,epithelial cell of proximal tubule,399,66.0,male,True,11467
+snCv3,3593,kidney collecting duct intercalated cell,204,66.0,male,True,11467
+snCv3,3593,kidney collecting duct principal cell,2048,66.0,male,True,11467
+snCv3,3593,kidney connecting tubule epithelial cell,32,66.0,male,True,11467
+snCv3,3593,kidney distal convoluted tubule epithelial cell,15,66.0,male,True,11467
+snCv3,3593,kidney interstitial alternatively activated macrophage,115,66.0,male,True,11467
+snCv3,3593,kidney interstitial fibroblast,2079,66.0,male,True,11467
+snCv3,3593,kidney loop of Henle thick ascending limb epithelial cell,2291,66.0,male,True,11467
+snCv3,3593,kidney loop of Henle thin ascending limb epithelial cell,989,66.0,male,True,11467
+snCv3,3593,kidney loop of Henle thin descending limb epithelial cell,1287,66.0,male,True,11467
+snCv3,3593,mast cell,1,66.0,male,True,11467
+snCv3,3593,mature NK T cell,9,66.0,male,True,11467
+snCv3,3593,mononuclear phagocyte,83,66.0,male,True,11467
+snCv3,3593,neural cell,4,66.0,male,True,11467
+snCv3,3593,neutrophil,3,66.0,male,True,11467
+snCv3,3593,non-classical monocyte,13,66.0,male,True,11467
+snCv3,3593,papillary tips cell,59,66.0,male,True,11467
+snCv3,3593,parietal epithelial cell,8,66.0,male,True,11467
+snCv3,3593,plasma cell,1,66.0,male,True,11467
+snCv3,3593,"plasmacytoid dendritic cell, human",0,66.0,male,True,11467
+snCv3,3593,podocyte,14,66.0,male,True,11467
+snCv3,3593,renal interstitial pericyte,243,66.0,male,True,11467
+snCv3,3613,B cell,2,59.0,female,True,6488
+snCv3,3613,T cell,42,59.0,female,True,6488
+snCv3,3613,conventional dendritic cell,0,59.0,female,True,6488
+snCv3,3613,endothelial cell,1034,59.0,female,True,6488
+snCv3,3613,epithelial cell of proximal tubule,173,59.0,female,True,6488
+snCv3,3613,kidney collecting duct intercalated cell,123,59.0,female,True,6488
+snCv3,3613,kidney collecting duct principal cell,1386,59.0,female,True,6488
+snCv3,3613,kidney connecting tubule epithelial cell,6,59.0,female,True,6488
+snCv3,3613,kidney distal convoluted tubule epithelial cell,0,59.0,female,True,6488
+snCv3,3613,kidney interstitial alternatively activated macrophage,111,59.0,female,True,6488
+snCv3,3613,kidney interstitial fibroblast,1672,59.0,female,True,6488
+snCv3,3613,kidney loop of Henle thick ascending limb epithelial cell,411,59.0,female,True,6488
+snCv3,3613,kidney loop of Henle thin ascending limb epithelial cell,661,59.0,female,True,6488
+snCv3,3613,kidney loop of Henle thin descending limb epithelial cell,402,59.0,female,True,6488
+snCv3,3613,mast cell,7,59.0,female,True,6488
+snCv3,3613,mature NK T cell,6,59.0,female,True,6488
+snCv3,3613,mononuclear phagocyte,42,59.0,female,True,6488
+snCv3,3613,neural cell,0,59.0,female,True,6488
+snCv3,3613,neutrophil,2,59.0,female,True,6488
+snCv3,3613,non-classical monocyte,4,59.0,female,True,6488
+snCv3,3613,papillary tips cell,219,59.0,female,True,6488
+snCv3,3613,parietal epithelial cell,1,59.0,female,True,6488
+snCv3,3613,plasma cell,7,59.0,female,True,6488
+snCv3,3613,"plasmacytoid dendritic cell, human",0,59.0,female,True,6488
+snCv3,3613,podocyte,0,59.0,female,True,6488
+snCv3,3613,renal interstitial pericyte,177,59.0,female,True,6488
+snCv3,KRP446,B cell,3,29.0,male,True,5105
+snCv3,KRP446,T cell,35,29.0,male,True,5105
+snCv3,KRP446,conventional dendritic cell,0,29.0,male,True,5105
+snCv3,KRP446,endothelial cell,208,29.0,male,True,5105
+snCv3,KRP446,epithelial cell of proximal tubule,2190,29.0,male,True,5105
+snCv3,KRP446,kidney collecting duct intercalated cell,411,29.0,male,True,5105
+snCv3,KRP446,kidney collecting duct principal cell,216,29.0,male,True,5105
+snCv3,KRP446,kidney connecting tubule epithelial cell,357,29.0,male,True,5105
+snCv3,KRP446,kidney distal convoluted tubule epithelial cell,781,29.0,male,True,5105
+snCv3,KRP446,kidney interstitial alternatively activated macrophage,39,29.0,male,True,5105
+snCv3,KRP446,kidney interstitial fibroblast,80,29.0,male,True,5105
+snCv3,KRP446,kidney loop of Henle thick ascending limb epithelial cell,441,29.0,male,True,5105
+snCv3,KRP446,kidney loop of Henle thin ascending limb epithelial cell,32,29.0,male,True,5105
+snCv3,KRP446,kidney loop of Henle thin descending limb epithelial cell,50,29.0,male,True,5105
+snCv3,KRP446,mast cell,1,29.0,male,True,5105
+snCv3,KRP446,mature NK T cell,13,29.0,male,True,5105
+snCv3,KRP446,mononuclear phagocyte,28,29.0,male,True,5105
+snCv3,KRP446,neural cell,1,29.0,male,True,5105
+snCv3,KRP446,neutrophil,2,29.0,male,True,5105
+snCv3,KRP446,non-classical monocyte,2,29.0,male,True,5105
+snCv3,KRP446,papillary tips cell,1,29.0,male,True,5105
+snCv3,KRP446,parietal epithelial cell,95,29.0,male,True,5105
+snCv3,KRP446,plasma cell,4,29.0,male,True,5105
+snCv3,KRP446,"plasmacytoid dendritic cell, human",1,29.0,male,True,5105
+snCv3,KRP446,podocyte,89,29.0,male,True,5105
+snCv3,KRP446,renal interstitial pericyte,25,29.0,male,True,5105
+snCv3,KRP460,B cell,48,63.0,female,True,10807
+snCv3,KRP460,T cell,282,63.0,female,True,10807
+snCv3,KRP460,conventional dendritic cell,13,63.0,female,True,10807
+snCv3,KRP460,endothelial cell,778,63.0,female,True,10807
+snCv3,KRP460,epithelial cell of proximal tubule,1711,63.0,female,True,10807
+snCv3,KRP460,kidney collecting duct intercalated cell,501,63.0,female,True,10807
+snCv3,KRP460,kidney collecting duct principal cell,3281,63.0,female,True,10807
+snCv3,KRP460,kidney connecting tubule epithelial cell,399,63.0,female,True,10807
+snCv3,KRP460,kidney distal convoluted tubule epithelial cell,356,63.0,female,True,10807
+snCv3,KRP460,kidney interstitial alternatively activated macrophage,164,63.0,female,True,10807
+snCv3,KRP460,kidney interstitial fibroblast,899,63.0,female,True,10807
+snCv3,KRP460,kidney loop of Henle thick ascending limb epithelial cell,679,63.0,female,True,10807
+snCv3,KRP460,kidney loop of Henle thin ascending limb epithelial cell,919,63.0,female,True,10807
+snCv3,KRP460,kidney loop of Henle thin descending limb epithelial cell,356,63.0,female,True,10807
+snCv3,KRP460,mast cell,26,63.0,female,True,10807
+snCv3,KRP460,mature NK T cell,26,63.0,female,True,10807
+snCv3,KRP460,mononuclear phagocyte,99,63.0,female,True,10807
+snCv3,KRP460,neural cell,6,63.0,female,True,10807
+snCv3,KRP460,neutrophil,3,63.0,female,True,10807
+snCv3,KRP460,non-classical monocyte,9,63.0,female,True,10807
+snCv3,KRP460,papillary tips cell,11,63.0,female,True,10807
+snCv3,KRP460,parietal epithelial cell,45,63.0,female,True,10807
+snCv3,KRP460,plasma cell,16,63.0,female,True,10807
+snCv3,KRP460,"plasmacytoid dendritic cell, human",11,63.0,female,True,10807
+snCv3,KRP460,podocyte,98,63.0,female,True,10807
+snCv3,KRP460,renal interstitial pericyte,71,63.0,female,True,10807
+snCv3,KRP461,B cell,0,54.0,male,True,2013
+snCv3,KRP461,T cell,5,54.0,male,True,2013
+snCv3,KRP461,conventional dendritic cell,0,54.0,male,True,2013
+snCv3,KRP461,endothelial cell,73,54.0,male,True,2013
+snCv3,KRP461,epithelial cell of proximal tubule,922,54.0,male,True,2013
+snCv3,KRP461,kidney collecting duct intercalated cell,209,54.0,male,True,2013
+snCv3,KRP461,kidney collecting duct principal cell,45,54.0,male,True,2013
+snCv3,KRP461,kidney connecting tubule epithelial cell,236,54.0,male,True,2013
+snCv3,KRP461,kidney distal convoluted tubule epithelial cell,411,54.0,male,True,2013
+snCv3,KRP461,kidney interstitial alternatively activated macrophage,5,54.0,male,True,2013
+snCv3,KRP461,kidney interstitial fibroblast,8,54.0,male,True,2013
+snCv3,KRP461,kidney loop of Henle thick ascending limb epithelial cell,50,54.0,male,True,2013
+snCv3,KRP461,kidney loop of Henle thin ascending limb epithelial cell,0,54.0,male,True,2013
+snCv3,KRP461,kidney loop of Henle thin descending limb epithelial cell,0,54.0,male,True,2013
+snCv3,KRP461,mast cell,0,54.0,male,True,2013
+snCv3,KRP461,mature NK T cell,2,54.0,male,True,2013
+snCv3,KRP461,mononuclear phagocyte,2,54.0,male,True,2013
+snCv3,KRP461,neural cell,0,54.0,male,True,2013
+snCv3,KRP461,neutrophil,0,54.0,male,True,2013
+snCv3,KRP461,non-classical monocyte,2,54.0,male,True,2013
+snCv3,KRP461,papillary tips cell,0,54.0,male,True,2013
+snCv3,KRP461,parietal epithelial cell,30,54.0,male,True,2013
+snCv3,KRP461,plasma cell,0,54.0,male,True,2013
+snCv3,KRP461,"plasmacytoid dendritic cell, human",0,54.0,male,True,2013
+snCv3,KRP461,podocyte,6,54.0,male,True,2013
+snCv3,KRP461,renal interstitial pericyte,7,54.0,male,True,2013
+snCv3,KRP462,B cell,2,69.0,female,True,5151
+snCv3,KRP462,T cell,85,69.0,female,True,5151
+snCv3,KRP462,conventional dendritic cell,4,69.0,female,True,5151
+snCv3,KRP462,endothelial cell,599,69.0,female,True,5151
+snCv3,KRP462,epithelial cell of proximal tubule,1151,69.0,female,True,5151
+snCv3,KRP462,kidney collecting duct intercalated cell,158,69.0,female,True,5151
+snCv3,KRP462,kidney collecting duct principal cell,544,69.0,female,True,5151
+snCv3,KRP462,kidney connecting tubule epithelial cell,123,69.0,female,True,5151
+snCv3,KRP462,kidney distal convoluted tubule epithelial cell,336,69.0,female,True,5151
+snCv3,KRP462,kidney interstitial alternatively activated macrophage,47,69.0,female,True,5151
+snCv3,KRP462,kidney interstitial fibroblast,114,69.0,female,True,5151
+snCv3,KRP462,kidney loop of Henle thick ascending limb epithelial cell,989,69.0,female,True,5151
+snCv3,KRP462,kidney loop of Henle thin ascending limb epithelial cell,61,69.0,female,True,5151
+snCv3,KRP462,kidney loop of Henle thin descending limb epithelial cell,498,69.0,female,True,5151
+snCv3,KRP462,mast cell,23,69.0,female,True,5151
+snCv3,KRP462,mature NK T cell,22,69.0,female,True,5151
+snCv3,KRP462,mononuclear phagocyte,33,69.0,female,True,5151
+snCv3,KRP462,neural cell,0,69.0,female,True,5151
+snCv3,KRP462,neutrophil,5,69.0,female,True,5151
+snCv3,KRP462,non-classical monocyte,8,69.0,female,True,5151
+snCv3,KRP462,papillary tips cell,29,69.0,female,True,5151
+snCv3,KRP462,parietal epithelial cell,36,69.0,female,True,5151
+snCv3,KRP462,plasma cell,5,69.0,female,True,5151
+snCv3,KRP462,"plasmacytoid dendritic cell, human",0,69.0,female,True,5151
+snCv3,KRP462,podocyte,169,69.0,female,True,5151
+snCv3,KRP462,renal interstitial pericyte,110,69.0,female,True,5151

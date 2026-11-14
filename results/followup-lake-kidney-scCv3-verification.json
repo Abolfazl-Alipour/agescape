@@ -1,0 +1,70 @@
+{
+  "aggregation_units": 161,
+  "assay_labels": [
+    "10x 3' v3"
+  ],
+  "assay_release": "scCv3",
+  "cache_bytes": 52144410,
+  "cache_path": "/home/reza/projects/agescape-revision-data/lake_kidney/interim/scCv3_donor_aggregates.npz",
+  "dataset_id": "32b9bdce-2481-4c85-ba1b-6ad5fcea844c",
+  "dataset_version_id": "3ae68468-89f7-4941-a945-f7bae9b2cbea",
+  "decade_only_healthy_donors": 0,
+  "donor_age_source": "H5AD development_stage, verified against frozen public mapping",
+  "exact_age_healthy_donors": 18,
+  "geo_age_field_used": false,
+  "geo_reference_donors_specimens_libraries": [
+    18,
+    20,
+    20
+  ],
+  "healthy_donors": 18,
+  "is_primary_data_labels": [
+    "False"
+  ],
+  "n_obs": 107344,
+  "n_vars_X": 26837,
+  "primary_adult_donors": 18,
+  "raw_X_all_stored_values_finite_nonnegative_integer": true,
+  "raw_X_nnz": 170393115,
+  "raw_X_present": true,
+  "raw_X_shape": [
+    107344,
+    26837
+  ],
+  "raw_X_sum": 517204333.0,
+  "raw_duplicate_feature_name_rows": 26,
+  "raw_feature_ids_unique": true,
+  "raw_unique_feature_names": 26824,
+  "released_annotation_labels": [
+    "B cell",
+    "T cell",
+    "conventional dendritic cell",
+    "cytotoxic T cell",
+    "endothelial cell",
+    "epithelial cell of proximal tubule",
+    "kidney collecting duct intercalated cell",
+    "kidney collecting duct principal cell",
+    "kidney connecting tubule epithelial cell",
+    "kidney distal convoluted tubule epithelial cell",
+    "kidney interstitial alternatively activated macrophage",
+    "kidney interstitial cell",
+    "kidney loop of Henle thick ascending limb epithelial cell",
+    "kidney loop of Henle thin ascending limb epithelial cell",
+    "kidney loop of Henle thin descending limb epithelial cell",
+    "mast cell",
+    "mature NK T cell",
+    "monocyte",
+    "mononuclear phagocyte",
+    "natural killer cell",
+    "non-classical monocyte",
+    "parietal epithelial cell",
+    "plasma cell",
+    "plasmacytoid dendritic cell, human",
+    "podocyte",
+    "regulatory T cell"
+  ],
+  "source_url": "https://datasets.cellxgene.cziscience.com/3ae68468-89f7-4941-a945-f7bae9b2cbea.h5ad",
+  "suspension_labels": [
+    "cell"
+  ]
+}

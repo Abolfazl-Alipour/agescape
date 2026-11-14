@@ -1,0 +1,484 @@
+assay_release,donor_id,cell_type,age,sex,n_cells,mean_log_umi,score,donor_set
+scCv3,PRE018-1,T cell,56.0,male,37,7.628424070127042,0.2936964776739957,primary_adult
+scCv3,PRE019,T cell,53.0,female,92,7.743493797467202,0.2437791383686028,primary_adult
+scCv3,PRE038,T cell,42.0,female,31,7.909364533622003,0.1178469608529555,primary_adult
+scCv3,PRE055-1,T cell,66.0,male,60,7.785440283780239,0.4914453627949671,primary_adult
+scCv3,PRE062-1,T cell,40.0,female,44,7.5547113361676335,0.3970777894717791,primary_adult
+scCv3,Sample1153-EO1,T cell,35.0,female,38,7.94080478741926,0.3064306981222969,primary_adult
+scCv3,Sample1153-EO3,T cell,30.0,female,75,7.705881305555372,0.2383479042537628,primary_adult
+scCv3,Sample1157-EO3,T cell,47.0,male,21,8.014034532572552,0.1941815343843838,primary_adult
+scCv3,PRE018-1,T cell,56.0,male,37,7.628424070127042,0.2936964776739957,all_exact_age
+scCv3,PRE019,T cell,53.0,female,92,7.743493797467202,0.2437791383686028,all_exact_age
+scCv3,PRE038,T cell,42.0,female,31,7.909364533622003,0.1178469608529555,all_exact_age
+scCv3,PRE055-1,T cell,66.0,male,60,7.785440283780239,0.4914453627949671,all_exact_age
+scCv3,PRE062-1,T cell,40.0,female,44,7.5547113361676335,0.3970777894717791,all_exact_age
+scCv3,Sample1153-EO1,T cell,35.0,female,38,7.94080478741926,0.3064306981222969,all_exact_age
+scCv3,Sample1153-EO3,T cell,30.0,female,75,7.705881305555372,0.2383479042537628,all_exact_age
+scCv3,Sample1157-EO3,T cell,47.0,male,21,8.014034532572552,0.1941815343843838,all_exact_age
+scCv3,PRE018-1,endothelial cell,56.0,male,113,8.081146180675837,0.4001477382577925,primary_adult
+scCv3,PRE019,endothelial cell,53.0,female,451,8.139208568851418,0.2799183014783191,primary_adult
+scCv3,PRE027,endothelial cell,31.0,female,166,8.085710895241698,0.1436022585503888,primary_adult
+scCv3,PRE038,endothelial cell,42.0,female,224,8.138313210733745,0.1693080092753685,primary_adult
+scCv3,PRE055-1,endothelial cell,66.0,male,98,8.210941585532739,0.7083685206949881,primary_adult
+scCv3,PRE062-1,endothelial cell,40.0,female,53,7.976068977390375,0.3601599232398595,primary_adult
+scCv3,PRE98sc,endothelial cell,57.0,female,123,7.420558255052746,0.0542800402558224,primary_adult
+scCv3,Sample1153-EO1,endothelial cell,35.0,female,135,7.898226855545588,0.1668512642673723,primary_adult
+scCv3,Sample1153-EO2,endothelial cell,35.0,female,65,7.811505429657507,0.2152515821561709,primary_adult
+scCv3,Sample1153-EO3,endothelial cell,30.0,female,213,7.906673243523451,0.3093551646978194,primary_adult
+scCv3,Sample1157-EO1,endothelial cell,49.0,male,97,7.898999555773284,0.0506190397602468,primary_adult
+scCv3,Sample1157-EO2,endothelial cell,41.0,female,98,7.627451565238251,0.1245001888506847,primary_adult
+scCv3,Sample1157-EO3,endothelial cell,47.0,male,69,7.992716706324728,0.2965044406827688,primary_adult
+scCv3,Sample1158-EO1,endothelial cell,48.0,female,103,8.074642837171021,0.3942949463645453,primary_adult
+scCv3,Sample1158-EO2,endothelial cell,56.0,male,33,7.862535924658577,0.5603059967255695,primary_adult
+scCv3,Sample1158-EO3,endothelial cell,35.0,female,178,7.893449782566234,0.1322473787126086,primary_adult
+scCv3,Sample1162-EO1,endothelial cell,39.0,male,142,7.992608831062183,0.1655891405120944,primary_adult
+scCv3,Sample1162-EO2,endothelial cell,52.0,male,143,7.918221438175647,0.1565472418683153,primary_adult
+scCv3,PRE018-1,endothelial cell,56.0,male,113,8.081146180675837,0.4001477382577925,all_exact_age
+scCv3,PRE019,endothelial cell,53.0,female,451,8.139208568851418,0.2799183014783191,all_exact_age
+scCv3,PRE027,endothelial cell,31.0,female,166,8.085710895241698,0.1436022585503888,all_exact_age
+scCv3,PRE038,endothelial cell,42.0,female,224,8.138313210733745,0.1693080092753685,all_exact_age
+scCv3,PRE055-1,endothelial cell,66.0,male,98,8.210941585532739,0.7083685206949881,all_exact_age
+scCv3,PRE062-1,endothelial cell,40.0,female,53,7.976068977390375,0.3601599232398595,all_exact_age
+scCv3,PRE98sc,endothelial cell,57.0,female,123,7.420558255052746,0.0542800402558224,all_exact_age
+scCv3,Sample1153-EO1,endothelial cell,35.0,female,135,7.898226855545588,0.1668512642673723,all_exact_age
+scCv3,Sample1153-EO2,endothelial cell,35.0,female,65,7.811505429657507,0.2152515821561709,all_exact_age
+scCv3,Sample1153-EO3,endothelial cell,30.0,female,213,7.906673243523451,0.3093551646978194,all_exact_age
+scCv3,Sample1157-EO1,endothelial cell,49.0,male,97,7.898999555773284,0.0506190397602468,all_exact_age
+scCv3,Sample1157-EO2,endothelial cell,41.0,female,98,7.627451565238251,0.1245001888506847,all_exact_age
+scCv3,Sample1157-EO3,endothelial cell,47.0,male,69,7.992716706324728,0.2965044406827688,all_exact_age
+scCv3,Sample1158-EO1,endothelial cell,48.0,female,103,8.074642837171021,0.3942949463645453,all_exact_age
+scCv3,Sample1158-EO2,endothelial cell,56.0,male,33,7.862535924658577,0.5603059967255695,all_exact_age
+scCv3,Sample1158-EO3,endothelial cell,35.0,female,178,7.893449782566234,0.1322473787126086,all_exact_age
+scCv3,Sample1162-EO1,endothelial cell,39.0,male,142,7.992608831062183,0.1655891405120944,all_exact_age
+scCv3,Sample1162-EO2,endothelial cell,52.0,male,143,7.918221438175647,0.1565472418683153,all_exact_age
+scCv3,PRE018-1,epithelial cell of proximal tubule,56.0,male,177,8.351804349670081,0.3138763553043637,primary_adult
+scCv3,PRE019,epithelial cell of proximal tubule,53.0,female,511,8.003039941593098,0.1029948133067466,primary_adult
+scCv3,PRE027,epithelial cell of proximal tubule,31.0,female,447,8.076762065424841,0.1234963648314424,primary_adult
+scCv3,PRE038,epithelial cell of proximal tubule,42.0,female,961,8.313270704247792,-0.1620114852663701,primary_adult
+scCv3,PRE055-1,epithelial cell of proximal tubule,66.0,male,90,8.51064845073791,0.4695583613309908,primary_adult
+scCv3,PRE062-1,epithelial cell of proximal tubule,40.0,female,84,8.56181476229106,0.4663210465686391,primary_adult
+scCv3,PRE98sc,epithelial cell of proximal tubule,57.0,female,235,7.812102323921166,0.011265762881788,primary_adult
+scCv3,Sample1153-EO1,epithelial cell of proximal tubule,35.0,female,142,8.01415408820268,0.2970665737960578,primary_adult
+scCv3,Sample1153-EO2,epithelial cell of proximal tubule,35.0,female,69,8.28195030976275,0.4730781378854622,primary_adult
+scCv3,Sample1153-EO3,epithelial cell of proximal tubule,30.0,female,187,8.416304763389915,0.4544755233247866,primary_adult
+scCv3,Sample1157-EO1,epithelial cell of proximal tubule,49.0,male,247,8.229504724415886,-0.0418632362756243,primary_adult
+scCv3,Sample1157-EO2,epithelial cell of proximal tubule,41.0,female,473,8.061955090166538,0.1537970775003991,primary_adult
+scCv3,Sample1157-EO3,epithelial cell of proximal tubule,47.0,male,225,8.043596703628127,-0.039738733242177,primary_adult
+scCv3,Sample1158-EO1,epithelial cell of proximal tubule,48.0,female,21,8.101822259647438,0.6654383565833513,primary_adult
+scCv3,Sample1158-EO2,epithelial cell of proximal tubule,56.0,male,182,7.695747403775938,0.2399126469209391,primary_adult
+scCv3,Sample1158-EO3,epithelial cell of proximal tubule,35.0,female,145,8.182933790760224,0.3063717026608721,primary_adult
+scCv3,Sample1162-EO1,epithelial cell of proximal tubule,39.0,male,333,8.288596890480703,0.1543769654064377,primary_adult
+scCv3,Sample1162-EO2,epithelial cell of proximal tubule,52.0,male,371,8.27229586499174,0.1118363517209906,primary_adult
+scCv3,PRE018-1,epithelial cell of proximal tubule,56.0,male,177,8.351804349670081,0.3138763553043637,all_exact_age
+scCv3,PRE019,epithelial cell of proximal tubule,53.0,female,511,8.003039941593098,0.1029948133067466,all_exact_age
+scCv3,PRE027,epithelial cell of proximal tubule,31.0,female,447,8.076762065424841,0.1234963648314424,all_exact_age
+scCv3,PRE038,epithelial cell of proximal tubule,42.0,female,961,8.313270704247792,-0.1620114852663701,all_exact_age
+scCv3,PRE055-1,epithelial cell of proximal tubule,66.0,male,90,8.51064845073791,0.4695583613309908,all_exact_age
+scCv3,PRE062-1,epithelial cell of proximal tubule,40.0,female,84,8.56181476229106,0.4663210465686391,all_exact_age
+scCv3,PRE98sc,epithelial cell of proximal tubule,57.0,female,235,7.812102323921166,0.011265762881788,all_exact_age
+scCv3,Sample1153-EO1,epithelial cell of proximal tubule,35.0,female,142,8.01415408820268,0.2970665737960578,all_exact_age
+scCv3,Sample1153-EO2,epithelial cell of proximal tubule,35.0,female,69,8.28195030976275,0.4730781378854622,all_exact_age
+scCv3,Sample1153-EO3,epithelial cell of proximal tubule,30.0,female,187,8.416304763389915,0.4544755233247866,all_exact_age
+scCv3,Sample1157-EO1,epithelial cell of proximal tubule,49.0,male,247,8.229504724415886,-0.0418632362756243,all_exact_age
+scCv3,Sample1157-EO2,epithelial cell of proximal tubule,41.0,female,473,8.061955090166538,0.1537970775003991,all_exact_age
+scCv3,Sample1157-EO3,epithelial cell of proximal tubule,47.0,male,225,8.043596703628127,-0.039738733242177,all_exact_age
+scCv3,Sample1158-EO1,epithelial cell of proximal tubule,48.0,female,21,8.101822259647438,0.6654383565833513,all_exact_age
+scCv3,Sample1158-EO2,epithelial cell of proximal tubule,56.0,male,182,7.695747403775938,0.2399126469209391,all_exact_age
+scCv3,Sample1158-EO3,epithelial cell of proximal tubule,35.0,female,145,8.182933790760224,0.3063717026608721,all_exact_age
+scCv3,Sample1162-EO1,epithelial cell of proximal tubule,39.0,male,333,8.288596890480703,0.1543769654064377,all_exact_age
+scCv3,Sample1162-EO2,epithelial cell of proximal tubule,52.0,male,371,8.27229586499174,0.1118363517209906,all_exact_age
+scCv3,PRE018-1,kidney collecting duct intercalated cell,56.0,male,51,9.244400979023094,0.9433713404204008,primary_adult
+scCv3,PRE019,kidney collecting duct intercalated cell,53.0,female,218,9.105702497663309,0.6971389165587061,primary_adult
+scCv3,PRE027,kidney collecting duct intercalated cell,31.0,female,201,8.999006213256564,0.7036380483098172,primary_adult
+scCv3,PRE062-1,kidney collecting duct intercalated cell,40.0,female,43,9.627636725643908,0.6459341763657978,primary_adult
+scCv3,PRE98sc,kidney collecting duct intercalated cell,57.0,female,110,8.303357570879005,0.3141169589649547,primary_adult
+scCv3,Sample1153-EO1,kidney collecting duct intercalated cell,35.0,female,86,9.267403655745312,0.9663609151085076,primary_adult
+scCv3,Sample1153-EO2,kidney collecting duct intercalated cell,35.0,female,150,9.030350138166702,0.8513351875274893,primary_adult
+scCv3,Sample1153-EO3,kidney collecting duct intercalated cell,30.0,female,141,9.167814063935523,1.0487842829007632,primary_adult
+scCv3,Sample1157-EO1,kidney collecting duct intercalated cell,49.0,male,250,9.165470035452,0.6199823035185674,primary_adult
+scCv3,Sample1157-EO2,kidney collecting duct intercalated cell,41.0,female,32,9.11971621344695,0.5903048906581743,primary_adult
+scCv3,Sample1157-EO3,kidney collecting duct intercalated cell,47.0,male,52,8.700184290688645,0.3761196889239786,primary_adult
+scCv3,Sample1158-EO3,kidney collecting duct intercalated cell,35.0,female,118,9.283593621941636,0.92664736561856,primary_adult
+scCv3,Sample1162-EO1,kidney collecting duct intercalated cell,39.0,male,109,9.477933469780622,0.7911482820077567,primary_adult
+scCv3,Sample1162-EO2,kidney collecting duct intercalated cell,52.0,male,126,9.088716041036752,0.8835071460387958,primary_adult
+scCv3,PRE018-1,kidney collecting duct intercalated cell,56.0,male,51,9.244400979023094,0.9433713404204008,all_exact_age
+scCv3,PRE019,kidney collecting duct intercalated cell,53.0,female,218,9.105702497663309,0.6971389165587061,all_exact_age
+scCv3,PRE027,kidney collecting duct intercalated cell,31.0,female,201,8.999006213256564,0.7036380483098172,all_exact_age
+scCv3,PRE062-1,kidney collecting duct intercalated cell,40.0,female,43,9.627636725643908,0.6459341763657978,all_exact_age
+scCv3,PRE98sc,kidney collecting duct intercalated cell,57.0,female,110,8.303357570879005,0.3141169589649547,all_exact_age
+scCv3,Sample1153-EO1,kidney collecting duct intercalated cell,35.0,female,86,9.267403655745312,0.9663609151085076,all_exact_age
+scCv3,Sample1153-EO2,kidney collecting duct intercalated cell,35.0,female,150,9.030350138166702,0.8513351875274893,all_exact_age
+scCv3,Sample1153-EO3,kidney collecting duct intercalated cell,30.0,female,141,9.167814063935523,1.0487842829007632,all_exact_age
+scCv3,Sample1157-EO1,kidney collecting duct intercalated cell,49.0,male,250,9.165470035452,0.6199823035185674,all_exact_age
+scCv3,Sample1157-EO2,kidney collecting duct intercalated cell,41.0,female,32,9.11971621344695,0.5903048906581743,all_exact_age
+scCv3,Sample1157-EO3,kidney collecting duct intercalated cell,47.0,male,52,8.700184290688645,0.3761196889239786,all_exact_age
+scCv3,Sample1158-EO3,kidney collecting duct intercalated cell,35.0,female,118,9.283593621941636,0.92664736561856,all_exact_age
+scCv3,Sample1162-EO1,kidney collecting duct intercalated cell,39.0,male,109,9.477933469780622,0.7911482820077567,all_exact_age
+scCv3,Sample1162-EO2,kidney collecting duct intercalated cell,52.0,male,126,9.088716041036752,0.8835071460387958,all_exact_age
+scCv3,PRE018-1,kidney collecting duct principal cell,56.0,male,167,9.368503826761,0.9733988649511324,primary_adult
+scCv3,PRE019,kidney collecting duct principal cell,53.0,female,375,9.435335838071037,1.069511931985523,primary_adult
+scCv3,PRE027,kidney collecting duct principal cell,31.0,female,276,9.24122066647213,0.9011963995478748,primary_adult
+scCv3,PRE055-1,kidney collecting duct principal cell,66.0,male,20,9.732117164694548,1.2976646232604987,primary_adult
+scCv3,PRE062-1,kidney collecting duct principal cell,40.0,female,101,9.563559657262536,0.9021939966825876,primary_adult
+scCv3,PRE98sc,kidney collecting duct principal cell,57.0,female,266,8.729658502668261,0.6871693689474025,primary_adult
+scCv3,Sample1153-EO1,kidney collecting duct principal cell,35.0,female,20,9.406362339187364,1.1155906024660385,primary_adult
+scCv3,Sample1153-EO2,kidney collecting duct principal cell,35.0,female,43,9.082648356551909,0.8762899294670503,primary_adult
+scCv3,Sample1153-EO3,kidney collecting duct principal cell,30.0,female,36,9.28343286288332,1.155285809923102,primary_adult
+scCv3,Sample1157-EO1,kidney collecting duct principal cell,49.0,male,27,8.953849622786247,0.8601432325978757,primary_adult
+scCv3,Sample1157-EO2,kidney collecting duct principal cell,41.0,female,85,8.679014600727223,0.4696757706126577,primary_adult
+scCv3,Sample1157-EO3,kidney collecting duct principal cell,47.0,male,70,8.970598843050857,0.7864126385020567,primary_adult
+scCv3,Sample1158-EO1,kidney collecting duct principal cell,48.0,female,52,8.930651221677287,0.7483023709429928,primary_adult
+scCv3,Sample1158-EO2,kidney collecting duct principal cell,56.0,male,144,7.861437284357231,0.7186783088861952,primary_adult
+scCv3,Sample1158-EO3,kidney collecting duct principal cell,35.0,female,24,9.432499022059988,1.029291081428528,primary_adult
+scCv3,Sample1162-EO1,kidney collecting duct principal cell,39.0,male,85,9.07416870733269,0.6459563935971733,primary_adult
+scCv3,Sample1162-EO2,kidney collecting duct principal cell,52.0,male,121,8.977260903279006,0.8222339318371905,primary_adult
+scCv3,PRE018-1,kidney collecting duct principal cell,56.0,male,167,9.368503826761,0.9733988649511324,all_exact_age
+scCv3,PRE019,kidney collecting duct principal cell,53.0,female,375,9.435335838071037,1.069511931985523,all_exact_age
+scCv3,PRE027,kidney collecting duct principal cell,31.0,female,276,9.24122066647213,0.9011963995478748,all_exact_age
+scCv3,PRE055-1,kidney collecting duct principal cell,66.0,male,20,9.732117164694548,1.2976646232604987,all_exact_age
+scCv3,PRE062-1,kidney collecting duct principal cell,40.0,female,101,9.563559657262536,0.9021939966825876,all_exact_age
+scCv3,PRE98sc,kidney collecting duct principal cell,57.0,female,266,8.729658502668261,0.6871693689474025,all_exact_age
+scCv3,Sample1153-EO1,kidney collecting duct principal cell,35.0,female,20,9.406362339187364,1.1155906024660385,all_exact_age
+scCv3,Sample1153-EO2,kidney collecting duct principal cell,35.0,female,43,9.082648356551909,0.8762899294670503,all_exact_age
+scCv3,Sample1153-EO3,kidney collecting duct principal cell,30.0,female,36,9.28343286288332,1.155285809923102,all_exact_age
+scCv3,Sample1157-EO1,kidney collecting duct principal cell,49.0,male,27,8.953849622786247,0.8601432325978757,all_exact_age
+scCv3,Sample1157-EO2,kidney collecting duct principal cell,41.0,female,85,8.679014600727223,0.4696757706126577,all_exact_age
+scCv3,Sample1157-EO3,kidney collecting duct principal cell,47.0,male,70,8.970598843050857,0.7864126385020567,all_exact_age
+scCv3,Sample1158-EO1,kidney collecting duct principal cell,48.0,female,52,8.930651221677287,0.7483023709429928,all_exact_age
+scCv3,Sample1158-EO2,kidney collecting duct principal cell,56.0,male,144,7.861437284357231,0.7186783088861952,all_exact_age
+scCv3,Sample1158-EO3,kidney collecting duct principal cell,35.0,female,24,9.432499022059988,1.029291081428528,all_exact_age
+scCv3,Sample1162-EO1,kidney collecting duct principal cell,39.0,male,85,9.07416870733269,0.6459563935971733,all_exact_age
+scCv3,Sample1162-EO2,kidney collecting duct principal cell,52.0,male,121,8.977260903279006,0.8222339318371905,all_exact_age
+scCv3,PRE018-1,kidney connecting tubule epithelial cell,56.0,male,79,9.290034024109897,1.0354571660790837,primary_adult
+scCv3,PRE019,kidney connecting tubule epithelial cell,53.0,female,178,8.88494666034238,0.8392680847510863,primary_adult
+scCv3,PRE027,kidney connecting tubule epithelial cell,31.0,female,109,8.758899650269305,0.6761529862448457,primary_adult
+scCv3,PRE062-1,kidney connecting tubule epithelial cell,40.0,female,57,9.311659409087683,0.7702122830866567,primary_adult
+scCv3,PRE98sc,kidney connecting tubule epithelial cell,57.0,female,170,8.394793849218916,0.4710706944158429,primary_adult
+scCv3,Sample1153-EO1,kidney connecting tubule epithelial cell,35.0,female,152,8.94145731090017,1.0326291904831897,primary_adult
+scCv3,Sample1153-EO2,kidney connecting tubule epithelial cell,35.0,female,202,8.761906965417563,0.8857207372445985,primary_adult
+scCv3,Sample1153-EO3,kidney connecting tubule epithelial cell,30.0,female,105,8.81763292885397,1.005810178207432,primary_adult
+scCv3,Sample1157-EO1,kidney connecting tubule epithelial cell,49.0,male,64,8.682020849372902,0.8243978370584193,primary_adult
+scCv3,Sample1158-EO2,kidney connecting tubule epithelial cell,56.0,male,32,7.775484260615633,0.8844633338990665,primary_adult
+scCv3,Sample1158-EO3,kidney connecting tubule epithelial cell,35.0,female,132,8.92789566915543,0.9590645984653792,primary_adult
+scCv3,Sample1162-EO1,kidney connecting tubule epithelial cell,39.0,male,26,8.800244900199791,0.7751255898423255,primary_adult
+scCv3,Sample1162-EO2,kidney connecting tubule epithelial cell,52.0,male,111,8.795546272920761,0.8801527773203743,primary_adult
+scCv3,PRE018-1,kidney connecting tubule epithelial cell,56.0,male,79,9.290034024109897,1.0354571660790837,all_exact_age
+scCv3,PRE019,kidney connecting tubule epithelial cell,53.0,female,178,8.88494666034238,0.8392680847510863,all_exact_age
+scCv3,PRE027,kidney connecting tubule epithelial cell,31.0,female,109,8.758899650269305,0.6761529862448457,all_exact_age
+scCv3,PRE062-1,kidney connecting tubule epithelial cell,40.0,female,57,9.311659409087683,0.7702122830866567,all_exact_age
+scCv3,PRE98sc,kidney connecting tubule epithelial cell,57.0,female,170,8.394793849218916,0.4710706944158429,all_exact_age
+scCv3,Sample1153-EO1,kidney connecting tubule epithelial cell,35.0,female,152,8.94145731090017,1.0326291904831897,all_exact_age
+scCv3,Sample1153-EO2,kidney connecting tubule epithelial cell,35.0,female,202,8.761906965417563,0.8857207372445985,all_exact_age
+scCv3,Sample1153-EO3,kidney connecting tubule epithelial cell,30.0,female,105,8.81763292885397,1.005810178207432,all_exact_age
+scCv3,Sample1157-EO1,kidney connecting tubule epithelial cell,49.0,male,64,8.682020849372902,0.8243978370584193,all_exact_age
+scCv3,Sample1158-EO2,kidney connecting tubule epithelial cell,56.0,male,32,7.775484260615633,0.8844633338990665,all_exact_age
+scCv3,Sample1158-EO3,kidney connecting tubule epithelial cell,35.0,female,132,8.92789566915543,0.9590645984653792,all_exact_age
+scCv3,Sample1162-EO1,kidney connecting tubule epithelial cell,39.0,male,26,8.800244900199791,0.7751255898423255,all_exact_age
+scCv3,Sample1162-EO2,kidney connecting tubule epithelial cell,52.0,male,111,8.795546272920761,0.8801527773203743,all_exact_age
+scCv3,PRE018-1,kidney distal convoluted tubule epithelial cell,56.0,male,69,9.371875233311554,1.2270513529280618,primary_adult
+scCv3,PRE019,kidney distal convoluted tubule epithelial cell,53.0,female,289,9.124183193383816,0.7189506904893073,primary_adult
+scCv3,PRE027,kidney distal convoluted tubule epithelial cell,31.0,female,232,8.941057875096815,0.5796451991023299,primary_adult
+scCv3,PRE062-1,kidney distal convoluted tubule epithelial cell,40.0,female,62,9.400333047566232,0.6765323733917208,primary_adult
+scCv3,PRE98sc,kidney distal convoluted tubule epithelial cell,57.0,female,83,8.165567329455543,0.3933564053796455,primary_adult
+scCv3,Sample1153-EO1,kidney distal convoluted tubule epithelial cell,35.0,female,100,8.847737329460834,1.0354119686217542,primary_adult
+scCv3,Sample1153-EO2,kidney distal convoluted tubule epithelial cell,35.0,female,103,8.736596245132088,0.9085155015911046,primary_adult
+scCv3,Sample1153-EO3,kidney distal convoluted tubule epithelial cell,30.0,female,91,8.663512214576576,1.3617657350882506,primary_adult
+scCv3,Sample1157-EO1,kidney distal convoluted tubule epithelial cell,49.0,male,95,8.600671490120085,0.5477188739155163,primary_adult
+scCv3,Sample1157-EO2,kidney distal convoluted tubule epithelial cell,41.0,female,48,8.58499783078616,0.4497061380696669,primary_adult
+scCv3,Sample1157-EO3,kidney distal convoluted tubule epithelial cell,47.0,male,20,8.559107620986659,0.4820121561232062,primary_adult
+scCv3,Sample1158-EO3,kidney distal convoluted tubule epithelial cell,35.0,female,97,8.816703593115575,0.845623487190224,primary_adult
+scCv3,Sample1162-EO1,kidney distal convoluted tubule epithelial cell,39.0,male,73,9.033392007354836,0.7697890831050875,primary_adult
+scCv3,Sample1162-EO2,kidney distal convoluted tubule epithelial cell,52.0,male,132,8.63896981685949,0.7225321467201435,primary_adult
+scCv3,PRE018-1,kidney distal convoluted tubule epithelial cell,56.0,male,69,9.371875233311554,1.2270513529280618,all_exact_age
+scCv3,PRE019,kidney distal convoluted tubule epithelial cell,53.0,female,289,9.124183193383816,0.7189506904893073,all_exact_age
+scCv3,PRE027,kidney distal convoluted tubule epithelial cell,31.0,female,232,8.941057875096815,0.5796451991023299,all_exact_age
+scCv3,PRE062-1,kidney distal convoluted tubule epithelial cell,40.0,female,62,9.400333047566232,0.6765323733917208,all_exact_age
+scCv3,PRE98sc,kidney distal convoluted tubule epithelial cell,57.0,female,83,8.165567329455543,0.3933564053796455,all_exact_age
+scCv3,Sample1153-EO1,kidney distal convoluted tubule epithelial cell,35.0,female,100,8.847737329460834,1.0354119686217542,all_exact_age
+scCv3,Sample1153-EO2,kidney distal convoluted tubule epithelial cell,35.0,female,103,8.736596245132088,0.9085155015911046,all_exact_age
+scCv3,Sample1153-EO3,kidney distal convoluted tubule epithelial cell,30.0,female,91,8.663512214576576,1.3617657350882506,all_exact_age
+scCv3,Sample1157-EO1,kidney distal convoluted tubule epithelial cell,49.0,male,95,8.600671490120085,0.5477188739155163,all_exact_age
+scCv3,Sample1157-EO2,kidney distal convoluted tubule epithelial cell,41.0,female,48,8.58499783078616,0.4497061380696669,all_exact_age
+scCv3,Sample1157-EO3,kidney distal convoluted tubule epithelial cell,47.0,male,20,8.559107620986659,0.4820121561232062,all_exact_age
+scCv3,Sample1158-EO3,kidney distal convoluted tubule epithelial cell,35.0,female,97,8.816703593115575,0.845623487190224,all_exact_age
+scCv3,Sample1162-EO1,kidney distal convoluted tubule epithelial cell,39.0,male,73,9.033392007354836,0.7697890831050875,all_exact_age
+scCv3,Sample1162-EO2,kidney distal convoluted tubule epithelial cell,52.0,male,132,8.63896981685949,0.7225321467201435,all_exact_age
+scCv3,PRE018-1,kidney interstitial cell,56.0,male,58,8.100064145975058,0.1443902974293147,primary_adult
+scCv3,PRE019,kidney interstitial cell,53.0,female,239,8.530317877539206,0.2896349839295826,primary_adult
+scCv3,PRE027,kidney interstitial cell,31.0,female,42,8.338556502607709,-0.0102997295872693,primary_adult
+scCv3,PRE038,kidney interstitial cell,42.0,female,110,8.347050475478309,0.0878823508844743,primary_adult
+scCv3,PRE055-1,kidney interstitial cell,66.0,male,42,8.250595542729961,0.2263854409129173,primary_adult
+scCv3,PRE062-1,kidney interstitial cell,40.0,female,74,8.314760168533304,0.0062985120378098,primary_adult
+scCv3,PRE98sc,kidney interstitial cell,57.0,female,46,7.896767710574453,0.0211742370814762,primary_adult
+scCv3,Sample1153-EO1,kidney interstitial cell,35.0,female,36,8.319256036258816,0.2233961780361399,primary_adult
+scCv3,Sample1153-EO2,kidney interstitial cell,35.0,female,44,8.096644577779308,0.0428202365900012,primary_adult
+scCv3,Sample1153-EO3,kidney interstitial cell,30.0,female,56,8.02439988891536,0.1445626822945209,primary_adult
+scCv3,Sample1157-EO1,kidney interstitial cell,49.0,male,85,8.24786443101165,0.1539217846226621,primary_adult
+scCv3,Sample1157-EO2,kidney interstitial cell,41.0,female,29,7.846576302232617,-0.1749908882604642,primary_adult
+scCv3,Sample1158-EO1,kidney interstitial cell,48.0,female,60,8.196789652129114,0.0362223828028118,primary_adult
+scCv3,Sample1158-EO2,kidney interstitial cell,56.0,male,35,7.458700720388451,0.1937669151591601,primary_adult
+scCv3,Sample1158-EO3,kidney interstitial cell,35.0,female,67,8.294582507654676,0.0467836667733916,primary_adult
+scCv3,Sample1162-EO1,kidney interstitial cell,39.0,male,26,8.407219212660873,0.1567896979545062,primary_adult
+scCv3,Sample1162-EO2,kidney interstitial cell,52.0,male,36,8.100704762280394,-0.0903476588940492,primary_adult
+scCv3,PRE018-1,kidney interstitial cell,56.0,male,58,8.100064145975058,0.1443902974293147,all_exact_age
+scCv3,PRE019,kidney interstitial cell,53.0,female,239,8.530317877539206,0.2896349839295826,all_exact_age
+scCv3,PRE027,kidney interstitial cell,31.0,female,42,8.338556502607709,-0.0102997295872693,all_exact_age
+scCv3,PRE038,kidney interstitial cell,42.0,female,110,8.347050475478309,0.0878823508844743,all_exact_age
+scCv3,PRE055-1,kidney interstitial cell,66.0,male,42,8.250595542729961,0.2263854409129173,all_exact_age
+scCv3,PRE062-1,kidney interstitial cell,40.0,female,74,8.314760168533304,0.0062985120378098,all_exact_age
+scCv3,PRE98sc,kidney interstitial cell,57.0,female,46,7.896767710574453,0.0211742370814762,all_exact_age
+scCv3,Sample1153-EO1,kidney interstitial cell,35.0,female,36,8.319256036258816,0.2233961780361399,all_exact_age
+scCv3,Sample1153-EO2,kidney interstitial cell,35.0,female,44,8.096644577779308,0.0428202365900012,all_exact_age
+scCv3,Sample1153-EO3,kidney interstitial cell,30.0,female,56,8.02439988891536,0.1445626822945209,all_exact_age
+scCv3,Sample1157-EO1,kidney interstitial cell,49.0,male,85,8.24786443101165,0.1539217846226621,all_exact_age
+scCv3,Sample1157-EO2,kidney interstitial cell,41.0,female,29,7.846576302232617,-0.1749908882604642,all_exact_age
+scCv3,Sample1158-EO1,kidney interstitial cell,48.0,female,60,8.196789652129114,0.0362223828028118,all_exact_age
+scCv3,Sample1158-EO2,kidney interstitial cell,56.0,male,35,7.458700720388451,0.1937669151591601,all_exact_age
+scCv3,Sample1158-EO3,kidney interstitial cell,35.0,female,67,8.294582507654676,0.0467836667733916,all_exact_age
+scCv3,Sample1162-EO1,kidney interstitial cell,39.0,male,26,8.407219212660873,0.1567896979545062,all_exact_age
+scCv3,Sample1162-EO2,kidney interstitial cell,52.0,male,36,8.100704762280394,-0.0903476588940492,all_exact_age
+scCv3,PRE018-1,kidney loop of Henle thick ascending limb epithelial cell,56.0,male,139,9.331631764961392,1.2102403423123755,primary_adult
+scCv3,PRE019,kidney loop of Henle thick ascending limb epithelial cell,53.0,female,445,9.113700752020153,0.9484553412513465,primary_adult
+scCv3,PRE027,kidney loop of Henle thick ascending limb epithelial cell,31.0,female,108,8.864256248601727,0.6336693011726231,primary_adult
+scCv3,PRE038,kidney loop of Henle thick ascending limb epithelial cell,42.0,female,173,8.694248361477667,0.4380445770990278,primary_adult
+scCv3,PRE055-1,kidney loop of Henle thick ascending limb epithelial cell,66.0,male,55,9.492342261874525,1.059414408349371,primary_adult
+scCv3,PRE062-1,kidney loop of Henle thick ascending limb epithelial cell,40.0,female,53,9.368301509369594,0.7714014710248966,primary_adult
+scCv3,PRE98sc,kidney loop of Henle thick ascending limb epithelial cell,57.0,female,153,8.429770084159939,0.4556872146462783,primary_adult
+scCv3,Sample1153-EO1,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,45,8.990146730161603,1.1070113264568258,primary_adult
+scCv3,Sample1153-EO2,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,75,8.950977838543057,1.0516913172403974,primary_adult
+scCv3,Sample1153-EO3,kidney loop of Henle thick ascending limb epithelial cell,30.0,female,243,8.957927144602824,1.332389238207289,primary_adult
+scCv3,Sample1157-EO1,kidney loop of Henle thick ascending limb epithelial cell,49.0,male,94,8.874837193112162,0.7108707390440276,primary_adult
+scCv3,Sample1157-EO2,kidney loop of Henle thick ascending limb epithelial cell,41.0,female,381,8.586839502361197,0.5684141458736149,primary_adult
+scCv3,Sample1157-EO3,kidney loop of Henle thick ascending limb epithelial cell,47.0,male,250,8.916286949358646,0.5689052026912149,primary_adult
+scCv3,Sample1158-EO1,kidney loop of Henle thick ascending limb epithelial cell,48.0,female,246,8.962072015664125,1.1367395596157155,primary_adult
+scCv3,Sample1158-EO2,kidney loop of Henle thick ascending limb epithelial cell,56.0,male,447,7.997686507111557,0.8492836631625762,primary_adult
+scCv3,Sample1158-EO3,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,163,8.696996355055735,0.8853663126348987,primary_adult
+scCv3,Sample1162-EO1,kidney loop of Henle thick ascending limb epithelial cell,39.0,male,160,8.83593871541734,0.634518585212174,primary_adult
+scCv3,Sample1162-EO2,kidney loop of Henle thick ascending limb epithelial cell,52.0,male,235,8.801143192112232,0.8104302872461633,primary_adult
+scCv3,PRE018-1,kidney loop of Henle thick ascending limb epithelial cell,56.0,male,139,9.331631764961392,1.2102403423123755,all_exact_age
+scCv3,PRE019,kidney loop of Henle thick ascending limb epithelial cell,53.0,female,445,9.113700752020153,0.9484553412513465,all_exact_age
+scCv3,PRE027,kidney loop of Henle thick ascending limb epithelial cell,31.0,female,108,8.864256248601727,0.6336693011726231,all_exact_age
+scCv3,PRE038,kidney loop of Henle thick ascending limb epithelial cell,42.0,female,173,8.694248361477667,0.4380445770990278,all_exact_age
+scCv3,PRE055-1,kidney loop of Henle thick ascending limb epithelial cell,66.0,male,55,9.492342261874525,1.059414408349371,all_exact_age
+scCv3,PRE062-1,kidney loop of Henle thick ascending limb epithelial cell,40.0,female,53,9.368301509369594,0.7714014710248966,all_exact_age
+scCv3,PRE98sc,kidney loop of Henle thick ascending limb epithelial cell,57.0,female,153,8.429770084159939,0.4556872146462783,all_exact_age
+scCv3,Sample1153-EO1,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,45,8.990146730161603,1.1070113264568258,all_exact_age
+scCv3,Sample1153-EO2,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,75,8.950977838543057,1.0516913172403974,all_exact_age
+scCv3,Sample1153-EO3,kidney loop of Henle thick ascending limb epithelial cell,30.0,female,243,8.957927144602824,1.332389238207289,all_exact_age
+scCv3,Sample1157-EO1,kidney loop of Henle thick ascending limb epithelial cell,49.0,male,94,8.874837193112162,0.7108707390440276,all_exact_age
+scCv3,Sample1157-EO2,kidney loop of Henle thick ascending limb epithelial cell,41.0,female,381,8.586839502361197,0.5684141458736149,all_exact_age
+scCv3,Sample1157-EO3,kidney loop of Henle thick ascending limb epithelial cell,47.0,male,250,8.916286949358646,0.5689052026912149,all_exact_age
+scCv3,Sample1158-EO1,kidney loop of Henle thick ascending limb epithelial cell,48.0,female,246,8.962072015664125,1.1367395596157155,all_exact_age
+scCv3,Sample1158-EO2,kidney loop of Henle thick ascending limb epithelial cell,56.0,male,447,7.997686507111557,0.8492836631625762,all_exact_age
+scCv3,Sample1158-EO3,kidney loop of Henle thick ascending limb epithelial cell,35.0,female,163,8.696996355055735,0.8853663126348987,all_exact_age
+scCv3,Sample1162-EO1,kidney loop of Henle thick ascending limb epithelial cell,39.0,male,160,8.83593871541734,0.634518585212174,all_exact_age
+scCv3,Sample1162-EO2,kidney loop of Henle thick ascending limb epithelial cell,52.0,male,235,8.801143192112232,0.8104302872461633,all_exact_age
+snCv3,3535,T cell,76.0,male,533,6.9338815886591245,0.02734202774751282,primary_adult
+snCv3,3593,T cell,66.0,male,31,7.5889156913603655,0.06404383252110157,primary_adult
+snCv3,3613,T cell,59.0,female,42,7.5062588855771635,-0.017688851129441296,primary_adult
+snCv3,KRP446,T cell,29.0,male,35,7.001034423188092,0.013702570350802523,primary_adult
+snCv3,KRP460,T cell,63.0,female,282,7.1363511095748375,0.03188261239845097,primary_adult
+snCv3,KRP462,T cell,69.0,female,85,7.057894608715768,0.19431440736466088,primary_adult
+snCv3,3535,T cell,76.0,male,533,6.9338815886591245,0.02734202774751282,all_exact_age
+snCv3,3593,T cell,66.0,male,31,7.5889156913603655,0.06404383252110157,all_exact_age
+snCv3,3613,T cell,59.0,female,42,7.5062588855771635,-0.017688851129441296,all_exact_age
+snCv3,KRP446,T cell,29.0,male,35,7.001034423188092,0.013702570350802523,all_exact_age
+snCv3,KRP460,T cell,63.0,female,282,7.1363511095748375,0.03188261239845097,all_exact_age
+snCv3,KRP462,T cell,69.0,female,85,7.057894608715768,0.19431440736466088,all_exact_age
+snCv3,3499,endothelial cell,57.0,female,180,8.292445094556681,-0.11478139674726662,primary_adult
+snCv3,3504,endothelial cell,45.0,female,420,8.583784358950842,-0.05730065140648466,primary_adult
+snCv3,3535,endothelial cell,76.0,male,1586,7.664962463732628,-0.14733254559411013,primary_adult
+snCv3,3593,endothelial cell,66.0,male,1537,7.879637941475482,-0.2096534526991124,primary_adult
+snCv3,3613,endothelial cell,59.0,female,1034,7.841094755261154,-0.1168227083608131,primary_adult
+snCv3,KRP446,endothelial cell,29.0,male,208,7.373107765798578,-0.1314411149575161,primary_adult
+snCv3,KRP460,endothelial cell,63.0,female,778,7.558128879953733,-0.02598010317437882,primary_adult
+snCv3,KRP461,endothelial cell,54.0,male,73,7.496081564508891,0.03989986958413505,primary_adult
+snCv3,KRP462,endothelial cell,69.0,female,599,7.76305508809302,0.14306114228240452,primary_adult
+snCv3,3490,endothelial cell,14.0,female,254,7.670274420342291,-0.0964047612721971,all_exact_age
+snCv3,3499,endothelial cell,57.0,female,180,8.292445094556681,-0.11478139674726662,all_exact_age
+snCv3,3504,endothelial cell,45.0,female,420,8.583784358950842,-0.05730065140648466,all_exact_age
+snCv3,3535,endothelial cell,76.0,male,1586,7.664962463732628,-0.14733254559411013,all_exact_age
+snCv3,3593,endothelial cell,66.0,male,1537,7.879637941475482,-0.2096534526991124,all_exact_age
+snCv3,3613,endothelial cell,59.0,female,1034,7.841094755261154,-0.1168227083608131,all_exact_age
+snCv3,KRP446,endothelial cell,29.0,male,208,7.373107765798578,-0.1314411149575161,all_exact_age
+snCv3,KRP460,endothelial cell,63.0,female,778,7.558128879953733,-0.02598010317437882,all_exact_age
+snCv3,KRP461,endothelial cell,54.0,male,73,7.496081564508891,0.03989986958413505,all_exact_age
+snCv3,KRP462,endothelial cell,69.0,female,599,7.76305508809302,0.14306114228240452,all_exact_age
+snCv3,3499,epithelial cell of proximal tubule,57.0,female,129,8.168447761476509,0.10004981652798794,primary_adult
+snCv3,3504,epithelial cell of proximal tubule,45.0,female,275,7.818167056328734,-0.18378331182735852,primary_adult
+snCv3,3535,epithelial cell of proximal tubule,76.0,male,5237,7.6086122903395275,-0.2089230074172691,primary_adult
+snCv3,3593,epithelial cell of proximal tubule,66.0,male,399,7.264621287499718,-0.022407767963602887,primary_adult
+snCv3,3613,epithelial cell of proximal tubule,59.0,female,173,7.048232677615047,0.191837441200006,primary_adult
+snCv3,KRP446,epithelial cell of proximal tubule,29.0,male,2190,7.789451612779032,-0.26200154206793713,primary_adult
+snCv3,KRP460,epithelial cell of proximal tubule,63.0,female,1711,7.66222928223577,-0.1444799200425696,primary_adult
+snCv3,KRP461,epithelial cell of proximal tubule,54.0,male,922,7.628680596006858,-0.2001567744925522,primary_adult
+snCv3,KRP462,epithelial cell of proximal tubule,69.0,female,1151,7.917882834090742,0.08246556408458272,primary_adult
+snCv3,3499,epithelial cell of proximal tubule,57.0,female,129,8.168447761476509,0.10004981652798794,all_exact_age
+snCv3,3504,epithelial cell of proximal tubule,45.0,female,275,7.818167056328734,-0.18378331182735852,all_exact_age
+snCv3,3535,epithelial cell of proximal tubule,76.0,male,5237,7.6086122903395275,-0.2089230074172691,all_exact_age
+snCv3,3593,epithelial cell of proximal tubule,66.0,male,399,7.264621287499718,-0.022407767963602887,all_exact_age
+snCv3,3613,epithelial cell of proximal tubule,59.0,female,173,7.048232677615047,0.191837441200006,all_exact_age
+snCv3,KRP446,epithelial cell of proximal tubule,29.0,male,2190,7.789451612779032,-0.26200154206793713,all_exact_age
+snCv3,KRP460,epithelial cell of proximal tubule,63.0,female,1711,7.66222928223577,-0.1444799200425696,all_exact_age
+snCv3,KRP461,epithelial cell of proximal tubule,54.0,male,922,7.628680596006858,-0.2001567744925522,all_exact_age
+snCv3,KRP462,epithelial cell of proximal tubule,69.0,female,1151,7.917882834090742,0.08246556408458272,all_exact_age
+snCv3,3499,kidney collecting duct intercalated cell,57.0,female,23,8.94623105374218,0.09799475269041225,primary_adult
+snCv3,3504,kidney collecting duct intercalated cell,45.0,female,200,9.178836012053118,0.15058669400328695,primary_adult
+snCv3,3535,kidney collecting duct intercalated cell,76.0,male,1784,8.188093131784706,-0.04027262192466874,primary_adult
+snCv3,3593,kidney collecting duct intercalated cell,66.0,male,204,8.53788704034898,-0.03682128662266093,primary_adult
+snCv3,3613,kidney collecting duct intercalated cell,59.0,female,123,8.56467910209057,-0.008227038171187306,primary_adult
+snCv3,KRP446,kidney collecting duct intercalated cell,29.0,male,411,8.16595401463401,0.004014470125043301,primary_adult
+snCv3,KRP460,kidney collecting duct intercalated cell,63.0,female,501,8.168765279116649,-0.054690491190746426,primary_adult
+snCv3,KRP461,kidney collecting duct intercalated cell,54.0,male,209,8.403164384944374,0.09912295413631123,primary_adult
+snCv3,KRP462,kidney collecting duct intercalated cell,69.0,female,158,8.084550512567118,0.12916225210883014,primary_adult
+snCv3,3490,kidney collecting duct intercalated cell,14.0,female,66,8.303295235623827,0.1824965451118059,all_exact_age
+snCv3,3499,kidney collecting duct intercalated cell,57.0,female,23,8.94623105374218,0.09799475269041225,all_exact_age
+snCv3,3504,kidney collecting duct intercalated cell,45.0,female,200,9.178836012053118,0.15058669400328695,all_exact_age
+snCv3,3535,kidney collecting duct intercalated cell,76.0,male,1784,8.188093131784706,-0.04027262192466874,all_exact_age
+snCv3,3593,kidney collecting duct intercalated cell,66.0,male,204,8.53788704034898,-0.03682128662266093,all_exact_age
+snCv3,3613,kidney collecting duct intercalated cell,59.0,female,123,8.56467910209057,-0.008227038171187306,all_exact_age
+snCv3,KRP446,kidney collecting duct intercalated cell,29.0,male,411,8.16595401463401,0.004014470125043301,all_exact_age
+snCv3,KRP460,kidney collecting duct intercalated cell,63.0,female,501,8.168765279116649,-0.054690491190746426,all_exact_age
+snCv3,KRP461,kidney collecting duct intercalated cell,54.0,male,209,8.403164384944374,0.09912295413631123,all_exact_age
+snCv3,KRP462,kidney collecting duct intercalated cell,69.0,female,158,8.084550512567118,0.12916225210883014,all_exact_age
+snCv3,3499,kidney collecting duct principal cell,57.0,female,155,8.845964086558295,0.06385578648615542,primary_adult
+snCv3,3504,kidney collecting duct principal cell,45.0,female,238,9.255835047478412,0.11438605844902905,primary_adult
+snCv3,3535,kidney collecting duct principal cell,76.0,male,1222,8.318302378655469,0.055645317429643626,primary_adult
+snCv3,3593,kidney collecting duct principal cell,66.0,male,2048,8.782341066488394,0.06904158388175785,primary_adult
+snCv3,3613,kidney collecting duct principal cell,59.0,female,1386,8.509775240332175,-0.028425927999985445,primary_adult
+snCv3,KRP446,kidney collecting duct principal cell,29.0,male,216,8.57525731194342,0.2562226183557428,primary_adult
+snCv3,KRP460,kidney collecting duct principal cell,63.0,female,3281,8.49254777844626,0.4001314574569933,primary_adult
+snCv3,KRP461,kidney collecting duct principal cell,54.0,male,45,8.595247558342786,0.2688869698135945,primary_adult
+snCv3,KRP462,kidney collecting duct principal cell,69.0,female,544,8.63013683018032,0.7831413251274268,primary_adult
+snCv3,3490,kidney collecting duct principal cell,14.0,female,142,8.25709857109834,0.24527224888344223,all_exact_age
+snCv3,3499,kidney collecting duct principal cell,57.0,female,155,8.845964086558295,0.06385578648615542,all_exact_age
+snCv3,3504,kidney collecting duct principal cell,45.0,female,238,9.255835047478412,0.11438605844902905,all_exact_age
+snCv3,3535,kidney collecting duct principal cell,76.0,male,1222,8.318302378655469,0.055645317429643626,all_exact_age
+snCv3,3593,kidney collecting duct principal cell,66.0,male,2048,8.782341066488394,0.06904158388175785,all_exact_age
+snCv3,3613,kidney collecting duct principal cell,59.0,female,1386,8.509775240332175,-0.028425927999985445,all_exact_age
+snCv3,KRP446,kidney collecting duct principal cell,29.0,male,216,8.57525731194342,0.2562226183557428,all_exact_age
+snCv3,KRP460,kidney collecting duct principal cell,63.0,female,3281,8.49254777844626,0.4001314574569933,all_exact_age
+snCv3,KRP461,kidney collecting duct principal cell,54.0,male,45,8.595247558342786,0.2688869698135945,all_exact_age
+snCv3,KRP462,kidney collecting duct principal cell,69.0,female,544,8.63013683018032,0.7831413251274268,all_exact_age
+snCv3,3535,kidney connecting tubule epithelial cell,76.0,male,1338,8.155357839137773,-0.036074178368351695,primary_adult
+snCv3,3593,kidney connecting tubule epithelial cell,66.0,male,32,8.342136023538801,-0.24623038851079482,primary_adult
+snCv3,KRP446,kidney connecting tubule epithelial cell,29.0,male,357,8.32034615909035,-0.004180901450952845,primary_adult
+snCv3,KRP460,kidney connecting tubule epithelial cell,63.0,female,399,8.397680085059879,-0.0836181289851774,primary_adult
+snCv3,KRP461,kidney connecting tubule epithelial cell,54.0,male,236,8.417667887137304,0.2091542479759081,primary_adult
+snCv3,KRP462,kidney connecting tubule epithelial cell,69.0,female,123,8.111126282376732,0.2906986388133751,primary_adult
+snCv3,3535,kidney connecting tubule epithelial cell,76.0,male,1338,8.155357839137773,-0.036074178368351695,all_exact_age
+snCv3,3593,kidney connecting tubule epithelial cell,66.0,male,32,8.342136023538801,-0.24623038851079482,all_exact_age
+snCv3,KRP446,kidney connecting tubule epithelial cell,29.0,male,357,8.32034615909035,-0.004180901450952845,all_exact_age
+snCv3,KRP460,kidney connecting tubule epithelial cell,63.0,female,399,8.397680085059879,-0.0836181289851774,all_exact_age
+snCv3,KRP461,kidney connecting tubule epithelial cell,54.0,male,236,8.417667887137304,0.2091542479759081,all_exact_age
+snCv3,KRP462,kidney connecting tubule epithelial cell,69.0,female,123,8.111126282376732,0.2906986388133751,all_exact_age
+snCv3,3499,kidney interstitial alternatively activated macrophage,57.0,female,22,8.10053344858212,0.012001290259423203,primary_adult
+snCv3,3535,kidney interstitial alternatively activated macrophage,76.0,male,313,7.15366992816081,0.09594579029678141,primary_adult
+snCv3,3593,kidney interstitial alternatively activated macrophage,66.0,male,115,7.743209446658272,0.08970513204412678,primary_adult
+snCv3,3613,kidney interstitial alternatively activated macrophage,59.0,female,111,7.787405706131831,0.09523826322960571,primary_adult
+snCv3,KRP446,kidney interstitial alternatively activated macrophage,29.0,male,39,7.361992325844733,0.12633923005417325,primary_adult
+snCv3,KRP460,kidney interstitial alternatively activated macrophage,63.0,female,164,7.482030826634766,0.22891293516003963,primary_adult
+snCv3,KRP462,kidney interstitial alternatively activated macrophage,69.0,female,47,7.297854790494151,0.24323040194062107,primary_adult
+snCv3,3490,kidney interstitial alternatively activated macrophage,14.0,female,70,7.480238881239862,-0.02780780796128901,all_exact_age
+snCv3,3499,kidney interstitial alternatively activated macrophage,57.0,female,22,8.10053344858212,0.012001290259423203,all_exact_age
+snCv3,3535,kidney interstitial alternatively activated macrophage,76.0,male,313,7.15366992816081,0.09594579029678141,all_exact_age
+snCv3,3593,kidney interstitial alternatively activated macrophage,66.0,male,115,7.743209446658272,0.08970513204412678,all_exact_age
+snCv3,3613,kidney interstitial alternatively activated macrophage,59.0,female,111,7.787405706131831,0.09523826322960571,all_exact_age
+snCv3,KRP446,kidney interstitial alternatively activated macrophage,29.0,male,39,7.361992325844733,0.12633923005417325,all_exact_age
+snCv3,KRP460,kidney interstitial alternatively activated macrophage,63.0,female,164,7.482030826634766,0.22891293516003963,all_exact_age
+snCv3,KRP462,kidney interstitial alternatively activated macrophage,69.0,female,47,7.297854790494151,0.24323040194062107,all_exact_age
+snCv3,3499,kidney interstitial fibroblast,57.0,female,147,8.385432228092931,-0.322146984649624,primary_adult
+snCv3,3504,kidney interstitial fibroblast,45.0,female,199,8.473116614002027,-0.19078529389859078,primary_adult
+snCv3,3535,kidney interstitial fibroblast,76.0,male,1219,7.6756797421609875,-0.17828261891362884,primary_adult
+snCv3,3593,kidney interstitial fibroblast,66.0,male,2079,8.061216702590832,-0.35435828579916817,primary_adult
+snCv3,3613,kidney interstitial fibroblast,59.0,female,1672,7.767374619295213,-0.23639139609853999,primary_adult
+snCv3,KRP446,kidney interstitial fibroblast,29.0,male,80,7.393573889910089,-0.19941066766920545,primary_adult
+snCv3,KRP460,kidney interstitial fibroblast,63.0,female,899,7.385902111012076,-0.05786052849138812,primary_adult
+snCv3,KRP462,kidney interstitial fibroblast,69.0,female,114,7.962286206911736,0.16165048591275966,primary_adult
+snCv3,3490,kidney interstitial fibroblast,14.0,female,232,7.5089444732630675,-0.4318463546243203,all_exact_age
+snCv3,3499,kidney interstitial fibroblast,57.0,female,147,8.385432228092931,-0.322146984649624,all_exact_age
+snCv3,3504,kidney interstitial fibroblast,45.0,female,199,8.473116614002027,-0.19078529389859078,all_exact_age
+snCv3,3535,kidney interstitial fibroblast,76.0,male,1219,7.6756797421609875,-0.17828261891362884,all_exact_age
+snCv3,3593,kidney interstitial fibroblast,66.0,male,2079,8.061216702590832,-0.35435828579916817,all_exact_age
+snCv3,3613,kidney interstitial fibroblast,59.0,female,1672,7.767374619295213,-0.23639139609853999,all_exact_age
+snCv3,KRP446,kidney interstitial fibroblast,29.0,male,80,7.393573889910089,-0.19941066766920545,all_exact_age
+snCv3,KRP460,kidney interstitial fibroblast,63.0,female,899,7.385902111012076,-0.05786052849138812,all_exact_age
+snCv3,KRP462,kidney interstitial fibroblast,69.0,female,114,7.962286206911736,0.16165048591275966,all_exact_age
+snCv3,3499,kidney loop of Henle thick ascending limb epithelial cell,57.0,female,392,8.854233142374268,0.10244063641980972,primary_adult
+snCv3,3504,kidney loop of Henle thick ascending limb epithelial cell,45.0,female,537,8.571543398265508,0.1347066663209452,primary_adult
+snCv3,3535,kidney loop of Henle thick ascending limb epithelial cell,76.0,male,4078,8.115531958575591,-0.06053277185511763,primary_adult
+snCv3,3593,kidney loop of Henle thick ascending limb epithelial cell,66.0,male,2291,8.336458395272553,-0.08543226889503852,primary_adult
+snCv3,3613,kidney loop of Henle thick ascending limb epithelial cell,59.0,female,411,8.255098493436703,0.12388067250787105,primary_adult
+snCv3,KRP446,kidney loop of Henle thick ascending limb epithelial cell,29.0,male,441,8.071263816733786,-0.16384237581163863,primary_adult
+snCv3,KRP460,kidney loop of Henle thick ascending limb epithelial cell,63.0,female,679,8.048832732622275,0.08420395583338636,primary_adult
+snCv3,KRP461,kidney loop of Henle thick ascending limb epithelial cell,54.0,male,50,8.021440251550132,0.024271566845121995,primary_adult
+snCv3,KRP462,kidney loop of Henle thick ascending limb epithelial cell,69.0,female,989,8.078196277794628,0.2424281386777164,primary_adult
+snCv3,3490,kidney loop of Henle thick ascending limb epithelial cell,14.0,female,1000,8.025273812969212,0.08330483016967782,all_exact_age
+snCv3,3499,kidney loop of Henle thick ascending limb epithelial cell,57.0,female,392,8.854233142374268,0.10244063641980972,all_exact_age
+snCv3,3504,kidney loop of Henle thick ascending limb epithelial cell,45.0,female,537,8.571543398265508,0.1347066663209452,all_exact_age
+snCv3,3535,kidney loop of Henle thick ascending limb epithelial cell,76.0,male,4078,8.115531958575591,-0.06053277185511763,all_exact_age
+snCv3,3593,kidney loop of Henle thick ascending limb epithelial cell,66.0,male,2291,8.336458395272553,-0.08543226889503852,all_exact_age
+snCv3,3613,kidney loop of Henle thick ascending limb epithelial cell,59.0,female,411,8.255098493436703,0.12388067250787105,all_exact_age
+snCv3,KRP446,kidney loop of Henle thick ascending limb epithelial cell,29.0,male,441,8.071263816733786,-0.16384237581163863,all_exact_age
+snCv3,KRP460,kidney loop of Henle thick ascending limb epithelial cell,63.0,female,679,8.048832732622275,0.08420395583338636,all_exact_age
+snCv3,KRP461,kidney loop of Henle thick ascending limb epithelial cell,54.0,male,50,8.021440251550132,0.024271566845121995,all_exact_age
+snCv3,KRP462,kidney loop of Henle thick ascending limb epithelial cell,69.0,female,989,8.078196277794628,0.2424281386777164,all_exact_age
+snCv3,3504,kidney loop of Henle thin ascending limb epithelial cell,45.0,female,92,9.057364621865878,0.32435914167212654,primary_adult
+snCv3,3535,kidney loop of Henle thin ascending limb epithelial cell,76.0,male,91,8.104008979916209,0.09948958103473338,primary_adult
+snCv3,3593,kidney loop of Henle thin ascending limb epithelial cell,66.0,male,989,8.503704267661742,0.29123657054553054,primary_adult
+snCv3,3613,kidney loop of Henle thin ascending limb epithelial cell,59.0,female,661,8.159251751193635,0.08451969130239634,primary_adult
+snCv3,KRP446,kidney loop of Henle thin ascending limb epithelial cell,29.0,male,32,8.205240062052265,0.45609626761504585,primary_adult
+snCv3,KRP460,kidney loop of Henle thin ascending limb epithelial cell,63.0,female,919,8.265553812287758,0.521811736296036,primary_adult
+snCv3,KRP462,kidney loop of Henle thin ascending limb epithelial cell,69.0,female,61,8.996236326464723,0.9069839330430518,primary_adult
+snCv3,3504,kidney loop of Henle thin ascending limb epithelial cell,45.0,female,92,9.057364621865878,0.32435914167212654,all_exact_age
+snCv3,3535,kidney loop of Henle thin ascending limb epithelial cell,76.0,male,91,8.104008979916209,0.09948958103473338,all_exact_age
+snCv3,3593,kidney loop of Henle thin ascending limb epithelial cell,66.0,male,989,8.503704267661742,0.29123657054553054,all_exact_age
+snCv3,3613,kidney loop of Henle thin ascending limb epithelial cell,59.0,female,661,8.159251751193635,0.08451969130239634,all_exact_age
+snCv3,KRP446,kidney loop of Henle thin ascending limb epithelial cell,29.0,male,32,8.205240062052265,0.45609626761504585,all_exact_age
+snCv3,KRP460,kidney loop of Henle thin ascending limb epithelial cell,63.0,female,919,8.265553812287758,0.521811736296036,all_exact_age
+snCv3,KRP462,kidney loop of Henle thin ascending limb epithelial cell,69.0,female,61,8.996236326464723,0.9069839330430518,all_exact_age
+snCv3,3499,kidney loop of Henle thin descending limb epithelial cell,57.0,female,164,8.37678572872234,0.050492476699798394,primary_adult
+snCv3,3504,kidney loop of Henle thin descending limb epithelial cell,45.0,female,288,8.864859370639955,0.19441953209657525,primary_adult
+snCv3,3535,kidney loop of Henle thin descending limb epithelial cell,76.0,male,439,8.120047139983512,0.032692055587901114,primary_adult
+snCv3,3593,kidney loop of Henle thin descending limb epithelial cell,66.0,male,1287,8.059255539950598,0.03717348523068853,primary_adult
+snCv3,3613,kidney loop of Henle thin descending limb epithelial cell,59.0,female,402,8.122277154515103,0.023445678411346704,primary_adult
+snCv3,KRP446,kidney loop of Henle thin descending limb epithelial cell,29.0,male,50,8.12680584781794,0.28130735693431996,primary_adult
+snCv3,KRP460,kidney loop of Henle thin descending limb epithelial cell,63.0,female,356,8.142065436527622,0.37049539902747297,primary_adult
+snCv3,KRP462,kidney loop of Henle thin descending limb epithelial cell,69.0,female,498,8.735197389247977,0.6339022209056593,primary_adult
+snCv3,3490,kidney loop of Henle thin descending limb epithelial cell,14.0,female,394,7.706514707810173,0.11027002225903049,all_exact_age
+snCv3,3499,kidney loop of Henle thin descending limb epithelial cell,57.0,female,164,8.37678572872234,0.050492476699798394,all_exact_age
+snCv3,3504,kidney loop of Henle thin descending limb epithelial cell,45.0,female,288,8.864859370639955,0.19441953209657525,all_exact_age
+snCv3,3535,kidney loop of Henle thin descending limb epithelial cell,76.0,male,439,8.120047139983512,0.032692055587901114,all_exact_age
+snCv3,3593,kidney loop of Henle thin descending limb epithelial cell,66.0,male,1287,8.059255539950598,0.03717348523068853,all_exact_age
+snCv3,3613,kidney loop of Henle thin descending limb epithelial cell,59.0,female,402,8.122277154515103,0.023445678411346704,all_exact_age
+snCv3,KRP446,kidney loop of Henle thin descending limb epithelial cell,29.0,male,50,8.12680584781794,0.28130735693431996,all_exact_age
+snCv3,KRP460,kidney loop of Henle thin descending limb epithelial cell,63.0,female,356,8.142065436527622,0.37049539902747297,all_exact_age
+snCv3,KRP462,kidney loop of Henle thin descending limb epithelial cell,69.0,female,498,8.735197389247977,0.6339022209056593,all_exact_age
+snCv3,3535,mononuclear phagocyte,76.0,male,307,7.2774218746205275,0.08155514290485533,primary_adult
+snCv3,3593,mononuclear phagocyte,66.0,male,83,7.717822796107079,0.11298604247355282,primary_adult
+snCv3,3613,mononuclear phagocyte,59.0,female,42,7.943645528437677,0.005876856801731556,primary_adult
+snCv3,KRP446,mononuclear phagocyte,29.0,male,28,7.269817121785681,0.05266676672461923,primary_adult
+snCv3,KRP460,mononuclear phagocyte,63.0,female,99,7.569095649747621,0.2033377763042663,primary_adult
+snCv3,KRP462,mononuclear phagocyte,69.0,female,33,7.47519334854788,0.2524047016099763,primary_adult
+snCv3,3535,mononuclear phagocyte,76.0,male,307,7.2774218746205275,0.08155514290485533,all_exact_age
+snCv3,3593,mononuclear phagocyte,66.0,male,83,7.717822796107079,0.11298604247355282,all_exact_age
+snCv3,3613,mononuclear phagocyte,59.0,female,42,7.943645528437677,0.005876856801731556,all_exact_age
+snCv3,KRP446,mononuclear phagocyte,29.0,male,28,7.269817121785681,0.05266676672461923,all_exact_age
+snCv3,KRP460,mononuclear phagocyte,63.0,female,99,7.569095649747621,0.2033377763042663,all_exact_age
+snCv3,KRP462,mononuclear phagocyte,69.0,female,33,7.47519334854788,0.2524047016099763,all_exact_age
+snCv3,3499,renal interstitial pericyte,57.0,female,35,7.989207651769269,-0.1486644789896855,primary_adult
+snCv3,3504,renal interstitial pericyte,45.0,female,90,8.230833901510945,-0.15911706335077913,primary_adult
+snCv3,3535,renal interstitial pericyte,76.0,male,339,7.4891606412109715,-0.1466916422395831,primary_adult
+snCv3,3593,renal interstitial pericyte,66.0,male,243,7.640128931043195,-0.3595601391516644,primary_adult
+snCv3,3613,renal interstitial pericyte,59.0,female,177,7.916189949821795,-0.2880965820858479,primary_adult
+snCv3,KRP446,renal interstitial pericyte,29.0,male,25,7.393670666520149,-0.1310294784545898,primary_adult
+snCv3,KRP460,renal interstitial pericyte,63.0,female,71,7.545427463637095,-0.02826259307298451,primary_adult
+snCv3,KRP462,renal interstitial pericyte,69.0,female,110,7.59629960925788,0.15512905126835907,primary_adult
+snCv3,3499,renal interstitial pericyte,57.0,female,35,7.989207651769269,-0.1486644789896855,all_exact_age
+snCv3,3504,renal interstitial pericyte,45.0,female,90,8.230833901510945,-0.15911706335077913,all_exact_age
+snCv3,3535,renal interstitial pericyte,76.0,male,339,7.4891606412109715,-0.1466916422395831,all_exact_age
+snCv3,3593,renal interstitial pericyte,66.0,male,243,7.640128931043195,-0.3595601391516644,all_exact_age
+snCv3,3613,renal interstitial pericyte,59.0,female,177,7.916189949821795,-0.2880965820858479,all_exact_age
+snCv3,KRP446,renal interstitial pericyte,29.0,male,25,7.393670666520149,-0.1310294784545898,all_exact_age
+snCv3,KRP460,renal interstitial pericyte,63.0,female,71,7.545427463637095,-0.02826259307298451,all_exact_age
+snCv3,KRP462,renal interstitial pericyte,69.0,female,110,7.59629960925788,0.15512905126835907,all_exact_age

@@ -1,0 +1,52 @@
+assay_release,cell_type,n_donors_observed,n_donors_ge20,n_cells_total,eligible,reason
+scCv3,B cell,16,1,114,False,fewer_than_six_donors_with_20_cells
+scCv3,T cell,18,8,483,True,pass
+scCv3,conventional dendritic cell,14,0,75,False,fewer_than_six_donors_with_20_cells
+scCv3,cytotoxic T cell,10,1,97,False,fewer_than_six_donors_with_20_cells
+scCv3,endothelial cell,18,18,2504,True,pass
+scCv3,epithelial cell of proximal tubule,18,18,4900,True,pass
+scCv3,kidney collecting duct intercalated cell,18,14,1724,True,pass
+scCv3,kidney collecting duct principal cell,18,17,1922,True,pass
+scCv3,kidney connecting tubule epithelial cell,18,13,1433,True,pass
+scCv3,kidney distal convoluted tubule epithelial cell,17,14,1509,True,pass
+scCv3,kidney interstitial alternatively activated macrophage,12,1,99,False,fewer_than_six_donors_with_20_cells
+scCv3,kidney interstitial cell,18,17,1102,True,pass
+scCv3,kidney loop of Henle thick ascending limb epithelial cell,18,18,3465,True,pass
+scCv3,kidney loop of Henle thin ascending limb epithelial cell,16,3,277,False,fewer_than_six_donors_with_20_cells
+scCv3,kidney loop of Henle thin descending limb epithelial cell,11,0,57,False,fewer_than_six_donors_with_20_cells
+scCv3,mature NK T cell,12,0,36,False,fewer_than_six_donors_with_20_cells
+scCv3,monocyte,11,0,72,False,fewer_than_six_donors_with_20_cells
+scCv3,mononuclear phagocyte,16,5,185,False,fewer_than_six_donors_with_20_cells
+scCv3,natural killer cell,18,1,139,False,fewer_than_six_donors_with_20_cells
+scCv3,non-classical monocyte,8,0,15,False,fewer_than_six_donors_with_20_cells
+scCv3,parietal epithelial cell,16,1,158,False,fewer_than_six_donors_with_20_cells
+scCv3,plasma cell,3,0,4,False,fewer_than_six_donors_with_20_cells
+scCv3,"plasmacytoid dendritic cell, human",3,0,4,False,fewer_than_six_donors_with_20_cells
+scCv3,podocyte,13,2,116,False,fewer_than_six_donors_with_20_cells
+scCv3,regulatory T cell,6,0,7,False,fewer_than_six_donors_with_20_cells
+snCv3,B cell,7,2,304,False,fewer_than_six_donors_with_20_cells
+snCv3,T cell,9,6,1033,True,pass
+snCv3,conventional dendritic cell,3,1,47,False,fewer_than_six_donors_with_20_cells
+snCv3,endothelial cell,9,9,6415,True,pass
+snCv3,epithelial cell of proximal tubule,9,9,12187,True,pass
+snCv3,kidney collecting duct intercalated cell,9,9,3613,True,pass
+snCv3,kidney collecting duct principal cell,9,9,9135,True,pass
+snCv3,kidney connecting tubule epithelial cell,9,6,2518,True,pass
+snCv3,kidney distal convoluted tubule epithelial cell,8,5,2927,False,fewer_than_six_donors_with_20_cells
+snCv3,kidney interstitial alternatively activated macrophage,9,7,834,True,pass
+snCv3,kidney interstitial fibroblast,9,8,6417,True,pass
+snCv3,kidney loop of Henle thick ascending limb epithelial cell,9,9,9868,True,pass
+snCv3,kidney loop of Henle thin ascending limb epithelial cell,8,7,2853,True,pass
+snCv3,kidney loop of Henle thin descending limb epithelial cell,8,8,3484,True,pass
+snCv3,mast cell,7,3,91,False,fewer_than_six_donors_with_20_cells
+snCv3,mature NK T cell,8,3,115,False,fewer_than_six_donors_with_20_cells
+snCv3,mononuclear phagocyte,9,6,610,True,pass
+snCv3,neural cell,6,0,27,False,fewer_than_six_donors_with_20_cells
+snCv3,neutrophil,8,1,45,False,fewer_than_six_donors_with_20_cells
+snCv3,non-classical monocyte,9,1,84,False,fewer_than_six_donors_with_20_cells
+snCv3,papillary tips cell,6,3,321,False,fewer_than_six_donors_with_20_cells
+snCv3,parietal epithelial cell,8,5,330,False,fewer_than_six_donors_with_20_cells
+snCv3,plasma cell,8,1,92,False,fewer_than_six_donors_with_20_cells
+snCv3,"plasmacytoid dendritic cell, human",4,0,30,False,fewer_than_six_donors_with_20_cells
+snCv3,podocyte,7,5,713,False,fewer_than_six_donors_with_20_cells
+snCv3,renal interstitial pericyte,9,8,1097,True,pass
