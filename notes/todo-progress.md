@@ -1,7 +1,7 @@
 # Agescape Revision To-Do Progress Tracker
 
 Last updated: 2026-11-14
-Current item: Item 8 (IN_PROGRESS)
+Current item: Morning Report (IN_PROGRESS)
 Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/final-plos-one.pdf` are FROZEN (no edits allowed).
 
 ## Step 0 Environment and Git Verification
@@ -27,8 +27,8 @@ Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/fina
 | Item 4 | Shannon entropy on mouse lung only, mice 18 months and older only (De Man et al. 2026 Methods comparison) | DONE | `results/rev3-entropy-mature-only-mouse-lung.csv`, `results/rev3-entropy-mature-only-mouse-lung-donors.csv`, `results/rev3-entropy-mature-only-mouse-lung-REPORT.md` | `4d28640` |
 | Item 5 | Finish De Man et al. 2026 human lung replication (32 Baylor lungs in GSE281219; 28 IPF controls already done) | BLOCKED | `results/rev3-deman-replication-human-lung-REPORT.md` (missing public cell-type labels / agingseurat.RData for 32 Baylor lungs in GSE281219) | `aa9ac6f` |
 | Item 6 | Bayesian analysis of whole-vector drift, mature vs old only (mouse >= 18m vs 18m mature reference) | DONE | `report/cross-species-bayesian-vector-mature-only.md`, `results/rev3-bayesian-vector-mature-only-posterior.csv`, `results/rev3-bayesian-vector-mature-only-diagnostics.csv`, `results/rev3-bayesian-vector-mature-only-prior-predictive.csv`, `results/rev3-bayesian-vector-mature-only-frequentist.csv` | `e56c797` |
-| Item 7 | Bayesian analysis for the entire paper, report only across 5 families (composition, transport, concordance, off-program/entropy, interneurons) | DONE | `report/cross-species-bayesian-full.md`, `results/rev3-bayesian-full-summary.csv`, `results/rev3-bayesian-full-diagnostics.csv`, `results/rev3-bayesian-full-prior-predictive.csv` | pending commit |
-| Item 8 | Randomness / variability test in mouse Tabula Muris Senis (cross-sectional 18m vs 30m within/between variance + permutation null) | PENDING | `results/rev3-randomness-variability-test.csv`, `results/rev3-randomness-variability-test-REPORT.md` | pending |
+| Item 7 | Bayesian analysis for the entire paper, report only across 5 families (composition, transport, concordance, off-program/entropy, interneurons) | DONE | `report/cross-species-bayesian-full.md`, `results/rev3-bayesian-full-summary.csv`, `results/rev3-bayesian-full-diagnostics.csv`, `results/rev3-bayesian-full-prior-predictive.csv` | `532b8b3` |
+| Item 8 | Randomness / variability test in mouse Tabula Muris Senis (cross-sectional 18m vs 30m within/between variance + permutation null) | DONE | `results/rev3-randomness-variability-test.csv`, `results/rev3-randomness-variability-joint-global.csv`, `results/rev3-randomness-variability-test-REPORT.md` | pending commit |
 | Item 9 | Zebrafish testis germline caveat for Limitations section | DO_NOT_DO | Unconfirmed by Reza; frozen per instructions | N/A |
 
 ## Suspended Work (Do Not Start)

@@ -142,3 +142,44 @@ def test_item7_bayesian_full_paper_deliverables():
     for tok in ["Naked mole-rat", "DYNC1I1", "FBN1", "0.9272", "0.1156"]:
         assert tok in txt
     assert "\u2014" not in txt and "\u2013" not in txt
+
+
+def test_item8_randomness_variability_deliverables():
+    df = pd.read_csv(RESULTS / "rev3-randomness-variability-test.csv")
+    jg = pd.read_csv(RESULTS / "rev3-randomness-variability-joint-global.csv")
+    assert len(df) == 148
+    assert set(df["arm"].unique()) == {
+        "primary_10cells_full_residualized",
+        "sensitivity_10cells_full_unresidualized",
+        "sensitivity_10cells_rarefied_1500_pseudobulk",
+        "sensitivity_20cells_full_residualized",
+        "sensitivity_10cells_male_only_residualized",
+    }
+    primary = df[df["arm"] == "primary_10cells_full_residualized"]
+    assert len(primary) == 34
+    assert set(primary["tissue"].unique()) == {"Kidney", "Lung", "Marrow"}
+    for qcol in [
+        "q_bh_eta2_within_arm",
+        "q_bh_lvr_gt0_within_arm",
+        "q_bh_lvr_lt0_within_arm",
+        "q_bh_lvr_two_within_arm",
+        "q_bh_tot_lvr_two_within_arm",
+        "q_bh_disp_gt0_within_arm",
+        "q_bh_disp_two_within_arm",
+    ]:
+        valid_q = df[qcol].dropna()
+        assert len(valid_q) > 0 and float(valid_q.min()) >= 0.05
+    assert len(jg) == 2
+    assert (jg["n_global_mouse_perms"] == 70).all()
+    assert (jg["n_strata"] == 34).all()
+    txt = (RESULTS / "rev3-randomness-variability-test-REPORT.md").read_text(encoding="utf-8")
+    for tok in [
+        "cross-sectional",
+        "18-F-50",
+        "30-M-2",
+        "-0.1233",
+        "0.02857",
+        "sensitivity_10cells_male_only_residualized",
+    ]:
+        assert tok in txt
+    assert "\u2014" not in txt and "\u2013" not in txt
