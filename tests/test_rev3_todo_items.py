@@ -11,6 +11,7 @@ from scripts.run_rev3_composition_fly_worm_zebrafish import (
     run_clr_regressions,
     run_propeller_limma,
 )
+from scripts.run_rev3_entropy_mature_mouse_lung import compute_deman_kl, compute_shannon
 
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
@@ -73,3 +74,26 @@ def test_item2_and_item3_reports_clean():
         assert "\u2013" not in text
         assert len(text) > 500
     assert "AUDIT ONLY" in (RESULTS / "rev3-young-vs-mature-audit-REPORT.md").read_text(encoding="utf-8")
+
+
+def test_item4_entropy_math_and_outputs():
+    import scipy.sparse as sp
+
+    mat = sp.csr_matrix(np.array([[10, 10, 10, 10], [37, 1, 1, 1]], dtype=float))
+    h = compute_shannon(mat)
+    kl = compute_deman_kl(mat, sqrt_counts=False)
+    kl_sqrt = compute_deman_kl(mat, sqrt_counts=True)
+    assert np.isclose(h[0], np.log(4.0))
+    assert np.isclose(kl[0], 0.0, atol=1e-12)
+    assert np.allclose(h + kl, np.log(4.0), atol=1e-12)
+    assert kl_sqrt[1] < kl[1]
+
+    out = pd.read_csv(RESULTS / "rev3-entropy-mature-only-mouse-lung.csv")
+    don = pd.read_csv(RESULTS / "rev3-entropy-mature-only-mouse-lung-donors.csv")
+    assert don["age_months"].min() >= 18.0
+    assert don["donor"].nunique() == 10
+    assert set(out["metric"].unique()) == {"shannon_entropy", "deman_kl_methods", "deman_kl_sqrt"}
+    assert set(out["depth"].astype(str).unique()) == {"500", "1500", "3000", "full"}
+    assert (out["mde80_15mo_sd"] > 0).all()
+    txt = (RESULTS / "rev3-entropy-mature-only-mouse-lung-REPORT.md").read_text(encoding="utf-8")
+    assert "\u2014" not in txt and "\u2013" not in txt
