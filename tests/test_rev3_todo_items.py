@@ -97,3 +97,11 @@ def test_item4_entropy_math_and_outputs():
     assert (out["mde80_15mo_sd"] > 0).all()
     txt = (RESULTS / "rev3-entropy-mature-only-mouse-lung-REPORT.md").read_text(encoding="utf-8")
     assert "\u2014" not in txt and "\u2013" not in txt
+
+
+def test_item5_blocker_report_clean():
+    txt = (RESULTS / "rev3-deman-replication-human-lung-REPORT.md").read_text(encoding="utf-8")
+    assert "BLOCKED" in txt
+    assert "GSE281219_RAW.tar" in txt
+    assert "agingseurat.RData" in txt
+    assert "\u2014" not in txt and "\u2013" not in txt
