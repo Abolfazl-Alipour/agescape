@@ -1,0 +1,8 @@
+endpoint,status,outcomes_examined,reason
+whole_nucleus_descriptive,completed,True,17 donor summaries from released filtered nuclei.
+whole_nucleus_donor_pseudobulk_gene_models,completed_composition_confounded,True,Group and exact-age sensitivity models; cell-composition changes cannot be separated from cell-intrinsic expression.
+P1_transport,blocked_composition_confounded,False,No released per-nucleus annotation; no whole-nucleus transport claim.
+cell_type_models,blocked_no_released_annotations,False,No annotations were inferred or created.
+donor_CLR_composition,blocked_no_released_annotations,False,No cell-type counts are available.
+Hellinger_displacement,blocked_no_released_annotations,False,No defensible cell-type-specific young reference.
+bulk_72_man_arm,excluded,False,Bulk RNA-seq is outside single-nucleus inference and was not downloaded.

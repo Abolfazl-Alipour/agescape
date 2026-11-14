@@ -1,0 +1,23 @@
+{
+  "study": "Kedlian",
+  "required_url": "https://cellgeni.cog.sanger.ac.uk/muscleageingcellatlas/raw/SKM_human_raw_cells2nuclei_2023-06-22.h5ad",
+  "expected_bytes": 4025846616,
+  "partial_bytes": 154009600,
+  "percent_complete": 3.8268648785,
+  "download_attempts": 2,
+  "approximate_download_seconds": 2315,
+  "range_diagnostic_bytes": 4194304,
+  "range_diagnostic_seconds": 44.31,
+  "minimum_free_gb": 30,
+  "maximum_file_gb": 5,
+  "sequential": true,
+  "partial_file_retained_for_resume": true,
+  "partial_local_path": "../agescape-revision-data/muscle/kedlian/SKM_human_raw_cells2nuclei_2023-06-22.h5ad",
+  "status": "blocked_incomplete_download",
+  "expression_values_read": false,
+  "count_validation_performed": false,
+  "biological_outcomes_examined": false,
+  "alternate_cellxgene_object_substituted": false,
+  "parallel_download_used": false,
+  "reason": "Repeatedly interrupted transfer measured around 0.1 MB/s with more than 11 hours remaining; no outcome job was started."
+}

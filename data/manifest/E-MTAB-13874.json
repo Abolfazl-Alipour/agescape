@@ -161,6 +161,11 @@
       "http_head_status": 200,
       "accept_ranges": "bytes",
       "downloaded": false,
+      "partial_download_bytes": 154009600,
+      "partial_local_path": "../agescape-revision-data/muscle/kedlian/SKM_human_raw_cells2nuclei_2023-06-22.h5ad",
+      "partial_file_retained_for_resume": true,
+      "guarded_download": {"minimum_free_gb": 30, "maximum_file_gb": 5, "attempts": 2},
+      "download_resource": "results/followup-muscle-kedlian-download-resource.json",
       "schema_only_range_requests": 55,
       "schema_only_range_bytes": 3544752,
       "X_data_dtype": "float32",
@@ -193,13 +198,26 @@
     "reuse_description": "Kedlian obtained and reprocessed Perez quadriceps data for intercostal-versus-leg myonuclei comparisons.",
     "independent_replication_label": "blocked_pending_overlap_adjudication_and_no_double_counting"
   },
+  "analysis": {
+    "date": "2026-11-14",
+    "frozen_plan": "data/manifest/muscle_analysis_plan.json",
+    "script": "scripts/run_followup_kedlian.py",
+    "status": "not_run_incomplete_required_raw_download",
+    "partial_bytes": 154009600,
+    "expected_bytes": 4025846616,
+    "expression_values_read": false,
+    "count_validation_performed": false,
+    "biological_outcomes_examined": false,
+    "alternate_cellxgene_object_substituted": false,
+    "raw_fastq_downloaded": false
+  },
   "verdict": {
     "metadata": "ready",
     "public_access": "ready",
     "donor_sample_mapping": "ready_17_donors_43_libraries",
-    "young_old_group_analysis": "ready_for_guarded_count_validation_and_eligibility_checks",
+    "young_old_group_analysis": "not_run_incomplete_required_raw_download",
     "continuous_age_analysis": "blocked_no_exact_public_ages",
-    "raw_count_value_validation": "blocked_pending_guarded_read_float32_layers_counts",
+    "raw_count_value_validation": "not_run_incomplete_required_raw_download",
     "expression_analysis_performed": false
   }
 }

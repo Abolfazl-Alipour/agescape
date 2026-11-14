@@ -1,0 +1,96 @@
+{
+  "created": "2026-11-14",
+  "frozen_at_repository_head": "67634307987dcf5f7761f39cd2c31576f8c16952",
+  "frozen_before_expression_download_or_outcomes": true,
+  "execution_order": ["Kedlian", "Perez"],
+  "resource_guard": {
+    "script": "scripts/resource_guard.py",
+    "minimum_free_gb": 30,
+    "analysis_memory_gb": 6,
+    "kedlian_maximum_download_gb": 5,
+    "perez_maximum_individual_download_gb": 1,
+    "sequential_downloads_and_heavy_jobs": true,
+    "backed_or_streamed_expression_reads": true,
+    "raw_fastq_permitted": false
+  },
+  "common_design": {
+    "inferential_unit": "donor",
+    "technical_libraries_are_not_replicates": true,
+    "minimum_donors_per_cell_type_contrast": 6,
+    "minimum_donors_per_age_group": 2,
+    "minimum_cells_per_donor_cell_type": 20,
+    "released_annotations_only_no_reclustering": true,
+    "minimum_residual_degrees_of_freedom": 2,
+    "covariate_rule": "Start with intercept, old indicator, male indicator, DCD indicator for Kedlian, and mean log raw UMI where declared. Retain old and depth in their declared models; add sex and donor type only when observed, nonconstant, and full rank. Any omitted aliased/unavailable covariate is recorded in the model table. Require full column rank and at least two residual degrees of freedom; otherwise the unit is untestable. Perez models use old plus mean log raw UMI; sex is not added as a per-donor field because it is unavailable.",
+    "effect_orientation": "old minus young",
+    "confidence_interval": "two-sided donor-level OLS t 95 percent",
+    "multiplicity": "Benjamini-Hochberg separately by assay, endpoint, donor set, and model. Gene-level BH families are assay-wide across all tested cell-type-by-gene combinations, not separate within-cell-type families. Conventional and expression-matched-null P1 p-values have separate families.",
+    "non_significance_is_not_equivalence": true,
+    "studies_pooled": false,
+    "independent_replication_label": "blocked because Kedlian reused Perez and individual disjointness is not proven"
+  },
+  "Kedlian": {
+    "accession": "E-MTAB-13874",
+    "input": "Public raw cells+nuclei H5AD, layers/counts only for expression counts; released obs annotations and manifest donor mapping.",
+    "count_gate": "Stream every stored layers/counts value and require finite, nonnegative, integer-valued float32 before aggregation. Any violation stops all outcomes.",
+    "assays": ["scRNA", "snRNA"],
+    "assays_analyzed_separately": true,
+    "primary_donor_set": "Adult released groups: exclude donor 470BR in the 17-20 band; do not assign numeric ages or band midpoints.",
+    "sensitivity_donor_set": "All donors, adding 470BR under the released young label; declared before outcomes.",
+    "primary_model": "old + mean_log_umi, with sex and donor_type included under the common full-rank rule.",
+    "unadjusted_sensitivity_model": "old only, with sex and donor_type excluded and no depth term.",
+    "endpoints": {
+      "P1_transport": {
+        "signature": "Established human P1_Clean from src.aging_programs.load_program_tiers.",
+        "donor_summary": "Mean of per-cell log1p(CPM) values per donor and released cell type; up mean minus down mean.",
+        "null": "200 expression-decile-matched random-signature draws without replacement, excluding P1 genes, seed 20261105; centered two-sided empirical p=(1+extreme)/(201).",
+        "models": ["primary_group_depth_adjusted", "unadjusted_group_sensitivity", "all_donor_group_depth_adjusted"]
+      },
+      "donor_CLR_composition": {
+        "counts": "All released known cell labels in each assay define the composition universe, including zero counts.",
+        "pseudocount": 0.5,
+        "models": ["primary_group_depth_adjusted", "unadjusted_group_sensitivity", "all_donor_group_depth_adjusted"],
+        "depth_adjustment": "mean_log_umi computed over all annotated cells contributing to the donor composition"
+      },
+      "donor_pseudobulk_gene_models": {
+        "summary": "Sum raw counts by donor and released cell type, then log1p(CPM) using the donor-cell-type total raw UMI.",
+        "gene_filter": "At least 10 summed counts across included donors and detection in at least two included donors; filter is independent of age outcomes.",
+        "models": ["primary_group_depth_adjusted", "unadjusted_group_sensitivity", "all_donor_group_depth_adjusted"],
+        "multiplicity": "Assay-wide BH across all finite-standard-error cell-type-by-gene tests within each donor set and model."
+      },
+      "Hellinger_displacement": {
+        "status": "nonnumeric_age_group_sensitivity_only",
+        "reference": "Released young group within assay and cell type; primary excludes 470BR. Pool raw counts after technical-gene exclusion and leave the evaluated young donor out (cross-fitting). Old donors use all eligible young donors.",
+        "cell_filter": "At least 1500 raw UMI and positive nontechnical UMI.",
+        "technical_exclusions": "MT-, RPL/RPS/MRPL/MRPS prefixes and XIST, TSIX, DDX3Y, EIF2S3Y, UTY, KDM5D.",
+        "floors": "At least two eligible young reference donors, 20 qualifying cells per scored donor, at least 50 cross-fitted reference cells for every donor, six scored donors total and two per group.",
+        "models": ["primary_group_depth_adjusted", "unadjusted_group_sensitivity", "all_donor_group_depth_adjusted"],
+        "label": "NONNUMERIC_AGE_GROUP_SENSITIVITY; age bands are never converted to numeric ages.",
+        "otherwise": "Mark untestable with the failed floor; do not report a null."
+      }
+    }
+  },
+  "Perez": {
+    "accession": "GSE167186",
+    "input": "The 17 public per-donor filtered 10x H5 files with int32 matrix/data; no bulk count table and no FASTQ.",
+    "count_gate": "Stream every stored count and require finite nonnegative integer values; verify 134486 released filtered nuclei across 17 files.",
+    "donor_groups": {"Young": 6, "Old": 11},
+    "primary_model": "Released Old versus Young group plus mean_log_umi, full rank with at least two residual degrees of freedom.",
+    "exact_age_sensitivity": "Exact age per 10 years plus mean_log_umi; numeric ages are used only where released. This sensitivity is declared before outcomes.",
+    "annotation_gate": "Seek released per-nucleus annotations in primary/public processed objects. Do not infer or invent annotations.",
+    "if_annotations_unavailable": {
+      "allowed": "Whole-nucleus donor summaries and donor-pseudobulk gene models, explicitly confounded by changing cell-type composition.",
+      "P1_transport": "blocked_or_confounded; no whole-nucleus signature transport claim",
+      "cell_type_models": "blocked",
+      "donor_CLR_composition": "blocked",
+      "Hellinger_displacement": "blocked"
+    },
+    "if_annotations_available": "Apply the common donor/cell floors and the Kedlian endpoint definitions where compatible, but keep study, tissue, assay, and multiplicity families separate.",
+    "bulk_72_man_arm": "excluded from all single-nucleus inference and not downloaded"
+  },
+  "cross_cohort_comparison": {
+    "allowed": "Only compatible donor-level estimands and genuinely harmonized released cell-type labels, with cohort-specific estimates side by side.",
+    "not_allowed": "Pooling donors or p-values, meta-analysis, counting Perez twice, or calling either analysis independent replication.",
+    "different_tissues": "Kedlian intercostal muscle and Perez vastus lateralis remain a cross-cohort comparison, not a direct tissue-matched replication."
+  }
+}

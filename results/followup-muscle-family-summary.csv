@@ -1,0 +1,3 @@
+study,assay,endpoint,donor_set,model,tests,minimum_q,q_lt_0_05
+Perez,snRNA,whole_nucleus_gene,all_17,exact_age_10y_sensitivity,20343,0.0002298337358537,8
+Perez,snRNA,whole_nucleus_gene,all_17,primary_group_depth_adjusted,20343,0.0002366991371835,14

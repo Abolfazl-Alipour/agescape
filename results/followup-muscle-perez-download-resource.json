@@ -1,0 +1,95 @@
+{
+  "bytes": 118346194,
+  "downloads": [
+    {
+      "bytes": 3016762,
+      "elapsed_seconds": 1.1084496974945068,
+      "gsm": "GSM5098737"
+    },
+    {
+      "bytes": 3130748,
+      "elapsed_seconds": 1.0830183029174805,
+      "gsm": "GSM5098738"
+    },
+    {
+      "bytes": 2861643,
+      "elapsed_seconds": 1.0151796340942383,
+      "gsm": "GSM5098739"
+    },
+    {
+      "bytes": 2957839,
+      "elapsed_seconds": 1.0199263095855713,
+      "gsm": "GSM5098740"
+    },
+    {
+      "bytes": 3003523,
+      "elapsed_seconds": 1.0100812911987305,
+      "gsm": "GSM5098741"
+    },
+    {
+      "bytes": 3155099,
+      "elapsed_seconds": 1.1064462661743164,
+      "gsm": "GSM5098742"
+    },
+    {
+      "bytes": 2723950,
+      "elapsed_seconds": 1.0084996223449707,
+      "gsm": "GSM5098743"
+    },
+    {
+      "bytes": 2855478,
+      "elapsed_seconds": 1.0066673755645752,
+      "gsm": "GSM5098744"
+    },
+    {
+      "bytes": 3670266,
+      "elapsed_seconds": 1.0874261856079102,
+      "gsm": "GSM5098745"
+    },
+    {
+      "bytes": 2999165,
+      "elapsed_seconds": 1.0094265937805176,
+      "gsm": "GSM5098746"
+    },
+    {
+      "bytes": 2675123,
+      "elapsed_seconds": 1.0077970027923584,
+      "gsm": "GSM5098747"
+    },
+    {
+      "bytes": 3147965,
+      "elapsed_seconds": 1.0766878128051758,
+      "gsm": "GSM5098748"
+    },
+    {
+      "bytes": 2467164,
+      "elapsed_seconds": 1.0092289447784424,
+      "gsm": "GSM5098749"
+    },
+    {
+      "bytes": 2343927,
+      "elapsed_seconds": 1.0412917137145996,
+      "gsm": "GSM5098750"
+    },
+    {
+      "bytes": 26004630,
+      "elapsed_seconds": 1.7176649570465088,
+      "gsm": "GSM5098751"
+    },
+    {
+      "bytes": 19284317,
+      "elapsed_seconds": 1.571476936340332,
+      "gsm": "GSM5098752"
+    },
+    {
+      "bytes": 32048595,
+      "elapsed_seconds": 2.0270912647247314,
+      "gsm": "GSM5098753"
+    }
+  ],
+  "elapsed_seconds": 19.907050848007202,
+  "files": 17,
+  "maximum_file_gb": 1,
+  "minimum_free_gb": 30,
+  "sequential": true
+}
