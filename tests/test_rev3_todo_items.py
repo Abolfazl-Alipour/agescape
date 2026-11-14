@@ -61,3 +61,15 @@ def test_item1_outputs_and_global_bh_family():
     assert len(g624) == 624
     assert int((g624["source_family"] == "existing_431_mouse_human_nmr").sum()) == 431
     assert int((g624["source_family"] == "new_193_fly_worm_zebrafish").sum()) == 193
+
+
+def test_item2_and_item3_reports_clean():
+    for fname in [
+        "rev3-laca-nmr-verification-REPORT.md",
+        "rev3-young-vs-mature-audit-REPORT.md",
+    ]:
+        text = (RESULTS / fname).read_text(encoding="utf-8")
+        assert "\u2014" not in text
+        assert "\u2013" not in text
+        assert len(text) > 500
+    assert "AUDIT ONLY" in (RESULTS / "rev3-young-vs-mature-audit-REPORT.md").read_text(encoding="utf-8")
