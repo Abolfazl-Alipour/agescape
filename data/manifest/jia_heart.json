@@ -1,0 +1,377 @@
+{
+  "created": "2026-11-14",
+  "base_revision": "0610c34bde6c176efc1c225cc8d817231e9ce54a",
+  "study": {
+    "title": "Life-span-dependent transcriptional dynamics of the human heart",
+    "citation": "Jia H, Chen X, Chang Y, et al. Science Advances 12(25), eaeg2614 (2026).",
+    "doi": "10.1126/sciadv.aeg2614",
+    "pubmed_id": "42308288",
+    "pmcid": "PMC13274588",
+    "first_published": "2026-06-17",
+    "human_snrna_accession_from_primary_data_availability": "10.6084/m9.figshare.31939227",
+    "resolved_public_version_doi": "10.6084/m9.figshare.31939227.v1",
+    "separate_linked_records": {
+      "mouse_snrna": "10.6084/m9.figshare.31939839",
+      "hipsc_cm_bulk_rna_not_human_atlas": "10.6084/m9.figshare.31939743",
+      "code": "10.6084/m9.figshare.31941603"
+    }
+  },
+  "scope": {
+    "metadata_and_public_access_only": true,
+    "expression_matrices_downloaded": false,
+    "expression_values_read": false,
+    "biological_outcomes_analyzed": false,
+    "heavy_jobs_run": false,
+    "external_authorization_requested": false,
+    "repository_contact_made": false,
+    "external_data_root": "../agescape-revision-data/jia-heart-metadata",
+    "publisher_page_note": "The Science DOI/publisher page returned HTTP 403; the primary article and its actual data-availability statement were read through Europe PMC full-text XML, not a secondary summary.",
+    "supplement_note": "The 35,040,127-byte primary supplement archive was downloaded as metadata. Its central directory was inspected and only Supplementary_Table_0_Info.xlsx and Supplementary_Table_1.xlsx were used for metadata verification. No expression matrix was present in or extracted from that archive."
+  },
+  "verdict": {
+    "accession_and_public_access": "ready",
+    "complete_54_sample_acquisition_map": "ready_with_conditions: 44 Jia AG1-AG5 matrices plus 10 external HCA AG6 matrices",
+    "adult_only_exact_continuous_age_14_to_75": "blocked: exact ages exist only for six internal postnatal snRNA donors; five AG6 donors have age bands",
+    "adult_group_analysis": "blocked_as_confirmatory: AG4/AG5 internal versus AG6 external is completely source-age confounded; descriptive sensitivity only after expression gates",
+    "lifespan_sensitivity": "ready_with_conditions_for_stage_stratified_or_group_sensitivity; blocked_as_one_exact_continuous_gestational_to_75_year_slope",
+    "remaining_gates": [
+      "Validate filtered matrix count values, dimensions and barcodes without assuming raw-feature or DecontX matrices are included.",
+      "Locate versioned Jia barcode-level annotations or predeclare/reproduce annotation from counts and marker tables.",
+      "Select only D2/D4/D5/D6/D7 LV/RV nuclei in a documented external HCA object/version and validate joins.",
+      "Reconcile HS246 sample identifier with HS247 gender-sheet identifier before sex-adjusted modeling.",
+      "Repeat donor/cell-type/reference eligibility gates before examining outcomes."
+    ],
+    "future_resource_rule": "Parent approval and sequential resource-guarded acquisition/analysis required; 30 GB disk reserve and <=8 GB analysis memory. No expression acquisition was performed in Step 8."
+  },
+  "sources_read": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13274588/fullTextXML",
+      "used_for": "Primary Jia article, exact data-availability statement, 29-donor/54-sample design, assay, health/procurement and external AG6 methods",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/PMC13274588.xml",
+      "size_bytes": 302508,
+      "sha256": "aa0c50fc3b74bea436a11ff269a97d39030bb072700cfb946b813cf023d8b4f9"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13274588/supplementaryFiles",
+      "used_for": "Primary supplement inventory, table index, exact donor ages/sex/tissues/health fields",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/PMC13274588-supplementary.zip",
+      "size_bytes": 35040127,
+      "sha256": "ce5626e6004ebbea7911a287b77d5d83fff4dca4b2b50519e75c43f969c66602",
+      "members_read": [
+        "sciadv.aeg2614_tables_s1_to_s55.zip:Tables/Supplementary_Table_0_Info.xlsx",
+        "sciadv.aeg2614_tables_s1_to_s55.zip:Tables/Supplementary_Table_1.xlsx"
+      ]
+    },
+    {
+      "url": "https://api.figshare.com/v2/articles/31939227",
+      "used_for": "Actual public human snRNA record, license, version, 132-file inventory, 44 folder map, exact file IDs/sizes/MD5s",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/figshare-31939227.json",
+      "size_bytes": 47970,
+      "sha256": "70ce0225aee370e15f1af18d15e78d93122b63725f5edd814a63b9d6c398e768"
+    },
+    {
+      "url": "https://api.figshare.com/v2/articles/31941603",
+      "used_for": "Public code record and 187-script inventory; no annotated expression object",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/figshare-31941603.json",
+      "size_bytes": 66871,
+      "sha256": "28aae6b63c93cbaf572641d8714ab20dfb4973879dca0922f89667ea0fb9628e"
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/63467727",
+      "used_for": "Jia code reading global_raw.h5ad and Anno.csv and selecting D2/D4/D5/D6/D7 LV/RV nuclei",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/20230111.Readin_public_data.R",
+      "size_bytes": 2617,
+      "sha256": "bbbb1288ffa96d678520958560fb6d9a906e4a2046a873d13aca67aa6bccbcab"
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/63467724",
+      "used_for": "Jia code distinguishing filtered_feature_bc_matrix inputs from raw_feature_bc_matrix DecontX background for 44 samples",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/20230113.DecountX.R",
+      "size_bytes": 3570,
+      "sha256": "5f4d47daafe05b77e592ed15d2d98702a84a25c22e3f5408aff985b31d2a11fd"
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/63467745",
+      "used_for": "Jia 44+10-sample merge, metadata mapping and released analysis design",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/20230128.Merge_QC.After_DecountX.44plus10sample.R",
+      "size_bytes": 4316,
+      "sha256": "18e9c2311ec7efb7c6d12d4e87df235eb162e600d8a07f1c6311ec4de884bec8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-020-2797-4",
+      "used_for": "Primary Litviňuková paper and its raw-count/annotation and ERP123138 data-availability statement"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7681775/fullTextXML",
+      "used_for": "Primary external AG6 source article full text",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/PMC7681775.xml",
+      "size_bytes": 235641,
+      "sha256": "ef9970f635956bcaa5c208b72d1ab068f2d904603cf14787e6a9eca0e58bfbc7"
+    },
+    {
+      "url": "https://service.azul.data.humancellatlas.org/index/projects/ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
+      "used_for": "External HCA accessions, NRES public terms, donor age bands, assays, tissues, matrices and exact object sizes",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/hca-ad98d3cd.json",
+      "size_bytes": 17840,
+      "sha256": "a12e3cd2c00037bcf1553db6a7402cdb8e698169407302d9cbb1e6865af6873c"
+    },
+    {
+      "url": "https://api.cellxgene.cziscience.com/curation/v1/collections/b52eb423-5d0d-4645-b217-e1c6d38b2e72",
+      "used_for": "Public external atlas donor IDs, raw.X counts, annotations, normal disease labels, assay/tissue fields and revised H5AD size",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/cellxgene-b52eb423.json",
+      "size_bytes": 29217,
+      "sha256": "e9bf45d81ce006b6da1edc4ce5e8ea1c6976fbfe81b9a90ecbe2714fb4d148d9"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=study&query=secondary_study_accession%3D%22ERP123138%22&fields=study_accession,secondary_study_accession,study_title,study_description,center_name,broker_name&format=json",
+      "used_for": "Direct ENA verification of ERP123138 and PRJEB39602",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/ena-ERP123138.json",
+      "size_bytes": 1497,
+      "sha256": "c2cf29fdef9c5f95a0299f580c9958d7b3482e0fd642c778393623b6fca5e1d3"
+    },
+    {
+      "url": "https://www.heartcellatlas.org/v1.html",
+      "used_for": "External atlas public raw-count/annotation portal, six-region design and 14-donor demographics"
+    },
+    {
+      "url": "https://api.figshare.com/v2/articles/31939839",
+      "used_for": "Linked mouse record checked only to distinguish it from the human accession",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/figshare-31939839.json",
+      "size_bytes": 23179,
+      "sha256": "37ed72e1d251119a0efe8b0b9c4fcc9ffaf5e789663e94931d3f39d84f420cba"
+    },
+    {
+      "url": "https://api.figshare.com/v2/articles/31939743",
+      "used_for": "Linked hiPSC-CM bulk record checked only to prevent accession substitution",
+      "local_path": "../agescape-revision-data/jia-heart-metadata/figshare-31939743.json",
+      "size_bytes": 7283,
+      "sha256": "981c448dea0a7e9f6f13af72ae781735291b27e8c8082596a7dcaa3075b646a0"
+    }
+  ],
+  "design": {
+    "donors_total": 29,
+    "snrna_tissues_total": 54,
+    "lv_tissues": 27,
+    "rv_tissues": 27,
+    "paired_chamber_donors": 25,
+    "single_chamber_donors": 4,
+    "jia_new_donors": 24,
+    "jia_new_tissues": 44,
+    "external_ag6_donors": 5,
+    "external_ag6_tissues": 10,
+    "other_tissues_in_jia_54": "none; only transmural LV and RV myocardium",
+    "other_regions_in_external_full_HCA_but_not_Jia_subset": [
+      "left cardiac atrium",
+      "right cardiac atrium",
+      "apex of heart",
+      "interventricular septum"
+    ],
+    "groups": {
+      "AG1": {"donors": 5, "LV": 5, "RV": 5, "ages": "13w+2d to 19w+5d"},
+      "AG2": {"donors": 6, "LV": 5, "RV": 5, "ages": "20w+3d to 27w+3d"},
+      "AG3": {"donors": 7, "LV": 6, "RV": 6, "ages": "29w+6d to 39w+3d"},
+      "AG4": {"donors": 3, "LV": 3, "RV": 3, "exact_ages_years": [14, 20, 35]},
+      "AG5": {"donors": 3, "LV": 3, "RV": 3, "exact_ages_years": [43, 48, 53]},
+      "AG6": {"donors": 5, "LV": 5, "RV": 5, "age_bands_years": ["60-65", "60-65", "65-70", "70-75", "70-75"], "exact_ages_public": false}
+    },
+    "nonfailing_status": "All 54 are described as nonfailing and all 29 snRNA donors have cardiac disease=N in table S1. This is not uniform comorbidity-free health: D4 has hypertension and diabetes; two fetal donors have noncardiac malformations; several AG4/AG5 comorbidities are Unknown.",
+    "sex_note": "Table S1 gender sheet; fetal sex was inferred from sex-chromosome expression. HS246/HS247 mismatch remains unresolved."
+  },
+  "donors": [
+    {"donor": "PT-13w", "group": "AG1", "sample_id": "AG1-1", "exact_gestational_age": "13w+2d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG1_1_LV", "AG1_1_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT-14w", "group": "AG1", "sample_id": "AG1-2", "exact_gestational_age": "14w+5d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG1_2_LV", "AG1_2_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT51", "group": "AG1", "sample_id": "AG1-4", "exact_gestational_age": "17w+4d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG1_4_LV", "AG1_4_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT49", "group": "AG1", "sample_id": "AG1-5", "exact_gestational_age": "18w+1d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG1_5_LV", "AG1_5_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT66", "group": "AG1", "sample_id": "AG1-6", "exact_gestational_age": "19w+5d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG1_6_LV", "AG1_6_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT45", "group": "AG2", "sample_id": "AG2-1", "exact_gestational_age": "20w+3d", "sex": "Female", "tissues": ["LV"], "figshare_folders": ["AG2_1_LV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT21", "group": "AG2", "sample_id": "AG2-2", "exact_gestational_age": "22w+1d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG2_2_LV", "AG2_2_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT90", "group": "AG2", "sample_id": "AG2-3", "exact_gestational_age": "23w+3d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG2_3_LV", "AG2_3_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT19", "group": "AG2", "sample_id": "AG2-4", "exact_gestational_age": "25w", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG2_4_LV", "AG2_4_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT42", "group": "AG2", "sample_id": "AG2-5", "exact_gestational_age": "26w", "sex": "Female", "tissues": ["RV"], "figshare_folders": ["AG2_5_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT25", "group": "AG2", "sample_id": "AG2-6", "exact_gestational_age": "27w+3d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG2_6_LV", "AG2_6_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT102", "group": "AG3", "sample_id": "AG3-1", "exact_gestational_age": "29w+6d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG3_1_LV", "AG3_1_RV"], "source": "Jia", "cardiac_disease": "N", "health_note": "Noncardiac fetal limb malformation=Y"},
+    {"donor": "PT7", "group": "AG3", "sample_id": "AG3-2", "exact_gestational_age": "30w+4d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG3_2_LV", "AG3_2_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT12", "group": "AG3", "sample_id": "AG3-3", "exact_gestational_age": "30w+6d", "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": ["AG3_3_LV", "AG3_3_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT18", "group": "AG3", "sample_id": "AG3-4", "exact_gestational_age": "32w+1d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG3_4_LV", "AG3_4_RV"], "source": "Jia", "cardiac_disease": "N", "health_note": "Noncardiac fetal head malformation=Y"},
+    {"donor": "PT85", "group": "AG3", "sample_id": "AG3-5", "exact_gestational_age": "33w+5d", "sex": "Female", "tissues": ["LV"], "figshare_folders": ["AG3_5_LV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT96", "group": "AG3", "sample_id": "AG3-6", "exact_gestational_age": "37w", "sex": "Male", "tissues": ["RV"], "figshare_folders": ["AG3_6_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "PT50", "group": "AG3", "sample_id": "AG3-7", "exact_gestational_age": "39w+3d", "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG3_7_LV", "AG3_7_RV"], "source": "Jia", "cardiac_disease": "N"},
+    {"donor": "HS316", "group": "AG4", "sample_id": "AG4-1", "exact_age_years": 14, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG4_1_LV", "AG4_1_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "HS257", "group": "AG4", "sample_id": "AG4-2", "exact_age_years": 20, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG4_2_LV", "AG4_2_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "HS235", "group": "AG4", "sample_id": "AG4-3", "exact_age_years": 35, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG4_3_LV", "AG4_3_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "HS197", "group": "AG5", "sample_id": "AG5-1", "exact_age_years": 43, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG5_1_LV", "AG5_1_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "HS173", "group": "AG5", "sample_id": "AG5-2", "exact_age_years": 48, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": ["AG5_2_LV", "AG5_2_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "HS246", "group": "AG5", "sample_id": "AG5-3", "exact_age_years": 53, "sex": "unresolved", "sex_conflict": "Sample sheet has HS246; gender sheet has HS247=Male and no HS246. Statistical sheet treats AG5 as three males. Do not silently relabel.", "tissues": ["LV", "RV"], "figshare_folders": ["AG5_3_LV", "AG5_3_RV"], "source": "Jia", "cardiac_disease": "N", "procurement": "DBD"},
+    {"donor": "D2", "group": "AG6", "sample_id": "AG6-1", "age_band_years": "60-65", "exact_age_years": null, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": [], "source": "Litviňuková/HCA", "external_selection": "source=Nuclei; region=LV/RV", "cardiac_disease": "N", "procurement": "DCD"},
+    {"donor": "D4", "group": "AG6", "sample_id": "AG6-2", "age_band_years": "70-75", "exact_age_years": null, "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": [], "source": "Litviňuková/HCA", "external_selection": "source=Nuclei; region=LV/RV", "cardiac_disease": "N", "hypertension": "Y", "diabetes": "Y", "procurement": "DCD"},
+    {"donor": "D5", "group": "AG6", "sample_id": "AG6-3", "age_band_years": "65-70", "exact_age_years": null, "sex": "Female", "tissues": ["LV", "RV"], "figshare_folders": [], "source": "Litviňuková/HCA", "external_selection": "source=Nuclei; region=LV/RV", "cardiac_disease": "N", "procurement": "DCD"},
+    {"donor": "D6", "group": "AG6", "sample_id": "AG6-4", "age_band_years": "70-75", "exact_age_years": null, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": [], "source": "Litviňuková/HCA", "external_selection": "source=Nuclei; region=LV/RV", "cardiac_disease": "N", "procurement": "DCD"},
+    {"donor": "D7", "group": "AG6", "sample_id": "AG6-5", "age_band_years": "60-65", "exact_age_years": null, "sex": "Male", "tissues": ["LV", "RV"], "figshare_folders": [], "source": "Litviňuková/HCA", "external_selection": "source=Nuclei; region=LV/RV", "cardiac_disease": "N", "procurement": "DCD"}
+  ],
+  "excluded_internal_ag6_without_snrna": [
+    {"donor": "B2023-221", "exact_age_years": 73, "sex": "Male", "snrna_seq": "N"},
+    {"donor": "B2023-275", "exact_age_years": 74, "sex": "Male", "snrna_seq": "N"},
+    {"donor": "B2023-94", "exact_age_years": 62, "sex": "Male", "snrna_seq": "N"},
+    {"donor": "B2023-223", "exact_age_years": 70, "sex": "Male", "snrna_seq": "N"},
+    {"donor": "B2023-238", "exact_age_years": 66, "sex": "Female", "snrna_seq": "N"},
+    {"donor": "B2023-176", "exact_age_years": 71, "sex": "Female", "snrna_seq": "N"}
+  ],
+  "assay_and_counts": {
+    "jia_44_samples": {
+      "assay": "10x Chromium Single Cell 3prime Reagent Kits v3.1 snRNA-seq; Illumina NovaSeq 6000",
+      "processing": "Cell Ranger 6.1.2; refdata-gex-GRCh38-2020-A; DecontX uses filtered counts as input and raw counts as background",
+      "public_inventory": "One matrix.mtx.gz, barcodes.tsv.gz and features.tsv.gz per sample; 44 folders and 132 files",
+      "raw_count_interpretation": "The linked code expects filtered_feature_bc_matrix for these 44 sample names. Public triplets are consistent with filtered-count inputs, but values/dimensions/integer-valuedness were not inspected. No separate raw_feature_bc_matrix or DecontX-corrected matrix is released in the human Figshare record.",
+      "raw_fastq_accession_identified_in_jia_statement": false
+    },
+    "external_ag6": {
+      "source_doi": "10.1038/s41586-020-2797-4",
+      "hca_project_id": "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737",
+      "ena_secondary_study": "ERP123138",
+      "ena_study": "PRJEB39602",
+      "assays_in_full_HCA_project": ["10x 3prime v2", "10x 3prime v3"],
+      "instruments_in_full_HCA_project": ["Illumina HiSeq 4000", "Illumina NextSeq 500"],
+      "jia_selection": "Nuclei only; D2/D4/D5/D6/D7; LV/RV only",
+      "jia_input_files_from_code": ["global_raw.h5ad", "Anno.csv"],
+      "current_cellxgene_dataset_id": "d4e69e01-3ba2-4d6b-a15d-e7048f78f22e",
+      "current_cellxgene_dataset_version_id": "49312f8c-a75a-4672-9c8a-9078acd35bdb",
+      "current_cellxgene_raw_data_location": "raw.X",
+      "current_cellxgene_revision": "2026-06-11T16:53:00+00:00",
+      "version_caveat": "The current curated CELLxGENE object is not automatically the same version Jia used; document and validate the selected external object/version."
+    }
+  },
+  "annotations": {
+    "jia_major_types_reported": 11,
+    "jia_nuclei_after_reported_qc": 442239,
+    "jia_barcode_level_annotations_found": false,
+    "jia_checked_locations": "Human Figshare has only matrix/barcode/feature triplets; code record has scripts only; supplement index provides marker sets and aggregate proportions, not barcode labels.",
+    "external_HCA_annotations_available": true,
+    "prohibition": "Do not import HCA labels onto Jia nuclei or treat aggregate supplementary proportions as per-cell annotations. Locate versioned Jia annotations or predeclare/reproduce annotation before outcomes."
+  },
+  "public_access": {
+    "figshare_human_status": "public",
+    "figshare_human_is_confidential": false,
+    "figshare_human_is_embargoed": false,
+    "figshare_human_download_disabled": false,
+    "figshare_human_license": "CC BY 4.0",
+    "figshare_human_license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "HCA_accessible": true,
+    "HCA_data_use_restriction": "NRES",
+    "CELLxGENE_visibility": "PUBLIC",
+    "controlled_access_component_verified": false,
+    "note": "No credential, embargo, dbGaP/EGA-controlled dataset or data-use agreement was stated or encountered for the needed processed objects. AG6 age bands are a metadata limitation, not controlled access."
+  },
+  "jia_figshare_inventory": {
+    "record_id": 31939227,
+    "version": 1,
+    "published_date": "2026-04-05T05:45:01Z",
+    "record_size_bytes": 3431641059,
+    "file_count": 132,
+    "sample_folder_count": 44,
+    "matrix_file_count": 44,
+    "matrix_total_bytes": 3414663208,
+    "barcodes_total_bytes": 2306623,
+    "features_total_bytes": 14671228,
+    "all_files_downloaded": false,
+    "download_url_template": "https://ndownloader.figshare.com/files/{file_id}",
+    "tuple_definition": "Each [file_id, size_bytes] pair below comes directly from the public Figshare API; per-file supplied and computed MD5 values agree in that source record.",
+    "samples": [
+      {"folder": "AG1_1_LV", "matrix_mtx_gz": [63454674, 78385732], "barcodes_tsv_gz": [63454668, 49082], "features_tsv_gz": [63454671, 333437]},
+      {"folder": "AG1_1_RV", "matrix_mtx_gz": [63454683, 49885292], "barcodes_tsv_gz": [63454677, 33956], "features_tsv_gz": [63454680, 333437]},
+      {"folder": "AG1_2_LV", "matrix_mtx_gz": [63454725, 55484788], "barcodes_tsv_gz": [63454728, 38154], "features_tsv_gz": [63454731, 333437]},
+      {"folder": "AG1_2_RV", "matrix_mtx_gz": [63454980, 61501344], "barcodes_tsv_gz": [63454971, 37690], "features_tsv_gz": [63454974, 333437]},
+      {"folder": "AG1_4_LV", "matrix_mtx_gz": [63455001, 93325697], "barcodes_tsv_gz": [63454992, 63771], "features_tsv_gz": [63454998, 333437]},
+      {"folder": "AG1_4_RV", "matrix_mtx_gz": [63455010, 81021518], "barcodes_tsv_gz": [63455004, 40207], "features_tsv_gz": [63455007, 333437]},
+      {"folder": "AG1_5_LV", "matrix_mtx_gz": [63455157, 44985184], "barcodes_tsv_gz": [63455151, 37859], "features_tsv_gz": [63455154, 333437]},
+      {"folder": "AG1_5_RV", "matrix_mtx_gz": [63455169, 54308021], "barcodes_tsv_gz": [63455163, 38490], "features_tsv_gz": [63455166, 333437]},
+      {"folder": "AG1_6_LV", "matrix_mtx_gz": [63455193, 84453674], "barcodes_tsv_gz": [63455187, 52115], "features_tsv_gz": [63455190, 333437]},
+      {"folder": "AG1_6_RV", "matrix_mtx_gz": [63455214, 94490008], "barcodes_tsv_gz": [63455211, 50912], "features_tsv_gz": [63455208, 333437]},
+      {"folder": "AG2_1_LV", "matrix_mtx_gz": [63455235, 42207602], "barcodes_tsv_gz": [63455232, 33610], "features_tsv_gz": [63455238, 333437]},
+      {"folder": "AG2_2_LV", "matrix_mtx_gz": [63455337, 74960934], "barcodes_tsv_gz": [63455334, 50206], "features_tsv_gz": [63455331, 333437]},
+      {"folder": "AG2_2_RV", "matrix_mtx_gz": [63455346, 74534884], "barcodes_tsv_gz": [63455340, 51414], "features_tsv_gz": [63455343, 333437]},
+      {"folder": "AG2_3_LV", "matrix_mtx_gz": [63455403, 88946841], "barcodes_tsv_gz": [63455397, 63276], "features_tsv_gz": [63455400, 333437]},
+      {"folder": "AG2_3_RV", "matrix_mtx_gz": [63457329, 63177639], "barcodes_tsv_gz": [63457326, 32130], "features_tsv_gz": [63457323, 333437]},
+      {"folder": "AG2_4_LV", "matrix_mtx_gz": [63457359, 95133538], "barcodes_tsv_gz": [63457356, 59234], "features_tsv_gz": [63457353, 333437]},
+      {"folder": "AG2_4_RV", "matrix_mtx_gz": [63457374, 96799162], "barcodes_tsv_gz": [63457368, 53872], "features_tsv_gz": [63457371, 333437]},
+      {"folder": "AG2_5_RV", "matrix_mtx_gz": [63457413, 54816636], "barcodes_tsv_gz": [63457410, 48165], "features_tsv_gz": [63457407, 333437]},
+      {"folder": "AG2_6_LV", "matrix_mtx_gz": [63457419, 39816791], "barcodes_tsv_gz": [63457416, 35175], "features_tsv_gz": [63457422, 333437]},
+      {"folder": "AG2_6_RV", "matrix_mtx_gz": [63457434, 31175076], "barcodes_tsv_gz": [63457431, 27238], "features_tsv_gz": [63457428, 333437]},
+      {"folder": "AG3_1_LV", "matrix_mtx_gz": [63457458, 45401414], "barcodes_tsv_gz": [63457455, 42953], "features_tsv_gz": [63457452, 333437]},
+      {"folder": "AG3_1_RV", "matrix_mtx_gz": [63457467, 58522084], "barcodes_tsv_gz": [63457461, 40727], "features_tsv_gz": [63457464, 333437]},
+      {"folder": "AG3_2_LV", "matrix_mtx_gz": [63457485, 91489275], "barcodes_tsv_gz": [63457479, 66710], "features_tsv_gz": [63457482, 333437]},
+      {"folder": "AG3_2_RV", "matrix_mtx_gz": [63457494, 86203412], "barcodes_tsv_gz": [63457491, 53746], "features_tsv_gz": [63457488, 333437]},
+      {"folder": "AG3_3_LV", "matrix_mtx_gz": [63457536, 70316875], "barcodes_tsv_gz": [63457530, 58341], "features_tsv_gz": [63457533, 333437]},
+      {"folder": "AG3_3_RV", "matrix_mtx_gz": [63457581, 79220150], "barcodes_tsv_gz": [63457575, 52787], "features_tsv_gz": [63457578, 333437]},
+      {"folder": "AG3_4_LV", "matrix_mtx_gz": [63457593, 79266488], "barcodes_tsv_gz": [63457587, 60647], "features_tsv_gz": [63457590, 333437]},
+      {"folder": "AG3_4_RV", "matrix_mtx_gz": [63458091, 84562454], "barcodes_tsv_gz": [63458094, 55174], "features_tsv_gz": [63458097, 333437]},
+      {"folder": "AG3_5_LV", "matrix_mtx_gz": [63458112, 61521855], "barcodes_tsv_gz": [63458109, 48933], "features_tsv_gz": [63458106, 333437]},
+      {"folder": "AG3_6_RV", "matrix_mtx_gz": [63458199, 88055927], "barcodes_tsv_gz": [63458205, 49707], "features_tsv_gz": [63458202, 333437]},
+      {"folder": "AG3_7_LV", "matrix_mtx_gz": [63458253, 102121391], "barcodes_tsv_gz": [63458247, 63484], "features_tsv_gz": [63458250, 333437]},
+      {"folder": "AG3_7_RV", "matrix_mtx_gz": [63458283, 74962694], "barcodes_tsv_gz": [63458277, 48477], "features_tsv_gz": [63458280, 333437]},
+      {"folder": "AG4_1_LV", "matrix_mtx_gz": [63458304, 62174222], "barcodes_tsv_gz": [63458298, 46694], "features_tsv_gz": [63458301, 333437]},
+      {"folder": "AG4_1_RV", "matrix_mtx_gz": [63458319, 114046972], "barcodes_tsv_gz": [63458313, 78539], "features_tsv_gz": [63458316, 333437]},
+      {"folder": "AG4_2_LV", "matrix_mtx_gz": [63458355, 99093787], "barcodes_tsv_gz": [63458349, 55709], "features_tsv_gz": [63458352, 333437]},
+      {"folder": "AG4_2_RV", "matrix_mtx_gz": [63458382, 91133652], "barcodes_tsv_gz": [63458376, 68928], "features_tsv_gz": [63458379, 333437]},
+      {"folder": "AG4_3_LV", "matrix_mtx_gz": [63458391, 73367148], "barcodes_tsv_gz": [63458388, 56735], "features_tsv_gz": [63458385, 333437]},
+      {"folder": "AG4_3_RV", "matrix_mtx_gz": [63458451, 113726560], "barcodes_tsv_gz": [63458445, 83352], "features_tsv_gz": [63458448, 333437]},
+      {"folder": "AG5_1_LV", "matrix_mtx_gz": [63458499, 120968164], "barcodes_tsv_gz": [63458496, 66682], "features_tsv_gz": [63458493, 333437]},
+      {"folder": "AG5_1_RV", "matrix_mtx_gz": [63458508, 101917610], "barcodes_tsv_gz": [63458502, 70745], "features_tsv_gz": [63458505, 333437]},
+      {"folder": "AG5_2_LV", "matrix_mtx_gz": [63458517, 87572518], "barcodes_tsv_gz": [63458511, 57375], "features_tsv_gz": [63458514, 333437]},
+      {"folder": "AG5_2_RV", "matrix_mtx_gz": [63458523, 65197250], "barcodes_tsv_gz": [63458526, 50519], "features_tsv_gz": [63458520, 333437]},
+      {"folder": "AG5_3_LV", "matrix_mtx_gz": [63458652, 108194495], "barcodes_tsv_gz": [63458646, 64371], "features_tsv_gz": [63458649, 333437]},
+      {"folder": "AG5_3_RV", "matrix_mtx_gz": [63458661, 96216450], "barcodes_tsv_gz": [63458655, 68732], "features_tsv_gz": [63458658, 333437]}
+    ]
+  },
+  "external_public_objects": [
+    {
+      "name": "hca_heart_global_ctl200723_freeze.h5ad",
+      "source": "HCA contributor",
+      "size_bytes": 5068859764,
+      "sha256_from_HCA_record": "80917c4e67e581ee2696691ddd4b031bf45cbc7ba77757c8a203cd88c15f9c3f",
+      "url": "https://service.azul.data.humancellatlas.org/repository/files/b30d1a16-fb04-5ac7-999f-6ce9d1de0c76?catalog=dcp60&version=2021-02-10T17%3A01%3A03.177554Z",
+      "downloaded": false
+    },
+    {
+      "name": "human-heart-10XV3.loom",
+      "source": "HCA DCP/2 Analysis",
+      "size_bytes": 3255905369,
+      "sha256_from_HCA_record": "ee31af654eb2008c8748875b117ee7eecd70ad63ed93811144fb44651144c3ca",
+      "url": "https://service.azul.data.humancellatlas.org/repository/files/b0cd671e-a918-51db-ba29-e127caf325c5?catalog=dcp60&version=2021-02-13T01%3A32%3A57.000000Z",
+      "downloaded": false
+    },
+    {
+      "name": "human-heart-10XV2.loom",
+      "source": "HCA DCP/2 Analysis",
+      "size_bytes": 4398007571,
+      "sha256_from_HCA_record": "d38c4fe7ef2bfb28f42854e447ba65929bbcd89023211c1bff0e34674bede78e",
+      "url": "https://service.azul.data.humancellatlas.org/repository/files/dc58c876-3de2-5264-b108-531d4e6c914a?catalog=dcp60&version=2021-02-15T14%3A15%3A05.000000Z",
+      "downloaded": false
+    },
+    {
+      "name": "All — Cells of the adult human heart H5AD",
+      "source": "CELLxGENE",
+      "size_bytes": 2953098273,
+      "url": "https://datasets.cellxgene.cziscience.com/49312f8c-a75a-4672-9c8a-9078acd35bdb.h5ad",
+      "raw_data_location": "raw.X",
+      "cell_and_nucleus_count": 486134,
+      "downloaded": false
+    },
+    {
+      "name": "HCA raw FASTQ inventory",
+      "file_count": 768,
+      "total_size_bytes": 3054230259834,
+      "url": "https://www.ebi.ac.uk/ena/browser/view/ERP123138",
+      "downloaded": false,
+      "note": "Unnecessary for the planned processed-count analysis; do not download under Step 8."
+    }
+  ],
+  "future_analysis_rules": {
+    "inferential_unit": "donor; nuclei and LV/RV chambers are not independent donors",
+    "paired_chambers": "Aggregate by donor or use donor-aware models/joint permutations; 54 tissues are not 54 independent replicates.",
+    "adult": "No full 14-75 exact continuous model. Six-internal-donor exact-age sensitivity omits 60-75. AG4/5 versus AG6 is descriptive only because internal/external source is perfectly confounded with group.",
+    "lifespan": "Use separate fetal and postnatal models or declared stage/group sensitivity. Never silently convert gestational weeks and postnatal years into one continuous axis or impute AG6 band midpoints.",
+    "before_outcomes": "Validate finite nonnegative integer counts, correction status, barcode/gene joins, external version/selection and Jia annotations.",
+    "eligibility": "Repeat standard gates: >=20 annotated nuclei per donor-cell type, >=6 eligible donors per model with residual degrees of freedom, and for Hellinger >=50 cross-fitted young-reference nuclei plus >=20 passing nuclei per scored donor. Ineligible units are descriptive/untestable, not null.",
+    "endpoints": "Freeze P1, donor pseudobulk, CLR composition, Hellinger, covariates and BH families separately before outcomes. Non-significance is not equivalence."
+  }
+}
