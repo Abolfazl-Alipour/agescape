@@ -1,0 +1,11 @@
+family,model_id,prior_sd,n_obs,observed_min,observed_max,prior_q001,prior_q999,observed_within_prior_998
+vector_mature_only,mature_ge_18m-profile_hellinger_centroid_mean-unadjusted-prior_0.25,0.25,480,-2.225195937100725,2.666267002402078,-19.137700643720382,19.937896264797732,True
+vector_mature_only,mature_ge_18m-profile_hellinger_centroid_mean-unadjusted-prior_0.50,0.5,480,-2.225195937100725,2.666267002402078,-19.69392014146253,21.03121923327506,True
+vector_mature_only,mature_ge_18m-profile_hellinger_centroid_mean-depth_adjusted-prior_0.25,0.25,480,-2.225195937100725,2.666267002402078,-20.35199862444803,21.36506494838091,True
+vector_mature_only,mature_ge_18m-profile_hellinger_centroid_mean-depth_adjusted-prior_0.50,0.5,480,-2.225195937100725,2.666267002402078,-20.03673160367908,20.351751299530758,True
+vector_mature_only,post_ref_gt_18m-profile_hellinger_centroid_mean-unadjusted-prior_0.50,0.5,280,-2.0897984038619457,2.177137225892193,-21.412566321935746,25.740654735024382,True
+vector_mature_only,post_ref_gt_18m-profile_hellinger_centroid_mean-depth_adjusted-prior_0.50,0.5,280,-2.0897984038619457,2.177137225892193,-19.98686324208289,18.759387964171246,True
+vector_mature_only,male_ge_24m-profile_hellinger_centroid_mean-unadjusted-prior_0.50,0.5,128,-1.8802079090692199,1.8264164144147084,-11.982418286107663,11.215053653793046,True
+vector_mature_only,male_ge_24m-profile_hellinger_centroid_mean-depth_adjusted-prior_0.50,0.5,128,-1.8802079090692199,1.8264164144147084,-14.848742970620114,15.132523852037524,True
+vector_mature_only,mature_ge_18m-pseudobulk_hellinger-unadjusted-prior_0.50,0.5,480,-1.9629766421966504,2.6197171244910566,-18.08067837986253,19.485720780043668,True
+vector_mature_only,mature_ge_18m-pseudobulk_hellinger-depth_adjusted-prior_0.50,0.5,480,-1.9629766421966504,2.6197171244910566,-18.469109768791423,18.406872552805112,True

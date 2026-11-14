@@ -105,3 +105,18 @@ def test_item5_blocker_report_clean():
     assert "GSE281219_RAW.tar" in txt
     assert "agingseurat.RData" in txt
     assert "\u2014" not in txt and "\u2013" not in txt
+
+
+def test_item6_bayesian_vector_mature_only_deliverables():
+    diag = pd.read_csv(RESULTS / "rev3-bayesian-vector-mature-only-diagnostics.csv")
+    post = pd.read_csv(RESULTS / "rev3-bayesian-vector-mature-only-posterior.csv")
+    prior = pd.read_csv(RESULTS / "rev3-bayesian-vector-mature-only-prior-predictive.csv")
+    freq = pd.read_csv(RESULTS / "rev3-bayesian-vector-mature-only-frequentist.csv")
+    assert len(diag) == 10 and bool(diag["convergence_ok"].all())
+    assert int(diag["divergences"].sum()) == 0
+    assert float(diag["max_rhat"].max()) <= 1.01
+    assert bool(prior["observed_within_prior_998"].all())
+    assert len(freq) == 10 and len(post) == 507
+    txt = (REPO / "report" / "cross-species-bayesian-vector-mature-only.md").read_text(encoding="utf-8")
+    assert "0.0389" in txt and "0.7068" in txt and "male_ge_24m" in txt
+    assert "\u2014" not in txt and "\u2013" not in txt
