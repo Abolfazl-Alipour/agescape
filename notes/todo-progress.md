@@ -1,7 +1,7 @@
 # Agescape Revision To-Do Progress Tracker
 
 Last updated: 2026-11-14
-Current item: Item 2 (IN_PROGRESS)
+Current item: Item 3 (IN_PROGRESS)
 Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/final-plos-one.pdf` are FROZEN (no edits allowed).
 
 ## Step 0 Environment and Git Verification
@@ -21,9 +21,9 @@ Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/fina
 
 | Item | Description | Status | Evidence / Output Files | Commit Hash |
 | --- | --- | --- | --- | --- |
-| Item 1 | Cell-type fractions in fly, worm, zebrafish (CLR pipeline + propeller/limma + global BH + germline caveat) | DONE | `results/rev3-composition-fly-worm-zebrafish.csv`, `results/rev3-composition-global-bh-624.csv`, `results/rev3-composition-fly-worm-zebrafish-REPORT.md` | pending commit |
-| Item 2 | Verify LACA multi-tissue naked mole rat aging atlas listing (1.2M cells, young to geriatric) | IN_PROGRESS | `results/rev3-laca-nmr-verification-REPORT.md` | pending |
-| Item 3 | Audit only: list every young vs mature comparison in the manuscript with file and line references | PENDING | `results/rev3-young-vs-mature-audit-REPORT.md` | pending |
+| Item 1 | Cell-type fractions in fly, worm, zebrafish (CLR pipeline + propeller/limma + global BH + germline caveat) | DONE | `results/rev3-composition-fly-worm-zebrafish.csv`, `results/rev3-composition-global-bh-624.csv`, `results/rev3-composition-fly-worm-zebrafish-REPORT.md` | `0485256` |
+| Item 2 | Verify LACA multi-tissue naked mole rat aging atlas listing (1.2M cells, young to geriatric) | DONE | `results/rev3-laca-nmr-verification-REPORT.md` | pending commit |
+| Item 3 | Audit only: list every young vs mature comparison in the manuscript with file and line references | IN_PROGRESS | `results/rev3-young-vs-mature-audit-REPORT.md` | pending |
 | Item 4 | Shannon entropy on mouse lung only, mice 18 months and older only (De Man et al. 2026 Methods comparison) | PENDING | `results/rev3-entropy-mature-only-mouse-lung.csv`, `results/rev3-entropy-mature-only-mouse-lung-REPORT.md` | pending |
 | Item 5 | Finish De Man et al. 2026 human lung replication (32 Baylor lungs in GSE281219; 28 IPF controls already done) | PENDING | `results/rev3-deman-replication-human-lung.csv`, `results/rev3-deman-replication-human-lung-REPORT.md` | pending |
 | Item 6 | Bayesian analysis of whole-vector drift, mature vs old only (mouse >= 18m vs 18m mature reference) | PENDING | `report/cross-species-bayesian-vector-mature-only.md`, `results/rev3-bayesian-vector-mature-only-posterior.csv`, `results/rev3-bayesian-vector-mature-only-diagnostics.csv` | pending |
