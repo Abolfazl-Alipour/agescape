@@ -1,0 +1,34 @@
+{
+  "GSE213516": {
+    "donors": 17,
+    "raw_cells": 139761,
+    "annotation_rows": 131800,
+    "annotation_rows_matched": 131601,
+    "unmatched_annotation_rows_excluded": 199,
+    "all_counts_finite_nonnegative_integer": true,
+    "all_barcode_joins_one_to_one": true,
+    "duplicate_symbol_feature_rows": 48,
+    "genome_reference_adjudication": {
+      "geo_record": "hg19",
+      "primary_methods": "GRCh38",
+      "actual_feature_columns": [
+        "Ensembl gene ID",
+        "gene symbol",
+        "feature type"
+      ],
+      "matrix_metadata": "Cell Ranger 3.0.0; no reference genome identity in released feature/matrix records",
+      "verdict": "unresolved_from_released_features",
+      "restriction": "All Zhu gene-level results are symbol-level only; no coordinate, locus, or assembly-specific claim. Ambiguous duplicate symbols are excluded from P1/targeted tests."
+    }
+  },
+  "GSE214546": {
+    "donors": 32,
+    "raw_cells": 650166,
+    "annotation_rows": 650166,
+    "annotation_rows_matched": 650166,
+    "unmatched_annotation_rows_excluded": 0,
+    "all_counts_finite_nonnegative_integer": true,
+    "all_barcode_joins_one_to_one": true,
+    "duplicate_symbol_feature_rows": 48
+  }
+}

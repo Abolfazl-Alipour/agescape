@@ -1,0 +1,24 @@
+{
+  "GSE213516": {
+    "elapsed_seconds": 47.21070456504822,
+    "max_rss_kib": 1824384,
+    "guard_memory_gb": 8,
+    "guard_min_free_gb": 30,
+    "guard_max_file_gb": 3,
+    "parallel_heavy_jobs": 1,
+    "download_files": 52,
+    "download_bytes": 895410109,
+    "donor_aggregate_cache_bytes": 192593066
+  },
+  "GSE214546": {
+    "elapsed_seconds": 55.85710024833679,
+    "max_rss_kib": 1850096,
+    "guard_memory_gb": 8,
+    "guard_min_free_gb": 30,
+    "guard_max_file_gb": 3,
+    "parallel_heavy_jobs": 1,
+    "download_files": 32,
+    "download_bytes": 2238830714,
+    "donor_aggregate_cache_bytes": 171681370
+  }
+}

@@ -1,0 +1,1395 @@
+{
+  "cohort": "GSE214546",
+  "donors": [
+    {
+      "shape_genes_by_cells": [
+        33538,
+        22592
+      ],
+      "nnz": 28471702,
+      "count_sum": 88638193.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00002",
+      "gsm": "GSM6929079",
+      "matrix_file": "GSM6929079_B001-P1_PB00002-01_labeled.h5",
+      "matrix_sha256": "66c44b9a757def25152b3703629ae80167b3ebd78765348d1ab89c097f3d04c8",
+      "raw_barcodes": 22592,
+      "annotation_rows": 22592,
+      "annotation_rows_matched": 22592,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B001",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B001-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00002-01"
+      ],
+      "feature_sha256": "66c44b9a757def25152b3703629ae80167b3ebd78765348d1ab89c097f3d04c8",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        22078
+      ],
+      "nnz": 27899694,
+      "count_sum": 84796922.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00003",
+      "gsm": "GSM6929080",
+      "matrix_file": "GSM6929080_B001-P1_PB00003-01_labeled.h5",
+      "matrix_sha256": "1220c9946da6218a8a552b9e87306a1226b814b0459e669e03f6b900a7798dc7",
+      "raw_barcodes": 22078,
+      "annotation_rows": 22078,
+      "annotation_rows_matched": 22078,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B001",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B001-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00003-01"
+      ],
+      "feature_sha256": "1220c9946da6218a8a552b9e87306a1226b814b0459e669e03f6b900a7798dc7",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20170
+      ],
+      "nnz": 30470802,
+      "count_sum": 101763794.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00004",
+      "gsm": "GSM6929082",
+      "matrix_file": "GSM6929082_B002-P1_PB00004-01_labeled.h5",
+      "matrix_sha256": "d053188cbded83cdb2c756070853323f9cfcc0c73cf6b1bffecf55deb1178356",
+      "raw_barcodes": 20170,
+      "annotation_rows": 20170,
+      "annotation_rows_matched": 20170,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B002",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B002-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00004-01"
+      ],
+      "feature_sha256": "d053188cbded83cdb2c756070853323f9cfcc0c73cf6b1bffecf55deb1178356",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        21200
+      ],
+      "nnz": 35957010,
+      "count_sum": 118312071.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00006",
+      "gsm": "GSM6929083",
+      "matrix_file": "GSM6929083_B002-P1_PB00006-01_labeled.h5",
+      "matrix_sha256": "5f1e857788008e45dab936aa55ee7da6bcbd0a7cdcf84797e86edd82a3ee3b69",
+      "raw_barcodes": 21200,
+      "annotation_rows": 21200,
+      "annotation_rows_matched": 21200,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B002",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B002-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00006-01"
+      ],
+      "feature_sha256": "5f1e857788008e45dab936aa55ee7da6bcbd0a7cdcf84797e86edd82a3ee3b69",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        18976
+      ],
+      "nnz": 29219606,
+      "count_sum": 95477025.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00010",
+      "gsm": "GSM6929111",
+      "matrix_file": "GSM6929111_B078-P2_PB00010-02_2021-08-19T17_09_29.934849811Z_labeled.h5",
+      "matrix_sha256": "829eb3e9021dc6f9c9833df3e0029668241713bc7070875c14ad5dd48b1f011b",
+      "raw_barcodes": 18976,
+      "annotation_rows": 18976,
+      "annotation_rows_matched": 18976,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B078",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B078-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00010-02"
+      ],
+      "feature_sha256": "829eb3e9021dc6f9c9833df3e0029668241713bc7070875c14ad5dd48b1f011b",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19960
+      ],
+      "nnz": 32025184,
+      "count_sum": 103087318.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00015",
+      "gsm": "GSM6929084",
+      "matrix_file": "GSM6929084_B002-P1_PB00015-01_labeled.h5",
+      "matrix_sha256": "bc902c3a3a201b9d445b036f49f98e2d629c4603a03765d248c241e75968938d",
+      "raw_barcodes": 19960,
+      "annotation_rows": 19960,
+      "annotation_rows_matched": 19960,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B002",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B002-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00015-01"
+      ],
+      "feature_sha256": "bc902c3a3a201b9d445b036f49f98e2d629c4603a03765d248c241e75968938d",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        18547
+      ],
+      "nnz": 29229184,
+      "count_sum": 99171201.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00022",
+      "gsm": "GSM6929081",
+      "matrix_file": "GSM6929081_B002-P2_PB00022-01_labeled.h5",
+      "matrix_sha256": "648607e1511a8717139b890914d28fc059facc7204ed4f071f20e15b4212c3ff",
+      "raw_barcodes": 18547,
+      "annotation_rows": 18547,
+      "annotation_rows_matched": 18547,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B002",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B002-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00022-01"
+      ],
+      "feature_sha256": "648607e1511a8717139b890914d28fc059facc7204ed4f071f20e15b4212c3ff",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20854
+      ],
+      "nnz": 32917261,
+      "count_sum": 108783389.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00023",
+      "gsm": "GSM6929112",
+      "matrix_file": "GSM6929112_B078-P2_PB00023-05_2021-08-19T17_09_29.934849811Z_labeled.h5",
+      "matrix_sha256": "b7b4de0cf71364338fe155e3243f27a80defa4f54bf9b5b99c913126d0e8a869",
+      "raw_barcodes": 20854,
+      "annotation_rows": 20854,
+      "annotation_rows_matched": 20854,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B078",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B078-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00023-05"
+      ],
+      "feature_sha256": "b7b4de0cf71364338fe155e3243f27a80defa4f54bf9b5b99c913126d0e8a869",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        18346
+      ],
+      "nnz": 26767935,
+      "count_sum": 80685167.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00026",
+      "gsm": "GSM6929113",
+      "matrix_file": "GSM6929113_B078-P2_PB00026-05_2021-08-19T17_09_29.934849811Z_labeled.h5",
+      "matrix_sha256": "b59276ad129a3a21e34316685ba564753fe5506a6ae661f9599343fb79f7756e",
+      "raw_barcodes": 18346,
+      "annotation_rows": 18346,
+      "annotation_rows_matched": 18346,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B078",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B078-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00026-05"
+      ],
+      "feature_sha256": "b59276ad129a3a21e34316685ba564753fe5506a6ae661f9599343fb79f7756e",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        26514
+      ],
+      "nnz": 39077940,
+      "count_sum": 120165108.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00030",
+      "gsm": "GSM6929085",
+      "matrix_file": "GSM6929085_B004-P2_PB00030-03_labeled.h5",
+      "matrix_sha256": "63f2a8098b9ddb9ef78c73a247f029407ebd7355d10dc2729a8f8ad05b5a17c6",
+      "raw_barcodes": 26514,
+      "annotation_rows": 26514,
+      "annotation_rows_matched": 26514,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B004",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B004-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00030-03"
+      ],
+      "feature_sha256": "63f2a8098b9ddb9ef78c73a247f029407ebd7355d10dc2729a8f8ad05b5a17c6",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20444
+      ],
+      "nnz": 31004885,
+      "count_sum": 100825162.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00031",
+      "gsm": "GSM6929114",
+      "matrix_file": "GSM6929114_B078-P2_PB00031-05_2021-08-19T17_09_29.934849811Z_labeled.h5",
+      "matrix_sha256": "07ba356cd82aaabbac67530a50dfe62e64de0c3cced4d089be98d3568b4a2b44",
+      "raw_barcodes": 20444,
+      "annotation_rows": 20444,
+      "annotation_rows_matched": 20444,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B078",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B078-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00031-05"
+      ],
+      "feature_sha256": "07ba356cd82aaabbac67530a50dfe62e64de0c3cced4d089be98d3568b4a2b44",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19563
+      ],
+      "nnz": 34813736,
+      "count_sum": 109651568.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00041",
+      "gsm": "GSM6929086",
+      "matrix_file": "GSM6929086_B007-P1_PB00041-01_2020-06-24T03_16_48.417213376Z_labeled.h5",
+      "matrix_sha256": "081f7346bb4ab2ba02d8aa6d22a993268e52878024ba7ca925e87ce569251625",
+      "raw_barcodes": 19563,
+      "annotation_rows": 19563,
+      "annotation_rows_matched": 19563,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B007",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B007-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00041-01"
+      ],
+      "feature_sha256": "081f7346bb4ab2ba02d8aa6d22a993268e52878024ba7ca925e87ce569251625",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        26333
+      ],
+      "nnz": 42423989,
+      "count_sum": 134416406.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00352",
+      "gsm": "GSM6929110",
+      "matrix_file": "GSM6929110_B078-P1_PB00352-04_2021-08-15T20_26_02.548957446Z_labeled.h5",
+      "matrix_sha256": "4e061a5484361a4a2b7639d15368e7cf3f642fd30c960fdc0a02f673b720108b",
+      "raw_barcodes": 26333,
+      "annotation_rows": 26333,
+      "annotation_rows_matched": 26333,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B078",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B078-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00352-04"
+      ],
+      "feature_sha256": "4e061a5484361a4a2b7639d15368e7cf3f642fd30c960fdc0a02f673b720108b",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19636
+      ],
+      "nnz": 38352961,
+      "count_sum": 129529773.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00363",
+      "gsm": "GSM6929089",
+      "matrix_file": "GSM6929089_B040-P2_PB00363-01_2021-03-24T00_48_50.255094117Z_labeled.h5",
+      "matrix_sha256": "ddc0e3ee64570f61b4f226792fd8b737ccaa26efbb099e006828b181731c3991",
+      "raw_barcodes": 19636,
+      "annotation_rows": 19636,
+      "annotation_rows_matched": 19636,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B040",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B040-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00363-01"
+      ],
+      "feature_sha256": "ddc0e3ee64570f61b4f226792fd8b737ccaa26efbb099e006828b181731c3991",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        21351
+      ],
+      "nnz": 41287334,
+      "count_sum": 132056582.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00366",
+      "gsm": "GSM6611359",
+      "matrix_file": "GSM6611359_B039-P1_PB00366-01_2020-12-13T18_58_42.148340626Z_labeled.h5",
+      "matrix_sha256": "652c706221e9dd4a6691d372ec229549cfe411719dde9fed86811446181752c8",
+      "raw_barcodes": 21351,
+      "annotation_rows": 21351,
+      "annotation_rows_matched": 21351,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B039",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B039-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00366-01"
+      ],
+      "feature_sha256": "652c706221e9dd4a6691d372ec229549cfe411719dde9fed86811446181752c8",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        17129
+      ],
+      "nnz": 33396897,
+      "count_sum": 104951082.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00384",
+      "gsm": "GSM6929087",
+      "matrix_file": "GSM6929087_B040-P1_PB00384-01_2021-02-14T05_03_10.129208213Z_labeled.h5",
+      "matrix_sha256": "8227b03d4f9ec34bc78810022fd7be9b1a913603d6363b39fc0e4437cb787ecf",
+      "raw_barcodes": 17129,
+      "annotation_rows": 17129,
+      "annotation_rows_matched": 17129,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B040",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B040-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00384-01"
+      ],
+      "feature_sha256": "8227b03d4f9ec34bc78810022fd7be9b1a913603d6363b39fc0e4437cb787ecf",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        16191
+      ],
+      "nnz": 30566429,
+      "count_sum": 104155809.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00386",
+      "gsm": "GSM6929091",
+      "matrix_file": "GSM6929091_B041-P2_PB00386-01_2021-02-12T20_13_57.744090035Z_labeled.h5",
+      "matrix_sha256": "6c9e14b860c42c9de64c23295d846d84e0b18c0399f99481c04183a4b5c0be62",
+      "raw_barcodes": 16191,
+      "annotation_rows": 16191,
+      "annotation_rows_matched": 16191,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B041",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B041-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00386-01"
+      ],
+      "feature_sha256": "6c9e14b860c42c9de64c23295d846d84e0b18c0399f99481c04183a4b5c0be62",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19710
+      ],
+      "nnz": 38858464,
+      "count_sum": 118560788.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00388",
+      "gsm": "GSM6929088",
+      "matrix_file": "GSM6929088_B040-P1_PB00388-01_2021-02-14T05_03_10.129208213Z_labeled.h5",
+      "matrix_sha256": "fc699b064b99961255dcd382570689af836fa4cdee5ec6460cd77977d9ed092d",
+      "raw_barcodes": 19710,
+      "annotation_rows": 19710,
+      "annotation_rows_matched": 19710,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B040",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B040-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00388-01"
+      ],
+      "feature_sha256": "fc699b064b99961255dcd382570689af836fa4cdee5ec6460cd77977d9ed092d",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        17602
+      ],
+      "nnz": 35418377,
+      "count_sum": 116371145.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00507",
+      "gsm": "GSM6929090",
+      "matrix_file": "GSM6929090_B041-P1_PB00507-01_2021-02-11T20_48_07.416042815Z_labeled.h5",
+      "matrix_sha256": "fdb9522e8e70fd9b8bcd844529b9f70b383ae3f0f80cb190517a375b536f7d25",
+      "raw_barcodes": 17602,
+      "annotation_rows": 17602,
+      "annotation_rows_matched": 17602,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B041",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B041-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00507-01"
+      ],
+      "feature_sha256": "fdb9522e8e70fd9b8bcd844529b9f70b383ae3f0f80cb190517a375b536f7d25",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        18171
+      ],
+      "nnz": 34514840,
+      "count_sum": 109938079.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00537",
+      "gsm": "GSM6929095",
+      "matrix_file": "GSM6929095_B046-P1_PB00537-01_2021-02-24T00_12_47.912386239Z_labeled.h5",
+      "matrix_sha256": "75ba572ff8479b70e1c1ed04fe1ac95e1066a11306a179fa1b4e26b4903b751d",
+      "raw_barcodes": 18171,
+      "annotation_rows": 18171,
+      "annotation_rows_matched": 18171,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B046",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B046-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00537-01"
+      ],
+      "feature_sha256": "75ba572ff8479b70e1c1ed04fe1ac95e1066a11306a179fa1b4e26b4903b751d",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19289
+      ],
+      "nnz": 34414823,
+      "count_sum": 110887008.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00539",
+      "gsm": "GSM6929101",
+      "matrix_file": "GSM6929101_B048-P2_PB00539-01_2021-02-26T23_24_20.340902222Z_labeled.h5",
+      "matrix_sha256": "c7e555236fde66452f59f89b7af684f41822633727cf06282f4054bb3b308280",
+      "raw_barcodes": 19289,
+      "annotation_rows": 19289,
+      "annotation_rows_matched": 19289,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B048",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B048-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00539-01"
+      ],
+      "feature_sha256": "c7e555236fde66452f59f89b7af684f41822633727cf06282f4054bb3b308280",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20665
+      ],
+      "nnz": 30960618,
+      "count_sum": 98746336.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00552",
+      "gsm": "GSM6929094",
+      "matrix_file": "GSM6929094_B045-P1_PB00552-01_2021-02-20T17_54_07.896349649Z_labeled.h5",
+      "matrix_sha256": "984c4c38297718fdd91b051ead6f873f408f8f681c8b1bf7f28cb1d9ad6866c7",
+      "raw_barcodes": 20665,
+      "annotation_rows": 20665,
+      "annotation_rows_matched": 20665,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B045",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B045-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00552-01"
+      ],
+      "feature_sha256": "984c4c38297718fdd91b051ead6f873f408f8f681c8b1bf7f28cb1d9ad6866c7",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        18189
+      ],
+      "nnz": 32792086,
+      "count_sum": 100951316.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00562",
+      "gsm": "GSM6929096",
+      "matrix_file": "GSM6929096_B046-P1_PB00562-01_2021-02-24T00_12_47.912386239Z_labeled.h5",
+      "matrix_sha256": "bf54e6e98d1c5d099470aad35de7c785f95d69084deb55d7011afe17ab7b31b4",
+      "raw_barcodes": 18189,
+      "annotation_rows": 18189,
+      "annotation_rows_matched": 18189,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B046",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B046-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00562-01"
+      ],
+      "feature_sha256": "bf54e6e98d1c5d099470aad35de7c785f95d69084deb55d7011afe17ab7b31b4",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20651
+      ],
+      "nnz": 32869129,
+      "count_sum": 98407222.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00566",
+      "gsm": "GSM6929103",
+      "matrix_file": "GSM6929103_B053-P1_PB00566-01_2021-03-16T16_53_54.504538818Z_labeled.h5",
+      "matrix_sha256": "8579b6d05c6e951189a1ba543192b07a8f49f0251e2073e6e2588af608dc4488",
+      "raw_barcodes": 20651,
+      "annotation_rows": 20651,
+      "annotation_rows_matched": 20651,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B053",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B053-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00566-01"
+      ],
+      "feature_sha256": "8579b6d05c6e951189a1ba543192b07a8f49f0251e2073e6e2588af608dc4488",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20249
+      ],
+      "nnz": 31986666,
+      "count_sum": 102457128.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00569",
+      "gsm": "GSM6929098",
+      "matrix_file": "GSM6929098_B047-P2_PB00569-01_2021-02-25T00_07_50.971832932Z_labeled.h5",
+      "matrix_sha256": "0e49a473211775b3d869c0024d09de213bb20c86ce2fb9b405ff6e24eb502df9",
+      "raw_barcodes": 20249,
+      "annotation_rows": 20249,
+      "annotation_rows_matched": 20249,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B047",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B047-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00569-01"
+      ],
+      "feature_sha256": "0e49a473211775b3d869c0024d09de213bb20c86ce2fb9b405ff6e24eb502df9",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20362
+      ],
+      "nnz": 36064506,
+      "count_sum": 116904707.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00510",
+      "gsm": "GSM6929092",
+      "matrix_file": "GSM6929092_B043-P1_PB00510-01_2021-01-28T01_04_59.754710921Z_labeled.h5",
+      "matrix_sha256": "2862794ede6816660cd2b5cbe0fb9b72af687e0fe49bd879e2e30caff8552505",
+      "raw_barcodes": 20362,
+      "annotation_rows": 20362,
+      "annotation_rows_matched": 20362,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B043",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B043-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00510-01"
+      ],
+      "feature_sha256": "2862794ede6816660cd2b5cbe0fb9b72af687e0fe49bd879e2e30caff8552505",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        17079
+      ],
+      "nnz": 25924064,
+      "count_sum": 79480265.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00530",
+      "gsm": "GSM6929093",
+      "matrix_file": "GSM6929093_B045-P1_PB00530-01_2021-02-20T17_54_07.896349649Z_labeled.h5",
+      "matrix_sha256": "b64fb00a3b842aa3713755cab58d08a62c3dffa970f499cfcbea06a5446a711b",
+      "raw_barcodes": 17079,
+      "annotation_rows": 17079,
+      "annotation_rows_matched": 17079,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B045",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B045-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00530-01"
+      ],
+      "feature_sha256": "b64fb00a3b842aa3713755cab58d08a62c3dffa970f499cfcbea06a5446a711b",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        17732
+      ],
+      "nnz": 35163101,
+      "count_sum": 123898000.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00356",
+      "gsm": "GSM6929097",
+      "matrix_file": "GSM6929097_B046-P2_PB00356-01_2021-02-24T00_13_26.04313294Z_labeled.h5",
+      "matrix_sha256": "48560600a01d036b3c2f07e7d7d072f7ba13f3c291223c9617fc5d47addeb396",
+      "raw_barcodes": 17732,
+      "annotation_rows": 17732,
+      "annotation_rows_matched": 17732,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B046",
+      "pool_from_filename": "P2",
+      "h5_pool_values": [
+        "B046-P2"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00356-01"
+      ],
+      "feature_sha256": "48560600a01d036b3c2f07e7d7d072f7ba13f3c291223c9617fc5d47addeb396",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        19240
+      ],
+      "nnz": 35336063,
+      "count_sum": 110204179.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00568",
+      "gsm": "GSM6929099",
+      "matrix_file": "GSM6929099_B048-P1_PB00568-01_2021-03-01T17_06_41.838698747Z_labeled.h5",
+      "matrix_sha256": "e2a30bb4d7fcf5c089f6fab1434f00cb5caddecbc74164a67ce539dc58caab38",
+      "raw_barcodes": 19240,
+      "annotation_rows": 19240,
+      "annotation_rows_matched": 19240,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B048",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B048-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00568-01"
+      ],
+      "feature_sha256": "e2a30bb4d7fcf5c089f6fab1434f00cb5caddecbc74164a67ce539dc58caab38",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        20289
+      ],
+      "nnz": 38879061,
+      "count_sum": 122022343.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00582",
+      "gsm": "GSM6929100",
+      "matrix_file": "GSM6929100_B048-P1_PB00582-01_2021-03-01T17_06_41.838698747Z_labeled.h5",
+      "matrix_sha256": "3dbf4df652c0b01290114a6b687e244342599f9f2121f819a9e06de5b828ea68",
+      "raw_barcodes": 20289,
+      "annotation_rows": 20289,
+      "annotation_rows_matched": 20289,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B048",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B048-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00582-01"
+      ],
+      "feature_sha256": "3dbf4df652c0b01290114a6b687e244342599f9f2121f819a9e06de5b828ea68",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        28315
+      ],
+      "nnz": 42460592,
+      "count_sum": 127381223.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00342",
+      "gsm": "GSM6929102",
+      "matrix_file": "GSM6929102_B050-P1_PB00342-01_2021-02-28T21_06_52.68159788Z_labeled.h5",
+      "matrix_sha256": "f8d083d0b39f31112af1be2dcf01f33aac4893eb84295bb2c16721a27bf6c06b",
+      "raw_barcodes": 28315,
+      "annotation_rows": 28315,
+      "annotation_rows_matched": 28315,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B050",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B050-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00342-01"
+      ],
+      "feature_sha256": "f8d083d0b39f31112af1be2dcf01f33aac4893eb84295bb2c16721a27bf6c06b",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    },
+    {
+      "shape_genes_by_cells": [
+        33538,
+        22739
+      ],
+      "nnz": 30068299,
+      "count_sum": 89699853.0,
+      "all_stored_counts_finite_nonnegative_integer": true,
+      "donor": "PB00561",
+      "gsm": "GSM6929106",
+      "matrix_file": "GSM6929106_B054-P1_PB00561-01_2022-06-28T21_54_05.984884065Z_labeled.h5",
+      "matrix_sha256": "94e0c880e4e4660d1ec6019976bbc41f092860dec5a74a499668dd657b518c8f",
+      "raw_barcodes": 22739,
+      "annotation_rows": 22739,
+      "annotation_rows_matched": 22739,
+      "annotation_coverage_of_raw": 1.0,
+      "unmatched_raw_barcodes_excluded": 0,
+      "barcode_join_one_to_one": true,
+      "batch_from_filename": "B054",
+      "pool_from_filename": "P1",
+      "h5_pool_values": [
+        "B054-P1"
+      ],
+      "h5_pbmc_sample_values": [
+        "PB00561-01"
+      ],
+      "feature_sha256": "94e0c880e4e4660d1ec6019976bbc41f092860dec5a74a499668dd657b518c8f",
+      "released_labels": [
+        "B cell progenitor",
+        "CD14+ Monocytes",
+        "CD16+ Monocytes",
+        "CD4 Memory",
+        "CD4 Naive",
+        "CD8 Naive",
+        "CD8 effector",
+        "Dendritic cell",
+        "Double negative T cell",
+        "NK cell",
+        "Platelets",
+        "pDC",
+        "pre-B cell"
+      ]
+    }
+  ],
+  "all_donor_features_identical": true,
+  "unique_feature_ids": 33538,
+  "unique_gene_symbols": 33514,
+  "duplicate_symbol_feature_rows": 48,
+  "cache_path": "/home/reza/projects/agescape-revision-data/pbmc/interim/GSE214546/donor-aggregates.npz",
+  "cache_bytes": 171681370,
+  "resource_use": {
+    "elapsed_seconds": 55.85710024833679,
+    "max_rss_kib": 1850096,
+    "guard_memory_gb": 8,
+    "guard_min_free_gb": 30,
+    "guard_max_file_gb": 3,
+    "parallel_heavy_jobs": 1
+  }
+}

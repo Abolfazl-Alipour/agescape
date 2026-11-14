@@ -1,0 +1,14 @@
+cell_type,common_cell_type,donors_observed,cells
+B cell progenitor,,32,19174
+CD14+ Monocytes,,32,118909
+CD16+ Monocytes,non-classical monocytes,32,20414
+CD4 Memory,,32,143078
+CD4 Naive,,32,143898
+CD8 Naive,CD8 naive T,32,28118
+CD8 effector,,32,69656
+Dendritic cell,dendritic cells,32,5177
+Double negative T cell,,32,14082
+NK cell,NK,32,50133
+Platelets,,32,3111
+pDC,,32,2497
+pre-B cell,,32,31919

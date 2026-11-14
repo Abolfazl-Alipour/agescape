@@ -1,0 +1,42 @@
+cell_type,common_cell_type,donors_observed,cells
+ABC,,17,346
+CD14-MC,,17,19981
+CD14-MC-PPBP,,17,1433
+CD16-MC,,17,4065
+CD4-Naive,,17,11809
+CD4-Naive-NECTIN1,,16,116
+CD4-Tem,,17,3270
+CD4-Tm,,17,10931
+CD4-Treg,,17,1908
+CD8-CTL,,17,9426
+CD8-Naive,CD8 naive T,17,5284
+CD8-Tem,,17,7571
+Intermed-MC,,17,3373
+Megakaryocytes,,17,4730
+Memory-B-CRIP1,,17,3769
+Memory-B-IL32,,17,969
+NK-FCER1G,,17,11829
+NK-GZMH,,17,16667
+NK-GZMK,,17,3806
+NK-IL7R,,17,1124
+NK-S100A2,,17,440
+NK-SELL,,17,786
+Naive-B,,17,5641
+Naive-B-NRGN,,17,354
+Plasma,,14,221
+RBC,,13,96
+cDC,,17,1083
+pDC,,17,573
+B cell progenitor,,32,19174
+CD14+ Monocytes,,32,118909
+CD16+ Monocytes,non-classical monocytes,32,20414
+CD4 Memory,,32,143078
+CD4 Naive,,32,143898
+CD8 Naive,CD8 naive T,32,28118
+CD8 effector,,32,69656
+Dendritic cell,dendritic cells,32,5177
+Double negative T cell,,32,14082
+NK cell,NK,32,50133
+Platelets,,32,3111
+pDC,,32,2497
+pre-B cell,,32,31919

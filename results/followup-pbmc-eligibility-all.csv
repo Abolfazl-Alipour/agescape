@@ -1,0 +1,247 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors,n_cells,n_young,n_old,eligible,reason,n_donors_qc20,n_young_reference_donors,n_scored_donors,min_cross_fitted_reference_cells
+GSE213516,eligibility,ABC,,strict_group,primary,4.0,172.0,3.0,1.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,ABC,,atlas_group,primary,5.0,204.0,3.0,2.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,ABC,,exact_age,primary,6.0,232.0,,,True,pass,,,,
+GSE213516,eligibility,CD14-MC,,strict_group,primary,10.0,10853.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD14-MC,,atlas_group,primary,12.0,12771.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD14-MC,,exact_age,primary,17.0,19981.0,,,True,pass,,,,
+GSE213516,eligibility,CD14-MC-PPBP,,strict_group,primary,10.0,643.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD14-MC-PPBP,,atlas_group,primary,12.0,946.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD14-MC-PPBP,,exact_age,primary,17.0,1433.0,,,True,pass,,,,
+GSE213516,eligibility,CD16-MC,non-classical monocytes,strict_group,primary,10.0,2191.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD16-MC,non-classical monocytes,atlas_group,primary,12.0,2641.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD16-MC,non-classical monocytes,exact_age,primary,17.0,4065.0,,,True,pass,,,,
+GSE213516,eligibility,CD4-Naive,,strict_group,primary,10.0,7120.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD4-Naive,,atlas_group,primary,12.0,8605.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Naive,,exact_age,primary,17.0,11809.0,,,True,pass,,,,
+GSE213516,eligibility,CD4-Naive-NECTIN1,,strict_group,primary,0.0,0.0,0.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD4-Naive-NECTIN1,,atlas_group,primary,0.0,0.0,0.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD4-Naive-NECTIN1,,exact_age,primary,0.0,0.0,,,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD4-Tem,,strict_group,primary,10.0,1920.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD4-Tem,,atlas_group,primary,12.0,2291.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Tem,,exact_age,primary,17.0,3270.0,,,True,pass,,,,
+GSE213516,eligibility,CD4-Tm,,strict_group,primary,10.0,6100.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD4-Tm,,atlas_group,primary,12.0,7835.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Tm,,exact_age,primary,17.0,10931.0,,,True,pass,,,,
+GSE213516,eligibility,CD4-Treg,,strict_group,primary,8.0,930.0,4.0,4.0,True,pass,,,,
+GSE213516,eligibility,CD4-Treg,,atlas_group,primary,10.0,1225.0,4.0,6.0,True,pass,,,,
+GSE213516,eligibility,CD4-Treg,,exact_age,primary,14.0,1865.0,,,True,pass,,,,
+GSE213516,eligibility,CD8-CTL,,strict_group,primary,10.0,5808.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD8-CTL,,atlas_group,primary,12.0,7145.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD8-CTL,,exact_age,primary,17.0,9426.0,,,True,pass,,,,
+GSE213516,eligibility,CD8-Naive,CD8 naive T,strict_group,primary,10.0,2684.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD8-Naive,CD8 naive T,atlas_group,primary,12.0,3657.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD8-Naive,CD8 naive T,exact_age,primary,17.0,5284.0,,,True,pass,,,,
+GSE213516,eligibility,CD8-Tem,,strict_group,primary,10.0,4266.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,CD8-Tem,,atlas_group,primary,12.0,5338.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD8-Tem,,exact_age,primary,17.0,7571.0,,,True,pass,,,,
+GSE213516,eligibility,Intermed-MC,,strict_group,primary,10.0,2047.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,Intermed-MC,,atlas_group,primary,12.0,2396.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,Intermed-MC,,exact_age,primary,17.0,3373.0,,,True,pass,,,,
+GSE213516,eligibility,Megakaryocytes,,strict_group,primary,10.0,2254.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,Megakaryocytes,,atlas_group,primary,12.0,2994.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,Megakaryocytes,,exact_age,primary,17.0,4730.0,,,True,pass,,,,
+GSE213516,eligibility,Memory-B-CRIP1,,strict_group,primary,10.0,2676.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-CRIP1,,atlas_group,primary,12.0,3082.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-CRIP1,,exact_age,primary,17.0,3769.0,,,True,pass,,,,
+GSE213516,eligibility,Memory-B-IL32,,strict_group,primary,9.0,623.0,4.0,5.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-IL32,,atlas_group,primary,11.0,745.0,4.0,7.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-IL32,,exact_age,primary,15.0,948.0,,,True,pass,,,,
+GSE213516,eligibility,NK-FCER1G,,strict_group,primary,10.0,7188.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,NK-FCER1G,,atlas_group,primary,12.0,8323.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-FCER1G,,exact_age,primary,17.0,11829.0,,,True,pass,,,,
+GSE213516,eligibility,NK-GZMH,,strict_group,primary,10.0,11081.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMH,,atlas_group,primary,12.0,12322.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMH,,exact_age,primary,17.0,16667.0,,,True,pass,,,,
+GSE213516,eligibility,NK-GZMK,,strict_group,primary,10.0,2169.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMK,,atlas_group,primary,12.0,2679.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMK,,exact_age,primary,17.0,3806.0,,,True,pass,,,,
+GSE213516,eligibility,NK-IL7R,,strict_group,primary,9.0,601.0,4.0,5.0,True,pass,,,,
+GSE213516,eligibility,NK-IL7R,,atlas_group,primary,11.0,767.0,4.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-IL7R,,exact_age,primary,16.0,1112.0,,,True,pass,,,,
+GSE213516,eligibility,NK-S100A2,,strict_group,primary,8.0,211.0,4.0,4.0,True,pass,,,,
+GSE213516,eligibility,NK-S100A2,,atlas_group,primary,10.0,287.0,4.0,6.0,True,pass,,,,
+GSE213516,eligibility,NK-S100A2,,exact_age,primary,15.0,414.0,,,True,pass,,,,
+GSE213516,eligibility,NK-SELL,,strict_group,primary,8.0,449.0,4.0,4.0,True,pass,,,,
+GSE213516,eligibility,NK-SELL,,atlas_group,primary,10.0,548.0,4.0,6.0,True,pass,,,,
+GSE213516,eligibility,NK-SELL,,exact_age,primary,14.0,752.0,,,True,pass,,,,
+GSE213516,eligibility,Naive-B,,strict_group,primary,10.0,3954.0,5.0,5.0,True,pass,,,,
+GSE213516,eligibility,Naive-B,,atlas_group,primary,12.0,4642.0,5.0,7.0,True,pass,,,,
+GSE213516,eligibility,Naive-B,,exact_age,primary,17.0,5641.0,,,True,pass,,,,
+GSE213516,eligibility,Naive-B-NRGN,,strict_group,primary,3.0,148.0,2.0,1.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Naive-B-NRGN,,atlas_group,primary,4.0,172.0,2.0,2.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Naive-B-NRGN,,exact_age,primary,5.0,220.0,,,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Plasma,,strict_group,primary,4.0,107.0,2.0,2.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Plasma,,atlas_group,primary,5.0,134.0,2.0,3.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Plasma,,exact_age,primary,6.0,156.0,,,True,pass,,,,
+GSE213516,eligibility,RBC,,strict_group,primary,1.0,55.0,1.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,RBC,,atlas_group,primary,1.0,55.0,1.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,RBC,,exact_age,primary,1.0,55.0,,,False,donor_or_group_floor,,,,
+GSE213516,eligibility,cDC,,strict_group,primary,9.0,568.0,4.0,5.0,True,pass,,,,
+GSE213516,eligibility,cDC,,atlas_group,primary,11.0,692.0,4.0,7.0,True,pass,,,,
+GSE213516,eligibility,cDC,,exact_age,primary,16.0,1065.0,,,True,pass,,,,
+GSE213516,eligibility,pDC,,strict_group,primary,6.0,251.0,3.0,3.0,True,pass,,,,
+GSE213516,eligibility,pDC,,atlas_group,primary,8.0,298.0,3.0,5.0,True,pass,,,,
+GSE213516,eligibility,pDC,,exact_age,primary,10.0,484.0,,,True,pass,,,,
+GSE214546,eligibility,B cell progenitor,,strict_group,primary,23.0,13604.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,B cell progenitor,,atlas_group,primary,25.0,14200.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,B cell progenitor,,exact_age,primary,32.0,19174.0,,,True,pass,,,,
+GSE214546,eligibility,CD14+ Monocytes,,strict_group,primary,23.0,87957.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD14+ Monocytes,,atlas_group,primary,25.0,93592.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD14+ Monocytes,,exact_age,primary,32.0,118909.0,,,True,pass,,,,
+GSE214546,eligibility,CD16+ Monocytes,non-classical monocytes,strict_group,primary,23.0,14727.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD16+ Monocytes,non-classical monocytes,atlas_group,primary,25.0,15602.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD16+ Monocytes,non-classical monocytes,exact_age,primary,32.0,20414.0,,,True,pass,,,,
+GSE214546,eligibility,CD4 Memory,,strict_group,primary,23.0,97411.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD4 Memory,,atlas_group,primary,25.0,109327.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD4 Memory,,exact_age,primary,32.0,143078.0,,,True,pass,,,,
+GSE214546,eligibility,CD4 Naive,,strict_group,primary,23.0,103550.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD4 Naive,,atlas_group,primary,25.0,113162.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD4 Naive,,exact_age,primary,32.0,143898.0,,,True,pass,,,,
+GSE214546,eligibility,CD8 Naive,CD8 naive T,strict_group,primary,23.0,22752.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD8 Naive,CD8 naive T,atlas_group,primary,25.0,23622.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD8 Naive,CD8 naive T,exact_age,primary,32.0,28118.0,,,True,pass,,,,
+GSE214546,eligibility,CD8 effector,,strict_group,primary,23.0,47960.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,CD8 effector,,atlas_group,primary,25.0,50705.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD8 effector,,exact_age,primary,32.0,69656.0,,,True,pass,,,,
+GSE214546,eligibility,Dendritic cell,dendritic cells,strict_group,primary,23.0,3640.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,Dendritic cell,dendritic cells,atlas_group,primary,25.0,3944.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,Dendritic cell,dendritic cells,exact_age,primary,32.0,5177.0,,,True,pass,,,,
+GSE214546,eligibility,Double negative T cell,,strict_group,primary,23.0,11695.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,Double negative T cell,,atlas_group,primary,25.0,12141.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,Double negative T cell,,exact_age,primary,32.0,14082.0,,,True,pass,,,,
+GSE214546,eligibility,NK cell,NK,strict_group,primary,23.0,35227.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,NK cell,NK,atlas_group,primary,25.0,40361.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,NK cell,NK,exact_age,primary,32.0,50133.0,,,True,pass,,,,
+GSE214546,eligibility,Platelets,,strict_group,primary,22.0,2296.0,15.0,7.0,True,pass,,,,
+GSE214546,eligibility,Platelets,,atlas_group,primary,24.0,2590.0,15.0,9.0,True,pass,,,,
+GSE214546,eligibility,Platelets,,exact_age,primary,31.0,3099.0,,,True,pass,,,,
+GSE214546,eligibility,pDC,,strict_group,primary,23.0,1969.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,pDC,,atlas_group,primary,25.0,2055.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,pDC,,exact_age,primary,32.0,2497.0,,,True,pass,,,,
+GSE214546,eligibility,pre-B cell,,strict_group,primary,23.0,20999.0,16.0,7.0,True,pass,,,,
+GSE214546,eligibility,pre-B cell,,atlas_group,primary,25.0,23097.0,16.0,9.0,True,pass,,,,
+GSE214546,eligibility,pre-B cell,,exact_age,primary,32.0,31919.0,,,True,pass,,,,
+GSE213516,Hellinger_eligibility,ABC,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,4.0,3.0,4.0,59.0
+GSE213516,Hellinger_eligibility,ABC,,atlas_group,primary,,,,,False,young_reference_or_scored_donor_floor,5.0,3.0,5.0,59.0
+GSE213516,Hellinger_eligibility,ABC,,exact_age,primary,,,,,True,pass,6.0,3.0,6.0,59.0
+GSE213516,Hellinger_eligibility,CD14-MC,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,3518.0
+GSE213516,Hellinger_eligibility,CD14-MC,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,3518.0
+GSE213516,Hellinger_eligibility,CD14-MC,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,3518.0
+GSE213516,Hellinger_eligibility,CD14-MC-PPBP,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,172.0
+GSE213516,Hellinger_eligibility,CD14-MC-PPBP,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,172.0
+GSE213516,Hellinger_eligibility,CD14-MC-PPBP,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,172.0
+GSE213516,Hellinger_eligibility,CD16-MC,non-classical monocytes,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,570.0
+GSE213516,Hellinger_eligibility,CD16-MC,non-classical monocytes,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,570.0
+GSE213516,Hellinger_eligibility,CD16-MC,non-classical monocytes,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,570.0
+GSE213516,Hellinger_eligibility,CD4-Naive,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,2632.0
+GSE213516,Hellinger_eligibility,CD4-Naive,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,2632.0
+GSE213516,Hellinger_eligibility,CD4-Naive,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,2632.0
+GSE213516,Hellinger_eligibility,CD4-Naive-NECTIN1,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,0.0,0.0,0.0,0.0
+GSE213516,Hellinger_eligibility,CD4-Naive-NECTIN1,,atlas_group,primary,,,,,False,young_reference_or_scored_donor_floor,0.0,0.0,0.0,0.0
+GSE213516,Hellinger_eligibility,CD4-Naive-NECTIN1,,exact_age,primary,,,,,False,young_reference_or_scored_donor_floor,0.0,0.0,0.0,0.0
+GSE213516,Hellinger_eligibility,CD4-Tem,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,729.0
+GSE213516,Hellinger_eligibility,CD4-Tem,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,729.0
+GSE213516,Hellinger_eligibility,CD4-Tem,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,729.0
+GSE213516,Hellinger_eligibility,CD4-Tm,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,2181.0
+GSE213516,Hellinger_eligibility,CD4-Tm,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,2181.0
+GSE213516,Hellinger_eligibility,CD4-Tm,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,2181.0
+GSE213516,Hellinger_eligibility,CD4-Treg,,strict_group,primary,,,,,True,pass,8.0,4.0,8.0,320.0
+GSE213516,Hellinger_eligibility,CD4-Treg,,atlas_group,primary,,,,,True,pass,10.0,4.0,10.0,320.0
+GSE213516,Hellinger_eligibility,CD4-Treg,,exact_age,primary,,,,,True,pass,14.0,4.0,14.0,320.0
+GSE213516,Hellinger_eligibility,CD8-CTL,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,1458.0
+GSE213516,Hellinger_eligibility,CD8-CTL,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,1458.0
+GSE213516,Hellinger_eligibility,CD8-CTL,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,1458.0
+GSE213516,Hellinger_eligibility,CD8-Naive,CD8 naive T,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,1655.0
+GSE213516,Hellinger_eligibility,CD8-Naive,CD8 naive T,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,1655.0
+GSE213516,Hellinger_eligibility,CD8-Naive,CD8 naive T,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,1655.0
+GSE213516,Hellinger_eligibility,CD8-Tem,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,1532.0
+GSE213516,Hellinger_eligibility,CD8-Tem,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,1532.0
+GSE213516,Hellinger_eligibility,CD8-Tem,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,1532.0
+GSE213516,Hellinger_eligibility,Intermed-MC,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,429.0
+GSE213516,Hellinger_eligibility,Intermed-MC,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,429.0
+GSE213516,Hellinger_eligibility,Intermed-MC,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,429.0
+GSE213516,Hellinger_eligibility,Megakaryocytes,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,289.0
+GSE213516,Hellinger_eligibility,Megakaryocytes,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,289.0
+GSE213516,Hellinger_eligibility,Megakaryocytes,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,289.0
+GSE213516,Hellinger_eligibility,Memory-B-CRIP1,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,941.0
+GSE213516,Hellinger_eligibility,Memory-B-CRIP1,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,941.0
+GSE213516,Hellinger_eligibility,Memory-B-CRIP1,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,941.0
+GSE213516,Hellinger_eligibility,Memory-B-IL32,,strict_group,primary,,,,,True,pass,9.0,4.0,9.0,225.0
+GSE213516,Hellinger_eligibility,Memory-B-IL32,,atlas_group,primary,,,,,True,pass,11.0,4.0,11.0,225.0
+GSE213516,Hellinger_eligibility,Memory-B-IL32,,exact_age,primary,,,,,True,pass,15.0,4.0,15.0,225.0
+GSE213516,Hellinger_eligibility,NK-FCER1G,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,2086.0
+GSE213516,Hellinger_eligibility,NK-FCER1G,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,2086.0
+GSE213516,Hellinger_eligibility,NK-FCER1G,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,2086.0
+GSE213516,Hellinger_eligibility,NK-GZMH,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,2863.0
+GSE213516,Hellinger_eligibility,NK-GZMH,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,2863.0
+GSE213516,Hellinger_eligibility,NK-GZMH,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,2863.0
+GSE213516,Hellinger_eligibility,NK-GZMK,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,675.0
+GSE213516,Hellinger_eligibility,NK-GZMK,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,675.0
+GSE213516,Hellinger_eligibility,NK-GZMK,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,675.0
+GSE213516,Hellinger_eligibility,NK-IL7R,,strict_group,primary,,,,,True,pass,9.0,4.0,9.0,99.0
+GSE213516,Hellinger_eligibility,NK-IL7R,,atlas_group,primary,,,,,True,pass,11.0,4.0,11.0,99.0
+GSE213516,Hellinger_eligibility,NK-IL7R,,exact_age,primary,,,,,True,pass,16.0,4.0,16.0,99.0
+GSE213516,Hellinger_eligibility,NK-S100A2,,strict_group,primary,,,,,True,pass,8.0,4.0,8.0,64.0
+GSE213516,Hellinger_eligibility,NK-S100A2,,atlas_group,primary,,,,,True,pass,10.0,4.0,10.0,64.0
+GSE213516,Hellinger_eligibility,NK-S100A2,,exact_age,primary,,,,,True,pass,15.0,4.0,15.0,64.0
+GSE213516,Hellinger_eligibility,NK-SELL,,strict_group,primary,,,,,True,pass,8.0,4.0,8.0,122.0
+GSE213516,Hellinger_eligibility,NK-SELL,,atlas_group,primary,,,,,True,pass,10.0,4.0,10.0,122.0
+GSE213516,Hellinger_eligibility,NK-SELL,,exact_age,primary,,,,,True,pass,14.0,4.0,14.0,122.0
+GSE213516,Hellinger_eligibility,Naive-B,,strict_group,primary,,,,,True,pass,10.0,5.0,10.0,1780.0
+GSE213516,Hellinger_eligibility,Naive-B,,atlas_group,primary,,,,,True,pass,12.0,5.0,12.0,1780.0
+GSE213516,Hellinger_eligibility,Naive-B,,exact_age,primary,,,,,True,pass,17.0,5.0,17.0,1780.0
+GSE213516,Hellinger_eligibility,Naive-B-NRGN,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,3.0,2.0,2.0,82.0
+GSE213516,Hellinger_eligibility,Naive-B-NRGN,,atlas_group,primary,,,,,False,young_reference_or_scored_donor_floor,4.0,2.0,3.0,82.0
+GSE213516,Hellinger_eligibility,Naive-B-NRGN,,exact_age,primary,,,,,False,young_reference_or_scored_donor_floor,5.0,2.0,4.0,82.0
+GSE213516,Hellinger_eligibility,Plasma,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,3.0,2.0,1.0,64.0
+GSE213516,Hellinger_eligibility,Plasma,,atlas_group,primary,,,,,False,young_reference_or_scored_donor_floor,4.0,2.0,2.0,64.0
+GSE213516,Hellinger_eligibility,Plasma,,exact_age,primary,,,,,False,young_reference_or_scored_donor_floor,5.0,2.0,3.0,64.0
+GSE213516,Hellinger_eligibility,RBC,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,1.0,1.0,0.0,0.0
+GSE213516,Hellinger_eligibility,RBC,,atlas_group,primary,,,,,False,young_reference_or_scored_donor_floor,1.0,1.0,0.0,0.0
+GSE213516,Hellinger_eligibility,RBC,,exact_age,primary,,,,,False,young_reference_or_scored_donor_floor,1.0,1.0,0.0,0.0
+GSE213516,Hellinger_eligibility,cDC,,strict_group,primary,,,,,True,pass,9.0,4.0,9.0,162.0
+GSE213516,Hellinger_eligibility,cDC,,atlas_group,primary,,,,,True,pass,11.0,4.0,11.0,162.0
+GSE213516,Hellinger_eligibility,cDC,,exact_age,primary,,,,,True,pass,16.0,4.0,16.0,162.0
+GSE213516,Hellinger_eligibility,pDC,,strict_group,primary,,,,,False,young_reference_or_scored_donor_floor,6.0,3.0,5.0,113.0
+GSE213516,Hellinger_eligibility,pDC,,atlas_group,primary,,,,,True,pass,8.0,3.0,7.0,113.0
+GSE213516,Hellinger_eligibility,pDC,,exact_age,primary,,,,,True,pass,10.0,3.0,9.0,113.0
+GSE214546,Hellinger_eligibility,B cell progenitor,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,7523.0
+GSE214546,Hellinger_eligibility,B cell progenitor,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,7523.0
+GSE214546,Hellinger_eligibility,B cell progenitor,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,7523.0
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,51574.0
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,51574.0
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,51574.0
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,6721.0
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,6721.0
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,6721.0
+GSE214546,Hellinger_eligibility,CD4 Memory,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,54747.0
+GSE214546,Hellinger_eligibility,CD4 Memory,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,54747.0
+GSE214546,Hellinger_eligibility,CD4 Memory,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,54747.0
+GSE214546,Hellinger_eligibility,CD4 Naive,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,54484.0
+GSE214546,Hellinger_eligibility,CD4 Naive,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,54484.0
+GSE214546,Hellinger_eligibility,CD4 Naive,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,54484.0
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,17744.0
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,17744.0
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,17744.0
+GSE214546,Hellinger_eligibility,CD8 effector,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,23549.0
+GSE214546,Hellinger_eligibility,CD8 effector,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,23549.0
+GSE214546,Hellinger_eligibility,CD8 effector,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,23549.0
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,2420.0
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,2420.0
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,2420.0
+GSE214546,Hellinger_eligibility,Double negative T cell,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,8120.0
+GSE214546,Hellinger_eligibility,Double negative T cell,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,8120.0
+GSE214546,Hellinger_eligibility,Double negative T cell,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,8120.0
+GSE214546,Hellinger_eligibility,NK cell,NK,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,22009.0
+GSE214546,Hellinger_eligibility,NK cell,NK,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,22009.0
+GSE214546,Hellinger_eligibility,NK cell,NK,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,22009.0
+GSE214546,Hellinger_eligibility,Platelets,,strict_group,primary,,,,,True,pass,13.0,11.0,13.0,387.0
+GSE214546,Hellinger_eligibility,Platelets,,atlas_group,primary,,,,,True,pass,14.0,11.0,14.0,387.0
+GSE214546,Hellinger_eligibility,Platelets,,exact_age,primary,,,,,True,pass,16.0,11.0,16.0,387.0
+GSE214546,Hellinger_eligibility,pDC,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,1332.0
+GSE214546,Hellinger_eligibility,pDC,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,1332.0
+GSE214546,Hellinger_eligibility,pDC,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,1332.0
+GSE214546,Hellinger_eligibility,pre-B cell,,strict_group,primary,,,,,True,pass,23.0,16.0,23.0,12981.0
+GSE214546,Hellinger_eligibility,pre-B cell,,atlas_group,primary,,,,,True,pass,25.0,16.0,25.0,12981.0
+GSE214546,Hellinger_eligibility,pre-B cell,,exact_age,primary,,,,,True,pass,32.0,16.0,32.0,12981.0

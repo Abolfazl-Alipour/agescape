@@ -1,0 +1,97 @@
+{
+  "frozen_before_expression_download": "2026-11-14",
+  "head_at_freeze": "5e8bc6fff4fbb372c80c89338fe2c1ab6c929cb2",
+  "metadata_manifest": "data/manifest/pbmc_geo_cohorts.json",
+  "scope": {
+    "included_cohorts": ["GSE213516", "GSE214546"],
+    "descriptive_excluded_cohorts": ["GSE157007"],
+    "donor_is_inferential_unit": true,
+    "cell_level_inference": false,
+    "matrix_concatenation_across_cohorts": false,
+    "cross_cohort_p_value_pooling": false,
+    "integrated_filippov_labels": false,
+    "raw_tars": false
+  },
+  "designs": {
+    "strict_group": {
+      "role": "primary",
+      "GSE213516": "young <=40 (5 donors) versus old >60 (5 donors)",
+      "GSE214546": "young adults <=40 (16 donors) versus old >60 (7 donors); pediatric excluded"
+    },
+    "atlas_group": {
+      "role": "sensitivity",
+      "rule": "same young donors; old >=60, adding F60/M60 in Zhu and PB00015/PB00566 in Thomson"
+    },
+    "exact_age": {
+      "role": "sensitivity",
+      "GSE213516": "all 17 exact-age healthy donors, continuous years",
+      "GSE214546": "all 32 exact-age adult confirmatory scRNA donors (16 young adults and 16 older adults), continuous years; pediatric excluded"
+    }
+  },
+  "eligibility": {
+    "min_cells_per_donor_cell_type": 20,
+    "min_donors_per_group": 3,
+    "min_scored_donors_per_cell_type": 6,
+    "model": "Full rank with residual degrees of freedom >1. P1/pseudobulk use only donors passing the 20-cell floor. CLR fits all design donors once a cell type passes the floor, retaining zeros with the declared pseudocount.",
+    "hellinger": "Actual raw UMI >=1500, >=20 passing cells per donor, >=2 strict-young reference donors, >=50 cross-fitted reference cells and positive reference counts, >=6 scored donors, full-rank model.",
+    "P1": "At least one uniquely mapped detected P1 up and one down gene per cohort/cell type.",
+    "ineligible": "Write an explicit row with the failed floor; never report it as a null effect."
+  },
+  "covariates": {
+    "primary": "old indicator plus male indicator where identifiable; exact-age sensitivity replaces the old indicator with numeric years.",
+    "depth_sensitivity": "P1/Hellinger add donor mean natural-log actual raw UMI per cell; pseudobulk adds donor mean log raw UMI despite CPM normalization; CLR adds log(total released annotated cells).",
+    "thomson_identifiability": "Before fitting, tabulate sex, CMV, B-batch and P-pool levels by age group, rank, residual degrees of freedom and depth association. Primary remains age/group+sex. Add CMV, B-batch, or P-pool separately only in labeled sensitivities when full rank. No unidentifiable covariate is retained.",
+    "hellinger_primary": "Age/group+sex+depth; unadjusted and other covariate models are sensitivities."
+  },
+  "endpoints": {
+    "P1_transport": {
+      "program": "P1_Clean from src.aging_programs.load_program_tiers(target='human')",
+      "normalization": "Per-cell log1p(CPM) using actual raw full-feature library size; arithmetic donor mean within released cell label; score=mean up minus mean down. Gene symbols mapping to multiple feature IDs are excluded from P1/targeted claims rather than made unique artificially.",
+      "matched_null": "Strict primary only: 200 draws, seed 20261114. Mean-donor logCPM expression deciles per cell type, up/down matched separately, all detected P1 genes excluded from the pool, sampling without replacement, one RNG stream across sorted cell types. Centered two-sided empirical p=(1+exceedances)/(200+1).",
+      "models": "strict primary, strict depth, atlas primary, exact-age primary; Thomson CMV/batch/pool/depth sensitivities where eligible"
+    },
+    "donor_pseudobulk": {
+      "aggregation": "Sum raw counts within donor and released cell label. log2CPM=log2((gene_count+0.5)/(cell_type_total_count+1)*1e6). Old-minus-young or per-year OLS effect with model 95% CI.",
+      "targeted": "CD8-naive PTGER2, CLIC1, S100A4, PRF1, GZMA, CCL5, expected increase. Six tests per cohort/design/model family. Require a defensible released CD8-naive label; otherwise untestable.",
+      "exploratory": "All features detected in >=20% of eligible donors in each eligible released cell type. Separate models for each cohort/design; no feature filtering by effect or p-value. Full effect/CI/q table is gzip-compressed CSV.",
+      "genome_rule": "Zhu feature IDs/symbols and reference records must be inspected before gene models. If hg19 versus GRCh38 remains unresolved, all Zhu gene claims are explicitly symbol-level only; no coordinate/locus/assembly claim and no ambiguous symbol mapping."
+    },
+    "CLR_composition": {
+      "transform": "Add 0.5 cell to every released non-unknown label for each design donor, normalize within donor, then centered log-ratio.",
+      "targeted": "CD8-naive T-cell decrease, MAIT decrease, non-classical-monocyte increase. Three tests per cohort/design/model family; absent/non-harmonizable labels are untestable.",
+      "exploratory": "Every eligible released label; raw-fraction effects are descriptive sensitivity only."
+    },
+    "Hellinger": {
+      "technical_exclusions": "MT-/RPL/RPS/MRPL/MRPS and XIST/TSIX/DDX3Y/EIF2S3Y/UTY/KDM5D",
+      "reference": "Strict-young donors only, independently within cohort and cell type. Subtract the scored donor's own counts for reference donors. Atlas/exact-age sensitivities retain this strict-young reference.",
+      "endpoint": "Arithmetic donor mean per-cell Hellinger distance to the cross-fitted reference, no UMI downsampling.",
+      "models": "Strict depth-adjusted primary; atlas/exact-age depth-adjusted sensitivities; strict unadjusted and Thomson covariate sensitivities"
+    }
+  },
+  "multiplicity_families": {
+    "targeted_pseudobulk": "BH at 0.05 over six targeted genes separately by cohort, design and model variant.",
+    "targeted_composition": "BH at 0.05 over three targeted cell effects separately by cohort, design and model variant; only eligible tests enter BH and absent targets remain explicit untestable rows.",
+    "exploratory_pseudobulk": "BH at 0.05 over all tested genes separately by cohort, design, model variant and cell type.",
+    "P1_CLR_Hellinger": "BH at 0.05 over eligible cell types separately by cohort, endpoint, design and model variant. Strict P1 matched-null empirical p-values form a separate BH family.",
+    "replication": "No BH family crosses cohorts. Replication is direction/effect-size/CI concordance, not pooled significance or equivalence from non-significance."
+  },
+  "harmonization": {
+    "rule": "Use released labels only. Write the complete label inventory and an explicit source-label-to-common-label map before modeling. No integrated atlas labels or label transfer. Broad labels are not split to manufacture CD8-naive/MAIT/non-classical-monocyte targets.",
+    "reporting": "Forest plots use common labels with compatible estimands. Cohort-specific labels remain in aggregate CSVs; unmatched replication rows say untestable."
+  },
+  "outputs": {
+    "aggregate_prefix": "results/followup-pbmc",
+    "figures": ["figures/followup-pbmc-targeted-forest.png", "figures/followup-pbmc-p1-forest.png", "figures/followup-pbmc-hellinger-forest.png"],
+    "report": "reports/followup-pbmc-analysis.md",
+    "external_interim": "../agescape-revision-data/pbmc/interim"
+  },
+  "resources": {
+    "order": ["GSE213516", "GSE214546"],
+    "guard": "scripts/resource_guard.py for every expression download and analysis/validation/summarization job",
+    "min_free_gb": 30,
+    "max_file_gb": 3,
+    "memory_gb": 8,
+    "parallel_heavy_jobs": 1,
+    "method": "Per-donor downloads and per-donor processing; donor aggregate checkpoints only. No RAW tar or cross-cohort cell matrix."
+  }
+}

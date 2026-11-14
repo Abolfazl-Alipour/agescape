@@ -1,0 +1,40 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors_qc20,n_young_reference_donors,n_scored_donors,min_cross_fitted_reference_cells,eligible,reason
+GSE214546,Hellinger_eligibility,B cell progenitor,,strict_group,primary,23,16,23,7523,True,pass
+GSE214546,Hellinger_eligibility,B cell progenitor,,atlas_group,primary,25,16,25,7523,True,pass
+GSE214546,Hellinger_eligibility,B cell progenitor,,exact_age,primary,32,16,32,7523,True,pass
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,strict_group,primary,23,16,23,51574,True,pass
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,atlas_group,primary,25,16,25,51574,True,pass
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,exact_age,primary,32,16,32,51574,True,pass
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,strict_group,primary,23,16,23,6721,True,pass
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,atlas_group,primary,25,16,25,6721,True,pass
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,exact_age,primary,32,16,32,6721,True,pass
+GSE214546,Hellinger_eligibility,CD4 Memory,,strict_group,primary,23,16,23,54747,True,pass
+GSE214546,Hellinger_eligibility,CD4 Memory,,atlas_group,primary,25,16,25,54747,True,pass
+GSE214546,Hellinger_eligibility,CD4 Memory,,exact_age,primary,32,16,32,54747,True,pass
+GSE214546,Hellinger_eligibility,CD4 Naive,,strict_group,primary,23,16,23,54484,True,pass
+GSE214546,Hellinger_eligibility,CD4 Naive,,atlas_group,primary,25,16,25,54484,True,pass
+GSE214546,Hellinger_eligibility,CD4 Naive,,exact_age,primary,32,16,32,54484,True,pass
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,strict_group,primary,23,16,23,17744,True,pass
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,atlas_group,primary,25,16,25,17744,True,pass
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,exact_age,primary,32,16,32,17744,True,pass
+GSE214546,Hellinger_eligibility,CD8 effector,,strict_group,primary,23,16,23,23549,True,pass
+GSE214546,Hellinger_eligibility,CD8 effector,,atlas_group,primary,25,16,25,23549,True,pass
+GSE214546,Hellinger_eligibility,CD8 effector,,exact_age,primary,32,16,32,23549,True,pass
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,strict_group,primary,23,16,23,2420,True,pass
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,atlas_group,primary,25,16,25,2420,True,pass
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,exact_age,primary,32,16,32,2420,True,pass
+GSE214546,Hellinger_eligibility,Double negative T cell,,strict_group,primary,23,16,23,8120,True,pass
+GSE214546,Hellinger_eligibility,Double negative T cell,,atlas_group,primary,25,16,25,8120,True,pass
+GSE214546,Hellinger_eligibility,Double negative T cell,,exact_age,primary,32,16,32,8120,True,pass
+GSE214546,Hellinger_eligibility,NK cell,NK,strict_group,primary,23,16,23,22009,True,pass
+GSE214546,Hellinger_eligibility,NK cell,NK,atlas_group,primary,25,16,25,22009,True,pass
+GSE214546,Hellinger_eligibility,NK cell,NK,exact_age,primary,32,16,32,22009,True,pass
+GSE214546,Hellinger_eligibility,Platelets,,strict_group,primary,13,11,13,387,True,pass
+GSE214546,Hellinger_eligibility,Platelets,,atlas_group,primary,14,11,14,387,True,pass
+GSE214546,Hellinger_eligibility,Platelets,,exact_age,primary,16,11,16,387,True,pass
+GSE214546,Hellinger_eligibility,pDC,,strict_group,primary,23,16,23,1332,True,pass
+GSE214546,Hellinger_eligibility,pDC,,atlas_group,primary,25,16,25,1332,True,pass
+GSE214546,Hellinger_eligibility,pDC,,exact_age,primary,32,16,32,1332,True,pass
+GSE214546,Hellinger_eligibility,pre-B cell,,strict_group,primary,23,16,23,12981,True,pass
+GSE214546,Hellinger_eligibility,pre-B cell,,atlas_group,primary,25,16,25,12981,True,pass
+GSE214546,Hellinger_eligibility,pre-B cell,,exact_age,primary,32,16,32,12981,True,pass

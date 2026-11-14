@@ -1,0 +1,1041 @@
+donor,cell_type,n_cells,cohort,design,total_cells
+PB00002,B cell progenitor,312,GSE214546,strict_group,22592
+PB00002,CD14+ Monocytes,3742,GSE214546,strict_group,22592
+PB00002,CD16+ Monocytes,364,GSE214546,strict_group,22592
+PB00002,CD4 Memory,5866,GSE214546,strict_group,22592
+PB00002,CD4 Naive,5243,GSE214546,strict_group,22592
+PB00002,CD8 Naive,1137,GSE214546,strict_group,22592
+PB00002,CD8 effector,2461,GSE214546,strict_group,22592
+PB00002,Dendritic cell,215,GSE214546,strict_group,22592
+PB00002,Double negative T cell,146,GSE214546,strict_group,22592
+PB00002,NK cell,2102,GSE214546,strict_group,22592
+PB00002,Platelets,66,GSE214546,strict_group,22592
+PB00002,pDC,150,GSE214546,strict_group,22592
+PB00002,pre-B cell,788,GSE214546,strict_group,22592
+PB00003,B cell progenitor,593,GSE214546,strict_group,22078
+PB00003,CD14+ Monocytes,3142,GSE214546,strict_group,22078
+PB00003,CD16+ Monocytes,917,GSE214546,strict_group,22078
+PB00003,CD4 Memory,4540,GSE214546,strict_group,22078
+PB00003,CD4 Naive,5843,GSE214546,strict_group,22078
+PB00003,CD8 Naive,2570,GSE214546,strict_group,22078
+PB00003,CD8 effector,921,GSE214546,strict_group,22078
+PB00003,Dendritic cell,168,GSE214546,strict_group,22078
+PB00003,Double negative T cell,661,GSE214546,strict_group,22078
+PB00003,NK cell,1154,GSE214546,strict_group,22078
+PB00003,Platelets,54,GSE214546,strict_group,22078
+PB00003,pDC,81,GSE214546,strict_group,22078
+PB00003,pre-B cell,1434,GSE214546,strict_group,22078
+PB00004,B cell progenitor,494,GSE214546,strict_group,20170
+PB00004,CD14+ Monocytes,1916,GSE214546,strict_group,20170
+PB00004,CD16+ Monocytes,342,GSE214546,strict_group,20170
+PB00004,CD4 Memory,4431,GSE214546,strict_group,20170
+PB00004,CD4 Naive,5465,GSE214546,strict_group,20170
+PB00004,CD8 Naive,1740,GSE214546,strict_group,20170
+PB00004,CD8 effector,2070,GSE214546,strict_group,20170
+PB00004,Dendritic cell,130,GSE214546,strict_group,20170
+PB00004,Double negative T cell,1135,GSE214546,strict_group,20170
+PB00004,NK cell,1577,GSE214546,strict_group,20170
+PB00004,Platelets,129,GSE214546,strict_group,20170
+PB00004,pDC,99,GSE214546,strict_group,20170
+PB00004,pre-B cell,642,GSE214546,strict_group,20170
+PB00006,B cell progenitor,341,GSE214546,strict_group,21200
+PB00006,CD14+ Monocytes,7350,GSE214546,strict_group,21200
+PB00006,CD16+ Monocytes,344,GSE214546,strict_group,21200
+PB00006,CD4 Memory,2901,GSE214546,strict_group,21200
+PB00006,CD4 Naive,6106,GSE214546,strict_group,21200
+PB00006,CD8 Naive,1183,GSE214546,strict_group,21200
+PB00006,CD8 effector,623,GSE214546,strict_group,21200
+PB00006,Dendritic cell,175,GSE214546,strict_group,21200
+PB00006,Double negative T cell,393,GSE214546,strict_group,21200
+PB00006,NK cell,434,GSE214546,strict_group,21200
+PB00006,Platelets,85,GSE214546,strict_group,21200
+PB00006,pDC,99,GSE214546,strict_group,21200
+PB00006,pre-B cell,1166,GSE214546,strict_group,21200
+PB00010,B cell progenitor,580,GSE214546,strict_group,18976
+PB00010,CD14+ Monocytes,3406,GSE214546,strict_group,18976
+PB00010,CD16+ Monocytes,710,GSE214546,strict_group,18976
+PB00010,CD4 Memory,3169,GSE214546,strict_group,18976
+PB00010,CD4 Naive,4019,GSE214546,strict_group,18976
+PB00010,CD8 Naive,1141,GSE214546,strict_group,18976
+PB00010,CD8 effector,1701,GSE214546,strict_group,18976
+PB00010,Dendritic cell,190,GSE214546,strict_group,18976
+PB00010,Double negative T cell,530,GSE214546,strict_group,18976
+PB00010,NK cell,1650,GSE214546,strict_group,18976
+PB00010,Platelets,83,GSE214546,strict_group,18976
+PB00010,pDC,106,GSE214546,strict_group,18976
+PB00010,pre-B cell,1691,GSE214546,strict_group,18976
+PB00022,B cell progenitor,277,GSE214546,strict_group,18547
+PB00022,CD14+ Monocytes,2762,GSE214546,strict_group,18547
+PB00022,CD16+ Monocytes,458,GSE214546,strict_group,18547
+PB00022,CD4 Memory,4130,GSE214546,strict_group,18547
+PB00022,CD4 Naive,4348,GSE214546,strict_group,18547
+PB00022,CD8 Naive,1085,GSE214546,strict_group,18547
+PB00022,CD8 effector,2802,GSE214546,strict_group,18547
+PB00022,Dendritic cell,111,GSE214546,strict_group,18547
+PB00022,Double negative T cell,352,GSE214546,strict_group,18547
+PB00022,NK cell,1155,GSE214546,strict_group,18547
+PB00022,Platelets,476,GSE214546,strict_group,18547
+PB00022,pDC,109,GSE214546,strict_group,18547
+PB00022,pre-B cell,482,GSE214546,strict_group,18547
+PB00023,B cell progenitor,1341,GSE214546,strict_group,20854
+PB00023,CD14+ Monocytes,4072,GSE214546,strict_group,20854
+PB00023,CD16+ Monocytes,370,GSE214546,strict_group,20854
+PB00023,CD4 Memory,3381,GSE214546,strict_group,20854
+PB00023,CD4 Naive,4259,GSE214546,strict_group,20854
+PB00023,CD8 Naive,1385,GSE214546,strict_group,20854
+PB00023,CD8 effector,1749,GSE214546,strict_group,20854
+PB00023,Dendritic cell,158,GSE214546,strict_group,20854
+PB00023,Double negative T cell,1224,GSE214546,strict_group,20854
+PB00023,NK cell,1415,GSE214546,strict_group,20854
+PB00023,Platelets,81,GSE214546,strict_group,20854
+PB00023,pDC,127,GSE214546,strict_group,20854
+PB00023,pre-B cell,1292,GSE214546,strict_group,20854
+PB00026,B cell progenitor,498,GSE214546,strict_group,18346
+PB00026,CD14+ Monocytes,4292,GSE214546,strict_group,18346
+PB00026,CD16+ Monocytes,167,GSE214546,strict_group,18346
+PB00026,CD4 Memory,2151,GSE214546,strict_group,18346
+PB00026,CD4 Naive,3469,GSE214546,strict_group,18346
+PB00026,CD8 Naive,1373,GSE214546,strict_group,18346
+PB00026,CD8 effector,3474,GSE214546,strict_group,18346
+PB00026,Dendritic cell,176,GSE214546,strict_group,18346
+PB00026,Double negative T cell,579,GSE214546,strict_group,18346
+PB00026,NK cell,1070,GSE214546,strict_group,18346
+PB00026,Platelets,48,GSE214546,strict_group,18346
+PB00026,pDC,81,GSE214546,strict_group,18346
+PB00026,pre-B cell,968,GSE214546,strict_group,18346
+PB00030,B cell progenitor,710,GSE214546,strict_group,26514
+PB00030,CD14+ Monocytes,5720,GSE214546,strict_group,26514
+PB00030,CD16+ Monocytes,257,GSE214546,strict_group,26514
+PB00030,CD4 Memory,7000,GSE214546,strict_group,26514
+PB00030,CD4 Naive,6654,GSE214546,strict_group,26514
+PB00030,CD8 Naive,1436,GSE214546,strict_group,26514
+PB00030,CD8 effector,1239,GSE214546,strict_group,26514
+PB00030,Dendritic cell,225,GSE214546,strict_group,26514
+PB00030,Double negative T cell,456,GSE214546,strict_group,26514
+PB00030,NK cell,1824,GSE214546,strict_group,26514
+PB00030,Platelets,264,GSE214546,strict_group,26514
+PB00030,pDC,68,GSE214546,strict_group,26514
+PB00030,pre-B cell,661,GSE214546,strict_group,26514
+PB00031,B cell progenitor,877,GSE214546,strict_group,20444
+PB00031,CD14+ Monocytes,3426,GSE214546,strict_group,20444
+PB00031,CD16+ Monocytes,187,GSE214546,strict_group,20444
+PB00031,CD4 Memory,3838,GSE214546,strict_group,20444
+PB00031,CD4 Naive,3849,GSE214546,strict_group,20444
+PB00031,CD8 Naive,1069,GSE214546,strict_group,20444
+PB00031,CD8 effector,3492,GSE214546,strict_group,20444
+PB00031,Dendritic cell,177,GSE214546,strict_group,20444
+PB00031,Double negative T cell,1159,GSE214546,strict_group,20444
+PB00031,NK cell,1511,GSE214546,strict_group,20444
+PB00031,Platelets,124,GSE214546,strict_group,20444
+PB00031,pDC,65,GSE214546,strict_group,20444
+PB00031,pre-B cell,670,GSE214546,strict_group,20444
+PB00041,B cell progenitor,397,GSE214546,strict_group,19563
+PB00041,CD14+ Monocytes,5489,GSE214546,strict_group,19563
+PB00041,CD16+ Monocytes,705,GSE214546,strict_group,19563
+PB00041,CD4 Memory,3793,GSE214546,strict_group,19563
+PB00041,CD4 Naive,4061,GSE214546,strict_group,19563
+PB00041,CD8 Naive,749,GSE214546,strict_group,19563
+PB00041,CD8 effector,1206,GSE214546,strict_group,19563
+PB00041,Dendritic cell,109,GSE214546,strict_group,19563
+PB00041,Double negative T cell,337,GSE214546,strict_group,19563
+PB00041,NK cell,790,GSE214546,strict_group,19563
+PB00041,Platelets,206,GSE214546,strict_group,19563
+PB00041,pDC,44,GSE214546,strict_group,19563
+PB00041,pre-B cell,1677,GSE214546,strict_group,19563
+PB00352,B cell progenitor,628,GSE214546,strict_group,26333
+PB00352,CD14+ Monocytes,6299,GSE214546,strict_group,26333
+PB00352,CD16+ Monocytes,1263,GSE214546,strict_group,26333
+PB00352,CD4 Memory,4853,GSE214546,strict_group,26333
+PB00352,CD4 Naive,6866,GSE214546,strict_group,26333
+PB00352,CD8 Naive,135,GSE214546,strict_group,26333
+PB00352,CD8 effector,3851,GSE214546,strict_group,26333
+PB00352,Dendritic cell,209,GSE214546,strict_group,26333
+PB00352,Double negative T cell,421,GSE214546,strict_group,26333
+PB00352,NK cell,1200,GSE214546,strict_group,26333
+PB00352,Platelets,52,GSE214546,strict_group,26333
+PB00352,pDC,116,GSE214546,strict_group,26333
+PB00352,pre-B cell,440,GSE214546,strict_group,26333
+PB00363,B cell progenitor,864,GSE214546,strict_group,19636
+PB00363,CD14+ Monocytes,3287,GSE214546,strict_group,19636
+PB00363,CD16+ Monocytes,661,GSE214546,strict_group,19636
+PB00363,CD4 Memory,3627,GSE214546,strict_group,19636
+PB00363,CD4 Naive,3982,GSE214546,strict_group,19636
+PB00363,CD8 Naive,933,GSE214546,strict_group,19636
+PB00363,CD8 effector,1627,GSE214546,strict_group,19636
+PB00363,Dendritic cell,209,GSE214546,strict_group,19636
+PB00363,Double negative T cell,798,GSE214546,strict_group,19636
+PB00363,NK cell,3015,GSE214546,strict_group,19636
+PB00363,Platelets,88,GSE214546,strict_group,19636
+PB00363,pDC,160,GSE214546,strict_group,19636
+PB00363,pre-B cell,385,GSE214546,strict_group,19636
+PB00366,B cell progenitor,491,GSE214546,strict_group,21351
+PB00366,CD14+ Monocytes,2949,GSE214546,strict_group,21351
+PB00366,CD16+ Monocytes,668,GSE214546,strict_group,21351
+PB00366,CD4 Memory,5821,GSE214546,strict_group,21351
+PB00366,CD4 Naive,4297,GSE214546,strict_group,21351
+PB00366,CD8 Naive,2125,GSE214546,strict_group,21351
+PB00366,CD8 effector,1330,GSE214546,strict_group,21351
+PB00366,Dendritic cell,157,GSE214546,strict_group,21351
+PB00366,Double negative T cell,568,GSE214546,strict_group,21351
+PB00366,NK cell,973,GSE214546,strict_group,21351
+PB00366,Platelets,46,GSE214546,strict_group,21351
+PB00366,pDC,80,GSE214546,strict_group,21351
+PB00366,pre-B cell,1846,GSE214546,strict_group,21351
+PB00384,B cell progenitor,531,GSE214546,strict_group,17129
+PB00384,CD14+ Monocytes,4417,GSE214546,strict_group,17129
+PB00384,CD16+ Monocytes,578,GSE214546,strict_group,17129
+PB00384,CD4 Memory,3418,GSE214546,strict_group,17129
+PB00384,CD4 Naive,2592,GSE214546,strict_group,17129
+PB00384,CD8 Naive,281,GSE214546,strict_group,17129
+PB00384,CD8 effector,296,GSE214546,strict_group,17129
+PB00384,Dendritic cell,195,GSE214546,strict_group,17129
+PB00384,Double negative T cell,690,GSE214546,strict_group,17129
+PB00384,NK cell,3113,GSE214546,strict_group,17129
+PB00384,Platelets,21,GSE214546,strict_group,17129
+PB00384,pDC,81,GSE214546,strict_group,17129
+PB00384,pre-B cell,916,GSE214546,strict_group,17129
+PB00386,B cell progenitor,600,GSE214546,strict_group,16191
+PB00386,CD14+ Monocytes,2208,GSE214546,strict_group,16191
+PB00386,CD16+ Monocytes,355,GSE214546,strict_group,16191
+PB00386,CD4 Memory,3511,GSE214546,strict_group,16191
+PB00386,CD4 Naive,2468,GSE214546,strict_group,16191
+PB00386,CD8 Naive,1033,GSE214546,strict_group,16191
+PB00386,CD8 effector,4018,GSE214546,strict_group,16191
+PB00386,Dendritic cell,132,GSE214546,strict_group,16191
+PB00386,Double negative T cell,133,GSE214546,strict_group,16191
+PB00386,NK cell,889,GSE214546,strict_group,16191
+PB00386,Platelets,12,GSE214546,strict_group,16191
+PB00386,pDC,77,GSE214546,strict_group,16191
+PB00386,pre-B cell,755,GSE214546,strict_group,16191
+PB00388,B cell progenitor,593,GSE214546,strict_group,19710
+PB00388,CD14+ Monocytes,4336,GSE214546,strict_group,19710
+PB00388,CD16+ Monocytes,1158,GSE214546,strict_group,19710
+PB00388,CD4 Memory,4555,GSE214546,strict_group,19710
+PB00388,CD4 Naive,2349,GSE214546,strict_group,19710
+PB00388,CD8 Naive,251,GSE214546,strict_group,19710
+PB00388,CD8 effector,3778,GSE214546,strict_group,19710
+PB00388,Dendritic cell,114,GSE214546,strict_group,19710
+PB00388,Double negative T cell,413,GSE214546,strict_group,19710
+PB00388,NK cell,1117,GSE214546,strict_group,19710
+PB00388,Platelets,58,GSE214546,strict_group,19710
+PB00388,pDC,72,GSE214546,strict_group,19710
+PB00388,pre-B cell,916,GSE214546,strict_group,19710
+PB00507,B cell progenitor,455,GSE214546,strict_group,17602
+PB00507,CD14+ Monocytes,2190,GSE214546,strict_group,17602
+PB00507,CD16+ Monocytes,578,GSE214546,strict_group,17602
+PB00507,CD4 Memory,3436,GSE214546,strict_group,17602
+PB00507,CD4 Naive,4791,GSE214546,strict_group,17602
+PB00507,CD8 Naive,1159,GSE214546,strict_group,17602
+PB00507,CD8 effector,849,GSE214546,strict_group,17602
+PB00507,Dendritic cell,122,GSE214546,strict_group,17602
+PB00507,Double negative T cell,477,GSE214546,strict_group,17602
+PB00507,NK cell,3189,GSE214546,strict_group,17602
+PB00507,Platelets,31,GSE214546,strict_group,17602
+PB00507,pDC,74,GSE214546,strict_group,17602
+PB00507,pre-B cell,251,GSE214546,strict_group,17602
+PB00537,B cell progenitor,707,GSE214546,strict_group,18171
+PB00537,CD14+ Monocytes,3916,GSE214546,strict_group,18171
+PB00537,CD16+ Monocytes,517,GSE214546,strict_group,18171
+PB00537,CD4 Memory,4461,GSE214546,strict_group,18171
+PB00537,CD4 Naive,2969,GSE214546,strict_group,18171
+PB00537,CD8 Naive,172,GSE214546,strict_group,18171
+PB00537,CD8 effector,3780,GSE214546,strict_group,18171
+PB00537,Dendritic cell,136,GSE214546,strict_group,18171
+PB00537,Double negative T cell,225,GSE214546,strict_group,18171
+PB00537,NK cell,823,GSE214546,strict_group,18171
+PB00537,Platelets,40,GSE214546,strict_group,18171
+PB00537,pDC,62,GSE214546,strict_group,18171
+PB00537,pre-B cell,363,GSE214546,strict_group,18171
+PB00539,B cell progenitor,267,GSE214546,strict_group,19289
+PB00539,CD14+ Monocytes,4645,GSE214546,strict_group,19289
+PB00539,CD16+ Monocytes,1905,GSE214546,strict_group,19289
+PB00539,CD4 Memory,5287,GSE214546,strict_group,19289
+PB00539,CD4 Naive,3107,GSE214546,strict_group,19289
+PB00539,CD8 Naive,68,GSE214546,strict_group,19289
+PB00539,CD8 effector,1396,GSE214546,strict_group,19289
+PB00539,Dendritic cell,118,GSE214546,strict_group,19289
+PB00539,Double negative T cell,288,GSE214546,strict_group,19289
+PB00539,NK cell,1250,GSE214546,strict_group,19289
+PB00539,Platelets,216,GSE214546,strict_group,19289
+PB00539,pDC,46,GSE214546,strict_group,19289
+PB00539,pre-B cell,696,GSE214546,strict_group,19289
+PB00552,B cell progenitor,521,GSE214546,strict_group,20665
+PB00552,CD14+ Monocytes,2817,GSE214546,strict_group,20665
+PB00552,CD16+ Monocytes,1068,GSE214546,strict_group,20665
+PB00552,CD4 Memory,3852,GSE214546,strict_group,20665
+PB00552,CD4 Naive,8021,GSE214546,strict_group,20665
+PB00552,CD8 Naive,416,GSE214546,strict_group,20665
+PB00552,CD8 effector,861,GSE214546,strict_group,20665
+PB00552,Dendritic cell,187,GSE214546,strict_group,20665
+PB00552,Double negative T cell,65,GSE214546,strict_group,20665
+PB00552,NK cell,1487,GSE214546,strict_group,20665
+PB00552,Platelets,38,GSE214546,strict_group,20665
+PB00552,pDC,70,GSE214546,strict_group,20665
+PB00552,pre-B cell,1262,GSE214546,strict_group,20665
+PB00562,B cell progenitor,516,GSE214546,strict_group,18189
+PB00562,CD14+ Monocytes,2509,GSE214546,strict_group,18189
+PB00562,CD16+ Monocytes,492,GSE214546,strict_group,18189
+PB00562,CD4 Memory,4426,GSE214546,strict_group,18189
+PB00562,CD4 Naive,3803,GSE214546,strict_group,18189
+PB00562,CD8 Naive,727,GSE214546,strict_group,18189
+PB00562,CD8 effector,2167,GSE214546,strict_group,18189
+PB00562,Dendritic cell,109,GSE214546,strict_group,18189
+PB00562,Double negative T cell,389,GSE214546,strict_group,18189
+PB00562,NK cell,2205,GSE214546,strict_group,18189
+PB00562,Platelets,23,GSE214546,strict_group,18189
+PB00562,pDC,40,GSE214546,strict_group,18189
+PB00562,pre-B cell,783,GSE214546,strict_group,18189
+PB00569,B cell progenitor,1011,GSE214546,strict_group,20249
+PB00569,CD14+ Monocytes,3067,GSE214546,strict_group,20249
+PB00569,CD16+ Monocytes,663,GSE214546,strict_group,20249
+PB00569,CD4 Memory,4964,GSE214546,strict_group,20249
+PB00569,CD4 Naive,4989,GSE214546,strict_group,20249
+PB00569,CD8 Naive,584,GSE214546,strict_group,20249
+PB00569,CD8 effector,2269,GSE214546,strict_group,20249
+PB00569,Dendritic cell,118,GSE214546,strict_group,20249
+PB00569,Double negative T cell,256,GSE214546,strict_group,20249
+PB00569,NK cell,1284,GSE214546,strict_group,20249
+PB00569,Platelets,67,GSE214546,strict_group,20249
+PB00569,pDC,62,GSE214546,strict_group,20249
+PB00569,pre-B cell,915,GSE214546,strict_group,20249
+PB00002,B cell progenitor,312,GSE214546,atlas_group,22592
+PB00002,CD14+ Monocytes,3742,GSE214546,atlas_group,22592
+PB00002,CD16+ Monocytes,364,GSE214546,atlas_group,22592
+PB00002,CD4 Memory,5866,GSE214546,atlas_group,22592
+PB00002,CD4 Naive,5243,GSE214546,atlas_group,22592
+PB00002,CD8 Naive,1137,GSE214546,atlas_group,22592
+PB00002,CD8 effector,2461,GSE214546,atlas_group,22592
+PB00002,Dendritic cell,215,GSE214546,atlas_group,22592
+PB00002,Double negative T cell,146,GSE214546,atlas_group,22592
+PB00002,NK cell,2102,GSE214546,atlas_group,22592
+PB00002,Platelets,66,GSE214546,atlas_group,22592
+PB00002,pDC,150,GSE214546,atlas_group,22592
+PB00002,pre-B cell,788,GSE214546,atlas_group,22592
+PB00003,B cell progenitor,593,GSE214546,atlas_group,22078
+PB00003,CD14+ Monocytes,3142,GSE214546,atlas_group,22078
+PB00003,CD16+ Monocytes,917,GSE214546,atlas_group,22078
+PB00003,CD4 Memory,4540,GSE214546,atlas_group,22078
+PB00003,CD4 Naive,5843,GSE214546,atlas_group,22078
+PB00003,CD8 Naive,2570,GSE214546,atlas_group,22078
+PB00003,CD8 effector,921,GSE214546,atlas_group,22078
+PB00003,Dendritic cell,168,GSE214546,atlas_group,22078
+PB00003,Double negative T cell,661,GSE214546,atlas_group,22078
+PB00003,NK cell,1154,GSE214546,atlas_group,22078
+PB00003,Platelets,54,GSE214546,atlas_group,22078
+PB00003,pDC,81,GSE214546,atlas_group,22078
+PB00003,pre-B cell,1434,GSE214546,atlas_group,22078
+PB00004,B cell progenitor,494,GSE214546,atlas_group,20170
+PB00004,CD14+ Monocytes,1916,GSE214546,atlas_group,20170
+PB00004,CD16+ Monocytes,342,GSE214546,atlas_group,20170
+PB00004,CD4 Memory,4431,GSE214546,atlas_group,20170
+PB00004,CD4 Naive,5465,GSE214546,atlas_group,20170
+PB00004,CD8 Naive,1740,GSE214546,atlas_group,20170
+PB00004,CD8 effector,2070,GSE214546,atlas_group,20170
+PB00004,Dendritic cell,130,GSE214546,atlas_group,20170
+PB00004,Double negative T cell,1135,GSE214546,atlas_group,20170
+PB00004,NK cell,1577,GSE214546,atlas_group,20170
+PB00004,Platelets,129,GSE214546,atlas_group,20170
+PB00004,pDC,99,GSE214546,atlas_group,20170
+PB00004,pre-B cell,642,GSE214546,atlas_group,20170
+PB00006,B cell progenitor,341,GSE214546,atlas_group,21200
+PB00006,CD14+ Monocytes,7350,GSE214546,atlas_group,21200
+PB00006,CD16+ Monocytes,344,GSE214546,atlas_group,21200
+PB00006,CD4 Memory,2901,GSE214546,atlas_group,21200
+PB00006,CD4 Naive,6106,GSE214546,atlas_group,21200
+PB00006,CD8 Naive,1183,GSE214546,atlas_group,21200
+PB00006,CD8 effector,623,GSE214546,atlas_group,21200
+PB00006,Dendritic cell,175,GSE214546,atlas_group,21200
+PB00006,Double negative T cell,393,GSE214546,atlas_group,21200
+PB00006,NK cell,434,GSE214546,atlas_group,21200
+PB00006,Platelets,85,GSE214546,atlas_group,21200
+PB00006,pDC,99,GSE214546,atlas_group,21200
+PB00006,pre-B cell,1166,GSE214546,atlas_group,21200
+PB00010,B cell progenitor,580,GSE214546,atlas_group,18976
+PB00010,CD14+ Monocytes,3406,GSE214546,atlas_group,18976
+PB00010,CD16+ Monocytes,710,GSE214546,atlas_group,18976
+PB00010,CD4 Memory,3169,GSE214546,atlas_group,18976
+PB00010,CD4 Naive,4019,GSE214546,atlas_group,18976
+PB00010,CD8 Naive,1141,GSE214546,atlas_group,18976
+PB00010,CD8 effector,1701,GSE214546,atlas_group,18976
+PB00010,Dendritic cell,190,GSE214546,atlas_group,18976
+PB00010,Double negative T cell,530,GSE214546,atlas_group,18976
+PB00010,NK cell,1650,GSE214546,atlas_group,18976
+PB00010,Platelets,83,GSE214546,atlas_group,18976
+PB00010,pDC,106,GSE214546,atlas_group,18976
+PB00010,pre-B cell,1691,GSE214546,atlas_group,18976
+PB00015,B cell progenitor,277,GSE214546,atlas_group,19960
+PB00015,CD14+ Monocytes,3223,GSE214546,atlas_group,19960
+PB00015,CD16+ Monocytes,548,GSE214546,atlas_group,19960
+PB00015,CD4 Memory,5899,GSE214546,atlas_group,19960
+PB00015,CD4 Naive,4432,GSE214546,atlas_group,19960
+PB00015,CD8 Naive,252,GSE214546,atlas_group,19960
+PB00015,CD8 effector,1284,GSE214546,atlas_group,19960
+PB00015,Dendritic cell,225,GSE214546,atlas_group,19960
+PB00015,Double negative T cell,292,GSE214546,atlas_group,19960
+PB00015,NK cell,2345,GSE214546,atlas_group,19960
+PB00015,Platelets,264,GSE214546,atlas_group,19960
+PB00015,pDC,41,GSE214546,atlas_group,19960
+PB00015,pre-B cell,878,GSE214546,atlas_group,19960
+PB00022,B cell progenitor,277,GSE214546,atlas_group,18547
+PB00022,CD14+ Monocytes,2762,GSE214546,atlas_group,18547
+PB00022,CD16+ Monocytes,458,GSE214546,atlas_group,18547
+PB00022,CD4 Memory,4130,GSE214546,atlas_group,18547
+PB00022,CD4 Naive,4348,GSE214546,atlas_group,18547
+PB00022,CD8 Naive,1085,GSE214546,atlas_group,18547
+PB00022,CD8 effector,2802,GSE214546,atlas_group,18547
+PB00022,Dendritic cell,111,GSE214546,atlas_group,18547
+PB00022,Double negative T cell,352,GSE214546,atlas_group,18547
+PB00022,NK cell,1155,GSE214546,atlas_group,18547
+PB00022,Platelets,476,GSE214546,atlas_group,18547
+PB00022,pDC,109,GSE214546,atlas_group,18547
+PB00022,pre-B cell,482,GSE214546,atlas_group,18547
+PB00023,B cell progenitor,1341,GSE214546,atlas_group,20854
+PB00023,CD14+ Monocytes,4072,GSE214546,atlas_group,20854
+PB00023,CD16+ Monocytes,370,GSE214546,atlas_group,20854
+PB00023,CD4 Memory,3381,GSE214546,atlas_group,20854
+PB00023,CD4 Naive,4259,GSE214546,atlas_group,20854
+PB00023,CD8 Naive,1385,GSE214546,atlas_group,20854
+PB00023,CD8 effector,1749,GSE214546,atlas_group,20854
+PB00023,Dendritic cell,158,GSE214546,atlas_group,20854
+PB00023,Double negative T cell,1224,GSE214546,atlas_group,20854
+PB00023,NK cell,1415,GSE214546,atlas_group,20854
+PB00023,Platelets,81,GSE214546,atlas_group,20854
+PB00023,pDC,127,GSE214546,atlas_group,20854
+PB00023,pre-B cell,1292,GSE214546,atlas_group,20854
+PB00026,B cell progenitor,498,GSE214546,atlas_group,18346
+PB00026,CD14+ Monocytes,4292,GSE214546,atlas_group,18346
+PB00026,CD16+ Monocytes,167,GSE214546,atlas_group,18346
+PB00026,CD4 Memory,2151,GSE214546,atlas_group,18346
+PB00026,CD4 Naive,3469,GSE214546,atlas_group,18346
+PB00026,CD8 Naive,1373,GSE214546,atlas_group,18346
+PB00026,CD8 effector,3474,GSE214546,atlas_group,18346
+PB00026,Dendritic cell,176,GSE214546,atlas_group,18346
+PB00026,Double negative T cell,579,GSE214546,atlas_group,18346
+PB00026,NK cell,1070,GSE214546,atlas_group,18346
+PB00026,Platelets,48,GSE214546,atlas_group,18346
+PB00026,pDC,81,GSE214546,atlas_group,18346
+PB00026,pre-B cell,968,GSE214546,atlas_group,18346
+PB00030,B cell progenitor,710,GSE214546,atlas_group,26514
+PB00030,CD14+ Monocytes,5720,GSE214546,atlas_group,26514
+PB00030,CD16+ Monocytes,257,GSE214546,atlas_group,26514
+PB00030,CD4 Memory,7000,GSE214546,atlas_group,26514
+PB00030,CD4 Naive,6654,GSE214546,atlas_group,26514
+PB00030,CD8 Naive,1436,GSE214546,atlas_group,26514
+PB00030,CD8 effector,1239,GSE214546,atlas_group,26514
+PB00030,Dendritic cell,225,GSE214546,atlas_group,26514
+PB00030,Double negative T cell,456,GSE214546,atlas_group,26514
+PB00030,NK cell,1824,GSE214546,atlas_group,26514
+PB00030,Platelets,264,GSE214546,atlas_group,26514
+PB00030,pDC,68,GSE214546,atlas_group,26514
+PB00030,pre-B cell,661,GSE214546,atlas_group,26514
+PB00031,B cell progenitor,877,GSE214546,atlas_group,20444
+PB00031,CD14+ Monocytes,3426,GSE214546,atlas_group,20444
+PB00031,CD16+ Monocytes,187,GSE214546,atlas_group,20444
+PB00031,CD4 Memory,3838,GSE214546,atlas_group,20444
+PB00031,CD4 Naive,3849,GSE214546,atlas_group,20444
+PB00031,CD8 Naive,1069,GSE214546,atlas_group,20444
+PB00031,CD8 effector,3492,GSE214546,atlas_group,20444
+PB00031,Dendritic cell,177,GSE214546,atlas_group,20444
+PB00031,Double negative T cell,1159,GSE214546,atlas_group,20444
+PB00031,NK cell,1511,GSE214546,atlas_group,20444
+PB00031,Platelets,124,GSE214546,atlas_group,20444
+PB00031,pDC,65,GSE214546,atlas_group,20444
+PB00031,pre-B cell,670,GSE214546,atlas_group,20444
+PB00041,B cell progenitor,397,GSE214546,atlas_group,19563
+PB00041,CD14+ Monocytes,5489,GSE214546,atlas_group,19563
+PB00041,CD16+ Monocytes,705,GSE214546,atlas_group,19563
+PB00041,CD4 Memory,3793,GSE214546,atlas_group,19563
+PB00041,CD4 Naive,4061,GSE214546,atlas_group,19563
+PB00041,CD8 Naive,749,GSE214546,atlas_group,19563
+PB00041,CD8 effector,1206,GSE214546,atlas_group,19563
+PB00041,Dendritic cell,109,GSE214546,atlas_group,19563
+PB00041,Double negative T cell,337,GSE214546,atlas_group,19563
+PB00041,NK cell,790,GSE214546,atlas_group,19563
+PB00041,Platelets,206,GSE214546,atlas_group,19563
+PB00041,pDC,44,GSE214546,atlas_group,19563
+PB00041,pre-B cell,1677,GSE214546,atlas_group,19563
+PB00352,B cell progenitor,628,GSE214546,atlas_group,26333
+PB00352,CD14+ Monocytes,6299,GSE214546,atlas_group,26333
+PB00352,CD16+ Monocytes,1263,GSE214546,atlas_group,26333
+PB00352,CD4 Memory,4853,GSE214546,atlas_group,26333
+PB00352,CD4 Naive,6866,GSE214546,atlas_group,26333
+PB00352,CD8 Naive,135,GSE214546,atlas_group,26333
+PB00352,CD8 effector,3851,GSE214546,atlas_group,26333
+PB00352,Dendritic cell,209,GSE214546,atlas_group,26333
+PB00352,Double negative T cell,421,GSE214546,atlas_group,26333
+PB00352,NK cell,1200,GSE214546,atlas_group,26333
+PB00352,Platelets,52,GSE214546,atlas_group,26333
+PB00352,pDC,116,GSE214546,atlas_group,26333
+PB00352,pre-B cell,440,GSE214546,atlas_group,26333
+PB00363,B cell progenitor,864,GSE214546,atlas_group,19636
+PB00363,CD14+ Monocytes,3287,GSE214546,atlas_group,19636
+PB00363,CD16+ Monocytes,661,GSE214546,atlas_group,19636
+PB00363,CD4 Memory,3627,GSE214546,atlas_group,19636
+PB00363,CD4 Naive,3982,GSE214546,atlas_group,19636
+PB00363,CD8 Naive,933,GSE214546,atlas_group,19636
+PB00363,CD8 effector,1627,GSE214546,atlas_group,19636
+PB00363,Dendritic cell,209,GSE214546,atlas_group,19636
+PB00363,Double negative T cell,798,GSE214546,atlas_group,19636
+PB00363,NK cell,3015,GSE214546,atlas_group,19636
+PB00363,Platelets,88,GSE214546,atlas_group,19636
+PB00363,pDC,160,GSE214546,atlas_group,19636
+PB00363,pre-B cell,385,GSE214546,atlas_group,19636
+PB00366,B cell progenitor,491,GSE214546,atlas_group,21351
+PB00366,CD14+ Monocytes,2949,GSE214546,atlas_group,21351
+PB00366,CD16+ Monocytes,668,GSE214546,atlas_group,21351
+PB00366,CD4 Memory,5821,GSE214546,atlas_group,21351
+PB00366,CD4 Naive,4297,GSE214546,atlas_group,21351
+PB00366,CD8 Naive,2125,GSE214546,atlas_group,21351
+PB00366,CD8 effector,1330,GSE214546,atlas_group,21351
+PB00366,Dendritic cell,157,GSE214546,atlas_group,21351
+PB00366,Double negative T cell,568,GSE214546,atlas_group,21351
+PB00366,NK cell,973,GSE214546,atlas_group,21351
+PB00366,Platelets,46,GSE214546,atlas_group,21351
+PB00366,pDC,80,GSE214546,atlas_group,21351
+PB00366,pre-B cell,1846,GSE214546,atlas_group,21351
+PB00384,B cell progenitor,531,GSE214546,atlas_group,17129
+PB00384,CD14+ Monocytes,4417,GSE214546,atlas_group,17129
+PB00384,CD16+ Monocytes,578,GSE214546,atlas_group,17129
+PB00384,CD4 Memory,3418,GSE214546,atlas_group,17129
+PB00384,CD4 Naive,2592,GSE214546,atlas_group,17129
+PB00384,CD8 Naive,281,GSE214546,atlas_group,17129
+PB00384,CD8 effector,296,GSE214546,atlas_group,17129
+PB00384,Dendritic cell,195,GSE214546,atlas_group,17129
+PB00384,Double negative T cell,690,GSE214546,atlas_group,17129
+PB00384,NK cell,3113,GSE214546,atlas_group,17129
+PB00384,Platelets,21,GSE214546,atlas_group,17129
+PB00384,pDC,81,GSE214546,atlas_group,17129
+PB00384,pre-B cell,916,GSE214546,atlas_group,17129
+PB00386,B cell progenitor,600,GSE214546,atlas_group,16191
+PB00386,CD14+ Monocytes,2208,GSE214546,atlas_group,16191
+PB00386,CD16+ Monocytes,355,GSE214546,atlas_group,16191
+PB00386,CD4 Memory,3511,GSE214546,atlas_group,16191
+PB00386,CD4 Naive,2468,GSE214546,atlas_group,16191
+PB00386,CD8 Naive,1033,GSE214546,atlas_group,16191
+PB00386,CD8 effector,4018,GSE214546,atlas_group,16191
+PB00386,Dendritic cell,132,GSE214546,atlas_group,16191
+PB00386,Double negative T cell,133,GSE214546,atlas_group,16191
+PB00386,NK cell,889,GSE214546,atlas_group,16191
+PB00386,Platelets,12,GSE214546,atlas_group,16191
+PB00386,pDC,77,GSE214546,atlas_group,16191
+PB00386,pre-B cell,755,GSE214546,atlas_group,16191
+PB00388,B cell progenitor,593,GSE214546,atlas_group,19710
+PB00388,CD14+ Monocytes,4336,GSE214546,atlas_group,19710
+PB00388,CD16+ Monocytes,1158,GSE214546,atlas_group,19710
+PB00388,CD4 Memory,4555,GSE214546,atlas_group,19710
+PB00388,CD4 Naive,2349,GSE214546,atlas_group,19710
+PB00388,CD8 Naive,251,GSE214546,atlas_group,19710
+PB00388,CD8 effector,3778,GSE214546,atlas_group,19710
+PB00388,Dendritic cell,114,GSE214546,atlas_group,19710
+PB00388,Double negative T cell,413,GSE214546,atlas_group,19710
+PB00388,NK cell,1117,GSE214546,atlas_group,19710
+PB00388,Platelets,58,GSE214546,atlas_group,19710
+PB00388,pDC,72,GSE214546,atlas_group,19710
+PB00388,pre-B cell,916,GSE214546,atlas_group,19710
+PB00507,B cell progenitor,455,GSE214546,atlas_group,17602
+PB00507,CD14+ Monocytes,2190,GSE214546,atlas_group,17602
+PB00507,CD16+ Monocytes,578,GSE214546,atlas_group,17602
+PB00507,CD4 Memory,3436,GSE214546,atlas_group,17602
+PB00507,CD4 Naive,4791,GSE214546,atlas_group,17602
+PB00507,CD8 Naive,1159,GSE214546,atlas_group,17602
+PB00507,CD8 effector,849,GSE214546,atlas_group,17602
+PB00507,Dendritic cell,122,GSE214546,atlas_group,17602
+PB00507,Double negative T cell,477,GSE214546,atlas_group,17602
+PB00507,NK cell,3189,GSE214546,atlas_group,17602
+PB00507,Platelets,31,GSE214546,atlas_group,17602
+PB00507,pDC,74,GSE214546,atlas_group,17602
+PB00507,pre-B cell,251,GSE214546,atlas_group,17602
+PB00537,B cell progenitor,707,GSE214546,atlas_group,18171
+PB00537,CD14+ Monocytes,3916,GSE214546,atlas_group,18171
+PB00537,CD16+ Monocytes,517,GSE214546,atlas_group,18171
+PB00537,CD4 Memory,4461,GSE214546,atlas_group,18171
+PB00537,CD4 Naive,2969,GSE214546,atlas_group,18171
+PB00537,CD8 Naive,172,GSE214546,atlas_group,18171
+PB00537,CD8 effector,3780,GSE214546,atlas_group,18171
+PB00537,Dendritic cell,136,GSE214546,atlas_group,18171
+PB00537,Double negative T cell,225,GSE214546,atlas_group,18171
+PB00537,NK cell,823,GSE214546,atlas_group,18171
+PB00537,Platelets,40,GSE214546,atlas_group,18171
+PB00537,pDC,62,GSE214546,atlas_group,18171
+PB00537,pre-B cell,363,GSE214546,atlas_group,18171
+PB00539,B cell progenitor,267,GSE214546,atlas_group,19289
+PB00539,CD14+ Monocytes,4645,GSE214546,atlas_group,19289
+PB00539,CD16+ Monocytes,1905,GSE214546,atlas_group,19289
+PB00539,CD4 Memory,5287,GSE214546,atlas_group,19289
+PB00539,CD4 Naive,3107,GSE214546,atlas_group,19289
+PB00539,CD8 Naive,68,GSE214546,atlas_group,19289
+PB00539,CD8 effector,1396,GSE214546,atlas_group,19289
+PB00539,Dendritic cell,118,GSE214546,atlas_group,19289
+PB00539,Double negative T cell,288,GSE214546,atlas_group,19289
+PB00539,NK cell,1250,GSE214546,atlas_group,19289
+PB00539,Platelets,216,GSE214546,atlas_group,19289
+PB00539,pDC,46,GSE214546,atlas_group,19289
+PB00539,pre-B cell,696,GSE214546,atlas_group,19289
+PB00552,B cell progenitor,521,GSE214546,atlas_group,20665
+PB00552,CD14+ Monocytes,2817,GSE214546,atlas_group,20665
+PB00552,CD16+ Monocytes,1068,GSE214546,atlas_group,20665
+PB00552,CD4 Memory,3852,GSE214546,atlas_group,20665
+PB00552,CD4 Naive,8021,GSE214546,atlas_group,20665
+PB00552,CD8 Naive,416,GSE214546,atlas_group,20665
+PB00552,CD8 effector,861,GSE214546,atlas_group,20665
+PB00552,Dendritic cell,187,GSE214546,atlas_group,20665
+PB00552,Double negative T cell,65,GSE214546,atlas_group,20665
+PB00552,NK cell,1487,GSE214546,atlas_group,20665
+PB00552,Platelets,38,GSE214546,atlas_group,20665
+PB00552,pDC,70,GSE214546,atlas_group,20665
+PB00552,pre-B cell,1262,GSE214546,atlas_group,20665
+PB00562,B cell progenitor,516,GSE214546,atlas_group,18189
+PB00562,CD14+ Monocytes,2509,GSE214546,atlas_group,18189
+PB00562,CD16+ Monocytes,492,GSE214546,atlas_group,18189
+PB00562,CD4 Memory,4426,GSE214546,atlas_group,18189
+PB00562,CD4 Naive,3803,GSE214546,atlas_group,18189
+PB00562,CD8 Naive,727,GSE214546,atlas_group,18189
+PB00562,CD8 effector,2167,GSE214546,atlas_group,18189
+PB00562,Dendritic cell,109,GSE214546,atlas_group,18189
+PB00562,Double negative T cell,389,GSE214546,atlas_group,18189
+PB00562,NK cell,2205,GSE214546,atlas_group,18189
+PB00562,Platelets,23,GSE214546,atlas_group,18189
+PB00562,pDC,40,GSE214546,atlas_group,18189
+PB00562,pre-B cell,783,GSE214546,atlas_group,18189
+PB00566,B cell progenitor,319,GSE214546,atlas_group,20651
+PB00566,CD14+ Monocytes,2412,GSE214546,atlas_group,20651
+PB00566,CD16+ Monocytes,327,GSE214546,atlas_group,20651
+PB00566,CD4 Memory,6017,GSE214546,atlas_group,20651
+PB00566,CD4 Naive,5180,GSE214546,atlas_group,20651
+PB00566,CD8 Naive,618,GSE214546,atlas_group,20651
+PB00566,CD8 effector,1461,GSE214546,atlas_group,20651
+PB00566,Dendritic cell,79,GSE214546,atlas_group,20651
+PB00566,Double negative T cell,154,GSE214546,atlas_group,20651
+PB00566,NK cell,2789,GSE214546,atlas_group,20651
+PB00566,Platelets,30,GSE214546,atlas_group,20651
+PB00566,pDC,45,GSE214546,atlas_group,20651
+PB00566,pre-B cell,1220,GSE214546,atlas_group,20651
+PB00569,B cell progenitor,1011,GSE214546,atlas_group,20249
+PB00569,CD14+ Monocytes,3067,GSE214546,atlas_group,20249
+PB00569,CD16+ Monocytes,663,GSE214546,atlas_group,20249
+PB00569,CD4 Memory,4964,GSE214546,atlas_group,20249
+PB00569,CD4 Naive,4989,GSE214546,atlas_group,20249
+PB00569,CD8 Naive,584,GSE214546,atlas_group,20249
+PB00569,CD8 effector,2269,GSE214546,atlas_group,20249
+PB00569,Dendritic cell,118,GSE214546,atlas_group,20249
+PB00569,Double negative T cell,256,GSE214546,atlas_group,20249
+PB00569,NK cell,1284,GSE214546,atlas_group,20249
+PB00569,Platelets,67,GSE214546,atlas_group,20249
+PB00569,pDC,62,GSE214546,atlas_group,20249
+PB00569,pre-B cell,915,GSE214546,atlas_group,20249
+PB00002,B cell progenitor,312,GSE214546,exact_age,22592
+PB00002,CD14+ Monocytes,3742,GSE214546,exact_age,22592
+PB00002,CD16+ Monocytes,364,GSE214546,exact_age,22592
+PB00002,CD4 Memory,5866,GSE214546,exact_age,22592
+PB00002,CD4 Naive,5243,GSE214546,exact_age,22592
+PB00002,CD8 Naive,1137,GSE214546,exact_age,22592
+PB00002,CD8 effector,2461,GSE214546,exact_age,22592
+PB00002,Dendritic cell,215,GSE214546,exact_age,22592
+PB00002,Double negative T cell,146,GSE214546,exact_age,22592
+PB00002,NK cell,2102,GSE214546,exact_age,22592
+PB00002,Platelets,66,GSE214546,exact_age,22592
+PB00002,pDC,150,GSE214546,exact_age,22592
+PB00002,pre-B cell,788,GSE214546,exact_age,22592
+PB00003,B cell progenitor,593,GSE214546,exact_age,22078
+PB00003,CD14+ Monocytes,3142,GSE214546,exact_age,22078
+PB00003,CD16+ Monocytes,917,GSE214546,exact_age,22078
+PB00003,CD4 Memory,4540,GSE214546,exact_age,22078
+PB00003,CD4 Naive,5843,GSE214546,exact_age,22078
+PB00003,CD8 Naive,2570,GSE214546,exact_age,22078
+PB00003,CD8 effector,921,GSE214546,exact_age,22078
+PB00003,Dendritic cell,168,GSE214546,exact_age,22078
+PB00003,Double negative T cell,661,GSE214546,exact_age,22078
+PB00003,NK cell,1154,GSE214546,exact_age,22078
+PB00003,Platelets,54,GSE214546,exact_age,22078
+PB00003,pDC,81,GSE214546,exact_age,22078
+PB00003,pre-B cell,1434,GSE214546,exact_age,22078
+PB00004,B cell progenitor,494,GSE214546,exact_age,20170
+PB00004,CD14+ Monocytes,1916,GSE214546,exact_age,20170
+PB00004,CD16+ Monocytes,342,GSE214546,exact_age,20170
+PB00004,CD4 Memory,4431,GSE214546,exact_age,20170
+PB00004,CD4 Naive,5465,GSE214546,exact_age,20170
+PB00004,CD8 Naive,1740,GSE214546,exact_age,20170
+PB00004,CD8 effector,2070,GSE214546,exact_age,20170
+PB00004,Dendritic cell,130,GSE214546,exact_age,20170
+PB00004,Double negative T cell,1135,GSE214546,exact_age,20170
+PB00004,NK cell,1577,GSE214546,exact_age,20170
+PB00004,Platelets,129,GSE214546,exact_age,20170
+PB00004,pDC,99,GSE214546,exact_age,20170
+PB00004,pre-B cell,642,GSE214546,exact_age,20170
+PB00006,B cell progenitor,341,GSE214546,exact_age,21200
+PB00006,CD14+ Monocytes,7350,GSE214546,exact_age,21200
+PB00006,CD16+ Monocytes,344,GSE214546,exact_age,21200
+PB00006,CD4 Memory,2901,GSE214546,exact_age,21200
+PB00006,CD4 Naive,6106,GSE214546,exact_age,21200
+PB00006,CD8 Naive,1183,GSE214546,exact_age,21200
+PB00006,CD8 effector,623,GSE214546,exact_age,21200
+PB00006,Dendritic cell,175,GSE214546,exact_age,21200
+PB00006,Double negative T cell,393,GSE214546,exact_age,21200
+PB00006,NK cell,434,GSE214546,exact_age,21200
+PB00006,Platelets,85,GSE214546,exact_age,21200
+PB00006,pDC,99,GSE214546,exact_age,21200
+PB00006,pre-B cell,1166,GSE214546,exact_age,21200
+PB00010,B cell progenitor,580,GSE214546,exact_age,18976
+PB00010,CD14+ Monocytes,3406,GSE214546,exact_age,18976
+PB00010,CD16+ Monocytes,710,GSE214546,exact_age,18976
+PB00010,CD4 Memory,3169,GSE214546,exact_age,18976
+PB00010,CD4 Naive,4019,GSE214546,exact_age,18976
+PB00010,CD8 Naive,1141,GSE214546,exact_age,18976
+PB00010,CD8 effector,1701,GSE214546,exact_age,18976
+PB00010,Dendritic cell,190,GSE214546,exact_age,18976
+PB00010,Double negative T cell,530,GSE214546,exact_age,18976
+PB00010,NK cell,1650,GSE214546,exact_age,18976
+PB00010,Platelets,83,GSE214546,exact_age,18976
+PB00010,pDC,106,GSE214546,exact_age,18976
+PB00010,pre-B cell,1691,GSE214546,exact_age,18976
+PB00015,B cell progenitor,277,GSE214546,exact_age,19960
+PB00015,CD14+ Monocytes,3223,GSE214546,exact_age,19960
+PB00015,CD16+ Monocytes,548,GSE214546,exact_age,19960
+PB00015,CD4 Memory,5899,GSE214546,exact_age,19960
+PB00015,CD4 Naive,4432,GSE214546,exact_age,19960
+PB00015,CD8 Naive,252,GSE214546,exact_age,19960
+PB00015,CD8 effector,1284,GSE214546,exact_age,19960
+PB00015,Dendritic cell,225,GSE214546,exact_age,19960
+PB00015,Double negative T cell,292,GSE214546,exact_age,19960
+PB00015,NK cell,2345,GSE214546,exact_age,19960
+PB00015,Platelets,264,GSE214546,exact_age,19960
+PB00015,pDC,41,GSE214546,exact_age,19960
+PB00015,pre-B cell,878,GSE214546,exact_age,19960
+PB00022,B cell progenitor,277,GSE214546,exact_age,18547
+PB00022,CD14+ Monocytes,2762,GSE214546,exact_age,18547
+PB00022,CD16+ Monocytes,458,GSE214546,exact_age,18547
+PB00022,CD4 Memory,4130,GSE214546,exact_age,18547
+PB00022,CD4 Naive,4348,GSE214546,exact_age,18547
+PB00022,CD8 Naive,1085,GSE214546,exact_age,18547
+PB00022,CD8 effector,2802,GSE214546,exact_age,18547
+PB00022,Dendritic cell,111,GSE214546,exact_age,18547
+PB00022,Double negative T cell,352,GSE214546,exact_age,18547
+PB00022,NK cell,1155,GSE214546,exact_age,18547
+PB00022,Platelets,476,GSE214546,exact_age,18547
+PB00022,pDC,109,GSE214546,exact_age,18547
+PB00022,pre-B cell,482,GSE214546,exact_age,18547
+PB00023,B cell progenitor,1341,GSE214546,exact_age,20854
+PB00023,CD14+ Monocytes,4072,GSE214546,exact_age,20854
+PB00023,CD16+ Monocytes,370,GSE214546,exact_age,20854
+PB00023,CD4 Memory,3381,GSE214546,exact_age,20854
+PB00023,CD4 Naive,4259,GSE214546,exact_age,20854
+PB00023,CD8 Naive,1385,GSE214546,exact_age,20854
+PB00023,CD8 effector,1749,GSE214546,exact_age,20854
+PB00023,Dendritic cell,158,GSE214546,exact_age,20854
+PB00023,Double negative T cell,1224,GSE214546,exact_age,20854
+PB00023,NK cell,1415,GSE214546,exact_age,20854
+PB00023,Platelets,81,GSE214546,exact_age,20854
+PB00023,pDC,127,GSE214546,exact_age,20854
+PB00023,pre-B cell,1292,GSE214546,exact_age,20854
+PB00026,B cell progenitor,498,GSE214546,exact_age,18346
+PB00026,CD14+ Monocytes,4292,GSE214546,exact_age,18346
+PB00026,CD16+ Monocytes,167,GSE214546,exact_age,18346
+PB00026,CD4 Memory,2151,GSE214546,exact_age,18346
+PB00026,CD4 Naive,3469,GSE214546,exact_age,18346
+PB00026,CD8 Naive,1373,GSE214546,exact_age,18346
+PB00026,CD8 effector,3474,GSE214546,exact_age,18346
+PB00026,Dendritic cell,176,GSE214546,exact_age,18346
+PB00026,Double negative T cell,579,GSE214546,exact_age,18346
+PB00026,NK cell,1070,GSE214546,exact_age,18346
+PB00026,Platelets,48,GSE214546,exact_age,18346
+PB00026,pDC,81,GSE214546,exact_age,18346
+PB00026,pre-B cell,968,GSE214546,exact_age,18346
+PB00030,B cell progenitor,710,GSE214546,exact_age,26514
+PB00030,CD14+ Monocytes,5720,GSE214546,exact_age,26514
+PB00030,CD16+ Monocytes,257,GSE214546,exact_age,26514
+PB00030,CD4 Memory,7000,GSE214546,exact_age,26514
+PB00030,CD4 Naive,6654,GSE214546,exact_age,26514
+PB00030,CD8 Naive,1436,GSE214546,exact_age,26514
+PB00030,CD8 effector,1239,GSE214546,exact_age,26514
+PB00030,Dendritic cell,225,GSE214546,exact_age,26514
+PB00030,Double negative T cell,456,GSE214546,exact_age,26514
+PB00030,NK cell,1824,GSE214546,exact_age,26514
+PB00030,Platelets,264,GSE214546,exact_age,26514
+PB00030,pDC,68,GSE214546,exact_age,26514
+PB00030,pre-B cell,661,GSE214546,exact_age,26514
+PB00031,B cell progenitor,877,GSE214546,exact_age,20444
+PB00031,CD14+ Monocytes,3426,GSE214546,exact_age,20444
+PB00031,CD16+ Monocytes,187,GSE214546,exact_age,20444
+PB00031,CD4 Memory,3838,GSE214546,exact_age,20444
+PB00031,CD4 Naive,3849,GSE214546,exact_age,20444
+PB00031,CD8 Naive,1069,GSE214546,exact_age,20444
+PB00031,CD8 effector,3492,GSE214546,exact_age,20444
+PB00031,Dendritic cell,177,GSE214546,exact_age,20444
+PB00031,Double negative T cell,1159,GSE214546,exact_age,20444
+PB00031,NK cell,1511,GSE214546,exact_age,20444
+PB00031,Platelets,124,GSE214546,exact_age,20444
+PB00031,pDC,65,GSE214546,exact_age,20444
+PB00031,pre-B cell,670,GSE214546,exact_age,20444
+PB00041,B cell progenitor,397,GSE214546,exact_age,19563
+PB00041,CD14+ Monocytes,5489,GSE214546,exact_age,19563
+PB00041,CD16+ Monocytes,705,GSE214546,exact_age,19563
+PB00041,CD4 Memory,3793,GSE214546,exact_age,19563
+PB00041,CD4 Naive,4061,GSE214546,exact_age,19563
+PB00041,CD8 Naive,749,GSE214546,exact_age,19563
+PB00041,CD8 effector,1206,GSE214546,exact_age,19563
+PB00041,Dendritic cell,109,GSE214546,exact_age,19563
+PB00041,Double negative T cell,337,GSE214546,exact_age,19563
+PB00041,NK cell,790,GSE214546,exact_age,19563
+PB00041,Platelets,206,GSE214546,exact_age,19563
+PB00041,pDC,44,GSE214546,exact_age,19563
+PB00041,pre-B cell,1677,GSE214546,exact_age,19563
+PB00352,B cell progenitor,628,GSE214546,exact_age,26333
+PB00352,CD14+ Monocytes,6299,GSE214546,exact_age,26333
+PB00352,CD16+ Monocytes,1263,GSE214546,exact_age,26333
+PB00352,CD4 Memory,4853,GSE214546,exact_age,26333
+PB00352,CD4 Naive,6866,GSE214546,exact_age,26333
+PB00352,CD8 Naive,135,GSE214546,exact_age,26333
+PB00352,CD8 effector,3851,GSE214546,exact_age,26333
+PB00352,Dendritic cell,209,GSE214546,exact_age,26333
+PB00352,Double negative T cell,421,GSE214546,exact_age,26333
+PB00352,NK cell,1200,GSE214546,exact_age,26333
+PB00352,Platelets,52,GSE214546,exact_age,26333
+PB00352,pDC,116,GSE214546,exact_age,26333
+PB00352,pre-B cell,440,GSE214546,exact_age,26333
+PB00363,B cell progenitor,864,GSE214546,exact_age,19636
+PB00363,CD14+ Monocytes,3287,GSE214546,exact_age,19636
+PB00363,CD16+ Monocytes,661,GSE214546,exact_age,19636
+PB00363,CD4 Memory,3627,GSE214546,exact_age,19636
+PB00363,CD4 Naive,3982,GSE214546,exact_age,19636
+PB00363,CD8 Naive,933,GSE214546,exact_age,19636
+PB00363,CD8 effector,1627,GSE214546,exact_age,19636
+PB00363,Dendritic cell,209,GSE214546,exact_age,19636
+PB00363,Double negative T cell,798,GSE214546,exact_age,19636
+PB00363,NK cell,3015,GSE214546,exact_age,19636
+PB00363,Platelets,88,GSE214546,exact_age,19636
+PB00363,pDC,160,GSE214546,exact_age,19636
+PB00363,pre-B cell,385,GSE214546,exact_age,19636
+PB00366,B cell progenitor,491,GSE214546,exact_age,21351
+PB00366,CD14+ Monocytes,2949,GSE214546,exact_age,21351
+PB00366,CD16+ Monocytes,668,GSE214546,exact_age,21351
+PB00366,CD4 Memory,5821,GSE214546,exact_age,21351
+PB00366,CD4 Naive,4297,GSE214546,exact_age,21351
+PB00366,CD8 Naive,2125,GSE214546,exact_age,21351
+PB00366,CD8 effector,1330,GSE214546,exact_age,21351
+PB00366,Dendritic cell,157,GSE214546,exact_age,21351
+PB00366,Double negative T cell,568,GSE214546,exact_age,21351
+PB00366,NK cell,973,GSE214546,exact_age,21351
+PB00366,Platelets,46,GSE214546,exact_age,21351
+PB00366,pDC,80,GSE214546,exact_age,21351
+PB00366,pre-B cell,1846,GSE214546,exact_age,21351
+PB00384,B cell progenitor,531,GSE214546,exact_age,17129
+PB00384,CD14+ Monocytes,4417,GSE214546,exact_age,17129
+PB00384,CD16+ Monocytes,578,GSE214546,exact_age,17129
+PB00384,CD4 Memory,3418,GSE214546,exact_age,17129
+PB00384,CD4 Naive,2592,GSE214546,exact_age,17129
+PB00384,CD8 Naive,281,GSE214546,exact_age,17129
+PB00384,CD8 effector,296,GSE214546,exact_age,17129
+PB00384,Dendritic cell,195,GSE214546,exact_age,17129
+PB00384,Double negative T cell,690,GSE214546,exact_age,17129
+PB00384,NK cell,3113,GSE214546,exact_age,17129
+PB00384,Platelets,21,GSE214546,exact_age,17129
+PB00384,pDC,81,GSE214546,exact_age,17129
+PB00384,pre-B cell,916,GSE214546,exact_age,17129
+PB00386,B cell progenitor,600,GSE214546,exact_age,16191
+PB00386,CD14+ Monocytes,2208,GSE214546,exact_age,16191
+PB00386,CD16+ Monocytes,355,GSE214546,exact_age,16191
+PB00386,CD4 Memory,3511,GSE214546,exact_age,16191
+PB00386,CD4 Naive,2468,GSE214546,exact_age,16191
+PB00386,CD8 Naive,1033,GSE214546,exact_age,16191
+PB00386,CD8 effector,4018,GSE214546,exact_age,16191
+PB00386,Dendritic cell,132,GSE214546,exact_age,16191
+PB00386,Double negative T cell,133,GSE214546,exact_age,16191
+PB00386,NK cell,889,GSE214546,exact_age,16191
+PB00386,Platelets,12,GSE214546,exact_age,16191
+PB00386,pDC,77,GSE214546,exact_age,16191
+PB00386,pre-B cell,755,GSE214546,exact_age,16191
+PB00388,B cell progenitor,593,GSE214546,exact_age,19710
+PB00388,CD14+ Monocytes,4336,GSE214546,exact_age,19710
+PB00388,CD16+ Monocytes,1158,GSE214546,exact_age,19710
+PB00388,CD4 Memory,4555,GSE214546,exact_age,19710
+PB00388,CD4 Naive,2349,GSE214546,exact_age,19710
+PB00388,CD8 Naive,251,GSE214546,exact_age,19710
+PB00388,CD8 effector,3778,GSE214546,exact_age,19710
+PB00388,Dendritic cell,114,GSE214546,exact_age,19710
+PB00388,Double negative T cell,413,GSE214546,exact_age,19710
+PB00388,NK cell,1117,GSE214546,exact_age,19710
+PB00388,Platelets,58,GSE214546,exact_age,19710
+PB00388,pDC,72,GSE214546,exact_age,19710
+PB00388,pre-B cell,916,GSE214546,exact_age,19710
+PB00507,B cell progenitor,455,GSE214546,exact_age,17602
+PB00507,CD14+ Monocytes,2190,GSE214546,exact_age,17602
+PB00507,CD16+ Monocytes,578,GSE214546,exact_age,17602
+PB00507,CD4 Memory,3436,GSE214546,exact_age,17602
+PB00507,CD4 Naive,4791,GSE214546,exact_age,17602
+PB00507,CD8 Naive,1159,GSE214546,exact_age,17602
+PB00507,CD8 effector,849,GSE214546,exact_age,17602
+PB00507,Dendritic cell,122,GSE214546,exact_age,17602
+PB00507,Double negative T cell,477,GSE214546,exact_age,17602
+PB00507,NK cell,3189,GSE214546,exact_age,17602
+PB00507,Platelets,31,GSE214546,exact_age,17602
+PB00507,pDC,74,GSE214546,exact_age,17602
+PB00507,pre-B cell,251,GSE214546,exact_age,17602
+PB00537,B cell progenitor,707,GSE214546,exact_age,18171
+PB00537,CD14+ Monocytes,3916,GSE214546,exact_age,18171
+PB00537,CD16+ Monocytes,517,GSE214546,exact_age,18171
+PB00537,CD4 Memory,4461,GSE214546,exact_age,18171
+PB00537,CD4 Naive,2969,GSE214546,exact_age,18171
+PB00537,CD8 Naive,172,GSE214546,exact_age,18171
+PB00537,CD8 effector,3780,GSE214546,exact_age,18171
+PB00537,Dendritic cell,136,GSE214546,exact_age,18171
+PB00537,Double negative T cell,225,GSE214546,exact_age,18171
+PB00537,NK cell,823,GSE214546,exact_age,18171
+PB00537,Platelets,40,GSE214546,exact_age,18171
+PB00537,pDC,62,GSE214546,exact_age,18171
+PB00537,pre-B cell,363,GSE214546,exact_age,18171
+PB00539,B cell progenitor,267,GSE214546,exact_age,19289
+PB00539,CD14+ Monocytes,4645,GSE214546,exact_age,19289
+PB00539,CD16+ Monocytes,1905,GSE214546,exact_age,19289
+PB00539,CD4 Memory,5287,GSE214546,exact_age,19289
+PB00539,CD4 Naive,3107,GSE214546,exact_age,19289
+PB00539,CD8 Naive,68,GSE214546,exact_age,19289
+PB00539,CD8 effector,1396,GSE214546,exact_age,19289
+PB00539,Dendritic cell,118,GSE214546,exact_age,19289
+PB00539,Double negative T cell,288,GSE214546,exact_age,19289
+PB00539,NK cell,1250,GSE214546,exact_age,19289
+PB00539,Platelets,216,GSE214546,exact_age,19289
+PB00539,pDC,46,GSE214546,exact_age,19289
+PB00539,pre-B cell,696,GSE214546,exact_age,19289
+PB00552,B cell progenitor,521,GSE214546,exact_age,20665
+PB00552,CD14+ Monocytes,2817,GSE214546,exact_age,20665
+PB00552,CD16+ Monocytes,1068,GSE214546,exact_age,20665
+PB00552,CD4 Memory,3852,GSE214546,exact_age,20665
+PB00552,CD4 Naive,8021,GSE214546,exact_age,20665
+PB00552,CD8 Naive,416,GSE214546,exact_age,20665
+PB00552,CD8 effector,861,GSE214546,exact_age,20665
+PB00552,Dendritic cell,187,GSE214546,exact_age,20665
+PB00552,Double negative T cell,65,GSE214546,exact_age,20665
+PB00552,NK cell,1487,GSE214546,exact_age,20665
+PB00552,Platelets,38,GSE214546,exact_age,20665
+PB00552,pDC,70,GSE214546,exact_age,20665
+PB00552,pre-B cell,1262,GSE214546,exact_age,20665
+PB00562,B cell progenitor,516,GSE214546,exact_age,18189
+PB00562,CD14+ Monocytes,2509,GSE214546,exact_age,18189
+PB00562,CD16+ Monocytes,492,GSE214546,exact_age,18189
+PB00562,CD4 Memory,4426,GSE214546,exact_age,18189
+PB00562,CD4 Naive,3803,GSE214546,exact_age,18189
+PB00562,CD8 Naive,727,GSE214546,exact_age,18189
+PB00562,CD8 effector,2167,GSE214546,exact_age,18189
+PB00562,Dendritic cell,109,GSE214546,exact_age,18189
+PB00562,Double negative T cell,389,GSE214546,exact_age,18189
+PB00562,NK cell,2205,GSE214546,exact_age,18189
+PB00562,Platelets,23,GSE214546,exact_age,18189
+PB00562,pDC,40,GSE214546,exact_age,18189
+PB00562,pre-B cell,783,GSE214546,exact_age,18189
+PB00566,B cell progenitor,319,GSE214546,exact_age,20651
+PB00566,CD14+ Monocytes,2412,GSE214546,exact_age,20651
+PB00566,CD16+ Monocytes,327,GSE214546,exact_age,20651
+PB00566,CD4 Memory,6017,GSE214546,exact_age,20651
+PB00566,CD4 Naive,5180,GSE214546,exact_age,20651
+PB00566,CD8 Naive,618,GSE214546,exact_age,20651
+PB00566,CD8 effector,1461,GSE214546,exact_age,20651
+PB00566,Dendritic cell,79,GSE214546,exact_age,20651
+PB00566,Double negative T cell,154,GSE214546,exact_age,20651
+PB00566,NK cell,2789,GSE214546,exact_age,20651
+PB00566,Platelets,30,GSE214546,exact_age,20651
+PB00566,pDC,45,GSE214546,exact_age,20651
+PB00566,pre-B cell,1220,GSE214546,exact_age,20651
+PB00569,B cell progenitor,1011,GSE214546,exact_age,20249
+PB00569,CD14+ Monocytes,3067,GSE214546,exact_age,20249
+PB00569,CD16+ Monocytes,663,GSE214546,exact_age,20249
+PB00569,CD4 Memory,4964,GSE214546,exact_age,20249
+PB00569,CD4 Naive,4989,GSE214546,exact_age,20249
+PB00569,CD8 Naive,584,GSE214546,exact_age,20249
+PB00569,CD8 effector,2269,GSE214546,exact_age,20249
+PB00569,Dendritic cell,118,GSE214546,exact_age,20249
+PB00569,Double negative T cell,256,GSE214546,exact_age,20249
+PB00569,NK cell,1284,GSE214546,exact_age,20249
+PB00569,Platelets,67,GSE214546,exact_age,20249
+PB00569,pDC,62,GSE214546,exact_age,20249
+PB00569,pre-B cell,915,GSE214546,exact_age,20249
+PB00510,B cell progenitor,1297,GSE214546,exact_age,20362
+PB00510,CD14+ Monocytes,3952,GSE214546,exact_age,20362
+PB00510,CD16+ Monocytes,486,GSE214546,exact_age,20362
+PB00510,CD4 Memory,4871,GSE214546,exact_age,20362
+PB00510,CD4 Naive,4352,GSE214546,exact_age,20362
+PB00510,CD8 Naive,1389,GSE214546,exact_age,20362
+PB00510,CD8 effector,1066,GSE214546,exact_age,20362
+PB00510,Dendritic cell,187,GSE214546,exact_age,20362
+PB00510,Double negative T cell,278,GSE214546,exact_age,20362
+PB00510,NK cell,1345,GSE214546,exact_age,20362
+PB00510,Platelets,25,GSE214546,exact_age,20362
+PB00510,pDC,50,GSE214546,exact_age,20362
+PB00510,pre-B cell,1064,GSE214546,exact_age,20362
+PB00530,B cell progenitor,420,GSE214546,exact_age,17079
+PB00530,CD14+ Monocytes,2463,GSE214546,exact_age,17079
+PB00530,CD16+ Monocytes,582,GSE214546,exact_age,17079
+PB00530,CD4 Memory,4246,GSE214546,exact_age,17079
+PB00530,CD4 Naive,3482,GSE214546,exact_age,17079
+PB00530,CD8 Naive,309,GSE214546,exact_age,17079
+PB00530,CD8 effector,2129,GSE214546,exact_age,17079
+PB00530,Dendritic cell,88,GSE214546,exact_age,17079
+PB00530,Double negative T cell,130,GSE214546,exact_age,17079
+PB00530,NK cell,1231,GSE214546,exact_age,17079
+PB00530,Platelets,111,GSE214546,exact_age,17079
+PB00530,pDC,37,GSE214546,exact_age,17079
+PB00530,pre-B cell,1851,GSE214546,exact_age,17079
+PB00356,B cell progenitor,452,GSE214546,exact_age,17732
+PB00356,CD14+ Monocytes,4497,GSE214546,exact_age,17732
+PB00356,CD16+ Monocytes,683,GSE214546,exact_age,17732
+PB00356,CD4 Memory,3003,GSE214546,exact_age,17732
+PB00356,CD4 Naive,4988,GSE214546,exact_age,17732
+PB00356,CD8 Naive,333,GSE214546,exact_age,17732
+PB00356,CD8 effector,1094,GSE214546,exact_age,17732
+PB00356,Dendritic cell,229,GSE214546,exact_age,17732
+PB00356,Double negative T cell,270,GSE214546,exact_age,17732
+PB00356,NK cell,1279,GSE214546,exact_age,17732
+PB00356,Platelets,42,GSE214546,exact_age,17732
+PB00356,pDC,130,GSE214546,exact_age,17732
+PB00356,pre-B cell,732,GSE214546,exact_age,17732
+PB00568,B cell progenitor,327,GSE214546,exact_age,19240
+PB00568,CD14+ Monocytes,2537,GSE214546,exact_age,19240
+PB00568,CD16+ Monocytes,708,GSE214546,exact_age,19240
+PB00568,CD4 Memory,4933,GSE214546,exact_age,19240
+PB00568,CD4 Naive,4922,GSE214546,exact_age,19240
+PB00568,CD8 Naive,642,GSE214546,exact_age,19240
+PB00568,CD8 effector,1436,GSE214546,exact_age,19240
+PB00568,Dendritic cell,99,GSE214546,exact_age,19240
+PB00568,Double negative T cell,235,GSE214546,exact_age,19240
+PB00568,NK cell,1145,GSE214546,exact_age,19240
+PB00568,Platelets,57,GSE214546,exact_age,19240
+PB00568,pDC,53,GSE214546,exact_age,19240
+PB00568,pre-B cell,2146,GSE214546,exact_age,19240
+PB00582,B cell progenitor,570,GSE214546,exact_age,20289
+PB00582,CD14+ Monocytes,3841,GSE214546,exact_age,20289
+PB00582,CD16+ Monocytes,615,GSE214546,exact_age,20289
+PB00582,CD4 Memory,5968,GSE214546,exact_age,20289
+PB00582,CD4 Naive,3535,GSE214546,exact_age,20289
+PB00582,CD8 Naive,342,GSE214546,exact_age,20289
+PB00582,CD8 effector,3261,GSE214546,exact_age,20289
+PB00582,Dendritic cell,218,GSE214546,exact_age,20289
+PB00582,Double negative T cell,112,GSE214546,exact_age,20289
+PB00582,NK cell,669,GSE214546,exact_age,20289
+PB00582,Platelets,43,GSE214546,exact_age,20289
+PB00582,pDC,48,GSE214546,exact_age,20289
+PB00582,pre-B cell,1067,GSE214546,exact_age,20289
+PB00342,B cell progenitor,1246,GSE214546,exact_age,28315
+PB00342,CD14+ Monocytes,5592,GSE214546,exact_age,28315
+PB00342,CD16+ Monocytes,965,GSE214546,exact_age,28315
+PB00342,CD4 Memory,4483,GSE214546,exact_age,28315
+PB00342,CD4 Naive,5159,GSE214546,exact_age,28315
+PB00342,CD8 Naive,902,GSE214546,exact_age,28315
+PB00342,CD8 effector,3950,GSE214546,exact_age,28315
+PB00342,Dendritic cell,224,GSE214546,exact_age,28315
+PB00342,Double negative T cell,633,GSE214546,exact_age,28315
+PB00342,NK cell,3420,GSE214546,exact_age,28315
+PB00342,Platelets,95,GSE214546,exact_age,28315
+PB00342,pDC,65,GSE214546,exact_age,28315
+PB00342,pre-B cell,1581,GSE214546,exact_age,28315
+PB00561,B cell progenitor,662,GSE214546,exact_age,22739
+PB00561,CD14+ Monocytes,2435,GSE214546,exact_age,22739
+PB00561,CD16+ Monocytes,773,GSE214546,exact_age,22739
+PB00561,CD4 Memory,6247,GSE214546,exact_age,22739
+PB00561,CD4 Naive,4298,GSE214546,exact_age,22739
+PB00561,CD8 Naive,579,GSE214546,exact_age,22739
+PB00561,CD8 effector,6015,GSE214546,exact_age,22739
+PB00561,Dendritic cell,188,GSE214546,exact_age,22739
+PB00561,Double negative T cell,283,GSE214546,exact_age,22739
+PB00561,NK cell,683,GSE214546,exact_age,22739
+PB00561,Platelets,136,GSE214546,exact_age,22739
+PB00561,pDC,59,GSE214546,exact_age,22739
+PB00561,pre-B cell,381,GSE214546,exact_age,22739

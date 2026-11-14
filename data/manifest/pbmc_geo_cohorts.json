@@ -2,12 +2,31 @@
   "created": "2026-11-14",
   "base_revision": "67634307987dcf5f7761f39cd2c31576f8c16952",
   "scope": {
-    "metadata_and_public_access_only": true,
-    "expression_matrices_downloaded": false,
-    "biological_outcomes_analyzed": false,
+    "metadata_and_public_access_only": false,
+    "expression_matrices_downloaded": true,
+    "biological_outcomes_analyzed": true,
     "gsa_or_synapse_used": false,
     "cohorts": ["GSE157007", "GSE213516", "GSE214546"],
     "external_data_root": "../agescape-revision-data"
+  },
+  "analysis_execution": {
+    "base_revision_at_freeze": "5e8bc6fff4fbb372c80c89338fe2c1ab6c929cb2",
+    "plan": "data/manifest/pbmc_analysis_plan.json",
+    "report": "reports/followup-pbmc-analysis.md",
+    "completed": "2026-11-14",
+    "analyzed_cohorts_sequentially": ["GSE213516", "GSE214546"],
+    "descriptive_excluded": ["GSE157007"],
+    "strict_donors": {"GSE213516": 10, "GSE214546": 23},
+    "atlas_sensitivity_donors": {"GSE213516": 12, "GSE214546": 25},
+    "exact_age_sensitivity_donors": {"GSE213516": 17, "GSE214546": 32},
+    "per_donor_downloads": {"GSE213516": 52, "GSE214546": 32},
+    "raw_tars_downloaded": false,
+    "aggregate_prefix": "results/followup-pbmc",
+    "figures": ["figures/followup-pbmc-targeted-forest.png", "figures/followup-pbmc-p1-forest.png", "figures/followup-pbmc-hellinger-forest.png"],
+    "resource_use": "results/followup-pbmc-resource-use.json",
+    "validation_summary": "results/followup-pbmc-validation-summary.json",
+    "count_validation": "All stored values in every analyzed matrix were finite, nonnegative integers; all retained barcode-label joins were one-to-one.",
+    "resource_guard": {"min_free_gb": 30, "max_file_gb": 3, "memory_gb": 8, "parallel_heavy_jobs": 1}
   },
   "filter_adjudication": {
     "prose_rule": "young <=40 years; old >60 years",
@@ -93,11 +112,11 @@
       "size_bytes": 18499390,
       "md5": "f258e3ce234de79118821119925c2efd",
       "fields_verified_from_range_header": ["X", "Age", "sampleID", "Cohort", "Celltype", "UMAP1", "UMAP2"],
-      "barcode_crosswalk": "For SE rows, X is sampleID + '_' + the 16-base GEO barcode without its '-1' suffix. Example GEO AAACCTGAGAGACGAA-1 maps to F30_AAACCTGAGAGACGAA. Require Cohort=='SE', restrict to selected sampleIDs, and verify one-to-one full-coverage unique joins before using labels.",
+      "barcode_crosswalk": "Validated for all 17 donors. Standard rows use sampleID + '_' + the 16-base GEO barcode without '-1'. F55 uses baseline_<barcode>-F55. Aliases HR, HYD, XMZ and ZY map to F40, F65, F60 and F46 respectively with 100% exact barcode matches. Of 131,800 SE annotation rows, 131,601 matched uniquely; 199 annotation-only rows were explicitly excluded and raw-only barcodes were not assigned labels.",
       "integrated_labels_required": false
     },
     "public_processed_objects": "The Figshare release is processed per-cell annotation/UMAP metadata, not an expression matrix. GEO supplies per-donor raw-count MatrixMarket files. Other Figshare CSVs cover non-SE cohorts and are excluded.",
-    "raw_count_format": "Per-donor Cell Ranger MatrixMarket coordinate-integer matrices plus barcodes/features. A 4,096-byte range probe of F30 confirmed the integer MatrixMarket header and dimensions; full integer/nonnegative validation remains an analysis prerequisite.",
+    "raw_count_format": "Per-donor Cell Ranger MatrixMarket coordinate-integer matrices plus barcodes/features. All 17 downloaded matrices passed full stored-value finite/nonnegative/integer validation and SHA-256 recording. Released feature records do not resolve the hg19-versus-GRCh38 conflict, so gene results are symbol-level only.",
     "series_raw_tar": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE213nnn/GSE213516/suppl/GSE213516_RAW.tar", "size_bytes": 876963840, "downloaded": false},
     "donors": [
       {"donor": "F30", "gsm": "GSM6588511", "age": 30, "sex": "female", "strict_group": "young", "atlas_included": true, "matrix": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6588nnn/GSM6588511/suppl/GSM6588511_F30_matrix.mtx.gz", "size_bytes": 38863486}, "barcodes": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6588nnn/GSM6588511/suppl/GSM6588511_F30_barcodes.tsv.gz", "size_bytes": 41510}, "features": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6588nnn/GSM6588511/suppl/GSM6588511_F30_features.tsv.gz", "size_bytes": 304728}},
@@ -144,11 +163,11 @@
     ],
     "annotations": {
       "released_primary": "Each per-donor labeled H5 contains matrix/observations/seurat_pbmc_type and score, cell barcode, batch/pool fields and QC metadata.",
-      "representative_schema_check": "PB00002 H5 was inspected by 34 range requests totaling 2,218,730 bytes. matrix/data is uint16 with 28,471,702 stored entries; matrix shape features=33,538 and cells=22,592. No expression values were extracted. Other files require the same schema/value checks after guarded acquisition.",
+      "representative_schema_check": "PB00002 H5 was inspected by 34 range requests totaling 2,218,730 bytes. matrix/data is uint16 with 28,471,702 stored entries; matrix shape features=33,538 and cells=22,592. All 32 downloaded H5 files subsequently passed full stored-value validation and one-to-one released-label checks.",
       "integrated_labels_required": false
     },
     "public_processed_objects": "The per-donor *_labeled.h5 files are processed demultiplexed 10x objects containing raw matrix counts, primary Seurat PBMC labels, UMAP/PCA and QC fields. ATAC fragments and TEA objects are outside this PBMC scRNA plan.",
-    "raw_count_format": "HDF5 /matrix sparse arrays; representative /matrix/data dtype uint16. Full finite, nonnegative integer validation is still required for every selected file before modeling.",
+    "raw_count_format": "HDF5 /matrix sparse arrays. All 32 per-donor files passed full finite, nonnegative integer validation and SHA-256 recording before modeling.",
     "series_raw_tar": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE214nnn/GSE214546/suppl/GSE214546_RAW.tar", "size_bytes": 32088821760, "downloaded": false, "use_for_planned_analysis": false},
     "donors": [
       {"donor": "PB00002", "subject_id": "BR1002", "gsm": "GSM6929079", "age": 29, "sex": "male", "cmv": "Neg", "strict_group": "young", "atlas_included": true, "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929079/suppl/GSM6929079_B001-P1_PB00002-01_labeled.h5", "size_bytes": 61725418}},
@@ -175,7 +194,14 @@
       {"donor": "PB00552", "subject_id": "BR2024", "gsm": "GSM6929094", "age": 62, "sex": "female", "cmv": "Pos", "strict_group": "old", "atlas_included": true, "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929094/suppl/GSM6929094_B045-P1_PB00552-01_2021-02-20T17_54_07.896349649Z_labeled.h5", "size_bytes": 65244971}},
       {"donor": "PB00562", "subject_id": "BR2023", "gsm": "GSM6929096", "age": 61, "sex": "male", "cmv": "Neg", "strict_group": "old", "atlas_included": true, "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929096/suppl/GSM6929096_B046-P1_PB00562-01_2021-02-24T00_12_47.912386239Z_labeled.h5", "size_bytes": 67107812}},
       {"donor": "PB00566", "subject_id": "BR2026", "gsm": "GSM6929103", "age": 60, "sex": "male", "cmv": "Neg", "strict_group": null, "atlas_included": true, "atlas_group": "old", "exclusion": "strict rule requires >60", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929103/suppl/GSM6929103_B053-P1_PB00566-01_2021-03-16T16_53_54.504538818Z_labeled.h5", "size_bytes": 68406896}},
-      {"donor": "PB00569", "subject_id": "BR2018", "gsm": "GSM6929098", "age": 63, "sex": "female", "cmv": "Pos", "strict_group": "old", "atlas_included": true, "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929098/suppl/GSM6929098_B047-P2_PB00569-01_2021-02-25T00_07_50.971832932Z_labeled.h5", "size_bytes": 66637524}}
+      {"donor": "PB00569", "subject_id": "BR2018", "gsm": "GSM6929098", "age": 63, "sex": "female", "cmv": "Pos", "strict_group": "old", "atlas_included": true, "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929098/suppl/GSM6929098_B047-P2_PB00569-01_2021-02-25T00_07_50.971832932Z_labeled.h5", "size_bytes": 66637524}},
+      {"donor": "PB00510", "subject_id": "BR2022", "gsm": "GSM6929092", "age": 55, "sex": "male", "cmv": "Neg", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929092/suppl/GSM6929092_B043-P1_PB00510-01_2021-01-28T01_04_59.754710921Z_labeled.h5", "size_bytes": 74031886}},
+      {"donor": "PB00530", "subject_id": "BR2012", "gsm": "GSM6929093", "age": 55, "sex": "female", "cmv": "Pos", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929093/suppl/GSM6929093_B045-P1_PB00530-01_2021-02-20T17_54_07.896349649Z_labeled.h5", "size_bytes": 54526017}},
+      {"donor": "PB00356", "subject_id": "BR2013", "gsm": "GSM6929097", "age": 59, "sex": "male", "cmv": "Pos", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929097/suppl/GSM6929097_B046-P2_PB00356-01_2021-02-24T00_13_26.04313294Z_labeled.h5", "size_bytes": 71451496}},
+      {"donor": "PB00568", "subject_id": "BR2021", "gsm": "GSM6929099", "age": 59, "sex": "female", "cmv": "Neg", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929099/suppl/GSM6929099_B048-P1_PB00568-01_2021-03-01T17_06_41.838698747Z_labeled.h5", "size_bytes": 72222953}},
+      {"donor": "PB00582", "subject_id": "BR2019", "gsm": "GSM6929100", "age": 57, "sex": "male", "cmv": "Pos", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929100/suppl/GSM6929100_B048-P1_PB00582-01_2021-03-01T17_06_41.838698747Z_labeled.h5", "size_bytes": 79142986}},
+      {"donor": "PB00342", "subject_id": "BR2025", "gsm": "GSM6929102", "age": 55, "sex": "male", "cmv": "Neg", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929102/suppl/GSM6929102_B050-P1_PB00342-01_2021-02-28T21_06_52.68159788Z_labeled.h5", "size_bytes": 89365993}},
+      {"donor": "PB00561", "subject_id": "BR2029", "gsm": "GSM6929106", "age": 58, "sex": "female", "cmv": "Pos", "strict_group": null, "atlas_included": false, "exclusion": "exact-age sensitivity only", "h5": {"url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6929nnn/GSM6929106/suppl/GSM6929106_B054-P1_PB00561-01_2022-06-28T21_54_05.984884065Z_labeled.h5", "size_bytes": 64388659}}
     ],
     "analysis_verdicts": {
       "separate_cohort_P1": {"status": "ready_conditional", "reason": "Sixteen young-adult and seven old donors with raw counts/labels; apply eligibility, sex/CMV/batch identifiability and P1 detection floors."},
