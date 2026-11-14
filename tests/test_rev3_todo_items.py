@@ -120,3 +120,25 @@ def test_item6_bayesian_vector_mature_only_deliverables():
     txt = (REPO / "report" / "cross-species-bayesian-vector-mature-only.md").read_text(encoding="utf-8")
     assert "0.0389" in txt and "0.7068" in txt and "male_ge_24m" in txt
     assert "\u2014" not in txt and "\u2013" not in txt
+
+
+def test_item7_bayesian_full_paper_deliverables():
+    diag = pd.read_csv(RESULTS / "rev3-bayesian-full-diagnostics.csv")
+    summ = pd.read_csv(RESULTS / "rev3-bayesian-full-summary.csv")
+    prior = pd.read_csv(RESULTS / "rev3-bayesian-full-prior-predictive.csv")
+    assert len(diag) == 50 and bool(diag["convergence_ok"].all())
+    assert int(diag["divergences"].sum()) == 0
+    assert float(diag["max_rhat"].max()) <= 1.01
+    assert len(prior) == 50 and int(prior["observed_within_prior_998"].sum()) == 48
+    assert set(summ["family"].unique()) == {
+        "composition",
+        "transport",
+        "concordance",
+        "disorder_entropy",
+        "interneurons",
+    }
+    assert len(summ) == 138
+    txt = (REPO / "report" / "cross-species-bayesian-full.md").read_text(encoding="utf-8")
+    for tok in ["Naked mole-rat", "DYNC1I1", "FBN1", "0.9272", "0.1156"]:
+        assert tok in txt
+    assert "\u2014" not in txt and "\u2013" not in txt

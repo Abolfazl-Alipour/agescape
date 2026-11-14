@@ -107,7 +107,7 @@ def summarize_diagnostics(
         bfmi_vals = np.asarray(az.bfmi(idata), dtype=float)
         min_bfmi = float(np.nanmin(bfmi_vals)) if bfmi_vals.size else np.nan
 
-        loo_res = az.loo(idata, pointwise=True)
+        loo_res = az.loo(idata, var_name=obs_var, pointwise=True)
         pareto_k = np.asarray(loo_res.pareto_k, dtype=float)
         pareto_k_max = float(np.nanmax(pareto_k)) if pareto_k.size else np.nan
         pareto_k_n_bad = int(np.sum(pareto_k > 0.7))
