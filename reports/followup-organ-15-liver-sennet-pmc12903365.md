@@ -16,12 +16,12 @@
    - Processed / imaging data tiers are designated `public` (`CC-BY 4.0` after consortium verification/release).
 2. **Inventory on SenNet Public Search API (`TMC - Washington University`, `UBERON:0002107`, [`audit.csv`](../results/followup-organ-15-liver-sennet-pmc12903365-audit.csv))**:
    - `164` published Liver dataset records across **`43` unique human donors** (ages `22` to `88` yr; `<40`: `15`, `40-59`: `8`, `>=60`: `20`; `26` Female, `16` Male, `1` Unknown in SenNet source metadata):
-     - `39` `RNAseq` datasets across `39` donors: **`protected`**
-     - `34` `ATACseq` datasets across `34` donors: **`protected`**
-     - `34` `10X Multiome` datasets across `34` donors (`<40`: `15`, `40-59`: `0`, `>=60`: `19`): **`protected`**
+     - `39` `RNAseq` datasets across `34` unique donors (`<40`: `15`, `40-59`: `0`, `>=60`: `19`; `22` to `88` yr): **`protected`**
+     - `34` `ATACseq` datasets across `31` unique donors (`<40`: `14`, `40-59`: `0`, `>=60`: `17`; `22` to `88` yr): **`protected`**
+     - `34` `10X Multiome` datasets across `31` unique donors (`<40`: `14`, `40-59`: `0`, `>=60`: `17`; `22` to `88` yr): **`protected`**
      - `27` `Xenium` spatial imaging datasets (`25` donors): `public`
      - `10` `PhenoCycler` protein imaging datasets (`10` donors): `public`
-     - `13` `10x Multiome [Salmon + ArchR + Muon]` (`~3.5-7.4 GB` `.h5mu` per donor) + `7` `RNAseq [Salmon]` derived datasets spanning only **`14` donors** (`[22, 30, 33, 34, 37, 37, 37]` vs `[61, 63, 69, 71, 72, 74, 75]`, zero middle-aged `40-59`): **`public`**
+     - `13` `10x Multiome [Salmon + ArchR + Muon]` (`10` donors, `~3.5-7.4 GB` `.h5mu` per dataset) + `7` `RNAseq [Salmon]` (`5` donors) derived datasets spanning **`14` unique donors** (`[22, 30, 33, 34, 37, 37, 37]` vs `[61, 63, 69, 71, 72, 74, 75]`, zero middle-aged `40-59`): **`public`**
    - Note that the `PMC12903365` `Table S1` (`1-s2.0-S2666979X26000017` Elsevier supplemental spreadsheets) was not retrieved automatically because Elsevier's supplemental CDN returned a Google reCAPTCHA challenge; no bypass was attempted, and clinical Metavir fibrosis/steatosis/ALT scores per SenNet ID are absent from the public SenNet API donor metadata.
 
 ## 2. Cohort Design, Fibrosis Confounding, and Clinical Selection Limits
