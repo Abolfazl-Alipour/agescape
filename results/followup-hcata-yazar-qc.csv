@@ -1,0 +1,21 @@
+study,group,is_pooled,n_donors,age_min,age_max,n_male,n_female,total_cells_in_group,median_cells_per_donor,n_genes_input,n_genes_unique,n_technical_removed,n_genes_nontech,min_lib_size,median_lib_size,max_lib_size
+yazar,"CD14-low, CD16-positive monocyte",False,293,19.0,94.0,136,157,10860,31.0,35528,35518,211,35307,41674.0,108577.0,599142.0
+yazar,CD14-positive monocyte,False,493,19.0,97.0,221,272,32364,49.0,35528,35518,211,35307,30727.0,126984.0,1193400.0
+yazar,"CD16-negative, CD56-bright natural killer cell, human",False,33,22.0,88.0,6,27,836,24.0,35528,35518,211,35307,23288.0,44545.0,67461.0
+yazar,"CD4-positive, alpha-beta cytotoxic T cell",False,280,22.0,97.0,114,166,12827,36.0,35528,35518,211,35307,16457.0,52756.5,432026.0
+yazar,"central memory CD4-positive, alpha-beta T cell",False,980,19.0,97.0,415,565,288981,276.5,35528,35518,211,35307,51357.0,451617.5,2130371.0
+yazar,"central memory CD8-positive, alpha-beta T cell",False,293,19.0,91.0,136,157,9477,26.0,35528,35518,211,35307,18490.0,50575.0,335455.0
+yazar,conventional dendritic cell,False,6,61.0,80.0,5,1,160,25.0,35528,35518,211,35307,85640.0,118214.0,237292.0
+yazar,"effector memory CD4-positive, alpha-beta T cell",False,698,19.0,94.0,289,409,27872,34.0,35528,35518,211,35307,15837.0,55025.0,343565.0
+yazar,"effector memory CD8-positive, alpha-beta T cell",False,966,19.0,97.0,413,553,160859,136.0,35528,35518,211,35307,28275.0,201086.5,1468247.0
+yazar,gamma-delta T cell,False,329,19.0,95.0,140,189,12891,30.0,35528,35518,211,35307,19918.0,51060.0,522863.0
+yazar,memory B cell,False,614,19.0,97.0,220,394,25804,35.0,35528,35518,211,35307,18336.0,60218.5,1282580.0
+yazar,mucosal-associated invariant T cell,False,112,19.0,88.0,32,80,3603,27.0,35528,35518,211,35307,19269.0,48828.0,218010.0
+yazar,naive B cell,False,844,19.0,97.0,345,499,64047,62.0,35528,35518,211,35307,15038.0,75461.5,749092.0
+yazar,"naive thymus-derived CD4-positive, alpha-beta T cell",False,974,19.0,97.0,409,565,258925,246.0,35528,35518,211,35307,23991.0,352615.5,1805340.0
+yazar,"naive thymus-derived CD8-positive, alpha-beta T cell",False,671,19.0,93.0,267,404,49420,54.0,35528,35518,211,35307,18366.0,89228.0,1354071.0
+yazar,natural killer cell,False,977,19.0,97.0,415,562,164888,147.0,35528,35518,211,35307,24748.0,236208.0,1303053.0
+yazar,plasmablast,False,14,36.0,88.0,8,6,512,26.0,35528,35518,211,35307,164487.0,292833.0,1716175.0
+yazar,regulatory T cell,False,606,19.0,95.0,260,346,21756,31.0,35528,35518,211,35307,13897.0,40179.0,138072.0
+yazar,transitional stage B cell,False,493,19.0,97.0,195,298,24412,32.0,35528,35518,211,35307,19710.0,58818.0,2043032.0
+yazar,All_Cells,True,981,19.0,97.0,416,565,1248980,1246.0,35528,35518,211,35307,387355.0,2148401.0,6776311.0

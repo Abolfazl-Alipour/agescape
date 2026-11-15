@@ -1,0 +1,11 @@
+study,group,is_pooled,n_donors,age_min,age_max,n_male,n_female,total_cells_in_group,median_cells_per_donor,n_genes_input,n_genes_unique,n_technical_removed,n_genes_nontech,min_lib_size,median_lib_size,max_lib_size
+perez,B cell,False,99,21.0,75.0,2,97,59735,491.0,30172,30162,207,29955,11221.0,571332.0,2130407.0
+perez,"CD4-positive, alpha-beta T cell",False,99,21.0,75.0,2,97,185152,1434.0,30172,30162,207,29955,112257.0,1689496.0,6403197.0
+perez,"CD8-positive, alpha-beta T cell",False,99,21.0,75.0,2,97,88781,772.0,30172,30162,207,29955,36847.0,1015572.0,4479452.0
+perez,classical monocyte,False,99,21.0,75.0,2,97,86207,792.0,30172,30162,207,29955,18095.0,1358491.0,3963616.0
+perez,conventional dendritic cell,False,91,21.0,75.0,2,89,7394,68.0,30172,30162,207,29955,37231.0,259531.0,1203748.0
+perez,lymphocyte,False,32,21.0,75.0,0,32,1101,30.5,30172,30162,207,29955,26731.0,100491.0,509369.0
+perez,natural killer cell,False,99,21.0,75.0,2,97,38304,289.0,30172,30162,207,29955,11832.0,360974.0,2274557.0
+perez,non-classical monocyte,False,98,21.0,75.0,2,96,15090,120.5,30172,30162,207,29955,39048.0,353903.0,1807860.0
+perez,plasmacytoid dendritic cell,False,55,21.0,75.0,1,54,2559,43.0,30172,30162,207,29955,19334.0,111016.0,255270.0
+perez,All_Cells,True,99,21.0,75.0,2,97,486418,4061.0,30172,30162,207,29955,191306.0,6422388.0,18352377.0

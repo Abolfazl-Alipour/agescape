@@ -1,0 +1,38 @@
+group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled,study,arm,n_pool_dummies_active
+"CD14-low, CD16-positive monocyte",tested,283,8307,sex_male;log_lib;pool_fe(54_dummies),ref_or_unused_pools_only,225,0,8,4.1953622197189674e-05,0.0065235449011862125,134036,False,yazar,pool_fe,54.0
+CD14-positive monocyte,tested,489,9002,sex_male;log_lib;pool_fe(62_dummies),ref_or_unused_pools_only,423,5,32,2.4891603341657253e-10,2.224247297001581e-07,134036,False,yazar,pool_fe,62.0
+"CD4-positive, alpha-beta cytotoxic T cell",tested,266,7044,sex_male;log_lib;pool_fe(56_dummies),ref_or_unused_pools_only,206,0,11,1.6607677365453623e-05,0.0031530122427137985,134036,False,yazar,pool_fe,56.0
+"central memory CD4-positive, alpha-beta T cell",tested,980,11821,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,902,708,455,5.349280428352942e-26,7.966623905496832e-22,134036,False,yazar,pool_fe,74.0
+"central memory CD8-positive, alpha-beta T cell",tested,284,6915,sex_male;log_lib;pool_fe(60_dummies),ref_or_unused_pools_only,220,24,39,3.7378560925936455e-10,3.191129167050203e-07,134036,False,yazar,pool_fe,60.0
+"effector memory CD4-positive, alpha-beta T cell",tested,698,7195,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,620,85,87,4.3176484878939534e-23,4.348397074395472e-19,134036,False,yazar,pool_fe,74.0
+"effector memory CD8-positive, alpha-beta T cell",tested,966,10259,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,888,169,158,3.1965701505457703e-21,2.6778467293659554e-17,134036,False,yazar,pool_fe,74.0
+gamma-delta T cell,tested,322,7021,sex_male;log_lib;pool_fe(65_dummies),ref_or_unused_pools_only,253,64,71,2.417012982255916e-10,2.1889645411463107e-07,134036,False,yazar,pool_fe,65.0
+memory B cell,tested,614,7445,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,536,15,29,3.501521750006103e-10,3.0085254441270385e-07,134036,False,yazar,pool_fe,74.0
+mucosal-associated invariant T cell,tested,89,6820,sex_male;log_lib;pool_fe(30_dummies),ref_or_unused_pools_only,55,0,10,1.0552099067175372e-05,0.0021842085125780048,134036,False,yazar,pool_fe,30.0
+naive B cell,tested,844,8267,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,766,7,30,7.531922574152761e-09,4.6522984983831305e-06,134036,False,yazar,pool_fe,74.0
+"naive thymus-derived CD4-positive, alpha-beta T cell",tested,974,11174,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,896,688,491,1.6517577639065253e-44,2.2139500364297503e-39,134036,False,yazar,pool_fe,74.0
+"naive thymus-derived CD8-positive, alpha-beta T cell",tested,671,8565,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,593,40,52,1.3608989059984931e-09,1.0305618404769155e-06,134036,False,yazar,pool_fe,74.0
+natural killer cell,tested,977,10630,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,899,165,153,4.256123914820674e-17,1.4363587291447328e-13,134036,False,yazar,pool_fe,74.0
+regulatory T cell,tested,604,6137,sex_male;log_lib;pool_fe(70_dummies),ref_or_unused_pools_only,530,38,56,4.834606193583661e-09,3.1456858046756294e-06,134036,False,yazar,pool_fe,70.0
+transitional stage B cell,tested,493,7434,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,415,41,59,1.2633688185891942e-12,1.7639260725877212e-09,134036,False,yazar,pool_fe,74.0
+All_Cells,tested,981,13103,sex_male;log_lib;pool_fe(74_dummies),ref_or_unused_pools_only,903,6241,6241,1.5386460490533626e-66,2.016087918074621e-62,13103,True,yazar,pool_fe,74.0
+B cell,tested,99,11375,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,0,11,2.1835970792182838e-05,0.015902304952723975,94539,False,perez,cohort_multihot,
+"CD4-positive, alpha-beta T cell",tested,99,11913,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,336,137,3.722791626212842e-18,3.519489975505358e-13,94539,False,perez,cohort_multihot,
+"CD8-positive, alpha-beta T cell",tested,99,11671,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,608,199,1.1792432770257963e-09,3.716149338891392e-05,94539,False,perez,cohort_multihot,
+classical monocyte,tested,99,11285,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,1,6,2.9082483801207544e-06,0.004998961701967927,94539,False,perez,cohort_multihot,
+conventional dendritic cell,tested,91,10121,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,83,0,10,4.4225877878015674e-05,0.02327435069159984,94539,False,perez,cohort_multihot,
+lymphocyte,tested,32,8859,log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,sex_male(constant_or_na),25,0,3,0.0001255497737629548,0.03969682294908356,94539,False,perez,cohort_multihot,
+natural killer cell,tested,99,10771,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,3,4,3.8418691354799006e-07,0.0021586131673193244,94539,False,perez,cohort_multihot,
+non-classical monocyte,tested,98,10001,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,90,0,0,0.0004465750168153909,0.07204818246494332,94539,False,perez,cohort_multihot,
+plasmacytoid dendritic cell,tested,55,8543,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,47,6,21,1.054881290645444e-06,0.003252017805172066,94539,False,perez,cohort_multihot,
+All_Cells,tested,99,12421,sex_male;log_lib;cohort_1_0;cohort_2_0;cohort_3_0;cohort_4_0,none,91,46,46,1.021812832587746e-07,0.0012691937193572392,12421,True,perez,cohort_multihot,
+B cell,tested,98,11415,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,0,5,2.9248951841072e-05,0.020904089675011256,94837,False,perez,cohort_level_ge2,
+"CD4-positive, alpha-beta T cell",tested,98,11930,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,262,93,4.958425256782944e-18,4.702421760775241e-13,94837,False,perez,cohort_level_ge2,
+"CD8-positive, alpha-beta T cell",tested,98,11701,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,526,156,2.0316955279488763e-09,6.422663626136253e-05,94837,False,perez,cohort_level_ge2,
+classical monocyte,tested,98,11303,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,1,6,2.6576903673046395e-06,0.006147497106440734,94837,False,perez,cohort_level_ge2,
+conventional dendritic cell,tested,90,10161,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,80,0,3,4.308707525830618e-05,0.024576381961690374,94837,False,perez,cohort_level_ge2,
+lymphocyte,tested,32,8859,log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,sex_male(constant_or_na),23,0,4,1.4189146406376188e-05,0.014522135903593926,94837,False,perez,cohort_level_ge2,
+natural killer cell,tested,98,10823,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,3,5,2.0501621485936296e-07,0.0013887944834726717,94837,False,perez,cohort_level_ge2,
+non-classical monocyte,tested,97,9985,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,87,0,0,0.000262781755668728,0.062352987609546946,94837,False,perez,cohort_level_ge2,
+plasmacytoid dendritic cell,tested,54,8660,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,44,18,23,4.7777516241048314e-09,0.00011327690769380746,94837,False,perez,cohort_level_ge2,
+All_Cells,tested,98,12445,sex_male;log_lib;lvl_10;lvl_10_20;lvl_10_20_30;lvl_30;lvl_30_40;lvl_20_30,none,88,36,36,2.4280756204984057e-07,0.0030217401097102662,12445,True,perez,cohort_level_ge2,

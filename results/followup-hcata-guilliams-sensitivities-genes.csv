@@ -1,0 +1,33 @@
+sensitivity,study,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,B cell,tested,7,10621,sex_male;log_lib,none,3,0,0,0.00023995077072086338,0.840393117577336,58055,False
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,T cell,tested,8,12270,sex_male;log_lib,none,4,0,0,1.143909924669254e-05,0.4548769337609157,58055,False
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,macrophage,tested,8,11255,sex_male;log_lib,none,4,0,0,1.5670551503261242e-05,0.4548769337609157,58055,False
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,monocyte,tested,8,11657,sex_male;log_lib,none,4,0,0,3.8650779531861795e-05,0.7479570019074122,58055,False
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,natural killer cell,tested,8,12252,sex_male;log_lib,none,4,0,0,9.598684305401905e-05,0.840393117577336,58055,False
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,All_Cells,tested,8,13238,sex_male;log_lib,none,4,1,1,1.664116530591886e-06,0.04389440172742218,26377,True
+no_malignant_resection_n8,guilliams_no_malignant_resection_n8,All_CD45pos_Cells,tested,8,13139,sex_male;log_lib,none,4,0,0,3.0367479918714465e-05,0.2670010059386438,26377,True
+no_any_tumor_n7,guilliams_no_any_tumor_n7,B cell,tested,6,11492,log_lib,none,3,0,0,7.879276510673369e-05,0.7400706917483538,58219,False
+no_any_tumor_n7,guilliams_no_any_tumor_n7,T cell,tested,7,12152,log_lib,none,4,0,0,4.4827180565841335e-05,0.7400706917483538,58219,False
+no_any_tumor_n7,guilliams_no_any_tumor_n7,macrophage,tested,7,10977,log_lib,none,4,0,0,2.4007774729625978e-05,0.6988543184920475,58219,False
+no_any_tumor_n7,guilliams_no_any_tumor_n7,monocyte,tested,7,11495,log_lib,none,4,0,0,8.808695831222565e-05,0.7400706917483538,58219,False
+no_any_tumor_n7,guilliams_no_any_tumor_n7,natural killer cell,tested,7,12103,log_lib,none,4,0,0,1.2363986648525112e-05,0.6988543184920475,58219,False
+no_any_tumor_n7,guilliams_no_any_tumor_n7,All_Cells,tested,7,13135,log_lib,none,4,0,0,4.1396112700408835e-05,0.48549176467102584,26161,True
+no_any_tumor_n7,guilliams_no_any_tumor_n7,All_CD45pos_Cells,tested,7,13026,log_lib,none,4,0,0,3.39394005634077e-05,0.48549176467102584,26161,True
+female_only_n8,guilliams_female_only_n8,B cell,tested,7,11376,log_lib,none,4,0,0,9.584272221955759e-05,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,T cell,tested,8,12288,log_lib,none,5,0,0,4.210925988500478e-05,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,endothelial cell,tested,6,12187,log_lib,none,3,0,0,1.4596890595028192e-05,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,macrophage,tested,8,11651,log_lib,none,5,0,0,0.000489762367449406,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,monocyte,tested,8,11766,log_lib,none,5,0,0,9.400161053353972e-05,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,natural killer cell,tested,8,12221,log_lib,none,5,0,0,1.764914265797218e-05,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,plasmacytoid dendritic cell,tested,6,11936,log_lib,none,3,0,0,0.00012374684433003941,0.5686536171652264,83425,False
+female_only_n8,guilliams_female_only_n8,All_Cells,tested,8,13280,log_lib,none,5,0,0,5.207634761549538e-05,0.590113945045624,26418,True
+female_only_n8,guilliams_female_only_n8,All_CD45pos_Cells,tested,8,13138,log_lib,none,5,0,0,7.819046739850694e-05,0.590113945045624,26418,True
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,B cell,tested,9,10905,sex_male;log_lib;is_citeseq,none,4,0,0,0.00014934092405491538,0.8046269072342319,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,T cell,tested,10,12226,sex_male;log_lib;is_citeseq,none,5,0,0,0.0001974152834240564,0.8046269072342319,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,endothelial cell,tested,6,12187,log_lib;is_citeseq,sex_male(constant_or_na),2,0,0,1.7813118620941713e-05,0.5621566542870694,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,macrophage,tested,10,11332,sex_male;log_lib;is_citeseq,none,5,0,0,0.0003098673713701696,0.8046269072342319,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,monocyte,tested,10,11651,sex_male;log_lib;is_citeseq,none,5,0,0,0.00022705197368293482,0.8046269072342319,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,natural killer cell,tested,10,12192,sex_male;log_lib;is_citeseq,none,5,0,0,3.373705593819683e-05,0.5621566542870694,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,plasmacytoid dendritic cell,tested,7,11388,sex_male;log_lib;is_citeseq,none,2,0,0,4.303043178026713e-05,0.5621566542870694,81881,False
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,All_Cells,tested,10,13161,sex_male;log_lib;is_citeseq,none,5,0,0,8.928740332885836e-06,0.23411157152826662,26220,True
+adjust_citeseq_n10,guilliams_adjust_citeseq_n10,All_CD45pos_Cells,tested,10,13059,sex_male;log_lib;is_citeseq,none,5,0,0,9.607536235272267e-05,0.7171970781713928,26220,True

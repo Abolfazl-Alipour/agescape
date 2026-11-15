@@ -1,0 +1,11 @@
+study,arm,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled
+perez,female_only_n97,B cell,tested,97,11364,log_lib,none,94,516,787,2.3554081488146208e-07,8.984457445702285e-05,94597,False
+perez,female_only_n97,"CD4-positive, alpha-beta T cell",tested,97,11908,log_lib,none,94,4650,3506,4.5665133093836744e-21,4.3197845952776745e-16,94597,False
+perez,female_only_n97,"CD8-positive, alpha-beta T cell",tested,97,11661,log_lib,none,94,1836,1653,7.06812284887438e-11,1.2340485767619491e-06,94597,False
+perez,female_only_n97,classical monocyte,tested,97,11285,log_lib,none,94,1376,1313,7.989492524306277e-09,1.3741491351305469e-05,94597,False
+perez,female_only_n97,conventional dendritic cell,tested,89,10144,log_lib,none,86,490,731,4.4294750053570114e-09,8.992127140086126e-06,94597,False
+perez,female_only_n97,lymphocyte,tested,32,8859,log_lib,none,29,0,51,6.69182910882563e-05,0.0027040878180588554,94597,False
+perez,female_only_n97,natural killer cell,tested,97,10768,log_lib,none,94,1285,1245,1.8309720047807811e-10,1.7320445873624754e-06,94597,False
+perez,female_only_n97,non-classical monocyte,tested,96,10004,log_lib,none,93,1111,1117,6.36908826584301e-10,3.765604016774695e-06,94597,False
+perez,female_only_n97,plasmacytoid dendritic cell,tested,54,8604,log_lib,none,51,26,209,3.4245386620239735e-07,0.00011018744347329314,94597,False
+perez,female_only_n97,All_Cells,tested,97,12412,log_lib,none,94,4955,4955,2.594979508716944e-11,3.2208885662194704e-07,12412,True

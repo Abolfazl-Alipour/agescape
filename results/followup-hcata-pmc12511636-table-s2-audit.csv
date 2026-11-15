@@ -1,0 +1,12 @@
+table_s2_row,pmid,author_year,doi,hcata_youngest_year,hcata_oldest_year,hcata_sample_size,hcata_tissue,agescape_disposition,primary_source_forensic_note
+1,30518681,Oetjen 2018,10.1172/jci.insight.124928,24,84,25,Bone Marrow,blocked_missing_metadata,20 healthy adults (24-84y); live GEO check confirms Matrix Market files only without public per-cell annotations or sex
+2,31178122,Welch 2019,10.1016/j.cell.2019.05.006,18,66,38,Brain,excluded_wrong_species_in_hcata,"Misattribution: GSE126836 is 15 mouse BNST Drop-seq brain samples + LIGER paper, not 38 human brain donors"
+3,31316211,Schirmer 2019,10.1038/s41586-019-1404-z,34,82,9,Brain,ineligible_controlled_and_disease,"Multiple sclerosis brain lesions vs controls (n=9 total mixed MS/control, EGA controlled)"
+4,31924475,Cillo 2020,10.1016/j.immuni.2019.11.014,29,80,32,Blood,ineligible_disease_sparse,GSE139324: pools 26 HNSCC head-and-neck cancer patients with only 6 healthy PBMC donors
+5,32832599,Adams 2020,10.1126/sciadv.aba1983,20,67,28,Lung,overlaps_hlca,GSE136831: overlaps HLCA Lung_Integrated (donor 1372C already analyzed) + IPF disease mix
+6,32888429,Drokhlyansky 2020,10.1016/j.cell.2020.08.003,35,90,59,Colon,ineligible_cancer_adjacent_sparse,"Broad SCP1038: 10 CRC cancer-adjacent normal colon donors (35-90y), not 59 healthy human donors"
+7,34428183,Shrestha 2021,10.1172/jci.insight.151621,14,66,14,Pancreas,ineligible_sparse_donors,GSE183568: only 5 non-diabetic donors (including pediatric) mixed with T1D/AAB+ donors
+8,34450029,Pelka 2021,10.1016/j.cell.2021.08.003,35,90,36,Colon,ineligible_cancer_adjacent,GSE178341: 36 'normal' 35-91y samples are tumor-adjacent normal mucosa from CRC surgical resections
+9,35021063,Guilliams 2022,10.1016/j.cell.2021.12.018,28,72,7,Liver,eligible_sorted_execute,"GSE192742 / CZ e84f2780: Census contains 18 normal exact-age donors overall (10 at 10x 3' v3 cell, 28-77y; FACS sorted CD45+/CD45-)"
+10,36516485,Perez 2022,10.18632/aging.204435,19,90,17,Skeletal Muscle,already_done_agescape,Already analyzed in agescape muscle followup
+11,36543915,Madissoon 2023,10.1038/s41588-022-01243-4,29,64,22,Lung,overlaps_hlca_mixed_platforms,"Overlaps HLCA (290B, 292B, 296C, 298C), mixes 5 airway regions and 3 platforms (n=7 exact donors); Table S1 erroneously pasted eye cell types"

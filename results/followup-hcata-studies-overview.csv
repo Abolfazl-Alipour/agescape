@@ -1,0 +1,4 @@
+study,donors,age_min,age_max,n_male,n_female,sampling,n_ct_tests,n_ct_sig_global_q05,min_ct_q,p1_ct_sig_comp_q05,p1_ct_sig_emp_q05,fam_a_tested,fam_a_sig_q05,conc_mean_r,conc_perm_p_two,sens_name,sens_donors,sens_fam_a_sig_q05,sens_n_ct_sig_global_q05,sens_conc_mean_r,sens_conc_perm_p_two
+guilliams,10,28.0,77.0,2,8,FACS_sorted_CD45pos_surgical,81881,0,0.610016501379399,0,0,,,,,,,,,,
+yazar,981,19.0,97.0,416,565,unbiased_PBMC,160239,10123,1.8399600478597023e-62,11,9,28.0,21.0,0.2429524356440601,0.000999000999000999,age_ge_20_n976,976.0,23.0,9492.0,0.2361249364315231,0.000999000999000999
+perez,99,21.0,75.0,2,97,unbiased_PBMC,94539,10021,3.231604654454379e-16,1,0,11.0,2.0,0.45189668265068517,0.000999000999000999,female_only_n97,97.0,2.0,10612.0,0.4555504655341564,0.000999000999000999

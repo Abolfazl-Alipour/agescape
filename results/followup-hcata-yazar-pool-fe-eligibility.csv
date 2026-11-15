@@ -1,0 +1,21 @@
+study,arm,group,n_donors_original,n_donors_ge2_pools,n_pools_ge2,estimated_residual_df,status
+yazar,pool_fe,"CD14-low, CD16-positive monocyte",293,283,55,225,evaluated
+yazar,pool_fe,CD14-positive monocyte,493,489,63,423,evaluated
+yazar,pool_fe,"CD16-negative, CD56-bright natural killer cell, human",33,8,4,1,not_evaluable_within_pool_df
+yazar,pool_fe,"CD4-positive, alpha-beta cytotoxic T cell",280,266,57,206,evaluated
+yazar,pool_fe,"central memory CD4-positive, alpha-beta T cell",980,980,75,902,evaluated
+yazar,pool_fe,"central memory CD8-positive, alpha-beta T cell",293,284,61,220,evaluated
+yazar,pool_fe,conventional dendritic cell,6,2,1,-2,not_evaluable_within_pool_df
+yazar,pool_fe,"effector memory CD4-positive, alpha-beta T cell",698,698,75,620,evaluated
+yazar,pool_fe,"effector memory CD8-positive, alpha-beta T cell",966,966,75,888,evaluated
+yazar,pool_fe,gamma-delta T cell,329,322,66,253,evaluated
+yazar,pool_fe,memory B cell,614,614,75,536,evaluated
+yazar,pool_fe,mucosal-associated invariant T cell,112,89,31,55,evaluated
+yazar,pool_fe,naive B cell,844,844,75,766,evaluated
+yazar,pool_fe,"naive thymus-derived CD4-positive, alpha-beta T cell",974,974,75,896,evaluated
+yazar,pool_fe,"naive thymus-derived CD8-positive, alpha-beta T cell",671,671,75,593,evaluated
+yazar,pool_fe,natural killer cell,977,977,75,899,evaluated
+yazar,pool_fe,plasmablast,14,4,2,-1,not_evaluable_within_pool_df
+yazar,pool_fe,regulatory T cell,606,604,71,530,evaluated
+yazar,pool_fe,transitional stage B cell,493,493,75,415,evaluated
+yazar,pool_fe,All_Cells,981,981,75,903,evaluated

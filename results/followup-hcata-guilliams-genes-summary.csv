@@ -1,0 +1,10 @@
+study,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled
+guilliams,B cell,tested,9,10905,sex_male;log_lib,none,5,0,0,0.00015844361660698864,0.610016501379399,81881,False
+guilliams,T cell,tested,10,12226,sex_male;log_lib,none,6,0,0,3.092003267462769e-05,0.610016501379399,81881,False
+guilliams,endothelial cell,tested,6,12187,log_lib,sex_male(constant_or_na),3,0,0,1.4596890595028192e-05,0.610016501379399,81881,False
+guilliams,macrophage,tested,10,11332,sex_male;log_lib,none,6,0,0,0.00019825333087938998,0.610016501379399,81881,False
+guilliams,monocyte,tested,10,11651,sex_male;log_lib,none,6,0,0,7.624089660073558e-05,0.610016501379399,81881,False
+guilliams,natural killer cell,tested,10,12192,sex_male;log_lib,none,6,0,0,0.00016410095799115172,0.610016501379399,81881,False
+guilliams,plasmacytoid dendritic cell,tested,7,11388,sex_male;log_lib,none,3,0,0,0.00012374684433004107,0.610016501379399,81881,False
+guilliams,All_Cells,tested,10,13161,sex_male;log_lib,none,6,0,0,7.848040110519583e-06,0.20577561169782346,26220,True
+guilliams,All_CD45pos_Cells,tested,10,13059,sex_male;log_lib,none,6,0,0,6.472398532356968e-05,0.5939315774298874,26220,True

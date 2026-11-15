@@ -1,0 +1,100 @@
+donor_id,age_years,age_per_decade,sex,sex_male,n_cells,self_reported_ethnicity,Processing_Cohort
+HC-519,21.0,2.1,female,0,5066,Asian,4.0
+HC-520,22.0,2.2,female,0,3204,Asian,4.0
+IGTB1901,23.0,2.3,female,0,3327,European American,1.0
+IGTB1916,23.0,2.3,female,0,3442,European American,1.0
+IGTB1974,23.0,2.3,female,0,3510,European American,1.0
+IGTB1987,23.0,2.3,female,0,3813,European American,1.0
+HC-516,24.0,2.4,female,0,3794,European American,4.0
+HC-541,24.0,2.4,female,0,4462,European American,4.0
+HC-556,24.0,2.4,female,0,1933,Asian,4.0
+HC-585,24.0,2.4,female,0,5330,European American,4.0
+IGTB1913,24.0,2.4,female,0,4557,European American,1.0
+HC-558,25.0,2.5,female,0,3269,Asian,4.0
+IGTB1372,25.0,2.5,female,0,9910,European American,1.0;2.0;3.0
+IGTB1793,25.0,2.5,female,0,4152,European American,1.0
+IGTB1828,25.0,2.5,female,0,3273,European American,1.0
+IGTB1921,25.0,2.5,female,0,8510,European American,1.0;2.0;3.0
+HC-501,26.0,2.6,female,0,2749,Asian,3.0
+ICC_control,26.0,2.6,female,0,1487,European American,4.0
+IGTB1815,26.0,2.6,female,0,4075,European American,1.0
+IGTB1840,26.0,2.6,female,0,3839,European American,1.0
+IGTB1844,26.0,2.6,female,0,5122,European American,1.0
+IGTB1952,26.0,2.6,female,0,3384,European American,1.0
+HC-002,27.0,2.7,male,1,4016,European American,3.0
+HC-009,27.0,2.7,female,0,9955,European American,4.0
+HC-563,27.0,2.7,female,0,4721,Asian,4.0
+IGTB1290,27.0,2.7,female,0,6207,European American,2.0;3.0
+IGTB1871,27.0,2.7,female,0,3869,European American,1.0
+IGTB1895,27.0,2.7,female,0,4061,European American,1.0
+IGTB1996,27.0,2.7,female,0,3449,European American,1.0
+IGTB2007,27.0,2.7,female,0,3818,European American,1.0
+IGTB2065,27.0,2.7,female,0,3638,European American,1.0
+HC-546,28.0,2.8,female,0,4102,Asian,4.0
+IGTB1542,28.0,2.8,female,0,3184,European American,2.0
+IGTB1762,28.0,2.8,female,0,4878,European American,1.0
+IGTB1982,28.0,2.8,female,0,3232,European American,1.0
+IGTB256,28.0,2.8,female,0,7959,European American,2.0;3.0
+IGTB1768,29.0,2.9,female,0,4142,European American,1.0
+IGTB1966,29.0,2.9,female,0,5131,European American,1.0
+HC-551,30.0,3.0,female,0,2478,Asian,4.0
+IGTB1506,30.0,3.0,female,0,8333,European American,1.0;2.0;3.0
+IGTB1826,30.0,3.0,female,0,3677,European American,1.0
+IGTB1906,30.0,3.0,female,0,3510,European American,1.0
+HC-573,31.0,3.1,female,0,5812,Asian,4.0
+IGTB1540,31.0,3.1,female,0,10382,Asian,1.0;2.0
+IGTB1789,31.0,3.1,female,0,4497,European American,1.0
+IGTB645,31.0,3.1,female,0,7844,European American,1.0;2.0
+HC-538,32.0,3.2,female,0,4979,Asian,4.0
+IGTB1575,32.0,3.2,female,0,5162,European American,1.0;2.0
+IGTB1814,32.0,3.2,female,0,3938,European American,1.0
+IGTB1908,32.0,3.2,female,0,3736,European American,1.0
+HC-506,33.0,3.3,female,0,6862,European American,3.0;4.0
+HC-567,33.0,3.3,female,0,4978,Asian,4.0
+HC-578,33.0,3.3,female,0,4304,European American,4.0
+IGTB143,33.0,3.3,female,0,9308,European American,1.0;2.0
+IGTB1827,33.0,3.3,female,0,3527,European American,1.0
+IGTB498,33.0,3.3,female,0,8892,European American,1.0;2.0
+IGTB508,33.0,3.3,female,0,11178,European American,1.0;2.0;3.0
+IGTB670,33.0,3.3,female,0,7663,European American,1.0;2.0
+HC-580,34.0,3.4,female,0,3232,Asian,4.0
+IGTB141,34.0,3.4,female,0,5391,European American,1.0;2.0
+IGTB1539,34.0,3.4,female,0,3729,European American,1.0;2.0
+IGTB195,34.0,3.4,female,0,12768,European American,1.0;2.0;3.0
+IGTB514,34.0,3.4,female,0,12491,European American,1.0;2.0;3.0
+IGTB826,34.0,3.4,female,0,8868,European American,1.0;2.0;3.0
+IGTB884,34.0,3.4,female,0,5973,European American,1.0;2.0
+IGTB986,34.0,3.4,female,0,7822,European American,1.0;2.0
+HC-020,35.0,3.5,female,0,3887,European American,3.0
+HC-503,35.0,3.5,female,0,2947,Hispanic or Latin,3.0
+HC-504,35.0,3.5,female,0,7085,European American,3.0;4.0
+HC-552,35.0,3.5,female,0,3725,European American,4.0
+IGTB1650,37.0,3.7,female,0,10292,European American,1.0;2.0
+IGTB469,37.0,3.7,female,0,13543,European American,1.0;2.0;3.0
+IGTB1819,41.0,4.1,male,1,3915,European American,1.0
+HC-543,44.0,4.4,female,0,2962,European American,4.0
+HC-008,48.0,4.8,female,0,1899,European American,4.0
+HC-500,48.0,4.8,female,0,3338,Asian,4.0
+HC-572,48.0,4.8,female,0,5248,European American,4.0
+HC-554,49.0,4.9,female,0,4275,European American,4.0
+HC-566,49.0,4.9,female,0,456,Asian,4.0
+HC-532,51.0,5.1,female,0,2439,Asian,4.0
+HC-571,52.0,5.2,female,0,2561,Asian,4.0
+HC-006,53.0,5.3,female,0,5598,European American,4.0
+HC-574,53.0,5.3,female,0,2636,Asian,4.0
+HC-531,54.0,5.4,female,0,4297,European American,4.0
+HC-526,58.0,5.8,female,0,4855,European American,4.0
+HC-015,59.0,5.9,female,0,2103,Asian,4.0
+HC-508,60.0,6.0,female,0,1810,European American,4.0
+HC-011,61.0,6.1,female,0,2791,Asian,4.0
+HC-019,61.0,6.1,female,0,2649,Asian,4.0
+HC-502,64.0,6.4,female,0,7651,European American,3.0
+HC-533,64.0,6.4,female,0,2841,European American,4.0
+HC-545,64.0,6.4,female,0,2443,Asian,4.0
+HC-014,65.0,6.5,female,0,6093,Asian,3.0;4.0
+HC-540,68.0,6.8,female,0,2865,European American,4.0
+HC-536,71.0,7.1,female,0,3759,European American,4.0
+HC-524,73.0,7.3,female,0,5205,European American,4.0
+HC-022,74.0,7.4,female,0,4506,Asian,4.0
+HC-512,74.0,7.4,female,0,1990,European American,4.0
+IGTB1731,75.0,7.5,female,0,3850,European American,1.0

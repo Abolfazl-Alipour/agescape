@@ -1,0 +1,10 @@
+study,group,is_pooled,n_donors,age_min,age_max,n_male,n_female,total_cells_in_group,median_cells_per_donor,n_genes_input,n_genes_unique,n_technical_removed,n_genes_nontech,min_lib_size,median_lib_size,max_lib_size
+guilliams,B cell,False,9,28.0,77.0,2,7,1350,136.0,30172,30162,207,29955,50478.0,333268.0,622006.0
+guilliams,T cell,False,10,28.0,77.0,2,8,49729,3520.0,30172,30162,207,29955,917953.0,8813563.0,22815185.0
+guilliams,endothelial cell,False,6,28.0,77.0,0,6,626,42.5,30172,30162,207,29955,88428.0,177983.5,919796.0
+guilliams,macrophage,False,10,28.0,77.0,2,8,2132,119.5,30172,30162,207,29955,102108.0,472044.0,4115188.0
+guilliams,monocyte,False,10,28.0,77.0,2,8,5190,443.5,30172,30162,207,29955,192793.0,2164238.0,7086207.0
+guilliams,natural killer cell,False,10,28.0,77.0,2,8,17494,1287.5,30172,30162,207,29955,553441.0,2451477.5,9241400.0
+guilliams,plasmacytoid dendritic cell,False,7,28.0,77.0,1,6,920,79.0,30172,30162,207,29955,188568.0,417205.0,2071239.0
+guilliams,All_Cells,True,10,28.0,77.0,2,8,81609,7300.5,30172,30162,207,29955,1825367.0,19028600.0,39367952.0
+guilliams,All_CD45pos_Cells,True,10,28.0,77.0,2,8,77531,5511.5,30172,30162,207,29955,1825367.0,13700723.0,39367952.0

@@ -1,0 +1,21 @@
+study,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled
+yazar,"CD14-low, CD16-positive monocyte",tested,293,8288,sex_male;log_lib,none,289,0,78,1.989296740879292e-05,0.0010413685738704897,160239,False
+yazar,CD14-positive monocyte,tested,493,9001,sex_male;log_lib,none,489,345,419,2.825262811997124e-13,1.2716777745269864e-10,160239,False
+yazar,"CD16-negative, CD56-bright natural killer cell, human",tested,33,6473,sex_male;log_lib,none,29,0,18,0.00013629873117064497,0.004823403795064704,160239,False
+yazar,"CD4-positive, alpha-beta cytotoxic T cell",tested,280,7019,sex_male;log_lib,none,276,0,47,3.296401586999899e-05,0.0015613718412630117,160239,False
+yazar,"central memory CD4-positive, alpha-beta T cell",tested,980,11821,sex_male;log_lib,none,976,3205,2251,1.0163693567517736e-38,2.3266001336649636e-34,160239,False
+yazar,"central memory CD8-positive, alpha-beta T cell",tested,293,6907,sex_male;log_lib,none,289,125,198,1.4943679243074873e-14,8.527534999576562e-12,160239,False
+yazar,conventional dendritic cell,tested,6,9709,sex_male;log_lib,none,2,0,29,2.0915689183051894e-05,0.001085333263925859,160239,False
+yazar,"effector memory CD4-positive, alpha-beta T cell",tested,698,7195,sex_male;log_lib,none,694,222,277,2.968054620339337e-35,4.75598104308555e-31,160239,False
+yazar,"effector memory CD8-positive, alpha-beta T cell",tested,966,10259,sex_male;log_lib,none,962,1120,927,2.76942291006021e-26,8.534029955483422e-23,160239,False
+yazar,gamma-delta T cell,tested,329,6994,sex_male;log_lib,none,325,213,266,3.063782179729512e-17,2.6827179928834823e-14,160239,False
+yazar,memory B cell,tested,614,7445,sex_male;log_lib,none,610,228,313,4.327837763192281e-13,1.879372345084466e-10,160239,False
+yazar,mucosal-associated invariant T cell,tested,112,6843,sex_male;log_lib,none,108,1,49,4.775246329459714e-10,1.0807636957433546e-07,160239,False
+yazar,naive B cell,tested,844,8267,sex_male;log_lib,none,840,356,411,7.727989529759788e-12,2.6347347111897423e-09,160239,False
+yazar,"naive thymus-derived CD4-positive, alpha-beta T cell",tested,974,11174,sex_male;log_lib,none,970,3741,2735,1.1482598168109526e-67,1.8399600478597023e-62,160239,False
+yazar,"naive thymus-derived CD8-positive, alpha-beta T cell",tested,671,8565,sex_male;log_lib,none,667,710,655,7.245802866657138e-28,3.622007191482443e-24,160239,False
+yazar,natural killer cell,tested,977,10630,sex_male;log_lib,none,973,1041,898,2.675596002698566e-22,4.871986680413813e-19,160239,False
+yazar,plasmablast,tested,14,10081,sex_male;log_lib,none,10,0,17,9.91280235882801e-05,0.003756012147496433,160239,False
+yazar,regulatory T cell,tested,606,6134,sex_male;log_lib,none,602,184,243,2.0008804903562694e-10,4.99406680520558e-08,160239,False
+yazar,transitional stage B cell,tested,493,7434,sex_male;log_lib,none,489,199,292,1.832101021809357e-16,1.4902235311355813e-13,160239,False
+yazar,All_Cells,tested,981,13103,sex_male;log_lib,none,977,7925,7925,4.102015155543124e-102,5.374870458308156e-98,13103,True

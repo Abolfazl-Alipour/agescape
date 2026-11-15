@@ -1,0 +1,11 @@
+donor_id,age_years,age_per_decade,sex,sex_male,n_cells,reported_diseases,diet,suspension_enrichment_factors,typeSample,self_reported_ethnicity,is_citeseq
+H18,28.0,2.8,female,0,3013,[hepatocellular adenoma],Lean,CD45+,citeSeq,unknown,1.0
+H25,49.0,4.9,female,0,9350,"[asthma,obesity disorder,nasal cavity polyp,cholecystolithiasis]",Lean,CD45+;CD45-,scRnaSeq,unknown,0.0
+H11,53.0,5.3,female,0,610,"[morbid obesity,spinal stenosis,carpal tunnel syndrome,Hashimoto thyroiditis,insomnia,gastroesophageal reflux disease]",Obese,CD45+,citeSeq,unknown,1.0
+H10,55.0,5.5,male,1,1664,"[morbid obesity,hyperlipidemia,abscess,urticaria,pulmonary arterial hypertension,acute myocardial infarction]",Lean,CD45+,scRnaSeq,unknown,0.0
+H22,55.0,5.5,female,0,6077,"[injury,migraine disorder,meningitis]",Lean,CD45+;CD45-,scRnaSeq,unknown,0.0
+H16,66.0,6.6,female,0,22272,"[metastatic malignant neoplasm,colorectal cancer]",Lean,CD45+,citeSeq;scRnaSeq,unknown,1.0
+H13,73.0,7.3,male,1,14539,"[thyroid tumor,spinal stenosis,bursitis,chronic kidney disease,type 2 diabetes mellitus,cholecystolithiasis,prostatitis,cataract]",Lean,CD45+,citeSeq,unknown,1.0
+H14,75.0,7.5,female,0,4669,"[cataract,carpal tunnel syndrome,cholecystolithiasis]",Lean,CD45+,scRnaSeq,unknown,0.0
+H23,75.0,7.5,female,0,10891,"[morbid obesity,hypothyroidism]",Lean,CD45+,scRnaSeq,unknown,0.0
+H21,77.0,7.7,female,0,8524,"[cystadenocarcinoma,Parkinson disease,hepatocellular carcinoma,type 2 diabetes mellitus,abdominal obesity-metabolic syndrome,hemorrhoid]",Lean,"CD45+;CD45+,CD14+,CD16+",scRnaSeq,unknown,0.0
