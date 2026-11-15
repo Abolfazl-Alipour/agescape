@@ -1,0 +1,10 @@
+donor_label,age_group,age_years,sex,tissue,accession,bioproject,access_status
+Y1,Young,18,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+Y2,Young,22,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+Y3,Young,23,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+M1,Middle,44,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+M2,Middle,47,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+M3,Middle,48,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+O1,Old,70,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+O2,Old,73,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
+O3,Old,76,F,Upper eyelid skin,HRA000395,PRJCA003032,Controlled_DAC_SecurityCheck
