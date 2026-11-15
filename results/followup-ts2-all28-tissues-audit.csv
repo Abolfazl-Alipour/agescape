@@ -1,0 +1,29 @@
+tissue,cz_dataset_version_id,cz_h5ad_bytes,n_donors_supplementary,n_donors_age_verified,n_donors_10x_age_verified_supp,n_donors_smartseq_supp,n_donors_10x3v3_h5ad_verified,n_cells_supplementary,age_min,age_max,analysis_status,disposition_note
+Bladder,8ffc335d-36fa-461e-be47-cd6503833420,3317048769,6,6,6,3,6,66385,45,61,analyzed_remaining_compartment_sorted,6 donors on 10x 3' v3 (45-61y); Family B+C only (no Family A/concordance: TS microbead/FACS compartment normalization PMC9812260)
+Blood,1bf55482-ad49-446a-87c6-f3442bebcef1,2568875081,9,9,9,4,9,85233,33,69,analyzed_non_nk_sorted_immune,9 donors on 10x 3' v3 (33-69y); Blood NK already analyzed; remaining 6 non-NK cell types + All_NonNK_Cells analyzed Family B+C only (Enriched/PBMC/Whole/SheelaPrep mixed preps)
+Bone_Marrow,4aedb645-7487-4ab0-ad95-ee4db1b8eccd,1030692363,7,7,6,4,5,27112,22,61,excluded_fewer_than_6_single_assay_donors,"H5AD checked: 7 total donors, 5 on 10x 3' v3 (<6), 5 on 10x 5' v2 (<6), plus LinEnriched/LinDepleted FACS preps"
+Ear,eef916d5-41c0-434f-a50c-617aa1413987,181131420,2,2,2,0,,3055,45,60,excluded_fewer_than_6_donors,2 age-verified donors (2 in 10x < 6 floor)
+Eye,e9b8ea4b-7901-4992-94c7-8e85ccd06fb5,1384715251,4,4,4,3,,34273,40,57,excluded_fewer_than_6_donors,4 age-verified donors (4 in 10x < 6 floor)
+Fat,8115812f-9acf-4f62-b15f-bde18086a1c8,3689061644,6,6,6,2,6,94415,33,61,analyzed_remaining_compartment_sorted,6 donors on 10x 3' v3 (33-61y); Family B+C only (no Family A/concordance: TS microbead/FACS compartment normalization PMC9812260)
+Heart,82197577-7914-45c0-9fde-6597a1da920f,1160037664,6,6,5,2,,25832,45,74,excluded_fewer_than_6_10x_donors,"6 total donors overall, but only 5 donors in 10x (<6 single-assay floor)"
+Kidney,76b6cf23-56db-4eac-8ee8-d84ce64c0395,451232856,1,1,1,1,,11376,61,61,excluded_fewer_than_6_donors,1 age-verified donors (1 in 10x < 6 floor)
+Large_Intestine,81781bd2-7a71-43a8-ab31-2a9009c1aea6,1020224367,5,5,5,2,,30084,37,61,excluded_fewer_than_6_donors,5 age-verified donors (5 in 10x < 6 floor)
+Liver,a4b3a49e-062b-4e3f-8915-02f40607651f,837059369,4,4,4,2,,22214,36,67,excluded_fewer_than_6_donors,4 age-verified donors (4 in 10x < 6 floor)
+Lung,fddf43a3-b7c8-49e9-ac0a-5e24b390849f,3199502267,4,4,4,3,,65847,59,61,excluded_fewer_than_6_donors,4 age-verified donors (4 in 10x < 6 floor)
+Lymph_Node,6dd28080-1d36-4905-8b44-a9954a4438a2,4086623268,6,6,6,3,6,129062,45,69,analyzed_remaining_compartment_sorted,6 donors on 10x 3' v3 (45-69y); Family B+C only (no Family A/concordance: TS microbead/FACS compartment normalization PMC9812260)
+Mammary,33b25f68-a9d6-4643-9283-653e937ae608,1326569473,2,2,2,1,,30936,38,56,excluded_fewer_than_6_donors,2 age-verified donors (2 in 10x < 6 floor)
+Muscle,4919a450-62fb-4741-b750-5591443edee8,2051218332,6,6,5,4,,46772,38,61,excluded_fewer_than_6_10x_donors,"6 total donors overall, but only 5 donors in 10x (<6 single-assay floor)"
+Ovary,6ad78e84-6715-458d-95b4-69e8509cd785,1817624603,3,3,3,2,,48951,26,56,excluded_fewer_than_6_donors,3 age-verified donors (3 in 10x < 6 floor)
+Pancreas,ba587dee-e050-4a31-bcb8-05e5418f9086,740671625,3,2,2,0,,14140,56,59,excluded_fewer_than_6_donors,2 age-verified donors (2 in 10x < 6 floor)
+Prostate,4a289bf1-97c2-4616-8e1c-585088d28c3e,904569252,3,3,3,1,,21030,56,60,excluded_fewer_than_6_donors,3 age-verified donors (3 in 10x < 6 floor)
+Salivary_Gland,a9f49247-9866-422e-a9c3-d315f6e99369,1806149308,4,4,4,2,,39821,45,69,excluded_fewer_than_6_donors,4 age-verified donors (4 in 10x < 6 floor)
+Skin,c240d5bc-a521-4330-a76b-7d566e939d87,504731465,4,4,4,3,,17786,33,61,already_analyzed_ts1_and_below_6_donors,4 donors (33-61y < 6 floor); prior TS_Skin (4-donor TS1) already analyzed
+Small_Intestine,6db4dfe6-d421-4287-a9dc-22eaa59be966,1806934696,5,5,5,2,,42036,37,61,excluded_fewer_than_6_donors,5 age-verified donors (5 in 10x < 6 floor)
+Spleen,5498457f-6a18-4766-b9a3-a2c8c4662703,2654711797,6,6,6,3,6,70448,45,69,analyzed_remaining_compartment_sorted,6 donors on 10x 3' v3 (45-69y); Family B+C only (no Family A/concordance: TS microbead/FACS compartment normalization PMC9812260)
+Stomach,3e8bd2b2-fe53-4b95-abb2-ce971b4f1c14,1072465874,3,2,2,1,,33064,56,60,excluded_fewer_than_6_donors,2 age-verified donors (2 in 10x < 6 floor)
+Testis,09e3ae14-f355-4ed7-ad81-787b587c8a16,386411220,1,1,1,0,,7513,60,60,excluded_fewer_than_6_donors,1 age-verified donors (1 in 10x < 6 floor)
+Thymus,b58baee9-3e90-4491-aa16-eb5818a6db27,1715061877,5,5,5,2,,42729,45,61,excluded_fewer_than_6_donors,5 age-verified donors (5 in 10x < 6 floor)
+Tongue,07cf9c5f-6e79-4422-a4de-4427f0f4a76d,2005012044,5,5,4,3,,38754,38,69,excluded_fewer_than_6_donors,5 age-verified donors (4 in 10x < 6 floor)
+Trachea,03500d0b-e9ae-42e0-9ae0-576a551099dc,965745201,6,6,5,3,,22671,45,67,excluded_fewer_than_6_10x_donors,"6 total donors overall, but only 5 donors in 10x (<6 single-assay floor)"
+Uterus,ec18d0d1-3b1b-4413-b011-0078c8d69bd3,894132831,2,2,2,1,,22029,38,45,excluded_fewer_than_6_donors,2 age-verified donors (2 in 10x < 6 floor)
+Vasculature,5d54a606-3cd9-4164-b862-a3c51e622790,2180756396,5,5,5,2,,42650,45,61,excluded_fewer_than_6_donors,5 age-verified donors (5 in 10x < 6 floor)

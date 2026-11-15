@@ -1,0 +1,66 @@
+{
+  "tissues_analyzed": [
+    "Blood",
+    "Bladder",
+    "Fat",
+    "Lymph_Node",
+    "Spleen"
+  ],
+  "unique_donors_across_5_tissues": [
+    "TSP1",
+    "TSP10",
+    "TSP14",
+    "TSP2",
+    "TSP21",
+    "TSP25",
+    "TSP27",
+    "TSP7",
+    "TSP8"
+  ],
+  "n_unique_donors_across_5_tissues": 9,
+  "n_groups_total": 41,
+  "n_celltype_groups": 36,
+  "n_gene_tests_celltypes36": 598189,
+  "n_gene_tests_all41": 688294,
+  "n_sig_within_q05": 2,
+  "n_sig_tissue_celltypes_q05": 0,
+  "n_sig_ts2_celltypes36_q05": 0,
+  "n_sig_ts2_all41_q05": 0,
+  "gates": {
+    "Blood": {
+      "nonfinite": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "total_nnz": 201330996,
+      "n_obs": 85233
+    },
+    "Bladder": {
+      "nonfinite": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "total_nnz": 266974746,
+      "n_obs": 66385
+    },
+    "Fat": {
+      "nonfinite": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "total_nnz": 295933576,
+      "n_obs": 94415
+    },
+    "Lymph_Node": {
+      "nonfinite": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "total_nnz": 322710450,
+      "n_obs": 129062
+    },
+    "Spleen": {
+      "nonfinite": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "total_nnz": 207399916,
+      "n_obs": 70448
+    }
+  }
+}

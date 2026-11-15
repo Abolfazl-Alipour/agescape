@@ -1,0 +1,42 @@
+tissue,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,is_pooled_tissue,n_sig_tissue_celltypes_q05,n_sig_ts2_celltypes36_q05,n_sig_ts2_all41_q05
+Blood,B cell,tested,7,16958,sex_male;log_lib,none,3,0,0,6.862699568873717e-05,0.999966676576282,83051,False,0,0,0
+Blood,"CD4-positive, alpha-beta T cell",tested,8,16993,sex_male;log_lib,none,4,0,0,6.356466092982937e-05,0.999966676576282,83051,False,0,0,0
+Blood,"CD8-positive, alpha-beta T cell",tested,8,17358,sex_male;log_lib,none,4,0,0,0.0002826553624335359,0.999966676576282,83051,False,0,0,0
+Blood,classical monocyte,tested,8,14548,sex_male;log_lib,none,4,0,0,5.353243504069823e-05,0.999966676576282,83051,False,0,0,0
+Blood,erythrocyte,tested,7,3959,sex_male;log_lib,none,3,0,0,0.001762882610827453,0.999966676576282,83051,False,0,0,0
+Blood,neutrophil,tested,8,13235,sex_male;log_lib,none,4,0,0,0.00030161921128462737,0.999966676576282,83051,False,0,0,0
+Blood,All_NonNK_Cells,tested,9,15033,sex_male;log_lib,none,5,0,0,0.021056839480417498,0.9999079226052913,15033,True,0,0,0
+Bladder,"CD4-positive, alpha-beta T cell",tested,6,16186,sex_male;log_lib,none,2,0,0,3.39247894731091e-06,0.46718506079208005,137712,False,0,0,0
+Bladder,"CD8-positive, alpha-beta T cell",tested,6,17502,sex_male;log_lib,none,2,0,0,5.8703796684534793e-05,0.7992794141779958,137712,False,0,0,0
+Bladder,bladder urothelial cell,tested,6,17189,sex_male;log_lib,none,2,0,0,1.0790509064296195e-05,0.7370323076046444,137712,False,0,0,0
+Bladder,fibroblast,tested,6,17225,sex_male;log_lib,none,2,0,0,0.00011732522054859534,0.7992794141779958,137712,False,0,0,0
+Bladder,macrophage,tested,6,17176,sex_male;log_lib,none,2,0,0,9.900112153419513e-05,0.7992794141779958,137712,False,0,0,0
+Bladder,monocyte,tested,6,16653,sex_male;log_lib,none,2,0,0,6.598947852571586e-05,0.7992794141779958,137712,False,0,0,0
+Bladder,myofibroblast cell,tested,6,18547,sex_male;log_lib,none,2,0,0,9.618711774831094e-05,0.7992794141779958,137712,False,0,0,0
+Bladder,smooth muscle cell,tested,6,17234,sex_male;log_lib,none,2,0,0,9.501994301153155e-05,0.7992794141779958,137712,False,0,0,0
+Bladder,All_Cells,tested,6,18532,sex_male;log_lib,none,2,0,0,7.493273989879514e-05,0.5564963172762505,18532,True,0,0,0
+Fat,"CD8-positive, alpha-beta T cell",tested,6,17440,sex_male;log_lib,none,2,0,0,4.8873529613985335e-05,0.9999756761762205,35138,False,0,0,0
+Fat,fibroblast,tested,6,17698,sex_male;log_lib,none,2,0,0,8.20951778406717e-05,0.9999756761762205,35138,False,0,0,0
+Fat,All_Cells,tested,6,19285,sex_male;log_lib,none,2,0,0,6.931874694591091e-05,0.9999632082621861,19285,True,0,0,0
+Lymph_Node,B cell,tested,6,17556,sex_male;log_lib,none,2,0,0,0.00023159347415499203,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,"CD4-positive, alpha-beta T cell",tested,6,18145,sex_male;log_lib,none,2,0,0,0.00010899592024495655,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,"CD8-positive, alpha-beta T cell",tested,6,18167,sex_male;log_lib,none,2,0,0,0.00038430650175675133,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,T cell,tested,6,16325,sex_male;log_lib,none,2,0,0,2.0612515182760017e-05,0.9155666993878344,177672,False,0,0,0
+Lymph_Node,macrophage,tested,6,16508,sex_male;log_lib,none,2,0,0,0.0006985311700029851,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,mature NK T cell,tested,6,18056,sex_male;log_lib,none,2,0,0,6.386398154063405e-06,0.7061745729201663,177672,False,0,0,0
+Lymph_Node,monocyte,tested,6,20726,sex_male;log_lib,none,2,0,0,3.6818694619940735e-05,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,"naive thymus-derived CD4-positive, alpha-beta T cell",tested,6,18543,sex_male;log_lib,none,2,0,0,0.00011582809428046222,0.9999991106649377,177672,False,0,0,0
+Lymph_Node,natural killer cell,tested,6,18105,sex_male;log_lib,none,2,0,0,7.949193715612661e-06,0.7061745729201663,177672,False,0,0,0
+Lymph_Node,plasma cell,tested,6,15541,sex_male;log_lib,none,2,0,0,1.4589266011115552e-05,0.8640346902423075,177672,False,0,0,0
+Lymph_Node,All_Cells,tested,6,18877,sex_male;log_lib,none,2,0,0,4.863257077673018e-05,0.8255551882848505,18877,True,0,0,0
+Spleen,B cell,tested,6,17436,sex_male;log_lib,none,2,0,0,1.7935679824540937e-05,0.4217856957138044,164616,False,0,0,0
+Spleen,"CD4-positive, alpha-beta T cell",tested,6,18363,sex_male;log_lib,none,2,0,0,7.980871521743133e-05,0.6256091173444132,164616,False,0,0,0
+Spleen,"CD8-positive, alpha-beta T cell",tested,6,17800,sex_male;log_lib,none,2,0,0,3.451589392990714e-05,0.5241343180991085,164616,False,0,0,0
+Spleen,classical monocyte,tested,6,14792,sex_male;log_lib,none,2,1,0,2.121321361327483e-06,0.17460171860814247,164616,False,0,0,0
+Spleen,macrophage,tested,6,15904,sex_male;log_lib,none,2,0,0,1.4571586017646638e-05,0.39978603398015317,164616,False,0,0,0
+Spleen,mature NK T cell,tested,6,17101,sex_male;log_lib,none,2,1,0,1.707661089325705e-06,0.17460171860814247,164616,False,0,0,0
+Spleen,monocyte,tested,6,15735,sex_male;log_lib,none,2,0,0,1.4571420143207166e-05,0.39978603398015317,164616,False,0,0,0
+Spleen,natural killer cell,tested,6,17513,sex_male;log_lib,none,2,0,0,4.117426858776421e-05,0.5648286164869494,164616,False,0,0,0
+Spleen,neutrophil,tested,6,14308,sex_male;log_lib,none,2,0,0,7.963370124923836e-06,0.39978603398015317,164616,False,0,0,0
+Spleen,plasma cell,tested,6,15664,sex_male;log_lib,none,2,0,0,1.3912115880484438e-05,0.39978603398015317,164616,False,0,0,0
+Spleen,All_Cells,tested,6,18378,sex_male;log_lib,none,2,0,0,6.43551385793223e-06,0.11827187368107853,18378,True,0,0,0
