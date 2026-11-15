@@ -8,7 +8,7 @@
 ## 1. Primary-Source Metadata Verification & `25` vs `22` Donor Reconciliation
 
 1. **Five-year age brackets only across ALL `25` donors**:
-   - Inspection of `41586_2023_6311_MOESM3_ESM.xlsx` (`Supplementary Table 1: Anonymized donor information`, exported in [`donors.csv`](../results/followup-organ-16-heart-kanemaru-donors.csv)) and ArrayExpress SDRFs (`E-MTAB-12916.sdrf.txt`, `E-MTAB-12919.sdrf.txt`) confirms that **all `25` donors (`14` Male, `11` Female) have ages reported strictly in 5-year brackets**: `20-25` (`2`), `40-45` (`2`), `45-50` (`6`), `50-55` (`5`), `55-60` (`2`), `60-65` (`3`), `65-70` (`1`), and `70-75` (`4`). Zero exact donor ages exist in any public Kanemaru repository.
+   - Inspection of `41586_2023_6311_MOESM3_ESM.xlsx` (`Supplementary Table 1: Anonymized donor information`, exported in [`donors.csv`](../results/followup-organ-16-heart-kanemaru-donors.csv)) and ArrayExpress SDRFs (`E-MTAB-12916.sdrf.txt`, `E-MTAB-12919.sdrf.txt`) confirms that **all `25` donors (`14` Female, `11` Male) have ages reported strictly in 5-year brackets**: `20-25` (`2`), `40-45` (`1`), `45-50` (`6`), `50-55` (`5`), `55-60` (`2`), `60-65` (`4`), `65-70` (`1`), and `70-75` (`4`). Zero exact donor ages exist in any public Kanemaru repository.
    - CZ CELLxGENE (`1e1e07c3-bfcb-4a0d-91de-c2614a891409`) collapses these further into 5 10-year `HsapDv` decade ontologies (`third`, `fifth`, `sixth`, `seventh`, and `eighth decade stage`).
 2. **Exact reconciliation of `25` donors (`MOESM3`) vs `22` donors in CZ `Heart Global`**:
    - **`15` re-analyzed donors from Litvinukova et al. (2020, Heart Cell Atlas v1)**: `D1..D8, D11, H2..H7`, all present in CZ `Heart Global` (brackets `40-45` to `70-75`).
