@@ -1,0 +1,3 @@
+group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,model
+Dermal_Fibroblast_Bulk,tested,9,12695,sex_male;log_lib,none,5,0,0,1.3274610360745548e-05,0.157541752906105,12695,age_per_decade
+Dermal_Fibroblast_Bulk,tested,9,12695,sex_male;log_lib,none,5,0,0,1.068485097350964e-05,0.13564418310870488,12695,old_vs_young
