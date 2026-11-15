@@ -1,0 +1,4 @@
+analysis,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size
+Primary_BatchSexAdj,RPE_Bulk,tested,13,16212,sex_male;batch_s2;log_lib,none,8,2,2,7.884866682054166e-07,0.012782945864946214,16212
+Sens_SexAdj_NoBatch,RPE_Bulk,tested,13,16212,sex_male;log_lib,none,9,3,3,8.539500399346504e-07,0.013844238047420552,16212
+Sens_BatchS1_Only,RPE_Bulk_s1,tested,7,16416,sex_male;log_lib,none,3,0,0,1.4764322950935181e-05,0.18218169219796776,16416
