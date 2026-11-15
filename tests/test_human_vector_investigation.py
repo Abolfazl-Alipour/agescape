@@ -36,6 +36,7 @@ def test_human_primary_hits_do_not_survive_depth_adjustment():
 def test_bayesian_hierarchy_maps_groups_to_units_before_observations():
     import pytest
     pytest.importorskip("pymc")
+    pytest.importorskip("arviz_plots")
     from scripts.run_cross_species_bayesian_vector import prepare_data
 
     rows = []
