@@ -9,7 +9,7 @@
 - **Count provenance and mapping**: Raw integer HTSeq counts (`noninteger_entries = 0`, `max = 655797`) were extracted from `GSE159435_RAW.tar` across all 13 GSMs (`GSM4829762` to `GSM4829774`), removing the 5 `__*` HTSeq summary lines and mapping Ensembl IDs to HGNC symbols via the GRCh38/ortholog table (`117 / 118` `P1_Clean` genes mapped; only `CD24` absent).
 
 ## Cohort Structure (`n = 13` donors, 2 Batches)
-- Notice the batch-age imbalance in GEO metadata: `batch s1` (`n = 7`) spans the full adult range `31 to 93 yr` (`31M, 40F, 51M, 67F, 77M, 86M, 93F`), whereas `batch s2` (`n = 6`) contains exclusively older donors aged `61 to 92 yr` (`61F, 62M, 71M, 73M, 73F, 92M`). Adjusting for `batch_s2` is essential and `Sens_BatchS1_Only` tests the homogeneous single-batch `31 to 93 yr` ladder.
+- Notice the batch-age imbalance in GEO metadata ([donors CSV](../results/followup-organ-08-eye-rpe-gse159435-donors.csv)): `batch s1` (`n = 7`) spans the full adult range `31 to 93 yr` (`31M, 40F, 51M, 67F, 77M, 86M, 93F`), whereas `batch s2` (`n = 6`) contains exclusively older donors aged `61 to 92 yr` (`61F, 62M, 71M, 73M, 73F, 92M`). Adjusting for `batch_s2` is essential and `Sens_BatchS1_Only` tests the homogeneous single-batch `31 to 93 yr` ladder.
 
 | Donor (GEO GSM) | Age (yr) | Sex | Batch | Library Size (mapped counts) |
 |---|---:|:---:|:---:|---:|
@@ -28,7 +28,9 @@
 | donor13 (GSM4829774) | 92 | M | s2 | 14871766 |
 
 ## Family B: Gene-Level Donor Age OLS
-- **Primary model (`Primary_BatchSexAdj`, `~ age_per_decade + sex_male + batch_s2 + log_lib`, `M_B = 16212`)**: **`2` genes at `q_BH < 0.05`**.
+- **Primary model (`Primary_BatchSexAdj`, `~ age_per_decade + sex_male + batch_s2 + log_lib`, `M_B = 16212`)**: **`2` genes at `q_BH < 0.05`** ([gene summary CSV](../results/followup-organ-08-eye-rpe-gse159435-gene-summary.csv), [top genes CSV](../results/followup-organ-08-eye-rpe-gse159435-top-genes.csv)).
+- **Ensembl ID annotation (`top-genes.csv`)**: All `44` `ENSG*` rows (`28` unique `ENSG*` IDs across the 300-row top-100-per-suite file) are annotated via Ensembl GRCh38 REST API (`/lookup/id` + `/archive/id`) and Ensembl GRCh37 REST API (`grch37.rest.ensembl.org/lookup/id`): `9` unique active GRCh38 symbols (`11` rows), `3` retired GRCh38 IDs with active GRCh38 replacements (`6` rows: `ENSG00000255028` -> `LINC02715`, `ENSG00000237461` -> `NAMA`, `ENSG00000259126` -> `LINC02277`), `4` retired GRCh38 IDs resolved via GRCh37 (`7` rows including `ENSG00000196963` = `PCDHB16` and `ENSG00000132142` = `ACACA`), and `12` active GRCh38 novel lncRNAs/pseudogenes lacking HGNC symbols (`20` rows, headed by `ENSG00000235912`).
+- **`ENSG00000235912` annotation (rank 10)**: Active GRCh38 `transcribed_processed_pseudogene` ("novel pseudogene", Ensembl GRCh38 REST `/lookup/id`), with no HGNC symbol (GRCh37 clone locus `RP1-159A19.3`, Ensembl GRCh37 REST `/lookup/id`); `q_BH = 0.1048`.
 
 | Suite | Group | n_donors | Genes Tested | Global q<0.05 | Min p-value | Min q_BH |
 |---|---|---:|---:|---:|---:|---:|
@@ -37,21 +39,21 @@
 | Sens_BatchS1_Only | RPE_Bulk_s1 | 7 | 16416 | 0 | 1.48e-05 | 0.1822 |
 
 ### Top 10 Ranked Genes (`Primary_BatchSexAdj`)
-| Gene | Mean log2CPM | Effect (log2CPM/dec) | SE | p-value | q_BH |
-|---|---:|---:|---:|---:|---:|
-| RUBCNL | 2.00 | +0.2560 | 0.0187 | 7.88e-07 | 0.0128 |
-| ARL6IP5 | 7.42 | -0.0891 | 0.0082 | 4.56e-06 | 0.0370 |
-| CACNA2D2 | 4.32 | -0.3002 | 0.0320 | 1.38e-05 | 0.0737 |
-| MASTL | 4.31 | -0.1234 | 0.0138 | 1.95e-05 | 0.0737 |
-| LINC03040 | 2.67 | +0.5035 | 0.0599 | 3.05e-05 | 0.0737 |
-| F10 | 2.50 | -0.3515 | 0.0418 | 3.07e-05 | 0.0737 |
-| PAX8 | 1.37 | -0.2609 | 0.0313 | 3.21e-05 | 0.0737 |
-| LARGE2 | 3.41 | +0.4275 | 0.0521 | 3.64e-05 | 0.0737 |
-| ANKRD54 | 3.15 | +0.1472 | 0.0185 | 4.48e-05 | 0.0808 |
-| ENSG00000235912 | 1.97 | +0.2396 | 0.0318 | 6.78e-05 | 0.1048 |
+| Gene | Ensembl / Mapping Annotation (Source) | Mean log2CPM | Effect (log2CPM/dec) | SE | p-value | q_BH |
+|---|---|---:|---:|---:|---:|---:|
+| RUBCNL | input_symbol (GEO raw symbol) | 2.00 | +0.2560 | 0.0187 | 7.88e-07 | 0.0128 |
+| ARL6IP5 | input_symbol (GEO raw symbol) | 7.42 | -0.0891 | 0.0082 | 4.56e-06 | 0.0370 |
+| CACNA2D2 | input_symbol (GEO raw symbol) | 4.32 | -0.3002 | 0.0320 | 1.38e-05 | 0.0737 |
+| MASTL | input_symbol (GEO raw symbol) | 4.31 | -0.1234 | 0.0138 | 1.95e-05 | 0.0737 |
+| LINC03040 | input_symbol (GEO raw symbol) | 2.67 | +0.5035 | 0.0599 | 3.05e-05 | 0.0737 |
+| F10 | input_symbol (GEO raw symbol) | 2.50 | -0.3515 | 0.0418 | 3.07e-05 | 0.0737 |
+| PAX8 | input_symbol (GEO raw symbol) | 1.37 | -0.2609 | 0.0313 | 3.21e-05 | 0.0737 |
+| LARGE2 | input_symbol (GEO raw symbol) | 3.41 | +0.4275 | 0.0521 | 3.64e-05 | 0.0737 |
+| ANKRD54 | input_symbol (GEO raw symbol) | 3.15 | +0.1472 | 0.0185 | 4.48e-05 | 0.0808 |
+| ENSG00000235912 | active_grch38_no_hgnc_symbol (`transcribed_processed_pseudogene`; GRCh37 clone `RP1-159A19.3`; Ensembl GRCh38/37 REST) | 1.97 | +0.2396 | 0.0318 | 6.78e-05 | 0.1048 |
 
 ## Family C: P1_Clean Mouse Signature Transport
-- Across all three models (`Primary_BatchSexAdj`, `Sens_SexAdj_NoBatch`, `Sens_BatchS1_Only`; `66` up and `36` down `P1_Clean` genes expressed above `1 CPM` in `>=50%` of donors), **there is zero positive transport of `P1_Clean`**: all three composite point estimates are **negative** (`-0.0704` to `-0.0969` per decade), driven by inverted average slopes relative to mouse aging. This reinforces the conclusion that `P1_Clean` does not positively generalize into aging human RPE.
+- Across all three models (`Primary_BatchSexAdj`, `Sens_SexAdj_NoBatch`, `Sens_BatchS1_Only`; `66` up and `36` down `P1_Clean` genes expressed above `1 CPM` in `>=50%` of donors), **there is zero positive transport of `P1_Clean`**: all three composite point estimates are **negative** (`-0.0704` to `-0.0969` per decade), driven by inverted average slopes relative to mouse aging ([P1 signature CSV](../results/followup-organ-08-eye-rpe-gse159435-p1-signature.csv)). This reinforces the conclusion that `P1_Clean` does not positively generalize into aging human RPE.
 
 | Suite | n_donors | P1 Up/Down | Composite Effect | Analytic p | Empirical p (200 draws) | q_BH (Comp) | q_BH (Emp) |
 |---|---:|:---:|---:|---:|---:|---:|---:|
@@ -65,7 +67,7 @@
 3. **Sample size**: With `n = 13` (`residual_df = 8`), power for moderate gene-level slopes is limited.
 
 ## Output Files
-- `results/followup-organ-08-eye-rpe-gse159435-donors.csv`
-- `results/followup-organ-08-eye-rpe-gse159435-gene-summary.csv`
-- `results/followup-organ-08-eye-rpe-gse159435-top-genes.csv`
-- `results/followup-organ-08-eye-rpe-gse159435-p1-signature.csv`
+- [Donors](../results/followup-organ-08-eye-rpe-gse159435-donors.csv)
+- [Gene Summary](../results/followup-organ-08-eye-rpe-gse159435-gene-summary.csv)
+- [Top Genes](../results/followup-organ-08-eye-rpe-gse159435-top-genes.csv)
+- [P1 Signature](../results/followup-organ-08-eye-rpe-gse159435-p1-signature.csv)
