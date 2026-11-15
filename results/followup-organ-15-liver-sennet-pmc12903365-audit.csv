@@ -1,0 +1,165 @@
+dataset_sennet_id,dataset_type,data_access_level,status,donor_sennet_id,donor_age_yr,donor_sex,donor_bmi,donor_race,has_dbgap_url,dbgap_url,title
+SNT727.RZDV.735,10X Multiome,protected,Published,SNT265.GVQQ.769,62.0,Male,19.5,White,NO,,10X Multiome data from the liver of a 62 year-old white male
+SNT726.STVP.228,10X Multiome,protected,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,10X Multiome data from the liver of a 69 year-old white female
+SNT575.PMHQ.397,10X Multiome,protected,Published,SNT272.JKFP.682,37.0,Male,20.1,White,NO,,10X Multiome data from the liver of a 37 year-old white male
+SNT764.GGMC.945,10X Multiome,protected,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,10X Multiome data from the liver of a 33 year-old white female
+SNT295.BVZH.756,10X Multiome,protected,Published,SNT357.SDLM.793,63.0,Female,29.86,White,NO,,10X Multiome data from the liver of a 63 year-old white female
+SNT257.ZZXW.745,10X Multiome,protected,Published,SNT367.LWKV.333,71.0,Male,25.11,White,NO,,10X Multiome data from the liver of a 71 year-old white male
+SNT753.MMSW.447,10X Multiome,protected,Published,SNT374.KXGK.982,31.0,Female,28.3,White,NO,,10X Multiome data from the liver of a 31 year-old white female
+SNT896.LPMR.788,10X Multiome,protected,Published,SNT388.RJWV.344,68.0,Female,40.68,White,NO,,10X Multiome data from the liver of a 68 year-old white female
+SNT373.XVCV.862,10X Multiome,protected,Published,SNT563.JMDR.367,22.0,Female,41.17,Black or African American,NO,,10X Multiome data from the liver of a 22 year-old black or african american female
+SNT726.FCNG.552,10X Multiome,protected,Published,SNT564.GKSR.225,72.0,Male,26.4,White,NO,,10X Multiome data from the liver of a 72 year-old white male
+SNT578.KWWX.555,10X Multiome,protected,Published,SNT645.JVHB.673,29.0,Male,23.48,White,NO,,10X Multiome data from the liver of a 29 year-old white male
+SNT236.WNQZ.577,10X Multiome,protected,Published,SNT645.MPBV.979,26.0,Female,33.7,Black or African American,NO,,10X Multiome data from the liver of a 26 year-old black or african american female
+SNT592.HRQP.637,10X Multiome,protected,Published,SNT666.NPRB.538,88.0,Male,28.1,White,NO,,10X Multiome data from the liver of a 88 year-old white male
+SNT875.QRMN.232,10X Multiome,protected,Published,SNT688.KMNT.794,73.0,Female,39.4,White,NO,,10X Multiome data from the liver of a 73 year-old white female
+SNT355.DGML.386,10X Multiome,protected,Published,SNT722.DHMP.745,68.0,Female,23.05,White,NO,,10X Multiome data from the liver of a 68 year-old white female
+SNT692.DNZG.669,10X Multiome,protected,Published,SNT726.MDWS.669,64.0,Female,52.78,White,NO,,10X Multiome data from the liver of a 64 year-old white female
+SNT626.DNSL.944,10X Multiome,protected,Published,SNT728.CLRV.693,27.0,Female,21.0,White,NO,,10X Multiome data from the liver of a 27 year-old white female
+SNT396.TGXD.683,10X Multiome,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,10X Multiome data from the liver of a 61 year-old white male
+SNT737.NWFN.462,10X Multiome,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,10X Multiome data from the liver of a 61 year-old white male
+SNT327.FHMG.523,10X Multiome,protected,Published,SNT798.SRLH.423,30.0,Female,24.37,White,NO,,10X Multiome data from the liver of a 30 year-old white female
+SNT323.JXVC.442,10X Multiome,protected,Published,SNT826.VWZK.322,73.0,Male,29.2,White,NO,,10X Multiome data from the liver of a 73 year-old white male
+SNT965.QWBT.575,10X Multiome,protected,Published,SNT826.XGVT.832,69.0,Unknown,33.9,White,NO,,10X Multiome data from the liver of a 69 year-old white unknown
+SNT835.WGNH.446,10X Multiome,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,10X Multiome data from the liver of a 74 year-old white female
+SNT686.XRWZ.768,10X Multiome,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,10X Multiome data from the liver of a 74 year-old white female
+SNT288.MVWV.435,10X Multiome,protected,Published,SNT863.FCVV.974,28.0,Female,38.1,White,NO,,10X Multiome data from the liver of a 28 year-old white female
+SNT966.ZSNF.242,10X Multiome,protected,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,10X Multiome data from the liver of a 77 year-old white female
+SNT838.FVMB.335,10X Multiome,protected,Published,SNT942.DFRX.942,73.0,Female,19.24,White,NO,,10X Multiome data from the liver of a 73 year-old white female
+SNT275.HTZF.274,10X Multiome,protected,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,10X Multiome data from the liver of a 37 year-old white male
+SNT689.FRBB.797,10X Multiome,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,10X Multiome data from the liver of a 37 year-old white female
+SNT428.VHFL.232,10X Multiome,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,10X Multiome data from the liver of a 37 year-old white female
+SNT665.NMDX.493,10X Multiome,protected,Published,SNT969.BPZP.467,34.0,Female,30.62,Black or African American,NO,,10X Multiome data from the liver of a 34 year-old black or african american female
+SNT284.VTTH.564,10X Multiome,protected,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,10X Multiome data from the liver of a 30 year-old black or african american male
+SNT436.ZLKC.484,10X Multiome,protected,Published,SNT995.FMBT.496,26.0,Female,25.1,Black or African American,NO,,10X Multiome data from the liver of a 26 year-old black or african american female
+SNT737.CJMZ.982,10X Multiome,protected,Published,SNT996.GSSS.296,70.0,Male,31.4,White,NO,,10X Multiome data from the liver of a 70 year-old white male
+SNT867.KCHF.588,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 33 year-old white female
+SNT469.MCQL.699,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT357.SDLM.793,63.0,Female,29.86,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 63 year-old white female
+SNT868.NRMX.528,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT367.LWKV.333,71.0,Male,25.11,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 71 year-old white male
+SNT645.SJVC.977,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT563.JMDR.367,22.0,Female,41.17,Black or African American,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 22 year-old black or african american female
+SNT259.HMWL.272,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 61 year-old white male
+SNT255.GZBF.253,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 61 year-old white male
+SNT692.LLCX.974,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 74 year-old white female
+SNT445.NGMB.993,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 74 year-old white female
+SNT396.QNQP.295,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 37 year-old white male
+SNT548.MRWS.967,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 37 year-old white female
+SNT835.XFSW.574,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 37 year-old white female
+SNT974.QVHR.838,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT969.BPZP.467,34.0,Female,30.62,Black or African American,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 34 year-old black or african american female
+SNT968.TZWS.865,10x Multiome [Salmon + ArchR + Muon],public,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,10x Multiome [Salmon + ArchR + Muon] data from the liver of a 30 year-old black or african american male
+SNT737.JGRB.385,ATACseq,protected,Published,SNT265.GVQQ.769,62.0,Male,19.5,White,NO,,ATACseq data from the liver of a 62 year-old white male
+SNT482.PDQN.524,ATACseq,protected,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,ATACseq data from the liver of a 69 year-old white female
+SNT792.XQBM.445,ATACseq,protected,Published,SNT272.JKFP.682,37.0,Male,20.1,White,NO,,ATACseq data from the liver of a 37 year-old white male
+SNT687.DCQN.765,ATACseq,protected,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,ATACseq data from the liver of a 33 year-old white female
+SNT739.JXBP.683,ATACseq,protected,Published,SNT357.SDLM.793,63.0,Female,29.86,White,NO,,ATACseq data from the liver of a 63 year-old white female
+SNT838.XZNX.894,ATACseq,protected,Published,SNT367.LWKV.333,71.0,Male,25.11,White,NO,,ATACseq data from the liver of a 71 year-old white male
+SNT482.FHQQ.576,ATACseq,protected,Published,SNT374.KXGK.982,31.0,Female,28.3,White,NO,,ATACseq data from the liver of a 31 year-old white female
+SNT472.LHDQ.528,ATACseq,protected,Published,SNT388.RJWV.344,68.0,Female,40.68,White,NO,,ATACseq data from the liver of a 68 year-old white female
+SNT887.FFJD.239,ATACseq,protected,Published,SNT563.JMDR.367,22.0,Female,41.17,Black or African American,NO,,ATACseq data from the liver of a 22 year-old black or african american female
+SNT272.VKXB.353,ATACseq,protected,Published,SNT564.GKSR.225,72.0,Male,26.4,White,NO,,ATACseq data from the liver of a 72 year-old white male
+SNT696.XZKG.683,ATACseq,protected,Published,SNT645.JVHB.673,29.0,Male,23.48,White,NO,,ATACseq data from the liver of a 29 year-old white male
+SNT644.QLSG.228,ATACseq,protected,Published,SNT645.MPBV.979,26.0,Female,33.7,Black or African American,NO,,ATACseq data from the liver of a 26 year-old black or african american female
+SNT439.DFWX.662,ATACseq,protected,Published,SNT666.NPRB.538,88.0,Male,28.1,White,NO,,ATACseq data from the liver of a 88 year-old white male
+SNT569.SZQX.556,ATACseq,protected,Published,SNT688.KMNT.794,73.0,Female,39.4,White,NO,,ATACseq data from the liver of a 73 year-old white female
+SNT944.NGQG.758,ATACseq,protected,Published,SNT722.DHMP.745,68.0,Female,23.05,White,NO,,ATACseq data from the liver of a 68 year-old white female
+SNT946.MRKJ.499,ATACseq,protected,Published,SNT726.MDWS.669,64.0,Female,52.78,White,NO,,ATACseq data from the liver of a 64 year-old white female
+SNT857.NGCR.828,ATACseq,protected,Published,SNT728.CLRV.693,27.0,Female,21.0,White,NO,,ATACseq data from the liver of a 27 year-old white female
+SNT662.TPVD.728,ATACseq,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,ATACseq data from the liver of a 61 year-old white male
+SNT579.DHTS.325,ATACseq,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,ATACseq data from the liver of a 61 year-old white male
+SNT485.QQKB.345,ATACseq,protected,Published,SNT798.SRLH.423,30.0,Female,24.37,White,NO,,ATACseq data from the liver of a 30 year-old white female
+SNT698.CCVZ.699,ATACseq,protected,Published,SNT826.VWZK.322,73.0,Male,29.2,White,NO,,ATACseq data from the liver of a 73 year-old white male
+SNT465.LQTV.788,ATACseq,protected,Published,SNT826.XGVT.832,69.0,Unknown,33.9,White,NO,,ATACseq data from the liver of a 69 year-old white unknown
+SNT598.QBHH.988,ATACseq,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,ATACseq data from the liver of a 74 year-old white female
+SNT696.SRXW.778,ATACseq,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,ATACseq data from the liver of a 74 year-old white female
+SNT288.FSNW.445,ATACseq,protected,Published,SNT863.FCVV.974,28.0,Female,38.1,White,NO,,ATACseq data from the liver of a 28 year-old white female
+SNT753.LHJH.257,ATACseq,protected,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,ATACseq data from the liver of a 77 year-old white female
+SNT372.CQZV.245,ATACseq,protected,Published,SNT942.DFRX.942,73.0,Female,19.24,White,NO,,ATACseq data from the liver of a 73 year-old white female
+SNT646.FDTX.529,ATACseq,protected,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,ATACseq data from the liver of a 37 year-old white male
+SNT984.NLFF.648,ATACseq,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,ATACseq data from the liver of a 37 year-old white female
+SNT528.SHWJ.552,ATACseq,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,ATACseq data from the liver of a 37 year-old white female
+SNT629.WJHX.957,ATACseq,protected,Published,SNT969.BPZP.467,34.0,Female,30.62,Black or African American,NO,,ATACseq data from the liver of a 34 year-old black or african american female
+SNT732.MLBF.798,ATACseq,protected,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,ATACseq data from the liver of a 30 year-old black or african american male
+SNT685.PPBD.392,ATACseq,protected,Published,SNT995.FMBT.496,26.0,Female,25.1,Black or African American,NO,,ATACseq data from the liver of a 26 year-old black or african american female
+SNT746.LHFL.693,ATACseq,protected,Published,SNT996.GSSS.296,70.0,Male,31.4,White,NO,,ATACseq data from the liver of a 70 year-old white male
+SNT923.PKHG.275,PhenoCycler,public,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,PhenoCycler data from the liver of a 69 year-old white female
+SNT643.LDMR.528,PhenoCycler,public,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,PhenoCycler data from the liver of a 33 year-old white female
+SNT569.MWGQ.454,PhenoCycler,public,Published,SNT645.JVHB.673,29.0,Male,23.48,White,NO,,PhenoCycler data from the liver of a 29 year-old white male
+SNT786.BRDG.593,PhenoCycler,public,Published,SNT666.NPRB.538,88.0,Male,28.1,White,NO,,PhenoCycler data from the liver of a 88 year-old white male
+SNT457.DWXJ.597,PhenoCycler,public,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,PhenoCycler data from the liver of a 61 year-old white male
+SNT952.SPZV.974,PhenoCycler,public,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,PhenoCycler data from the liver of a 74 year-old white female
+SNT674.KWSF.775,PhenoCycler,public,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,PhenoCycler data from the liver of a 77 year-old white female
+SNT375.WRHQ.752,PhenoCycler,public,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,PhenoCycler data from the liver of a 37 year-old white male
+SNT222.JDWZ.428,PhenoCycler,public,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,PhenoCycler data from the liver of a 37 year-old white female
+SNT948.GTLM.892,PhenoCycler,public,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,PhenoCycler data from the liver of a 30 year-old black or african american male
+SNT544.ZHTS.663,RNAseq,protected,Published,SNT244.NQZN.572,37.0,Female,24.5,White,NO,,RNAseq data from the liver of a 37 year-old white female
+SNT334.BBNN.789,RNAseq,protected,Published,SNT265.GVQQ.769,62.0,Male,19.5,White,NO,,RNAseq data from the liver of a 62 year-old white male
+SNT278.WFHF.674,RNAseq,protected,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,RNAseq data from the liver of a 69 year-old white female
+SNT476.SJKS.855,RNAseq,protected,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,RNAseq data from the liver of a 69 year-old white female
+SNT373.HRPC.874,RNAseq,protected,Published,SNT272.JKFP.682,37.0,Male,20.1,White,NO,,RNAseq data from the liver of a 37 year-old white male
+SNT365.CWWM.369,RNAseq,protected,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,RNAseq data from the liver of a 33 year-old white female
+SNT473.FZJZ.865,RNAseq,protected,Published,SNT357.SDLM.793,63.0,Female,29.86,White,NO,,RNAseq data from the liver of a 63 year-old white female
+SNT848.PQPH.983,RNAseq,protected,Published,SNT367.LWKV.333,71.0,Male,25.11,White,NO,,RNAseq data from the liver of a 71 year-old white male
+SNT832.HTVD.848,RNAseq,protected,Published,SNT374.KXGK.982,31.0,Female,28.3,White,NO,,RNAseq data from the liver of a 31 year-old white female
+SNT846.VXQT.978,RNAseq,protected,Published,SNT388.RJWV.344,68.0,Female,40.68,White,NO,,RNAseq data from the liver of a 68 year-old white female
+SNT583.TWNP.873,RNAseq,protected,Published,SNT542.KPQB.962,75.0,Male,29.3,White,NO,,RNAseq data from the liver of a 75 year-old white male
+SNT879.HNDM.993,RNAseq,protected,Published,SNT563.JMDR.367,22.0,Female,41.17,Black or African American,NO,,RNAseq data from the liver of a 22 year-old black or african american female
+SNT585.DCTW.443,RNAseq,protected,Published,SNT564.GKSR.225,72.0,Male,26.4,White,NO,,RNAseq data from the liver of a 72 year-old white male
+SNT385.WRKZ.933,RNAseq,protected,Published,SNT645.JVHB.673,29.0,Male,23.48,White,NO,,RNAseq data from the liver of a 29 year-old white male
+SNT437.TMNX.884,RNAseq,protected,Published,SNT645.MPBV.979,26.0,Female,33.7,Black or African American,NO,,RNAseq data from the liver of a 26 year-old black or african american female
+SNT898.NHGR.599,RNAseq,protected,Published,SNT666.NPRB.538,88.0,Male,28.1,White,NO,,RNAseq data from the liver of a 88 year-old white male
+SNT226.GHXW.974,RNAseq,protected,Published,SNT688.KMNT.794,73.0,Female,39.4,White,NO,,RNAseq data from the liver of a 73 year-old white female
+SNT362.NPNM.486,RNAseq,protected,Published,SNT722.DHMP.745,68.0,Female,23.05,White,NO,,RNAseq data from the liver of a 68 year-old white female
+SNT237.CKXZ.778,RNAseq,protected,Published,SNT726.MDWS.669,64.0,Female,52.78,White,NO,,RNAseq data from the liver of a 64 year-old white female
+SNT558.CHBH.266,RNAseq,protected,Published,SNT728.CLRV.693,27.0,Female,21.0,White,NO,,RNAseq data from the liver of a 27 year-old white female
+SNT752.HNNJ.696,RNAseq,protected,Published,SNT746.BCLN.434,72.0,Male,32.5,Black or African American,NO,,RNAseq data from the liver of a 72 year-old black or african american male
+SNT524.MLRW.394,RNAseq,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,RNAseq data from the liver of a 61 year-old white male
+SNT594.XLST.747,RNAseq,protected,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,RNAseq data from the liver of a 61 year-old white male
+SNT936.SPCG.479,RNAseq,protected,Published,SNT798.SRLH.423,30.0,Female,24.37,White,NO,,RNAseq data from the liver of a 30 year-old white female
+SNT238.ZMPK.342,RNAseq,protected,Published,SNT826.VWZK.322,73.0,Male,29.2,White,NO,,RNAseq data from the liver of a 73 year-old white male
+SNT663.QCLK.454,RNAseq,protected,Published,SNT826.XGVT.832,69.0,Unknown,33.9,White,NO,,RNAseq data from the liver of a 69 year-old white unknown
+SNT993.LDRM.587,RNAseq,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,RNAseq data from the liver of a 74 year-old white female
+SNT947.PXLD.278,RNAseq,protected,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,RNAseq data from the liver of a 74 year-old white female
+SNT245.WFPV.382,RNAseq,protected,Published,SNT863.FCVV.974,28.0,Female,38.1,White,NO,,RNAseq data from the liver of a 28 year-old white female
+SNT349.JMWR.824,RNAseq,protected,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,RNAseq data from the liver of a 77 year-old white female
+SNT487.BTSK.859,RNAseq,protected,Published,SNT942.DFRX.942,73.0,Female,19.24,White,NO,,RNAseq data from the liver of a 73 year-old white female
+SNT946.ZCMJ.836,RNAseq,protected,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,RNAseq data from the liver of a 37 year-old white male
+SNT577.GFXV.499,RNAseq,protected,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,RNAseq data from the liver of a 37 year-old white male
+SNT666.NNDN.335,RNAseq,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,RNAseq data from the liver of a 37 year-old white female
+SNT746.KFGM.532,RNAseq,protected,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,RNAseq data from the liver of a 37 year-old white female
+SNT873.STDZ.869,RNAseq,protected,Published,SNT969.BPZP.467,34.0,Female,30.62,Black or African American,NO,,RNAseq data from the liver of a 34 year-old black or african american female
+SNT367.CSZT.854,RNAseq,protected,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,RNAseq data from the liver of a 30 year-old black or african american male
+SNT769.KPHR.438,RNAseq,protected,Published,SNT995.FMBT.496,26.0,Female,25.1,Black or African American,NO,,RNAseq data from the liver of a 26 year-old black or african american female
+SNT264.GHFC.595,RNAseq,protected,Published,SNT996.GSSS.296,70.0,Male,31.4,White,NO,,RNAseq data from the liver of a 70 year-old white male
+SNT838.FHZF.957,RNAseq [Salmon],public,Published,SNT244.NQZN.572,37.0,Female,24.5,White,NO,,RNAseq [Salmon] data from the liver of a 37 year-old white female
+SNT269.CWVC.978,RNAseq [Salmon],public,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,RNAseq [Salmon] data from the liver of a 69 year-old white female
+SNT933.NCMX.273,RNAseq [Salmon],public,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,RNAseq [Salmon] data from the liver of a 69 year-old white female
+SNT999.LTWP.624,RNAseq [Salmon],public,Published,SNT542.KPQB.962,75.0,Male,29.3,White,NO,,RNAseq [Salmon] data from the liver of a 75 year-old white male
+SNT728.SWCT.924,RNAseq [Salmon],public,Published,SNT746.BCLN.434,72.0,Male,32.5,Black or African American,NO,,RNAseq [Salmon] data from the liver of a 72 year-old black or african american male
+SNT623.LVMK.796,RNAseq [Salmon],public,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,RNAseq [Salmon] data from the liver of a 37 year-old white male
+SNT754.XMHG.982,RNAseq [Salmon],public,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,RNAseq [Salmon] data from the liver of a 37 year-old white male
+SNT357.GGBP.543,Xenium,public,Published,SNT236.LTKZ.365,45.0,Female,31.4,White,NO,,Xenium data from the liver of a 45 year-old white female
+SNT323.RPQZ.873,Xenium,public,Published,SNT269.KVMJ.637,69.0,Female,25.42,White,NO,,Xenium data from the liver of a 69 year-old white female
+SNT686.KSNV.562,Xenium,public,Published,SNT328.MKZX.443,42.0,Female,35.5,Unknown,NO,,Xenium data from the liver of a 42 year-old unknown female
+SNT637.VLWH.769,Xenium,public,Published,SNT333.KWFJ.598,33.0,Female,41.1,White,NO,,Xenium data from the liver of a 33 year-old white female
+SNT294.NGSP.329,Xenium,public,Published,SNT367.RMSB.979,46.0,Male,47.5,White,NO,,Xenium data from the liver of a 46 year-old white male
+SNT348.PPWD.835,Xenium,public,Published,SNT432.CMNK.489,58.0,Female,46.1,Black or African American,NO,,Xenium data from the liver of a 58 year-old black or african american female
+SNT592.LDDL.888,Xenium,public,Published,SNT474.GBBJ.627,79.0,Female,30.5,White,NO,,Xenium data from the liver of a 79 year-old white female
+SNT485.FXHQ.846,Xenium,public,Published,SNT485.VQFW.497,43.0,Female,31.5,White,NO,,Xenium data from the liver of a 43 year-old white female
+SNT523.JVTV.726,Xenium,public,Published,SNT627.CQZZ.985,52.0,Female,25.1,White,NO,,Xenium data from the liver of a 52 year-old white female
+SNT433.PKKW.576,Xenium,public,Published,SNT645.JVHB.673,29.0,Male,23.48,White,NO,,Xenium data from the liver of a 29 year-old white male
+SNT872.JGGG.935,Xenium,public,Published,SNT645.MPBV.979,26.0,Female,33.7,Black or African American,NO,,Xenium data from the liver of a 26 year-old black or african american female
+SNT567.FFGK.265,Xenium,public,Published,SNT664.ZSMM.383,42.0,Male,25.99,White,NO,,Xenium data from the liver of a 42 year-old white male
+SNT535.WMGR.553,Xenium,public,Published,SNT666.NPRB.538,88.0,Male,28.1,White,NO,,Xenium data from the liver of a 88 year-old white male
+SNT795.BJTF.278,Xenium,public,Published,SNT688.KMNT.794,73.0,Female,39.4,White,NO,,Xenium data from the liver of a 73 year-old white female
+SNT336.PLQR.858,Xenium,public,Published,SNT688.KMNT.794,73.0,Female,39.4,White,NO,,Xenium data from the liver of a 73 year-old white female
+SNT222.ZHXN.648,Xenium,public,Published,SNT786.WZTR.934,61.0,Male,32.42,White,NO,,Xenium data from the liver of a 61 year-old white male
+SNT484.BDBN.395,Xenium,public,Published,SNT826.VWZK.322,73.0,Male,29.2,White,NO,,Xenium data from the liver of a 73 year-old white male
+SNT893.BWMX.426,Xenium,public,Published,SNT848.DSLF.897,74.0,Female,29.81,White,NO,,Xenium data from the liver of a 74 year-old white female
+SNT267.ZTKW.733,Xenium,public,Published,SNT863.FCVV.974,28.0,Female,38.1,White,NO,,Xenium data from the liver of a 28 year-old white female
+SNT972.QHGZ.988,Xenium,public,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,Xenium data from the liver of a 77 year-old white female
+SNT658.ZQZQ.774,Xenium,public,Published,SNT884.XJGB.883,77.0,Female,24.42,White,NO,,Xenium data from the liver of a 77 year-old white female
+SNT566.HCRC.634,Xenium,public,Published,SNT955.JBXS.389,37.0,Male,29.19,White,NO,,Xenium data from the liver of a 37 year-old white male
+SNT783.PZVP.798,Xenium,public,Published,SNT957.PTXN.222,37.0,Female,25.02,White,NO,,Xenium data from the liver of a 37 year-old white female
+SNT589.SQNJ.342,Xenium,public,Published,SNT975.TWFP.325,58.0,Male,34.7,Black or African American,NO,,Xenium data from the liver of a 58 year-old black or african american male
+SNT775.MTJM.892,Xenium,public,Published,SNT977.ZXPV.992,30.0,Male,39.51,Black or African American,NO,,Xenium data from the liver of a 30 year-old black or african american male
+SNT424.ZVGN.579,Xenium,public,Published,SNT995.FMBT.496,26.0,Female,25.1,Black or African American,NO,,Xenium data from the liver of a 26 year-old black or african american female
+SNT644.BFJV.682,Xenium,public,Published,SNT996.GSSS.296,70.0,Male,31.4,White,NO,,Xenium data from the liver of a 70 year-old white male
