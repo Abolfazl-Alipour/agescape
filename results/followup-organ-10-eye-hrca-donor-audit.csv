@@ -1,0 +1,125 @@
+assay,donor_id,studies_all,studies_unbiased,regions_unbiased,donor_age_raw,age_numeric,sex,reported_diseases,total_cells,unbiased_cells,enriched_or_depleted_cells,status,note
+scRNA,R-00646_01,Roska_EGAS00001004561,Roska_EGAS00001004561,macular+other+peripheral,50-80 years,,male,none,67522,67522,0,excluded_age_nonexact,non-exact donor_age (50-80 years)
+scRNA,R-00646_03,Roska_EGAS00001004561,Roska_EGAS00001004561,macular+peripheral,50-80 years,,female,none,15514,15514,0,excluded_age_nonexact,non-exact donor_age (50-80 years)
+scRNA,R-00646_04,Roska_EGAS00001004561,Roska_EGAS00001004561,macular+peripheral,50-80 years,,female,none,32412,32412,0,excluded_age_nonexact,non-exact donor_age (50-80 years)
+scRNA,R-00646_07,Roska_EGAS00001004561,Roska_EGAS00001004561,other+peripheral,50-80 years,,male,none,34404,34404,0,excluded_age_nonexact,non-exact donor_age (50-80 years)
+scRNA,H1,Sanes_GSE148077,,none,74 years,74.0,male,['lung cancer'],11721,0,11721,excluded_rod_depleted_rgc_enriched,no unbiased na/na cells
+scRNA,17-010,Wong_E-MTAB-7316,Wong_E-MTAB-7316,other,80 years,80.0,female,['cataract'],1304,1304,0,included_sc_external_diseased,external scRNA donor with ocular/systemic disease=['cataract']
+scRNA,donor1-scheetz,Scheetz_GSE130636,Scheetz_GSE130636,macular+peripheral,89 years,89.0,male,['glaucoma'],1649,1649,0,included_sc_external_diseased,external scRNA donor with ocular/systemic disease=['glaucoma']
+scRNA,donor2-scheetz,Scheetz_GSE130636,Scheetz_GSE130636,macular+peripheral,54 years,54.0,male,['cataract'],2659,2659,0,included_sc_external_diseased,external scRNA donor with ocular/systemic disease=['cataract']
+scRNA,donor3-scheetz,Scheetz_GSE130636,Scheetz_GSE130636,macular+peripheral,82 years,82.0,female,['basal laminar drusen'],1753,1753,0,included_sc_external_diseased,external scRNA donor with ocular/systemic disease=['basal laminar drusen']
+scRNA,17-011,Wong_E-MTAB-7316,Wong_E-MTAB-7316,other,53 years,53.0,female,none,3709,3709,0,included_sc_external_healthy,external disease-free scRNA donor
+scRNA,SC,Wong_E-MTAB-7316,Wong_E-MTAB-7316,other,42 years,42.0,male,none,4681,4681,0,included_sc_external_healthy,external disease-free scRNA donor
+scRNA,donor1-hafler,Hafler_GSE137537,Hafler_GSE137537,macular+peripheral,68 years,68.0,male,none,1191,1191,0,included_sc_external_healthy,external disease-free scRNA donor
+scRNA,donor2-hafler,Hafler_GSE137537,Hafler_GSE137537,macular+peripheral,71 years,71.0,male,none,3118,3118,0,included_sc_external_healthy,external disease-free scRNA donor
+scRNA,donor3-hafler,Hafler_GSE137537,Hafler_GSE137537,macular+peripheral,86 years,86.0,male,none,2009,2009,0,included_sc_external_healthy,external disease-free scRNA donor
+scRNA,H3,Sanes_GSE148077,Sanes_GSE148077,macular,60 years,60.0,male,['tonsillar squamous cell carcinoma'],27514,8831,18683,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['tonsillar squamous cell carcinoma']
+scRNA,H4,Sanes_GSE148077,Sanes_GSE148077,macular,64 years,64.0,male,['diffuse large B-cell lymphoma'],3807,3807,0,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['diffuse large B-cell lymphoma']
+scRNA,H5,Sanes_GSE148077,Sanes_GSE148077,macular,69 years,69.0,male,['metastatic melanoma'],32059,32059,0,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['metastatic melanoma']
+scRNA,H9,Sanes_GSE148077,Sanes_GSE148077,macular,53 years,53.0,female,['interstitial lung disease'],9187,9187,0,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['interstitial lung disease']
+scRNA,Hu11,Sanes_GSE148077,Sanes_GSE148077,macular,65 years,65.0,male,['metastatic melanoma'],1453,1453,0,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['metastatic melanoma']
+scRNA,Pt2,Sanes_GSE148077,Sanes_GSE148077,macular,78 years,78.0,male,['metastatic melanoma'],8101,8101,0,included_sc_sanes_organ07_dup,duplicates Organ 07 Sanes GSE148077 fovea; disease=['metastatic melanoma']
+snRNA,Chen_17_D013,Chen_b_GSE226108,,none,65 years,65.0,male,none,7812,0,7812,excluded_neun_enriched_only,all nuclei NeuN-enriched (neuron)
+snRNA,Chen_19_D017,Chen_rgc,,none,71 years,71.0,male,none,8639,0,8639,excluded_neun_enriched_only,all nuclei NeuN-enriched (neuron)
+snRNA,"pooled [0150-19,0194-19,0978-18]",Shekhar_GSE237204,Shekhar_GSE237204,macular,"pooled [81 years,80 years,79 years]",,unknown,pooled ['none'],7818,7818,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [1017-17,1053-17,1005-17]",Shekhar_GSE237204,Shekhar_GSE237204,macular,"pooled [80 years,83 years,76 years]",,unknown,pooled ['none'],8478,8478,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [BCM_22_0200,BCM_23_0491]",Chen_ancestry,Chen_ancestry,macular,"pooled [43 years,16 years]",,female,pooled ['none'],5914,5914,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Chen_D018_13,Chen_D017_13]",Chen_a,Chen_a,peripheral,"pooled [>89 years,65 years]",,unknown,pooled ['none'],39791,12702,27089,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Chen_D018_13,Chen_D026_13]",Chen_a,Chen_a,peripheral,"pooled [>89 years,81 years]",,unknown,pooled ['none'],23946,11651,12295,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Hu0220,Hu0235]",Shekhar_GSE237204,Shekhar_GSE237204,macular,"pooled [47 years,30 years]",,unknown,pooled ['none'],10726,10726,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Hu0326,Hu0355]",Shekhar_GSE237204,Shekhar_GSE237204,peripheral,"pooled [67 years,71 years]",,unknown,pooled ['none'],8475,8475,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Hu0564,Hu1059]",Shekhar_GSE237204,Shekhar_GSE237204,peripheral,"pooled [77 years,74 years]",,unknown,pooled ['none'],8117,8117,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,"pooled [Hu0869,Hu0887]",Shekhar_GSE237204,Shekhar_GSE237204,peripheral,"pooled [76 years,77 years]",,unknown,pooled ['none'],8342,8342,0,excluded_pooled,multi-donor pool; donor unit ambiguous
+snRNA,19-D005,Chen_a+Chen_c_GSE247157+Chen_rgc,Chen_a+Chen_c_GSE247157,macular+peripheral,53 years,53.0,male,none,39355,19933,19422,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,19-D008,Chen_a+Chen_c_GSE247157+Chen_rgc,Chen_a+Chen_c_GSE247157,macular+peripheral,64 years,64.0,female,none,96700,20122,76578,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,19-D009,Chen_a+Chen_c_GSE247157+Chen_rgc,Chen_a+Chen_c_GSE247157,macular+peripheral,68 years,68.0,male,none,77896,17828,60068,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0047,Chen_ancestry,Chen_ancestry,macular,70 years,70.0,male,none,9690,9690,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0183,Chen_ancestry,Chen_ancestry,macular+peripheral,21 years,21.0,male,none,65728,43742,21986,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0200,Chen_ancestry,Chen_ancestry,macular+peripheral,43 years,43.0,female,none,31201,26914,4287,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0389,Chen_ancestry,Chen_ancestry,macular+peripheral,67 years,67.0,male,none,29761,13229,16532,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0395,Chen_ancestry,Chen_ancestry,macular,58 years,58.0,male,none,10358,10358,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0434,Chen_ancestry,Chen_ancestry,macular+peripheral,32 years,32.0,female,none,45370,32443,12927,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0458,Chen_ancestry,Chen_ancestry,macular+peripheral,25 years,25.0,female,none,40614,33677,6937,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0500,Chen_ancestry,Chen_ancestry,macular,64 years,64.0,male,none,10795,10795,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0784,Chen_ancestry,Chen_ancestry,macular+peripheral,43 years,43.0,female,none,32519,24861,7658,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0849,Chen_ancestry,Chen_ancestry,macular,69 years,69.0,female,none,13416,13416,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0867,Chen_ancestry,Chen_ancestry,macular,58 years,58.0,male,none,9760,9760,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0890,Chen_ancestry,Chen_ancestry,macular,64 years,64.0,male,none,17151,17151,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_22_0896,Chen_ancestry,Chen_ancestry,macular,62 years,62.0,female,none,14182,14182,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0231,Chen_ancestry,Chen_ancestry,macular,69 years,69.0,male,none,14257,14257,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0313,Chen_ancestry,Chen_ancestry,macular,60 years,60.0,male,none,8656,8656,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0334,Chen_ancestry,Chen_ancestry,macular,62 years,62.0,female,none,19960,19960,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0358,Chen_ancestry,Chen_ancestry,macular,34 years,34.0,male,none,10947,10947,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0574,Chen_ancestry,Chen_ancestry,macular,46 years,46.0,female,none,23916,23916,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0578,Chen_ancestry,Chen_ancestry,macular,69 years,69.0,female,none,10433,10433,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_0792,Chen_ancestry,Chen_ancestry,macular,69 years,69.0,female,none,13734,13734,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_1340,Chen_ancestry,Chen_ancestry,macular,62 years,62.0,male,none,26744,26744,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_1401,Chen_ancestry,Chen_ancestry,macular,71 years,71.0,male,none,28115,28115,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_1448,Chen_ancestry,Chen_ancestry,macular,50 years,50.0,male,none,14949,14949,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_23_1556,Chen_ancestry,Chen_ancestry,macular,69 years,69.0,female,none,17065,17065,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,BCM_24_0080,Chen_ancestry,Chen_ancestry,macular,24 years,24.0,female,none,3191,3191,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D003,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,86 years,86.0,male,none,61433,20592,40841,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D007,Chen_a+Chen_c_GSE247157+Chen_rgc,Chen_a+Chen_c_GSE247157,macular+peripheral,66 years,66.0,male,none,72396,18966,53430,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D010,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,88 years,88.0,female,none,55003,18909,36094,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D013,Chen_b_GSE226108,Chen_b_GSE226108,macular,78 years,78.0,female,none,64271,52906,11365,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D014,Chen_b_GSE226108,Chen_b_GSE226108,macular,84 years,84.0,male,none,54100,48302,5798,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D015,Chen_b_GSE226108,Chen_b_GSE226108,macular+peripheral,73 years,73.0,male,none,120924,76554,44370,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D016,Chen_b_GSE226108+Chen_rgc,Chen_b_GSE226108,macular,83 years,83.0,male,none,37829,22293,15536,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_19_D019,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,82 years,82.0,female,none,106771,25556,81215,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D005_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,80 years,80.0,male,none,82752,21204,61548,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D009_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,85 years,85.0,male,none,31538,21393,10145,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D013_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,69 years,69.0,male,none,101859,26836,75023,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D017_13,Chen_c_GSE247157,Chen_c_GSE247157,macular,65 years,65.0,male,none,5150,5150,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D019_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,82 years,82.0,male,none,43146,17355,25791,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D021_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,86 years,86.0,male,none,42809,15455,27354,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D026_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,81 years,81.0,male,none,27622,19565,8057,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D027_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,77 years,77.0,male,none,35921,19660,16261,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D028_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,67 years,67.0,male,none,49223,21930,27293,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Chen_D030_13,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,73 years,73.0,female,none,43887,20755,23132,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0218,Shekhar_GSE237204,Shekhar_GSE237204,macular+peripheral,65 years,65.0,male,none,24609,24609,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0220,Shekhar_GSE237204,Shekhar_GSE237204,macular+peripheral,47 years,47.0,female,none,11732,11732,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0235,Shekhar_GSE237204,Shekhar_GSE237204,macular+peripheral,30 years,30.0,male,none,13026,13026,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0326,Shekhar_GSE237204,Shekhar_GSE237204,macular,67 years,67.0,male,none,8685,8685,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0355,Shekhar_GSE237204,Shekhar_GSE237204,macular,71 years,71.0,female,none,17375,17375,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0563,Shekhar_GSE237204,Shekhar_GSE237204,macular+peripheral,72 years,72.0,male,none,13152,13152,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0564,Shekhar_GSE237204,Shekhar_GSE237204,macular,77 years,77.0,male,none,8874,8874,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0869,Shekhar_GSE237204,Shekhar_GSE237204,macular,76 years,76.0,female,none,8685,8685,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu0887,Shekhar_GSE237204,Shekhar_GSE237204,macular,77 years,77.0,male,none,8049,8049,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,Hu1059,Shekhar_GSE237204,Shekhar_GSE237204,macular,74 years,74.0,female,none,6401,6401,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_02443,Chen_ancestry,Chen_ancestry,macular+peripheral,75 years,75.0,male,none,35801,25446,10355,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_13066,Chen_ancestry,Chen_ancestry,macular+peripheral,72 years,72.0,male,none,26440,17946,8494,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_14307,Chen_ancestry,Chen_ancestry,macular+peripheral,63 years,63.0,male,none,27655,23066,4589,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_16477,Chen_ancestry,Chen_ancestry,macular+peripheral,85 years,85.0,female,none,35454,26177,9277,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_16608,Chen_ancestry,Chen_ancestry,macular+peripheral,81 years,81.0,male,none,29868,21962,7906,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_16860,Chen_ancestry,Chen_ancestry,macular+peripheral,60 years,60.0,female,none,29958,22892,7066,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_17017,Chen_ancestry,Chen_ancestry,macular+peripheral,86 years,86.0,female,none,29443,22892,6551,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_17464,Chen_ancestry,Chen_ancestry,macular+peripheral,81 years,81.0,female,none,37823,26950,10873,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_17939,Chen_ancestry,Chen_ancestry,macular+peripheral,71 years,71.0,female,none,26563,20178,6385,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_18633,Chen_ancestry,Chen_ancestry,macular+peripheral,67 years,67.0,male,none,17908,13892,4016,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_20357,Chen_ancestry,Chen_ancestry,macular+peripheral,64 years,64.0,female,none,45989,23598,22391,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_20372,Chen_ancestry,Chen_ancestry,macular+peripheral,65 years,65.0,female,none,42543,22763,19780,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_21878,Chen_ancestry,Chen_ancestry,macular+peripheral,72 years,72.0,male,none,26746,18714,8032,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_25357,Chen_ancestry,Chen_ancestry,macular+peripheral,77 years,77.0,male,none,21098,18245,2853,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_32888,Chen_ancestry,Chen_ancestry,macular+peripheral,52 years,52.0,male,none,48328,26135,22193,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_33472,Chen_ancestry,Chen_ancestry,macular+peripheral,71 years,71.0,female,none,50238,19416,30822,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_34032,Chen_ancestry,Chen_ancestry,macular,34 years,34.0,male,none,15038,15038,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_37089,Chen_ancestry,Chen_ancestry,macular+peripheral,68 years,68.0,female,none,16445,9877,6568,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_37117,Chen_ancestry,Chen_ancestry,macular+peripheral,77 years,77.0,male,none,36984,23603,13381,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_38029,Chen_ancestry,Chen_ancestry,macular+peripheral,82 years,82.0,male,none,12422,9140,3282,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_22_38453,Chen_ancestry,Chen_ancestry,macular+peripheral,43 years,43.0,male,none,21588,16596,4992,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_23_01524,Chen_ancestry,Chen_ancestry,macular,27 years,27.0,female,none,13794,13794,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_23_02177,Chen_ancestry,Chen_ancestry,macular,27 years,27.0,male,none,12586,12586,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,MMD_23_16055,Chen_ancestry,Chen_ancestry,macular,18 years,18.0,male,none,10613,10613,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,sanes2022_Hu082219,Shekhar_GSE237204,Shekhar_GSE237204,macular,41 years,41.0,male,none,4827,4827,0,included_sn_adult_exact,exact-age disease-free unbiased adult donor
+snRNA,A23_5566_Atlanta,Chen_ancestry,Chen_ancestry,macular,>89 years,90.0,male,none,8697,8697,0,included_sn_adult_topcoded,topcoded >89 yr coded as 90; excluded in Sn_Adult_ExactAge
+snRNA,Chen_19_D006,Chen_a+Chen_c_GSE247157,Chen_a+Chen_c_GSE247157,macular+peripheral,>89 years,90.0,male,none,114604,19109,95495,included_sn_adult_topcoded,topcoded >89 yr coded as 90; excluded in Sn_Adult_ExactAge
+snRNA,Chen_19_D011,Chen_a+Chen_c_GSE247157+Chen_rgc,Chen_a+Chen_c_GSE247157,macular+peripheral,>89 years,90.0,female,none,195652,31441,164211,included_sn_adult_topcoded,topcoded >89 yr coded as 90; excluded in Sn_Adult_ExactAge
+snRNA,Chen_D018_13,Chen_c_GSE247157,Chen_c_GSE247157,macular,>89 years,90.0,female,none,6781,6781,0,included_sn_adult_topcoded,topcoded >89 yr coded as 90; excluded in Sn_Adult_ExactAge
+snRNA,MMD_22_20137,Chen_ancestry,Chen_ancestry,macular+peripheral,>89 years,90.0,male,none,43743,24705,19038,included_sn_adult_topcoded,topcoded >89 yr coded as 90; excluded in Sn_Adult_ExactAge
+snRNA,BCM_22_0769,Chen_ancestry,Chen_ancestry,macular+peripheral,11 years,11.0,male,none,20466,20466,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,BCM_23_0131,Chen_ancestry,Chen_ancestry,macular+peripheral,16 years,16.0,male,none,26671,26671,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,MMD_23_17738,Chen_ancestry,Chen_ancestry,macular,10 years,10.0,female,none,10625,10625,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,MMD_23_20181,Chen_ancestry,Chen_ancestry,macular,16 years,16.0,male,none,9012,9012,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,MMD_23_21623,Chen_ancestry,Chen_ancestry,macular,15 years,15.0,male,none,11892,11892,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,MMD_23_21999,Chen_ancestry,Chen_ancestry,macular,17 years,17.0,male,none,12347,12347,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
+snRNA,MMD_23_22486,Chen_ancestry,Chen_ancestry,macular,3 years,3.0,male,none,8925,8925,0,included_sn_pediatric_sensitivity,"pediatric <18 yr; excluded from Sn_Adult suites, included in Sn_AllAges"
