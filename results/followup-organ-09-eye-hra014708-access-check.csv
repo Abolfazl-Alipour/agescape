@@ -1,0 +1,2 @@
+accession,repository,url,access_status,usable_raw_counts_via_figshare,missing_artifact
+HRA014708,CNCB-NGDC GSA-Human,https://ngdc.cncb.ac.cn/gsa-human/browse/HRA014708,"Controlled access; HTTP browse gated by SecurityCheck HTML interstitial (not bypassed, no application submitted)","Yes (doi:10.6084/m9.figshare.28757048, 18 Cell Ranger v8.0.1 count matrix triplets, 293480 raw barcodes, 285878 QC cells across 12 unique Table 1 donors D1 to D12)",Integrated scVI/Leiden-annotated /RPE.h5ad referenced in Figshare Script.py is absent
