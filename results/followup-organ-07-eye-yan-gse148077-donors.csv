@@ -1,0 +1,8 @@
+donor_id,paper_donor_id,age,age_per_decade,sex,sex_male,kit_version,kit_v3,region_protocol,cause_of_death,n_cells,n_fovea_cells,fovea_AC,fovea_Astrocyte,fovea_BC,fovea_Cone,fovea_HC,fovea_MG,fovea_Microglia,fovea_RGC,fovea_RPE,fovea_Rod
+H9,H9,53.0,5.3,F,0.0,V2,0.0,fovea_only,Interstitial Lung Disease,9187,9187,924.0,69.0,2779.0,260.0,256.0,1071.0,0.0,302.0,11.0,3515.0
+H3,H3,60.0,6.0,M,1.0,V2,0.0,fovea_and_sorted_periphery,Metastatic tonsillar SCC,27514,8831,484.0,0.0,4952.0,110.0,1203.0,1759.0,0.0,275.0,0.0,48.0
+H4,H4,64.0,6.4,M,1.0,V2,0.0,fovea_only,Diffuse B cell lymphoma,3807,3807,577.0,0.0,1434.0,85.0,280.0,944.0,12.0,432.0,0.0,43.0
+Hu11,H11,65.0,6.5,M,1.0,V3,1.0,fovea_only,Metastatic melanoma,1453,1453,229.0,0.0,151.0,53.0,38.0,258.0,0.0,162.0,0.0,562.0
+H5,H5,69.0,6.9,M,1.0,V2,0.0,fovea_only,Metastatic melanoma,32059,32059,2670.0,101.0,11675.0,1463.0,1154.0,5924.0,12.0,5842.0,0.0,3218.0
+H1,H1,74.0,7.4,M,1.0,V2,0.0,sorted_periphery_only,Lung cancer,11721,0,,,,,,,,,,
+Pt2,H2,78.0,7.8,M,1.0,V2,0.0,fovea_only,Metastatic melanoma,8101,8101,230.0,0.0,3726.0,171.0,364.0,2426.0,0.0,1135.0,0.0,49.0

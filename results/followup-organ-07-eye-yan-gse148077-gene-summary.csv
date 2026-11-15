@@ -1,0 +1,39 @@
+analysis,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size
+Fovea_MajorClass_Primary,AC,tested,6,18542,log_lib,none,3,0,0,0.00018836792261365433,0.9999914022868348,120604
+Fovea_MajorClass_Primary,BC,tested,6,18027,log_lib,none,3,0,0,0.0001419717774641981,0.9999914022868348,120604
+Fovea_MajorClass_Primary,Cone,tested,6,16387,log_lib,none,3,0,0,0.0001738211646338531,0.9999914022868348,120604
+Fovea_MajorClass_Primary,HC,tested,6,17563,log_lib,none,3,0,0,7.346462852484813e-05,0.9999914022868348,120604
+Fovea_MajorClass_Primary,MG,tested,6,17797,log_lib,none,3,0,0,4.695239164735353e-05,0.9999914022868348,120604
+Fovea_MajorClass_Primary,RGC,tested,6,16566,log_lib,none,3,0,0,0.0007454623882834494,0.9999914022868348,120604
+Fovea_MajorClass_Primary,Rod,tested,6,15722,log_lib,none,3,0,0,0.0019200130609362028,0.9999914022868348,120604
+Fovea_MajorClass_SexAdj,AC,tested,6,18542,sex_male;log_lib,none,2,1,1,2.5625696167648824e-07,0.03090561460603119,120604
+Fovea_MajorClass_SexAdj,BC,tested,6,18027,sex_male;log_lib,none,2,0,0,2.7270113874469433e-05,0.8222212034291279,120604
+Fovea_MajorClass_SexAdj,Cone,tested,6,16387,sex_male;log_lib,none,2,0,0,0.0001408845279307044,0.999998141576063,120604
+Fovea_MajorClass_SexAdj,HC,tested,6,17563,sex_male;log_lib,none,2,0,0,3.7644003603814256e-05,0.908003482126883,120604
+Fovea_MajorClass_SexAdj,MG,tested,6,17797,sex_male;log_lib,none,2,0,0,7.903793757138705e-05,0.999998141576063,120604
+Fovea_MajorClass_SexAdj,RGC,tested,6,16566,sex_male;log_lib,none,2,0,0,0.0002177758211261809,0.999998141576063,120604
+Fovea_MajorClass_SexAdj,Rod,tested,6,15722,sex_male;log_lib,none,2,0,0,0.00022757667034226347,0.999998141576063,120604
+Fovea_CellType,GABAergic amacrine cell,tested,6,18412,log_lib,none,3,0,0,0.00014954379492637302,0.9999471961602968,224091
+Fovea_CellType,H1 horizontal cell,tested,6,17173,log_lib,none,3,0,0,6.909750541130695e-06,0.9999471961602968,224091
+Fovea_CellType,H2 horizontal cell,tested,6,13621,log_lib,none,3,0,0,0.0009389945319654056,0.9999471961602968,224091
+Fovea_CellType,Mueller cell,tested,6,17797,log_lib,none,3,0,0,4.695239164735353e-05,0.9999471961602968,224091
+Fovea_CellType,S cone cell,tested,4,7702,none,log_lib(df_limit),2,0,0,0.0004111979345607528,0.9999471961602968,224091
+Fovea_CellType,amacrine cell,tested,6,13183,log_lib,none,3,0,0,0.0005543304918557173,0.9999471961602968,224091
+Fovea_CellType,glycinergic amacrine cell,tested,6,15749,log_lib,none,3,0,0,0.0002624476037063154,0.9999471961602968,224091
+Fovea_CellType,midget ganglion cell of retina,tested,6,16202,log_lib,none,3,0,0,0.00017995556805288938,0.9999471961602968,224091
+Fovea_CellType,parasol ganglion cell of retina,tested,5,15961,log_lib,none,2,0,0,5.0379390253371787e-05,0.9999471961602968,224091
+Fovea_CellType,retinal bipolar neuron,tested,6,17991,log_lib,none,3,0,0,2.7016607263642533e-05,0.9999471961602968,224091
+Fovea_CellType,retinal cone cell,tested,6,16093,log_lib,none,3,0,0,0.00035785859985682926,0.9999471961602968,224091
+Fovea_CellType,retinal ganglion cell,tested,6,16957,log_lib,none,3,0,0,0.0003222087519627358,0.9999471961602968,224091
+Fovea_CellType,retinal rod cell,tested,6,15722,log_lib,none,3,0,0,0.0019200130609362028,0.9999471961602968,224091
+Fovea_CellType,rod bipolar cell,tested,4,10472,none,log_lib(df_limit),2,0,0,0.0005201401621101878,0.9999471961602968,224091
+Fovea_CellType,starburst amacrine cell,tested,6,11056,log_lib,none,3,0,0,0.00019766500699778684,0.9999471961602968,224091
+Fovea_Pooled,All_Retina_Pooled,tested,6,18327,log_lib,none,3,0,0,0.0004829527125810409,0.9998876008653319,18327
+All7_MajorClass_SortedIncluded,AC,tested,7,18036,log_lib,none,4,0,0,1.2812504078211284e-05,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,Astrocyte,tested,4,13970,none,log_lib(df_limit),2,0,0,9.767304957060729e-05,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,BC,tested,7,17795,log_lib,none,4,0,0,0.00029592825623742027,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,Cone,tested,7,15150,log_lib,none,4,0,0,0.00010258363986653365,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,HC,tested,7,16817,log_lib,none,4,0,0,3.22429262320585e-05,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,MG,tested,7,17499,log_lib,none,4,0,0,0.0006812073809845687,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,RGC,tested,7,16273,log_lib,none,4,0,0,8.90951812557891e-05,0.9999585484187345,130244
+All7_MajorClass_SortedIncluded,Rod,tested,7,14704,log_lib,none,4,0,0,0.0002986390852982262,0.9999585484187345,130244
