@@ -68,10 +68,10 @@ In `K_C = 7` major skin cell types (primary `age_per_decade + log_lib`), **no ce
 - **Consistent with Agescape core claims**: Zero global FDR-significant gene hits (`M_B = 89,068`, `min q_BH = 0.4598`) and no positive `P1_Clean` aging transport (`min q_bh_composite = 0.7017`; the two-sided empirical outlier in `Keratinocytes` is negative `-0.0940` with `analytic p = 0.2285` and vanishes unadjusted `q_emp = 0.1625`). One CLR compositional shift passed BH in Family A (`Pericytes` `-0.312` CLR/decade, `q_BH = 0.0123`, `n = 5` males).
 
 ## 5. Output Artifacts
-- [Donors & Cell Counts](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-donors.csv)
-- [Main Fractions](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-fractions-main.csv)
-- [Fine Fractions](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-fractions-fine.csv)
-- [Gene Summary](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-gene-summary.csv)
-- [Top Genes](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-top-genes.csv)
-- [Concordance](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-concordance.csv)
-- [P1 Signature](file:///home/reza/projects/agescape-revision/results/followup-organ-01-skin-sole-boldo-gse130973-p1-signature.csv)
+- [Donors & Cell Counts](../results/followup-organ-01-skin-sole-boldo-gse130973-donors.csv)
+- [Main Fractions](../results/followup-organ-01-skin-sole-boldo-gse130973-fractions-main.csv)
+- [Fine Fractions](../results/followup-organ-01-skin-sole-boldo-gse130973-fractions-fine.csv)
+- [Gene Summary](../results/followup-organ-01-skin-sole-boldo-gse130973-gene-summary.csv)
+- [Top Genes](../results/followup-organ-01-skin-sole-boldo-gse130973-top-genes.csv)
+- [Concordance](../results/followup-organ-01-skin-sole-boldo-gse130973-concordance.csv)
+- [P1 Signature](../results/followup-organ-01-skin-sole-boldo-gse130973-p1-signature.csv)

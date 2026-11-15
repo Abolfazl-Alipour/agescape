@@ -41,7 +41,7 @@
 - **Verdict**: Null transport for the mouse `P1_Clean` aging signature in human primary dermal fibroblasts (`empirical p = 0.8408` continuous; `0.9552` binary).
 
 ## 5. Output Artifacts
-- [Donors](file:///home/reza/projects/agescape-revision/results/followup-organ-02-skin-fibroblasts-gse307377-donors.csv)
-- [Gene Summary](file:///home/reza/projects/agescape-revision/results/followup-organ-02-skin-fibroblasts-gse307377-gene-summary.csv)
-- [Top Genes](file:///home/reza/projects/agescape-revision/results/followup-organ-02-skin-fibroblasts-gse307377-top-genes.csv)
-- [P1 Signature](file:///home/reza/projects/agescape-revision/results/followup-organ-02-skin-fibroblasts-gse307377-p1-signature.csv)
+- [Donors](../results/followup-organ-02-skin-fibroblasts-gse307377-donors.csv)
+- [Gene Summary](../results/followup-organ-02-skin-fibroblasts-gse307377-gene-summary.csv)
+- [Top Genes](../results/followup-organ-02-skin-fibroblasts-gse307377-top-genes.csv)
+- [P1 Signature](../results/followup-organ-02-skin-fibroblasts-gse307377-p1-signature.csv)

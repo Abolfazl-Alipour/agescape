@@ -177,11 +177,11 @@ Suite definitions: `All12_DiseaseAdj` covariates is_dr, is_dm_no_dr, sex_male (T
 4. The Table 1 sex entry for one donor disagrees with expression, and the Figshare cohort counts disagree with Table 1 (see above).
 
 ## Output Files
-- `results/followup-organ-09-eye-hra014708-donors.csv`
-- `results/followup-organ-09-eye-hra014708-samples-qc.csv`
-- `results/followup-organ-09-eye-hra014708-access-check.csv`
-- `results/followup-organ-09-eye-hra014708-fractions.csv`
-- `results/followup-organ-09-eye-hra014708-gene-summary.csv`
-- `results/followup-organ-09-eye-hra014708-top-genes.csv`
-- `results/followup-organ-09-eye-hra014708-concordance.csv`
-- `results/followup-organ-09-eye-hra014708-p1-signature.csv`
+- [Donors](../results/followup-organ-09-eye-hra014708-donors.csv)
+- [Samples QC](../results/followup-organ-09-eye-hra014708-samples-qc.csv)
+- [Access Check](../results/followup-organ-09-eye-hra014708-access-check.csv)
+- [Fractions](../results/followup-organ-09-eye-hra014708-fractions.csv)
+- [Gene Summary](../results/followup-organ-09-eye-hra014708-gene-summary.csv)
+- [Top Genes](../results/followup-organ-09-eye-hra014708-top-genes.csv)
+- [Concordance](../results/followup-organ-09-eye-hra014708-concordance.csv)
+- [P1 Signature](../results/followup-organ-09-eye-hra014708-p1-signature.csv)

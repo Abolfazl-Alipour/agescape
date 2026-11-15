@@ -25,4 +25,4 @@
 - **None run** (no expression or cell-count matrices downloaded). Documented blocker recorded cleanly.
 
 ## 4. Output Artifacts
-- [Verified Metadata CSV](file:///home/reza/projects/agescape-revision/results/followup-organ-03-skin-zou-hra000395-metadata.csv)
+- [Verified Metadata CSV](../results/followup-organ-03-skin-zou-hra000395-metadata.csv)
