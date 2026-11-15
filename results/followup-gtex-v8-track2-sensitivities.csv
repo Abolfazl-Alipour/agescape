@@ -1,0 +1,26 @@
+tissue,sensitivity,n_donors,genes_tested,sig_q05_within,overlap_with_primary_q05,spearman_stat_vs_primary,notes
+Whole Blood,categorical_age_lrt,746,18991,5463,4510,0.7567144959959257,df_diff=5
+Whole Blood,oldest_bin_tail_excl_70_79,723,19008,6964,6510,0.9884071056244903,dropped 23 donors in 70-79
+Whole Blood,extended_quality_and_death,733,18984,2957,2609,0.8472828940909063,added DTHHRDY
+Whole Blood,blood_signed_ischemic_time,417,18870,3996,3205,0.8474419531203429,restricted to SMTSISCH >= 0
+Whole Blood,read_length_76bp,745,19006,6982,6932,0.999735716615372,dropped 1 non-76bp (101bp) samples
+Muscle - Skeletal,categorical_age_lrt,802,19795,5192,4330,0.7682559057183804,df_diff=5
+Muscle - Skeletal,oldest_bin_tail_excl_70_79,774,19773,6347,5913,0.9853424599867072,dropped 28 donors in 70-79
+Muscle - Skeletal,extended_quality_and_death,786,19776,2913,2560,0.8358704841621267,"added SMATSSCR,DTHHRDY"
+Muscle - Skeletal,read_length_76bp,801,19794,6768,6660,0.9998028128560446,dropped 1 non-76bp (101bp) samples
+Lung,categorical_age_lrt,578,23680,1723,1239,0.6559597397251844,df_diff=5
+Lung,oldest_bin_tail_excl_70_79,556,23692,3326,2795,0.9664041896263825,dropped 22 donors in 70-79
+Lung,extended_quality_and_death,571,23664,1734,1626,0.9263629662063972,"added SMATSSCR,DTHHRDY"
+Lung,read_length_76bp,576,23673,3113,3041,0.9993163173108481,dropped 2 non-76bp (101bp) samples
+Kidney - Cortex,categorical_age_lrt,85,23249,28,6,0.39101949223285914,df_diff=5
+Kidney - Cortex,oldest_bin_tail_excl_70_79,81,23108,11,7,0.9342371793102494,dropped 4 donors in 70-79
+Kidney - Cortex,extended_quality_and_death,85,23249,1,0,0.6853878947423409,"added SMATSSCR,DTHHRDY"
+Kidney - Cortex,read_length_76bp,85,23249,7,7,1.0,100% 76bp already (identical to primary)
+Ovary,categorical_age_lrt,180,22895,2394,2068,0.7308750993674531,df_diff=5
+Ovary,oldest_bin_tail_excl_70_79,176,22836,4237,4102,0.9902752271119746,dropped 4 donors in 70-79
+Ovary,extended_quality_and_death,178,22854,2260,2104,0.8796240629514532,"added SMATSSCR,DTHHRDY"
+Ovary,read_length_76bp,180,22895,4765,4765,1.0,100% 76bp already (identical to primary)
+Testis,categorical_age_lrt,361,31773,975,829,0.6729755895771784,df_diff=5
+Testis,oldest_bin_tail_excl_70_79,352,31756,2205,2143,0.9863833971501125,dropped 9 donors in 70-79
+Testis,extended_quality_and_death,361,31773,2155,1988,0.9772607589900348,"added SMATSSCR,DTHHRDY"
+Testis,read_length_76bp,361,31773,2900,2900,1.0,100% 76bp already (identical to primary)

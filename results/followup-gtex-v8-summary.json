@@ -1,0 +1,36 @@
+{
+  "file_audit": {
+    "path": "GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.gct.gz",
+    "size_bytes": 917091994,
+    "md5_base64": "HW7Jcxikd9f9grpyFDkl7g==",
+    "md5_verified": true
+  },
+  "count_gate": {
+    "n_genes": 56200,
+    "n_samples": 17382,
+    "nonfinite": 0,
+    "negative": 0,
+    "noninteger_lines": 0,
+    "total_nonzero_entries": 515414926
+  },
+  "track1": {
+    "primary_tissues": 47,
+    "isolated_cell_lines": 2,
+    "excluded_lt50": 5,
+    "primary_p1_emp_q05": 13,
+    "cellline_p1_emp_q05": 2
+  },
+  "track2": {
+    "tissues": [
+      "Whole Blood",
+      "Muscle - Skeletal",
+      "Lung",
+      "Kidney - Cortex",
+      "Ovary",
+      "Testis"
+    ],
+    "total_nb_tests_global": 140383,
+    "total_sig_q05_global": 23759,
+    "nb_p1_emp_q05": 1
+  }
+}
