@@ -30,13 +30,32 @@
 ## 3. Results
 
 ### Family A: Compositional Changes
+([fractions CSV](../results/followup-organ-06-bm-hsc-gse302126-fractions.csv))
 - **Primary `GSE302126` BMMC broad lineages (`n = 9`, `sex_male` adjusted)**: `0` cell lineages reached `q_bh_family_a < 0.05`.
 - **Primary `GSE302126` BMMC fine `predicted_CellType` (`n = 9`, `sex_male` adjusted)**: `2` cell types reached `q_bh_family_a < 0.05`: `CLP` (`-0.3181` CLR/decade, `p = 0.0020`, `q_bh_family_a = 0.0340`) and `Large Pre-B` (`-0.5884` CLR/decade, `p = 0.0021`, `q_bh_family_a = 0.0340`), both consistent with lymphoid-progenitor decline, though completely confounded with iliac crest vs sternum site in `n = 9`.
 - **Multi-study exact-age adult HSC `Predominant_program` states (`annotated_seu.rds`, `n = 61`, adjusting `sex_male` + dataset)**: `metaGEP.2` (`-0.1729` CLR/decade, `p = 0.00031`, `q_bh_family_a = 0.0012`), `metaGEP.1` (`+0.2221`, `p = 0.0025`, `q_bh_family_a = 0.0049`), and `metaGEP.4` (`-0.1358`, `p = 0.0078`, `q_bh_family_a = 0.0104`) shift significantly with donor age, matching Safina et al.'s inflammatory/quiescent HSC state expansion.
 
 ### Family B: Donor-Level Gene Age OLS & Concordance
+([gene summary CSV](../results/followup-organ-06-bm-hsc-gse302126-gene-summary.csv), [top genes CSV](../results/followup-organ-06-bm-hsc-gse302126-top-genes.csv), [concordance CSV](../results/followup-organ-06-bm-hsc-gse302126-concordance.csv))
 - **Primary `GSE302126` BMMC broad lineages (`n = 9`)**: `M_B = 67447` gene-lineage tests across `7` lineages -> `0` global BH hits (`q_bh_global < 0.05`).
 - **Primary `GSE302126` All-BMMC pooled (`n = 9`)**: `M_B = 10790` tested genes -> `0` global BH hits (`q_bh_global < 0.05`).
+- **Multi-study exact-age adult HSC (`multistudy_adult_hsc_total`, `n = 57`, `residual_df = 48`, `M_B = 9,668`)**: **`7` global-BH significant genes (`q_bh_global < 0.05`)** passed, all with positive slopes (`+0.1693` to `+0.7504` log2CPM/decade). Within-state `multistudy_adult_hsc_programs` (`metaGEP.1..4`, `M_B = 36,097`) returned `0` global-BH hits (minimum `q_bh_global = 0.0519` for `SDCBP` in `metaGEP.1`, `q_bh_within_group = 0.0122`).
+
+| Gene | `MultiStudy_Adult_HSC` Effect (/10 yr) | SE | p-value | q_BH Global (M=9,668) | P1_Clean Membership | Organ 05 Top-200? | Biological / Technical Caveat |
+|---|---:|---:|---:|---:|---|---|---|
+| JUNB | +0.5353 | 0.0945 | 8.07e-07 | 0.0078 | In P1_Clean UP | No (0/7) | Immediate-early / dissociation & FACS sort stress response |
+| HSPA1B | +0.7504 | 0.1445 | 4.16e-06 | 0.0127 | Not in P1_Clean | No (0/7) | HSP70 heat-shock / processing stress gene |
+| ZFP36 | +0.4157 | 0.0816 | 5.88e-06 | 0.0127 | Not in P1_Clean | No (0/7) | Immediate-early mRNA decay / ex vivo handling response |
+| PDZK1IP1 | +0.6032 | 0.1185 | 5.90e-06 | 0.0127 | Not in P1_Clean | No (0/7) | HSC marker; null in within-state `metaGEP.1..4` |
+| FOSB | +0.2897 | 0.0573 | 6.58e-06 | 0.0127 | Not in P1_Clean | No (0/7) | AP-1 immediate-early / ex vivo dissociation stress gene |
+| ID1 | +0.6744 | 0.1416 | 1.80e-05 | 0.0291 | Not in P1_Clean | No (0/7) | Transcriptional regulator; ex vivo handling sensitive |
+| HSPB1 | +0.1693 | 0.0363 | 2.47e-05 | 0.0341 | Not in P1_Clean | No (0/7) | Small heat-shock protein / freeze-thaw & FACS stress |
+
+- **Critical caveats on these 7 `MultiStudy_Adult_HSC` hits**:
+  1. **Zero replication in sorted bulk Organ 05**: `0` of `7` appear in Organ 05 top-200 (`Adelman` `GSE104406`, [Organ 05 top genes CSV](../results/followup-organ-05-bm-adelman-gse104406-top-genes.csv)), despite `MultiStudy` overlapping `9` `Adelman2019` donors and `7` `Safina2024` donors ([donors CSV](../results/followup-organ-06-bm-hsc-gse302126-donors.csv)).
+  2. **Null within `metaGEP.1..4` states**: None reaches global BH (`q_bh_global < 0.05`) once tested within purified `metaGEP.1..4` HSC substates (`M_B = 36,097`), pointing to shifting `metaGEP` substate proportions rather than uniform within-cell aging.
+  3. **Canonical IEG/HSP sorting sensitivity and cohort confounding**: Five of the seven (`JUNB`, `HSPA1B`, `ZFP36`, `FOSB`, `HSPB1`) are canonical dissociation, freeze-thaw, and FACS/10x handling stress genes, and `Ainciburu2023` (`8` donors in `MultiStudy`) is 100% sex-age confounded (`5` young `F`, `19 to 23` yr vs `3` elderly `M`, `61 to 74` yr).
+
 - **Cross-cell-type gene concordance**:
 | Analysis | Cell Types (n) | Common Genes | Mean Pairwise Pearson r | Perm p (1-sided) | Perm p (2-sided) |
 |---|---:|---:|---:|---:|---:|
@@ -51,7 +70,7 @@
 - **Fine `predicted_CellType` (`n = 9`)**: Minimum `q_bh_empirical = 0.9808` (NULL).
 - **Sternum-only `SBM*` (`n = 7`, `64 to 78` yr, removes iliac crest confound)**: Minimum `q_bh_empirical = 0.5174` (NULL).
 - **Safina `GSE302126` pooled `All_BMMC` (`n = 9`) and `Safina_HSC_all` (`n = 7`)**: Null `P1_Clean` transport (`All_BMMC composite = +0.0133`, `p = 0.8461`, `empirical p = 0.7811`; `Safina_HSC_all composite = -0.0717`, `p = 0.6256`, `empirical p = 0.5124`; `safina_hsc_programs_n5 min q_bh_empirical = 0.2687`).
-- **Multi-study exact-age adult BoneMarrowMap HSCs (`n = 61` donors total, `n = 57` tested after minimum cell-count gating, `ages 19 to 87` yr)**: Pooled `MultiStudy_Adult_HSC` (`k = 1`) shows a modest positive composite slope (`+0.0891`, `analytic p = 0.0028`, `200-draw empirical p = 0.0199`) driven by subtle sub-significant `UP` (`+0.0548`, `p = 0.0576`) and `DOWN` (`-0.0343`, `p = 0.2907`) shifts across heterogeneous FACS-sorted/10x studies (for example, `Ainciburu2023` young donors are `5F/0M` while elderly donors are `0F/3M`), whereas within-state testing across the 4 `metaGEP.1..4` programs (`multistudy_adult_hsc_programs`) is completely null (`q_bh_composite = 0.1281 to 0.2967`, `q_bh_empirical = 0.1294`), demonstrating that the pooled slope tracks age-related `metaGEP` substate compositional expansion rather than uniform intracellular `P1_Clean` activation.
+- **Multi-study exact-age adult BoneMarrowMap HSCs (`n = 61` donors total, `n = 57` tested after minimum cell-count gating, `ages 19 to 87` yr)** ([P1 signature CSV](../results/followup-organ-06-bm-hsc-gse302126-p1-signature.csv)): Pooled `MultiStudy_Adult_HSC` (`k = 1` test in `multistudy_adult_hsc_total`, overlapping `9` `Adelman2019` and `7` `Safina2024` donors) shows a modest positive composite slope (`+0.0891`, `analytic p = 0.0028`, `200-draw empirical p = 0.0199`, `q_bh_empirical = 0.0199`) driven by subtle sub-significant `UP` (`+0.0548`, `p = 0.0576`, including `JUNB`) and `DOWN` (`-0.0343`, `p = 0.2907`) shifts across heterogeneous FACS-sorted/10x studies (where `Ainciburu2023` young donors are `5F/0M`, `19 to 23` yr, while elderly donors are `0F/3M`, `61 to 74` yr). Crucially, within-state testing across the 4 `metaGEP.1..4` programs (`multistudy_adult_hsc_programs`) is completely null (`q_bh_composite = 0.1281 to 0.2967`, `q_bh_empirical = 0.1294`), while Family A shows strong `metaGEP.1..4` compositional shifts (`q = 0.0012 to 0.0104`), demonstrating that the pooled `k = 1` signal tracks HSC substate composition and study/sorting heterogeneity rather than uniform intracellular `P1_Clean` activation.
 
 | Analysis | Cell Group | Donors (n) | Up / Down Detected | Composite Slope / Decade | Analytic p | Empirical p (200 draws) | q_BH (Composite) | q_BH (Empirical) |
 |---|---|---:|---|---:|---:|---:|---:|---:|
@@ -94,13 +113,13 @@
 | multistudy_adult_hsc_programs | metaGEP.3 | 28 | 38 / 11 | 0.0804 | 0.0601 | 0.1294 | 0.1281 | 0.1294 |
 
 ## 4. Limitations and Verdict
-- **Limits**: `GSE302126` has small sample size (`n = 9` unique donors after collapsing 17 replicate libraries), `SBM1177` (28 cells) and `SBM1237` (17 cells) have sparse BMMC recovery, only `117` total `Safina2024` cells map to `HSC`, and young vs aged donors in `GSE302126` are 100% confounded with iliac crest vs sternum cardiac surgery sampling. Multi-study adult HSC integration (`n = 61`) overcomes sample size but mixes 10x and Smart-seq/SORT protocols across studies.
-- **Verdict**: Mouse `P1_Clean` shows no significant positive transport in human `GSE302126` bone marrow lineages, `GSE302126` sternum-only donors, `GSE302126` HSCs, or the `61`-donor multi-study exact-age adult HSC atlas (`all empirical q_BH >= 0.05` across tested primary cohorts).
+- **Limits**: `GSE302126` has small sample size (`n = 9` unique donors after collapsing 17 replicate libraries), `SBM1177` (28 cells) and `SBM1237` (17 cells) have sparse BMMC recovery, only `117` total `Safina2024` cells map to `HSC`, and young vs aged donors in `GSE302126` are 100% confounded with iliac crest vs sternum cardiac surgery sampling. Multi-study adult HSC integration (`n = 61`, overlapping `9` `Adelman2019` and `7` `Safina2024` donors, with `Ainciburu2023` `5F` young vs `3M` elderly) overcomes sample size but mixes 10x and Smart-seq/SORT protocols and substate composition shifts.
+- **Verdict**: Mouse `P1_Clean` shows no significant positive transport in `GSE302126` bone marrow lineages (`min q_bh_empirical = 0.0697`), `GSE302126` sternum-only donors (`min q_bh_empirical = 0.2687`), `GSE302126` HSC subsets (`q_bh_empirical >= 0.2687`), or within-state `metaGEP.1..4` BoneMarrowMap HSC programs (`min q_bh_empirical = 0.1294`). The pooled `multistudy_adult_hsc_total` row (`k_C = 1`, `n = 57`) reaches `empirical_null_pvalue = 0.0199` (`q_bh_empirical = 0.0199`, `analytic p = 0.0028`, composite `+0.0891`), alongside `7` Family B global-BH hits (`JUNB, HSPA1B, ZFP36, PDZK1IP1, FOSB, ID1, HSPB1`); however, within-state `metaGEP.1..4` nullity, strong Family A `metaGEP` composition shifts (`q = 0.0012 to 0.0104`), `0/7` Organ 05 top-200 overlap, and IEG/HSP stress-gene sorting sensitivity indicate compositional and handling-stress confounding rather than cell-intrinsic aging transport ([P1 signature CSV](../results/followup-organ-06-bm-hsc-gse302126-p1-signature.csv), [top genes CSV](../results/followup-organ-06-bm-hsc-gse302126-top-genes.csv)).
 
 ## 5. Output Artifacts
-- [Donors](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-donors.csv)
-- [Fractions](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-fractions.csv)
-- [Gene Summary](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-gene-summary.csv)
-- [Top Genes](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-top-genes.csv)
-- [Concordance](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-concordance.csv)
-- [P1 Signature](file:///home/reza/projects/agescape-revision/results/followup-organ-06-bm-hsc-gse302126-p1-signature.csv)
+- [Donors](../results/followup-organ-06-bm-hsc-gse302126-donors.csv)
+- [Fractions](../results/followup-organ-06-bm-hsc-gse302126-fractions.csv)
+- [Gene Summary](../results/followup-organ-06-bm-hsc-gse302126-gene-summary.csv)
+- [Top Genes](../results/followup-organ-06-bm-hsc-gse302126-top-genes.csv)
+- [Concordance](../results/followup-organ-06-bm-hsc-gse302126-concordance.csv)
+- [P1 Signature](../results/followup-organ-06-bm-hsc-gse302126-p1-signature.csv)
