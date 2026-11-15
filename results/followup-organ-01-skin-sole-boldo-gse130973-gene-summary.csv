@@ -1,0 +1,8 @@
+group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,model
+Fibroblasts,tested,5,13766,log_lib,none,2,0,0,1.2565245054013913e-05,0.45975956394181094,89068,age_plus_log_lib
+Keratinocytes,tested,5,13407,log_lib,none,2,0,0,0.00023078808610523416,0.45975956394181094,89068,age_plus_log_lib
+Lymphatic_EC,tested,5,10973,log_lib,none,2,0,0,2.5702929653375686e-05,0.45975956394181094,89068,age_plus_log_lib
+Macrophages_DC,tested,5,12870,log_lib,none,2,0,0,5.923753271408524e-05,0.45975956394181094,89068,age_plus_log_lib
+Pericytes,tested,5,13494,log_lib,none,2,0,0,0.0005378793071329367,0.45975956394181094,89068,age_plus_log_lib
+T_cells,tested,5,11280,log_lib,none,2,0,0,8.340786996343251e-06,0.45975956394181094,89068,age_plus_log_lib
+Vascular_EC,tested,5,13278,log_lib,none,2,0,0,9.776692033544471e-05,0.45975956394181094,89068,age_plus_log_lib

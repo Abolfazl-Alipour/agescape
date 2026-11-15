@@ -1,0 +1,6 @@
+donor_id,sample_label,gsm,age_years,age_group,sex,sex_male,ethnicity,expected_cells,age_per_decade,observed_cells,Erythrocytes,Fibroblasts,Keratinocytes,Lymphatic_EC,Macrophages_DC,Melanocytes,Pericytes,T_cells,Vascular_EC
+S1,y1,GSM3758115,25.0,young,M,1,Caucasian,2784,2.5,2784,1,903,210,39,495,16,374,602,144
+S2,y2,GSM3758116,27.0,young,M,1,Caucasian,2670,2.7,2670,271,889,102,26,185,18,434,452,293
+S3,o1,GSM3758117,53.0,old,M,1,Caucasian,3324,5.3,3324,14,1185,684,101,483,46,221,80,510
+S4,o2,GSM3758118,70.0,old,M,1,Caucasian,2144,7.0,2144,16,591,984,48,194,17,75,21,198
+S5,o3,GSM3758119,69.0,old,M,1,Caucasian,4535,6.9,4535,8,2380,606,80,871,26,116,126,322
