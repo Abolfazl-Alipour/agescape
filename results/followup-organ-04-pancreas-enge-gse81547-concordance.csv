@@ -1,0 +1,2 @@
+n_cell_types,n_pairs,n_common_genes,mean_pairwise_pearson_r,median_pairwise_pearson_r,min_pairwise_pearson_r,max_pairwise_pearson_r,mean_pairwise_spearman_rho,mean_sign_agreement,n_valid_perms,perm_p_one_sided,perm_p_two_sided,cell_types,cohort
+4.0,6.0,9178.0,0.016642095039602237,-0.004842702894937928,-0.0374804836828076,0.10074591568905739,0.03637859611056087,0.5356649960049393,1000.0,0.988011988011988,0.988011988011988,acinar;alpha;beta;ductal,all_8

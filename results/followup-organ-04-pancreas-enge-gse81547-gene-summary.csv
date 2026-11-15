@@ -1,0 +1,6 @@
+group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,cohort
+acinar,tested,6,11050,sex_male;log_lib,none,2,0,0,0.0002612819303715865,0.9673455288861927,46655,all_8
+alpha,tested,8,12509,sex_male;log_lib,none,4,0,0,3.5602044893652464e-05,0.7550731668077438,46655,all_8
+beta,tested,7,11322,sex_male;log_lib,none,3,0,0,2.9817754416550538e-05,0.7550731668077438,46655,all_8
+ductal,tested,5,11774,sex_male,log_lib(df_limit),2,0,0,0.00012457764597998376,0.9673455288861927,46655,all_8
+alpha,tested,5,12699,log_lib,none,2,0,0,6.421847677357463e-05,0.4084405205413327,12699,adult_5
