@@ -1,0 +1,26 @@
+donor_id,cohort_origin,in_cz_heart_global_22,age_bracket_moesm3,sex,primary_diagnosis,donor_type,cardiac_disease,hypertension,diabetes,moesm10_modalities,moesm10_regions
+D1,Litvinukova_2020_HCAv1,YES,50-55,Female,CVA (stroke),DBD,N,Y,N,scRNA:1;snRNA:5,AX;LA;LV;RV
+D2,Litvinukova_2020_HCAv1,YES,60-65,Male,Trauma,DCD,N,N,N,snRNA:12,AX;LA;LV;RA;RV;SP
+D3,Litvinukova_2020_HCAv1,YES,55-60,Male,CVA (stroke),DBD,N,N,N,Multiome-ATAC:1;Multiome-RNA:1;Visium:2;scRNA:5;snRNA:11,AX;LA;LV;RA;RV;SP
+D4,Litvinukova_2020_HCAv1,YES,70-75,Female,CVA (stroke),DCD,N,Y,Y,scRNA:6;snRNA:6,AX;LA;LV;RA;RV;SP
+D5,Litvinukova_2020_HCAv1,YES,65-70,Female,CVA (stroke),DCD,N,N,N,Visium:8;scRNA:6;snRNA:6,AX;LA;LV;RA;RV;SP
+D6,Litvinukova_2020_HCAv1,YES,70-75,Male,CVA (stroke),DCD,N,N,N,Visium:6;scRNA:12;snRNA:6,AX;LA;LV;RA;RV;SP
+D7,Litvinukova_2020_HCAv1,YES,60-65,Male,CVA (stroke),DCD,N,N,N,Multiome-ATAC:2;Multiome-RNA:2;Visium:3;scRNA:12;snRNA:6,AX;LA;LV;RA;RV;SP
+D8,Litvinukova_2020_HCAv1,YES,45-50,Male,Trauma,DCD,N,N,N,Multiome-ATAC:6;Multiome-RNA:6;Visium:3,AX;LA;LV;RA;RV;SP
+D11,Litvinukova_2020_HCAv1,YES,60-65,Female,Trauma,DCD,N,N,N,scRNA:12;snRNA:6,AX;LA;LV;RA;RV;SP
+H2,Litvinukova_2020_HCAv1,YES,50-55,Male,CVA,DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+H3,Litvinukova_2020_HCAv1,YES,50-55,Male,Suicide,DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+H4,Litvinukova_2020_HCAv1,YES,55-60,Male,CVA,DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+H5,Litvinukova_2020_HCAv1,YES,50-55,Female,Trauma,DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+H6,Litvinukova_2020_HCAv1,YES,40-45,Female,Suicide,DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+H7,Litvinukova_2020_HCAv1,YES,45-50,Female,CVA (stroke),DBD,N,N,N,snRNA:6,AX;LA;LV;RA;RV;SP
+AH1,Kanemaru_2023_new,YES,45-50,Female,CVA (stroke),DCD,N,N,N,Multiome-ATAC:12;Multiome-RNA:12;Visium:3,AVN;LV;RA;RV;SAN;SP
+A61,Kanemaru_2023_new,YES,70-75,Female,Intracerebral Haemorrhage,DCD,N,N,N,Multiome-ATAC:8;Multiome-RNA:8;Visium:4,AVN;SAN
+AV1,Kanemaru_2023_new,NO,45-50,Female,Intracerebral Haemorrhage,DBD,N,N,N,Visium-FFPE:3,SAN-FFPE
+AV3,Kanemaru_2023_new,YES,60-65,Female,Intracerebral Haemorrhage,DCD,N,N,N,Multiome-ATAC:2;Multiome-RNA:2,SAN
+AV10,Kanemaru_2023_new,YES,20-25,Male,Brain injury (gunshot wound),DBD,N,N,N,Multiome-ATAC:3;Multiome-RNA:3,SAN
+AV13,Kanemaru_2023_new,YES,70-75,Female,Intracerebral Haemorrhage,DBD,N,N,N,Multiome-ATAC:3;Multiome-RNA:3,AVN;SAN
+AV14,Kanemaru_2023_new,YES,45-50,Male,Intracerebral Haemorrhage,DBD,N,N,N,Multiome-ATAC:3;Multiome-RNA:3;Visium:2,SAN
+AH2,Kanemaru_2023_new,YES,45-50,Male,CVA (stroke),DCD,N,N,N,Multiome-ATAC:5;Multiome-RNA:5;Visium:3,AVN;SAN
+AH5,Kanemaru_2023_new,NO,20-25,Female,Hypoxic brain injury (strangulation),DCD,N,N,N,Visium:4,SAN
+AH6,Kanemaru_2023_new,NO,50-55,Female,Intracerebral Haemorrhage,DBD,N,N,N,Visium:1,AVN
