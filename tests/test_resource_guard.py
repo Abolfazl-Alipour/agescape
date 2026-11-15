@@ -122,6 +122,94 @@ def test_curl_command_construction_enables_resume_fail_retry_and_size_cap(tmp_pa
     assert command[command.index("--continue-at") + 1] == "-"
     assert command[command.index("--retry") + 1] == "5"
     assert "--retry-all-errors" in command
+    assert command[command.index("--connect-timeout") + 1] == "30"
+    assert command[command.index("--speed-limit") + 1] == "10240"
+    assert command[command.index("--speed-time") + 1] == "120"
     assert command[command.index("--max-filesize") + 1] == str(10 * resource_guard.GIB)
     assert command[command.index("--output") + 1] == str(output)
     assert command[-1] == "https://example.org/file.bin"
+
+
+def test_curl_command_supports_max_time_and_custom_timeouts(tmp_path):
+    output = tmp_path / "timed.bin"
+    command = resource_guard.build_curl_command(
+        "https://example.org/file.bin",
+        output,
+        1024,
+        connect_timeout=15,
+        max_time=90,
+        speed_limit=1048576,
+        speed_time=60,
+    )
+    assert command[command.index("--connect-timeout") + 1] == "15"
+    assert command[command.index("--max-time") + 1] == "90"
+    assert command[command.index("--speed-limit") + 1] == "1048576"
+    assert command[command.index("--speed-time") + 1] == "60"
+
+
+def test_verify_http_range_resume_matches_tail_and_rejects_non_206(monkeypatch, tmp_path):
+    partial = tmp_path / "part.bin"
+    partial.write_bytes(b"0123456789ABCDEF")
+
+    class FakeResp:
+        def __init__(self, status, payload):
+            self.status = status
+            self._payload = payload
+
+        def getcode(self):
+            return self.status
+
+        def read(self, n=-1):
+            return self._payload[:n]
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+    monkeypatch.setattr(
+        resource_guard.urllib.request,
+        "urlopen",
+        lambda req, timeout=30: FakeResp(206, b"CDEF"),
+    )
+    assert resource_guard.verify_http_range_resume(
+        "https://example.org/part.bin", partial_size=16, existing_path=partial, overlap_bytes=4
+    )
+
+    monkeypatch.setattr(
+        resource_guard.urllib.request,
+        "urlopen",
+        lambda req, timeout=30: FakeResp(200, b"CDEF"),
+    )
+    with pytest.raises(resource_guard.ResourceGuardError, match="HTTP 200"):
+        resource_guard.verify_http_range_resume(
+            "https://example.org/part.bin", partial_size=16, existing_path=partial, overlap_bytes=4
+        )
+
+    monkeypatch.setattr(
+        resource_guard.urllib.request,
+        "urlopen",
+        lambda req, timeout=30: FakeResp(206, b"XXXX"),
+    )
+    with pytest.raises(resource_guard.ResourceGuardError, match="do not match"):
+        resource_guard.verify_http_range_resume(
+            "https://example.org/part.bin", partial_size=16, existing_path=partial, overlap_bytes=4
+        )
+
+
+def test_verify_gzip_and_min_size(tmp_path):
+    import gzip
+
+    gz = tmp_path / "ok.txt.gz"
+    with gzip.open(gz, "wb") as handle:
+        handle.write(b"hello world" * 100)
+    assert resource_guard.verify_gzip_integrity(gz)
+    assert resource_guard.verify_min_file_size(gz, 20) >= 20
+
+    bad = tmp_path / "bad.txt.gz"
+    bad.write_bytes(b"not a gzip stream")
+    with pytest.raises(resource_guard.ResourceGuardError, match="gzip -t"):
+        resource_guard.verify_gzip_integrity(bad)
+    with pytest.raises(resource_guard.ResourceGuardError, match="below minimum"):
+        resource_guard.verify_min_file_size(bad, 1000)

@@ -68,8 +68,16 @@ def build_systemd_command(memory_gb, command):
     ]
 
 
-def build_curl_command(url, output, max_file_bytes):
-    return [
+def build_curl_command(
+    url,
+    output,
+    max_file_bytes,
+    connect_timeout=30,
+    max_time=None,
+    speed_limit=10240,
+    speed_time=120,
+):
+    command = [
         "curl",
         "--fail",
         "--location",
@@ -80,12 +88,21 @@ def build_curl_command(url, output, max_file_bytes):
         "--retry-delay",
         "5",
         "--retry-all-errors",
+        "--connect-timeout",
+        str(int(connect_timeout)),
         "--max-filesize",
         str(max_file_bytes),
+    ]
+    if max_time is not None and int(max_time) > 0:
+        command.extend(["--max-time", str(int(max_time))])
+    if speed_limit is not None and int(speed_limit) > 0 and speed_time is not None and int(speed_time) > 0:
+        command.extend(["--speed-limit", str(int(speed_limit)), "--speed-time", str(int(speed_time))])
+    command.extend([
         "--output",
         str(output),
         url,
-    ]
+    ])
+    return command
 
 
 def check_free_space(path, min_free_gb):
@@ -163,6 +180,69 @@ def fetch_content_length(url, timeout=30):
         return parse_content_length(response.headers.get("Content-Length"))
 
 
+def verify_http_range_resume(url, partial_size, existing_path=None, overlap_bytes=65536, timeout=30):
+    """Verify server honors HTTP 206 Range and matches the tail of an existing partial file."""
+    if partial_size <= 0:
+        return True
+    overlap = min(int(overlap_bytes), int(partial_size))
+    start = int(partial_size) - overlap
+    end = int(partial_size) - 1
+    request = urllib.request.Request(
+        url,
+        method="GET",
+        headers={
+            "User-Agent": "agescape-resource-guard/1",
+            "Range": f"bytes={start}-{end}",
+        },
+    )
+    try:
+        response = urllib.request.urlopen(request, timeout=timeout)
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
+        raise ResourceGuardError(f"range resume probe failed for {url}: {exc}") from exc
+    with response:
+        status = getattr(response, "status", None) or response.getcode()
+        if status != 206:
+            raise ResourceGuardError(
+                f"server returned HTTP {status} instead of 206 Partial Content for range {start}-{end}"
+            )
+        remote_slice = response.read(overlap + 1)
+    if len(remote_slice) != overlap:
+        raise ResourceGuardError(
+            f"range resume probe expected {overlap} bytes for {start}-{end}, got {len(remote_slice)}"
+        )
+    if existing_path is not None:
+        with Path(existing_path).open("rb") as handle:
+            handle.seek(start)
+            local_slice = handle.read(overlap)
+        if local_slice != remote_slice:
+            raise ResourceGuardError(
+                f"local partial tail bytes {start}-{end} do not match remote server; refusing resume"
+            )
+    return True
+
+
+def verify_gzip_integrity(path):
+    """Run gzip -t on a completed .gz download and fail closed if corrupt."""
+    try:
+        completed = subprocess.run(["gzip", "-t", str(path)], capture_output=True, text=True, check=False)
+    except OSError as exc:
+        raise ResourceGuardError(f"cannot run gzip -t on {path}: {exc}") from exc
+    if completed.returncode != 0:
+        detail = (completed.stderr or completed.stdout or "").strip()
+        raise ResourceGuardError(f"gzip -t integrity check failed for {path}: {detail}")
+    return True
+
+
+def verify_min_file_size(path, min_size_bytes):
+    """Verify downloaded file meets minimum byte floor."""
+    actual = partial_file_size(Path(path))
+    if actual < int(min_size_bytes):
+        raise ResourceGuardError(
+            f"downloaded file {path} is {actual} bytes, below minimum {int(min_size_bytes)} bytes"
+        )
+    return actual
+
+
 @contextlib.contextmanager
 def heavy_job_lock(lock_path=DEFAULT_LOCK_PATH):
     try:
@@ -195,9 +275,10 @@ def run_guarded(args):
 
 
 def download_guarded(args):
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     with heavy_job_lock():
         partial_size = partial_file_size(args.output)
-        content_length = fetch_content_length(args.url)
+        content_length = fetch_content_length(args.url, timeout=args.connect_timeout)
         try:
             free_bytes = shutil.disk_usage(args.output.parent).free
         except OSError as exc:
@@ -213,13 +294,34 @@ def download_guarded(args):
         )
         if remaining_bytes == 0 and args.output.exists():
             print(f"Download already complete: {args.output}")
-            return 0
-        command = build_curl_command(args.url, args.output, gb_to_bytes(args.max_file_gb))
-        try:
-            completed = subprocess.run(command, check=False)
-        except OSError as exc:
-            raise ResourceGuardError(f"cannot launch curl: {exc}") from exc
-    return completed.returncode
+        else:
+            if partial_size > 0 and args.verify_resume_overlap:
+                verify_http_range_resume(
+                    args.url,
+                    partial_size,
+                    existing_path=args.output,
+                    timeout=args.connect_timeout,
+                )
+            command = build_curl_command(
+                args.url,
+                args.output,
+                gb_to_bytes(args.max_file_gb),
+                connect_timeout=args.connect_timeout,
+                max_time=args.max_time,
+                speed_limit=args.speed_limit,
+                speed_time=args.speed_time,
+            )
+            try:
+                completed = subprocess.run(command, check=False)
+            except OSError as exc:
+                raise ResourceGuardError(f"cannot launch curl: {exc}") from exc
+            if completed.returncode != 0:
+                return completed.returncode
+        if args.min_size_bytes is not None:
+            verify_min_file_size(args.output, args.min_size_bytes)
+        if args.verify_gzip:
+            verify_gzip_integrity(args.output)
+    return 0
 
 
 def build_parser():
@@ -238,6 +340,13 @@ def build_parser():
     download_parser.add_argument("--output", type=Path, required=True)
     download_parser.add_argument("--min-free-gb", type=positive_gb, required=True)
     download_parser.add_argument("--max-file-gb", type=positive_gb, required=True)
+    download_parser.add_argument("--connect-timeout", type=int, default=30)
+    download_parser.add_argument("--max-time", type=int, default=None)
+    download_parser.add_argument("--speed-limit", type=int, default=10240)
+    download_parser.add_argument("--speed-time", type=int, default=120)
+    download_parser.add_argument("--min-size-bytes", type=int, default=None)
+    download_parser.add_argument("--verify-gzip", action="store_true")
+    download_parser.add_argument("--verify-resume-overlap", action="store_true")
     download_parser.set_defaults(handler=download_guarded)
     return parser
 
