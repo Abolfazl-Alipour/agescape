@@ -162,6 +162,89 @@ def counts_to_log2cpm(counts_df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]
     return pd.DataFrame(log2cpm, index=counts_df.index, columns=counts_df.columns), lib_sizes
 
 
+def finalize_pseudobulk_group(
+    raw_pb: pd.DataFrame,
+    donor_meta: pd.DataFrame,
+    cell_counts: pd.Series,
+    allow_fractional_expected: bool = False,
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, Any]]:
+    """Run integer/technical gene gating, log2CPM normalization, and log_lib attachment for one group."""
+    filt_pb, p_stats = prepare_counts_matrix(raw_pb, allow_fractional_expected=allow_fractional_expected)
+    log2cpm, lib_sizes = counts_to_log2cpm(filt_pb)
+    eligible = list(log2cpm.columns)
+    m = donor_meta.loc[eligible].copy()
+    m["lib_size"] = lib_sizes.loc[eligible].to_numpy(dtype=float)
+    m["log_lib"] = np.log1p(m["lib_size"].to_numpy(dtype=float))
+    m["n_cells"] = cell_counts.loc[eligible].astype(int).to_numpy()
+    return log2cpm, m, p_stats
+
+
+def aggregate_pseudobulk_sparse(
+    counts_genes_by_cells: sp.spmatrix,
+    genes: np.ndarray | list[str],
+    donor_labels: np.ndarray | pd.Series,
+    group_labels: np.ndarray | pd.Series,
+    donor_meta: pd.DataFrame,
+    cell_mask: np.ndarray | None = None,
+    min_cells_per_donor_group: int = 5,
+    min_donors_per_group: int = 4,
+    allow_fractional_expected: bool = False,
+) -> tuple[pd.DataFrame, dict[str, pd.DataFrame], dict[str, pd.DataFrame], dict[str, dict[str, Any]]]:
+    """Vectorized sparse pseudobulk aggregation into log2CPM matrices + donor metadata per cell group."""
+    donor_arr = np.asarray(donor_labels, dtype=str)
+    group_arr = np.asarray(group_labels, dtype=str)
+    valid_donor = np.isin(donor_arr, donor_meta.index.to_numpy(dtype=str))
+    keep_cells = valid_donor if cell_mask is None else (np.asarray(cell_mask, dtype=bool) & valid_donor)
+    idx = np.flatnonzero(keep_cells)
+
+    all_donors = list(donor_meta.index.astype(str))
+    if idx.size == 0:
+        return pd.DataFrame(index=all_donors), {}, {}, {}
+
+    sub_counts = counts_genes_by_cells[:, idx]
+    sub_donors = donor_arr[idx]
+    sub_groups = group_arr[idx]
+
+    cell_counts = (
+        pd.crosstab(pd.Series(sub_donors, name="donor_id"), pd.Series(sub_groups, name="group"))
+        .reindex(index=all_donors, fill_value=0)
+    )
+
+    pair_keys = np.char.add(np.char.add(sub_groups, "\x1f"), sub_donors)
+    uniq_pairs, inv, pair_counts = np.unique(pair_keys, return_inverse=True, return_counts=True)
+    indicator = sp.csc_matrix(
+        (np.ones(idx.size, dtype=np.float64), (np.arange(idx.size, dtype=np.int32), inv)),
+        shape=(idx.size, uniq_pairs.size),
+    )
+    agg = sub_counts @ indicator
+    agg_dense = agg.toarray() if sp.issparse(agg) else np.asarray(agg)
+
+    pair_index = {str(p): pos for pos, p in enumerate(uniq_pairs)}
+    gene_index = pd.Index(np.asarray(genes, dtype=str), dtype=str)
+
+    expr_by_group: dict[str, pd.DataFrame] = {}
+    meta_by_group: dict[str, pd.DataFrame] = {}
+    stats_by_group: dict[str, dict[str, Any]] = {}
+
+    for grp in sorted(cell_counts.columns):
+        eligible = [d for d in all_donors if int(cell_counts.loc[d, grp]) >= min_cells_per_donor_group]
+        if len(eligible) < min_donors_per_group:
+            continue
+        col_indices = [pair_index[f"{grp}\x1f{d}"] for d in eligible]
+        raw_pb = pd.DataFrame(agg_dense[:, col_indices], index=gene_index, columns=eligible)
+        log2cpm, m, p_stats = finalize_pseudobulk_group(
+            raw_pb,
+            donor_meta,
+            cell_counts[grp],
+            allow_fractional_expected=allow_fractional_expected,
+        )
+        expr_by_group[str(grp)] = log2cpm
+        meta_by_group[str(grp)] = m
+        stats_by_group[str(grp)] = p_stats
+
+    return cell_counts, expr_by_group, meta_by_group, stats_by_group
+
+
 def select_design_columns(
     donor_meta: pd.DataFrame,
     age_col: str = "age_per_decade",
@@ -483,7 +566,8 @@ def _compute_concordance_table(
                 ok = False
                 break
             ols_p = fit_ols(expr_mat, d_g, effect_column=1)
-            perm_t_rows.append(np.nan_to_num(ols_p["effect"] / ols_p["se"], nan=0.0))
+            t_perm = np.where(ols_p["se"] > 0, ols_p["effect"] / np.where(ols_p["se"] > 0, ols_p["se"], 1.0), 0.0)
+            perm_t_rows.append(np.nan_to_num(t_perm, nan=0.0, posinf=0.0, neginf=0.0))
         if ok:
             perm_r = pairwise_pearson(np.vstack(perm_t_rows))
             perm_means.append(float(np.mean(perm_r)))
@@ -661,10 +745,28 @@ def _dimnames_from_robject(
 ) -> tuple[np.ndarray, np.ndarray]:
     """Extract row and column Dimnames from an R dgCMatrix AST node."""
     attrs = _robject_attrs_dict(obj, converter)
-    dimnames = _robject_to_python(attrs["Dimnames"], converter)
-    rows = np.asarray(dimnames[0], dtype=str)
-    cols = np.asarray(dimnames[1], dtype=str)
+    if "Dimnames" not in attrs:
+        if "dimnames" in attrs:
+            dimnames = _robject_to_python(attrs["dimnames"], converter)
+        else:
+            return np.asarray([], dtype=str), np.asarray([], dtype=str)
+    else:
+        dimnames = _robject_to_python(attrs["Dimnames"], converter)
+    r_val, c_val = dimnames[0], dimnames[1]
+    rows = np.asarray([], dtype=str) if r_val is None else np.asarray(r_val, dtype=str).ravel()
+    cols = np.asarray([], dtype=str) if c_val is None else np.asarray(c_val, dtype=str).ravel()
     return rows, cols
+
+
+def _assay5_dim_labels(node: Any, converter: rdata.conversion.SimpleConverter) -> np.ndarray:
+    """Extract feature or cell labels from a Seurat v5 Assay5 LogMap slot."""
+    rows, _ = _dimnames_from_robject(node, converter)
+    if rows.size > 0:
+        return rows
+    py_obj = _robject_to_python(node, converter)
+    if hasattr(py_obj, "coords") and "dim_0" in py_obj.coords:
+        return np.asarray(py_obj.coords["dim_0"].values, dtype=str).ravel()
+    return np.asarray([], dtype=str)
 
 
 def extract_seurat_rds_selective(rds_path: Path) -> dict[str, Any]:
@@ -682,7 +784,7 @@ def extract_seurat_rds_selective(rds_path: Path) -> dict[str, Any]:
         if ident_key in root_attrs:
             result[ident_key] = _robject_to_python(root_attrs[ident_key], conv)
 
-    # Seurat v2 stores @raw.data directly; v3/v4 stores @assays$RNA@counts
+    # Seurat v2 stores @raw.data directly; v3/v4 stores @assays$RNA@counts; v5 uses @assays$RNA@layers$counts + features/cells LogMaps
     if "raw.data" in root_attrs:
         raw_node = root_attrs["raw.data"]
         result["raw_counts"] = _dgc_from_robject(raw_node, conv)
@@ -704,7 +806,12 @@ def extract_seurat_rds_selective(rds_path: Path) -> dict[str, Any]:
             if count_layers:
                 counts_node = layers_node.value[count_layers[0]]
                 result["raw_counts"] = _dgc_from_robject(counts_node, conv)
-                result["genes"], result["barcodes"] = _dimnames_from_robject(counts_node, conv)
+                genes, barcodes = _dimnames_from_robject(counts_node, conv)
+                if genes.size == 0 and "features" in rna_attrs:
+                    genes = _assay5_dim_labels(rna_attrs["features"], conv)
+                if barcodes.size == 0 and "cells" in rna_attrs:
+                    barcodes = _assay5_dim_labels(rna_attrs["cells"], conv)
+                result["genes"], result["barcodes"] = genes, barcodes
     return result
 
 

@@ -1,0 +1,38 @@
+analysis,group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size
+gse302126_bmmc_lineage_n9,B_Lymphoid,tested,4,9015,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0001900834529936,0.6822578362823749,67447
+gse302126_bmmc_lineage_n9,Erythroid_Mk,tested,5,10413,sex_male,log_lib(df_limit),2,0,0,1.804002575096325e-05,0.4055818722750728,67447
+gse302126_bmmc_lineage_n9,HSPC_Stem_MPP,tested,5,10539,sex_male,log_lib(df_limit),2,0,0,0.0003678996279713,0.7069788960599773,67447
+gse302126_bmmc_lineage_n9,Monocyte_DC,tested,5,10611,sex_male,log_lib(df_limit),2,0,0,5.071690399394352e-05,0.4693264372619785,67447
+gse302126_bmmc_lineage_n9,Myeloid_Prog,tested,4,9103,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0003151598046314,0.6822578362823749,67447
+gse302126_bmmc_lineage_n9,Other,tested,8,9140,sex_male;log_lib,none,4,0,0,0.0001692605884108,0.6822578362823749,67447
+gse302126_bmmc_lineage_n9,T_NK_Lymphoid,tested,8,8626,sex_male;log_lib,none,4,0,0,7.622781187236835e-06,0.4055818722750728,67447
+gse302126_bmmc_fine_n9,BFU-E,tested,4,8806,none,sex_male(df_limit);log_lib(df_limit),2,0,0,4.499281260433784e-05,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,CD14 Mono,tested,4,9385,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.000287405291906,0.7712645967121788,123443
+gse302126_bmmc_fine_n9,CD8 Effector Memory 2,tested,5,7132,sex_male,log_lib(df_limit),2,0,0,8.575376065229877e-06,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,CFU-E,tested,5,9303,sex_male,log_lib(df_limit),2,0,0,0.0003408686019146,0.8635464801314343,123443
+gse302126_bmmc_fine_n9,Early GMP,tested,4,7767,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0006176395285708,0.8959361365358238,123443
+gse302126_bmmc_fine_n9,Early ProMono,tested,4,9338,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0002834431463622,0.7712645967121788,123443
+gse302126_bmmc_fine_n9,HSC,tested,5,9187,sex_male,log_lib(df_limit),2,0,0,0.0003707619180266,0.8635464801314343,123443
+gse302126_bmmc_fine_n9,LMPP,tested,4,7701,none,sex_male(df_limit);log_lib(df_limit),2,0,0,1.7990355023740274e-05,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,Large Pre-B,tested,4,7808,none,sex_male(df_limit);log_lib(df_limit),2,0,0,9.753975418265944e-05,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,Late ProMono,tested,4,5998,none,sex_male(df_limit);log_lib(df_limit),2,32,0,8.897369634429713e-05,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,MEP,tested,4,8451,none,sex_male(df_limit);log_lib(df_limit),2,0,0,5.975664721823767e-05,0.5474832142163191,123443
+gse302126_bmmc_fine_n9,MPP-MkEry,tested,4,7669,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0004276084857275,0.8883826168450702,123443
+gse302126_bmmc_fine_n9,NK,tested,5,6326,sex_male,log_lib(df_limit),2,0,0,0.0003630864828731,0.8635464801314343,123443
+gse302126_bmmc_fine_n9,Pre-cDC,tested,5,9819,sex_male,log_lib(df_limit),2,0,0,0.000206127382012,0.6361245604427005,123443
+gse302126_bmmc_fine_n9,cDC2,tested,5,8753,sex_male,log_lib(df_limit),2,0,0,0.0002189756901243,0.6592930760003461,123443
+gse302126_bmmc_pooled_n9,All_BMMC,tested,9,10790,sex_male;log_lib,none,5,0,0,0.0001447312432269,0.9999639946391502,10790
+gse302126_sternum_lineage_n7,Other,tested,6,8950,sex_male;log_lib,none,2,0,0,0.0001744653722036,0.6085003251719115,17439
+gse302126_sternum_lineage_n7,T_NK_Lymphoid,tested,7,8489,sex_male;log_lib,none,3,0,0,5.616131807990036e-05,0.6085003251719115,17439
+gse302126_sternum_pooled_n7,All_BMMC,tested,7,10362,sex_male;log_lib,none,3,0,0,1.6637350664858655e-05,0.1723962275892654,10362
+safina_hsc_pooled_n7,Safina_HSC_all,tested,7,8012,sex_male;log_lib,none,3,0,0,0.0002770961922311,0.9996089858111497,8012
+safina_hsc_programs_n5,metaGEP.1,tested,5,7163,sex_male;log_lib,none,1,0,0,0.0005328036066923,0.9039317278535532,12617
+safina_hsc_programs_n5,metaGEP.4,tested,4,5454,sex_male,log_lib(df_limit),1,0,0,0.0005911594916907,0.9039317278535532,12617
+safina_hsc_clusters_n7,HSC_cluster_0,tested,4,5536,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0024666767258069,0.8730359258412465,16016
+safina_hsc_clusters_n7,HSC_cluster_2,tested,4,6110,none,sex_male(df_limit);log_lib(df_limit),2,0,0,0.0013991076007282,0.8730359258412465,16016
+safina_hsc_clusters_n7,HSC_cluster_3,tested,4,4370,none,sex_male(df_limit);log_lib(df_limit),2,0,0,5.720308411967407e-05,0.8730359258412465,16016
+multistudy_adult_hsc_total,MultiStudy_Adult_HSC,tested,57,9668,sex_male;log_lib;ds_Ainciburu2023;ds_Hourigan2018;ds_Li2024;ds_Safina2024;ds_Zhang2022,none,48,7,7,8.066274968183681e-07,0.0077984746392399,9668
+multistudy_adult_hsc_programs,metaGEP.1,tested,51,8513,sex_male;log_lib;ds_Ainciburu2023;ds_Hourigan2018;ds_Li2024;ds_Safina2024;ds_Zhang2022,none,42,1,0,1.4381935349700305e-06,0.0519144720318131,36097
+multistudy_adult_hsc_programs,metaGEP.2,tested,32,9743,sex_male;log_lib;ds_Ainciburu2023;ds_Hourigan2018;ds_Li2024;ds_Zhang2022,ds_Safina2024(constant_or_na),24,0,0,7.710734651091896e-05,0.6636956406507886,36097
+multistudy_adult_hsc_programs,metaGEP.3,tested,28,8905,sex_male;log_lib;ds_Ainciburu2023;ds_Hourigan2018;ds_Li2024;ds_Safina2024;ds_Zhang2022,none,19,0,0,5.891016261965719e-05,0.6636956406507886,36097
+multistudy_adult_hsc_programs,metaGEP.4,tested,16,8936,sex_male;log_lib;ds_Ainciburu2023;ds_Li2024;ds_Safina2024;ds_Zhang2022,ds_Hourigan2018(constant_or_na),8,0,0,0.0006603005193906,0.9340220116083172,36097
