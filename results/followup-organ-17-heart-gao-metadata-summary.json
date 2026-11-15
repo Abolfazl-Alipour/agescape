@@ -1,0 +1,31 @@
+{
+  "gate_totals": {
+    "nonfinite": 0,
+    "negative": 0,
+    "noninteger": 0,
+    "total_nnz": 1259162328,
+    "cells_checked": 901946
+  },
+  "audit_counts": {
+    "included_primary_exact_adult_lv": 117,
+    "excluded_midpoint_age_brackets": 85,
+    "excluded_disease_DCM": 25,
+    "excluded_disease_HCM": 15,
+    "excluded_disease_ICM": 15,
+    "excluded_fetal": 13,
+    "excluded_disease_pediatric HF": 9,
+    "excluded_pediatric_under_18": 7,
+    "excluded_disease_AMI": 7,
+    "excluded_duplicate_penn_donor_kept_10x_copy": 6
+  },
+  "primary_donors": 117,
+  "primary_nuclei": 901946,
+  "family_a_size": 13,
+  "family_b_genes_all14": 159052,
+  "family_b_genes_celltypes13": 145873,
+  "family_b_sig_all14_q05": 12,
+  "family_b_sig_celltypes13_q05": 8,
+  "family_b_concordance_pairs": 1,
+  "family_b_concordance_sig_q05": 0,
+  "family_c_size": 14
+}

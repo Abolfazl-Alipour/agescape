@@ -1,0 +1,2 @@
+subset,n_cell_types,n_pairs,n_common_genes,mean_pairwise_pearson_r,median_pairwise_pearson_r,min_pairwise_pearson_r,max_pairwise_pearson_r,mean_pairwise_spearman_rho,mean_sign_agreement,n_valid_perms,perm_p_one_sided,perm_p_two_sided,cell_types
+pooled_7study_primary,13,78,7502,0.13086169601448805,0.10990410202736986,0.01913444330972365,0.44749475903633784,0.12641802323361767,0.5466371360799515,1000,0.1998001998001998,0.1998001998001998,Adipocyte;Cardiomyocyte;Endocardial;Endothelial;Epicardial;Fibroblast;LEC;Lymphoid;Mast;Myeloid;Neuronal;Pericyte;vSMC
