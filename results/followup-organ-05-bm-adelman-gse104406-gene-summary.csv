@@ -1,0 +1,4 @@
+group,status,n_donors,n_genes_tested,covariates,omitted_covariates,residual_df,n_sig_within_q05,n_sig_global_q05,min_pvalue,min_q_bh_global,family_b_global_size,model
+HSCe_Sorted_Bulk,tested,19,14115,sex_male;log_lib,none,15,72,72,9.546784417611432e-07,0.008303302376322319,14115,exact_age_n19
+HSCe_Sorted_Bulk,tested,20,14296,sex_male;log_lib,none,16,134,134,5.557996634615367e-07,0.007945711988846128,14296,imputed25_n20
+HSCe_Sorted_Bulk,tested,20,14296,sex_male;log_lib,none,16,218,218,2.285164834934011e-07,0.0032668716480216617,14296,binary_old_vs_young_n20
