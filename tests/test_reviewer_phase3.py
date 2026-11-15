@@ -30,7 +30,23 @@ def test_reference_list_excludes_unverified_matches():
 
 
 def test_phase3_does_not_modify_manuscript():
+    import hashlib
     import subprocess
-    diff = subprocess.run(["git", "diff", "868ca108d8e14ed89ceca73c77b7086dfd54faf9", "--",
-                           "report/manuscript-aging-mechanisms.md"], capture_output=True, text=True, check=True)
-    assert not diff.stdout
+
+    manuscript = REPO / "report" / "manuscript-aging-mechanisms.md"
+    expected_sha256 = "723a0e89545b6be72f67470656f423562f49325da7040b79c592c2133ac55b4c"
+    assert hashlib.sha256(manuscript.read_bytes()).hexdigest() == expected_sha256
+    base_commit = "868ca108d8e14ed89ceca73c77b7086dfd54faf9"
+    has_commit = subprocess.run(
+        ["git", "-C", str(REPO), "cat-file", "-e", f"{base_commit}^{{commit}}"],
+        capture_output=True,
+        text=True,
+    )
+    if has_commit.returncode == 0:
+        diff = subprocess.run(
+            ["git", "-C", str(REPO), "diff", base_commit, "--", "report/manuscript-aging-mechanisms.md"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        assert not diff.stdout

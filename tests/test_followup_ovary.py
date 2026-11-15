@@ -188,7 +188,26 @@ def test_postmenopausal_pipeline_synthetic_atlas_end_to_end(tmp_path, monkeypatc
     adata.layers["log1p_norm"] = adata.X.copy()
     path = tmp_path / "synthetic_atlas.h5ad"
     adata.write_h5ad(path)
+    pd.DataFrame(
+        [
+            {
+                "SenNet_ID": donor["donor"],
+                "Age": donor["exact_age_years"],
+                "BMI": donor["BMI"],
+                "Para": donor["parity_live_births"],
+                "NonOvarian_Cancer_State": donor["non_ovarian_cancer_state"],
+                "Tissue_Pieces_Analyzed": donor["tissue_pieces_analyzed"],
+            }
+            for donor in manifest["donors"]
+        ]
+    ).to_csv(
+        tmp_path / "GSE329417_human_ovary_snucRNAseq_public_donor_metadata.tsv.gz",
+        sep="\t",
+        index=False,
+        compression="gzip",
+    )
     monkeypatch.setattr(post, "ATLAS", path)
+    monkeypatch.setattr(post, "METADATA", tmp_path)
     monkeypatch.setattr(post, "CACHE", tmp_path / "cache.npz")
     monkeypatch.setattr(post, "RESULTS", tmp_path)
     monkeypatch.setattr(post, "EXPECTED_NUCLEI", len(obs))
