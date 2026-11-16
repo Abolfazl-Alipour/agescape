@@ -37,3 +37,16 @@ Manuscript state: `report/plos-one/final-plos-one.tex` and `report/plos-one/fina
 - GTEx bulk expression (`data/manifest/gtex_v8.json`, `reports/followup-gtex-metadata.md`): SUSPENDED
 - Kedlian muscle download (`data/manifest/muscle_analysis_plan.json`, `scripts/run_followup_kedlian.py`): BLOCKED / SUSPENDED
 - Final did/did-not report (`reports/followup-final-summary.md`): SUSPENDED
+
+## Full-Depth Redo Completion (2026-11-16)
+
+- Full-depth cell-level drift (Part 1), spread (Part 2), and ectopic identity
+  (Part 3) in Gao heart + Yazar blood: DONE. No part in either dataset proves
+  an age-related increase; damaging directions go the other way and Yazar
+  pooled positives are composition effects.
+- Commits: `ea79fce` (Gao Parts 1-2), `d2723b2` (Yazar Parts 1-2), `adac77a`
+  (explicit-zero fix + Part 3), `c4ab600` (combined report + tests).
+- Report: `reports/followup-fulldepth-drift-entropy-identity.md`.
+- Gates at Commit D: full suite 185 passed + 1 skipped; `check_app_data.py`
+  and `check_app_assets.py` PASS (146 anchors); 10-round review skipped per
+  user instruction.
