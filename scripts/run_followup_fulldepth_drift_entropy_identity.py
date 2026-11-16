@@ -349,6 +349,7 @@ def _pass1_worker(task: tuple[Any, ...]) -> dict[str, Any]:
     for si in range(n_s):
         rng_15 = np.random.default_rng(np.random.SeedSequence([MASTER_SEED, ds_code, 1500, subchunk_id, si]))
         ds15 = multinomial_downsample(mat_15_i64, 1500, rng_15)
+        ds15.eliminate_zeros()  # downsample keeps dropped genes as explicit stored zeros; drop them before any stored-entry counting
         s_v, km_v, ks_v = fast_entropy_from_csr(ds15, n_genes)
         if si < 5:
             r15_ct[si, :, 0] = _agg_vec(s_v, inv_p, n_lp)
@@ -384,6 +385,7 @@ def _pass1_worker(task: tuple[Any, ...]) -> dict[str, Any]:
         for si in range(n_s):
             rng_3k = np.random.default_rng(np.random.SeedSequence([MASTER_SEED, ds_code, 3000, subchunk_id, si]))
             ds3k = multinomial_downsample(mat_3k_i64, 3000, rng_3k)
+            ds3k.eliminate_zeros()  # downsample keeps dropped genes as explicit stored zeros; drop them before any stored-entry counting
             s_v, km_v, ks_v = fast_entropy_from_csr(ds3k, n_genes)
             if si < 5:
                 r3k_ct[si, :, 0] = _agg_vec(s_v, ip_3k, n_lp)
@@ -432,6 +434,7 @@ def _pass1_worker(task: tuple[Any, ...]) -> dict[str, Any]:
         for si_e in range(5):
             rng_ye = np.random.default_rng(np.random.SeedSequence([MASTER_SEED, ds_code, 1500, subchunk_id, si_e]))
             ds_ye = multinomial_downsample(my_i64, 1500, rng_ye)
+            ds_ye.eliminate_zeros()  # downsample keeps dropped genes as explicit stored zeros; drop them before detection binarization below
             if si_e == 0:
                 sc15 = (ind_y @ ds_ye).tocsr()
                 sc15.sum_duplicates()
@@ -1374,6 +1377,7 @@ def _part1_shard_worker(shard_id: int) -> dict[str, Any]:
         # 1500-UMI rarefaction sensitivity (seed 0)
         rng_15 = np.random.default_rng(np.random.SeedSequence([MASTER_SEED, ds_code, 15001, di, ci if not is_pool else 999]))
         ds15 = multinomial_downsample(sub_i, 1500, rng_15)
+        ds15.eliminate_zeros()  # downsample keeps dropped genes as explicit stored zeros; drop them before any stored-entry counting
         l1_15 = ds15.multiply(1.0 / 1500.0).tocsr()
         cent15 = np.asarray(l1_15.sum(axis=0)).ravel()
         r15_ids = np.repeat(np.arange(nc, dtype=np.int32), np.diff(l1_15.indptr))
@@ -1887,7 +1891,7 @@ def compute_binary_ectopic_metrics(
     nc = bin_mat.shape[0]
     if nc < 2 or n_genes_set == 0:
         return {"jaccard_all_pairs": np.nan, "jaccard_union_pos": np.nan, "jaccard_both_pos": np.nan, "singleton_fraction": np.nan, "top10_ectopic_share": np.nan, "ectopic_pool_evenness": np.nan, "excess_jaccard": np.nan, "n_pos_cells": 0, "has_any_ectopic": 0}
-    b_csr = bin_mat.tocsr()
+    b_csr = bin_mat.tocsr(copy=True)
     b_csr.data = np.ones_like(b_csr.data, dtype=np.float64)
     col_cnts = np.asarray(b_csr.sum(axis=0)).ravel().astype(np.int64)
     n_det_genes = int((col_cnts >= 1).sum())
@@ -2087,7 +2091,7 @@ def _part3_shard_worker(shard_id: int) -> dict[str, Any]:
         if run_sh:
             r_b = np.repeat(np.arange(nc, dtype=np.int32), np.diff(b_full.indptr))
             c_b = b_full.indices
-            d_b = b_full.data
+            d_b = np.rint(b_full.data).astype(np.int64)
             n_g_b = b_full.shape[1]
             # Within-cell x_cg >= 2 repeatability + donor pseudobulk det(H1) vs det(H2) Jaccard + 5 SH deltas
             ge2_m = d_b >= 2
@@ -2157,7 +2161,9 @@ def _part3_shard_worker(shard_id: int) -> dict[str, Any]:
 
             # 1500-UMI rarefaction sensitivity (E1 & E2) across 5 seeds
             rng_15 = np.random.default_rng(np.random.SeedSequence([MASTER_SEED, ds_code, 15003, int(di), int(ci)]))
-            ds15 = multinomial_downsample(sub_i, 1500, rng_15).astype(np.int64)
+            ds15 = multinomial_downsample(sub_i, 1500, rng_15)
+            ds15.eliminate_zeros()  # downsample keeps dropped genes as explicit stored zeros; _score_gene_set counts stored entries
+            ds15 = ds15.astype(np.int64)
             u15_arr = np.full(nc, 1500, dtype=np.int64)
             for tag, s_key in (("e1_r15", "E1_1500"), ("e2_r15", "E2_1500")):
                 g_arr = _get_gidx(sets[s_key], int(di), int(ci))
