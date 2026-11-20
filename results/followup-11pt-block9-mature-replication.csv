@@ -1,0 +1,17 @@
+cell_type,subset,n_genes,pearson_effect_r,spearman_effect_rho,same_direction,direction_concordance,direction_binomial_p,n_universe,n_mssm_fdr,n_hbcc_fdr,both_fdr_same_direction,expected_both_fdr_under_independence,chance_overlap_hypergeometric_p,full_range,status,status_reason
+GABAergic neuron,all_shared_genes,59523.0,0.4818287379858079,0.2499475977971775,19577.0,0.328898073013793,0.0,59523.0,5.0,4.0,0.0,0.0003360045696621,1.0,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+GABAergic neuron,all_shared_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+GABAergic neuron,mssm_fdr_genes,5.0,0.7249117869401227,0.7,4.0,0.8,0.375,59523.0,5.0,4.0,0.0,0.0003360045696621,1.0,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+GABAergic neuron,mssm_fdr_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+VIP GABAergic cortical interneuron,all_shared_genes,59523.0,0.7001653477608034,0.3907645740590169,21654.0,0.363792147573207,0.0,59523.0,294.0,86.0,24.0,0.4247769769668867,1.6106460150314735e-35,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+VIP GABAergic cortical interneuron,all_shared_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+VIP GABAergic cortical interneuron,mssm_fdr_genes,294.0,0.8945609918569051,0.9292581543521556,272.0,0.9251700680272108,5.464442362517246e-56,59523.0,294.0,86.0,24.0,0.4247769769668867,1.6106460150314735e-35,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+VIP GABAergic cortical interneuron,mssm_fdr_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+pvalb GABAergic cortical interneuron,all_shared_genes,59523.0,0.5948656727232599,0.3531957056177116,21138.0,0.3551232296759236,0.0,59523.0,333.0,79.0,20.0,0.4419636107051056,9.967334282911736e-28,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+pvalb GABAergic cortical interneuron,all_shared_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+pvalb GABAergic cortical interneuron,mssm_fdr_genes,333.0,0.8562436594064087,0.8419286467767819,295.0,0.8858858858858859,1.9881955003771878e-50,59523.0,333.0,79.0,20.0,0.4419636107051056,9.967334282911736e-28,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+pvalb GABAergic cortical interneuron,mssm_fdr_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+sst GABAergic cortical interneuron,all_shared_genes,59523.0,0.7046707345255953,0.2900091479927537,20222.0,0.3397342203853972,0.0,59523.0,123.0,704.0,62.0,1.4547653848092337,8.485728011848052e-86,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+sst GABAergic cortical interneuron,all_shared_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
+sst GABAergic cortical interneuron,mssm_fdr_genes,123.0,0.9295456020055308,0.9253137454695542,118.0,0.959349593495935,4.240436417133702e-29,59523.0,123.0,704.0,62.0,1.4547653848092337,8.485728011848052e-86,True,FULL_RANGE_REFERENCE,read_from_reviewer_phase1_target
+sst GABAergic cortical interneuron,mssm_fdr_genes,,,,,,,,,,,,,False,UNTESTABLE,HBCC_h5ad_absent:/home/reza/projects/agescape-revision/scratch/hbcc.h5ad
