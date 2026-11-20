@@ -29,7 +29,7 @@ Status: specification frozen before running. This analysis tests whether the P1 
 
 ## Pre-stated verdict rule
 
-PROVES means the filter changed the verdict only if P0 passes both composite and empirical tests after correction in at least one primary unit where P1 fails both. DOES NOT PROVE means P0 and P1 agree on every unit pass/fail status after correction, or P0 passes nowhere that P1 fails. INCONCLUSIVE applies if P0 mapping coverage is under 50 percent of 257 genes and P0 fails everywhere, in which case the result cannot distinguish filtering from mapping coverage.
+PROVES means the filter changed the verdict only if P0 passes both composite and empirical tests after correction in at least one primary unit where P1 fails both. The verdict uses the STRICT reading: fails both means fails the composite test AND fails the empirical test. Units without an empirical result cannot meet this condition. DOES NOT PROVE means no primary unit has P0 passing both tests while P1 fails both tests under this strict reading. INCONCLUSIVE applies if P0 mapping coverage is under 50 percent of 257 genes and P0 fails everywhere, in which case the result cannot distinguish filtering from mapping coverage.
 
 ## Results
 
@@ -113,6 +113,18 @@ The required CSV contains the complete side-by-side table for every unit. Slopes
 | Yazar_Blood | naive thymus-derived CD8-positive, alpha-beta T cell | 0.03205 | 0.02394 | 0.03228 | True | 0.03644 | 0.0484 | 0.04673 | True |
 | Yazar_Blood | natural killer cell | 0.008755 | 0.09968 | 0.175 | False | 0.01682 | 0.01503 | 0.04928 | True |
 
+### Both-pass disagreements
+
+The filter changes unit-level both-pass status in 5 of 283 primary units: P0 gains both-pass status in 4 units and loses it in 1 unit. Composite-pass counts are 17 for P0 and 11 for P1. These unit-level changes do not alter the strict verdict below.
+
+| Cohort | Unit | P0 composite q | P0 empirical q | P0 both pass | P1 composite q | P1 empirical q | P1 both pass |
+| --- | --- | ---: | ---: | --- | ---: | ---: | --- |
+| Gao_Heart | All_LV_Nuclei | 0.0494 | 0.0017 | True | 0.0772 | 0.0070 | False |
+| Gao_Heart | Pericyte | 0.0254 | 0.0017 | True | 0.1384 | 0.0168 | False |
+| MSSM_DLPFC | L2/3 intratelencephalic projecting glutamatergic neuron | 4.2e-06 | 0.0472 | True | 0.0208 | 0.1854 | False |
+| Yazar_Blood | naive B cell | 0.0123 | 0.0323 | True | 0.0379 | 0.0631 | False |
+| Yazar_Blood | natural killer cell | 0.0997 | 0.1750 | False | 0.0150 | 0.0493 | True |
+
 ### Unadjusted sensitivity
 
 | Cohort | Gene set | Units | Composite q passes | Random q passes | Both pass |
@@ -124,7 +136,7 @@ The required CSV contains the complete side-by-side table for every unit. Slopes
 
 ## Verdict
 
-**DOES NOT PROVE**. P0 does not pass both tests in any unit where P1 fails both.
+**DOES NOT PROVE**. Under the strict reading, P0 passes both tests in no unit where P1 fails both the composite and the empirical test. P1 fails both tests under this definition in 59 units with an empirical result, and P0 passes both tests in none of them.
 
 This verdict concerns the specified P0/P1 filter comparison, not universal cross-species transport. Empirical results are confined to the cohorts and units that already had P1 matched-null families; no new empirical family was defined for the other M9 units.
 
