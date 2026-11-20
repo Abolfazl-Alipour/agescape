@@ -1,0 +1,273 @@
+derivation_cohort,derivation_model,human_gene_symbol,mean_age_slope_log2cpm_per_decade,min_pvalue,min_q_bh,n_discovery_cell_types,discovery_cell_types,direction,human_biotype,passes_clean_filter,mouse_gene_symbol,mapping_status,in_transport_signature,discovery_stage
+Yazar,batch_adjusted,C1orf162,0.26050246015552386,1.2104831360664334e-07,0.0006191015999411774,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,I830077J02Rik,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,CCL5,-0.6910078480350991,2.2080524020163115e-10,4.51723360404497e-06,1,"central memory CD8-positive, alpha-beta T cell",down,protein_coding,True,Ccl5,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,CMC1,0.35634468764107785,3.642732100347217e-06,0.005040326982847099,1,gamma-delta T cell,up,protein_coding,True,Cmc1,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,GAS5,-0.2526930228709734,3.004374910137591e-07,0.0007794475157488213,1,gamma-delta T cell,down,lncRNA,False,,lost_no_one_to_one,False,discovery
+Yazar,batch_adjusted,GZMB,0.33854574428324763,5.629328873741426e-07,0.001027910027051767,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,batch_adjusted,GZMH,0.3213642888784983,2.66597404312179e-14,2.0708480310837843e-10,2,"effector memory CD8-positive, alpha-beta T cell;gamma-delta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,batch_adjusted,IL7R,-0.31960011735689425,5.943107841301472e-07,0.001027910027051767,1,gamma-delta T cell,down,protein_coding,True,Il7r,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,ITGB1,0.3308820840294003,1.182837345483563e-06,0.003456926630557533,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Itgb1,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,JCHAIN,-0.33508457588682744,1.2771121699547942e-10,9.697112706466752e-07,1,transitional stage B cell,down,protein_coding,True,Jchain,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,KLRB1,-0.3505789188687956,1.0703965367167474e-16,1.2064974563602817e-12,1,"effector memory CD4-positive, alpha-beta T cell",down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,batch_adjusted,LGALS1,0.296150850606471,2.9330793215534455e-11,3.340630693283297e-07,2,"central memory CD8-positive, alpha-beta T cell;transitional stage B cell",up,protein_coding,True,Lgals1,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,LTB,-0.28597631641224064,1.551311104455021e-12,3.533731564838092e-08,2,gamma-delta T cell;transitional stage B cell,down,protein_coding,True,Ltb,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,TSHZ2,0.25450189377898136,1.4470031694436534e-52,3.845410922796509e-48,1,"naive thymus-derived CD4-positive, alpha-beta T cell",up,protein_coding,True,Tshz2,mapped_one_to_one,True,discovery
+Yazar,batch_adjusted,TYROBP,0.3355632295942399,4.710173174148388e-06,0.005750567307614694,1,gamma-delta T cell,up,protein_coding,True,Tyrobp,mapped_one_to_one,True,discovery
+Yazar,unadjusted,ANKRD12,0.2642286379657519,4.204586992849861e-30,5.078949969772048e-27,5,"central memory CD8-positive, alpha-beta T cell;effector memory CD4-positive, alpha-beta T cell;naive thymus-derived CD4-positive, alpha-beta T cell;naive thymus-derived CD8-positive, alpha-beta T cell;regulatory T cell",up,protein_coding,True,Ankrd12,mapped_one_to_one,True,discovery
+Yazar,unadjusted,ANXA1,0.28120540772390346,1.7229775049864059e-07,3.1193516634523795e-05,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Anxa1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,C1orf162,0.36865271018879614,1.1608926127122613e-17,2.374954107086744e-13,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,I830077J02Rik,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CCL3,0.2536446904929207,4.737352600792109e-12,1.6387292204906703e-08,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,CCL4,0.30018292664138513,2.0707388205063967e-11,4.297818421961027e-08,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,CCL5,-0.6567574083933794,1.0981044256391973e-14,8.871530884148148e-11,1,"central memory CD8-positive, alpha-beta T cell",down,protein_coding,True,Ccl5,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CD63,0.27345235523185996,2.9761336475333967e-10,3.0884826927277826e-07,1,gamma-delta T cell,up,protein_coding,True,Cd63,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CD74,0.269753901468134,8.555936812315572e-08,1.842498476908968e-05,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Cd74,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CEBPD,0.2761653520891297,4.26602336761515e-06,0.04526037491871293,1,"CD14-low, CD16-positive monocyte",up,protein_coding,True,Cebpd,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CHCHD2,0.2945975620517005,1.118165674679991e-10,1.1437716686301627e-07,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Chchd2,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CLIC1,0.2644255351311096,1.3553571204015933e-08,4.951409994495678e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Clic1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,CMC1,0.4379874160835641,7.491362024044077e-12,2.2211888401290688e-08,1,gamma-delta T cell,up,protein_coding,True,Cmc1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,COTL1,0.25631887245039786,2.362019076532778e-16,1.0649399208455682e-12,1,"effector memory CD4-positive, alpha-beta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,CST7,0.3084943636521769,4.746940053911114e-16,3.284091360630839e-12,1,gamma-delta T cell,up,protein_coding,True,Cst7,mapped_one_to_one,True,discovery
+Yazar,unadjusted,DDIT4,0.2511294230840788,5.025559525617831e-09,2.284731039446435e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Ddit4,mapped_one_to_one,True,discovery
+Yazar,unadjusted,DUSP1,0.2574642776920282,1.0999469811877665e-07,1.8822122486294687e-05,1,"effector memory CD4-positive, alpha-beta T cell",up,protein_coding,True,Dusp1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,EIF3F,0.26365585509773226,3.4165579393675024e-08,9.879004297478902e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Eif3f,mapped_one_to_one,True,discovery
+Yazar,unadjusted,FCGR3A,0.3102322945378706,1.346476574427471e-09,1.0748508193170062e-06,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,FXYD5,0.3117256285822432,2.072448788717222e-14,1.0599539329894233e-10,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,GATA3,0.30700129836935053,1.8357304898539913e-13,4.694421795179119e-10,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Gata3,mapped_one_to_one,True,discovery
+Yazar,unadjusted,GSTP1,0.2614498179336984,1.188834511155879e-11,2.741584475448919e-08,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,GZMA,0.2524735300029147,2.8803887046384944e-10,3.0884826927277826e-07,1,gamma-delta T cell,up,protein_coding,True,Gzma,mapped_one_to_one,True,discovery
+Yazar,unadjusted,GZMB,0.3800243897400975,5.2451570038743384e-18,8.488630966145132e-15,2,"effector memory CD8-positive, alpha-beta T cell;gamma-delta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,GZMH,0.4199113490569345,1.8969159510392633e-26,2.455937081810534e-22,2,"effector memory CD8-positive, alpha-beta T cell;gamma-delta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,HLA-DPA1,0.29037776250286695,1.214426957176309e-10,1.8003879640138778e-07,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,HLA-DPB1,0.29037946368485146,3.665158661851138e-11,6.915488002429124e-08,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,HNRNPA0,0.26812251003490206,8.5228257090547e-09,3.487199367116821e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Hnrnpa0,mapped_one_to_one,True,discovery
+Yazar,unadjusted,ICAM3,0.3002557648546055,7.844121912884057e-12,1.3372920507815169e-08,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,IER2,0.32930769465609117,3.013381118279875e-06,0.010681833388078502,1,mucosal-associated invariant T cell,up,protein_coding,True,Ier2,mapped_one_to_one,True,discovery
+Yazar,unadjusted,IFITM2,0.25516880119237806,3.525111514888844e-08,9.879004297478902e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,IL7R,-0.3307659348979325,5.376394890050987e-10,5.072139815591283e-07,1,gamma-delta T cell,down,protein_coding,True,Il7r,mapped_one_to_one,True,discovery
+Yazar,unadjusted,ITGB1,0.3461647904838929,1.725951234841764e-11,2.5221078830280577e-08,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Itgb1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,ITGB2,0.27041900473603875,5.308438040376974e-09,2.3106388389368536e-06,2,"central memory CD8-positive, alpha-beta T cell;mucosal-associated invariant T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,JCHAIN,-0.3467653044378876,8.203063632266508e-15,4.6714396619849696e-11,1,transitional stage B cell,down,protein_coding,True,Jchain,mapped_one_to_one,True,discovery
+Yazar,unadjusted,KLRB1,-0.3731818181167825,4.266352633074964e-22,4.624224498926315e-18,1,"effector memory CD4-positive, alpha-beta T cell",down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,KLRF1,0.2868428851120052,1.8236952166296834e-10,2.5233862814099387e-07,1,gamma-delta T cell,up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,LDHA,0.26854307399484273,5.1829383201958274e-09,2.305055481621005e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Ldha,mapped_one_to_one,True,discovery
+Yazar,unadjusted,LGALS1,0.3028838979500527,3.6244523692497495e-22,1.87703139298706e-18,4,"central memory CD8-positive, alpha-beta T cell;effector memory CD8-positive, alpha-beta T cell;gamma-delta T cell;transitional stage B cell",up,protein_coding,True,Lgals1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,LITAF,0.26047853130024595,2.0493853980926717e-10,2.5325313403510995e-07,1,gamma-delta T cell,up,protein_coding,True,Litaf,mapped_one_to_one,True,discovery
+Yazar,unadjusted,LTB,-0.31102827236013125,3.529064744075723e-16,4.019428290265045e-12,2,gamma-delta T cell;transitional stage B cell,down,protein_coding,True,Ltb,mapped_one_to_one,True,discovery
+Yazar,unadjusted,NKG7,0.26646346280873623,7.944094127566821e-17,1.6487967361764936e-12,1,gamma-delta T cell,up,protein_coding,True,Nkg7,mapped_one_to_one,True,discovery
+Yazar,unadjusted,NOSIP,0.2525608782928241,2.654897102439505e-07,4.451957780467819e-05,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Nosip,mapped_one_to_one,True,discovery
+Yazar,unadjusted,P4HB,0.2891927762839048,5.456410167272107e-12,1.014793083655025e-08,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,P4hb,mapped_one_to_one,True,discovery
+Yazar,unadjusted,PLP2,0.3480888177673637,5.5670919654627106e-11,6.327309301635341e-08,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,,lost_no_one_to_one,False,discovery
+Yazar,unadjusted,PRF1,0.3116047632810096,4.86361416101062e-10,4.80687199579883e-07,1,gamma-delta T cell,up,protein_coding,True,Prf1,mapped_one_to_one,True,discovery
+Yazar,unadjusted,PTGDS,0.2541994099664048,3.508111308946342e-27,3.048197916343476e-23,1,natural killer cell,up,protein_coding,True,Ptgds,mapped_one_to_one,True,discovery
+Yazar,unadjusted,S100A11,0.2746759973257046,3.1717485923383363e-08,9.54229892677319e-06,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,S100a11,mapped_one_to_one,True,discovery
+Yazar,unadjusted,S100A4,0.2625465637144544,2.1698704694957334e-10,2.3603850967174586e-07,1,regulatory T cell,up,protein_coding,True,S100a4,mapped_one_to_one,True,discovery
+Yazar,unadjusted,SELL,-0.2551217745930218,7.278230048286105e-11,1.258830538768151e-07,1,gamma-delta T cell,down,protein_coding,True,Sell,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TOMM20,0.2707943559334575,9.218771721561935e-10,5.36504463648965e-07,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Tomm20,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TRIR,0.2681753273578239,6.831750676510025e-10,4.4927760194005727e-07,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Trir,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TSC22D3,0.2702808796693924,2.1165219820825632e-23,1.3792844626736542e-19,5,"effector memory CD4-positive, alpha-beta T cell;effector memory CD8-positive, alpha-beta T cell;memory B cell;natural killer cell;regulatory T cell",up,protein_coding,True,Tsc22d3,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TSHZ2,0.318148293759414,9.776998078471718e-72,2.5982372393538592e-67,1,"naive thymus-derived CD4-positive, alpha-beta T cell",up,protein_coding,True,Tshz2,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TSPO,0.30410630416714085,4.1614250624020744e-13,9.459381547402404e-10,1,"central memory CD8-positive, alpha-beta T cell",up,protein_coding,True,Tspo,mapped_one_to_one,True,discovery
+Yazar,unadjusted,TYROBP,0.39393417705688044,9.925591113710263e-11,1.5846587966542807e-07,1,gamma-delta T cell,up,protein_coding,True,Tyrobp,mapped_one_to_one,True,discovery
+Yazar,unadjusted,VIM,0.25235061724253105,2.068553258912868e-12,4.500344470090835e-09,1,regulatory T cell,up,protein_coding,True,Vim,mapped_one_to_one,True,discovery
+Gao,batch_adjusted,TNFRSF19,-0.365527426210543,5.5636341373886094e-06,0.029542897269533516,1,Cardiomyocyte,down,protein_coding,True,Tnfrsf19,mapped_one_to_one,True,discovery
+Gao,unadjusted,ABCC4,-0.25911039923458196,2.2078235648491644e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Abcc4,mapped_one_to_one,True,discovery
+Gao,unadjusted,ABI3BP,-0.3401351862547808,0.005599436381889983,0.027896003240539594,1,Fibroblast,down,protein_coding,True,Abi3bp,mapped_one_to_one,True,discovery
+Gao,unadjusted,ACTB,-0.35818510042204893,0.00594658587684978,0.028714493185273415,1,Fibroblast,down,protein_coding,True,Actb,mapped_one_to_one,True,discovery
+Gao,unadjusted,ACTG1,-0.25708764439344073,0.003979840823026192,0.025248452533176913,1,Fibroblast,down,protein_coding,True,Actg1,mapped_one_to_one,True,discovery
+Gao,unadjusted,AFAP1,-0.2703530300059871,0.0003186810339679037,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Afap1,mapped_one_to_one,True,discovery
+Gao,unadjusted,AGAP1,-0.26923425956383634,0.00938030082265792,0.0343750154370694,1,Fibroblast,down,protein_coding,True,Agap1,mapped_one_to_one,True,discovery
+Gao,unadjusted,AKAP13,-0.28818699076110493,0.0059134434547975945,0.02863788304833773,1,Fibroblast,down,protein_coding,True,Akap13,mapped_one_to_one,True,discovery
+Gao,unadjusted,APP,-0.2761927945758837,0.003315232042303658,0.024248334673702188,1,Fibroblast,down,protein_coding,True,App,mapped_one_to_one,True,discovery
+Gao,unadjusted,ARGLU1,-0.27880578961242947,0.0133541341831827,0.040640437680496785,1,Fibroblast,down,protein_coding,True,Arglu1,mapped_one_to_one,True,discovery
+Gao,unadjusted,ARHGAP21,-0.2743534898528049,0.005186586073334558,0.02715534018468855,1,Fibroblast,down,protein_coding,True,Arhgap21,mapped_one_to_one,True,discovery
+Gao,unadjusted,ARHGAP29,-0.31203259161986263,0.00021724903104661993,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Arhgap29,mapped_one_to_one,True,discovery
+Gao,unadjusted,ARID1B,-0.3227047857145862,0.0018338011471083263,0.02209536717696757,1,Fibroblast,down,protein_coding,True,Arid1b,mapped_one_to_one,True,discovery
+Gao,unadjusted,ASPN,-0.31912576843100227,0.0016284147635195192,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Aspn,mapped_one_to_one,True,discovery
+Gao,unadjusted,ATP2A2,-0.3023149201770777,0.0030083931216401665,0.023689422851076544,1,Fibroblast,down,protein_coding,True,Atp2a2,mapped_one_to_one,True,discovery
+Gao,unadjusted,ATXN1,-0.25407509901500647,0.006840332031245146,0.030209728100286996,1,Fibroblast,down,protein_coding,True,Atxn1,mapped_one_to_one,True,discovery
+Gao,unadjusted,AUTS2,-0.2766683440553331,0.005853013047863453,0.028478466051455344,1,Fibroblast,down,protein_coding,True,Auts2,mapped_one_to_one,True,discovery
+Gao,unadjusted,BAZ2B,-0.2734471830240382,0.0026207478492452437,0.023232634970524302,1,Fibroblast,down,protein_coding,True,Baz2b,mapped_one_to_one,True,discovery
+Gao,unadjusted,BBX,-0.2883909684404589,0.0001756243583830447,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Bbx,mapped_one_to_one,True,discovery
+Gao,unadjusted,BGN,-0.3122633318904942,0.00011370022880416057,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Bgn,mapped_one_to_one,True,discovery
+Gao,unadjusted,BICC1,-0.2694646203067634,0.012232592695886599,0.038769633614723936,1,Fibroblast,down,protein_coding,True,Bicc1,mapped_one_to_one,True,discovery
+Gao,unadjusted,BNC2,-0.38652653080367105,0.00022015659191055255,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Bnc2,mapped_one_to_one,True,discovery
+Gao,unadjusted,C1S,-0.2906646237625738,0.008926120647891965,0.03366313965930848,1,Fibroblast,down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Gao,unadjusted,C1orf21,-0.3434132147480383,0.00037753341576168495,0.021130613278021567,1,Fibroblast,down,protein_coding,True,1700025G04Rik,mapped_one_to_one,True,discovery
+Gao,unadjusted,CACNA2D1,-0.3041338340404506,0.0022887987125807465,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Cacna2d1,mapped_one_to_one,True,discovery
+Gao,unadjusted,CAMK2D,-0.30105681126469774,0.009324004632292139,0.03429414371291677,1,Fibroblast,down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Gao,unadjusted,CCDC80,-0.5951211322298597,2.0251392589300553e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ccdc80,mapped_one_to_one,True,discovery
+Gao,unadjusted,CD63,-0.29546804949124594,0.002861145931439388,0.023481738633606107,1,Fibroblast,down,protein_coding,True,Cd63,mapped_one_to_one,True,discovery
+Gao,unadjusted,CDC42BPA,-0.2931068327355813,0.0009808550637742696,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Cdc42bpa,mapped_one_to_one,True,discovery
+Gao,unadjusted,CDK14,-0.30220961814122715,0.0013159765380757115,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Cdk14,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL15A1,-0.3723191747512071,0.004018382562236752,0.025260759965527128,1,Fibroblast,down,protein_coding,True,Col15a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL1A1,-0.4437463526987426,4.3375776620286706e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Col1a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL1A2,-0.5225839058984414,3.555600407533527e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Col1a2,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL3A1,-0.5916709960974758,2.794060824673259e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Col3a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL4A1,-0.2704159569908627,0.01900785290656734,0.049662964868233184,1,Fibroblast,down,protein_coding,True,Col4a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL4A3,-0.3279577804505007,0.001760855647619822,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Col4a3,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL4A4,-0.39646574610532176,0.00028349490838803127,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Col4a4,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL5A1,-0.32417395080554817,0.0015426066602936387,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Col5a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL5A2,-0.3866919666753749,0.0004534111176723314,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Col5a2,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL6A1,-0.3691508749762906,0.0011965901331156186,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Col6a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL6A2,-0.36319349721466004,0.0023052354453898757,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Col6a2,mapped_one_to_one,True,discovery
+Gao,unadjusted,COL6A3,-0.3606913231300614,0.001002001495760034,0.021302826097465217,1,Fibroblast,down,protein_coding,True,Col6a3,mapped_one_to_one,True,discovery
+Gao,unadjusted,CREB3L2,-0.2745241132396639,0.002217281364949716,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Creb3l2,mapped_one_to_one,True,discovery
+Gao,unadjusted,CUX1,-0.2728244931710151,0.010233324947422746,0.03575921306218316,1,Fibroblast,down,protein_coding,True,Cux1,mapped_one_to_one,True,discovery
+Gao,unadjusted,CXCL12,-0.26591461763733476,3.357293453024751e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Cxcl12,mapped_one_to_one,True,discovery
+Gao,unadjusted,DAAM1,-0.28712774996777446,0.00033559821914868503,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Daam1,mapped_one_to_one,True,discovery
+Gao,unadjusted,DCAF6,-0.2552031070369288,0.0006217110519224666,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Dcaf6,mapped_one_to_one,True,discovery
+Gao,unadjusted,DCLK1,-0.3012696255979121,0.002792781853610332,0.023372139117495354,1,Fibroblast,down,protein_coding,True,Dclk1,mapped_one_to_one,True,discovery
+Gao,unadjusted,DDX17,-0.3296620604021194,0.00729298905486579,0.031045588497164482,1,Fibroblast,down,protein_coding,True,Ddx17,mapped_one_to_one,True,discovery
+Gao,unadjusted,DDX5,-0.3179711792619441,0.009268191740030147,0.034226605356393575,1,Fibroblast,down,protein_coding,True,Ddx5,mapped_one_to_one,True,discovery
+Gao,unadjusted,DPYD,-0.3069935322296857,0.002153396688507322,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Dpyd,mapped_one_to_one,True,discovery
+Gao,unadjusted,DST,-0.27822654071530506,0.017745517391603894,0.0474917527624312,1,Fibroblast,down,protein_coding,True,Dst,mapped_one_to_one,True,discovery
+Gao,unadjusted,DYM,-0.26132984406325815,0.0007237179503284496,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Dym,mapped_one_to_one,True,discovery
+Gao,unadjusted,EBF1,-0.2782098346894644,0.004391986957832391,0.025817866074654187,1,Fibroblast,down,protein_coding,True,Ebf1,mapped_one_to_one,True,discovery
+Gao,unadjusted,EBF2,-0.30958451774613543,0.005019410746789241,0.026849970851696645,1,Fibroblast,down,protein_coding,True,Ebf2,mapped_one_to_one,True,discovery
+Gao,unadjusted,EBF3,-0.2744173907306454,0.0023585660393552325,0.02261080096398987,1,Fibroblast,down,protein_coding,True,Ebf3,mapped_one_to_one,True,discovery
+Gao,unadjusted,EEF1A1,-0.35798691188880416,0.0147602647439482,0.0428836435110514,1,Fibroblast,down,protein_coding,True,Eef1a1,mapped_one_to_one,True,discovery
+Gao,unadjusted,EHBP1,-0.3130880775874442,0.0004412295391680759,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ehbp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,ELN,-0.3219467581467377,0.007721750629191323,0.031664200165717166,1,Fibroblast,down,protein_coding,True,Eln,mapped_one_to_one,True,discovery
+Gao,unadjusted,ENG,-0.3073946882460475,9.161723522660595e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Eng,mapped_one_to_one,True,discovery
+Gao,unadjusted,EPB41L2,-0.36560260979106457,0.0005726401638328606,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Epb41l2,mapped_one_to_one,True,discovery
+Gao,unadjusted,EPS15,-0.25162641974689004,0.001977340869370943,0.022355882924095526,1,Fibroblast,down,protein_coding,True,Eps15,mapped_one_to_one,True,discovery
+Gao,unadjusted,EPS8,-0.2779427767656409,0.005664233987883103,0.02797338272191469,1,Fibroblast,down,protein_coding,True,Eps8,mapped_one_to_one,True,discovery
+Gao,unadjusted,ERC1,-0.2527184077405103,0.002480515447985121,0.022955593919843795,1,Fibroblast,down,protein_coding,True,Erc1,mapped_one_to_one,True,discovery
+Gao,unadjusted,EXOC4,-0.3056339893987279,0.000814112687363215,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Exoc4,mapped_one_to_one,True,discovery
+Gao,unadjusted,EXOC6B,-0.26308748176248714,0.00922920051606657,0.03419892166107012,1,Fibroblast,down,protein_coding,True,Exoc6b,mapped_one_to_one,True,discovery
+Gao,unadjusted,FAM110B,-0.2881750309451167,0.009065316671026724,0.03391509971100416,1,Fibroblast,down,protein_coding,True,Fam110b,mapped_one_to_one,True,discovery
+Gao,unadjusted,FBLN1,-0.3079712005980515,0.0006623322831886861,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Fbln1,mapped_one_to_one,True,discovery
+Gao,unadjusted,FBN1,-0.4238450030777437,0.0001596001937306498,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Fbn1,mapped_one_to_one,True,discovery
+Gao,unadjusted,FBXL17,-0.2502191407745818,0.002843526584792026,0.0234777411192402,1,Fibroblast,down,protein_coding,True,Fbxl17,mapped_one_to_one,True,discovery
+Gao,unadjusted,FCHSD2,-0.2849663122453525,0.0008054275324752239,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Fchsd2,mapped_one_to_one,True,discovery
+Gao,unadjusted,FGF7,-0.3170154832732794,0.00206008596508797,0.022398549547560934,1,Fibroblast,down,protein_coding,True,Fgf7,mapped_one_to_one,True,discovery
+Gao,unadjusted,FN1,-0.4004050993960778,0.005159611201057164,0.027087583366728542,1,Fibroblast,down,protein_coding,True,Fn1,mapped_one_to_one,True,discovery
+Gao,unadjusted,FNDC3B,-0.31685570202459884,0.0023782550663270447,0.022704319056690975,1,Fibroblast,down,protein_coding,True,Fndc3b,mapped_one_to_one,True,discovery
+Gao,unadjusted,FOXP2,-0.30537280059009075,0.0053340463714017855,0.02738361543552383,1,Fibroblast,down,protein_coding,True,Foxp2,mapped_one_to_one,True,discovery
+Gao,unadjusted,FSTL1,-0.3001492741995169,0.0012864022405058991,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Fstl1,mapped_one_to_one,True,discovery
+Gao,unadjusted,FTL,-0.32475229355931273,0.00930987217437832,0.03428333335177204,1,Fibroblast,down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Gao,unadjusted,GAB2,-0.2910638558704298,0.0023441683360971148,0.022590805562024825,1,Fibroblast,down,protein_coding,True,Gab2,mapped_one_to_one,True,discovery
+Gao,unadjusted,GAS7,-0.2862955212555929,0.012780672209166791,0.03971594256120552,1,Fibroblast,down,protein_coding,True,Gas7,mapped_one_to_one,True,discovery
+Gao,unadjusted,GLIS3,-0.32418257920393295,0.0012869451230941467,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Glis3,mapped_one_to_one,True,discovery
+Gao,unadjusted,GLS,-0.2524116933753175,0.009143824214880924,0.03406363647953668,1,Fibroblast,down,protein_coding,True,Gls,mapped_one_to_one,True,discovery
+Gao,unadjusted,GNAQ,-0.2724819400288792,0.0015052436787405278,0.022005128104256328,1,Fibroblast,down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Gao,unadjusted,GRK5,-0.41326599928717894,0.0013101784597461484,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Grk5,mapped_one_to_one,True,discovery
+Gao,unadjusted,GXYLT2,-0.250671626507822,0.002499552220676747,0.022991607118815413,1,Fibroblast,down,protein_coding,True,Gxylt2,mapped_one_to_one,True,discovery
+Gao,unadjusted,HSPG2,-0.2653453382210482,0.005350930123772231,0.027417277861592676,1,Fibroblast,down,protein_coding,True,Hspg2,mapped_one_to_one,True,discovery
+Gao,unadjusted,IFITM3,-0.2751636219406177,0.015317341224456407,0.04380704590764642,1,Fibroblast,down,protein_coding,True,,lost_no_one_to_one,False,discovery
+Gao,unadjusted,IGF1,-0.2762653124077037,0.003131930173146221,0.023938561657402855,1,Fibroblast,down,protein_coding,True,Igf1,mapped_one_to_one,True,discovery
+Gao,unadjusted,IGFBP4,-0.25622001270061395,0.008258284693413762,0.0324825864607608,1,Fibroblast,down,protein_coding,True,Igfbp4,mapped_one_to_one,True,discovery
+Gao,unadjusted,IL6ST,-0.30145063048232856,0.0001674263561450157,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Il6st,mapped_one_to_one,True,discovery
+Gao,unadjusted,ITGA11,-0.25170447222156056,0.0010529653282624334,0.02134793941345419,1,Fibroblast,down,protein_coding,True,Itga11,mapped_one_to_one,True,discovery
+Gao,unadjusted,ITGB1,-0.30387960926966356,0.00010604445798300725,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Itgb1,mapped_one_to_one,True,discovery
+Gao,unadjusted,ITM2B,-0.2906499107207029,0.012099804891538387,0.03858778920269823,1,Fibroblast,down,protein_coding,True,Itm2b,mapped_one_to_one,True,discovery
+Gao,unadjusted,ITPR1,-0.35004714972275186,0.00122527463436512,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Itpr1,mapped_one_to_one,True,discovery
+Gao,unadjusted,LAMA4,-0.33432873875620617,0.0006666394273274312,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Lama4,mapped_one_to_one,True,discovery
+Gao,unadjusted,LDB2,-0.26642037504821636,0.013628741161056415,0.040994306400232,1,Fibroblast,down,protein_coding,True,Ldb2,mapped_one_to_one,True,discovery
+Gao,unadjusted,LGR4,-0.40059026358282085,1.29362532407065e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Lgr4,mapped_one_to_one,True,discovery
+Gao,unadjusted,LRP1,-0.2727087836949681,0.010843509914700279,0.03674848990834839,1,Fibroblast,down,protein_coding,True,Lrp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,LTBP1,-0.25425623916548323,0.011093665368308433,0.037156943125599105,1,Fibroblast,down,protein_coding,True,Ltbp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,MAP4,-0.25929831061655534,0.01402595830410191,0.04168258746629459,1,Fibroblast,down,protein_coding,True,Map4,mapped_one_to_one,True,discovery
+Gao,unadjusted,MAP4K3,-0.2801757034956453,0.002108614501216908,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Map4k3,mapped_one_to_one,True,discovery
+Gao,unadjusted,MAPK10,-0.3416280894765598,0.002193114458131442,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Mapk10,mapped_one_to_one,True,discovery
+Gao,unadjusted,MECOM,-0.3627096081495922,0.0010748058131823878,0.02144911347362593,1,Fibroblast,down,protein_coding,True,Mecom,mapped_one_to_one,True,discovery
+Gao,unadjusted,MED13L,-0.2609007650263272,0.007442665259195056,0.0312515859304066,1,Fibroblast,down,protein_coding,True,Med13l,mapped_one_to_one,True,discovery
+Gao,unadjusted,MGP,-0.5165167814806828,0.00022138160641270812,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Mgp,mapped_one_to_one,True,discovery
+Gao,unadjusted,MID1,-0.2549318160886959,0.00486293692792047,0.026616421107926325,1,Fibroblast,down,protein_coding,True,Mid1,mapped_one_to_one,True,discovery
+Gao,unadjusted,MYCBP2,-0.2619930467648751,0.0038436410989417997,0.025088123630267987,1,Fibroblast,down,protein_coding,True,Mycbp2,mapped_one_to_one,True,discovery
+Gao,unadjusted,MYH6,-0.5083039177700547,6.0397903666198773e-05,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Myh6,mapped_one_to_one,True,discovery
+Gao,unadjusted,MYL6,-0.25259468485157766,0.010736522172088576,0.03668356813868912,1,Fibroblast,down,protein_coding,True,Myl6,mapped_one_to_one,True,discovery
+Gao,unadjusted,MYO1B,-0.252689111242409,0.0021827866461841434,0.022501470983493088,1,Fibroblast,down,protein_coding,True,Myo1b,mapped_one_to_one,True,discovery
+Gao,unadjusted,N4BP2L2,-0.2728815896961969,0.007889844563278589,0.031817413084683784,1,Fibroblast,down,protein_coding,True,N4bp2l2,mapped_one_to_one,True,discovery
+Gao,unadjusted,NAV1,-0.2652365329010655,0.010238242099464662,0.03575921306218316,1,Fibroblast,down,protein_coding,True,Nav1,mapped_one_to_one,True,discovery
+Gao,unadjusted,NCAM2,-0.3332360428854383,0.00020122744049313123,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ncam2,mapped_one_to_one,True,discovery
+Gao,unadjusted,NCOA1,-0.33886897361972323,0.00021177465995948132,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ncoa1,mapped_one_to_one,True,discovery
+Gao,unadjusted,NCOA2,-0.26163219873166565,0.004113467000450883,0.025329543609270415,1,Fibroblast,down,protein_coding,True,Ncoa2,mapped_one_to_one,True,discovery
+Gao,unadjusted,NF1,-0.26316619046504697,0.0019010475537199261,0.02218585167088529,1,Fibroblast,down,protein_coding,True,Nf1,mapped_one_to_one,True,discovery
+Gao,unadjusted,NFIA,-0.30698442309285456,0.001651753195194657,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Nfia,mapped_one_to_one,True,discovery
+Gao,unadjusted,NFIB,-0.3976172362742149,0.0002738155613766648,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Nfib,mapped_one_to_one,True,discovery
+Gao,unadjusted,NOVA1,-0.25876571812772875,0.0047018140648336345,0.026335233024151444,1,Fibroblast,down,protein_coding,True,Nova1,mapped_one_to_one,True,discovery
+Gao,unadjusted,NRP1,-0.26544352719355224,0.0011566963866780466,0.02179123543567255,1,Fibroblast,down,protein_coding,True,Nrp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PAM,-0.2848069738467795,0.00934406251331977,0.034337004806732165,1,Fibroblast,down,protein_coding,True,Pam,mapped_one_to_one,True,discovery
+Gao,unadjusted,PARD3,-0.2775842684661131,0.004025231358797321,0.025260759965527128,1,Fibroblast,down,protein_coding,True,Pard3,mapped_one_to_one,True,discovery
+Gao,unadjusted,PBX1,-0.4080504132011399,0.00020582294556284225,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Pbx1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PCDH9,-0.29859728364886773,0.009682802858295484,0.03490135771447483,1,Fibroblast,down,protein_coding,True,Pcdh9,mapped_one_to_one,True,discovery
+Gao,unadjusted,PDE1A,-0.3452813229544975,0.00021100672800508454,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Pde1a,mapped_one_to_one,True,discovery
+Gao,unadjusted,PDE4D,-0.33019442618165257,0.003397162182226132,0.024287114063723362,1,Fibroblast,down,protein_coding,True,Pde4d,mapped_one_to_one,True,discovery
+Gao,unadjusted,PDE7A,-0.25527077922065033,0.003977382580174595,0.025245776046859937,1,Fibroblast,down,protein_coding,True,Pde7a,mapped_one_to_one,True,discovery
+Gao,unadjusted,PDGFRB,-0.27183766626244954,0.0010288491064360762,0.021302826097465217,1,Fibroblast,down,protein_coding,True,Pdgfrb,mapped_one_to_one,True,discovery
+Gao,unadjusted,PHF21A,-0.2589272467971076,0.003117300608618853,0.0239203269245175,1,Fibroblast,down,protein_coding,True,Phf21a,mapped_one_to_one,True,discovery
+Gao,unadjusted,PHLDB1,-0.26758510925781026,0.013299970707077497,0.040593236971252195,1,Fibroblast,down,protein_coding,True,Phldb1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PKNOX2,-0.2532690372278875,0.0030671408236565764,0.023834235207767215,1,Fibroblast,down,protein_coding,True,Pknox2,mapped_one_to_one,True,discovery
+Gao,unadjusted,PLAGL1,-0.2518863894237218,0.016972629838406344,0.0463207115514499,1,Fibroblast,down,protein_coding,True,Plagl1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PLCB1,-0.2634607669465971,0.011866193307024918,0.03829587912903301,1,Fibroblast,down,protein_coding,True,Plcb1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PLEKHA5,-0.27817557435923085,0.005117839399846706,0.02697099422009979,1,Fibroblast,down,protein_coding,True,Plekha5,mapped_one_to_one,True,discovery
+Gao,unadjusted,PPFIBP1,-0.3045276191387036,0.012383359275096683,0.03907823162684036,1,Fibroblast,down,protein_coding,True,Ppfibp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PPP3CA,-0.29429533779115447,0.0002994083996035416,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ppp3ca,mapped_one_to_one,True,discovery
+Gao,unadjusted,PRICKLE1,-0.26287743784263556,0.00890416643332903,0.03364270687288448,1,Fibroblast,down,protein_coding,True,Prickle1,mapped_one_to_one,True,discovery
+Gao,unadjusted,PSD3,-0.3282177925240064,0.006324761952849825,0.029348465658004613,1,Fibroblast,down,protein_coding,True,Psd3,mapped_one_to_one,True,discovery
+Gao,unadjusted,PTGIS,-0.3637257651403686,0.00010298710769903027,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ptgis,mapped_one_to_one,True,discovery
+Gao,unadjusted,PTPRD,-0.2554448763145644,0.0005990332881883519,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ptprd,mapped_one_to_one,True,discovery
+Gao,unadjusted,PTPRK,-0.2670035061890768,0.0026232832173039063,0.023232634970524302,1,Fibroblast,down,protein_coding,True,Ptprk,mapped_one_to_one,True,discovery
+Gao,unadjusted,PTPRS,-0.2984681397820858,0.00048208696049978415,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Ptprs,mapped_one_to_one,True,discovery
+Gao,unadjusted,PXDN,-0.26417624023313463,0.0018708854283516006,0.022130147445288514,1,Fibroblast,down,protein_coding,True,Pxdn,mapped_one_to_one,True,discovery
+Gao,unadjusted,QKI,-0.3037142478824024,0.00936378387821002,0.03436983345158655,1,Fibroblast,down,protein_coding,True,Qki,mapped_one_to_one,True,discovery
+Gao,unadjusted,RANBP17,-0.27026904313241185,2.311065671783097e-07,0.003680140975747404,1,Endothelial,down,protein_coding,True,Ranbp17,mapped_one_to_one,True,discovery
+Gao,unadjusted,RB1,-0.2512425314381232,0.0006159283494081751,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Rb1,mapped_one_to_one,True,discovery
+Gao,unadjusted,RBM39,-0.26573343138524275,0.0030988529131930364,0.023882306196015998,1,Fibroblast,down,protein_coding,True,Rbm39,mapped_one_to_one,True,discovery
+Gao,unadjusted,RBMS1,-0.27607417493226505,0.010530488911656751,0.0362881734719572,1,Fibroblast,down,protein_coding,True,Rbms1,mapped_one_to_one,True,discovery
+Gao,unadjusted,RERE,-0.26830987478061324,0.00434903693599406,0.02577899649071744,1,Fibroblast,down,protein_coding,True,Rere,mapped_one_to_one,True,discovery
+Gao,unadjusted,REV3L,-0.2524302073952266,0.004516244719094858,0.026028863377417184,1,Fibroblast,down,protein_coding,True,Rev3l,mapped_one_to_one,True,discovery
+Gao,unadjusted,ROBO1,-0.303552248931521,0.002533424596874505,0.023048231769395126,1,Fibroblast,down,protein_coding,True,Robo1,mapped_one_to_one,True,discovery
+Gao,unadjusted,RRBP1,-0.28352512784360656,0.0037311510446096084,0.024945921145503473,1,Fibroblast,down,protein_coding,True,Rrbp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,S100A4,-0.26632903103886296,0.0020963825225126056,0.022473333501767032,1,Fibroblast,down,protein_coding,True,S100a4,mapped_one_to_one,True,discovery
+Gao,unadjusted,SDCCAG8,-0.2500967788507911,0.002572686448429867,0.023232634970524302,1,Fibroblast,down,protein_coding,True,Sdccag8,mapped_one_to_one,True,discovery
+Gao,unadjusted,SEC24D,-0.2586645885345697,0.0048240576048642885,0.026609287484549722,1,Fibroblast,down,protein_coding,True,Sec24d,mapped_one_to_one,True,discovery
+Gao,unadjusted,SEC31A,-0.25209391215542154,0.0027076573251840807,0.023343455583711547,1,Fibroblast,down,protein_coding,True,Sec31a,mapped_one_to_one,True,discovery
+Gao,unadjusted,SERPINF1,-0.32503427614167535,0.004409534701361932,0.02583505323784811,1,Fibroblast,down,protein_coding,True,Serpinf1,mapped_one_to_one,True,discovery
+Gao,unadjusted,SETBP1,-0.38981848560858884,5.634722478574309e-06,0.019948159052063135,1,Fibroblast,down,protein_coding,True,Setbp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,SLC38A2,-0.259423607960804,0.0002211829465409002,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Slc38a2,mapped_one_to_one,True,discovery
+Gao,unadjusted,SLC9A9,-0.27589265112452466,0.008226331517420202,0.032436995314976194,1,Fibroblast,down,protein_coding,True,Slc9a9,mapped_one_to_one,True,discovery
+Gao,unadjusted,SMAD3,-0.27596168298990925,0.006276955563575426,0.029232811227391648,1,Fibroblast,down,protein_coding,True,Smad3,mapped_one_to_one,True,discovery
+Gao,unadjusted,SMC5,-0.2812233822088588,0.00140673883205624,0.021927356844082153,1,Fibroblast,down,protein_coding,True,Smc5,mapped_one_to_one,True,discovery
+Gao,unadjusted,SMG6,-0.27397038681926106,0.002477869915979092,0.022949109163690078,1,Fibroblast,down,protein_coding,True,Smg6,mapped_one_to_one,True,discovery
+Gao,unadjusted,SNX9,-0.3260040096368822,0.00013177909135326084,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Snx9,mapped_one_to_one,True,discovery
+Gao,unadjusted,SOBP,-0.3037657620908374,0.0008569701491736709,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Sobp,mapped_one_to_one,True,discovery
+Gao,unadjusted,SPARC,-0.35952211553380026,0.0001326155804521845,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Sparc,mapped_one_to_one,True,discovery
+Gao,unadjusted,SPRY1,-0.28424803287912404,0.0033306587569859143,0.024248334673702188,1,Fibroblast,down,protein_coding,True,Spry1,mapped_one_to_one,True,discovery
+Gao,unadjusted,SPTBN1,-0.2912578034933203,0.011299779386685515,0.03744653331181615,1,Fibroblast,down,protein_coding,True,Sptbn1,mapped_one_to_one,True,discovery
+Gao,unadjusted,SRSF11,-0.2747601728435551,0.0033617746726282076,0.024248334673702188,1,Fibroblast,down,protein_coding,True,Srsf11,mapped_one_to_one,True,discovery
+Gao,unadjusted,SSBP2,-0.3160273007799997,0.0018591311642599262,0.022130147445288514,1,Fibroblast,down,protein_coding,True,Ssbp2,mapped_one_to_one,True,discovery
+Gao,unadjusted,STAT3,-0.26191743006068524,0.006821800679466993,0.030186468006641445,1,Fibroblast,down,protein_coding,True,Stat3,mapped_one_to_one,True,discovery
+Gao,unadjusted,STK3,-0.32644114469415964,0.0009690382794944279,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Stk3,mapped_one_to_one,True,discovery
+Gao,unadjusted,SVIL,-0.3351776576604865,0.015637162732710184,0.04433173203987778,1,Fibroblast,down,protein_coding,True,Svil,mapped_one_to_one,True,discovery
+Gao,unadjusted,TANC2,-0.2540542935310914,0.002348873864925206,0.022595145331073995,1,Fibroblast,down,protein_coding,True,Tanc2,mapped_one_to_one,True,discovery
+Gao,unadjusted,TBC1D5,-0.27195453300296346,0.0038411904128762436,0.025088123630267987,1,Fibroblast,down,protein_coding,True,Tbc1d5,mapped_one_to_one,True,discovery
+Gao,unadjusted,TBX20,-0.3712830267215768,0.0017542092359054038,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Tbx20,mapped_one_to_one,True,discovery
+Gao,unadjusted,TCF12,-0.3200830251288859,0.0004603098174884898,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Tcf12,mapped_one_to_one,True,discovery
+Gao,unadjusted,TCF4,-0.2913232716994552,0.018228426076580873,0.048307906737636554,1,Fibroblast,down,protein_coding,True,Tcf4,mapped_one_to_one,True,discovery
+Gao,unadjusted,TCF7L2,-0.3033644415133076,0.0015012399514272312,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Tcf7l2,mapped_one_to_one,True,discovery
+Gao,unadjusted,TFPI,-0.28517360498950795,0.010919629719797482,0.03685970745307683,1,Fibroblast,down,protein_coding,True,Tfpi,mapped_one_to_one,True,discovery
+Gao,unadjusted,TIMP1,-0.2847424408689267,0.006818366222541322,0.030179653771904215,1,Fibroblast,down,protein_coding,True,Timp1,mapped_one_to_one,True,discovery
+Gao,unadjusted,TMSB10,-0.2903938247510591,0.004120884607738539,0.02535308492966844,1,Fibroblast,down,protein_coding,True,Tmsb10b,mapped_one_to_one,True,discovery
+Gao,unadjusted,TMSB4X,-0.34217870940515405,0.008416286376969326,0.03278832036809033,1,Fibroblast,down,protein_coding,True,Tmsb4x,mapped_one_to_one,True,discovery
+Gao,unadjusted,TMTC2,-0.2557388152615541,0.00319965220235007,0.024091745278010376,1,Fibroblast,down,protein_coding,True,Tmtc2,mapped_one_to_one,True,discovery
+Gao,unadjusted,TNFRSF19,-0.37203570821553106,7.369732609533861e-06,0.021130613278021567,2,Cardiomyocyte;Fibroblast,down,protein_coding,True,Tnfrsf19,mapped_one_to_one,True,discovery
+Gao,unadjusted,TRPS1,-0.3732734829362486,0.0007524967044953019,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Trps1,mapped_one_to_one,True,discovery
+Gao,unadjusted,TSHZ2,-0.2868174862494031,0.006829417931980781,0.030186633644964996,1,Fibroblast,down,protein_coding,True,Tshz2,mapped_one_to_one,True,discovery
+Gao,unadjusted,TTC3,-0.25788092177786703,0.0033595656124789817,0.024248334673702188,1,Fibroblast,down,protein_coding,True,Ttc3,mapped_one_to_one,True,discovery
+Gao,unadjusted,UBE2E2,-0.26415943275943576,0.00563434085689521,0.027946900057031803,1,Fibroblast,down,protein_coding,True,Ube2e2,mapped_one_to_one,True,discovery
+Gao,unadjusted,UNC5C,-0.3479204264028948,0.0005888307980563214,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Unc5c,mapped_one_to_one,True,discovery
+Gao,unadjusted,USP34,-0.2515016165114831,0.005408916419652059,0.027521310206189666,1,Fibroblast,down,protein_coding,True,Usp34,mapped_one_to_one,True,discovery
+Gao,unadjusted,VCAN,-0.3754451847775411,0.0015535218304532656,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Vcan,mapped_one_to_one,True,discovery
+Gao,unadjusted,VIM,-0.3359496034490711,0.018396491852986797,0.048592116435917196,1,Fibroblast,down,protein_coding,True,Vim,mapped_one_to_one,True,discovery
+Gao,unadjusted,VPS13B,-0.3218226706016235,0.0010152086008971772,0.021302826097465217,1,Fibroblast,down,protein_coding,True,Vps13b,mapped_one_to_one,True,discovery
+Gao,unadjusted,WSB1,-0.3024448392971764,0.0077899900608537995,0.031721508606697604,1,Fibroblast,down,protein_coding,True,Wsb1,mapped_one_to_one,True,discovery
+Gao,unadjusted,WWOX,-0.25082134968993514,0.00418655827517646,0.025410075036963835,1,Fibroblast,down,protein_coding,True,Wwox,mapped_one_to_one,True,discovery
+Gao,unadjusted,WWTR1,-0.2837710714476688,0.002856741246789809,0.0234777411192402,1,Fibroblast,down,protein_coding,True,Wwtr1,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZEB2,-0.32995416229751,0.0015285321423421539,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Zeb2,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZFAND3,-0.2852300102698707,0.0036629280859040696,0.024875531107474473,1,Fibroblast,down,protein_coding,True,Zfand3,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZFPM2,-0.3062723273934826,0.0016917140600184821,0.022005128104256328,1,Fibroblast,down,protein_coding,True,Zfpm2,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZMYM2,-0.25722575700725603,0.000828620338524919,0.021130613278021567,1,Fibroblast,down,protein_coding,True,Zmym2,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZNF638,-0.263845083345527,0.0033263565017228286,0.024248334673702188,1,Fibroblast,down,protein_coding,True,Zfp638,mapped_one_to_one,True,discovery
+Gao,unadjusted,ZNF704,-0.27757526445370384,0.0046746204328797095,0.026322624070616394,1,Fibroblast,down,protein_coding,True,Zfp704,mapped_one_to_one,True,discovery
