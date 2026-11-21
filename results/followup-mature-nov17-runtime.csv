@@ -1,0 +1,5 @@
+pipeline,start_utc,end_utc,duration_seconds,model_used,status,details
+mature_nov17_depth,2026-11-21T20:33:07.616654+00:00,2026-11-21T20:33:07.914705+00:00,0.2980670659999305,kimi-code/k3.1-pro,completed,
+mature_nov17_distances_gao,2026-11-21T20:38:19.053456+00:00,2026-11-21T20:39:42.893177+00:00,83.83970570400015,kimi-code/k3.1-pro,completed,mature donors 109; reference donors 12; retained genes 15930; max RSS MB 2183.6
+mature_nov17_distances_yazar,2026-11-21T20:39:43.701828+00:00,2026-11-21T20:41:40.825476+00:00,117.12364468499982,kimi-code/k3.1-pro,completed,mature donors 932; reference donors 59; retained genes 35307; max RSS MB 2183.6
+mature_nov17_donor_spread,2026-11-21T20:38:15.609731+00:00,2026-11-21T20:41:42.779147+00:00,207.16943763699965,kimi-code/k3.1-pro,completed,comparisons 12; supplement rows 12
