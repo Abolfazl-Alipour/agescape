@@ -126,9 +126,32 @@ The original raw central-memory CD4 and naive-CD4 nominal Levene signals persist
 
 ## Survivor-bias correlation
 
-PENDING. Mature composition is complete in `results/followup-mature-composition-mouse.csv` and `results/followup-mature-composition-human.csv`. Item 4 has produced `results/followup-mature-drift-mouse-donors.csv`, but the required `results/followup-mature-drift-human-donors.csv` does not yet exist. The exact dependency is completion of Item 4 mature full-depth drift donor outputs for both species.
+### Mature join and methods
 
-When those outputs exist, regenerate unit-level unadjusted and depth-adjusted Hellinger slopes from the full-depth mature donor outputs using the original `fit_unit` model. Inner-join mature composition and mature drift on the common unit key `species`, `organ` or `tissue`, `cohort`, `cell_type`. Then rerun Pearson, Spearman, absolute-slope, and unadjusted-sensitivity tests with 10,000 shuffles and seed 20261117 separately for mouse and human. The legacy joined CSV was not read or filtered, and no survivor result is claimed here.
+Per-unit drift slopes were regenerated from the Item 4 full-depth mature donor endpoints with the original `fit_unit` implementation in `scripts/run_cross_species_expression_vector.py`. Mouse rows were restricted to full depth and mice aged at least 18 months from the 18-month reference table. All human scored donors were at least 30 years old and all human reference windows were exactly 30 to 39 years. The primary model regresses profile Hellinger distance on age, sex, and mean log UMI; the sensitivity model omits mean log UMI. Slopes are per year.
+
+Composition inputs are the mature-only, age-plus-sex CLR slopes in `results/followup-mature-composition-mouse.csv` and `results/followup-mature-composition-human.csv`. The exact inner-join keys are `species`, `organ` or `tissue`, `cohort`, and `cell_type`. The join retained 51 of 114 mouse composition units and 87 of 285 human composition units, 138 units total. Every joined unit has both depth-adjusted and unadjusted drift slopes. The legacy joined CSV was neither read nor filtered.
+
+Pearson, Spearman, absolute-slope, and unadjusted-sensitivity tests were rerun separately by species with two-sided p-values and 10,000 label shuffles, seed 20261117, using the original test order and permutation implementation. Share loss is minus the CLR fraction slope, so survivor bias predicts a negative correlation between share loss and drift. The complete 20-row result table is `results/followup-mature-nov17-survivor.csv`; the regenerated units are `results/followup-mature-nov17-survivor-joined.csv`; the pipeline is `scripts/run_mature_nov17_survivor.py`.
+
+### Results and verdict
+
+| Scope | Test | Pearson r | p | Permutation p | Spearman rho | p | Permutation p |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Mouse, N = 51 | Share loss vs drift | -0.057408 | 0.689053 | 0.668133 | +0.138733 | 0.331600 | 0.328867 |
+| Mouse, N = 51 | Share loss vs absolute drift | +0.227395 | 0.108545 | 0.114689 | +0.072127 | 0.614983 | 0.616038 |
+| Mouse, N = 51 | Fraction slope vs drift, unadjusted | +0.128605 | 0.368440 | 0.357164 | -0.036380 | 0.799921 | 0.803520 |
+| Human, N = 87 | Share loss vs drift | -0.195875 | 0.069029 | 0.075092 | -0.100587 | 0.353929 | 0.353865 |
+| Human, N = 87 | Share loss vs absolute drift | +0.287452 | 0.006942 | 0.007999 | +0.142925 | 0.186627 | 0.195580 |
+| Human, N = 87 | Fraction slope vs drift, unadjusted | +0.051811 | 0.633652 | 0.617338 | -0.096741 | 0.372723 | 0.376662 |
+
+The original verdict of no support for survivor bias SURVIVED. Neither species has a significant primary Pearson or Spearman correlation. Mouse Pearson is near zero and mouse Spearman is in the opposite direction from the prediction. Human Pearson is in the predicted direction but is not significant by either its analytic or permutation p-value, and human Spearman is null. The significant human Pearson correlation between share loss and absolute drift is positive, opposite the survivor-bias prediction; its Spearman counterpart is not significant.
+
+The original nominal mouse share-loss Pearson signal DIED: r changed from +0.250201, p 0.049843, permutation p 0.048795, N 62, to -0.057408, p 0.689053, permutation p 0.668133, N 51. The original human share-loss Pearson was +0.078340, p 0.366446, permutation p 0.211879, N 135; it changed sign but remains non-significant. The original human share-loss Spearman was +0.151210, p 0.080008, permutation p 0.073193; the mature result is -0.100587, p 0.353929, permutation p 0.353865. The original absolute-drift tests were all null; the new human Pearson absolute-drift result is therefore new, not a survival of an original signal.
+
+Descriptively, mouse has 30 losing and 21 gaining units. Mean signed drift is -0.002502345 per year in losing units versus -0.004861982 in gaining units; mean absolute drift is 0.017079600 versus 0.012472379. Human has 45 losing and 42 gaining units. Mean signed drift is -0.000106741 per year in losing units versus +0.000047542 in gaining units; mean absolute drift is 0.000431215 versus 0.000284267. Thus losing types have greater mean absolute drift in both species, despite the human signed-mean difference.
+
+These remain ecological correlations across selected units that share donors, not causal evidence or a within-type cell-survival test. The smaller mature joined set and non-significant primary tests do not establish absence of survivor bias.
 
 ## Runtime and verification
 
@@ -138,7 +161,8 @@ When those outputs exist, regenerate unit-level unadjusted and depth-adjusted He
 | Gao distance rebuild | 2026-11-21T20:38:19.053456+00:00 | 2026-11-21T20:39:42.893177+00:00 | 83.839706 | completed |
 | Yazar distance rebuild | 2026-11-21T20:39:43.701828+00:00 | 2026-11-21T20:41:40.825476+00:00 | 117.123645 | completed |
 | complete donor-spread pipeline | 2026-11-21T20:38:15.609731+00:00 | 2026-11-21T20:41:42.779147+00:00 | 207.169438 | completed |
+| survivor bias | 2026-11-21T20:58:20.202929+00:00 | 2026-11-21T20:59:02.815794+00:00 | 42.612863 | completed |
 
-The first donor-spread launch failed before analysis because the repository import path was missing. The corrected run above completed. Maximum reported resident memory was 2,183.6 MB. The raw-data distance audit table is `results/followup-mature-nov17-donor-spread-distances.csv`. No survivor-bias runtime or result exists while that arm is pending.
+The first donor-spread launch failed before analysis because the repository import path was missing. The corrected run above completed. Maximum reported resident memory was 2,183.6 MB. The raw-data distance audit table is `results/followup-mature-nov17-donor-spread-distances.csv`. The survivor-bias pipeline used only committed composition and donor CSVs, loaded no count matrices, and did not read the legacy joined CSV. Its model was kimi-code/k3.1-pro.
 
-One self-review pass checked all script age filters, reference construction, output ages, reference ranges, donor and reference floors, CI ordering, variance-ratio arithmetic, descriptives, supplement floors, and forbidden dash characters. New distances differ from the young-reference distances for every donor-group pair where both exist, so no full-range distance was relabeled as mature. All committed mature cell counts matched the raw-data rebuild. No real error remained after this pass. Survivor bias is unverified because its declared Item 4 dependency is incomplete; no other completed arm is unverified.
+One self-review pass checked all script age filters, reference construction, output ages, reference ranges, donor and reference floors, CI ordering, variance-ratio arithmetic, descriptives, supplement floors, and forbidden dash characters. New distances differ from the young-reference distances for every donor-group pair where both exist, so no full-range distance was relabeled as mature. All committed mature cell counts matched the raw-data rebuild. The survivor-bias review recomputed every joined slope from the mature composition and donor tables, verified the exact keys and one-to-one joins, confirmed all 51 mouse and 87 human fitted drift units matched composition, recomputed all analytic correlations and p-values, and checked mature ages, reference windows, output schemas, and forbidden dash characters. No age leakage, wrong join keys, duplicated full-range estimates, or other real errors remained after this pass. No completed arm is unverified.
