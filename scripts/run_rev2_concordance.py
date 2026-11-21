@@ -266,14 +266,15 @@ def mouse_qc_source():
     raise FileNotFoundError("No TMS droplet raw file found in repo data/raw or the audit copy.")
 
 
-def mouse_strata(use_scrublet=True, tissues_only=None):
+def mouse_strata(use_scrublet=True, tissues_only=None, mature_only=False):
     """Replicate M1 QC + Phase 1 aggregation for mouse. Yields
     (tissue, genes, units, qc_rows) per tissue.
     use_scrublet=False skips per-tissue scrublet (see the --no-scrublet note
     in main): the committed doublet fractions are <= 0.51% of cells in any
     tissue, so omitting doublet removal moves pseudobulk age slopes by a
     negligible amount; a one-tissue scrublet sensitivity is run separately.
-    tissues_only restricts the run to the named tissues."""
+    tissues_only restricts the run to the named tissues. mature_only removes
+    cells from mice younger than 18 months before donor aggregation."""
     import gc
 
     import anndata as ad
@@ -331,6 +332,12 @@ def mouse_strata(use_scrublet=True, tissues_only=None):
               f"final={part.n_obs}", flush=True)
         part.obs["age"] = part.obs["age"].astype(str).map(AGE_MAP_MONTHS)
         part.obs["sex_male"] = (part.obs["sex"].astype(str).str.lower() == "male").astype(float)
+        if mature_only:
+            part._inplace_subset_obs(part.obs["age"].to_numpy() >= 18)
+            donor_ages = part.obs.groupby("mouse.id", observed=True)["age"].first()
+            age_counts = donor_ages.value_counts().sort_index().to_dict()
+            print(f"  Mature donors {tissue}: n={len(donor_ages)}; "
+                  f"donors_by_age={age_counts}; cells={part.n_obs}", flush=True)
         if gene_keep is None:
             gene_keep = ~technical_gene_mask(part.var_names)
         genes = part.var_names.to_numpy()[gene_keep]
@@ -421,15 +428,16 @@ def stratum_correlations(slope_matrix, mask, tissue_of_unit):
 
 
 def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
-                  use_scrublet=True, tissues_only=None, resume_from=False):
+                  use_scrublet=True, tissues_only=None, resume_from=False, mature_only=False):
     """Joint donor-level permutation for mouse. Returns (species_rows, stratum_rows)."""
     import gc
+    import math
 
     rng = np.random.default_rng(seed)
     all_units, tissues, genes = [], [], None
     qc_rows = []
     for tissue, tissue_genes, units, qc in mouse_strata(
-            use_scrublet=use_scrublet, tissues_only=tissues_only):
+            use_scrublet=use_scrublet, tissues_only=tissues_only, mature_only=mature_only):
         genes = tissue_genes  # same gene list for every tissue after the mask
         for unit in units:
             if len(unit["metadata"]) >= 6:
@@ -445,13 +453,13 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
                     phase1[phase1["species"] == "Mouse"].itertuples()}
     mine = {(u["tissue"], u["cell_type"]) for u in all_units}
     print(f"Unit-list check vs Phase 1: mine={len(mine)} phase1={len(phase1_mouse)} "
-          f"missing={sorted(phase1_mouse - mine)} extra={sorted(mine - phase1_mouse)}", flush=True)
-    # Primary analysis uses exactly the Phase 1 unit set (78 units), so the
-    # ONLY change vs Phase 1 is the permutation scheme (+ detection rule).
-    # Extra units can occur when QC changes donor coverage; keep the primary
-    # analysis restricted to the prespecified Phase 1 unit set.
+          f"overlap={len(mine & phase1_mouse)} dropped={sorted(phase1_mouse - mine)} "
+          f"added={sorted(mine - phase1_mouse)}", flush=True)
+    # The full-range primary analysis uses exactly the Phase 1 unit set (78
+    # units). The mature analysis instead uses every unit with >=6 mature
+    # donors because the original list was prespecified for the full range.
     extra_units = sorted(mine - phase1_mouse)
-    if extra_units:
+    if extra_units and not mature_only:
         print(f"Excluding {len(extra_units)} units outside the prespecified primary set: "
               f"{extra_units}", flush=True)
         keep_idx = [i for i, u in enumerate(all_units)
@@ -459,14 +467,10 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
         all_units = [all_units[i] for i in keep_idx]
         tissues = [tissues[i] for i in keep_idx]
     # Donor pool: every mouse, one age and one sex (must be consistent across units).
-    # NOTE: the pool is 22 mice, not 23. Pooled donor 3-M-8/9 contributes to
-    # no Phase 1 unit at all: among the 90 units that pass the >=5-donor
-    # filter it appears in the metadata of exactly one unit, Liver
-    # hepatocyte, which is one of the 2 no-scrublet-only units excluded
-    # above. So Phase 1's concordance donor pool was 22 mice as well; the
-    # 23rd mouse only enters through the 2 extra units. The Hellinger /
-    # sign-test analyses use a different unit set (62 units) in which
-    # 3-M-8/9 does appear, so their n=23 is unaffected.
+    # NOTE: the full-range pool is 22 mice, not 23. Pooled donor 3-M-8/9
+    # contributes to no Phase 1 unit at all: among the 90 units that pass the
+    # >=5-donor filter it appears in the metadata of exactly one unit, Liver
+    # hepatocyte, which is one of the 2 no-scrublet-only units excluded above.
     donor_info = {}
     for unit in all_units:
         for row in unit["metadata"].itertuples():
@@ -480,6 +484,19 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
     donor_index = {d: i for i, d in enumerate(donors)}
     print(f"Donor pool: {len(donors)} mice; sexes: "
           f"{dict(zip(*np.unique(donor_sex, return_counts=True)))}", flush=True)
+    distinct_joint_assignments = 1
+    for sex_value in np.unique(donor_sex):
+        sex_ages = donor_age[donor_sex == sex_value]
+        ages, counts = np.unique(sex_ages, return_counts=True)
+        n_assignments = math.factorial(len(sex_ages))
+        for count in counts:
+            n_assignments //= math.factorial(int(count))
+        distinct_joint_assignments *= n_assignments
+        coarse = len(ages) < 3 or len(sex_ages) < 6
+        print(f"Permutation validity sex_male={sex_value}: n={len(sex_ages)}; "
+              f"ages={dict(zip(ages.tolist(), counts.tolist()))}; "
+              f"distinct_assignments={n_assignments}; coarse_null={coarse}", flush=True)
+    print(f"Distinct joint assignments across sex strata: {distinct_joint_assignments}", flush=True)
     # Gene sets are per stratum in Phase 1; here the gene list is shared, so use
     # one species-wide detection set per rule (strata differ only in which units
     # contribute; the per-stratum sets are computed below for the stratum table).
@@ -523,8 +540,12 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
     # (no OOM, no error, session record gone), so null draws are saved
     # every 200 iterations and --resume continues from them with a fresh
     # seed (null draws are iid, so resuming with a new seed stays valid).
-    checkpoint_path = os.path.join(os.path.expanduser("~"), "workspace", "rev2-scratch",
-                                   "rev2_concordance_checkpoint.npz")
+    if mature_only:
+        checkpoint_path = str(REPO / "scratch" / "rev2_concordance_checkpoint_mature.npz")
+    else:
+        checkpoint_path = os.path.join(os.path.expanduser("~"), "workspace", "rev2-scratch",
+                                       "rev2_concordance_checkpoint.npz")
+    print(f"Mouse checkpoint: {checkpoint_path}", flush=True)
     start_iteration = 0
     if resume_from and os.path.exists(checkpoint_path):
         saved = np.load(checkpoint_path, allow_pickle=True)
@@ -624,10 +645,12 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
             ceiling_cross.append(ceiling)
     ceiling_within_mean = float(np.mean(ceiling_within)) if ceiling_within else float("nan")
     ceiling_cross_mean = float(np.mean(ceiling_cross)) if ceiling_cross else float("nan")
+    missing_reliability = [f"{u['tissue']} | {u['cell_type']}"
+                           for u, value in zip(all_units, reliability) if not np.isfinite(value)]
     print(f"Split-half: units with an estimate={int(np.isfinite(reliability).sum())}/{len(all_units)}, "
           f"mean Spearman-Brown reliability={split_r_mean:.4f}; noise ceiling within="
           f"{ceiling_within_mean:.4f} (n_pairs={len(ceiling_within)}) cross={ceiling_cross_mean:.4f} "
-          f"(n_pairs={len(ceiling_cross)})", flush=True)
+          f"(n_pairs={len(ceiling_cross)}); missing_units={missing_reliability}", flush=True)
     # Per-stratum detail (primary set, joint null only).
     stratum_rows = []
     for tissue in sorted(set(tissues)):
@@ -649,7 +672,9 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
             "joint_p_greater_primary": float(
                 (1 + (sub_null >= sub_obs["within_mean"]).sum()) / (len(sub_null) + 1)),
             "n_permutations_joint": permutations,
-            "note": "Per-stratum joint null from the same species-wide joint permutations.",
+            "note": "Per-stratum joint null from the same species-wide joint permutations."
+                    + (" Scope: mature 18-plus months; cells filtered before pseudobulk aggregation."
+                       if mature_only else ""),
         })
     rows = []
     for scope, obs_key, null_within, null_cross, ceil in [
@@ -690,7 +715,7 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
                 "noise_ceiling_mean": ceil,
                 "noise_ceiling_ratio_observed_over_ceiling": (
                     float(obs_value / ceil) if np.isfinite(ceil) and ceil > 0 else float("nan")),
-                "split_half_reliability_mean": float(np.nanmean(reliability)),
+                "split_half_reliability_mean": split_r_mean,
                 "status": "redone_joint",
                 "notes": "Joint permutation: one age assignment per mouse, shared across "
                          "all its cell types, permuted within sex. Independent null is the "
@@ -703,8 +728,11 @@ def analyse_mouse(permutations=1000, split_half_reps=100, seed=20261108,
                             "in any tissue (results/m1-qc-summary.csv), so omitting it moves "
                             "pseudobulk age slopes negligibly; see the Bladder scrublet "
                             "sensitivity in the coordinator report.")
-                         + " Donor pool is 22 mice: pooled donor 3-M-8/9 contributes to "
-                           "no unit in the prespecified primary set.",
+                         + (" Scope: mature 18-plus months; cells filtered before pseudobulk "
+                            "aggregation and detection filtering. Units require >=6 mature donors."
+                            if mature_only else
+                            " Donor pool is 22 mice: pooled donor 3-M-8/9 contributes to "
+                            "no unit in the prespecified primary set."),
             })
     return rows, stratum_rows
 
@@ -1422,22 +1450,30 @@ def main():
     parser.add_argument("--tissues", default="",
                         help="Comma-separated tissue subset for the mouse run (sensitivity).")
     parser.add_argument("--resume", action="store_true",
-                        help="Resume the mouse permutation loop from the checkpoint npz "
-                             "in ~/workspace/rev2-scratch (fresh RNG stream for the rest).")
+                        help="Resume the mouse permutation loop from its checkpoint npz "
+                             "(fresh RNG stream for the rest).")
+    parser.add_argument("--mature-only", action="store_true",
+                        help="Restrict mouse cells to donors aged >=18 months before aggregation.")
+    parser.add_argument("--output-suffix", default="",
+                        help="Suffix appended to the output stem before the .csv extension.")
     args = parser.parse_args()
 
     if not args.skip_mouse:
         mouse_rows, stratum_rows = analyse_mouse(
             permutations=args.permutations, split_half_reps=args.split_half_reps, seed=args.seed,
             use_scrublet=not args.no_scrublet, resume_from=args.resume,
-            tissues_only=[t for t in args.tissues.split(",") if t] or None)
-        mouse_rows.extend(nmr_and_unavailable_rows())
+            tissues_only=[t for t in args.tissues.split(",") if t] or None,
+            mature_only=args.mature_only)
+        if not args.mature_only:
+            mouse_rows.extend(nmr_and_unavailable_rows())
+        output_stem = ("followup-mature-concordance-mouse" if args.mature_only
+                       else "reviewer-rev2-concordance") + args.output_suffix
         concordance = pd.DataFrame(mouse_rows)
-        emit(concordance, "reviewer-rev2-concordance.csv")
-        robust_write(concordance, RESULTS / "reviewer-rev2-concordance.csv")
+        emit(concordance, f"{output_stem}.csv")
+        robust_write(concordance, RESULTS / f"{output_stem}.csv")
         strata = pd.DataFrame(stratum_rows)
-        emit(strata, "reviewer-rev2-concordance-strata.csv")
-        robust_write(strata, RESULTS / "reviewer-rev2-concordance-strata.csv")
+        emit(strata, f"{output_stem}-strata.csv")
+        robust_write(strata, RESULTS / f"{output_stem}-strata.csv")
     if args.mouse_only:
         return
     if not args.skip_interaction:

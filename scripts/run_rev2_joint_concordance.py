@@ -29,7 +29,7 @@ SPECIES = ["Human", "Fruit fly", "C. elegans", "Zebrafish"]
 SLUGS = {"Human": "human", "Fruit fly": "fly", "C. elegans": "worm", "Zebrafish": "zebrafish"}
 
 
-def human_strata():
+def human_strata(mature_only=False):
     import anndata as ad
     from scripts.run_human_vector_gene_drivers import pseudobulk
     from scripts.run_m9_pipeline import COHORTS
@@ -41,6 +41,7 @@ def human_strata():
         ["cohort", "tissue", "cell_type"]].drop_duplicates()
     directory = CACHE.parent / "human-h5ads"
     cohort_order = sorted(eligible["cohort"].unique())
+    minimum_age = 30 if mature_only else 20
     for cohort, selected in eligible.groupby("cohort"):
         cache_path = CACHE / "human" / f"stratum-{cohort_order.index(cohort)}.pkl"
         if cache_path.exists():
@@ -62,7 +63,9 @@ def human_strata():
             keep = (obs["is_primary_data"].astype(str).str.lower().eq("true")
                     & obs["disease"].astype(str).eq("normal")
                     & obs["cell_type"].astype(str).isin(set(selected["cell_type"]))
-                    & obs["age"].between(20, 120))
+                    & obs["age"].between(minimum_age, 120))
+            print(f"Human {cohort}: donor age filter is {minimum_age}-plus before pseudobulk",
+                  flush=True)
             obs = obs.loc[keep].copy().sort_values("row")
             rows = obs["row"].to_numpy()
             library = np.empty(len(rows), dtype=np.float64)
@@ -112,13 +115,14 @@ LOADERS = {"Human": human_strata, "Fruit fly": phase1.fly_strata,
            "C. elegans": phase1.worm_strata, "Zebrafish": phase1.zebrafish_strata}
 
 
-def load_strata(species: str, refresh: bool = False):
+def load_strata(species: str, refresh: bool = False, mature_only: bool = False):
     directory = CACHE / SLUGS[species]
     directory.mkdir(parents=True, exist_ok=True)
     if refresh:
         for path in directory.glob("stratum-*.pkl"):
             path.unlink()
-    for index, (tissue, cohort, genes, units) in enumerate(LOADERS[species]()):
+    loader = human_strata(mature_only=mature_only) if species == "Human" else LOADERS[species]()
+    for index, (tissue, cohort, genes, units) in enumerate(loader):
         path = directory / f"stratum-{index}.pkl"
         if path.exists() and not refresh:
             with path.open("rb") as handle:
@@ -269,10 +273,14 @@ def main():
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--refresh-cache", action="store_true")
     parser.add_argument("--analysis-only", action="store_true")
+    parser.add_argument("--mature-only", action="store_true",
+                        help="Restrict human cells to donors aged >=30 years before aggregation.")
+    parser.add_argument("--output-suffix", default="",
+                        help="Suffix appended to the output stem before the .csv extension.")
     args = parser.parse_args()
     seed = args.seed if args.seed is not None else 20261108 + sum(map(ord, args.species))
     source = cached_strata(args.species) if args.analysis_only else load_strata(
-        args.species, refresh=args.refresh_cache)
+        args.species, refresh=args.refresh_cache, mature_only=args.mature_only)
     expected = {"Human": 7, "Fruit fly": 2, "C. elegans": 1, "Zebrafish": 1}[args.species]
     rows = []
     nulls = []
@@ -302,11 +310,14 @@ def main():
         "joint_p_greater": float((1 + (null >= observed).sum()) / (len(null) + 1)),
         "random_seed": seed,
     })
+    if args.mature_only:
+        summary["notes"] = ("Scope: mature 30-plus years; cells filtered before pseudobulk "
+                            "aggregation and detection filtering.")
     slug = SLUGS[args.species]
-    pd.DataFrame([summary]).to_csv(RESULTS / f"reviewer-rev2-joint-concordance-{slug}.csv",
-                                   index=False)
-    pd.DataFrame(rows).to_csv(RESULTS / f"reviewer-rev2-joint-concordance-{slug}-strata.csv",
-                              index=False)
+    output_stem = ("followup-mature-concordance" if args.mature_only
+                   else "reviewer-rev2-joint-concordance") + args.output_suffix
+    pd.DataFrame([summary]).to_csv(RESULTS / f"{output_stem}-{slug}.csv", index=False)
+    pd.DataFrame(rows).to_csv(RESULTS / f"{output_stem}-{slug}-strata.csv", index=False)
     print(pd.Series(summary).to_string(), flush=True)
 
 

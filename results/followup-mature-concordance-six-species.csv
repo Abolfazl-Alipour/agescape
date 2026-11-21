@@ -1,0 +1,7 @@
+species,scope,mature_to_old,p_value,source,q_bh_mature_family,notes
+Mouse,within_tissue,yes,0.0219780219780219,"results/followup-mature-concordance-mouse.csv (primary, 18-plus, 14 mice, 59 units)",0.0439560439560438,"Mature family BH over 2 tests (mouse within primary, human)."
+Human,within_tissue_or_cohort,yes,0.8151848151848152,"results/followup-mature-concordance-human.csv (primary, 30-plus, 416 donors, 127 units)",0.8151848151848152,"Mature family BH over 2 tests (mouse within primary, human)."
+Fruit fly,within_tissue,no,0.0009990009990009,"results/reviewer-rev2-concordance.csv (original, full analyzed window)",,NOT APPLICABLE as mature-to-old; no mouse/human mature rule applies. Retained as exploratory only.
+C. elegans,within_tissue,no,0.0029970029970029,"results/reviewer-rev2-concordance.csv (original, full analyzed window)",,NOT APPLICABLE as mature-to-old; no mouse/human mature rule applies. Retained as exploratory only.
+Zebrafish,within_tissue,no,0.3606393606393606,"results/reviewer-rev2-concordance.csv (original, full analyzed window)",,NOT APPLICABLE as mature-to-old; no zebrafish maturity definition authorized. Testis germline caveat remains.
+Naked mole-rat,within_tissue,no,0.7,"results/reviewer-rev2-concordance.csv (original, exact test, 5 animals)",,"NOT APPLICABLE as mature-to-old; no defined mature cutoff, 1.1 vs 11.3 years only. Do not claim a null beyond this tiny exploratory contrast."
