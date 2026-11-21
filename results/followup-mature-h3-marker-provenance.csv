@@ -1,0 +1,443 @@
+cell_type,excluded_donor,source_cell_type,n_marker_genes,n_all_marker_genes,n_stringent_marker_genes,reference_months
+fibroblast of lung,18-F-50,B cell,2,11,11,18
+fibroblast of lung,18-F-50,NK cell,2,11,11,18
+fibroblast of lung,18-F-50,bronchial smooth muscle cell,1,11,11,18
+fibroblast of lung,18-F-50,neutrophil,1,11,11,18
+fibroblast of lung,18-F-50,non-classical monocyte,1,11,11,18
+fibroblast of lung,18-F-50,vein endothelial cell,4,11,11,18
+fibroblast of lung,18-F-51,B cell,2,10,10,18
+fibroblast of lung,18-F-51,NK cell,2,10,10,18
+fibroblast of lung,18-F-51,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,18-F-51,intermediate monocyte,1,10,10,18
+fibroblast of lung,18-F-51,vein endothelial cell,4,10,10,18
+fibroblast of lung,18-M-52,B cell,1,7,7,18
+fibroblast of lung,18-M-52,bronchial smooth muscle cell,1,7,7,18
+fibroblast of lung,18-M-52,neutrophil,2,7,7,18
+fibroblast of lung,18-M-52,vein endothelial cell,3,7,7,18
+fibroblast of lung,18-M-53,B cell,1,11,11,18
+fibroblast of lung,18-M-53,NK cell,1,11,11,18
+fibroblast of lung,18-M-53,alveolar macrophage,1,11,11,18
+fibroblast of lung,18-M-53,bronchial smooth muscle cell,1,11,11,18
+fibroblast of lung,18-M-53,neutrophil,3,11,11,18
+fibroblast of lung,18-M-53,vein endothelial cell,4,11,11,18
+fibroblast of lung,21-F-54,B cell,2,10,10,18
+fibroblast of lung,21-F-54,NK cell,2,10,10,18
+fibroblast of lung,21-F-54,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,21-F-54,neutrophil,1,10,10,18
+fibroblast of lung,21-F-54,vein endothelial cell,4,10,10,18
+fibroblast of lung,21-F-55,B cell,2,10,10,18
+fibroblast of lung,21-F-55,NK cell,2,10,10,18
+fibroblast of lung,21-F-55,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,21-F-55,neutrophil,1,10,10,18
+fibroblast of lung,21-F-55,vein endothelial cell,4,10,10,18
+fibroblast of lung,30-M-2,B cell,2,10,10,18
+fibroblast of lung,30-M-2,NK cell,2,10,10,18
+fibroblast of lung,30-M-2,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,30-M-2,neutrophil,1,10,10,18
+fibroblast of lung,30-M-2,vein endothelial cell,4,10,10,18
+fibroblast of lung,30-M-3,B cell,2,10,10,18
+fibroblast of lung,30-M-3,NK cell,2,10,10,18
+fibroblast of lung,30-M-3,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,30-M-3,neutrophil,1,10,10,18
+fibroblast of lung,30-M-3,vein endothelial cell,4,10,10,18
+fibroblast of lung,30-M-4,B cell,2,10,10,18
+fibroblast of lung,30-M-4,NK cell,2,10,10,18
+fibroblast of lung,30-M-4,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,30-M-4,neutrophil,1,10,10,18
+fibroblast of lung,30-M-4,vein endothelial cell,4,10,10,18
+fibroblast of lung,30-M-5,B cell,2,10,10,18
+fibroblast of lung,30-M-5,NK cell,2,10,10,18
+fibroblast of lung,30-M-5,bronchial smooth muscle cell,1,10,10,18
+fibroblast of lung,30-M-5,neutrophil,1,10,10,18
+fibroblast of lung,30-M-5,vein endothelial cell,4,10,10,18
+bronchial smooth muscle cell,18-F-50,B cell,2,12,12,18
+bronchial smooth muscle cell,18-F-50,NK cell,2,12,12,18
+bronchial smooth muscle cell,18-F-50,adventitial cell,4,12,12,18
+bronchial smooth muscle cell,18-F-50,fibroblast of lung,2,12,12,18
+bronchial smooth muscle cell,18-F-50,non-classical monocyte,1,12,12,18
+bronchial smooth muscle cell,18-F-50,vein endothelial cell,1,12,12,18
+bronchial smooth muscle cell,18-F-51,B cell,2,9,9,18
+bronchial smooth muscle cell,18-F-51,NK cell,2,9,9,18
+bronchial smooth muscle cell,18-F-51,fibroblast of lung,4,9,9,18
+bronchial smooth muscle cell,18-F-51,intermediate monocyte,1,9,9,18
+bronchial smooth muscle cell,18-M-52,B cell,2,6,6,18
+bronchial smooth muscle cell,18-M-52,fibroblast of lung,2,6,6,18
+bronchial smooth muscle cell,18-M-52,neutrophil,2,6,6,18
+bronchial smooth muscle cell,18-M-53,B cell,2,10,10,18
+bronchial smooth muscle cell,18-M-53,NK cell,2,10,10,18
+bronchial smooth muscle cell,18-M-53,fibroblast of lung,4,10,10,18
+bronchial smooth muscle cell,18-M-53,neutrophil,1,10,10,18
+bronchial smooth muscle cell,18-M-53,vein endothelial cell,1,10,10,18
+bronchial smooth muscle cell,21-F-54,B cell,2,11,11,18
+bronchial smooth muscle cell,21-F-54,NK cell,2,11,11,18
+bronchial smooth muscle cell,21-F-54,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,21-F-54,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,21-F-54,vein endothelial cell,1,11,11,18
+bronchial smooth muscle cell,21-F-55,B cell,2,11,11,18
+bronchial smooth muscle cell,21-F-55,NK cell,2,11,11,18
+bronchial smooth muscle cell,21-F-55,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,21-F-55,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,21-F-55,vein endothelial cell,1,11,11,18
+bronchial smooth muscle cell,30-M-2,B cell,2,11,11,18
+bronchial smooth muscle cell,30-M-2,NK cell,2,11,11,18
+bronchial smooth muscle cell,30-M-2,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,30-M-2,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,30-M-2,vein endothelial cell,1,11,11,18
+bronchial smooth muscle cell,30-M-3,B cell,2,11,11,18
+bronchial smooth muscle cell,30-M-3,NK cell,2,11,11,18
+bronchial smooth muscle cell,30-M-3,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,30-M-3,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,30-M-3,vein endothelial cell,1,11,11,18
+bronchial smooth muscle cell,30-M-4,B cell,2,11,11,18
+bronchial smooth muscle cell,30-M-4,NK cell,2,11,11,18
+bronchial smooth muscle cell,30-M-4,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,30-M-4,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,30-M-4,vein endothelial cell,1,11,11,18
+bronchial smooth muscle cell,30-M-5,B cell,2,11,11,18
+bronchial smooth muscle cell,30-M-5,NK cell,2,11,11,18
+bronchial smooth muscle cell,30-M-5,adventitial cell,4,11,11,18
+bronchial smooth muscle cell,30-M-5,fibroblast of lung,2,11,11,18
+bronchial smooth muscle cell,30-M-5,vein endothelial cell,1,11,11,18
+alveolar macrophage,18-F-50,B cell,1,16,16,18
+alveolar macrophage,18-F-50,adventitial cell,8,16,16,18
+alveolar macrophage,18-F-50,bronchial smooth muscle cell,1,16,16,18
+alveolar macrophage,18-F-50,fibroblast of lung,2,16,16,18
+alveolar macrophage,18-F-50,neutrophil,1,16,16,18
+alveolar macrophage,18-F-50,vein endothelial cell,3,16,16,18
+alveolar macrophage,18-F-51,B cell,2,11,11,18
+alveolar macrophage,18-F-51,NK cell,1,11,11,18
+alveolar macrophage,18-F-51,bronchial smooth muscle cell,1,11,11,18
+alveolar macrophage,18-F-51,fibroblast of lung,4,11,11,18
+alveolar macrophage,18-F-51,vein endothelial cell,3,11,11,18
+alveolar macrophage,18-M-52,B cell,1,8,8,18
+alveolar macrophage,18-M-52,bronchial smooth muscle cell,1,8,8,18
+alveolar macrophage,18-M-52,fibroblast of lung,4,8,8,18
+alveolar macrophage,18-M-52,neutrophil,1,8,8,18
+alveolar macrophage,18-M-52,vein endothelial cell,1,8,8,18
+alveolar macrophage,18-M-53,B cell,1,11,11,18
+alveolar macrophage,18-M-53,bronchial smooth muscle cell,1,11,11,18
+alveolar macrophage,18-M-53,fibroblast of lung,4,11,11,18
+alveolar macrophage,18-M-53,neutrophil,2,11,11,18
+alveolar macrophage,18-M-53,vein endothelial cell,3,11,11,18
+alveolar macrophage,21-F-54,B cell,1,13,13,18
+alveolar macrophage,21-F-54,adventitial cell,5,13,13,18
+alveolar macrophage,21-F-54,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,21-F-54,fibroblast of lung,2,13,13,18
+alveolar macrophage,21-F-54,neutrophil,1,13,13,18
+alveolar macrophage,21-F-54,vein endothelial cell,3,13,13,18
+alveolar macrophage,21-F-55,B cell,1,13,13,18
+alveolar macrophage,21-F-55,adventitial cell,5,13,13,18
+alveolar macrophage,21-F-55,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,21-F-55,fibroblast of lung,2,13,13,18
+alveolar macrophage,21-F-55,neutrophil,1,13,13,18
+alveolar macrophage,21-F-55,vein endothelial cell,3,13,13,18
+alveolar macrophage,30-M-2,B cell,1,13,13,18
+alveolar macrophage,30-M-2,adventitial cell,5,13,13,18
+alveolar macrophage,30-M-2,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,30-M-2,fibroblast of lung,2,13,13,18
+alveolar macrophage,30-M-2,neutrophil,1,13,13,18
+alveolar macrophage,30-M-2,vein endothelial cell,3,13,13,18
+alveolar macrophage,30-M-3,B cell,1,13,13,18
+alveolar macrophage,30-M-3,adventitial cell,5,13,13,18
+alveolar macrophage,30-M-3,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,30-M-3,fibroblast of lung,2,13,13,18
+alveolar macrophage,30-M-3,neutrophil,1,13,13,18
+alveolar macrophage,30-M-3,vein endothelial cell,3,13,13,18
+alveolar macrophage,30-M-4,B cell,1,13,13,18
+alveolar macrophage,30-M-4,adventitial cell,5,13,13,18
+alveolar macrophage,30-M-4,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,30-M-4,fibroblast of lung,2,13,13,18
+alveolar macrophage,30-M-4,neutrophil,1,13,13,18
+alveolar macrophage,30-M-4,vein endothelial cell,3,13,13,18
+alveolar macrophage,30-M-5,B cell,1,13,13,18
+alveolar macrophage,30-M-5,adventitial cell,5,13,13,18
+alveolar macrophage,30-M-5,bronchial smooth muscle cell,1,13,13,18
+alveolar macrophage,30-M-5,fibroblast of lung,2,13,13,18
+alveolar macrophage,30-M-5,neutrophil,1,13,13,18
+alveolar macrophage,30-M-5,vein endothelial cell,3,13,13,18
+classical monocyte,18-F-50,B cell,1,11,11,18
+classical monocyte,18-F-50,NK cell,1,11,11,18
+classical monocyte,18-F-50,adventitial cell,4,11,11,18
+classical monocyte,18-F-50,fibroblast of lung,3,11,11,18
+classical monocyte,18-F-50,vein endothelial cell,2,11,11,18
+classical monocyte,18-F-51,B cell,1,8,8,18
+classical monocyte,18-F-51,NK cell,1,8,8,18
+classical monocyte,18-F-51,fibroblast of lung,4,8,8,18
+classical monocyte,18-F-51,vein endothelial cell,2,8,8,18
+classical monocyte,18-M-52,B cell,1,6,6,18
+classical monocyte,18-M-52,fibroblast of lung,3,6,6,18
+classical monocyte,18-M-52,vein endothelial cell,2,6,6,18
+classical monocyte,18-M-53,B cell,1,9,9,18
+classical monocyte,18-M-53,NK cell,1,9,9,18
+classical monocyte,18-M-53,fibroblast of lung,4,9,9,18
+classical monocyte,18-M-53,vein endothelial cell,3,9,9,18
+classical monocyte,21-F-54,B cell,1,11,11,18
+classical monocyte,21-F-54,NK cell,1,11,11,18
+classical monocyte,21-F-54,adventitial cell,4,11,11,18
+classical monocyte,21-F-54,fibroblast of lung,3,11,11,18
+classical monocyte,21-F-54,vein endothelial cell,2,11,11,18
+classical monocyte,21-F-55,B cell,1,11,11,18
+classical monocyte,21-F-55,NK cell,1,11,11,18
+classical monocyte,21-F-55,adventitial cell,4,11,11,18
+classical monocyte,21-F-55,fibroblast of lung,3,11,11,18
+classical monocyte,21-F-55,vein endothelial cell,2,11,11,18
+classical monocyte,30-M-2,B cell,1,11,11,18
+classical monocyte,30-M-2,NK cell,1,11,11,18
+classical monocyte,30-M-2,adventitial cell,4,11,11,18
+classical monocyte,30-M-2,fibroblast of lung,3,11,11,18
+classical monocyte,30-M-2,vein endothelial cell,2,11,11,18
+classical monocyte,30-M-3,B cell,1,11,11,18
+classical monocyte,30-M-3,NK cell,1,11,11,18
+classical monocyte,30-M-3,adventitial cell,4,11,11,18
+classical monocyte,30-M-3,fibroblast of lung,3,11,11,18
+classical monocyte,30-M-3,vein endothelial cell,2,11,11,18
+classical monocyte,30-M-4,B cell,1,11,11,18
+classical monocyte,30-M-4,NK cell,1,11,11,18
+classical monocyte,30-M-4,adventitial cell,4,11,11,18
+classical monocyte,30-M-4,fibroblast of lung,3,11,11,18
+classical monocyte,30-M-4,vein endothelial cell,2,11,11,18
+classical monocyte,30-M-5,B cell,1,11,11,18
+classical monocyte,30-M-5,NK cell,1,11,11,18
+classical monocyte,30-M-5,adventitial cell,4,11,11,18
+classical monocyte,30-M-5,fibroblast of lung,3,11,11,18
+classical monocyte,30-M-5,vein endothelial cell,2,11,11,18
+intermediate monocyte,18-F-50,NK cell,1,7,7,18
+intermediate monocyte,18-F-50,adventitial cell,2,7,7,18
+intermediate monocyte,18-F-50,fibroblast of lung,2,7,7,18
+intermediate monocyte,18-F-50,vein endothelial cell,2,7,7,18
+intermediate monocyte,18-F-51,B cell,1,4,4,18
+intermediate monocyte,18-F-51,fibroblast of lung,1,4,4,18
+intermediate monocyte,18-F-51,vein endothelial cell,2,4,4,18
+intermediate monocyte,18-M-52,fibroblast of lung,3,4,4,18
+intermediate monocyte,18-M-52,vein endothelial cell,1,4,4,18
+intermediate monocyte,18-M-53,fibroblast of lung,2,5,5,18
+intermediate monocyte,18-M-53,neutrophil,1,5,5,18
+intermediate monocyte,18-M-53,vein endothelial cell,2,5,5,18
+intermediate monocyte,21-F-54,adventitial cell,2,6,6,18
+intermediate monocyte,21-F-54,fibroblast of lung,2,6,6,18
+intermediate monocyte,21-F-54,vein endothelial cell,2,6,6,18
+intermediate monocyte,21-F-55,adventitial cell,2,6,6,18
+intermediate monocyte,21-F-55,fibroblast of lung,2,6,6,18
+intermediate monocyte,21-F-55,vein endothelial cell,2,6,6,18
+intermediate monocyte,30-M-2,adventitial cell,2,6,6,18
+intermediate monocyte,30-M-2,fibroblast of lung,2,6,6,18
+intermediate monocyte,30-M-2,vein endothelial cell,2,6,6,18
+intermediate monocyte,30-M-3,adventitial cell,2,6,6,18
+intermediate monocyte,30-M-3,fibroblast of lung,2,6,6,18
+intermediate monocyte,30-M-3,vein endothelial cell,2,6,6,18
+intermediate monocyte,30-M-4,adventitial cell,2,6,6,18
+intermediate monocyte,30-M-4,fibroblast of lung,2,6,6,18
+intermediate monocyte,30-M-4,vein endothelial cell,2,6,6,18
+intermediate monocyte,30-M-5,adventitial cell,2,6,6,18
+intermediate monocyte,30-M-5,fibroblast of lung,2,6,6,18
+intermediate monocyte,30-M-5,vein endothelial cell,2,6,6,18
+B cell,18-F-50,NK cell,2,24,24,18
+B cell,18-F-50,adventitial cell,9,24,24,18
+B cell,18-F-50,alveolar macrophage,1,24,24,18
+B cell,18-F-50,fibroblast of lung,4,24,24,18
+B cell,18-F-50,neutrophil,1,24,24,18
+B cell,18-F-50,vein endothelial cell,7,24,24,18
+B cell,18-F-51,NK cell,2,16,16,18
+B cell,18-F-51,alveolar macrophage,1,16,16,18
+B cell,18-F-51,bronchial smooth muscle cell,1,16,16,18
+B cell,18-F-51,fibroblast of lung,8,16,16,18
+B cell,18-F-51,vein endothelial cell,4,16,16,18
+B cell,18-M-52,alveolar macrophage,1,14,14,18
+B cell,18-M-52,fibroblast of lung,7,14,14,18
+B cell,18-M-52,neutrophil,3,14,14,18
+B cell,18-M-52,vein endothelial cell,3,14,14,18
+B cell,18-M-53,NK cell,1,18,18,18
+B cell,18-M-53,alveolar macrophage,1,18,18,18
+B cell,18-M-53,bronchial smooth muscle cell,1,18,18,18
+B cell,18-M-53,fibroblast of lung,7,18,18,18
+B cell,18-M-53,neutrophil,3,18,18,18
+B cell,18-M-53,vein endothelial cell,5,18,18,18
+B cell,21-F-54,NK cell,1,21,21,18
+B cell,21-F-54,adventitial cell,9,21,21,18
+B cell,21-F-54,alveolar macrophage,1,21,21,18
+B cell,21-F-54,fibroblast of lung,4,21,21,18
+B cell,21-F-54,neutrophil,1,21,21,18
+B cell,21-F-54,vein endothelial cell,5,21,21,18
+B cell,21-F-55,NK cell,1,21,21,18
+B cell,21-F-55,adventitial cell,9,21,21,18
+B cell,21-F-55,alveolar macrophage,1,21,21,18
+B cell,21-F-55,fibroblast of lung,4,21,21,18
+B cell,21-F-55,neutrophil,1,21,21,18
+B cell,21-F-55,vein endothelial cell,5,21,21,18
+B cell,30-M-2,NK cell,1,21,21,18
+B cell,30-M-2,adventitial cell,9,21,21,18
+B cell,30-M-2,alveolar macrophage,1,21,21,18
+B cell,30-M-2,fibroblast of lung,4,21,21,18
+B cell,30-M-2,neutrophil,1,21,21,18
+B cell,30-M-2,vein endothelial cell,5,21,21,18
+B cell,30-M-3,NK cell,1,21,21,18
+B cell,30-M-3,adventitial cell,9,21,21,18
+B cell,30-M-3,alveolar macrophage,1,21,21,18
+B cell,30-M-3,fibroblast of lung,4,21,21,18
+B cell,30-M-3,neutrophil,1,21,21,18
+B cell,30-M-3,vein endothelial cell,5,21,21,18
+B cell,30-M-4,NK cell,1,21,21,18
+B cell,30-M-4,adventitial cell,9,21,21,18
+B cell,30-M-4,alveolar macrophage,1,21,21,18
+B cell,30-M-4,fibroblast of lung,4,21,21,18
+B cell,30-M-4,neutrophil,1,21,21,18
+B cell,30-M-4,vein endothelial cell,5,21,21,18
+B cell,30-M-5,NK cell,1,21,21,18
+B cell,30-M-5,adventitial cell,9,21,21,18
+B cell,30-M-5,alveolar macrophage,1,21,21,18
+B cell,30-M-5,fibroblast of lung,4,21,21,18
+B cell,30-M-5,neutrophil,1,21,21,18
+B cell,30-M-5,vein endothelial cell,5,21,21,18
+NK cell,18-F-50,B cell,2,21,21,18
+NK cell,18-F-50,adventitial cell,9,21,21,18
+NK cell,18-F-50,alveolar macrophage,1,21,21,18
+NK cell,18-F-50,fibroblast of lung,4,21,21,18
+NK cell,18-F-50,neutrophil,2,21,21,18
+NK cell,18-F-50,vein endothelial cell,3,21,21,18
+NK cell,18-F-51,B cell,2,17,17,18
+NK cell,18-F-51,alveolar macrophage,1,17,17,18
+NK cell,18-F-51,fibroblast of lung,10,17,17,18
+NK cell,18-F-51,neutrophil,1,17,17,18
+NK cell,18-F-51,vein endothelial cell,3,17,17,18
+NK cell,18-M-52,B cell,2,19,19,18
+NK cell,18-M-52,alveolar macrophage,1,19,19,18
+NK cell,18-M-52,bronchial smooth muscle cell,1,19,19,18
+NK cell,18-M-52,fibroblast of lung,6,19,19,18
+NK cell,18-M-52,neutrophil,7,19,19,18
+NK cell,18-M-52,vein endothelial cell,2,19,19,18
+NK cell,18-M-53,B cell,2,17,17,18
+NK cell,18-M-53,alveolar macrophage,1,17,17,18
+NK cell,18-M-53,fibroblast of lung,4,17,17,18
+NK cell,18-M-53,neutrophil,5,17,17,18
+NK cell,18-M-53,vein endothelial cell,5,17,17,18
+NK cell,21-F-54,B cell,2,22,22,18
+NK cell,21-F-54,adventitial cell,9,22,22,18
+NK cell,21-F-54,alveolar macrophage,1,22,22,18
+NK cell,21-F-54,fibroblast of lung,3,22,22,18
+NK cell,21-F-54,neutrophil,3,22,22,18
+NK cell,21-F-54,vein endothelial cell,4,22,22,18
+NK cell,21-F-55,B cell,2,22,22,18
+NK cell,21-F-55,adventitial cell,9,22,22,18
+NK cell,21-F-55,alveolar macrophage,1,22,22,18
+NK cell,21-F-55,fibroblast of lung,3,22,22,18
+NK cell,21-F-55,neutrophil,3,22,22,18
+NK cell,21-F-55,vein endothelial cell,4,22,22,18
+NK cell,30-M-2,B cell,2,22,22,18
+NK cell,30-M-2,adventitial cell,9,22,22,18
+NK cell,30-M-2,alveolar macrophage,1,22,22,18
+NK cell,30-M-2,fibroblast of lung,3,22,22,18
+NK cell,30-M-2,neutrophil,3,22,22,18
+NK cell,30-M-2,vein endothelial cell,4,22,22,18
+NK cell,30-M-3,B cell,2,22,22,18
+NK cell,30-M-3,adventitial cell,9,22,22,18
+NK cell,30-M-3,alveolar macrophage,1,22,22,18
+NK cell,30-M-3,fibroblast of lung,3,22,22,18
+NK cell,30-M-3,neutrophil,3,22,22,18
+NK cell,30-M-3,vein endothelial cell,4,22,22,18
+NK cell,30-M-4,B cell,2,22,22,18
+NK cell,30-M-4,adventitial cell,9,22,22,18
+NK cell,30-M-4,alveolar macrophage,1,22,22,18
+NK cell,30-M-4,fibroblast of lung,3,22,22,18
+NK cell,30-M-4,neutrophil,3,22,22,18
+NK cell,30-M-4,vein endothelial cell,4,22,22,18
+NK cell,30-M-5,B cell,2,22,22,18
+NK cell,30-M-5,adventitial cell,9,22,22,18
+NK cell,30-M-5,alveolar macrophage,1,22,22,18
+NK cell,30-M-5,fibroblast of lung,3,22,22,18
+NK cell,30-M-5,neutrophil,3,22,22,18
+NK cell,30-M-5,vein endothelial cell,4,22,22,18
+"CD8-positive, alpha-beta T cell",18-F-50,B cell,2,21,21,18
+"CD8-positive, alpha-beta T cell",18-F-50,adventitial cell,9,21,21,18
+"CD8-positive, alpha-beta T cell",18-F-50,alveolar macrophage,1,21,21,18
+"CD8-positive, alpha-beta T cell",18-F-50,fibroblast of lung,6,21,21,18
+"CD8-positive, alpha-beta T cell",18-F-50,vein endothelial cell,3,21,21,18
+"CD8-positive, alpha-beta T cell",18-F-51,B cell,1,14,14,18
+"CD8-positive, alpha-beta T cell",18-F-51,alveolar macrophage,1,14,14,18
+"CD8-positive, alpha-beta T cell",18-F-51,fibroblast of lung,8,14,14,18
+"CD8-positive, alpha-beta T cell",18-F-51,vein endothelial cell,4,14,14,18
+"CD8-positive, alpha-beta T cell",18-M-52,alveolar macrophage,1,10,10,18
+"CD8-positive, alpha-beta T cell",18-M-52,fibroblast of lung,6,10,10,18
+"CD8-positive, alpha-beta T cell",18-M-52,neutrophil,1,10,10,18
+"CD8-positive, alpha-beta T cell",18-M-52,vein endothelial cell,2,10,10,18
+"CD8-positive, alpha-beta T cell",18-M-53,B cell,1,13,13,18
+"CD8-positive, alpha-beta T cell",18-M-53,alveolar macrophage,1,13,13,18
+"CD8-positive, alpha-beta T cell",18-M-53,fibroblast of lung,7,13,13,18
+"CD8-positive, alpha-beta T cell",18-M-53,vein endothelial cell,4,13,13,18
+"CD8-positive, alpha-beta T cell",21-F-54,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-54,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-54,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-54,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-54,vein endothelial cell,3,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-55,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-55,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-55,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-55,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",21-F-55,vein endothelial cell,3,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-2,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-2,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-2,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-2,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-2,vein endothelial cell,3,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-3,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-3,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-3,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-3,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-3,vein endothelial cell,3,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-4,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-4,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-4,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-4,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-4,vein endothelial cell,3,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-5,B cell,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-5,adventitial cell,8,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-5,alveolar macrophage,1,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-5,fibroblast of lung,6,19,19,18
+"CD8-positive, alpha-beta T cell",30-M-5,vein endothelial cell,3,19,19,18
+vein endothelial cell,18-F-50,B cell,2,14,14,18
+vein endothelial cell,18-F-50,NK cell,2,14,14,18
+vein endothelial cell,18-F-50,adventitial cell,5,14,14,18
+vein endothelial cell,18-F-50,fibroblast of lung,3,14,14,18
+vein endothelial cell,18-F-50,neutrophil,1,14,14,18
+vein endothelial cell,18-F-50,non-classical monocyte,1,14,14,18
+vein endothelial cell,18-F-51,B cell,2,11,11,18
+vein endothelial cell,18-F-51,NK cell,2,11,11,18
+vein endothelial cell,18-F-51,fibroblast of lung,4,11,11,18
+vein endothelial cell,18-F-51,intermediate monocyte,1,11,11,18
+vein endothelial cell,18-F-51,neutrophil,2,11,11,18
+vein endothelial cell,18-M-52,B cell,2,8,8,18
+vein endothelial cell,18-M-52,fibroblast of lung,4,8,8,18
+vein endothelial cell,18-M-52,neutrophil,2,8,8,18
+vein endothelial cell,18-M-53,B cell,2,12,12,18
+vein endothelial cell,18-M-53,classical monocyte,2,12,12,18
+vein endothelial cell,18-M-53,fibroblast of lung,4,12,12,18
+vein endothelial cell,18-M-53,neutrophil,4,12,12,18
+vein endothelial cell,21-F-54,B cell,2,13,13,18
+vein endothelial cell,21-F-54,NK cell,2,13,13,18
+vein endothelial cell,21-F-54,adventitial cell,5,13,13,18
+vein endothelial cell,21-F-54,fibroblast of lung,3,13,13,18
+vein endothelial cell,21-F-54,neutrophil,1,13,13,18
+vein endothelial cell,21-F-55,B cell,2,13,13,18
+vein endothelial cell,21-F-55,NK cell,2,13,13,18
+vein endothelial cell,21-F-55,adventitial cell,5,13,13,18
+vein endothelial cell,21-F-55,fibroblast of lung,3,13,13,18
+vein endothelial cell,21-F-55,neutrophil,1,13,13,18
+vein endothelial cell,30-M-2,B cell,2,13,13,18
+vein endothelial cell,30-M-2,NK cell,2,13,13,18
+vein endothelial cell,30-M-2,adventitial cell,5,13,13,18
+vein endothelial cell,30-M-2,fibroblast of lung,3,13,13,18
+vein endothelial cell,30-M-2,neutrophil,1,13,13,18
+vein endothelial cell,30-M-3,B cell,2,13,13,18
+vein endothelial cell,30-M-3,NK cell,2,13,13,18
+vein endothelial cell,30-M-3,adventitial cell,5,13,13,18
+vein endothelial cell,30-M-3,fibroblast of lung,3,13,13,18
+vein endothelial cell,30-M-3,neutrophil,1,13,13,18
+vein endothelial cell,30-M-4,B cell,2,13,13,18
+vein endothelial cell,30-M-4,NK cell,2,13,13,18
+vein endothelial cell,30-M-4,adventitial cell,5,13,13,18
+vein endothelial cell,30-M-4,fibroblast of lung,3,13,13,18
+vein endothelial cell,30-M-4,neutrophil,1,13,13,18
+vein endothelial cell,30-M-5,B cell,2,13,13,18
+vein endothelial cell,30-M-5,NK cell,2,13,13,18
+vein endothelial cell,30-M-5,adventitial cell,5,13,13,18
+vein endothelial cell,30-M-5,fibroblast of lung,3,13,13,18
+vein endothelial cell,30-M-5,neutrophil,1,13,13,18
