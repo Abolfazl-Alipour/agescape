@@ -81,7 +81,8 @@ Reading the empirical null: P1m (1,724 human-mapped genes) and P0m (2,049) are a
   Main table (Batch A schema, 165 rows): results/followup-mature-organ-transports-c-gtex.csv
   BH check (independent statsmodels recomputation): results/followup-mature-organ-transports-c-gtex-bh-check.csv
   Runtime (per-step seconds, peak RSS, donor counts): results/followup-mature-organ-transports-c-gtex-runtime.csv
-  Track 1 gene-level OLS: results/followup-mature-organ-transports-c-gtex-track1-genes.csv
+  Track 1 gene-level OLS top 25 per tissue: results/followup-mature-organ-transports-c-gtex-track1-top-genes.csv
+  Track 1 full gene-level OLS table (776,180 rows, 321 MB) is NOT committed: it exceeds GitHub's 100 MB file limit and stays on beast at results/followup-mature-organ-transports-c-gtex-track1-genes.csv; the BH check was computed from that full on-disk table.
   Track 1 per-tissue summary: results/followup-mature-organ-transports-c-gtex-track1-genes-summary.csv
   Track 1 P1m/P0m transport: results/followup-mature-organ-transports-c-gtex-track1-p1.csv
   Track 2 NB-GLM gene-level: results/followup-mature-organ-transports-c-gtex-track2-nbglm-genes.csv

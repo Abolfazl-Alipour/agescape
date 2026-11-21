@@ -64,3 +64,4 @@ GTEx_v8,bh_check,2026-11-21T22:50:10.628560+00:00,2026-11-21T22:50:13.824163+00:
 GTEx_v8,report,2026-11-21T22:50:13.828430+00:00,2026-11-21T22:50:13.848470+00:00,0.02,5940.62,Muse Spark direct subagent run (no CLI model),ok,report=followup-mature-organ-transports-batch-c-gtex.md
 GTEx_v8,cohort_total,2026-11-21T22:40:11.589190+00:00,2026-11-21T22:50:13.854472+00:00,602.265,5940.62,Muse Spark direct subagent run (no CLI model),ok,rows=165
 GTEx_v8,report_regen_fixed_null_verdicts,2026-11-21T22:52:51.418224+00:00,2026-11-21T22:52:51.435681+00:00,0.017,272.72,Muse Spark direct subagent run (no CLI model),ok,report rebuilt from main CSV with NULL verdicts restored
+GTEx_v8,report_regen_top_genes_note,2026-11-21T22:55:40.839913+00:00,2026-11-21T22:55:40.856436+00:00,0.017,696.9,Muse Spark direct subagent run (no CLI model),ok,report Files section updated for uncommitted 321MB gene table
