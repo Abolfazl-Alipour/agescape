@@ -1,0 +1,97 @@
+species,organ,cohort,cell_type,row_scope,status,reason,n_donors_mature,n_present_mature,total_cells_mature,n_candidate_cell_types,min_age_mature,max_age_mature,in_original_431,original_n_donors,original_q_global_bh
+Human,brain,HBCC_DLPFC,plasma cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,64.0,0.0,0.0,,30.0,85.0,False,,
+Human,brain,RADC_DLPFC,B cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,18.0,1.0,1.0,,64.0,89.0,False,,
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thin ascending limb epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,18.0,4.0,901.0,,43.0,74.0,False,,
+Human,kidney,Kidney_NormalAdult,myofibroblast cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,18.0,3.0,11.0,,43.0,74.0,False,,
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thin descending limb epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,18.0,4.0,19.0,,30.0,66.0,False,,
+Human,kidney,Kidney_SCR_v15,mast cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,18.0,5.0,10.0,,30.0,66.0,False,,
+Human,kidney,Kidney_SN_v15,B cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,3.0,267.0,,45.0,76.0,False,,
+Human,kidney,Kidney_SN_v15,conventional dendritic cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,3.0,41.0,,45.0,76.0,False,,
+Human,kidney,Kidney_SN_v15,mast cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,5.0,75.0,,45.0,76.0,True,9.0,0.7931311409874874
+Human,kidney,Kidney_SN_v15,neural cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,5.0,26.0,,45.0,76.0,True,9.0,0.9133994593561692
+Human,kidney,Kidney_SN_v15,neutrophil,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,4.0,22.0,,45.0,76.0,False,,
+Human,kidney,Kidney_SN_v15,papillary tips cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,5.0,303.0,,45.0,76.0,True,9.0,0.8702333884521518
+Human,kidney,Kidney_SN_v15,"plasmacytoid dendritic cell, human",cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,3.0,30.0,,45.0,76.0,False,,
+Human,lung,Lung_CellRef,"CD8-positive, alpha-beta cytotoxic T cell",cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,5.0,386.0,,35.0,76.0,True,17.0,0.8723518900933831
+Human,lung,Lung_CellRef,airway submucosal gland collecting duct epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,370.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,brush cell of tracheobronchial tree,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,1.0,1.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,chondrocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,0.0,0.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,innate lymphoid cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,1.0,1.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,ionocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,5.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,lung megakaryocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,5.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,mast cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,5.0,41.0,,35.0,76.0,True,17.0,0.928747829451438
+Human,lung,Lung_CellRef,mature conventional dendritic cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,2.0,6.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,mesothelial cell of pleura,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,2.0,3.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,mucus secreting cell of tracheobronchial tree submucosal gland,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,338.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,myoepithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,271.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,neutrophil,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,5.0,22.0,,35.0,76.0,True,17.0,0.8690595099493312
+Human,lung,Lung_CellRef,non-classical monocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,4.0,4.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,plasmacytoid dendritic cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,4.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,regulatory T cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,12.0,,35.0,76.0,False,,
+Human,lung,Lung_CellRef,serous secreting cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,13.0,3.0,968.0,,35.0,76.0,False,,
+Mouse,Bladder,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,4.0,,,4.0,18.0,24.0,False,,
+Mouse,Bladder,TMS,bladder cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,1132.0,,18.0,24.0,True,8.0,0.0375232285665008
+Mouse,Bladder,TMS,bladder urothelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,3807.0,,18.0,24.0,True,8.0,0.2513597000875942
+Mouse,Bladder,TMS,endothelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,171.0,,18.0,24.0,True,8.0,0.95233767465569
+Mouse,Bladder,TMS,leukocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,260.0,,18.0,24.0,True,8.0,0.6590231861728129
+Mouse,Fat,TMS,epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,6.0,5.0,114.0,,18.0,30.0,False,,
+Mouse,Fat,TMS,erythroblast,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,6.0,5.0,54.0,,18.0,30.0,False,,
+Mouse,Fat,TMS,lymphocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,6.0,3.0,54.0,,18.0,30.0,False,,
+Mouse,Heart_and_Aorta,TMS,mast cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,9.0,4.0,76.0,,18.0,30.0,False,,
+Mouse,Kidney,TMS,kidney cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,11.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Kidney,TMS,kidney collecting duct epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,11.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Kidney,TMS,kidney proximal straight tubule epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,11.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Kidney,TMS,leukocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,11.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Large_Intestine,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,3.0,,,5.0,30.0,30.0,False,,
+Mouse,Large_Intestine,TMS,enterocyte of epithelium of large intestine,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,1102.0,,30.0,30.0,False,,
+Mouse,Large_Intestine,TMS,epithelial cell of large intestine,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,188.0,,30.0,30.0,False,,
+Mouse,Large_Intestine,TMS,hematopoietic stem cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,36.0,,30.0,30.0,False,,
+Mouse,Large_Intestine,TMS,intestinal crypt stem cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,313.0,,30.0,30.0,False,,
+Mouse,Large_Intestine,TMS,large intestine goblet cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,136.0,,30.0,30.0,False,,
+Mouse,Liver,TMS,duct epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,7.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Liver,TMS,hepatic stellate cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,7.0,3.0,9.0,,18.0,30.0,True,12.0,0.3059796283577478
+Mouse,Liver,TMS,plasmacytoid dendritic cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,7.0,5.0,26.0,,18.0,30.0,True,12.0,0.7910164953544102
+Mouse,Lung,TMS,lung neuroendocrine cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,10.0,0.0,0.0,,18.0,30.0,False,,
+Mouse,Mammary_Gland,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,4.0,,,7.0,18.0,21.0,False,,
+Mouse,Mammary_Gland,TMS,B cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,901.0,,18.0,21.0,True,6.0,0.7910164953544102
+Mouse,Mammary_Gland,TMS,T cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,1389.0,,18.0,21.0,True,6.0,0.213808478748271
+Mouse,Mammary_Gland,TMS,basal cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,1178.0,,18.0,21.0,True,6.0,0.6359611996058776
+Mouse,Mammary_Gland,TMS,endothelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,394.0,,18.0,21.0,True,6.0,0.4225740352427434
+Mouse,Mammary_Gland,TMS,luminal epithelial cell of mammary gland,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,1301.0,,18.0,21.0,True,6.0,0.8723518900933831
+Mouse,Mammary_Gland,TMS,macrophage,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,352.0,,18.0,21.0,True,6.0,0.5977318439890791
+Mouse,Mammary_Gland,TMS,stromal cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,2141.0,,18.0,21.0,True,6.0,0.4546836179897797
+Mouse,Pancreas,TMS,pancreatic PP cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,8.0,5.0,152.0,,18.0,30.0,False,,
+Mouse,Skin,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,3.0,,,5.0,18.0,21.0,False,,
+Mouse,Skin,TMS,T cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,62.0,,18.0,21.0,False,,
+Mouse,Skin,TMS,basal cell of epidermis,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,1913.0,,18.0,21.0,False,,
+Mouse,Skin,TMS,epidermal cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,1457.0,,18.0,21.0,False,,
+Mouse,Skin,TMS,keratinocyte stem cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,407.0,,18.0,21.0,False,,
+Mouse,Skin,TMS,stem cell of epidermis,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,3.0,3.0,123.0,,18.0,21.0,False,,
+Mouse,Thymus,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,5.0,,,6.0,18.0,24.0,False,,
+Mouse,Thymus,TMS,DN3 thymocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,113.0,,18.0,24.0,True,6.0,0.7910164953544102
+Mouse,Thymus,TMS,DN4 thymocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,1715.0,,18.0,24.0,True,6.0,0.8723518900933831
+Mouse,Thymus,TMS,double negative T cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,780.0,,18.0,24.0,True,6.0,0.8812923991815587
+Mouse,Thymus,TMS,immature T cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,1376.0,,18.0,24.0,True,6.0,0.8260947873937298
+Mouse,Thymus,TMS,professional antigen presenting cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,2442.0,,18.0,24.0,True,6.0,0.7931311409874874
+Mouse,Thymus,TMS,thymocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,5.0,5.0,1333.0,,18.0,24.0,True,6.0,0.7812139324325483
+Mouse,Tongue,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,4.0,,,3.0,18.0,24.0,False,,
+Mouse,Tongue,TMS,Langerhans cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,117.0,,18.0,24.0,True,9.0,0.213808478748271
+Mouse,Tongue,TMS,basal cell of epidermis,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,3582.0,,18.0,24.0,True,9.0,0.2417046853351554
+Mouse,Tongue,TMS,keratinocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,4.0,4.0,4737.0,,18.0,24.0,True,9.0,0.4325596285282484
+Mouse,Trachea,TMS,(all cell types),tissue_or_cohort,UNTESTABLE,zero eligible tests: no cell type met the 6-donor presence rule and produced an estimable age model,0.0,,,12.0,,,False,,
+Mouse,Trachea,TMS,basal epithelial cell of tracheobronchial tree,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,blood cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,chondrocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,endothelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,epithelial cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,fibroblast,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,granulocyte,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,macrophage,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,mesenchymal cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,mesenchymal progenitor cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,neuroendocrine cell,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Mouse,Trachea,TMS,smooth muscle cell of trachea,cell_type,UNTESTABLE,cell type present in fewer than 6 mature donors,0.0,0.0,0.0,,,,False,,
+Naked mole-rat,Skin,GSE152886,basal,cell_type,UNTESTABLE,no mature cutoff is defined for naked mole-rat; outside the mouse and human refit,,,,,,,True,5.0,0.9636377901977438
+Naked mole-rat,Skin,GSE152886,corneum,cell_type,UNTESTABLE,no mature cutoff is defined for naked mole-rat; outside the mouse and human refit,,,,,,,True,5.0,0.8744927536231883
+Naked mole-rat,Skin,GSE152886,immune,cell_type,UNTESTABLE,no mature cutoff is defined for naked mole-rat; outside the mouse and human refit,,,,,,,True,5.0,0.7463203463203464
+Naked mole-rat,Skin,GSE152886,intermediate,cell_type,UNTESTABLE,no mature cutoff is defined for naked mole-rat; outside the mouse and human refit,,,,,,,True,5.0,1.0

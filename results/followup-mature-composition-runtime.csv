@@ -1,0 +1,3 @@
+pipeline,start_utc,end_utc,duration_seconds,model_used,status
+complete_mature_composition,2026-11-21T20:04:12.503379+00:00,2026-11-21T20:04:15.456583+00:00,2.953204,kimi-code/k3.1-pro,completed
+mature_lung_study_sensitivity,2026-11-21T20:04:24.785610+00:00,2026-11-21T20:04:25.821547+00:00,1.035937,kimi-code/k3.1-pro,completed
