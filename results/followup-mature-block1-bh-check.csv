@@ -1,0 +1,139 @@
+family,dataset,arm,cell_type,pvalue,q_script,q_recomputed,match
+gao:primary,gao,primary,Adipocyte,0.0735475559992906,0.5263202186341793,0.5263202186341788,True
+gao:primary,gao,primary,Cardiomyocyte,0.7726489676201937,0.8875705294140315,0.8875705294140315,True
+gao:primary,gao,primary,Endocardial,0.54192175013949,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,Endothelial,0.437838820281989,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,Epicardial,0.7327054650073112,0.8875705294140315,0.8875705294140315,True
+gao:primary,gao,primary,Fibroblast,0.4072690449734616,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,LEC,0.8192958733052599,0.8875705294140315,0.8875705294140315,True
+gao:primary,gao,primary,Lymphoid,0.0809723413283352,0.5263202186341793,0.5263202186341788,True
+gao:primary,gao,primary,Mast,0.3799381089292575,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,Myeloid,0.3337643076122325,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,Neuronal,0.910108505301362,0.910108505301362,0.910108505301362,True
+gao:primary,gao,primary,Pericyte,0.4875856685920795,0.7827758613125966,0.7827758613125967,True
+gao:primary,gao,primary,vSMC,0.4525638368943791,0.7827758613125966,0.7827758613125967,True
+gao:primary:pooled-singleton,gao,primary,All_LV_Nuclei,0.3653577255740114,0.3653577255740114,0.3653577255740114,True
+gao:rarefied,gao,rarefied,Adipocyte,0.0698948795603676,0.5699470353308225,0.5699470353308225,True
+gao:rarefied,gao,rarefied,Cardiomyocyte,0.9915414364009612,0.9915414364009612,0.9915414364009612,True
+gao:rarefied,gao,rarefied,Endocardial,0.533631716084545,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Endothelial,0.6015806492569923,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Epicardial,0.6384452410090524,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Fibroblast,0.2229648410215435,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,LEC,0.7201556282567916,0.8510930152125719,0.8510930152125717,True
+gao:rarefied,gao,rarefied,Lymphoid,0.3267951054756534,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Mast,0.3570003269474608,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Myeloid,0.5821324816473857,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,Neuronal,0.087684159281665,0.5699470353308225,0.5699470353308225,True
+gao:rarefied,gao,rarefied,Pericyte,0.4557905498899829,0.8299788133117681,0.8299788133117681,True
+gao:rarefied,gao,rarefied,vSMC,0.8703438573698262,0.942872512150645,0.942872512150645,True
+gao:rarefied:pooled-singleton,gao,rarefied,All_LV_Nuclei,0.1711685503441169,0.1711685503441169,0.1711685503441169,True
+gao:reweighted,gao,reweighted,Cardiomyocyte,0.8234219867236559,0.8234219867236559,0.8234219867236559,True
+gao:reweighted,gao,reweighted,Endothelial,0.4782935943674549,0.63772479248994,0.6377247924899399,True
+gao:reweighted,gao,reweighted,Fibroblast,0.3266457737140207,0.63772479248994,0.6377247924899399,True
+gao:reweighted,gao,reweighted,Pericyte,0.3946478052212638,0.63772479248994,0.6377247924899399,True
+gao:unadjusted,gao,unadjusted,Adipocyte,0.4128622065946098,0.8945347809549878,0.894534780954988,True
+gao:unadjusted,gao,unadjusted,Cardiomyocyte,0.2524462503843279,0.8945347809549878,0.894534780954988,True
+gao:unadjusted,gao,unadjusted,Endocardial,0.7753964108704141,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Endothelial,0.9793966395127928,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Epicardial,0.8783928149571945,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Fibroblast,0.2896662377064328,0.8945347809549878,0.894534780954988,True
+gao:unadjusted,gao,unadjusted,LEC,0.7882107318048535,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Lymphoid,0.1418781985755438,0.8945347809549878,0.894534780954988,True
+gao:unadjusted,gao,unadjusted,Mast,0.4122302010179381,0.8945347809549878,0.894534780954988,True
+gao:unadjusted,gao,unadjusted,Myeloid,0.9764365597421484,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Neuronal,0.5720629906093592,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,Pericyte,0.7860827489705902,0.9793966395127928,0.9793966395127927,True
+gao:unadjusted,gao,unadjusted,vSMC,0.360800940750811,0.8945347809549878,0.894534780954988,True
+gao:unadjusted:pooled-singleton,gao,unadjusted,All_LV_Nuclei,0.2243452548454636,0.2243452548454636,0.2243452548454636,True
+gao:within-state,gao,within-state,Adipocyte,0.2875053188533745,0.5175095739360741,0.517509573936074,True
+gao:within-state,gao,within-state,Cardiomyocyte,0.6594239791669343,0.7418519765628011,0.7418519765628011,True
+gao:within-state,gao,within-state,Endocardial,0.8242692055453106,0.8242692055453106,0.8242692055453106,True
+gao:within-state,gao,within-state,Endothelial,0.0200879645440055,0.1620216746998563,0.162021674699856,True
+gao:within-state,gao,within-state,Fibroblast,0.6185847185002685,0.7418519765628011,0.7418519765628011,True
+gao:within-state,gao,within-state,Lymphoid,0.4811381960899062,0.7217072941348595,0.7217072941348593,True
+gao:within-state,gao,within-state,Myeloid,0.1393869347000591,0.313620603075133,0.313620603075133,True
+gao:within-state,gao,within-state,Pericyte,0.1183106795502464,0.313620603075133,0.313620603075133,True
+gao:within-state,gao,within-state,vSMC,0.036004816599968,0.1620216746998563,0.162021674699856,True
+gao:within-state:pooled-singleton,gao,within-state,All_LV_Nuclei,0.9222277450259216,0.9222277450259216,0.9222277450259216,True
+yazar:primary,yazar,primary,"CD14-low, CD16-positive monocyte",0.8918055721280894,0.9773670735160002,0.9773670735160002,True
+yazar:primary,yazar,primary,CD14-positive monocyte,0.2867675960043694,0.7383081586820545,0.7383081586820543,True
+yazar:primary,yazar,primary,"CD4-positive, alpha-beta cytotoxic T cell",0.1702994841865956,0.6811979367463826,0.6811979367463824,True
+yazar:primary,yazar,primary,"central memory CD4-positive, alpha-beta T cell",0.3691540793410272,0.7383081586820545,0.7383081586820543,True
+yazar:primary,yazar,primary,"central memory CD8-positive, alpha-beta T cell",0.8032485862300254,0.9773670735160002,0.9773670735160002,True
+yazar:primary,yazar,primary,"effector memory CD4-positive, alpha-beta T cell",0.9773670735160002,0.9773670735160002,0.9773670735160002,True
+yazar:primary,yazar,primary,"effector memory CD8-positive, alpha-beta T cell",0.8225111652089081,0.9773670735160002,0.9773670735160002,True
+yazar:primary,yazar,primary,gamma-delta T cell,0.0166523238003471,0.1332185904027771,0.1332185904027768,True
+yazar:primary,yazar,primary,memory B cell,0.9653837379689946,0.9773670735160002,0.9773670735160002,True
+yazar:primary,yazar,primary,mucosal-associated invariant T cell,0.3164634842588696,0.7383081586820545,0.7383081586820543,True
+yazar:primary,yazar,primary,naive B cell,0.5054374428023107,0.8086999084836972,0.8086999084836972,True
+yazar:primary,yazar,primary,"naive thymus-derived CD4-positive, alpha-beta T cell",5.17417910584386e-08,8.278686569350176e-07,8.278686569350176e-07,True
+yazar:primary,yazar,primary,"naive thymus-derived CD8-positive, alpha-beta T cell",0.0825533172421605,0.4402843586248561,0.440284358624856,True
+yazar:primary,yazar,primary,natural killer cell,0.4406637634304997,0.7834022460986662,0.783402246098666,True
+yazar:primary,yazar,primary,regulatory T cell,0.3642845607320671,0.7383081586820545,0.7383081586820543,True
+yazar:primary,yazar,primary,transitional stage B cell,0.8461350798628389,0.9773670735160002,0.9773670735160002,True
+yazar:primary:pooled-singleton,yazar,primary,All_Cells,0.2333051441790915,0.2333051441790915,0.2333051441790915,True
+yazar:rarefied,yazar,rarefied,"CD14-low, CD16-positive monocyte",0.7082876722038493,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,CD14-positive monocyte,0.5675627119317468,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,"CD4-positive, alpha-beta cytotoxic T cell",0.712365756496168,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,"central memory CD4-positive, alpha-beta T cell",0.9358849422263212,0.9415036792863676,0.9415036792863676,True
+yazar:rarefied,yazar,rarefied,"central memory CD8-positive, alpha-beta T cell",0.1082613291564205,0.8660906332513643,0.866090633251364,True
+yazar:rarefied,yazar,rarefied,"effector memory CD4-positive, alpha-beta T cell",0.7156820233499919,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,"effector memory CD8-positive, alpha-beta T cell",0.4083709143913622,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,gamma-delta T cell,0.4058820988706967,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,memory B cell,0.6689131554667115,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,mucosal-associated invariant T cell,0.6377868263807733,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,naive B cell,0.9415036792863676,0.9415036792863676,0.9415036792863676,True
+yazar:rarefied,yazar,rarefied,"naive thymus-derived CD4-positive, alpha-beta T cell",0.7971411337326716,0.9110184385516248,0.9110184385516247,True
+yazar:rarefied,yazar,rarefied,"naive thymus-derived CD8-positive, alpha-beta T cell",0.2393085925634387,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,natural killer cell,0.6398670574213926,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,regulatory T cell,0.3860428449324476,0.8808394133538362,0.8808394133538362,True
+yazar:rarefied,yazar,rarefied,transitional stage B cell,0.0226617030797975,0.362587249276761,0.36258724927676,True
+yazar:rarefied:pooled-singleton,yazar,rarefied,All_Cells,0.1687800369022314,0.1687800369022314,0.1687800369022314,True
+yazar:reweighted,yazar,reweighted,"central memory CD4-positive, alpha-beta T cell",0.5304087790771045,0.6843571132820485,0.6843571132820485,True
+yazar:reweighted,yazar,reweighted,"effector memory CD8-positive, alpha-beta T cell",0.6843571132820485,0.6843571132820485,0.6843571132820485,True
+yazar:reweighted,yazar,reweighted,"naive thymus-derived CD4-positive, alpha-beta T cell",1.1646079132541885e-06,5.823039566270942e-06,5.823039566270943e-06,True
+yazar:reweighted,yazar,reweighted,"naive thymus-derived CD8-positive, alpha-beta T cell",0.0572524153555866,0.1431310383889666,0.1431310383889665,True
+yazar:reweighted,yazar,reweighted,natural killer cell,0.6739364458078105,0.6843571132820485,0.6843571132820485,True
+yazar:reweighted:pooled-singleton,yazar,reweighted,All_Cells,0.3335583795429301,0.3335583795429301,0.3335583795429301,True
+yazar:unadjusted,yazar,unadjusted,"CD14-low, CD16-positive monocyte",0.228713478039086,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,CD14-positive monocyte,0.2296901034854055,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,"CD4-positive, alpha-beta cytotoxic T cell",0.0955974281219124,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,"central memory CD4-positive, alpha-beta T cell",0.3017101737199551,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,"central memory CD8-positive, alpha-beta T cell",0.3316273821898719,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,"effector memory CD4-positive, alpha-beta T cell",0.7186705775907755,0.8144933212695455,0.8144933212695454,True
+yazar:unadjusted,yazar,unadjusted,"effector memory CD8-positive, alpha-beta T cell",0.6905031315242462,0.8144933212695455,0.8144933212695454,True
+yazar:unadjusted,yazar,unadjusted,gamma-delta T cell,0.1240187163532259,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,memory B cell,0.6158991787404277,0.805406618352867,0.805406618352867,True
+yazar:unadjusted,yazar,unadjusted,mucosal-associated invariant T cell,0.0323332919107201,0.5496659624822423,0.5496659624822416,True
+yazar:unadjusted,yazar,unadjusted,naive B cell,0.6093765062794806,0.805406618352867,0.805406618352867,True
+yazar:unadjusted,yazar,unadjusted,"naive thymus-derived CD4-positive, alpha-beta T cell",0.814236903754194,0.8651267102388311,0.8651267102388311,True
+yazar:unadjusted,yazar,unadjusted,"naive thymus-derived CD8-positive, alpha-beta T cell",0.5485909823000136,0.805406618352867,0.805406618352867,True
+yazar:unadjusted,yazar,unadjusted,natural killer cell,0.8755335940191988,0.8755335940191988,0.8755335940191988,True
+yazar:unadjusted,yazar,unadjusted,plasmablast,0.1740742610670756,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,regulatory T cell,0.3301366145186156,0.6264072774697581,0.6264072774697581,True
+yazar:unadjusted,yazar,unadjusted,transitional stage B cell,0.5850622691353653,0.805406618352867,0.805406618352867,True
+yazar:unadjusted:pooled-singleton,yazar,unadjusted,All_Cells,0.0370959878195909,0.0370959878195909,0.0370959878195909,True
+yazar:within-state:pooled-singleton,yazar,within-state,All_Cells,0.0006564168311477,0.0006564168311477,0.0006564168311477,True
+gao:gene-fractions,gao,gene-fractions,Cardiomyocyte,0.1419290354822588,0.3193403298350825,0.3193403298350823,True
+gao:gene-fractions,gao,gene-fractions,Endocardial,0.0279860069965017,0.1259370314842579,0.12593703148425767,True
+gao:gene-fractions,gao,gene-fractions,Endothelial,0.7756121939030485,0.783608195902049,0.783608195902049,True
+gao:gene-fractions,gao,gene-fractions,Fibroblast,0.2788605697151424,0.5019490254872564,0.5019490254872563,True
+gao:gene-fractions,gao,gene-fractions,Lymphoid,0.5187406296851574,0.666952238166631,0.666952238166631,True
+gao:gene-fractions,gao,gene-fractions,Myeloid,0.0029985007496251,0.0269865067466266,0.0269865067466259,True
+gao:gene-fractions,gao,gene-fractions,Neuronal,0.4757621189405297,0.666952238166631,0.666952238166631,True
+gao:gene-fractions,gao,gene-fractions,Pericyte,0.0849575212393803,0.254872563718141,0.2548725637181409,True
+gao:gene-fractions,gao,gene-fractions,vSMC,0.783608195902049,0.783608195902049,0.783608195902049,True
+gao:gene-fractions:pooled-singleton,gao,gene-fractions,All_LV_Nuclei,0.1079460269865067,0.1079460269865067,0.1079460269865067,True
+yazar:gene-fractions,yazar,gene-fractions,"CD14-low, CD16-positive monocyte",0.3428285857071464,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,CD14-positive monocyte,0.9225387306346826,0.9955022488755624,0.9955022488755624,True
+yazar:gene-fractions,yazar,gene-fractions,"central memory CD4-positive, alpha-beta T cell",0.4817591204397801,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,"effector memory CD4-positive, alpha-beta T cell",0.9955022488755624,0.9955022488755624,0.9955022488755624,True
+yazar:gene-fractions,yazar,gene-fractions,"effector memory CD8-positive, alpha-beta T cell",0.4787606196901549,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,gamma-delta T cell,0.3718140929535232,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,memory B cell,0.4687656171914043,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,naive B cell,0.2038980509745127,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,"naive thymus-derived CD4-positive, alpha-beta T cell",0.1529235382308845,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,"naive thymus-derived CD8-positive, alpha-beta T cell",0.2618690654672663,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,natural killer cell,0.4117941029485257,0.6423454939197067,0.6423454939197067,True
+yazar:gene-fractions,yazar,gene-fractions,transitional stage B cell,0.8375812093953023,0.9955022488755624,0.9955022488755624,True
+yazar:gene-fractions:pooled-singleton,yazar,gene-fractions,All_Cells,0.0029985007496251,0.0029985007496251,0.0029985007496251,True
