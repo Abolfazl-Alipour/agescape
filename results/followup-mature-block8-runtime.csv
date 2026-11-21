@@ -1,0 +1,4 @@
+model,stage,start_utc,end_utc,duration_seconds
+muse-spark-direct,scores,2026-11-21T21:52:54Z,2026-11-21T21:52:54Z,0.3041555000017979
+muse-spark-direct,models,2026-11-21T21:52:54Z,2026-11-21T21:52:56Z,1.7512605960000656
+muse-spark-direct,total,2026-11-21T21:52:54Z,2026-11-21T21:52:56Z,2.0555160389994853
