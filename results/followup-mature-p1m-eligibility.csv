@@ -1,0 +1,152 @@
+tissue,cell_ontology_class,unit,source_file,n_cells_18m,n_mice_18m,n_18m_female_mice,n_18m_male_mice,mice_ge10_18m,n_cells_30m,n_mice_30m,n_30m_female_mice,n_30m_male_mice,mice_ge10_30m,eligible,ineligibility_reason,p1m_floor10_eligible,design_actual,sex_term_status,sex_term_reason
+Lung,classical monocyte,Lung::classical monocyte,m1-qc-cleaned-Lung.h5ad,978,4,2,2,4,6083,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,granulocyte,Marrow::granulocyte,m1-qc-cleaned-Marrow.h5ad,1573,4,2,2,4,4043,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,granulocytopoietic cell,Marrow::granulocytopoietic cell,m1-qc-cleaned-Marrow.h5ad,1271,4,2,2,4,2267,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,epithelial cell of proximal tubule,Kidney::epithelial cell of proximal tubule,m1-qc-cleaned-Kidney.h5ad,399,3,2,1,3,2195,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,intermediate monocyte,Lung::intermediate monocyte,m1-qc-cleaned-Lung.h5ad,95,4,2,2,3,1495,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,promonocyte,Marrow::promonocyte,m1-qc-cleaned-Marrow.h5ad,527,4,2,2,4,1325,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,erythroblast,Marrow::erythroblast,m1-qc-cleaned-Marrow.h5ad,148,4,2,2,4,1216,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,proerythroblast,Marrow::proerythroblast,m1-qc-cleaned-Marrow.h5ad,905,4,2,2,4,989,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,kidney proximal convoluted tubule epithelial cell,Kidney::kidney proximal convoluted tubule epithelial cell,m1-qc-cleaned-Kidney.h5ad,1113,3,2,1,3,804,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,megakaryocyte-erythroid progenitor cell,Marrow::megakaryocyte-erythroid progenitor cell,m1-qc-cleaned-Marrow.h5ad,422,4,2,2,4,616,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,macrophage,Kidney::macrophage,m1-qc-cleaned-Kidney.h5ad,263,3,2,1,3,552,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,hematopoietic precursor cell,Marrow::hematopoietic precursor cell,m1-qc-cleaned-Marrow.h5ad,325,4,2,2,4,521,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,bronchial smooth muscle cell,Lung::bronchial smooth muscle cell,m1-qc-cleaned-Lung.h5ad,753,4,2,2,4,436,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,monocyte,Marrow::monocyte,m1-qc-cleaned-Marrow.h5ad,409,4,2,2,4,373,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,naive T cell,Marrow::naive T cell,m1-qc-cleaned-Marrow.h5ad,397,4,2,2,4,368,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,kidney collecting duct principal cell,Kidney::kidney collecting duct principal cell,m1-qc-cleaned-Kidney.h5ad,117,3,2,1,3,330,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,Kidney::kidney loop of Henle thick ascending limb epithelial cell,m1-qc-cleaned-Kidney.h5ad,245,3,2,1,3,296,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,B cell,Lung::B cell,m1-qc-cleaned-Lung.h5ad,497,4,2,2,4,294,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,macrophage,Marrow::macrophage,m1-qc-cleaned-Marrow.h5ad,200,4,2,2,4,293,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,alveolar macrophage,Lung::alveolar macrophage,m1-qc-cleaned-Lung.h5ad,199,4,2,2,4,290,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,non-classical monocyte,Lung::non-classical monocyte,m1-qc-cleaned-Lung.h5ad,186,4,2,2,4,287,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,fenestrated cell,Kidney::fenestrated cell,m1-qc-cleaned-Kidney.h5ad,187,3,2,1,3,276,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,T cell,Kidney::T cell,m1-qc-cleaned-Kidney.h5ad,65,3,2,1,3,227,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,late pro-B cell,Marrow::late pro-B cell,m1-qc-cleaned-Marrow.h5ad,113,4,2,2,3,210,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,"CD8-positive, alpha-beta T cell","Lung::CD8-positive, alpha-beta T cell",m1-qc-cleaned-Lung.h5ad,233,4,2,2,4,193,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,mature NK T cell,Lung::mature NK T cell,m1-qc-cleaned-Lung.h5ad,151,4,2,2,3,190,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,precursor B cell,Marrow::precursor B cell,m1-qc-cleaned-Marrow.h5ad,176,4,2,2,3,161,3,0,3,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,kidney distal convoluted tubule epithelial cell,Kidney::kidney distal convoluted tubule epithelial cell,m1-qc-cleaned-Kidney.h5ad,196,3,2,1,3,147,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,NK cell,Lung::NK cell,m1-qc-cleaned-Lung.h5ad,158,4,2,2,4,129,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,lymphocyte,Kidney::lymphocyte,m1-qc-cleaned-Kidney.h5ad,85,3,2,1,3,110,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Marrow,naive B cell,Marrow::naive B cell,m1-qc-cleaned-Marrow.h5ad,52,4,2,2,2,107,3,0,3,3,yes,eligible,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,"CD4-positive, alpha-beta T cell","Lung::CD4-positive, alpha-beta T cell",m1-qc-cleaned-Lung.h5ad,72,4,2,2,3,106,4,0,4,2,yes,eligible,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,kidney cortex artery cell,Kidney::kidney cortex artery cell,m1-qc-cleaned-Kidney.h5ad,71,3,2,1,3,96,4,0,4,4,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Kidney,B cell,Kidney::B cell,m1-qc-cleaned-Kidney.h5ad,51,3,2,1,3,81,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,T cell,Lung::T cell,m1-qc-cleaned-Lung.h5ad,64,4,2,2,3,78,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Lung,vein endothelial cell,Lung::vein endothelial cell,m1-qc-cleaned-Lung.h5ad,93,4,2,2,3,73,4,0,4,3,yes,eligible,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank"
+Spleen,B cell,Spleen::B cell,m1-qc-cleaned-Spleen.h5ad,4563,2,2,0,2,4468,4,0,4,4,no,"18m has 2 mice, requires at least 3",False,,,
+Heart_and_Aorta,endothelial cell of coronary artery,Heart_and_Aorta::endothelial cell of coronary artery,m1-qc-cleaned-Heart_and_Aorta.h5ad,288,3,1,2,3,1961,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Liver,Kupffer cell,Liver::Kupffer cell,m1-qc-cleaned-Liver.h5ad,221,1,1,0,1,1503,3,0,3,2,no,"18m has 1 mice, requires at least 3",False,,,
+Limb_Muscle,endothelial cell,Limb_Muscle::endothelial cell,m1-qc-cleaned-Limb_Muscle.h5ad,1081,4,2,2,4,1182,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Large_Intestine,enterocyte of epithelium of large intestine,Large_Intestine::enterocyte of epithelium of large intestine,m1-qc-cleaned-Large_Intestine.h5ad,0,0,0,0,0,1102,3,0,3,3,no,no 18m mice or cells,False,,,
+Lung,lung macrophage,Lung::lung macrophage,m1-qc-cleaned-Lung.h5ad,16,2,0,2,1,1097,4,0,4,2,no,"18m has 2 mice, requires at least 3; 18m has 16 cells, requires at least 50",False,,,
+Limb_Muscle,mesenchymal stem cell,Limb_Muscle::mesenchymal stem cell,m1-qc-cleaned-Limb_Muscle.h5ad,2943,4,2,2,4,1027,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Heart_and_Aorta,fibroblast of cardiac tissue,Heart_and_Aorta::fibroblast of cardiac tissue,m1-qc-cleaned-Heart_and_Aorta.h5ad,416,3,1,2,3,993,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Spleen,mature NK T cell,Spleen::mature NK T cell,m1-qc-cleaned-Spleen.h5ad,410,2,2,0,2,879,4,0,4,3,no,"18m has 2 mice, requires at least 3",False,,,
+Spleen,granulocyte,Spleen::granulocyte,m1-qc-cleaned-Spleen.h5ad,15,2,2,0,0,758,4,0,4,3,no,"18m has 2 mice, requires at least 3; 18m has 15 cells, requires at least 50",False,,,
+Spleen,T cell,Spleen::T cell,m1-qc-cleaned-Spleen.h5ad,585,2,2,0,2,745,4,0,4,3,no,"18m has 2 mice, requires at least 3",False,,,
+Fat,mesenchymal stem cell of adipose,Fat::mesenchymal stem cell of adipose,m1-qc-cleaned-Fat.h5ad,829,3,1,2,3,655,1,0,1,1,no,"30m has 1 mice, requires at least 3",False,,,
+Fat,endothelial cell,Fat::endothelial cell,m1-qc-cleaned-Fat.h5ad,630,3,1,2,3,632,1,0,1,1,no,"30m has 1 mice, requires at least 3",False,,,
+Marrow,immature B cell,Marrow::immature B cell,m1-qc-cleaned-Marrow.h5ad,37,4,2,2,2,627,3,0,3,3,no,"18m has 37 cells, requires at least 50",False,,,
+Heart_and_Aorta,leukocyte,Heart_and_Aorta::leukocyte,m1-qc-cleaned-Heart_and_Aorta.h5ad,140,3,1,2,3,483,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Spleen,megakaryocyte-erythroid progenitor cell,Spleen::megakaryocyte-erythroid progenitor cell,m1-qc-cleaned-Spleen.h5ad,12,2,2,0,0,440,3,0,3,3,no,"18m has 2 mice, requires at least 3; 18m has 12 cells, requires at least 50",False,,,
+Spleen,macrophage,Spleen::macrophage,m1-qc-cleaned-Spleen.h5ad,164,2,2,0,2,427,4,0,4,4,no,"18m has 2 mice, requires at least 3",False,,,
+Spleen,plasma cell,Spleen::plasma cell,m1-qc-cleaned-Spleen.h5ad,120,2,2,0,2,367,4,0,4,4,no,"18m has 2 mice, requires at least 3",False,,,
+Large_Intestine,intestinal crypt stem cell,Large_Intestine::intestinal crypt stem cell,m1-qc-cleaned-Large_Intestine.h5ad,0,0,0,0,0,313,3,0,3,3,no,no 18m mice or cells,False,,,
+Fat,B cell,Fat::B cell,m1-qc-cleaned-Fat.h5ad,330,3,1,2,2,301,1,0,1,1,no,"30m has 1 mice, requires at least 3",False,,,
+Spleen,proerythroblast,Spleen::proerythroblast,m1-qc-cleaned-Spleen.h5ad,108,2,2,0,2,283,4,0,4,4,no,"18m has 2 mice, requires at least 3",False,,,
+Pancreas,pancreatic B cell,Pancreas::pancreatic B cell,m1-qc-cleaned-Pancreas.h5ad,1462,2,1,1,2,275,3,0,3,1,no,"18m has 2 mice, requires at least 3",False,,,
+Limb_Muscle,B cell,Limb_Muscle::B cell,m1-qc-cleaned-Limb_Muscle.h5ad,13,3,1,2,0,272,2,0,2,2,no,"18m has 13 cells, requires at least 50; 30m has 2 mice, requires at least 3",False,,,
+Pancreas,pancreatic ductal cel,Pancreas::pancreatic ductal cel,m1-qc-cleaned-Pancreas.h5ad,34,2,1,1,2,242,3,0,3,2,no,"18m has 2 mice, requires at least 3; 18m has 34 cells, requires at least 50",False,,,
+Liver,myeloid leukocyte,Liver::myeloid leukocyte,m1-qc-cleaned-Liver.h5ad,40,1,1,0,1,223,3,0,3,3,no,"18m has 1 mice, requires at least 3; 18m has 40 cells, requires at least 50",False,,,
+Heart_and_Aorta,smooth muscle cell,Heart_and_Aorta::smooth muscle cell,m1-qc-cleaned-Heart_and_Aorta.h5ad,34,3,1,2,3,213,2,0,2,1,no,"18m has 34 cells, requires at least 50; 30m has 2 mice, requires at least 3",False,,,
+Marrow,plasma cell,Marrow::plasma cell,m1-qc-cleaned-Marrow.h5ad,27,3,2,1,1,212,3,0,3,3,no,"18m has 27 cells, requires at least 50",False,,,
+Limb_Muscle,skeletal muscle satellite cell,Limb_Muscle::skeletal muscle satellite cell,m1-qc-cleaned-Limb_Muscle.h5ad,423,4,2,2,4,211,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Fat,myeloid cell,Fat::myeloid cell,m1-qc-cleaned-Fat.h5ad,1384,3,1,2,3,201,1,0,1,1,no,"30m has 1 mice, requires at least 3",False,,,
+Heart_and_Aorta,endocardial cell,Heart_and_Aorta::endocardial cell,m1-qc-cleaned-Heart_and_Aorta.h5ad,128,3,1,2,2,190,2,0,2,1,no,"30m has 2 mice, requires at least 3",False,,,
+Large_Intestine,epithelial cell of large intestine,Large_Intestine::epithelial cell of large intestine,m1-qc-cleaned-Large_Intestine.h5ad,0,0,0,0,0,188,3,0,3,3,no,no 18m mice or cells,False,,,
+Pancreas,pancreatic acinar cell,Pancreas::pancreatic acinar cell,m1-qc-cleaned-Pancreas.h5ad,4,2,1,1,0,175,3,0,3,2,no,"18m has 2 mice, requires at least 3; 18m has 4 cells, requires at least 50",False,,,
+Limb_Muscle,T cell,Limb_Muscle::T cell,m1-qc-cleaned-Limb_Muscle.h5ad,39,3,1,2,2,167,2,0,2,2,no,"18m has 39 cells, requires at least 50; 30m has 2 mice, requires at least 3",False,,,
+Limb_Muscle,macrophage,Limb_Muscle::macrophage,m1-qc-cleaned-Limb_Muscle.h5ad,733,4,2,2,4,166,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Liver,NK cell,Liver::NK cell,m1-qc-cleaned-Liver.h5ad,109,1,1,0,1,155,3,0,3,3,no,"18m has 1 mice, requires at least 3",False,,,
+Kidney,podocyte,Kidney::podocyte,m1-qc-cleaned-Kidney.h5ad,48,3,2,1,2,145,4,0,4,4,no,"18m has 48 cells, requires at least 50",False,,,
+Limb_Muscle,smooth muscle cell,Limb_Muscle::smooth muscle cell,m1-qc-cleaned-Limb_Muscle.h5ad,242,4,2,2,4,143,2,0,2,2,no,"30m has 2 mice, requires at least 3",False,,,
+Fat,T cell,Fat::T cell,m1-qc-cleaned-Fat.h5ad,338,3,1,2,3,137,1,0,1,1,no,"30m has 1 mice, requires at least 3",False,,,
+Large_Intestine,large intestine goblet cell,Large_Intestine::large intestine goblet cell,m1-qc-cleaned-Large_Intestine.h5ad,0,0,0,0,0,136,3,0,3,2,no,no 18m mice or cells,False,,,
+Spleen,erythroblast,Spleen::erythroblast,m1-qc-cleaned-Spleen.h5ad,0,0,0,0,0,128,3,0,3,2,no,no 18m mice or cells,False,,,
+Heart_and_Aorta,erythrocyte,Heart_and_Aorta::erythrocyte,m1-qc-cleaned-Heart_and_Aorta.h5ad,13,2,0,2,1,122,2,0,2,1,no,"18m has 2 mice, requires at least 3; 18m has 13 cells, requires at least 50; 30m has 2 mice, requires at least 3",False,,,
+Spleen,NK cell,Spleen::NK cell,m1-qc-cleaned-Spleen.h5ad,77,2,2,0,2,97,4,0,4,4,no,"18m has 2 mice, requires at least 3",False,,,
+Liver,B cell,Liver::B cell,m1-qc-cleaned-Liver.h5ad,22,1,1,0,1,96,3,0,3,3,no,"18m has 1 mice, requires at least 3; 18m has 22 cells, requires at least 50",False,,,
+Liver,endothelial cell of hepatic sinusoid,Liver::endothelial cell of hepatic sinusoid,m1-qc-cleaned-Liver.h5ad,27,1,1,0,1,87,3,0,3,1,no,"18m has 1 mice, requires at least 3; 18m has 27 cells, requires at least 50",False,,,
+Marrow,basophil,Marrow::basophil,m1-qc-cleaned-Marrow.h5ad,3,2,1,1,0,87,3,0,3,1,no,"18m has 2 mice, requires at least 3; 18m has 3 cells, requires at least 50",False,,,
+Kidney,fibroblast,Kidney::fibroblast,m1-qc-cleaned-Kidney.h5ad,35,3,2,1,1,84,4,0,4,2,no,"18m has 35 cells, requires at least 50",False,,,
+Heart_and_Aorta,cardiomyocyte,Heart_and_Aorta::cardiomyocyte,m1-qc-cleaned-Heart_and_Aorta.h5ad,52,2,1,1,1,82,2,0,2,1,no,"18m has 2 mice, requires at least 3; 30m has 2 mice, requires at least 3",False,,,
+Lung,myeloid dendritic cell,Lung::myeloid dendritic cell,m1-qc-cleaned-Lung.h5ad,47,4,2,2,3,70,4,0,4,2,no,"18m has 47 cells, requires at least 50",False,,,
+Limb_Muscle,skeletal muscle cell,Limb_Muscle::skeletal muscle cell,m1-qc-cleaned-Limb_Muscle.h5ad,29,4,2,2,1,58,2,0,2,2,no,"18m has 29 cells, requires at least 50; 30m has 2 mice, requires at least 3",False,,,
+Kidney,plasma cell,Kidney::plasma cell,m1-qc-cleaned-Kidney.h5ad,11,3,2,1,0,55,4,0,4,2,no,"18m has 11 cells, requires at least 50",False,,,
+Lung,regulatory T cell,Lung::regulatory T cell,m1-qc-cleaned-Lung.h5ad,28,4,2,2,1,54,3,0,3,2,no,"18m has 28 cells, requires at least 50",False,,,
+Heart_and_Aorta,mast cell,Heart_and_Aorta::mast cell,m1-qc-cleaned-Heart_and_Aorta.h5ad,25,2,0,2,1,50,1,0,1,1,no,"18m has 2 mice, requires at least 3; 18m has 25 cells, requires at least 50; 30m has 1 mice, requires at least 3",False,,,
+Pancreas,pancreatic A cell,Pancreas::pancreatic A cell,m1-qc-cleaned-Pancreas.h5ad,155,2,1,1,2,50,3,0,3,1,no,"18m has 2 mice, requires at least 3",False,,,
+Limb_Muscle,Schwann cell,Limb_Muscle::Schwann cell,m1-qc-cleaned-Limb_Muscle.h5ad,46,4,2,2,3,46,2,0,2,2,no,"18m has 46 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 46 cells, requires at least 50",False,,,
+Kidney,brush cell,Kidney::brush cell,m1-qc-cleaned-Kidney.h5ad,86,3,2,1,2,43,4,0,4,2,no,"30m has 43 cells, requires at least 50",False,,,
+Lung,basophil,Lung::basophil,m1-qc-cleaned-Lung.h5ad,19,4,2,2,1,40,4,0,4,1,no,"18m has 19 cells, requires at least 50; 30m has 40 cells, requires at least 50",False,,,
+Pancreas,leukocyte,Pancreas::leukocyte,m1-qc-cleaned-Pancreas.h5ad,44,2,1,1,2,40,2,0,2,2,no,"18m has 2 mice, requires at least 3; 18m has 44 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 40 cells, requires at least 50",False,,,
+Fat,lymphocyte,Fat::lymphocyte,m1-qc-cleaned-Fat.h5ad,17,2,1,1,1,37,1,0,1,1,no,"18m has 2 mice, requires at least 3; 18m has 17 cells, requires at least 50; 30m has 1 mice, requires at least 3; 30m has 37 cells, requires at least 50",False,,,
+Kidney,kidney loop of Henle ascending limb epithelial cell,Kidney::kidney loop of Henle ascending limb epithelial cell,m1-qc-cleaned-Kidney.h5ad,38,3,2,1,2,37,4,0,4,3,no,"18m has 38 cells, requires at least 50; 30m has 37 cells, requires at least 50",False,,,
+Large_Intestine,hematopoietic stem cell,Large_Intestine::hematopoietic stem cell,m1-qc-cleaned-Large_Intestine.h5ad,0,0,0,0,0,36,3,0,3,1,no,"no 18m mice or cells; 30m has 36 cells, requires at least 50",False,,,
+Pancreas,pancreatic D cell,Pancreas::pancreatic D cell,m1-qc-cleaned-Pancreas.h5ad,141,2,1,1,2,32,3,0,3,1,no,"18m has 2 mice, requires at least 3; 30m has 32 cells, requires at least 50",False,,,
+Spleen,macrophage dendritic cell progenitor,Spleen::macrophage dendritic cell progenitor,m1-qc-cleaned-Spleen.h5ad,16,2,2,0,0,32,4,0,4,2,no,"18m has 2 mice, requires at least 3; 18m has 16 cells, requires at least 50; 30m has 32 cells, requires at least 50",False,,,
+Marrow,NK cell,Marrow::NK cell,m1-qc-cleaned-Marrow.h5ad,24,3,2,1,2,31,3,0,3,1,no,"18m has 24 cells, requires at least 50; 30m has 31 cells, requires at least 50",False,,,
+Liver,hepatocyte,Liver::hepatocyte,m1-qc-cleaned-Liver.h5ad,267,1,1,0,1,30,2,0,2,1,no,"18m has 1 mice, requires at least 3; 30m has 2 mice, requires at least 3; 30m has 30 cells, requires at least 50",False,,,
+Pancreas,endothelial cell,Pancreas::endothelial cell,m1-qc-cleaned-Pancreas.h5ad,50,2,1,1,2,28,3,0,3,2,no,"18m has 2 mice, requires at least 3; 30m has 28 cells, requires at least 50",False,,,
+Lung,fibroblast of lung,Lung::fibroblast of lung,m1-qc-cleaned-Lung.h5ad,166,4,2,2,3,26,3,0,3,1,no,"30m has 26 cells, requires at least 50",False,,,
+Heart_and_Aorta,cardiac neuron,Heart_and_Aorta::cardiac neuron,m1-qc-cleaned-Heart_and_Aorta.h5ad,19,3,1,2,0,23,2,0,2,1,no,"18m has 19 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 23 cells, requires at least 50",False,,,
+Lung,adventitial cell,Lung::adventitial cell,m1-qc-cleaned-Lung.h5ad,56,4,2,2,3,23,4,0,4,1,no,"30m has 23 cells, requires at least 50",False,,,
+Lung,plasma cell,Lung::plasma cell,m1-qc-cleaned-Lung.h5ad,4,2,1,1,0,22,2,0,2,1,no,"18m has 2 mice, requires at least 3; 18m has 4 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 22 cells, requires at least 50",False,,,
+Spleen,immature NKT cell,Spleen::immature NKT cell,m1-qc-cleaned-Spleen.h5ad,14,2,2,0,0,22,4,0,4,0,no,"18m has 2 mice, requires at least 3; 18m has 14 cells, requires at least 50; 30m has 22 cells, requires at least 50",False,,,
+Lung,neutrophil,Lung::neutrophil,m1-qc-cleaned-Lung.h5ad,410,4,2,2,2,21,3,0,3,1,no,"30m has 21 cells, requires at least 50",False,,,
+Liver,plasmacytoid dendritic cell,Liver::plasmacytoid dendritic cell,m1-qc-cleaned-Liver.h5ad,8,1,1,0,0,17,3,0,3,0,no,"18m has 1 mice, requires at least 3; 18m has 8 cells, requires at least 50; 30m has 17 cells, requires at least 50",False,,,
+Kidney,kidney mesangial cell,Kidney::kidney mesangial cell,m1-qc-cleaned-Kidney.h5ad,27,3,2,1,1,15,3,0,3,0,no,"18m has 27 cells, requires at least 50; 30m has 15 cells, requires at least 50",False,,,
+Fat,erythroblast,Fat::erythroblast,m1-qc-cleaned-Fat.h5ad,31,2,1,1,1,14,1,0,1,1,no,"18m has 2 mice, requires at least 3; 18m has 31 cells, requires at least 50; 30m has 1 mice, requires at least 3; 30m has 14 cells, requires at least 50",False,,,
+Lung,dendritic cell,Lung::dendritic cell,m1-qc-cleaned-Lung.h5ad,9,4,2,2,0,14,3,0,3,0,no,"18m has 9 cells, requires at least 50; 30m has 14 cells, requires at least 50",False,,,
+Lung,plasmacytoid dendritic cell,Lung::plasmacytoid dendritic cell,m1-qc-cleaned-Lung.h5ad,15,3,1,2,0,14,3,0,3,0,no,"18m has 15 cells, requires at least 50; 30m has 14 cells, requires at least 50",False,,,
+Lung,smooth muscle cell of the pulmonary artery,Lung::smooth muscle cell of the pulmonary artery,m1-qc-cleaned-Lung.h5ad,32,4,2,2,2,11,3,0,3,0,no,"18m has 32 cells, requires at least 50; 30m has 11 cells, requires at least 50",False,,,
+Lung,type II pneumocyte,Lung::type II pneumocyte,m1-qc-cleaned-Lung.h5ad,35,3,1,2,2,11,4,0,4,0,no,"18m has 35 cells, requires at least 50; 30m has 11 cells, requires at least 50",False,,,
+Lung,endothelial cell of lymphatic vessel,Lung::endothelial cell of lymphatic vessel,m1-qc-cleaned-Lung.h5ad,11,3,1,2,0,10,4,0,4,0,no,"18m has 11 cells, requires at least 50; 30m has 10 cells, requires at least 50",False,,,
+Pancreas,pancreatic stellate cell,Pancreas::pancreatic stellate cell,m1-qc-cleaned-Pancreas.h5ad,6,1,0,1,0,9,2,0,2,0,no,"18m has 1 mice, requires at least 3; 18m has 6 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 9 cells, requires at least 50",False,,,
+Lung,pericyte cell,Lung::pericyte cell,m1-qc-cleaned-Lung.h5ad,7,4,2,2,0,8,3,0,3,0,no,"18m has 7 cells, requires at least 50; 30m has 8 cells, requires at least 50",False,,,
+Kidney,kidney capillary endothelial cell,Kidney::kidney capillary endothelial cell,m1-qc-cleaned-Kidney.h5ad,19,3,2,1,1,7,2,0,2,0,no,"18m has 19 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 7 cells, requires at least 50",False,,,
+Liver,hepatic stellate cell,Liver::hepatic stellate cell,m1-qc-cleaned-Liver.h5ad,2,1,1,0,0,5,1,0,1,0,no,"18m has 1 mice, requires at least 3; 18m has 2 cells, requires at least 50; 30m has 1 mice, requires at least 3; 30m has 5 cells, requires at least 50",False,,,
+Fat,epithelial cell,Fat::epithelial cell,m1-qc-cleaned-Fat.h5ad,69,2,1,1,2,4,1,0,1,0,no,"18m has 2 mice, requires at least 3; 30m has 1 mice, requires at least 3; 30m has 4 cells, requires at least 50",False,,,
+Kidney,NK cell,Kidney::NK cell,m1-qc-cleaned-Kidney.h5ad,8,2,1,1,0,4,4,0,4,0,no,"18m has 2 mice, requires at least 3; 18m has 8 cells, requires at least 50; 30m has 4 cells, requires at least 50",False,,,
+Lung,ciliated columnar cell of tracheobronchial tree,Lung::ciliated columnar cell of tracheobronchial tree,m1-qc-cleaned-Lung.h5ad,9,3,1,2,0,3,3,0,3,0,no,"18m has 9 cells, requires at least 50; 30m has 3 cells, requires at least 50",False,,,
+Lung,club cell of bronchiole,Lung::club cell of bronchiole,m1-qc-cleaned-Lung.h5ad,4,3,1,2,0,3,2,0,2,0,no,"18m has 4 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 3 cells, requires at least 50",False,,,
+Pancreas,pancreatic PP cell,Pancreas::pancreatic PP cell,m1-qc-cleaned-Pancreas.h5ad,125,2,1,1,2,3,2,0,2,0,no,"18m has 2 mice, requires at least 3; 30m has 2 mice, requires at least 3; 30m has 3 cells, requires at least 50",False,,,
+Marrow,erythroid progenitor,Marrow::erythroid progenitor,m1-qc-cleaned-Marrow.h5ad,1,1,1,0,0,2,2,0,2,0,no,"18m has 1 mice, requires at least 3; 18m has 1 cells, requires at least 50; 30m has 2 mice, requires at least 3; 30m has 2 cells, requires at least 50",False,,,
+Bladder,bladder cell,Bladder::bladder cell,m1-qc-cleaned-Bladder.h5ad,536,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; no 30m mice or cells",False,,,
+Bladder,bladder urothelial cell,Bladder::bladder urothelial cell,m1-qc-cleaned-Bladder.h5ad,1381,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; no 30m mice or cells",False,,,
+Bladder,endothelial cell,Bladder::endothelial cell,m1-qc-cleaned-Bladder.h5ad,40,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 40 cells, requires at least 50; no 30m mice or cells",False,,,
+Bladder,leukocyte,Bladder::leukocyte,m1-qc-cleaned-Bladder.h5ad,83,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; no 30m mice or cells",False,,,
+Lung,pulmonary interstitial fibroblast,Lung::pulmonary interstitial fibroblast,m1-qc-cleaned-Lung.h5ad,9,4,2,2,0,0,0,0,0,0,no,"18m has 9 cells, requires at least 50; no 30m mice or cells",False,,,
+Mammary_Gland,B cell,Mammary_Gland::B cell,m1-qc-cleaned-Mammary_Gland.h5ad,233,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,T cell,Mammary_Gland::T cell,m1-qc-cleaned-Mammary_Gland.h5ad,475,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,basal cell,Mammary_Gland::basal cell,m1-qc-cleaned-Mammary_Gland.h5ad,472,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,endothelial cell,Mammary_Gland::endothelial cell,m1-qc-cleaned-Mammary_Gland.h5ad,173,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,luminal epithelial cell of mammary gland,Mammary_Gland::luminal epithelial cell of mammary gland,m1-qc-cleaned-Mammary_Gland.h5ad,919,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,macrophage,Mammary_Gland::macrophage,m1-qc-cleaned-Mammary_Gland.h5ad,134,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Mammary_Gland,stromal cell,Mammary_Gland::stromal cell,m1-qc-cleaned-Mammary_Gland.h5ad,553,2,2,0,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Skin,T cell,Skin::T cell,m1-qc-cleaned-Skin.h5ad,5,1,0,1,0,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 5 cells, requires at least 50; no 30m mice or cells",False,,,
+Skin,basal cell of epidermis,Skin::basal cell of epidermis,m1-qc-cleaned-Skin.h5ad,40,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 40 cells, requires at least 50; no 30m mice or cells",False,,,
+Skin,epidermal cell,Skin::epidermal cell,m1-qc-cleaned-Skin.h5ad,23,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 23 cells, requires at least 50; no 30m mice or cells",False,,,
+Skin,keratinocyte stem cell,Skin::keratinocyte stem cell,m1-qc-cleaned-Skin.h5ad,20,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 20 cells, requires at least 50; no 30m mice or cells",False,,,
+Skin,stem cell of epidermis,Skin::stem cell of epidermis,m1-qc-cleaned-Skin.h5ad,3,1,0,1,0,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 3 cells, requires at least 50; no 30m mice or cells",False,,,
+Thymus,DN3 thymocyte,Thymus::DN3 thymocyte,m1-qc-cleaned-Thymus.h5ad,60,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Thymus,DN4 thymocyte,Thymus::DN4 thymocyte,m1-qc-cleaned-Thymus.h5ad,343,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Thymus,double negative T cell,Thymus::double negative T cell,m1-qc-cleaned-Thymus.h5ad,339,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Thymus,immature T cell,Thymus::immature T cell,m1-qc-cleaned-Thymus.h5ad,675,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Thymus,professional antigen presenting cell,Thymus::professional antigen presenting cell,m1-qc-cleaned-Thymus.h5ad,73,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Thymus,thymocyte,Thymus::thymocyte,m1-qc-cleaned-Thymus.h5ad,531,2,1,1,2,0,0,0,0,0,no,"18m has 2 mice, requires at least 3; no 30m mice or cells",False,,,
+Tongue,Langerhans cell,Tongue::Langerhans cell,m1-qc-cleaned-Tongue.h5ad,17,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; 18m has 17 cells, requires at least 50; no 30m mice or cells",False,,,
+Tongue,basal cell of epidermis,Tongue::basal cell of epidermis,m1-qc-cleaned-Tongue.h5ad,1830,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; no 30m mice or cells",False,,,
+Tongue,keratinocyte,Tongue::keratinocyte,m1-qc-cleaned-Tongue.h5ad,1816,1,0,1,1,0,0,0,0,0,no,"18m has 1 mice, requires at least 3; no 30m mice or cells",False,,,

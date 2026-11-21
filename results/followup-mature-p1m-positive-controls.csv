@@ -1,0 +1,6 @@
+top_unit,gene,detected,log2FC,pvalue,FDR,FDR_uniform,direction
+Marrow::granulocytopoietic cell,Cdkn2a,True,2.4397555277718137,0.10412628220392663,,0.3246357357160925,UP with age
+Marrow::granulocytopoietic cell,Spp1,True,-1.015003084296904,0.025259936340866786,0.09914752991555023,0.1280047556370433,DOWN with age
+Marrow::granulocytopoietic cell,Apoe,True,0.5708445031050194,0.28957749197108185,0.5109633669283605,0.5825237905649392,UP with age
+Marrow::granulocytopoietic cell,Igfbp3,False,,,,,UNTESTABLE: gene absent after total-count filtering
+Marrow::granulocytopoietic cell,Lgals3,True,-0.7069896776526298,0.061890870108065696,0.18550199455546362,0.23543453139095058,DOWN with age
