@@ -1,0 +1,66 @@
+cohort,arm,unit,n_donors_full_range,n_donors_30plus,n_donors_excluded_under_30,min_age_years_30plus,max_age_years_30plus
+Gao_Heart,unadjusted,Adipocyte,46,44,2,32.0,91.0
+Gao_Heart,unadjusted,Cardiomyocyte,115,107,8,30.0,81.0
+Gao_Heart,unadjusted,Endocardial,87,80,7,30.0,91.0
+Gao_Heart,unadjusted,Endothelial,111,103,8,30.0,91.0
+Gao_Heart,unadjusted,Epicardial,24,22,2,31.0,91.0
+Gao_Heart,unadjusted,Fibroblast,117,109,8,30.0,91.0
+Gao_Heart,unadjusted,LEC,62,59,3,30.0,91.0
+Gao_Heart,unadjusted,Lymphoid,113,105,8,30.0,91.0
+Gao_Heart,unadjusted,Mast,73,69,4,30.0,72.0
+Gao_Heart,unadjusted,Myeloid,117,109,8,30.0,91.0
+Gao_Heart,unadjusted,Neuronal,102,95,7,30.0,91.0
+Gao_Heart,unadjusted,Pericyte,117,109,8,30.0,91.0
+Gao_Heart,unadjusted,vSMC,115,107,8,30.0,91.0
+Gao_Heart,unadjusted,All_LV_Nuclei,117,109,8,30.0,91.0
+Gao_Heart,batch_adjusted,Adipocyte,46,44,2,32.0,91.0
+Gao_Heart,batch_adjusted,Cardiomyocyte,115,107,8,30.0,81.0
+Gao_Heart,batch_adjusted,Endocardial,87,80,7,30.0,91.0
+Gao_Heart,batch_adjusted,Endothelial,111,103,8,30.0,91.0
+Gao_Heart,batch_adjusted,Epicardial,24,22,2,31.0,91.0
+Gao_Heart,batch_adjusted,Fibroblast,117,109,8,30.0,91.0
+Gao_Heart,batch_adjusted,LEC,62,59,3,30.0,91.0
+Gao_Heart,batch_adjusted,Lymphoid,113,105,8,30.0,91.0
+Gao_Heart,batch_adjusted,Mast,73,69,4,30.0,72.0
+Gao_Heart,batch_adjusted,Myeloid,117,109,8,30.0,91.0
+Gao_Heart,batch_adjusted,Neuronal,102,95,7,30.0,91.0
+Gao_Heart,batch_adjusted,Pericyte,117,109,8,30.0,91.0
+Gao_Heart,batch_adjusted,vSMC,115,107,8,30.0,91.0
+Gao_Heart,batch_adjusted,All_LV_Nuclei,117,109,8,30.0,91.0
+Yazar_Blood,unadjusted,"CD14-low, CD16-positive monocyte",293,287,6,30.0,94.0
+Yazar_Blood,unadjusted,CD14-positive monocyte,493,468,25,30.0,97.0
+Yazar_Blood,unadjusted,"CD16-negative, CD56-bright natural killer cell, human",33,30,3,31.0,88.0
+Yazar_Blood,unadjusted,"CD4-positive, alpha-beta cytotoxic T cell",280,275,5,30.0,97.0
+Yazar_Blood,unadjusted,"central memory CD4-positive, alpha-beta T cell",980,931,49,30.0,97.0
+Yazar_Blood,unadjusted,"central memory CD8-positive, alpha-beta T cell",293,270,23,30.0,91.0
+Yazar_Blood,unadjusted,conventional dendritic cell,6,6,0,61.0,80.0
+Yazar_Blood,unadjusted,"effector memory CD4-positive, alpha-beta T cell",698,658,40,30.0,94.0
+Yazar_Blood,unadjusted,"effector memory CD8-positive, alpha-beta T cell",966,917,49,30.0,97.0
+Yazar_Blood,unadjusted,gamma-delta T cell,329,298,31,30.0,95.0
+Yazar_Blood,unadjusted,memory B cell,614,573,41,30.0,97.0
+Yazar_Blood,unadjusted,mucosal-associated invariant T cell,112,93,19,30.0,88.0
+Yazar_Blood,unadjusted,naive B cell,844,796,48,30.0,97.0
+Yazar_Blood,unadjusted,"naive thymus-derived CD4-positive, alpha-beta T cell",974,925,49,30.0,97.0
+Yazar_Blood,unadjusted,"naive thymus-derived CD8-positive, alpha-beta T cell",671,623,48,30.0,93.0
+Yazar_Blood,unadjusted,natural killer cell,977,928,49,30.0,97.0
+Yazar_Blood,unadjusted,plasmablast,14,14,0,36.0,88.0
+Yazar_Blood,unadjusted,regulatory T cell,606,576,30,30.0,95.0
+Yazar_Blood,unadjusted,transitional stage B cell,493,456,37,30.0,97.0
+Yazar_Blood,unadjusted,All_Cells,981,932,49,30.0,97.0
+Yazar_Blood,batch_adjusted,"CD14-low, CD16-positive monocyte",283,277,6,30.0,94.0
+Yazar_Blood,batch_adjusted,CD14-positive monocyte,489,464,25,30.0,97.0
+Yazar_Blood,batch_adjusted,"CD4-positive, alpha-beta cytotoxic T cell",266,261,5,30.0,97.0
+Yazar_Blood,batch_adjusted,"central memory CD4-positive, alpha-beta T cell",980,931,49,30.0,97.0
+Yazar_Blood,batch_adjusted,"central memory CD8-positive, alpha-beta T cell",284,261,23,30.0,91.0
+Yazar_Blood,batch_adjusted,"effector memory CD4-positive, alpha-beta T cell",698,658,40,30.0,94.0
+Yazar_Blood,batch_adjusted,"effector memory CD8-positive, alpha-beta T cell",966,917,49,30.0,97.0
+Yazar_Blood,batch_adjusted,gamma-delta T cell,322,292,30,30.0,95.0
+Yazar_Blood,batch_adjusted,memory B cell,614,573,41,30.0,97.0
+Yazar_Blood,batch_adjusted,mucosal-associated invariant T cell,89,74,15,30.0,88.0
+Yazar_Blood,batch_adjusted,naive B cell,844,796,48,30.0,97.0
+Yazar_Blood,batch_adjusted,"naive thymus-derived CD4-positive, alpha-beta T cell",974,925,49,30.0,97.0
+Yazar_Blood,batch_adjusted,"naive thymus-derived CD8-positive, alpha-beta T cell",671,623,48,30.0,93.0
+Yazar_Blood,batch_adjusted,natural killer cell,977,928,49,30.0,97.0
+Yazar_Blood,batch_adjusted,regulatory T cell,604,574,30,30.0,95.0
+Yazar_Blood,batch_adjusted,transitional stage B cell,493,456,37,30.0,97.0
+Yazar_Blood,batch_adjusted,All_Cells,981,932,49,30.0,97.0
