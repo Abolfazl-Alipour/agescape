@@ -2520,8 +2520,8 @@ def run_cohort_yazar(programs: dict[str, dict[str, list[str]]]) -> None:
                 oq_e = float(oref["empirical_q"])
                 oeff = float(oref["composite_slope"])
 
-            mat_q_c = float(r["q_bh_composite"]) if not is_pool else float(r["composite_pvalue"])
-            mat_q_e = float(r["q_bh_empirical"]) if not is_pool else float(r["empirical_null_pvalue"])
+            mat_q_c = float(r["q_bh_all_composite"])
+            mat_q_e = float(r["q_bh_all_empirical"])
             orig_cls = transport_class(oq_c, oq_e, True)
             mat_cls = transport_class(mat_q_c, mat_q_e, True)
             verd, vnote = verdict_standard(orig_cls == "BOTH_PASS", mat_cls == "BOTH_PASS", oeff, float(r["composite_effect"]))
@@ -2667,10 +2667,14 @@ def run_cohort_yazar(programs: dict[str, dict[str, list[str]]]) -> None:
     ]
     for tier, fam_key in [("P1m", "transport_P1m"), ("P0m", "transport_P0m")]:
         df_ct, df_pl, _ = fam_c_results[tier]
-        bp = int(((df_ct["q_bh_composite"] < ALPHA) & (df_ct["q_bh_empirical"] < ALPHA)).sum())
-        eo = int(((df_ct["q_bh_composite"] >= ALPHA) & (df_ct["q_bh_empirical"] < ALPHA)).sum())
-        co = int(((df_ct["q_bh_composite"] < ALPHA) & (df_ct["q_bh_empirical"] >= ALPHA)).sum())
-        bp_pos = int(((df_ct["q_bh_composite"] < ALPHA) & (df_ct["q_bh_empirical"] < ALPHA) & (df_ct["composite_effect"] > 0)).sum())
+        df_both_sum = pd.concat([df_ct.assign(is_pooled=False), df_pl.assign(is_pooled=True)], ignore_index=True)
+        q_sum_c, _, _ = bh_checked(df_both_sum["composite_pvalue"])
+        q_sum_e, _, _ = bh_checked(df_both_sum["empirical_null_pvalue"])
+        both_sum = (q_sum_c < ALPHA) & (q_sum_e < ALPHA)
+        bp = int(both_sum.sum())
+        eo = int(((q_sum_c >= ALPHA) & (q_sum_e < ALPHA)).sum())
+        co = int(((q_sum_c < ALPHA) & (q_sum_e >= ALPHA)).sum())
+        bp_pos = int((both_sum & (df_both_sum["composite_effect"] > 0)).sum())
         pl_r = df_pl.iloc[0]
         mde_s = yazar_df[(yazar_df["endpoint_family"] == fam_key) & (yazar_df["verdict"] != "UNTESTABLE")]["mde80"]
         summary_rows.append(
@@ -2686,7 +2690,7 @@ def run_cohort_yazar(programs: dict[str, dict[str, list[str]]]) -> None:
                     if tier == "P1m"
                     else f"{int(((orig_p0_pool.drop(index=['All_Cells'], errors='ignore')['composite_q'] < ALPHA) & (orig_p0_pool.drop(index=['All_Cells'], errors='ignore')['empirical_q'] < ALPHA)).sum())}/16 both-pass (Block 5 P0_Raw257)"
                 ),
-                "mature_headline": f"{bp}/{len(df_ct)} both-pass ({bp_pos} positive), {eo} empirical-only, {co} composite-only (3 untestable); All_Cells eff={float(pl_r['composite_effect']):+.4f}, p_comp={float(pl_r['composite_pvalue']):.4g}, p_emp={float(pl_r['empirical_null_pvalue']):.4g}",
+                "mature_headline": f"{bp}/{len(df_both_sum)} both-pass ({bp_pos} positive), {eo} empirical-only, {co} composite-only (3 untestable); All_Cells eff={float(pl_r['composite_effect']):+.4f}, p_comp={float(pl_r['composite_pvalue']):.4g}, p_emp={float(pl_r['empirical_null_pvalue']):.4g}",
                 "mde80_summary": f"median={float(mde_s.median()):.4f} (range {float(mde_s.min()):.4f} to {float(mde_s.max()):.4f}) per dec (2.4865 * null_sd)",
             }
         )
@@ -3431,8 +3435,8 @@ def run_cohort_perez(programs: dict[str, dict[str, list[str]]]) -> None:
                     continue
 
                 r = pl_p_row if is_pool else df_ct_idx.loc[grp]
-                mat_qc = float(r["composite_pvalue"]) if is_pool else float(r["q_bh_composite"])
-                mat_qe = float(r["empirical_null_pvalue"]) if is_pool else float(r["q_bh_empirical"])
+                mat_qc = float(q_ac_exp[pos_all_p[grp]])
+                mat_qe = float(q_ae_exp[pos_all_p[grp]])
                 mat_cls = transport_class(mat_qc, mat_qe, True)
                 verd, vnote = verdict_standard(
                     orig_sig_flag,
@@ -3539,9 +3543,9 @@ def run_cohort_perez(programs: dict[str, dict[str, list[str]]]) -> None:
                     }
                 )
 
-            bp = int(((df_ct_p["q_bh_composite"] < ALPHA) & (df_ct_p["q_bh_empirical"] < ALPHA)).sum()) if not df_ct_p.empty else 0
-            eo = int(((df_ct_p["q_bh_composite"] >= ALPHA) & (df_ct_p["q_bh_empirical"] < ALPHA)).sum()) if not df_ct_p.empty else 0
-            co = int(((df_ct_p["q_bh_composite"] < ALPHA) & (df_ct_p["q_bh_empirical"] >= ALPHA)).sum()) if not df_ct_p.empty else 0
+            bp = int(((q_ac_exp < ALPHA) & (q_ae_exp < ALPHA)).sum()) if not df_all_p.empty else 0
+            eo = int(((q_ac_exp >= ALPHA) & (q_ae_exp < ALPHA)).sum()) if not df_all_p.empty else 0
+            co = int(((q_ac_exp < ALPHA) & (q_ae_exp >= ALPHA)).sum()) if not df_all_p.empty else 0
             tier_stats[tier] = {
                 "n_ct_tested": int(len(df_ct_p)),
                 "n_ct_untestable": int(len(orig_ct_roster) - len(df_ct_p)),
@@ -3641,7 +3645,7 @@ def run_cohort_perez(programs: dict[str, dict[str, list[str]]]) -> None:
                         if tier == "P1m"
                         else "No original P0 run"
                     ),
-                    "mature_headline": f"{ts['both_pass']}/{ts['n_ct_tested']} both-pass, {ts['emp_only']} emp-only, {ts['comp_only']} comp-only ({ts['n_ct_untestable']} untestable); {ac_str}",
+                    "mature_headline": f"{ts['both_pass']}/{ts['n_ct_tested'] + (1 if ts['all_cells'] is not None else 0)} both-pass, {ts['emp_only']} emp-only, {ts['comp_only']} comp-only ({ts['n_ct_untestable']} untestable); {ac_str}",
                     "mde80_summary": (
                         f"median={float(np.nanmedian(sub_mde)):.4f} (range {float(np.nanmin(sub_mde)):.4f} to {float(np.nanmax(sub_mde)):.4f}) per dec (2.4865 * null_sd)"
                         if sub_mde
@@ -4070,8 +4074,8 @@ def run_cohort_guilliams(programs: dict[str, dict[str, list[str]]]) -> None:
                     continue
 
                 r = src_idx.loc[grp]
-                mat_qc = float(r["composite_pvalue"]) if is_pool else float(r["q_bh_composite"])
-                mat_qe = float(r["empirical_null_pvalue"]) if is_pool else float(r["q_bh_empirical"])
+                mat_qc = float(q_ac_e[pos_all_c[grp]])
+                mat_qe = float(q_ae_e[pos_all_c[grp]])
                 mat_cls = transport_class(mat_qc, mat_qe, True)
                 verd, vnote = verdict_standard(
                     orig_sig_flag,
@@ -4178,9 +4182,9 @@ def run_cohort_guilliams(programs: dict[str, dict[str, list[str]]]) -> None:
                     }
                 )
 
-            bp = int(((df_c_ct["q_bh_composite"] < ALPHA) & (df_c_ct["q_bh_empirical"] < ALPHA)).sum()) if not df_c_ct.empty else 0
-            eo = int(((df_c_ct["q_bh_composite"] >= ALPHA) & (df_c_ct["q_bh_empirical"] < ALPHA)).sum()) if not df_c_ct.empty else 0
-            co = int(((df_c_ct["q_bh_composite"] < ALPHA) & (df_c_ct["q_bh_empirical"] >= ALPHA)).sum()) if not df_c_ct.empty else 0
+            bp = int(((q_ac_e < ALPHA) & (q_ae_e < ALPHA)).sum()) if not df_all_c.empty else 0
+            eo = int(((q_ac_e >= ALPHA) & (q_ae_e < ALPHA)).sum()) if not df_all_c.empty else 0
+            co = int(((q_ac_e < ALPHA) & (q_ae_e >= ALPHA)).sum()) if not df_all_c.empty else 0
             tier_res[tier] = {
                 "n_ct_tested": int(len(df_c_ct)),
                 "both_pass": bp,
@@ -4267,7 +4271,7 @@ def run_cohort_guilliams(programs: dict[str, dict[str, list[str]]]) -> None:
                             if tier == "P1m"
                             else "No original P0 run"
                         ),
-                        "mature_headline": f"{tr['both_pass']}/{tr['n_ct_tested']} both-pass, {tr['emp_only']} emp-only, {tr['comp_only']} comp-only ({7 - tr['n_ct_tested']} untestable); {pl_desc}",
+                        "mature_headline": f"{tr['both_pass']}/{tr['n_ct_tested'] + len(tr['df_pl'])} both-pass, {tr['emp_only']} emp-only, {tr['comp_only']} comp-only ({7 - tr['n_ct_tested']} untestable); {pl_desc}",
                         "mde80_summary": f"median={float(np.nanmedian(sub_mde)):.4f} (range {float(np.nanmin(sub_mde)):.4f} to {float(np.nanmax(sub_mde)):.4f}) per dec (2.4865 * null_sd)",
                     }
                 )
