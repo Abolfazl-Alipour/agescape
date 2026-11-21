@@ -1,0 +1,4 @@
+subtype,n_successful_donor_drops,pearson_min,pearson_max,pearson_sign_flips,both_fdr_same_direction_fraction_min,both_fdr_same_direction_fraction_max,both_fdr_genes_evaluated,both_fdr_genes_with_any_slope_sign_flip,both_fdr_genes_losing_nominal_in_any_drop
+VIP,15,-0.10168692955893072,0.06756397715978196,6,0.25,0.5,4,2,4
+pvalb,15,-0.2613894134154776,-0.07099693849395902,0,0.2857142857142857,0.7142857142857143,7,3,7
+sst,15,-0.3481035079405644,0.2362453300538608,3,0.39473684210526316,0.5526315789473685,38,18,38

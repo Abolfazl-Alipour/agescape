@@ -1,0 +1,19 @@
+family,n_source_genes,n_tested,n_missing_or_filtered,same_direction,same_direction_fraction,same_direction_nominal,same_direction_seaad_fdr,subtype,block_perm_same_null_mean,block_perm_same_observed_minus_null,block_perm_same_p_greater,block_perm_fdr_null_mean,block_perm_fdr_observed_minus_null,block_perm_fdr_p_greater,same_direction_fraction_ci95_low,same_direction_fraction_ci95_high,block_perm_n,block_bootstrap_n,target_derivation,block_perm_same_q_bh_across_3_subtypes
+mature_both_fdr,4,4,0,1,0.25,1,0,VIP,1.542,-0.542,0.8691308691308691,0.0,0.0,1.0,0.0,0.75,1000,1000,mature human 30-plus,0.9760239760239761
+mature_discovery_all,139,124,15,64,0.5161290322580645,13,0,VIP,59.071,4.929000000000002,0.21878121878121878,0.0,0.0,1.0,0.48090293369256104,0.6742514430014429,1000,1000,mature human 30-plus,
+mature_discovery_without_both_fdr,135,120,15,63,0.525,12,0,VIP,57.529,5.4709999999999965,0.19080919080919082,0.0,0.0,1.0,0.49523809523809526,0.6838235294117647,1000,1000,mature human 30-plus,
+mouse_p1_all_young_derived,118,4,114,2,0.5,1,0,VIP,2.236,-0.2360000000000002,0.7662337662337663,0.0,0.0,1.0,0.0,1.0,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_mature_discovery_overlap_young_derived,1,1,0,0,0.0,0,0,VIP,0.701,-0.701,1.0,0.0,0.0,1.0,0.0,0.0,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_outside_mature_discovery_young_derived,117,3,114,2,0.6666666666666666,1,0,VIP,1.535,0.4650000000000001,0.5354645354645354,0.0,0.0,1.0,0.0,1.0,1000,1000,young-derived mouse 3 versus 18 months,
+mature_both_fdr,8,7,1,2,0.2857142857142857,1,0,pvalb,2.862,-0.8620000000000001,0.8481518481518482,0.0,0.0,1.0,0.0,0.5714285714285714,1000,1000,mature human 30-plus,0.9760239760239761
+mature_discovery_all,128,121,7,46,0.38016528925619836,3,0,pvalb,51.756,-5.756,0.8881118881118881,0.0,0.0,1.0,0.25838831048345534,0.393455042225534,1000,1000,mature human 30-plus,
+mature_discovery_without_both_fdr,120,114,6,44,0.38596491228070173,2,0,pvalb,48.894,-4.893999999999998,0.8611388611388612,0.0,0.0,1.0,0.26784388260254594,0.4,1000,1000,mature human 30-plus,
+mouse_p1_all_young_derived,118,3,115,3,1.0,0,0,pvalb,1.645,1.355,0.15284715284715283,0.0,0.0,1.0,0.0,1.0,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_mature_discovery_overlap_young_derived,1,1,0,1,1.0,0,0,pvalb,0.69,0.31000000000000005,0.6903096903096904,0.0,0.0,1.0,0.0,0.0,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_outside_mature_discovery_young_derived,117,2,115,2,1.0,0,0,pvalb,0.955,1.045,0.21078921078921078,0.0,0.0,1.0,1.0,1.0,1000,1000,young-derived mouse 3 versus 18 months,
+mature_both_fdr,41,38,3,16,0.42105263157894735,4,0,sst,21.322,-5.321999999999999,0.9760239760239761,0.0,0.0,1.0,0.18181818181818182,0.5527692778457771,1000,1000,mature human 30-plus,0.9760239760239761
+mature_discovery_all,355,333,22,142,0.4264264264264264,24,0,sst,175.83,-33.83000000000001,1.0,0.0,0.0,1.0,0.4600976193232241,0.5758534088745001,1000,1000,mature human 30-plus,
+mature_discovery_without_both_fdr,314,295,19,126,0.4271186440677966,20,0,sst,154.508,-28.50800000000001,0.999000999000999,0.0,0.0,1.0,0.4804199802150648,0.5960451826532792,1000,1000,mature human 30-plus,
+mouse_p1_all_young_derived,118,5,113,3,0.6,0,0,sst,2.871,0.129,0.6363636363636364,0.0,0.0,1.0,0.0,0.8,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_mature_discovery_overlap_young_derived,1,1,0,1,1.0,0,0,sst,0.442,0.558,0.44255744255744256,0.0,0.0,1.0,1.0,1.0,1000,1000,young-derived mouse 3 versus 18 months,
+mouse_p1_outside_mature_discovery_young_derived,117,4,113,2,0.5,0,0,sst,2.429,-0.4289999999999998,0.8311688311688312,0.0,0.0,1.0,0.0,0.75,1000,1000,young-derived mouse 3 versus 18 months,

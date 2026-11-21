@@ -1,0 +1,33 @@
+cohort,cell_type,model,n_genes,max_abs_q_difference
+MSSM_DLPFC,VIP GABAergic cortical interneuron,rev2_voom_wls,1932,4.400126096815171e-15
+MSSM_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex_depth_ols,1932,5.700301342059788e-15
+MSSM_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1932,1.7672495411513722e-15
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,rev2_voom_wls,1873,4.4651782271643015e-15
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex_depth_ols,1873,4.100886297209172e-15
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1873,2.2152418788223827e-15
+MSSM_DLPFC,sst GABAergic cortical interneuron,rev2_voom_wls,1906,1.9225072922512965e-15
+MSSM_DLPFC,sst GABAergic cortical interneuron,age_plus_sex_depth_ols,1906,3.4312830354821244e-15
+MSSM_DLPFC,sst GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1906,1.7637800941994186e-15
+MSSM_DLPFC,GABAergic neuron,rev2_voom_wls,1883,8.86096751528953e-15
+MSSM_DLPFC,GABAergic neuron,age_plus_sex_depth_ols,1883,9.381384558082573e-15
+MSSM_DLPFC,GABAergic neuron,age_plus_sex_ols_depth_unadjusted,1883,5.0133508455729725e-15
+HBCC_DLPFC,VIP GABAergic cortical interneuron,rev2_voom_wls,1916,1.9283186158958188e-14
+HBCC_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex_depth_ols,1916,6.300515664747763e-15
+HBCC_DLPFC,VIP GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1916,8.423817199343375e-15
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,rev2_voom_wls,1866,1.960237527853792e-14
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex_depth_ols,1866,1.7541523789077473e-14
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1866,1.5890067039947553e-14
+HBCC_DLPFC,sst GABAergic cortical interneuron,rev2_voom_wls,1895,9.485467966641181e-15
+HBCC_DLPFC,sst GABAergic cortical interneuron,age_plus_sex_depth_ols,1895,1.0241807402167069e-14
+HBCC_DLPFC,sst GABAergic cortical interneuron,age_plus_sex_ols_depth_unadjusted,1895,1.3451045832724162e-14
+HBCC_DLPFC,GABAergic neuron,rev2_voom_wls,1848,1.149080830487037e-13
+HBCC_DLPFC,GABAergic neuron,age_plus_sex_depth_ols,1848,3.5360603334311236e-14
+HBCC_DLPFC,GABAergic neuron,age_plus_sex_ols_depth_unadjusted,1848,1.404432126150823e-14
+MSSM_DLPFC,VIP GABAergic cortical interneuron,rev2_voom_wls_moderated,1932,0.0
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,rev2_voom_wls_moderated,1873,0.0
+MSSM_DLPFC,sst GABAergic cortical interneuron,rev2_voom_wls_moderated,1906,0.0
+MSSM_DLPFC,GABAergic neuron,rev2_voom_wls_moderated,1883,0.0
+HBCC_DLPFC,VIP GABAergic cortical interneuron,rev2_voom_wls_moderated,1916,0.0
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,rev2_voom_wls_moderated,1866,0.0
+HBCC_DLPFC,sst GABAergic cortical interneuron,rev2_voom_wls_moderated,1895,0.0
+HBCC_DLPFC,GABAergic neuron,rev2_voom_wls_moderated,1848,0.0

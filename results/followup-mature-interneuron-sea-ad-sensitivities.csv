@@ -1,0 +1,19 @@
+subtype,arm,status,n_donors,design,n_shared_genes,pearson_vs_mature_mssm_ols,spearman_vs_mature_mssm_ols,both_fdr_n_source_genes,both_fdr_n_tested,both_fdr_n_missing_or_filtered,both_fdr_same_direction,both_fdr_same_direction_fraction,both_fdr_same_direction_nominal,both_fdr_same_direction_seaad_fdr,reason
+VIP,primary_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1634.0,0.0027643651497344553,0.017062836226064047,4.0,4.0,0.0,1.0,0.25,1.0,0.0,
+VIP,ols_same_design,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1634.0,0.030789295732499732,0.04112305222313065,4.0,4.0,0.0,1.0,0.25,1.0,0.0,
+VIP,wls_without_adnc,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction,1634.0,-0.008965663993484727,0.007754893947747073,4.0,4.0,0.0,1.0,0.25,1.0,0.0,
+VIP,singleome_wls,tested,15,intercept + age + sex_male + mean_log_umi + adnc_low,1633.0,0.017293726430399597,0.0271543645164617,4.0,4.0,0.0,1.0,0.25,1.0,0.0,
+VIP,floor_50_nuclei_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1634.0,0.0027643651497344553,0.017062836226064047,4.0,4.0,0.0,1.0,0.25,1.0,0.0,
+VIP,not_ad_only_wls,untestable,8,,,,,,,,,,,,Donor or residual-df floor failed
+pvalb,primary_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1566.0,-0.15672819212200167,-0.15032124371873026,8.0,7.0,1.0,2.0,0.2857142857142857,1.0,0.0,
+pvalb,ols_same_design,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1566.0,-0.16857319968408144,-0.15898918992800812,8.0,7.0,1.0,2.0,0.2857142857142857,1.0,0.0,
+pvalb,wls_without_adnc,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction,1566.0,-0.16269505245560156,-0.15626253413414928,8.0,7.0,1.0,2.0,0.2857142857142857,1.0,0.0,
+pvalb,singleome_wls,tested,15,intercept + age + sex_male + mean_log_umi + adnc_low,1564.0,-0.1264067658684306,-0.1226231021416781,8.0,7.0,1.0,2.0,0.2857142857142857,1.0,0.0,
+pvalb,floor_50_nuclei_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1566.0,-0.15672819212200167,-0.15032124371873026,8.0,7.0,1.0,2.0,0.2857142857142857,1.0,0.0,
+pvalb,not_ad_only_wls,untestable,8,,,,,,,,,,,,Donor or residual-df floor failed
+sst,primary_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1630.0,-0.16917800140566613,-0.15821612573818902,41.0,38.0,3.0,16.0,0.42105263157894735,4.0,0.0,
+sst,ols_same_design,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1630.0,0.047811091429291075,0.013313832394630026,41.0,38.0,3.0,14.0,0.3684210526315789,2.0,0.0,
+sst,wls_without_adnc,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction,1630.0,-0.16697385607886867,-0.15873510152826187,41.0,38.0,3.0,16.0,0.42105263157894735,4.0,0.0,
+sst,singleome_wls,tested,15,intercept + age + sex_male + mean_log_umi + adnc_low,1629.0,-0.07065214165872545,-0.07151609368672039,41.0,38.0,3.0,21.0,0.5526315789473685,5.0,0.0,
+sst,floor_50_nuclei_wls,tested,15,intercept + age + sex_male + mean_log_umi + multiome_fraction + adnc_low,1630.0,-0.16917800140566613,-0.15821612573818902,41.0,38.0,3.0,16.0,0.42105263157894735,4.0,0.0,
+sst,not_ad_only_wls,untestable,8,,,,,,,,,,,,Donor or residual-df floor failed

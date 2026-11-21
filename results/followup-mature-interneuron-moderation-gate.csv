@@ -1,0 +1,9 @@
+cohort,cell_type,short_type,n_recovered_genes,frozen_s0_sq,recovered_s0_sq,s0_sq_relative_difference,frozen_d0,recovered_d0,d0_relative_difference,pass_5_percent,recovery_universe
+MSSM_DLPFC,VIP GABAergic cortical interneuron,VIP,202,1.4130551310784851,0.9601244989803088,0.3205328809446284,4.053684671987687,5.07419742238561,0.25174941638899684,False,frozen selected-gene rows available for this unit
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,pvalb,137,1.4583882066536284,0.9580681099543377,0.34306372913376026,3.9496668235813694,5.38562172746579,0.3635635530853121,False,frozen selected-gene rows available for this unit
+MSSM_DLPFC,sst GABAergic cortical interneuron,sst,362,1.404324833167995,0.9978942635932492,0.28941350318350867,4.326758143894796,4.722075207354224,0.09136564843986794,False,frozen selected-gene rows available for this unit
+MSSM_DLPFC,GABAergic neuron,GABA,65,1.309581235247715,0.7974678398157878,0.39105126253207034,4.743124757457429,4.931786462775782,0.039775826056805075,False,frozen selected-gene rows available for this unit
+HBCC_DLPFC,VIP GABAergic cortical interneuron,VIP,202,1.6722917768165346,1.0246367514305827,0.38728589972430716,3.36405177303888,5.161731875911991,0.5343794400789486,False,frozen selected-gene rows available for this unit
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,pvalb,137,1.70602019570607,0.9053143694042373,0.4693413526505441,3.195125750712453,4.166435771582092,0.3039974312914149,False,frozen selected-gene rows available for this unit
+HBCC_DLPFC,sst GABAergic cortical interneuron,sst,362,1.4147907592973086,0.878628202317884,0.37896950729712375,3.3398647680976,3.7530061854152996,0.12370004356584374,False,frozen selected-gene rows available for this unit
+HBCC_DLPFC,GABAergic neuron,GABA,65,1.5531440953880826,0.8873722375777502,0.42866071460290145,3.869195521910954,4.817075054158106,0.2449810372413035,False,frozen selected-gene rows available for this unit

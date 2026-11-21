@@ -1,0 +1,17 @@
+cohort,cell_type,short_type,age_range,n_donors,resid_dof,n_tested_genes,median_wls_se,mde80_slope_per_year,mde80_slope_per_10_years,n_shared_genes,mde80_pearson_r,se_source
+MSSM_DLPFC,VIP GABAergic cortical interneuron,VIP,full_range,197,193,1933,0.0004545471443561,0.001279922605369131,0.01279922605369131,1853,0.06504357383655303,reviewer-rev2-interneuron-all-celltypes.csv median_se
+MSSM_DLPFC,VIP GABAergic cortical interneuron,VIP,mature30,193,189,1932,0.00048418936304015,0.0013635364396353618,0.013635364396353617,1862,0.06488637805193007,followup-mature-interneuron.csv WLS SE
+HBCC_DLPFC,VIP GABAergic cortical interneuron,VIP,full_range,80,76,1913,0.0006077416069856,0.0017248004171989406,0.017248004171989406,1853,0.06504357383655303,reviewer-rev2-interneuron-all-celltypes.csv median_se
+HBCC_DLPFC,VIP GABAergic cortical interneuron,VIP,mature30,59,55,1916,0.0008343872179677,0.002379881122630456,0.02379881122630456,1862,0.06488637805193007,followup-mature-interneuron.csv WLS SE
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,pvalb,full_range,189,185,1872,0.00050053286692,0.0014097199970857547,0.014097199970857547,1790,0.0661768931686327,reviewer-rev2-interneuron-all-celltypes.csv median_se
+MSSM_DLPFC,pvalb GABAergic cortical interneuron,pvalb,mature30,185,181,1873,0.0005279641505871,0.0014871528660589006,0.014871528660589006,1797,0.06604803586776027,followup-mature-interneuron.csv WLS SE
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,pvalb,full_range,80,76,1860,0.0006260118931501,0.001776652383292189,0.01776652383292189,1790,0.0661768931686327,reviewer-rev2-interneuron-all-celltypes.csv median_se
+HBCC_DLPFC,pvalb GABAergic cortical interneuron,pvalb,mature30,59,55,1866,0.00084283659004585,0.0024039808459649626,0.024039808459649627,1797,0.06604803586776027,followup-mature-interneuron.csv WLS SE
+MSSM_DLPFC,sst GABAergic cortical interneuron,sst,full_range,177,173,1904,0.0005028444346955,0.001416751724331633,0.01416751724331633,1808,0.06584705793060755,reviewer-rev2-interneuron-all-celltypes.csv median_se
+MSSM_DLPFC,sst GABAergic cortical interneuron,sst,mature30,174,170,1906,0.000524500328407,0.0014779146879561034,0.014779146879561035,1826,0.06552210586757962,followup-mature-interneuron.csv WLS SE
+HBCC_DLPFC,sst GABAergic cortical interneuron,sst,full_range,82,78,1882,0.0006830843467931,0.0019379791624652078,0.019379791624652077,1808,0.06584705793060755,reviewer-rev2-interneuron-all-celltypes.csv median_se
+HBCC_DLPFC,sst GABAergic cortical interneuron,sst,mature30,61,57,1895,0.0009177511461762,0.00261599293276493,0.026159929327649302,1826,0.06552210586757962,followup-mature-interneuron.csv WLS SE
+MSSM_DLPFC,GABAergic neuron,GABA,full_range,155,151,1884,0.000579553214372,0.0016342282347008466,0.016342282347008467,1781,0.06634368041422978,reviewer-rev2-interneuron-all-celltypes.csv median_se
+MSSM_DLPFC,GABAergic neuron,GABA,mature30,153,149,1883,0.0006077540953611,0.0017138990164263634,0.017138990164263634,1792,0.06613999986064832,followup-mature-interneuron.csv WLS SE
+HBCC_DLPFC,GABAergic neuron,GABA,full_range,71,67,1849,0.0007012250606512,0.0019936020078914173,0.019936020078914173,1781,0.06634368041422978,reviewer-rev2-interneuron-all-celltypes.csv median_se
+HBCC_DLPFC,GABAergic neuron,GABA,mature30,51,47,1848,0.00099105267493045,0.002835477445241144,0.02835477445241144,1792,0.06613999986064832,followup-mature-interneuron.csv WLS SE

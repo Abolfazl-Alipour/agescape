@@ -1,0 +1,68 @@
+{
+  "analysis": "Item 7 mature-derived SEA-AD interneuron test",
+  "frozen_plan_sha256": "791c1079cb512ced8db560049caf885569fea94f8e100b7d33eebc9832d79390",
+  "script_sha256": "21ef196a3500abd882aca465f94fbe4e26564dc956575377abdba10bb4cc3e24",
+  "mature_discovery_source": "results/followup-mature-interneuron-discovery-ols.csv",
+  "mature_discovery_source_sha256": "60b1e3b5a8987ee831a2177944b289a2f59806f718b315450577e5fb96d93d63",
+  "mature_gene_file": "results/followup-mature-interneuron-genes.csv",
+  "mature_gene_file_sha256": "0a5edd7a7fc801ab66efd1144bea6e3b99dc1b9aab3316cd6af3d12d891f3e55",
+  "source_manifest_sha256": "48e071795da051db60ba67dfe6c66a7619a16d307215a85bd35abb00516a4eaa",
+  "eligibility_validation": {
+    "eligibility_file": "results/followup-sea-ad-eligibility.csv",
+    "n_cached_donors": 15,
+    "subtypes": {
+      "VIP": {
+        "n_donors": 15,
+        "age_min": 72.0,
+        "age_max": 102.0,
+        "same_donor_ids": true,
+        "minimum_nuclei": 515
+      },
+      "pvalb": {
+        "n_donors": 15,
+        "age_min": 72.0,
+        "age_max": 102.0,
+        "same_donor_ids": true,
+        "minimum_nuclei": 459
+      },
+      "sst": {
+        "n_donors": 15,
+        "age_min": 72.0,
+        "age_max": 102.0,
+        "same_donor_ids": true,
+        "minimum_nuclei": 241
+      }
+    }
+  },
+  "permutations": 1000,
+  "block_bootstraps": 1000,
+  "permutation_seed": 20261108,
+  "bootstrap_seed": 20261208,
+  "discovery_model": "mature MSSM age_plus_sex_depth OLS (30-plus)",
+  "mouse_p1_derivation": "young-derived mouse 3 versus 18 months",
+  "bh_max_abs_difference": 0.0,
+  "outputs": {
+    "followup-mature-interneuron-sea-ad-gene-effects.csv": {
+      "sha256": "55f10c993c0ace1346f248c9928545060372dfc24ad29bedef6f7f92b9fab4c8"
+    },
+    "followup-mature-interneuron-sea-ad-genome-wide.csv": {
+      "sha256": "a5b4130f338f3607313c0758b50975f0f0a9a75b7c73cf3a0a15d7d15fdcbb45"
+    },
+    "followup-mature-interneuron-sea-ad-replication-summary.csv": {
+      "sha256": "77494bc4f4227e3e1cc8127490876276476f79b27da85f577d2cca79c2e9c2e6"
+    },
+    "followup-mature-interneuron-sea-ad-sensitivities.csv": {
+      "sha256": "2458cf0a91275f8f2f2f94f0b3ff66e07c618016c4c10edb0e83546e449e2326"
+    },
+    "followup-mature-interneuron-sea-ad-lodo-summary.csv": {
+      "sha256": "d825cbe192a31d3a1bd143491ee2a4046a485b69da207446e46c22dde6063c4d"
+    },
+    "followup-mature-interneuron-sea-ad-lodo-genes.csv": {
+      "sha256": "271a679abefcd6e1ba5c128fc613e405c0495ca6eeede4057bb109fd52769217"
+    },
+    "followup-mature-interneuron-sea-ad-bh-audit.csv": {
+      "sha256": "97a0ffbd7110af785dcf88fdb5f0de43d2b7948131fd15bd9ee751fc8fd518f4"
+    }
+  },
+  "report_sha256": "8de08c7ea65514e13959614e90239f1e434516baf55cae8b05473103600e8b82"
+}
