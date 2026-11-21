@@ -1,0 +1,38 @@
+cohort,step,start_utc,end_utc,duration_seconds,peak_rss_mb,model_used,status,notes
+HRCA_Sn_Adult_MacularOnly,family_a_fractions,2026-11-21T23:10:18.810015+00:00,2026-11-21T23:10:18.820070+00:00,0.01,722.52,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_Adult_MacularOnly,family_b_genes_concordance,2026-11-21T23:10:19.741735+00:00,2026-11-21T23:10:24.084700+00:00,4.343,1155.66,Muse Spark (direct),ok,"tests=145470, sig_global=2"
+HRCA_Sn_Adult_MacularOnly,family_c_transport,2026-11-21T23:10:26.440847+00:00,2026-11-21T23:10:48.258591+00:00,21.818,1155.91,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_Adult_MacularOnly,suite_total,2026-11-21T23:10:18.798071+00:00,2026-11-21T23:10:48.265185+00:00,29.467,1155.91,Muse Spark (direct),ok,"rows=89, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sn_Adult_PeripheralOnly,family_a_fractions,2026-11-21T23:10:48.402656+00:00,2026-11-21T23:10:48.411275+00:00,0.009,1155.91,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_Adult_PeripheralOnly,family_b_genes_concordance,2026-11-21T23:10:49.085969+00:00,2026-11-21T23:10:51.888107+00:00,2.802,1155.91,Muse Spark (direct),ok,"tests=145807, sig_global=0"
+HRCA_Sn_Adult_PeripheralOnly,family_c_transport,2026-11-21T23:10:54.261273+00:00,2026-11-21T23:11:08.122630+00:00,13.861,1155.91,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_Adult_PeripheralOnly,suite_total,2026-11-21T23:10:48.393544+00:00,2026-11-21T23:11:08.128587+00:00,19.735,1155.91,Muse Spark (direct),ok,"rows=37, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sn_Adult_Unenriched,family_a_fractions,2026-11-21T23:11:08.258277+00:00,2026-11-21T23:11:08.268351+00:00,0.01,1155.91,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_Adult_Unenriched,family_b_genes_concordance,2026-11-21T23:11:09.254784+00:00,2026-11-21T23:11:13.679353+00:00,4.425,1178.32,Muse Spark (direct),ok,"tests=148051, sig_global=0"
+HRCA_Sn_Adult_Unenriched,family_c_transport,2026-11-21T23:11:16.100869+00:00,2026-11-21T23:11:39.871032+00:00,23.77,1199.85,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_Adult_Unenriched,suite_total,2026-11-21T23:11:08.246565+00:00,2026-11-21T23:11:39.878834+00:00,31.632,1199.85,Muse Spark (direct),ok,"rows=41, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sn_Adult_ExactAge,family_a_fractions,2026-11-21T23:11:40.012155+00:00,2026-11-21T23:11:40.022942+00:00,0.011,1199.85,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_Adult_ExactAge,family_b_genes_concordance,2026-11-21T23:11:40.945968+00:00,2026-11-21T23:11:45.405808+00:00,4.46,1199.85,Muse Spark (direct),ok,"tests=148001, sig_global=0"
+HRCA_Sn_Adult_ExactAge,family_c_transport,2026-11-21T23:11:47.836704+00:00,2026-11-21T23:12:16.225483+00:00,28.389,1199.85,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_Adult_ExactAge,suite_total,2026-11-21T23:11:39.995671+00:00,2026-11-21T23:12:16.234550+00:00,36.239,1199.85,Muse Spark (direct),ok,"rows=41, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sn_ChenAncestry_Adult,family_a_fractions,2026-11-21T23:12:16.385479+00:00,2026-11-21T23:12:16.396481+00:00,0.011,1199.85,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_ChenAncestry_Adult,family_b_genes_concordance,2026-11-21T23:12:17.129002+00:00,2026-11-21T23:12:20.671091+00:00,3.542,1199.85,Muse Spark (direct),ok,"tests=146881, sig_global=1"
+HRCA_Sn_ChenAncestry_Adult,family_c_transport,2026-11-21T23:12:23.371259+00:00,2026-11-21T23:12:42.915452+00:00,19.544,1199.85,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_ChenAncestry_Adult,suite_total,2026-11-21T23:12:16.372753+00:00,2026-11-21T23:12:42.921945+00:00,26.549,1199.85,Muse Spark (direct),ok,"rows=42, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sn_AllAges_Unenriched,family_a_fractions,2026-11-21T23:12:43.054377+00:00,2026-11-21T23:12:43.062890+00:00,0.009,1199.85,Muse Spark (direct),ok,n_tested=9
+HRCA_Sn_AllAges_Unenriched,family_b_genes_concordance,2026-11-21T23:12:44.070678+00:00,2026-11-21T23:12:48.352213+00:00,4.282,1199.85,Muse Spark (direct),ok,"tests=148051, sig_global=0"
+HRCA_Sn_AllAges_Unenriched,family_c_transport,2026-11-21T23:12:50.760075+00:00,2026-11-21T23:13:13.863642+00:00,23.104,1199.85,Muse Spark (direct),ok,"P1m_tested=9, P0m_tested=9, seed=20261105, draws=2000"
+HRCA_Sn_AllAges_Unenriched,suite_total,2026-11-21T23:12:43.042487+00:00,2026-11-21T23:13:13.870526+00:00,30.828,1199.85,Muse Spark (direct),ok,"rows=87, P1m_bothpass=0/9, P0m_bothpass=0/9"
+HRCA_Sc15_StudyAdj,family_a_fractions,2026-11-21T23:13:14.001263+00:00,2026-11-21T23:13:14.009136+00:00,0.008,1199.85,Muse Spark (direct),ok,n_tested=8
+HRCA_Sc15_StudyAdj,family_b_genes_concordance,2026-11-21T23:13:14.456025+00:00,2026-11-21T23:13:15.517160+00:00,1.061,1199.85,Muse Spark (direct),ok,"tests=114446, sig_global=0"
+HRCA_Sc15_StudyAdj,family_c_transport,2026-11-21T23:13:17.369781+00:00,2026-11-21T23:13:24.671256+00:00,7.301,1199.85,Muse Spark (direct),ok,"P1m_tested=8, P0m_tested=8, seed=20261105, draws=2000"
+HRCA_Sc15_StudyAdj,suite_total,2026-11-21T23:13:13.993712+00:00,2026-11-21T23:13:24.677456+00:00,10.684,1199.85,Muse Spark (direct),ok,"rows=33, P1m_bothpass=0/8, P0m_bothpass=0/8"
+HRCA_Sc9_External_StudyAdj,family_a_fractions,2026-11-21T23:13:24.799108+00:00,2026-11-21T23:13:24.806858+00:00,0.008,1199.85,Muse Spark (direct),ok,n_tested=6
+HRCA_Sc9_External_StudyAdj,family_b_genes_concordance,2026-11-21T23:13:25.117076+00:00,2026-11-21T23:13:26.344622+00:00,1.228,1199.85,Muse Spark (direct),ok,"tests=89559, sig_global=0"
+HRCA_Sc9_External_StudyAdj,family_c_transport,2026-11-21T23:13:27.753961+00:00,2026-11-21T23:13:32.690494+00:00,4.937,1199.85,Muse Spark (direct),ok,"P1m_tested=6, P0m_tested=6, seed=20261105, draws=2000"
+HRCA_Sc9_External_StudyAdj,suite_total,2026-11-21T23:13:24.791491+00:00,2026-11-21T23:13:32.696961+00:00,7.905,1199.85,Muse Spark (direct),ok,"rows=25, P1m_bothpass=0/6, P0m_bothpass=0/6"
+HRCA_Sc5_External_NoDisease,family_a_fractions,2026-11-21T23:13:32.814604+00:00,2026-11-21T23:13:32.821182+00:00,0.007,1199.85,Muse Spark (direct),ok,n_tested=4
+HRCA_Sc5_External_NoDisease,family_b_genes_concordance,2026-11-21T23:13:33.019897+00:00,2026-11-21T23:13:34.032449+00:00,1.013,1199.85,Muse Spark (direct),ok,"tests=67446, sig_global=0"
+HRCA_Sc5_External_NoDisease,family_c_transport,2026-11-21T23:13:35.091822+00:00,2026-11-21T23:13:38.208792+00:00,3.117,1199.85,Muse Spark (direct),ok,"P1m_tested=4, P0m_tested=4, seed=20261105, draws=2000"
+HRCA_Sc5_External_NoDisease,suite_total,2026-11-21T23:13:32.804520+00:00,2026-11-21T23:13:38.216157+00:00,5.412,1199.85,Muse Spark (direct),ok,"rows=17, P1m_bothpass=0/4, P0m_bothpass=0/4"
+HRCA_All,cohort_total,2026-11-21T23:10:16.810471+00:00,2026-11-21T23:13:38.329668+00:00,201.519,1199.85,Muse Spark (direct),ok,"rows=412, bh_rows=539, suites=9"
