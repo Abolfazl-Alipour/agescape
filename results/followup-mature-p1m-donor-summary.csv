@@ -1,0 +1,13 @@
+cohort,n_donors_30plus,age_min_30plus,age_max_30plus,n_score_rows,n_original_units,n_tested_units,n_untestable_units
+MSSM_DLPFC,209,31.0,89.0,2743,21,21,0
+HBCC_DLPFC,64,30.0,85.0,989,21,20,1
+RADC_DLPFC,18,,,0,18,0,18
+SEAAD_DLPFC,20,,,0,18,0,18
+Kidney_NormalAdult,18,,,0,19,0,19
+Kidney_LivingDonor,19,33.0,65.0,96,9,9,0
+Kidney_SN_v15,8,,,0,16,0,16
+Kidney_SCR_v15,18,30.0,66.0,156,9,9,0
+Lung_CellRef,13,35.0,76.0,178,26,18,8
+Lung_Integrated,91,30.0,81.0,1038,39,37,2
+ImmuneAging_BAL,8,33.0,75.0,227,29,29,0
+DLPFC_Lifespan_Atlas,201,30.0,97.0,0,27,27,0

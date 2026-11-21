@@ -1,0 +1,2 @@
+model,start_utc,end_utc,duration_seconds,n_original_units,n_tested_units_per_tier,n_untestable_units,psychad_md5
+kimi-code/k3.1-pro,2026-11-21T18:45:45.622485+00:00,2026-11-21T18:55:54.255071+00:00,608.6325986769998,252,170,82,aef628e7bc2e5134b790d98c6f57ec48

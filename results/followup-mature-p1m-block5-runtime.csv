@@ -1,0 +1,2 @@
+model,start_utc,end_utc,duration_seconds,null_iterations,random_seed,n_null_rows,n_comparison_units,strict_rescue_verdict
+kimi-code/k3.1-pro,2026-11-21T19:09:15.521836+00:00,2026-11-21T19:46:17.851248+00:00,2222.329426677,2000,20261105,96,48,DOES NOT PROVE
