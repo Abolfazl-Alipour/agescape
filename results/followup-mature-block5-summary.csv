@@ -1,0 +1,3 @@
+gene_set,original_design_units,primary_units,untestable_units,nominal_composite_hits,composite_passes,null_evaluated,random_passes,both_pass,empirical_only,composite_only,fail_both,p1m_fails_both_strict,strict_rescue_count,strict_verdict
+P0m,283,201,82,34,12,79,29,5,24,5,45,48,0,DOES NOT PROVE
+P1m,283,201,82,32,9,79,27,4,23,4,48,48,0,DOES NOT PROVE
