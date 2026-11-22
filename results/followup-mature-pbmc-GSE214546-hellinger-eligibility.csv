@@ -1,0 +1,14 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors_qc20,n_mature_reference_donors,n_scored_donors,min_cross_fitted_reference_cells,eligible,reason
+GSE214546,Hellinger_eligibility,B cell progenitor,,mature_30_39_vs_60_plus,primary,20,11,20,4636,True,pass
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,mature_30_39_vs_60_plus,primary,20,11,20,31816,True,pass
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,mature_30_39_vs_60_plus,primary,20,11,20,4803,True,pass
+GSE214546,Hellinger_eligibility,CD4 Memory,,mature_30_39_vs_60_plus,primary,20,11,20,36161,True,pass
+GSE214546,Hellinger_eligibility,CD4 Naive,,mature_30_39_vs_60_plus,primary,20,11,20,34137,True,pass
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,20,11,20,12072,True,pass
+GSE214546,Hellinger_eligibility,CD8 effector,,mature_30_39_vs_60_plus,primary,20,11,20,14321,True,pass
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,mature_30_39_vs_60_plus,primary,20,11,20,1486,True,pass
+GSE214546,Hellinger_eligibility,Double negative T cell,,mature_30_39_vs_60_plus,primary,20,11,20,4575,True,pass
+GSE214546,Hellinger_eligibility,NK cell,NK,mature_30_39_vs_60_plus,primary,20,11,20,13753,True,pass
+GSE214546,Hellinger_eligibility,Platelets,,mature_30_39_vs_60_plus,primary,9,6,9,209,True,pass
+GSE214546,Hellinger_eligibility,pDC,,mature_30_39_vs_60_plus,primary,20,11,20,782,True,pass
+GSE214546,Hellinger_eligibility,pre-B cell,,mature_30_39_vs_60_plus,primary,20,11,20,8853,True,pass

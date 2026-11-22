@@ -1,0 +1,29 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors,n_cells,n_mature_30_39,n_old,eligible,reason
+GSE213516,eligibility,ABC,,mature_30_39_vs_60_plus,primary,4,167,2,2,False,donor_or_group_floor
+GSE213516,eligibility,CD14-MC,,mature_30_39_vs_60_plus,primary,10,10510,3,7,True,pass
+GSE213516,eligibility,CD14-MC-PPBP,,mature_30_39_vs_60_plus,primary,10,859,3,7,True,pass
+GSE213516,eligibility,CD16-MC,non-classical monocytes,mature_30_39_vs_60_plus,primary,10,2304,3,7,True,pass
+GSE213516,eligibility,CD4-Naive,,mature_30_39_vs_60_plus,primary,10,7215,3,7,True,pass
+GSE213516,eligibility,CD4-Naive-NECTIN1,,mature_30_39_vs_60_plus,primary,0,0,0,0,False,donor_or_group_floor
+GSE213516,eligibility,CD4-Tem,,mature_30_39_vs_60_plus,primary,10,1718,3,7,True,pass
+GSE213516,eligibility,CD4-Tm,,mature_30_39_vs_60_plus,primary,10,6611,3,7,True,pass
+GSE213516,eligibility,CD4-Treg,,mature_30_39_vs_60_plus,primary,8,1004,2,6,False,donor_or_group_floor
+GSE213516,eligibility,CD8-CTL,,mature_30_39_vs_60_plus,primary,10,6652,3,7,True,pass
+GSE213516,eligibility,CD8-Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,10,2667,3,7,True,pass
+GSE213516,eligibility,CD8-Tem,,mature_30_39_vs_60_plus,primary,10,4642,3,7,True,pass
+GSE213516,eligibility,Intermed-MC,,mature_30_39_vs_60_plus,primary,10,2154,3,7,True,pass
+GSE213516,eligibility,Megakaryocytes,,mature_30_39_vs_60_plus,primary,10,2703,3,7,True,pass
+GSE213516,eligibility,Memory-B-CRIP1,,mature_30_39_vs_60_plus,primary,10,2723,3,7,True,pass
+GSE213516,eligibility,Memory-B-IL32,,mature_30_39_vs_60_plus,primary,10,687,3,7,True,pass
+GSE213516,eligibility,NK-FCER1G,,mature_30_39_vs_60_plus,primary,10,7372,3,7,True,pass
+GSE213516,eligibility,NK-GZMH,,mature_30_39_vs_60_plus,primary,10,11407,3,7,True,pass
+GSE213516,eligibility,NK-GZMK,,mature_30_39_vs_60_plus,primary,10,2204,3,7,True,pass
+GSE213516,eligibility,NK-IL7R,,mature_30_39_vs_60_plus,primary,10,722,3,7,True,pass
+GSE213516,eligibility,NK-S100A2,,mature_30_39_vs_60_plus,primary,9,264,3,6,True,pass
+GSE213516,eligibility,NK-SELL,,mature_30_39_vs_60_plus,primary,9,499,3,6,True,pass
+GSE213516,eligibility,Naive-B,,mature_30_39_vs_60_plus,primary,10,3893,3,7,True,pass
+GSE213516,eligibility,Naive-B-NRGN,,mature_30_39_vs_60_plus,primary,3,150,1,2,False,donor_or_group_floor
+GSE213516,eligibility,Plasma,,mature_30_39_vs_60_plus,primary,5,134,2,3,False,donor_or_group_floor
+GSE213516,eligibility,RBC,,mature_30_39_vs_60_plus,primary,0,0,0,0,False,donor_or_group_floor
+GSE213516,eligibility,cDC,,mature_30_39_vs_60_plus,primary,10,634,3,7,True,pass
+GSE213516,eligibility,pDC,,mature_30_39_vs_60_plus,primary,8,298,3,5,True,pass

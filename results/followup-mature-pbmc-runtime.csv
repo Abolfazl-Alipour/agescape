@@ -1,0 +1,3 @@
+pipeline,start_utc,end_utc,duration_seconds,model_used,status,max_rss_mb,details
+mature_pbmc_GSE213516,2026-11-21T21:34:26.615667+00:00,2026-11-21T21:34:56.250209+00:00,29.634535558998323,Gemini 4 Neon XHigh,completed,1209.3046875,baseline=3; old=7; eligible_types=22; p1m_rows=44; hellinger_rows=46
+mature_pbmc_GSE214546,2026-11-21T21:34:56.255329+00:00,2026-11-21T21:35:34.189448+00:00,37.93411026100148,Gemini 4 Neon XHigh,completed,1330.44140625,baseline=11; old=9; eligible_types=13; p1m_rows=65; hellinger_rows=65

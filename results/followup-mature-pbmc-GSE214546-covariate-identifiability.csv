@@ -1,0 +1,7 @@
+cohort,design,model,n_donors,n_parameters,rank,residual_df,identifiable,covariates,sex_levels,cmv_levels,batch_levels,pool_levels
+GSE214546,mature_30_39_vs_60_plus,primary,20,3,3,17,True,intercept;old;male,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2
+GSE214546,mature_30_39_vs_60_plus,depth,20,4,4,16,True,intercept;old;male;mean_log_umi,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2
+GSE214546,mature_30_39_vs_60_plus,log_total_cells,20,4,4,16,True,intercept;old;male;log_total_cells,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2
+GSE214546,mature_30_39_vs_60_plus,cmv,20,4,4,16,True,intercept;old;male;cmv_pos,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2
+GSE214546,mature_30_39_vs_60_plus,batch,20,15,15,5,True,intercept;old;male;batch_B002;batch_B004;batch_B007;batch_B039;batch_B040;batch_B041;batch_B045;batch_B046;batch_B047;batch_B048;batch_B053;batch_B078,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2
+GSE214546,mature_30_39_vs_60_plus,pool,20,4,4,16,True,intercept;old;male;pool_P2,female;male,Neg;Pos,B001;B002;B004;B007;B039;B040;B041;B045;B046;B047;B048;B053;B078,P1;P2

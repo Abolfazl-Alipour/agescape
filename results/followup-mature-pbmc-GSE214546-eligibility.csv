@@ -1,0 +1,14 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors,n_cells,n_mature_30_39,n_old,eligible,reason
+GSE214546,eligibility,B cell progenitor,,mature_30_39_vs_60_plus,primary,20,10465,11,9,True,pass
+GSE214546,eligibility,CD14+ Monocytes,,mature_30_39_vs_60_plus,primary,20,71715,11,9,True,pass
+GSE214546,eligibility,CD16+ Monocytes,non-classical monocytes,mature_30_39_vs_60_plus,primary,20,13676,11,9,True,pass
+GSE214546,eligibility,CD4 Memory,,mature_30_39_vs_60_plus,primary,20,89714,11,9,True,pass
+GSE214546,eligibility,CD4 Naive,,mature_30_39_vs_60_plus,primary,20,89723,11,9,True,pass
+GSE214546,eligibility,CD8 Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,20,17915,11,9,True,pass
+GSE214546,eligibility,CD8 effector,,mature_30_39_vs_60_plus,primary,20,40753,11,9,True,pass
+GSE214546,eligibility,Dendritic cell,dendritic cells,mature_30_39_vs_60_plus,primary,20,3010,11,9,True,pass
+GSE214546,eligibility,Double negative T cell,,mature_30_39_vs_60_plus,primary,20,8421,11,9,True,pass
+GSE214546,eligibility,NK cell,NK,mature_30_39_vs_60_plus,primary,20,31884,11,9,True,pass
+GSE214546,eligibility,Platelets,,mature_30_39_vs_60_plus,primary,19,2146,10,9,True,pass
+GSE214546,eligibility,pDC,,mature_30_39_vs_60_plus,primary,20,1454,11,9,True,pass
+GSE214546,eligibility,pre-B cell,,mature_30_39_vs_60_plus,primary,20,18796,11,9,True,pass

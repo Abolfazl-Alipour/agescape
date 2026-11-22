@@ -1,0 +1,83 @@
+cohort,endpoint,cell_type,common_cell_type,design,model,n_donors,n_cells,n_mature_30_39,n_old,eligible,reason,n_donors_qc20,n_mature_reference_donors,n_scored_donors,min_cross_fitted_reference_cells
+GSE213516,eligibility,ABC,,mature_30_39_vs_60_plus,primary,4.0,167.0,2.0,2.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD14-MC,,mature_30_39_vs_60_plus,primary,10.0,10510.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD14-MC-PPBP,,mature_30_39_vs_60_plus,primary,10.0,859.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD16-MC,non-classical monocytes,mature_30_39_vs_60_plus,primary,10.0,2304.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Naive,,mature_30_39_vs_60_plus,primary,10.0,7215.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Naive-NECTIN1,,mature_30_39_vs_60_plus,primary,0.0,0.0,0.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD4-Tem,,mature_30_39_vs_60_plus,primary,10.0,1718.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Tm,,mature_30_39_vs_60_plus,primary,10.0,6611.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD4-Treg,,mature_30_39_vs_60_plus,primary,8.0,1004.0,2.0,6.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,CD8-CTL,,mature_30_39_vs_60_plus,primary,10.0,6652.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD8-Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,10.0,2667.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,CD8-Tem,,mature_30_39_vs_60_plus,primary,10.0,4642.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,Intermed-MC,,mature_30_39_vs_60_plus,primary,10.0,2154.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,Megakaryocytes,,mature_30_39_vs_60_plus,primary,10.0,2703.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-CRIP1,,mature_30_39_vs_60_plus,primary,10.0,2723.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,Memory-B-IL32,,mature_30_39_vs_60_plus,primary,10.0,687.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-FCER1G,,mature_30_39_vs_60_plus,primary,10.0,7372.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMH,,mature_30_39_vs_60_plus,primary,10.0,11407.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-GZMK,,mature_30_39_vs_60_plus,primary,10.0,2204.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-IL7R,,mature_30_39_vs_60_plus,primary,10.0,722.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,NK-S100A2,,mature_30_39_vs_60_plus,primary,9.0,264.0,3.0,6.0,True,pass,,,,
+GSE213516,eligibility,NK-SELL,,mature_30_39_vs_60_plus,primary,9.0,499.0,3.0,6.0,True,pass,,,,
+GSE213516,eligibility,Naive-B,,mature_30_39_vs_60_plus,primary,10.0,3893.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,Naive-B-NRGN,,mature_30_39_vs_60_plus,primary,3.0,150.0,1.0,2.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,Plasma,,mature_30_39_vs_60_plus,primary,5.0,134.0,2.0,3.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,RBC,,mature_30_39_vs_60_plus,primary,0.0,0.0,0.0,0.0,False,donor_or_group_floor,,,,
+GSE213516,eligibility,cDC,,mature_30_39_vs_60_plus,primary,10.0,634.0,3.0,7.0,True,pass,,,,
+GSE213516,eligibility,pDC,,mature_30_39_vs_60_plus,primary,8.0,298.0,3.0,5.0,True,pass,,,,
+GSE213516,Hellinger_eligibility,ABC,,mature_30_39_vs_60_plus,primary,,,,,False,mature_reference_or_scored_donor_floor,4.0,2.0,3.0,84.0
+GSE213516,Hellinger_eligibility,CD14-MC,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,1408.0
+GSE213516,Hellinger_eligibility,CD14-MC-PPBP,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,87.0
+GSE213516,Hellinger_eligibility,CD16-MC,non-classical monocytes,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,234.0
+GSE213516,Hellinger_eligibility,CD4-Naive,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,1242.0
+GSE213516,Hellinger_eligibility,CD4-Naive-NECTIN1,,mature_30_39_vs_60_plus,primary,,,,,False,mature_reference_or_scored_donor_floor,0.0,0.0,0.0,0.0
+GSE213516,Hellinger_eligibility,CD4-Tem,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,283.0
+GSE213516,Hellinger_eligibility,CD4-Tm,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,957.0
+GSE213516,Hellinger_eligibility,CD4-Treg,,mature_30_39_vs_60_plus,primary,,,,,True,pass,8.0,2.0,8.0,109.0
+GSE213516,Hellinger_eligibility,CD8-CTL,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,968.0
+GSE213516,Hellinger_eligibility,CD8-Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,665.0
+GSE213516,Hellinger_eligibility,CD8-Tem,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,838.0
+GSE213516,Hellinger_eligibility,Intermed-MC,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,220.0
+GSE213516,Hellinger_eligibility,Megakaryocytes,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,139.0
+GSE213516,Hellinger_eligibility,Memory-B-CRIP1,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,584.0
+GSE213516,Hellinger_eligibility,Memory-B-IL32,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,167.0
+GSE213516,Hellinger_eligibility,NK-FCER1G,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,1136.0
+GSE213516,Hellinger_eligibility,NK-GZMH,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,1960.0
+GSE213516,Hellinger_eligibility,NK-GZMK,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,200.0
+GSE213516,Hellinger_eligibility,NK-IL7R,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,54.0
+GSE213516,Hellinger_eligibility,NK-S100A2,,mature_30_39_vs_60_plus,primary,,,,,True,pass,9.0,3.0,8.0,62.0
+GSE213516,Hellinger_eligibility,NK-SELL,,mature_30_39_vs_60_plus,primary,,,,,True,pass,9.0,3.0,9.0,73.0
+GSE213516,Hellinger_eligibility,Naive-B,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,1035.0
+GSE213516,Hellinger_eligibility,Naive-B-NRGN,,mature_30_39_vs_60_plus,primary,,,,,False,mature_reference_or_scored_donor_floor,3.0,1.0,0.0,0.0
+GSE213516,Hellinger_eligibility,Plasma,,mature_30_39_vs_60_plus,primary,,,,,False,mature_reference_or_scored_donor_floor,4.0,2.0,2.0,64.0
+GSE213516,Hellinger_eligibility,RBC,,mature_30_39_vs_60_plus,primary,,,,,False,mature_reference_or_scored_donor_floor,0.0,0.0,0.0,0.0
+GSE213516,Hellinger_eligibility,cDC,,mature_30_39_vs_60_plus,primary,,,,,True,pass,10.0,3.0,10.0,104.0
+GSE213516,Hellinger_eligibility,pDC,,mature_30_39_vs_60_plus,primary,,,,,True,pass,8.0,3.0,7.0,113.0
+GSE214546,eligibility,B cell progenitor,,mature_30_39_vs_60_plus,primary,20.0,10465.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD14+ Monocytes,,mature_30_39_vs_60_plus,primary,20.0,71715.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD16+ Monocytes,non-classical monocytes,mature_30_39_vs_60_plus,primary,20.0,13676.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD4 Memory,,mature_30_39_vs_60_plus,primary,20.0,89714.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD4 Naive,,mature_30_39_vs_60_plus,primary,20.0,89723.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD8 Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,20.0,17915.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,CD8 effector,,mature_30_39_vs_60_plus,primary,20.0,40753.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,Dendritic cell,dendritic cells,mature_30_39_vs_60_plus,primary,20.0,3010.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,Double negative T cell,,mature_30_39_vs_60_plus,primary,20.0,8421.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,NK cell,NK,mature_30_39_vs_60_plus,primary,20.0,31884.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,Platelets,,mature_30_39_vs_60_plus,primary,19.0,2146.0,10.0,9.0,True,pass,,,,
+GSE214546,eligibility,pDC,,mature_30_39_vs_60_plus,primary,20.0,1454.0,11.0,9.0,True,pass,,,,
+GSE214546,eligibility,pre-B cell,,mature_30_39_vs_60_plus,primary,20.0,18796.0,11.0,9.0,True,pass,,,,
+GSE214546,Hellinger_eligibility,B cell progenitor,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,4636.0
+GSE214546,Hellinger_eligibility,CD14+ Monocytes,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,31816.0
+GSE214546,Hellinger_eligibility,CD16+ Monocytes,non-classical monocytes,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,4803.0
+GSE214546,Hellinger_eligibility,CD4 Memory,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,36161.0
+GSE214546,Hellinger_eligibility,CD4 Naive,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,34137.0
+GSE214546,Hellinger_eligibility,CD8 Naive,CD8 naive T,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,12072.0
+GSE214546,Hellinger_eligibility,CD8 effector,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,14321.0
+GSE214546,Hellinger_eligibility,Dendritic cell,dendritic cells,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,1486.0
+GSE214546,Hellinger_eligibility,Double negative T cell,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,4575.0
+GSE214546,Hellinger_eligibility,NK cell,NK,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,13753.0
+GSE214546,Hellinger_eligibility,Platelets,,mature_30_39_vs_60_plus,primary,,,,,True,pass,9.0,6.0,9.0,209.0
+GSE214546,Hellinger_eligibility,pDC,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,782.0
+GSE214546,Hellinger_eligibility,pre-B cell,,mature_30_39_vs_60_plus,primary,,,,,True,pass,20.0,11.0,20.0,8853.0

@@ -1,0 +1,2 @@
+cohort,design,n_total_selected,n_mature_30_39,n_old_60_plus,baseline_ages,old_ages,status,reason
+GSE213516,mature_30_39_vs_60_plus,10,3,7,30;36;36,60;60;65;66;66;74;77,TESTABLE_AT_COHORT_LEVEL,cell_type_and_covariate_floors_still_apply
