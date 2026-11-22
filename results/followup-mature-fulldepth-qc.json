@@ -1,0 +1,212 @@
+{
+  "datasets": {
+    "gao": {
+      "mature_restriction": {
+        "minimum_donor_age_years": 30.0,
+        "reference_age_min_years": 30.0,
+        "reference_age_max_years": 39.0,
+        "n_donors_original": 117,
+        "n_donors_mature": 109,
+        "n_donors_lost": 8,
+        "n_cells_original_before_umi": 901946,
+        "n_cells_mature_before_umi": 835065,
+        "n_reference_donors": 12
+      },
+      "n_cells_ge1500": 482902,
+      "n_cells_ge1500_pooled_primary": 482863,
+      "gene_audit": {
+        "n_genes_raw": 16115,
+        "n_invalid_names": 0,
+        "n_duplicate_collapsed": 0,
+        "n_genes_unique": 16115,
+        "n_excluded_mt": 13,
+        "n_excluded_rp_rpl_rps": 95,
+        "n_excluded_mrp": 72,
+        "n_excluded_ercc": 0,
+        "n_excluded_sex": 5,
+        "sex_genes_present": [
+          "XIST",
+          "TSIX",
+          "DDX3Y",
+          "UTY",
+          "KDM5D"
+        ],
+        "sex_genes_absent": [
+          "EIF2S3Y"
+        ],
+        "n_technical_excluded": 185,
+        "n_genes_retained": 15930
+      },
+      "n_e1_cts": 11,
+      "e1_median_markers": 7.0,
+      "n_e2_global_cts": 11,
+      "e2_global_median_markers": 4523.0,
+      "n_e2_stratum_ct_strata": 20,
+      "e2_stratum_median_markers": 4843.0,
+      "e1_sh_pb_jaccard_median": 0.8571428571428571,
+      "e2_g_sh_pb_jaccard_median": 0.30029976399588976,
+      "e1_sh_ge2_repeat_median": 0.6842105263157895,
+      "e2_st_ectopic_umi_frac_median": 0.0068551313128194045
+    },
+    "yazar": {
+      "mature_restriction": {
+        "minimum_donor_age_years": 30.0,
+        "reference_age_min_years": 30.0,
+        "reference_age_max_years": 39.0,
+        "n_donors_original": 981,
+        "n_donors_mature": 932,
+        "n_donors_lost": 49,
+        "n_cells_original_before_umi": 1248849,
+        "n_cells_mature_before_umi": 1181540,
+        "n_reference_donors": 59
+      },
+      "n_cells_ge1500": 592250,
+      "n_cells_ge1500_pooled_primary": 592250,
+      "gene_audit": {
+        "n_genes_raw": 35528,
+        "n_invalid_names": 0,
+        "n_duplicate_collapsed": 10,
+        "n_genes_unique": 35518,
+        "n_excluded_mt": 13,
+        "n_excluded_rp_rpl_rps": 109,
+        "n_excluded_mrp": 84,
+        "n_excluded_ercc": 0,
+        "n_excluded_sex": 5,
+        "sex_genes_present": [
+          "XIST",
+          "TSIX",
+          "DDX3Y",
+          "UTY",
+          "KDM5D"
+        ],
+        "sex_genes_absent": [
+          "EIF2S3Y"
+        ],
+        "n_technical_excluded": 211,
+        "n_genes_retained": 35307
+      },
+      "n_e1_cts": 13,
+      "e1_median_markers": 5.0,
+      "n_e2_global_cts": 13,
+      "e2_global_median_markers": 25542.0,
+      "n_e2_stratum_ct_strata": 21,
+      "e2_stratum_median_markers": 25919.0,
+      "e1_sh_pb_jaccard_median": 0.5,
+      "e2_g_sh_pb_jaccard_median": 0.09227421109902068,
+      "e1_sh_ge2_repeat_median": 0.6666666666666666,
+      "e2_st_ectopic_umi_frac_median": 0.010532230982256724
+    }
+  },
+  "verdicts": {
+    "gao": {
+      "Part1_center_shift": {
+        "verdict": "DOES NOT PROVE",
+        "reason": "Global center_shift fails PROVES (slope=-0.0130, p=0.594, MDE80=0.069 [high_power<=0.25])"
+      },
+      "Part1_scatter": {
+        "verdict": "DOES NOT PROVE",
+        "reason": "Global scatter fails PROVES (slope=-0.0723, p=0.041, MDE80=0.099 [high_power<=0.25])"
+      },
+      "Part2": {
+        "shannon": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "shannon fails PROVES (slope=-0.1001, p=0.0539, MDE80=0.145 [high_power<=0.25])"
+        },
+        "deman_kl_methods": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "deman_kl_methods fails PROVES (slope=0.1001, p=0.0539, MDE80=0.145 [high_power<=0.25])"
+        },
+        "deman_kl_sqrt": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "deman_kl_sqrt fails PROVES (slope=0.0417, p=0.0544, MDE80=0.061 [high_power<=0.25])"
+        }
+      },
+      "Part3": {
+        "E1": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "E1 fails randomness PROVES (cnt p=0.468, SNR=2.16, MDE80=0.246<=0.5)"
+        },
+        "E2": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "E2 fails randomness PROVES (cnt p=0.0311, SNR=36.33, MDE80=0.164<=0.5)"
+        }
+      }
+    },
+    "yazar": {
+      "Part1_center_shift": {
+        "verdict": "DOES NOT PROVE",
+        "reason": "Global center_shift fails PROVES (slope=-0.0044, p=0.266, MDE80=0.011 [high_power<=0.25])"
+      },
+      "Part1_scatter": {
+        "verdict": "DOES NOT PROVE",
+        "reason": "Global scatter fails PROVES (slope=-0.0197, p=6.69e-05, MDE80=0.014 [high_power<=0.25])"
+      },
+      "Part2": {
+        "shannon": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "shannon fails PROVES (slope=-0.0298, p=0.00365, MDE80=0.029 [high_power<=0.25])"
+        },
+        "deman_kl_methods": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "deman_kl_methods fails PROVES (slope=0.0298, p=0.00365, MDE80=0.029 [high_power<=0.25])"
+        },
+        "deman_kl_sqrt": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "deman_kl_sqrt fails PROVES (slope=0.0233, p=0.00014, MDE80=0.017 [high_power<=0.25])"
+        }
+      },
+      "Part3": {
+        "E1": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "E1 fails randomness PROVES (cnt p=0.073, SNR=1.54, MDE80=0.029<=0.5)"
+        },
+        "E2": {
+          "verdict": "DOES NOT PROVE",
+          "reason": "E2 fails randomness PROVES (cnt p=0.00309, SNR=7.87, MDE80=0.031<=0.5)"
+        }
+      }
+    }
+  },
+  "seeds": {
+    "master": 42,
+    "split_half": [
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "sub20": [
+      20262000,
+      20262001,
+      20262002,
+      20262003,
+      20262004,
+      20262005,
+      20262006,
+      20262007,
+      20262008,
+      20262009,
+      20262010,
+      20262011,
+      20262012,
+      20262013,
+      20262014,
+      20262015,
+      20262016,
+      20262017,
+      20262018,
+      20262019
+    ]
+  },
+  "analysis_scope": {
+    "minimum_donor_age_years": 30.0,
+    "reference_age_range_years": [
+      30.0,
+      39.0
+    ],
+    "reference_cross_fit": "leave-one-out for reference donors",
+    "model": "Gemini 4 Neon (XHigh) under Antigravity",
+    "prior_cached_pass1_and_gao_parts12_model": "kimi-code/k3.1-pro"
+  }
+}
