@@ -173,3 +173,45 @@ detect effects of 0.7 to 1.6 standard deviations or more.
 - The submission package at `~/workspace/agescape-final/plos-one-rev2/` was
   NOT refreshed from this commit in this task; it still reflects 0a022d8 and
   goes stale with this push. Refresh is a separate step.
+
+## Addendum: post-commit verification reconciliation (2026-11-21)
+
+The four verifier handoffs arrived after the 685cf2c push. Reconciliation
+found two defects in the pushed manuscript, fixed in a follow-up commit:
+
+- Block 1 residual dispersion was missing from Results. The naive CD4 T
+  cell PROVES signal (primary slope plus 0.00071 per decade, p 5.174e-08,
+  q 8.279e-07, 777 donors; the only proving type in either cohort; Gao 0 of
+  13 evaluated types prove, Yazar 1 of 16) was described in Methods and
+  linked in Data Availability but never reported in Results. It is now the
+  third narrow signal: Results narrow-signals subsection, Abstract,
+  Discussion, and Conclusions all say three narrow signals. The debiased
+  slope (0.000313, p 0.000638) was deliberately NOT used: verifier C found
+  it in no committed CSV, so it is report-only and unverifiable.
+- Figure 4 caption was wrong. It said the plotted genes pass FDR "under
+  empirical-Bayes moderation", but the regenerated figure is built from the
+  mature unmoderated gene table. The caption now says "on the unmoderated
+  test", matching the figure and the TRMT11 sentence already in the caption.
+
+Other verifier findings, checked against the pushed manuscript:
+
+- TS2 mature counts (verifier B): 37 empirical-pass rows (18 P1m, 19 P0m),
+  0 both-pass. The Batch C report states 18 of 41 and 19 of 41, which the
+  CSV confirms. The manuscript cites no TS2 count, so no change was needed.
+  The "six" (Lake, 6 original empirical-only rows per tier) and "four"
+  (TS2 remaining 41-family original empirical-only groups) in question 10
+  above are original counts, not mature counts.
+- Block 2 rule text (verifier C): the report prose omits the
+  group-evaluable/same-sign condition, but the manuscript Methods table
+  already states it ("same-sign group contrast"), and the counts match the
+  CSV recount. No change needed.
+- Block 1 counts, Block 3, Block 6, Block 7, Block 8, concordance, Nov 17
+  tests, interneuron, organ transports A/B/C, full-depth, PsychAD, PBMC,
+  Block 10: all confirmed against CSVs by verifiers C and D, with only
+  rounding differences. The composition new-pass q-family nuance (SEAAD L5
+  and lung multiciliated columnar pass only via the refit family, q 0.050
+  vs 431-family q 0.051) was already in the Results text.
+- The tag `mature-to-old-rewrite-2026-11-21` was moved from 685cf2c to the
+  fix commit so the tag names the corrected rewrite. The tag was created
+  minutes earlier by this same task, nothing was submitted, and no other
+  consumer had used it.
