@@ -171,20 +171,43 @@ LOSO for multiciliated epithelial cell:
 
 ## Secondary-hit checks
 
-No secondary hit is promoted to a headline pass. Total-cell models add log total recovered eligible cells. Donor influence repeats the primary model leaving out one donor at a time. Study-aware status for Lung_Integrated hits is determined from the preceding lung output. Mature propeller could not be run because Rscript, speckle, and limma are unavailable on beast; this check is NOT_VERIFIED rather than passed.
+No secondary hit is promoted to a headline pass. Total-cell models add log total recovered eligible cells. Donor influence repeats the primary model leaving out one donor at a time. Study-aware status for Lung_Integrated hits is determined from the preceding lung output. Mature propeller ran on beast with R 4.3.3, speckle 1.2.0, and limma 3.58.1, using the same design as the original check (logit proportions; age plus log total cells plus sex when variable). The section below gives the results.
 
 | Species | Organ | Cohort | Cell type | Total-cell p | Total-cell refit q | LODO fits | LODO maximum p | LODO same sign | Propeller |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
-| Human | brain | SEAAD_DLPFC | L5 extratelencephalic projecting glutamatergic cortical neuron | 0.002107391674 | 0.06468071368 | 20 | 0.02430619094 | True | NOT_VERIFIED |
-| Human | lung | Lung_Integrated | conventional dendritic cell | 0.008066316875 | 0.1418663284 | 91 | 0.001500936388 | True | NOT_VERIFIED |
-| Human | lung | Lung_Integrated | multiciliated columnar cell of tracheobronchial tree | 0.01582111886 | 0.2054606442 | 91 | 0.003852883816 | True | NOT_VERIFIED |
-| Mouse | Limb_Muscle | TMS | macrophage | 0.0003256323806 | 0.01913779075 | 12 | 0.003153531917 | True | NOT_VERIFIED |
-| Mouse | Limb_Muscle | TMS | mesenchymal stem cell | 0.0003357507149 | 0.01913779075 | 12 | 0.001800727759 | True | NOT_VERIFIED |
+| Human | brain | SEAAD_DLPFC | L5 extratelencephalic projecting glutamatergic cortical neuron | 0.002107391674 | 0.06468071368 | 20 | 0.02430619094 | True | PASS |
+| Human | lung | Lung_Integrated | conventional dendritic cell | 0.008066316875 | 0.1418663284 | 91 | 0.001500936388 | True | PASS |
+| Human | lung | Lung_Integrated | multiciliated columnar cell of tracheobronchial tree | 0.01582111886 | 0.2054606442 | 91 | 0.003852883816 | True | FAIL |
+| Mouse | Limb_Muscle | TMS | macrophage | 0.0003256323806 | 0.01913779075 | 12 | 0.003153531917 | True | PASS |
+| Mouse | Limb_Muscle | TMS | mesenchymal stem cell | 0.0003357507149 | 0.01913779075 | 12 | 0.001800727759 | True | FAIL |
 
 The three previously reported secondary findings are retained: mouse macrophage and mesenchymal stem cell declines, and human Lung_Integrated conventional dendritic-cell increase. All three are present in the new-pass table: True. They remain secondary and their check values are listed above.
 
 Study-aware check for conventional dendritic cell: study fixed effect 0.01025419425, p 0.203111777; fixed-effect meta 0.007648050441, p 0.02540409979; random-effects meta 0.01182273511, p 0.1187782824; LOSO effects 0.01548513331 to 0.02605363413, p range 0.000410704574 to 0.0214228166 across 8 arms.
 Study-aware check for multiciliated columnar cell of tracheobronchial tree: study fixed effect -0.02211660068, p 0.09511581062; fixed-effect meta -0.008133912336, p 0.5472720408; random-effects meta -0.008133912336, p 0.5472720408; LOSO effects -0.04564557616 to -0.02739201724, p range 0.0002316093175 to 0.03207667576 across 8 arms.
+
+## Mature propeller check
+
+R 4.3.3, speckle 1.2.0, and limma 3.58.1 were installed on beast, and the unchanged original runner scripts/run_reviewer_phase1_propeller.R was run on mature-only inputs (mice 18 months and older, human donors 30 years and older) prepared by scripts/prepare_mature_propeller.py. The design matches the original check: logit proportions with a 0.5 pseudocount, age plus log total cells plus sex when variable, limma empirical Bayes on the age coefficient, BH within cohort. 23 cohorts ran; 6 mouse tissues were skipped for fewer than 5 mature donors (Bladder, Large_Intestine, Mammary_Gland, Skin, Tongue, Trachea). Independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15 across all 489 rows. Full output: results/followup-mature-propeller.csv. Key rows: results/followup-mature-propeller-key-rows.csv.
+
+AGREE means propeller q below 0.05 with the same sign as the CLR effect. NOT_CONFIRMED means propeller q at or above 0.05 with the same sign. No row showed a sign conflict. Mouse effects are per month and human effects are per year, matching the CLR convention.
+
+| Row | CLR effect | CLR q_431 | Propeller effect (logit) | Propeller p | Propeller q | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| HEADLINE lung club | -0.0804 | 0.01178 | -0.0787 | 8.072e-05 | 0.002887 | AGREE |
+| HEADLINE lung multiciliated | -0.0470 | 0.02785 | -0.0459 | 0.0001155 | 0.002887 | AGREE |
+| HEADLINE MSSM L6b | 0.0198 | 0.01178 | 0.0176 | 0.001093 | 0.004792 | AGREE |
+| HEADLINE MSSM oligodendrocyte | 0.0173 | 0.01178 | 0.0215 | 5.376e-06 | 6.72e-05 | AGREE |
+| HEADLINE MSSM OPC | -0.0119 | 0.01178 | -0.0157 | 2.888e-08 | 7.219e-07 | AGREE |
+| SECONDARY mouse limb muscle macrophage | -0.1429 | 0.02785 | -0.0935 | 0.00539 | 0.01664 | AGREE |
+| SECONDARY mouse limb muscle mesenchymal stem cell | -0.1005 | 0.01821 | -0.0694 | 0.02559 | 0.05758 | NOT_CONFIRMED |
+| SECONDARY lung conventional dendritic | 0.0229 | 0.03304 | 0.0240 | 0.003676 | 0.03063 | AGREE |
+| SECONDARY SEA-AD L5 | -0.0213 | 0.05117 | -0.0261 | 0.00133 | 0.02393 | AGREE |
+| SECONDARY lung multiciliated columnar | -0.0381 | 0.05117 | -0.0242 | 0.0344 | 0.1014 | NOT_CONFIRMED |
+
+Thomson PBMC CD8 naive: CLR effect minus 1.318945, q 0.005778; propeller effect minus 0.0520, p 5.832e-05, q 0.0007582; AGREE. Propeller has no batch term, so this does not overturn the batch failure (batch q 0.2826).
+
+HRCA retina amacrine was not run: the HRCA aggregate files tripped an execution-risk check and need the user's explicit go-ahead before loading.
 
 ## Runtime and verification limits
 
@@ -197,4 +220,4 @@ Pipeline model: kimi-code/k3.1-pro.
 
 One self-review independently recomputed both BH families, checked all output age minima, accounted for every original 431-family row as tested or untestable, checked all 44 lung cell types across 28 study-arm rows, and verified the locked 624-file hash. All 399 tested rows belong to the original family; 32 original rows are untestable. An in-memory call to the unchanged base mouse pipeline on the current h5ad files reproduces the new mouse effects to numerical precision. Seventeen rows in the older stored mature mouse CSV differ slightly, with a maximum absolute effect difference of 0.000697691 and at most 7 recovered cells, so that stored CSV reflects an earlier state of the per-tissue inputs; the original-survivor verdicts and three prior secondary hits are unchanged.
 
-Mature propeller estimates are not verified for the reason above. These are associations among recovered annotated cells, not absolute tissue cell counts. No manuscript file was read or changed for this item, and no non-mammalian extended-family row was refit.
+Mature propeller estimates are verified: independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15. These are associations among recovered annotated cells, not absolute tissue cell counts. No manuscript file was read or changed for this item, and no non-mammalian extended-family row was refit.

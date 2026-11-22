@@ -293,6 +293,22 @@ def total_cell_fit(counts, metadata, cell_type):
     }
 
 
+_PROPELLER_CACHE = None
+
+
+def _propeller_lookup():
+    global _PROPELLER_CACHE
+    if _PROPELLER_CACHE is None:
+        _PROPELLER_CACHE = {}
+        path = RESULTS / "followup-mature-propeller.csv"
+        if path.exists():
+            frame = pd.read_csv(path)
+            for row in frame.itertuples():
+                _PROPELLER_CACHE[(row.species, row.organ, row.cohort, row.cell_type)] = {
+                    "pvalue": float(row.pvalue), "q_bh": float(row.q_bh)}
+    return _PROPELLER_CACHE
+
+
 def secondary_checks(refit, inputs):
     hits = refit[(~refit["original_survivor"])
                  & ((refit["q_431_family"] < 0.05) | (refit["q_refit_family"] < 0.05))].copy()
@@ -351,8 +367,18 @@ def secondary_checks(refit, inputs):
             record.update({"lodo_n_fits": 0, "lodo_slope_min": np.nan, "lodo_slope_max": np.nan,
                            "lodo_pvalue_max": np.nan, "lodo_same_sign": False,
                            "lodo_max_abs_slope_change": np.nan, "lodo_max_change_donor": ""})
-        record["propeller_status"] = "NOT_VERIFIED"
-        record["propeller_reason"] = "Rscript, speckle, and limma are unavailable on beast; no mature propeller fit was run"
+        prow = _propeller_lookup().get(key)
+        if prow is None:
+            record["propeller_status"] = "NOT_RUN"
+            record["propeller_reason"] = "no propeller row for this cohort and cell type"
+            record["propeller_pvalue"] = np.nan
+            record["propeller_q_bh"] = np.nan
+        else:
+            record["propeller_pvalue"] = prow["pvalue"]
+            record["propeller_q_bh"] = prow["q_bh"]
+            record["propeller_status"] = "PASS" if prow["q_bh"] < 0.05 else "FAIL"
+            record["propeller_reason"] = (
+                f"propeller q_bh = {prow['q_bh']:.4g} (p = {prow['pvalue']:.4g})")
         record["study_aware_status"] = ("see followup-mature-composition-lung-study.csv"
                                         if key[:3] == ("Human", "lung", "Lung_Integrated")
                                         else "not applicable outside Lung_Integrated")
