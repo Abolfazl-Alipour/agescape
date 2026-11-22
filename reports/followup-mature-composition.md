@@ -188,9 +188,9 @@ Study-aware check for multiciliated columnar cell of tracheobronchial tree: stud
 
 ## Mature propeller check
 
-R 4.3.3, speckle 1.2.0, and limma 3.58.1 were installed on beast, and the unchanged original runner scripts/run_reviewer_phase1_propeller.R was run on mature-only inputs (mice 18 months and older, human donors 30 years and older) prepared by scripts/prepare_mature_propeller.py. The design matches the original check: logit proportions with a 0.5 pseudocount, age plus log total cells plus sex when variable, limma empirical Bayes on the age coefficient, BH within cohort. 23 cohorts ran; 6 mouse tissues were skipped for fewer than 5 mature donors (Bladder, Large_Intestine, Mammary_Gland, Skin, Tongue, Trachea). Independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15 across all 489 rows. Full output: results/followup-mature-propeller.csv. Key rows: results/followup-mature-propeller-key-rows.csv.
+R 4.3.3, speckle 1.2.0, and limma 3.58.1 were installed on beast, and the unchanged original runner scripts/run_reviewer_phase1_propeller.R was run on mature-only inputs (mice 18 months and older, human donors 30 years and older) prepared by scripts/prepare_mature_propeller.py. The design matches the original check: logit proportions with a 0.5 pseudocount, age plus log total cells plus sex when variable, limma empirical Bayes on the age coefficient, BH within cohort. 23 cohorts ran; 6 mouse tissues were skipped for fewer than 5 mature donors (Bladder, Large_Intestine, Mammary_Gland, Skin, Tongue, Trachea). 9 HRCA retina suites ran (88 rows). Independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15 across all 577 rows. Full output: results/followup-mature-propeller.csv. Key rows: results/followup-mature-propeller-key-rows.csv.
 
-AGREE means propeller q below 0.05 with the same sign as the CLR effect. NOT_CONFIRMED means propeller q at or above 0.05 with the same sign. No row showed a sign conflict. Mouse effects are per month and human effects are per year, matching the CLR convention.
+AGREE means propeller q below 0.05 with the same sign as the CLR effect. NOT_CONFIRMED means propeller q at or above 0.05 with the same sign. No row among the original 11 showed a sign conflict. Four HRCA rows have opposite signs between CLR and propeller, all on results that are null on both methods. Mouse effects are per month and human effects are per year, matching the CLR convention.
 
 | Row | CLR effect | CLR q_431 | Propeller effect (logit) | Propeller p | Propeller q | Verdict |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -207,7 +207,23 @@ AGREE means propeller q below 0.05 with the same sign as the CLR effect. NOT_CON
 
 Thomson PBMC CD8 naive: CLR effect minus 1.318945, q 0.005778; propeller effect minus 0.0520, p 5.832e-05, q 0.0007582; AGREE. Propeller has no batch term, so this does not overturn the batch failure (batch q 0.2826).
 
-HRCA retina amacrine was not run: the HRCA aggregate files tripped an execution-risk check and need the user's explicit go-ahead before loading.
+HRCA retina amacrine is now run: 9 suites, 88 rows, all donors 30 years and older, inputs built by scripts/prepare_mature_propeller_hrca.py. Propeller confirms none of the 9 suites: every amacrine q is 0.43 or higher. The three CLR-significant suites (Sn_Adult_Unenriched, Sn_Adult_ExactAge, Sn_AllAges_Unenriched) are NOT_CONFIRMED. The other six suites are NULL on both methods.
+
+For HRCA rows, the CLR effect is per decade (batch B used age per decade) and the CLR q is the batch-B family-A q within the suite, not a 431-family q. NULL means neither CLR nor propeller passes q below 0.05.
+
+| Row | CLR effect (per decade) | CLR q (family A) | Propeller effect (logit, per year) | Propeller p | Propeller q | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| HRCA Sn_Adult_MacularOnly amacrine | 0.1099 | 0.30928 | 0.0010 | 0.873 | 0.873 | NULL |
+| HRCA Sn_Adult_PeripheralOnly amacrine | -0.0108 | 0.86493 | 0.0018 | 0.7525 | 0.9345 | NULL |
+| HRCA Sn_Adult_Unenriched amacrine | 0.2479 | 0.0014338 | 0.0024 | 0.6794 | 0.8092 | NOT_CONFIRMED |
+| HRCA Sn_Adult_ExactAge amacrine | 0.2930 | 0.00050533 | 0.0043 | 0.5115 | 0.5684 | NOT_CONFIRMED |
+| HRCA Sn_ChenAncestry_Adult amacrine | 0.1038 | 0.16948 | -0.0016 | 0.702 | 0.78 | NULL |
+| HRCA Sn_AllAges_Unenriched amacrine | 0.2479 | 0.0014338 | 0.0024 | 0.6794 | 0.8092 | NOT_CONFIRMED |
+| HRCA Sc15_StudyAdj amacrine | 0.1876 | 0.91336 | -0.0044 | 0.8561 | 0.9622 | NULL |
+| HRCA Sc9_External_StudyAdj amacrine | 0.4002 | 0.33447 | 0.0222 | 0.6224 | 0.9404 | NULL |
+| HRCA Sc5_External_NoDisease amacrine | -0.0107 | 0.96409 | 0.0126 | 0.284 | 0.426 | NULL |
+
+Why propeller disagrees: the propeller design has no study term, while the batch-B CLR model adjusts for study, sex, peripheral fraction, and log library size. A refit in Sn_Adult_Unenriched (scripts/diag_hrca_propeller_gap.py) shows the amacrine CLR signal depends on that adjustment: unadjusted slope plus 0.082 per decade (p 0.36); with study dummies plus sex, plus 0.218 (p 0.0017); full batch-B model, plus 0.248 (p 0.00019). The logit refit with propeller-like covariates reproduces the propeller estimate (plus 0.00245 per year), so the gap is the covariate set, not the transform or the inputs.
 
 ## Runtime and verification limits
 
@@ -220,4 +236,4 @@ Pipeline model: kimi-code/k3.1-pro.
 
 One self-review independently recomputed both BH families, checked all output age minima, accounted for every original 431-family row as tested or untestable, checked all 44 lung cell types across 28 study-arm rows, and verified the locked 624-file hash. All 399 tested rows belong to the original family; 32 original rows are untestable. An in-memory call to the unchanged base mouse pipeline on the current h5ad files reproduces the new mouse effects to numerical precision. Seventeen rows in the older stored mature mouse CSV differ slightly, with a maximum absolute effect difference of 0.000697691 and at most 7 recovered cells, so that stored CSV reflects an earlier state of the per-tissue inputs; the original-survivor verdicts and three prior secondary hits are unchanged.
 
-Mature propeller estimates are verified: independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15. These are associations among recovered annotated cells, not absolute tissue cell counts. No manuscript file was read or changed for this item, and no non-mammalian extended-family row was refit.
+Mature propeller estimates are verified: independent BH recomputation matches the R output to a maximum absolute difference of 2.665e-15 across all 577 rows including the 88 HRCA rows. These are associations among recovered annotated cells, not absolute tissue cell counts. No manuscript file was read or changed for this item, and no non-mammalian extended-family row was refit.
