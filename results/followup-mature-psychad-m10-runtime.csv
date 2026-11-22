@@ -1,0 +1,4 @@
+stage,wall_minutes,model,rds_md5,null_seed,null_iterations_sensitivity,null_iterations_primary,started_utc
+tier_P0m,2.248,direct-runner-muse-subagent,aef628e7bc2e5134b790d98c6f57ec48,20261105,200,2000,2026-11-22T00:39:27.784139+00:00
+tier_P1m,3.043,direct-runner-muse-subagent,aef628e7bc2e5134b790d98c6f57ec48,20261105,200,2000,2026-11-22T00:39:27.784160+00:00
+total,5.665,direct-runner-muse-subagent,aef628e7bc2e5134b790d98c6f57ec48,20261105,200,2000,2026-11-22T00:39:27.784164+00:00
