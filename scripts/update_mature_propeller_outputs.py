@@ -152,7 +152,7 @@ def patch_report():
     text = "\n".join(lines)
 
     key = pd.read_csv(KEY_ROWS)
-    comp = key[key["label"].str.startswith(("HEADLINE", "SECONDARY"))].copy()
+    comp = key[key["label"].str.startswith(("HEADLINE", "SCAN"))].copy()
     rows = []
     for row in comp.itertuples():
         rows.append(f"| {row.label} | {row.clr_effect:.4f} | {row.clr_q_431:.4g} | "

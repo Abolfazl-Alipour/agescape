@@ -343,7 +343,7 @@ def secondary_checks(refit, inputs):
         lodo_df = pd.DataFrame(lodo)
         record = {k: getattr(hit, k) for k in KEY}
         record.update({
-            "status": "SECONDARY_NOT_PROMOTED", "effect": hit.effect, "se": hit.se,
+            "status": "SCAN_FINDING", "effect": hit.effect, "se": hit.se,
             "pvalue": hit.pvalue, "q_431_family": hit.q_431_family,
             "q_refit_family": hit.q_refit_family,
             "n_donors": hit.n_donors, "n_present": hit.n_present,
@@ -456,7 +456,7 @@ def write_report():
     new = refit[(~refit["original_survivor"])
                 & ((refit["q_431_family"] < 0.05) | (refit["q_refit_family"] < 0.05))]
     lines.extend(["## New mature passes", "",
-                  "All rows below remain SECONDARY_NOT_PROMOTED. A new pass here means q_431_family or q_refit_family is below 0.05 and the row was not one of the original 15 passes.", "",
+                  "All rows below are SCAN_FINDING. A new pass here means q_431_family or q_refit_family is below 0.05 and the row was not one of the original 15 passes.", "",
                   "| Species | Organ | Cohort | Cell type | Effect | SE | p | q_431_family | q_refit_family | Donors | Present | Cells |",
                   "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"])
     if new.empty:

@@ -23,11 +23,11 @@ WANTED = [
     ("Human", "brain", "MSSM_DLPFC", "L6b glutamatergic neuron of the primary motor cortex", "HEADLINE MSSM L6b"),
     ("Human", "brain", "MSSM_DLPFC", "oligodendrocyte", "HEADLINE MSSM oligodendrocyte"),
     ("Human", "brain", "MSSM_DLPFC", "oligodendrocyte precursor cell", "HEADLINE MSSM OPC"),
-    ("Mouse", "Limb_Muscle", "TMS", "macrophage", "SECONDARY mouse limb muscle macrophage"),
-    ("Mouse", "Limb_Muscle", "TMS", "mesenchymal stem cell", "SECONDARY mouse limb muscle mesenchymal stem cell"),
-    ("Human", "lung", "Lung_Integrated", "conventional dendritic cell", "SECONDARY lung conventional dendritic"),
-    ("Human", "brain", "SEAAD_DLPFC", "L5 extratelencephalic projecting glutamatergic cortical neuron", "SECONDARY SEA-AD L5"),
-    ("Human", "lung", "Lung_Integrated", "multiciliated columnar cell of tracheobronchial tree", "SECONDARY lung multiciliated columnar"),
+    ("Mouse", "Limb_Muscle", "TMS", "macrophage", "SCAN mouse limb muscle macrophage"),
+    ("Mouse", "Limb_Muscle", "TMS", "mesenchymal stem cell", "SCAN mouse limb muscle mesenchymal stem cell"),
+    ("Human", "lung", "Lung_Integrated", "conventional dendritic cell", "SCAN lung conventional dendritic"),
+    ("Human", "brain", "SEAAD_DLPFC", "L5 extratelencephalic projecting glutamatergic cortical neuron", "SCAN SEA-AD L5"),
+    ("Human", "lung", "Lung_Integrated", "multiciliated columnar cell of tracheobronchial tree", "SCAN lung multiciliated columnar"),
     ("Human", "blood", "PBMC_GSE214546", "CD8 Naive", "PBMC Thomson CD8 naive"),
 ]
 
