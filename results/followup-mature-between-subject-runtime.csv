@@ -1,0 +1,5 @@
+pipeline,start_utc,end_utc,duration_seconds,model_used,status,max_rss_mb,details
+mature_between_subject_gao,2026-11-21T21:42:10.899146+00:00,2026-11-21T22:00:01.437524+00:00,1070.5383715300013,Gemini 4 Neon XHigh,FAILED,1799.57421875,KeyError: 'residualized_distance'
+mature_between_subject_gao_distance_a2_rerun,2026-11-21T22:30:29.891370+00:00,2026-11-21T22:30:31.824132+00:00,1.93277770900022,"direct rerun, no model (residualize_batch empty-frame fix)",completed,,distance_a2=112; tested=40; untestable=72
+mature_between_subject_yazar_distance_a2,2026-11-22T01:58:57.281915+00:00,2026-11-22T01:59:01.323451+00:00,4.041534731997672,"direct run, no model",completed,,donors=932; distance_a2=232; tested=82; untestable=150
+mature_between_subject_yazar,2026-11-22T01:51:04.882713+00:00,2026-11-22T01:59:01.328515+00:00,3616.0,"direct parallel run, no model (6 workers)",completed,,donors=932; baseline_donors=59; expression_a2=220; ineligible=35

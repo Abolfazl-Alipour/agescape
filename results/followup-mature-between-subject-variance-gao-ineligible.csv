@@ -1,0 +1,7 @@
+dataset,contrast,group,n_reference,n_comparison,reason
+gao,OLD_vs_MATURE_30_39,Adipocyte,3,17,lt6_in_reference_or_comparison
+gao,OLD_vs_MATURE_30_39,Epicardial,2,11,lt6_in_reference_or_comparison
+gao,OLD_vs_MATURE_30_39,LEC,4,29,lt6_in_reference_or_comparison
+gao,MID_vs_MATURE_30_39,Adipocyte,3,24,lt6_in_reference_or_comparison
+gao,MID_vs_MATURE_30_39,Epicardial,2,9,lt6_in_reference_or_comparison
+gao,MID_vs_MATURE_30_39,LEC,4,26,lt6_in_reference_or_comparison

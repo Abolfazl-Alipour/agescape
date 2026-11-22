@@ -1,0 +1,88 @@
+dataset,depth,group,n_reference_donors,min_loo_reference_cells,eligible,reference_age_min,reference_age_max
+yazar,1500,"CD14-low, CD16-positive monocyte",9,282,True,30.0,39.0
+yazar,1500,CD14-positive monocyte,21,1002,True,30.0,39.0
+yazar,1500,"CD16-negative, CD56-bright natural killer cell, human",0,0,False,30.0,39.0
+yazar,1500,"CD4-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,1500,"CD4-positive, alpha-beta cytotoxic T cell",1,0,False,30.0,39.0
+yazar,1500,"CD8-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,1500,"central memory CD4-positive, alpha-beta T cell",58,5423,True,30.0,39.0
+yazar,1500,"central memory CD8-positive, alpha-beta T cell",4,60,True,30.0,39.0
+yazar,1500,conventional dendritic cell,0,0,False,30.0,39.0
+yazar,1500,dendritic cell,0,0,False,30.0,39.0
+yazar,1500,double negative thymocyte,0,0,False,30.0,39.0
+yazar,1500,"effector memory CD4-positive, alpha-beta T cell",7,152,True,30.0,39.0
+yazar,1500,"effector memory CD8-positive, alpha-beta T cell",34,2226,True,30.0,39.0
+yazar,1500,erythrocyte,0,0,False,30.0,39.0
+yazar,1500,gamma-delta T cell,7,166,True,30.0,39.0
+yazar,1500,hematopoietic precursor cell,0,0,False,30.0,39.0
+yazar,1500,innate lymphoid cell,0,0,False,30.0,39.0
+yazar,1500,memory B cell,10,280,True,30.0,39.0
+yazar,1500,mucosal-associated invariant T cell,3,47,False,30.0,39.0
+yazar,1500,naive B cell,11,435,True,30.0,39.0
+yazar,1500,"naive thymus-derived CD4-positive, alpha-beta T cell",51,5294,True,30.0,39.0
+yazar,1500,"naive thymus-derived CD8-positive, alpha-beta T cell",40,2500,True,30.0,39.0
+yazar,1500,natural killer cell,38,2254,True,30.0,39.0
+yazar,1500,plasmablast,1,0,False,30.0,39.0
+yazar,1500,plasmacytoid dendritic cell,0,0,False,30.0,39.0
+yazar,1500,platelet,0,0,False,30.0,39.0
+yazar,1500,regulatory T cell,0,0,False,30.0,39.0
+yazar,1500,transitional stage B cell,9,223,True,30.0,39.0
+yazar,1500,All_Cells,59,26810,True,30.0,39.0
+yazar,500,"CD14-low, CD16-positive monocyte",9,282,True,30.0,39.0
+yazar,500,CD14-positive monocyte,21,1002,True,30.0,39.0
+yazar,500,"CD16-negative, CD56-bright natural killer cell, human",0,0,False,30.0,39.0
+yazar,500,"CD4-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,500,"CD4-positive, alpha-beta cytotoxic T cell",1,0,False,30.0,39.0
+yazar,500,"CD8-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,500,"central memory CD4-positive, alpha-beta T cell",58,5423,True,30.0,39.0
+yazar,500,"central memory CD8-positive, alpha-beta T cell",4,60,True,30.0,39.0
+yazar,500,conventional dendritic cell,0,0,False,30.0,39.0
+yazar,500,dendritic cell,0,0,False,30.0,39.0
+yazar,500,double negative thymocyte,0,0,False,30.0,39.0
+yazar,500,"effector memory CD4-positive, alpha-beta T cell",7,152,True,30.0,39.0
+yazar,500,"effector memory CD8-positive, alpha-beta T cell",34,2226,True,30.0,39.0
+yazar,500,erythrocyte,0,0,False,30.0,39.0
+yazar,500,gamma-delta T cell,7,166,True,30.0,39.0
+yazar,500,hematopoietic precursor cell,0,0,False,30.0,39.0
+yazar,500,innate lymphoid cell,0,0,False,30.0,39.0
+yazar,500,memory B cell,10,280,True,30.0,39.0
+yazar,500,mucosal-associated invariant T cell,3,47,False,30.0,39.0
+yazar,500,naive B cell,11,435,True,30.0,39.0
+yazar,500,"naive thymus-derived CD4-positive, alpha-beta T cell",51,5294,True,30.0,39.0
+yazar,500,"naive thymus-derived CD8-positive, alpha-beta T cell",40,2500,True,30.0,39.0
+yazar,500,natural killer cell,38,2254,True,30.0,39.0
+yazar,500,plasmablast,1,0,False,30.0,39.0
+yazar,500,plasmacytoid dendritic cell,0,0,False,30.0,39.0
+yazar,500,platelet,0,0,False,30.0,39.0
+yazar,500,regulatory T cell,0,0,False,30.0,39.0
+yazar,500,transitional stage B cell,9,223,True,30.0,39.0
+yazar,500,All_Cells,59,26810,True,30.0,39.0
+yazar,3000,"CD14-low, CD16-positive monocyte",5,121,True,30.0,39.0
+yazar,3000,CD14-positive monocyte,8,212,True,30.0,39.0
+yazar,3000,"CD16-negative, CD56-bright natural killer cell, human",0,0,False,30.0,39.0
+yazar,3000,"CD4-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,3000,"CD4-positive, alpha-beta cytotoxic T cell",0,0,False,30.0,39.0
+yazar,3000,"CD8-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,3000,"central memory CD4-positive, alpha-beta T cell",13,370,True,30.0,39.0
+yazar,3000,"central memory CD8-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,3000,conventional dendritic cell,0,0,False,30.0,39.0
+yazar,3000,dendritic cell,0,0,False,30.0,39.0
+yazar,3000,double negative thymocyte,0,0,False,30.0,39.0
+yazar,3000,"effector memory CD4-positive, alpha-beta T cell",0,0,False,30.0,39.0
+yazar,3000,"effector memory CD8-positive, alpha-beta T cell",4,120,True,30.0,39.0
+yazar,3000,erythrocyte,0,0,False,30.0,39.0
+yazar,3000,gamma-delta T cell,0,0,False,30.0,39.0
+yazar,3000,hematopoietic precursor cell,0,0,False,30.0,39.0
+yazar,3000,innate lymphoid cell,0,0,False,30.0,39.0
+yazar,3000,memory B cell,0,0,False,30.0,39.0
+yazar,3000,mucosal-associated invariant T cell,0,0,False,30.0,39.0
+yazar,3000,naive B cell,0,0,False,30.0,39.0
+yazar,3000,"naive thymus-derived CD4-positive, alpha-beta T cell",7,174,True,30.0,39.0
+yazar,3000,"naive thymus-derived CD8-positive, alpha-beta T cell",4,69,True,30.0,39.0
+yazar,3000,natural killer cell,4,77,True,30.0,39.0
+yazar,3000,plasmablast,1,0,False,30.0,39.0
+yazar,3000,plasmacytoid dendritic cell,0,0,False,30.0,39.0
+yazar,3000,platelet,0,0,False,30.0,39.0
+yazar,3000,regulatory T cell,0,0,False,30.0,39.0
+yazar,3000,transitional stage B cell,0,0,False,30.0,39.0
+yazar,3000,All_Cells,48,3886,True,30.0,39.0

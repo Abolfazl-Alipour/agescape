@@ -1,0 +1,36 @@
+dataset,contrast,group,n_reference,n_comparison,reason
+yazar,OLD_vs_MATURE_30_39,"CD16-negative, CD56-bright natural killer cell, human",4.0,19.0,lt6_in_reference_or_comparison
+yazar,OLD_vs_MATURE_30_39,"CD4-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,"CD8-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,conventional dendritic cell,0.0,6.0,lt6_in_reference_or_comparison
+yazar,OLD_vs_MATURE_30_39,dendritic cell,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,double negative thymocyte,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,erythrocyte,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,hematopoietic precursor cell,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,innate lymphoid cell,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,plasmablast,1.0,8.0,lt6_in_reference_or_comparison
+yazar,OLD_vs_MATURE_30_39,plasmacytoid dendritic cell,,,not_in_yazar_cache
+yazar,OLD_vs_MATURE_30_39,platelet,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,"CD16-negative, CD56-bright natural killer cell, human",4.0,7.0,lt6_in_reference_or_comparison
+yazar,MID_vs_MATURE_30_39,"CD4-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,"CD8-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,conventional dendritic cell,0.0,0.0,lt6_in_reference_or_comparison
+yazar,MID_vs_MATURE_30_39,dendritic cell,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,double negative thymocyte,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,erythrocyte,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,hematopoietic precursor cell,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,innate lymphoid cell,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,plasmablast,1.0,5.0,lt6_in_reference_or_comparison
+yazar,MID_vs_MATURE_30_39,plasmacytoid dendritic cell,,,not_in_yazar_cache
+yazar,MID_vs_MATURE_30_39,platelet,,,not_in_yazar_cache
+yazar,OLD_vs_MID,"CD4-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,OLD_vs_MID,"CD8-positive, alpha-beta T cell",,,not_in_yazar_cache
+yazar,OLD_vs_MID,conventional dendritic cell,0.0,6.0,lt6_in_reference_or_comparison
+yazar,OLD_vs_MID,dendritic cell,,,not_in_yazar_cache
+yazar,OLD_vs_MID,double negative thymocyte,,,not_in_yazar_cache
+yazar,OLD_vs_MID,erythrocyte,,,not_in_yazar_cache
+yazar,OLD_vs_MID,hematopoietic precursor cell,,,not_in_yazar_cache
+yazar,OLD_vs_MID,innate lymphoid cell,,,not_in_yazar_cache
+yazar,OLD_vs_MID,plasmablast,5.0,8.0,lt6_in_reference_or_comparison
+yazar,OLD_vs_MID,plasmacytoid dendritic cell,,,not_in_yazar_cache
+yazar,OLD_vs_MID,platelet,,,not_in_yazar_cache
