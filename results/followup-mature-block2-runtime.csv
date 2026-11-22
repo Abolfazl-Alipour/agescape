@@ -1,0 +1,4 @@
+stage,started_utc,finished_utc,wall_minutes,model
+gao,2026-11-21T22:32:21Z,2026-11-21T23:12:00Z,39.64396609465281,direct-runner-no-delegated-model
+yazar,2026-11-21T23:12:00Z,2026-11-22T00:18:19Z,66.31216512521108,direct-runner-no-delegated-model
+all,2026-11-21T22:32:21Z,2026-11-22T00:18:21Z,105.9956627647082,direct-runner-no-delegated-model
