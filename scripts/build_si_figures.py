@@ -104,7 +104,7 @@ def build_s1():
     )
     ax.set_xlabel(
         "Supporting test groups per gene\n"
-        "(one test group is one tissue-by-species group)"
+        "(one test group is one tissue-by-cell-type group)"
     )
     ax.set_ylabel("Genes")
     ax.set_xticks(xs)
@@ -130,95 +130,126 @@ def build_s2():
     human = rows("results/followup-mature-composition-human.csv")
     assert len(mouse) == 114, len(mouse)
     assert len(human) == 285, len(human)
-    all_rows = [(r, "mouse") for r in mouse] + [(r, "human") for r in human]
-    assert len(all_rows) == 399
 
-    def find(cell, cohort, organ):
-        for r, sp in all_rows:
-            if r["cell_type"] == cell and r["cohort"] == cohort and r["organ"] == organ:
-                return float(r["effect"]), sp
-        raise AssertionError(f"not found: {cell} {cohort} {organ}")
+    def find(df, cell, cohort, organ):
+        hits = [r for r in df if r["cell_type"] == cell and r["cohort"] == cohort
+                and r["organ"] == organ]
+        assert len(hits) == 1, (cell, cohort, organ, len(hits))
+        return hits[0]
 
-    # (short key label, cell_type, cohort, organ, expected slope)
+    # (short key label, cell_type, cohort, organ, expected slope, species)
     targets = [
-        ("Human lung club cell", "club cell", "Lung_Integrated", "lung", -0.080407),
+        ("Human lung club cell", "club cell", "Lung_Integrated", "lung", -0.080407, "human"),
         ("Human lung multiciliated epithelial cell", "multiciliated epithelial cell",
-         "Lung_Integrated", "lung", -0.047002),
+         "Lung_Integrated", "lung", -0.047002, "human"),
         ("Mount Sinai brain samples (MSSM) L6b glutamatergic neuron",
-         "L6b glutamatergic neuron of the primary motor cortex", "MSSM_DLPFC", "brain", 0.019765),
+         "L6b glutamatergic neuron of the primary motor cortex", "MSSM_DLPFC", "brain", 0.019765, "human"),
         ("Mount Sinai brain samples (MSSM) oligodendrocyte", "oligodendrocyte",
-         "MSSM_DLPFC", "brain", 0.017269),
+         "MSSM_DLPFC", "brain", 0.017269, "human"),
         ("Mount Sinai brain samples (MSSM) oligodendrocyte precursor cell",
-         "oligodendrocyte precursor cell", "MSSM_DLPFC", "brain", -0.011896),
-        ("Mouse limb-muscle macrophage", "macrophage", "TMS", "Limb_Muscle", -0.142945),
+         "oligodendrocyte precursor cell", "MSSM_DLPFC", "brain", -0.011896, "human"),
+        ("Mouse limb-muscle macrophage", "macrophage", "TMS", "Limb_Muscle", -0.142945, "mouse"),
         ("Mouse limb-muscle mesenchymal stem cell", "mesenchymal stem cell",
-         "TMS", "Limb_Muscle", -0.100457),
+         "TMS", "Limb_Muscle", -0.100457, "mouse"),
         ("Human lung conventional dendritic cell", "conventional dendritic cell",
-         "Lung_Integrated", "lung", 0.022897),
+         "Lung_Integrated", "lung", 0.022897, "human"),
         ("Human lung multiciliated columnar cell of tracheobronchial tree",
          "multiciliated columnar cell of tracheobronchial tree", "Lung_Integrated",
-         "lung", -0.038079),
+         "lung", -0.038079, "human"),
         ("Seattle Alzheimer brain atlas (SEA-AD) L5 extratelencephalic projecting "
          "glutamatergic cortical neuron",
          "L5 extratelencephalic projecting glutamatergic cortical neuron",
-         "SEAAD_DLPFC", "brain", -0.021299),
+         "SEAAD_DLPFC", "brain", -0.021299, "human"),
     ]
-    # Same-scan rows live in the secondary-checks file, not the main files.
+    # Same-scan rows live in the secondary-checks file, not the main files:
+    # all five of them are among the ten targets below.
     sec = rows("results/followup-mature-composition-secondary-checks.csv")
     assert len(sec) == 5, len(sec)
     assert all(r["status"] == "SCAN_FINDING" for r in sec)
-    sec_lookup = {(r["cell_type"], r["cohort"]): float(r["effect"]) for r in sec}
+    sec_keys = {(r["cell_type"], r["cohort"]) for r in sec}
 
+    # The single scan family is the refit family: exactly these 10 rows
+    # have q below 0.05 under it, in either file.
+    passing = set()
+    for r in mouse + human:
+        if float(r["q_refit_family"]) < 0.05:
+            passing.add((r["cell_type"], r["cohort"], r["organ"]))
     found = {}
-    for label, cell, cohort, organ, expected in targets:
-        try:
-            val, _ = find(cell, cohort, organ)
-        except AssertionError:
-            val = sec_lookup[(cell, cohort)]
-        assert abs(val - expected) < 5e-7, (label, val, expected)
-        found[label] = val
-    # Order the numbered key by slope, most negative first.
-    ordered = sorted(found.items(), key=lambda kv: kv[1])
+    for label, cell, cohort, organ, expected, species in targets:
+        df = mouse if species == "mouse" else human
+        r = find(df, cell, cohort, organ)
+        assert abs(float(r["effect"]) - expected) < 5e-7, (label, r["effect"], expected)
+        assert float(r["q_refit_family"]) < 0.05, (label, r["q_refit_family"])
+        found[label] = (float(r["effect"]), species)
+    assert passing == {(c, co, o) for (_, c, co, o, _, _) in targets}, passing
+    assert sec_keys <= {(c, co) for (_, c, co, _, _, _) in targets}
 
-    slopes = sorted(float(r["effect"]) for r, _ in all_rows)
-    n = len(slopes)
-    highlight = {round(v, 6): i for i, (lab, v) in enumerate(ordered, start=1)}
+    # Rank within each species panel, most negative first (1 = most negative).
+    # The printed number next to each highlighted dot IS its rank on that
+    # panel's axis.
+    ranks = {}
+    for species, df in (("mouse", mouse), ("human", human)):
+        ordered = sorted(df, key=lambda r: float(r["effect"]))
+        for i, r in enumerate(ordered, start=1):
+            ranks[(r["cell_type"], r["cohort"], r["organ"])] = i
+    numbers = {}
+    for label, cell, cohort, organ, _expected, _species in targets:
+        numbers[label] = ranks[(cell, cohort, organ)]
 
-    fig = plt.figure(figsize=(11, 8.6))
-    gs = fig.add_gridspec(2, 1, height_ratios=[3.1, 1.35], hspace=0.55)
-    ax = fig.add_subplot(gs[0])
-    style_ax(ax)
-    ax.scatter(slopes, range(1, n + 1), s=14, color="#8a8a8a", zorder=2,
-               label="Other 389 rows")
-    for lab, val in ordered:
-        rank = slopes.index(val) + 1
-        num = highlight[round(val, 6)]
-        col = MOUSE if "Mouse" in lab or "mouse" in lab.lower()[:6] else HUMAN
-        ax.scatter([val], [rank], s=90, color=col, edgecolor="white",
-                   linewidth=1.0, zorder=4)
-        ax.text(val + 0.0035, rank, str(num), fontsize=10, fontweight="bold",
-                color=col, va="center", ha="left", zorder=5)
-    ax.axvline(0, color="black", linewidth=1.0, zorder=1)
-    ax.set_title("All 399 cell-type fraction slopes, with the 10 that clear the bar highlighted",
-                 fontsize=12)
-    ax.set_xlabel("CLR slope (centered log ratio slope)")
-    ax.set_ylabel("Rows sorted by slope (1 = most negative)")
-    ax.set_xticks([-0.15, -0.10, -0.05, 0, 0.05])
-    ax.set_xlim(-0.165, 0.075)
-    ax.set_yticks([1, 100, 200, 300, 399])
-    ax.set_ylim(0, 415)
-    ax.legend(loc="lower right", frameon=False)
-    ax.text(0.015, -0.24,
-            "Mouse slopes are per month and human slopes are per year.\n"
-            "MSSM: Mount Sinai brain samples. SEA-AD: Seattle Alzheimer brain atlas.",
-            transform=ax.transAxes, fontsize=10, va="top", ha="left")
+    fig = plt.figure(figsize=(11, 8.8))
+    gs = fig.add_gridspec(2, 1, height_ratios=[3.1, 1.5], hspace=0.55)
+    gs_top = gs[0].subgridspec(1, 2, wspace=0.28)
+    ax_m = fig.add_subplot(gs_top[0])
+    ax_h = fig.add_subplot(gs_top[1])
+    panels = [
+        (ax_m, mouse, "mouse", "Mouse rows sorted by slope (1 = most negative)",
+         "CLR slope per month", [-0.50, -0.25, 0.00, 0.25], (-0.60, 0.30),
+         [1, 30, 60, 90, 114], (0, 122), "Other 112 mouse rows", 0.012),
+        (ax_h, human, "human", "Human rows sorted by slope (1 = most negative)",
+         "CLR slope per year", [-0.10, -0.05, 0.00, 0.05, 0.10], (-0.13, 0.12),
+         [1, 100, 200, 285], (0, 300), "Other 277 human rows", 0.0035),
+    ]
+    for ax, df, species, ylabel, xlabel, xticks, xlim, yticks, ylim, other_label, dx in panels:
+        style_ax(ax)
+        slopes = sorted(float(r["effect"]) for r in df)
+        n = len(df)
+        ax.scatter(slopes, range(1, n + 1), s=14, color="#8a8a8a", zorder=2,
+                   label=other_label)
+        for label, cell, cohort, organ, _expected, sp in targets:
+            if sp != species:
+                continue
+            val, _ = found[label]
+            rank = numbers[label]
+            col = MOUSE if species == "mouse" else HUMAN
+            ax.scatter([val], [rank], s=90, color=col, edgecolor="white",
+                       linewidth=1.0, zorder=4)
+            ax.text(val + dx, rank, str(rank), fontsize=10, fontweight="bold",
+                    color=col, va="center", ha="left", zorder=5)
+        ax.axvline(0, color="black", linewidth=1.0, zorder=1)
+        ax.set_title("Mouse: 114 rows" if species == "mouse" else "Human: 285 rows",
+                     fontsize=12)
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel(ylabel)
+        ax.set_xticks(xticks)
+        ax.set_xlim(*xlim)
+        ax.set_yticks(yticks)
+        ax.set_ylim(*ylim)
+        ax.legend(loc="lower right", frameon=False)
+    fig.suptitle("All 399 cell-type fraction slopes, split by species; the 10 that clear the bar are highlighted",
+                 fontsize=12, y=0.98)
+    fig.text(0.5, 0.335,
+             "The 10 highlighted rows clear the bar: q below 0.05 in the refit family. "
+             "Numbers are each row's rank in its own panel (1 = most negative).\n"
+             "Mouse slopes are per month; human slopes are per year. "
+             "MSSM: Mount Sinai brain samples. SEA-AD: Seattle Alzheimer brain atlas.",
+             ha="center", va="top", fontsize=10)
 
     axk = fig.add_subplot(gs[1])
     axk.axis("off")
     axk.set_xlim(0, 11)
     axk.set_ylim(0, 10)
-    axk.text(0, 9.6, "The 10 highlighted rows:", fontsize=11, fontweight="bold",
-             va="top", ha="left")
+    axk.text(0, 9.6, "The 10 highlighted rows (number = rank in its panel):",
+             fontsize=11, fontweight="bold", va="top", ha="left")
     # Short key labels; MSSM and SEA-AD are expanded in the note above the key.
     short = {
         "Mouse limb-muscle macrophage": "Mouse limb-muscle macrophage",
@@ -238,15 +269,18 @@ def build_s2():
         "Human lung conventional dendritic cell": "Human lung conventional dendritic cell",
     }
     import textwrap
-    left = ordered[:5]
-    right = ordered[5:]
+    # Key order: mouse ranks first, then human ranks, each most negative first.
+    keyed = sorted(found.items(), key=lambda kv: (kv[1][1] != "mouse", numbers[kv[0]]))
+    left = keyed[:5]
+    right = keyed[5:]
     for j, col_items in enumerate([left, right]):
         x0 = 0.1 + j * 5.6
         y = 8.2
-        for lab, val in col_items:
-            num = highlight[round(val, 6)]
+        for lab, (val, species) in col_items:
+            num = numbers[lab]
             sign = "+" if val > 0 else ""
-            text = f"{num}. {short[lab]}, {sign}{val:.3f}"
+            unit = "per month" if species == "mouse" else "per year"
+            text = f"{num}. {short[lab]}, {sign}{val:.3f} {unit}"
             lines = textwrap.wrap(text, width=66)
             for k, ln in enumerate(lines):
                 axk.text(x0 + (0.35 if k > 0 else 0), y, ln,
@@ -290,6 +324,17 @@ def build_s3():
     assert abs(float(a1["pvalue"]) - 3.55e-06) < 1e-7
     assert abs(float(a3["slope_sd_per_decade"]) - (-0.077554)) < 5e-7
     assert abs(float(a3["pvalue"]) - 1.97e-13) < 1e-14
+    # Gao heart cohort, same rows: no clear change on either estimand.
+    gdata = rows("results/followup-mature-between-subject-gao-models.csv")
+    gsel = {}
+    for r in gdata:
+        if (r["is_stratified_global"] == "True" and r["depth"] == "full_1500"
+                and r["model_spec"] == "stratified_global_primary"):
+            gsel[r["part"]] = r
+    assert abs(float(gsel["A1"]["slope_sd_per_decade"]) - (-0.007521)) < 5e-7
+    assert abs(float(gsel["A1"]["pvalue"]) - 0.766955) < 1e-5
+    assert abs(float(gsel["A3"]["slope_sd_per_decade"]) - (-0.061872)) < 5e-7
+    assert abs(float(gsel["A3"]["pvalue"]) - 0.084606) < 1e-5
 
     pts = [
         ("Distance between donors\n"
@@ -317,7 +362,7 @@ def build_s3():
     ax.set_xlim(-0.115, 0.015)
     ax.set_ylim(-0.6, 1.6)
     ax.set_xlabel("Change per decade of age (standard deviations)")
-    ax.set_title("Donor-to-donor distances shrink with age in blood",
+    ax.set_title("Donor-to-donor distances and within-donor spread shrink with age in blood",
                  fontsize=12)
     ax.text(0.0, -0.34,
             "Yazar blood cohort, 925 donors, full-depth data. Slopes are change per decade.\n"
@@ -328,68 +373,89 @@ def build_s3():
 
 # ---------------------------------------------------------------- S5
 def build_s4():
-    # Verdicts from the report table; counts cross-checked against the CSV.
+    # Both-test pass counts per signature, cohort, and arm, from the
+    # benchmark CSV; denominators are the tested cell groups per cohort.
     data = rows("results/followup-mature-block10-benchmark-results.csv")
-    cnt = Counter()
-    for r in data:
-        if r["both_pass"] == "True":
-            cnt[(r["signature_id"], r["arm"])] += 1
-    assert cnt[("Harries2011_6gene", "unadjusted")] == 7
-    assert cnt[("Harries2011_6gene", "batch_adjusted")] == 5
-    assert cnt[("Peters2015_1497gene", "unadjusted")] == 16
-    assert cnt[("Peters2015_1497gene", "batch_adjusted")] == 16
-    assert cnt[("Sood2015_150probe", "unadjusted")] == 4
-    assert cnt[("Sood2015_150probe", "batch_adjusted")] == 0
-    assert cnt[("deMagalhaes2009_73gene", "unadjusted")] == 0
-    assert cnt[("deMagalhaes2009_73gene", "batch_adjusted")] == 0
     assert len(data) == 246
+    counts = {}
+    units = {}
+    for r in data:
+        key = (r["signature_id"], r["cohort"], r["arm"])
+        counts[key] = counts.get(key, 0) + (1 if r["both_pass"] == "True" else 0)
+        units.setdefault((r["signature_id"], r["cohort"]), set()).add(r["unit"])
+    expected = {
+        ("Harries2011_6gene", "Gao_Heart", "unadjusted"): 0,
+        ("Harries2011_6gene", "Gao_Heart", "batch_adjusted"): 0,
+        ("Harries2011_6gene", "Yazar_Blood", "unadjusted"): 7,
+        ("Harries2011_6gene", "Yazar_Blood", "batch_adjusted"): 5,
+        ("Peters2015_1497gene", "Gao_Heart", "unadjusted"): 0,
+        ("Peters2015_1497gene", "Gao_Heart", "batch_adjusted"): 0,
+        ("Peters2015_1497gene", "Yazar_Blood", "unadjusted"): 16,
+        ("Peters2015_1497gene", "Yazar_Blood", "batch_adjusted"): 16,
+        ("Sood2015_150probe", "Gao_Heart", "unadjusted"): 3,
+        ("Sood2015_150probe", "Gao_Heart", "batch_adjusted"): 0,
+        ("Sood2015_150probe", "Yazar_Blood", "unadjusted"): 1,
+        ("Sood2015_150probe", "Yazar_Blood", "batch_adjusted"): 0,
+        ("deMagalhaes2009_73gene", "Gao_Heart", "unadjusted"): 0,
+        ("deMagalhaes2009_73gene", "Gao_Heart", "batch_adjusted"): 0,
+        ("deMagalhaes2009_73gene", "Yazar_Blood", "unadjusted"): 0,
+        ("deMagalhaes2009_73gene", "Yazar_Blood", "batch_adjusted"): 0,
+    }
+    for key, val in expected.items():
+        assert counts.get(key, 0) == val, (key, counts.get(key, 0), val)
+    # Denominators: Harries tested 13 Gao heart groups; the other three
+    # signatures tested 14. Yazar blood: 17 groups for all four.
+    assert len(units[("Harries2011_6gene", "Gao_Heart")]) == 13
+    for sig in ("Peters2015_1497gene", "Sood2015_150probe", "deMagalhaes2009_73gene"):
+        assert len(units[(sig, "Gao_Heart")]) == 14, sig
+    for sig in ("Harries2011_6gene", "Peters2015_1497gene", "Sood2015_150probe",
+                "deMagalhaes2009_73gene"):
+        assert len(units[(sig, "Yazar_Blood")]) == 17, sig
 
     sigs = [
-        ("Harries 2011, 6 genes", GREEN,
-         "Holds up: passes both tests in 5 blood cell groups after batch adjustment (7 before)."),
-        ("Peters 2015, 1,497 genes", GREEN,
-         "Holds up: passes both tests in 16 blood cell groups, with and without batch adjustment."),
-        ("Sood 2015, 150 probes", RED,
-         "Lost with batch adjustment: 4 groups pass before adjustment, 0 after."),
-        ("de Magalhaes 2009, 73 genes", "#8a8a8a",
-         "No verdict: 0 groups pass both tests in either cohort, before or after adjustment."),
+        ("Harries2011_6gene", "Harries 2011\n6 genes"),
+        ("Peters2015_1497gene", "Peters 2015\n1,497 genes"),
+        ("Sood2015_150probe", "Sood 2015\n150 probes"),
+        ("deMagalhaes2009_73gene", "de Magalhaes 2009\n73 genes"),
     ]
-    fig, ax = plt.subplots(figsize=(10, 5.4))
-    ax.axis("off")
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
-    ax.text(0, 9.7, "Four published aging signatures, tested in Gao heart and Yazar blood",
-            fontsize=12, fontweight="bold", va="top", ha="left")
-    ax.text(0, 8.9,
-            "Passes both tests means the age signal beats both the composite test and the "
-            "random-signature test.",
-            fontsize=10, va="top", ha="left")
-    for i, (name, col, verdict) in enumerate(sigs):
-        y = 7.4 - i * 1.7
-        ax.scatter([0.25], [y], s=170, color=col, zorder=3)
-        ax.text(0.55, y + 0.28, name, fontsize=11, fontweight="bold",
-                va="center", ha="left")
-        ax.text(0.55, y - 0.32, verdict, fontsize=10, va="center", ha="left")
-        ax.plot([0.1, 9.9], [y - 0.85, y - 0.85], color=GRID, linewidth=0.8)
-    ax.text(0, 0.15,
-            "Two cohorts: Gao heart (13 groups) and Yazar blood (17 groups). "
-            "Four signatures cannot prove a claim about all published signatures.",
-            fontsize=10, va="bottom", ha="left")
+    fig, axes = plt.subplots(1, 2, figsize=(10.5, 5.8), sharey=True)
+    x = np.arange(len(sigs))
+    w = 0.36
+    for ax, cohort, title in (
+            (axes[0], "Gao_Heart", "Gao heart"),
+            (axes[1], "Yazar_Blood", "Yazar blood")):
+        style_ax(ax)
+        before = [counts[(sig, cohort, "unadjusted")] for sig, _ in sigs]
+        after = [counts[(sig, cohort, "batch_adjusted")] for sig, _ in sigs]
+        b1 = ax.bar(x - w / 2, before, w, color="#bdbdbd", label="Before batch adjustment",
+                    zorder=3)
+        b2 = ax.bar(x + w / 2, after, w, color=MOUSE, label="After batch adjustment",
+                    zorder=3)
+        for bars in (b1, b2):
+            for b in bars:
+                ax.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.4,
+                        str(int(b.get_height())), ha="center", fontsize=11)
+        ax.set_title(title, fontsize=12)
+        ax.set_xticks(x)
+        ax.set_xticklabels([lab for _, lab in sigs], fontsize=10)
+        ax.set_yticks([0, 5, 10, 15])
+        ax.set_ylim(0, 18.5)
+        ax.grid(True, axis="y", color=GRID, linewidth=0.7, alpha=0.7)
+        ax.set_axisbelow(True)
+    axes[0].set_ylabel("Cell groups passing both tests", fontsize=11)
+    axes[0].legend(loc="upper left", frameon=False)
+    fig.suptitle("Four published aging signatures, tested in Gao heart and Yazar blood",
+                 fontsize=12, y=0.98)
+    fig.text(0.5, 0.02,
+             "Passes both tests means the age signal beats both the composite test and the random-signature test.\n"
+             "Harries 2011 tested 13 Gao heart groups; the other three signatures tested 14. Yazar blood: 17 groups for all four signatures.\n"
+             "Sood 2015: the 4 groups that pass before adjustment are 3 Gao heart and 1 Yazar blood. "
+             "Harries and Peters still pass after batch adjustment; Sood passes 0 after adjustment; de Magalhaes passes 0 in either arm.\n"
+             "Four signatures cannot prove a claim about all published signatures.",
+             ha="center", va="bottom", fontsize=10)
+    fig.tight_layout(rect=[0, 0.14, 1, 0.94])
     save(fig, "s4-published-signatures")
 
-
-# ---------------------------------------------------------------- S6
-def bh_q(pvals):
-    """Benjamini-Hochberg q values, monotone, for a list of p values."""
-    m = len(pvals)
-    order = sorted(range(m), key=lambda i: pvals[i])
-    q = [0.0] * m
-    running = 1.0
-    for rank in range(m, 0, -1):
-        i = order[rank - 1]
-        running = min(running, pvals[i] * m / rank)
-        q[i] = running
-    return q
 
 
 def build_s5():
@@ -401,17 +467,31 @@ def build_s5():
     hu = d["Human, within cohort"]
     assert abs(float(mw["p_value"]) - 0.0219780219780219) < 1e-9
     assert abs(float(hu["p_value"]) - 0.8151848151848152) < 1e-9
-    qs = bh_q([float(mw["p_value"]), float(mc["p_value"]), float(hu["p_value"])])
-    assert abs(qs[0] - 0.065934) < 1e-4, qs[0]
-    assert round(qs[0], 3) == 0.066
+    assert abs(float(mw["observed"]) - 0.210467) < 1e-5
+    assert abs(float(mw["null_ci95_low"]) - 0.101241) < 1e-5
+    assert abs(float(mw["null_ci95_high"]) - 0.205516) < 1e-5
+    assert float(mw["observed"]) > float(mw["null_ci95_high"])
+    # q values use the two-test primary family (mouse within-tissue and
+    # human), read from the BH check file. The three-test family q 0.066
+    # does not exist in the analysis record and must not appear here.
+    bh = rows("results/followup-mature-concordance-bh-check.csv")
+    two = {r["test"]: float(r["q_bh"]) for r in bh
+           if r["family"] == "mature_two_test_family"}
+    assert len(two) == 2, two
+    q_mouse = two["Mouse within_tissue primary_detection_filtered"]
+    q_human = two["Human within_tissue_or_cohort primary_detection_filtered"]
+    assert abs(q_mouse - 0.0439560439560438) < 1e-9, q_mouse
+    assert abs(q_human - 0.8151848151848152) < 1e-9, q_human
 
     groups = [
         ("Mouse\nwithin tissue", float(mw["observed"]), float(mw["null_mean"]),
-         float(mw["null_ci95_low"]), float(mw["null_ci95_high"]), "p 0.022", MOUSE),
+         float(mw["null_ci95_low"]), float(mw["null_ci95_high"]),
+         f"q {q_mouse:.3f} (p 0.022)", MOUSE),
         ("Mouse\ncross tissue", float(mc["observed"]), float(mc["null_mean"]),
          float(mc["null_ci95_low"]), float(mc["null_ci95_high"]), "p 0.103", MOUSE),
         ("Human\nwithin cohort", float(hu["observed"]), float(hu["null_mean"]),
-         float(hu["null_ci95_low"]), float(hu["null_ci95_high"]), "p 0.815", HUMAN),
+         float(hu["null_ci95_low"]), float(hu["null_ci95_high"]),
+         f"q {q_human:.3f} (p 0.815)", HUMAN),
     ]
     fig, ax = plt.subplots(figsize=(9, 5.8))
     style_ax(ax)
@@ -420,7 +500,7 @@ def build_s5():
     ax.bar(x - w / 2, [g[1] for g in groups], w, color=[g[6] for g in groups],
            label="Observed", zorder=3)
     ax.bar(x + w / 2, [g[2] for g in groups], w, color="#bdbdbd",
-           label="Random-gene null mean", zorder=3)
+           label="Joint donor-permutation null mean", zorder=3)
     for xi, g in zip(x, groups):
         ax.errorbar([xi + w / 2], [g[2]], yerr=[[g[2] - g[3]], [g[4] - g[2]]],
                     fmt="none", ecolor="black", elinewidth=2.0, capsize=6,
@@ -432,18 +512,20 @@ def build_s5():
     ax.set_yticks([0, 0.1, 0.2, 0.3])
     ax.set_ylim(0, 0.36)
     ax.set_ylabel("Mean correlation of age effects (Pearson)")
-    ax.set_title("Age-signal agreement across cell types, observed versus random-gene null",
+    ax.set_title("Age-signal agreement across cell types, observed versus joint donor-permutation null",
                  fontsize=12)
     ax.legend(loc="upper right", frameon=False)
     ax.text(0.0, -0.30,
-            "Mouse within-tissue: p 0.022, q 0.066 (false discovery rate correction over the 3 rows "
-            "shown).\nNominal only, not significant after correction. Human: p 0.815, null.\n"
+            "Error bars: null 95% confidence interval. Mouse within-tissue: q 0.044, passes the 0.05 bar "
+            "(false discovery rate correction over the two-test primary family: mouse within-tissue and human; p 0.022).\n"
+            "Observed 0.2105 sits just above the null 95% interval (0.101 to 0.206). "
+            "Mouse cross-tissue is a separate scope and carries no q in the primary family (p 0.103). Human: q 0.815, null.\n"
             "Mouse: 59 groups, 14 mice. Human: 127 groups, 416 donors, 7 cohorts.",
             transform=ax.transAxes, fontsize=10, va="top", ha="left")
     save(fig, "s5-concordance")
 
 
-# ---------------------------------------------------------------- S7
+
 def build_s6():
     def get(path, gene_set, role):
         for r in rows(path):
@@ -464,13 +546,13 @@ def build_s6():
         assert abs(float(r["pvalue"]) - p) < 5e-4, (r, p)
 
     pts = [
-        ("Gao heart cohort\nprimary off-program count",
+        ("Gao heart cohort\noff-program count",
          e1g, "slope -0.063, p 0.47", MOUSE),
-        ("Gao heart cohort\nstricter off-program count",
+        ("Gao heart cohort\noff-program stratum count",
          e2g, "slope -0.127, p 0.031", MOUSE),
-        ("Yazar blood cohort\nprimary off-program count",
+        ("Yazar blood cohort\noff-program count",
          e1y, "slope -0.019, p 0.073", HUMAN),
-        ("Yazar blood cohort\nstricter off-program count",
+        ("Yazar blood cohort\noff-program stratum count",
          e2y, "slope -0.033, p 0.0031", HUMAN),
     ]
     fig, ax = plt.subplots(figsize=(9, 5.6))
@@ -492,11 +574,11 @@ def build_s6():
     ax.set_xlim(-0.28, 0.14)
     ax.set_ylim(-0.6, 3.6)
     ax.set_xlabel("Change per decade of age (standard deviations)")
-    ax.set_title("Stricter off-program count falls with age; primary count shows no clear change",
+    ax.set_title("Off-program stratum count falls with age; off-program count shows no clear change",
                  fontsize=12)
     ax.text(0.0, -0.30,
             "Off-program: genes a cell expresses that belong to other cell types.\n"
-            "Primary count: Gao 104 donors, Yazar 925 donors. Stricter count: Gao 103 donors, "
+            "Off-program count: Gao 104 donors, Yazar 925 donors. Off-program stratum count: Gao 103 donors, "
             "Yazar 919 donors.",
             transform=ax.transAxes, fontsize=10, va="top", ha="left")
     save(fig, "s6-ectopic-e1-e2")
