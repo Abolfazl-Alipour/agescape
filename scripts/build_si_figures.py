@@ -491,7 +491,7 @@ def build_s5():
          float(mc["null_ci95_low"]), float(mc["null_ci95_high"]), "p 0.103", MOUSE),
         ("Human\nwithin cohort", float(hu["observed"]), float(hu["null_mean"]),
          float(hu["null_ci95_low"]), float(hu["null_ci95_high"]),
-         f"q {q_human:.3f} (p 0.815)", HUMAN),
+         f"q {q_human:.3f} (p 0.815)", MOUSE),  # observed bars all dark blue per legend
     ]
     fig, ax = plt.subplots(figsize=(9, 5.8))
     style_ax(ax)

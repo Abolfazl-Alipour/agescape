@@ -113,8 +113,9 @@ def fig1_composition():
     assert (v["verdict"] == "SURVIVES").sum() == 5
     assert (v["verdict"] == "UNTESTABLE").sum() == 1
     # manuscript numbers: club -0.080, multiciliated -0.047, L6b +0.020,
-    # oligodendrocyte +0.017, OPC -0.012; q values are the original
-    # 431-test family (0.01178, 0.02785).
+    # oligodendrocyte +0.017, OPC -0.012; donor-panel q values are the
+    # refit family on the 399-row mature scan (0.01090, 0.02579), matching
+    # the caption and body, not the original 431-test family.
     surv = v[v["verdict"] == "SURVIVES"]
     assert np.allclose(surv["mature_q_global_bh_orig_family"].values,
                        [0.011776868326018252, 0.027853986950145068,
@@ -165,8 +166,13 @@ def fig1_composition():
         sub["y_plot"] = sub["clr_value"] - beta_sex * sub["sex_male"]
         donor_panels.append({
             "label": label, "sub": sub, "slope": float(crow["effect"]),
-            "q": float(crow["q_431_family"]), "p": float(crow["pvalue"]),
+            "q": float(crow["q_refit_family"]), "p": float(crow["pvalue"]),
         })
+    # Donor-panel q values must be the refit family (caption and body),
+    # in headline order: club, multiciliated, L6b, oligodendrocyte, OPC.
+    assert np.allclose([d["q"] for d in donor_panels],
+                       [0.0109024836707222, 0.0257859415153316, 0.0109024836707222,
+                        0.0109024836707222, 0.0109024836707222])
 
     # Forest is stacked (mouse on top, human below) with heights in the
     # ratio of the row counts (9 to 5), so both panels have the same row
@@ -238,7 +244,7 @@ def fig1_composition():
         ax.set_xticks([30, 50, 70, 90])
         ax.set_xticklabels(["30", "50", "70", "90"])
         ax.tick_params(axis="y", labelsize=10)
-        ax.text(0.05, 0.95, f"slope {d['slope']:+.3f} per year\nq {d['q']:.3f}",
+        ax.text(0.05, 0.95, f"slope {d['slope']:+.3f} per year\nrefit-family q {d['q']:.3f}",
                 transform=ax.transAxes, fontsize=10, va="top", ha="left")
     ax_donor[0].set_ylabel("CLR value (sex-adjusted)", fontsize=11)
     fig.subplots_adjust(left=0.21, right=0.98, top=0.92, bottom=0.08)
