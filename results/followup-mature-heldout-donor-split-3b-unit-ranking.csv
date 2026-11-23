@@ -1,0 +1,32 @@
+unit,tissue,cell_ontology_class,n_mice_total,n_cells_total,n_de_uniform_before_clean,p1m_floor10_eligible,design_actual,sex_term_status,sex_term_reason,n_tested_genes,n_bh_pvalues,bh_max_abs_discrepancy,bh_pass
+Kidney::B cell,Kidney,B cell,6,103,4,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",4408,4408,1.1102230246251565e-16,True
+Kidney::T cell,Kidney,T cell,6,244,1,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7049,7049,1.1102230246251565e-16,True
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,6,2071,31,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11904,11904,2.220446049250313e-16,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,6,372,2,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9628,9628,1.1102230246251565e-16,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,6,376,22,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10944,10944,1.1102230246251565e-16,True
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,6,154,1,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8890,8890,0.0,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,6,310,14,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9498,9498,1.1102230246251565e-16,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,6,497,20,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10630,10630,1.1102230246251565e-16,True
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,6,1653,44,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11733,11733,1.1102230246251565e-16,True
+Kidney::lymphocyte,Kidney,lymphocyte,6,156,4,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8125,8125,1.1102230246251565e-16,True
+Kidney::macrophage,Kidney,macrophage,6,681,8,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10844,10844,1.1102230246251565e-16,True
+Lung::B cell,Lung,B cell,6,548,1,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8548,8548,3.469446951953614e-18,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",6,264,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7226,7226,0.0,True
+Lung::NK cell,Lung,NK cell,6,225,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",6955,6955,0.0,True
+Lung::T cell,Lung,T cell,6,107,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",5915,5915,1.1102230246251565e-16,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,6,362,0,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8632,8632,2.220446049250313e-16,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,6,767,0,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10326,10326,1.1102230246251565e-16,True
+Lung::classical monocyte,Lung,classical monocyte,6,6621,5,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",12012,12012,0.0,True
+Lung::intermediate monocyte,Lung,intermediate monocyte,6,1532,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9840,9840,0.0,True
+Marrow::erythroblast,Marrow,erythroblast,6,1340,87,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9294,9294,2.220446049250313e-16,True
+Marrow::granulocyte,Marrow,granulocyte,6,5347,92,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10049,10049,1.1102230246251565e-16,True
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,6,3375,379,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11281,11281,2.220446049250313e-16,True
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,6,827,287,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10971,10971,2.220446049250313e-16,True
+Marrow::late pro-B cell,Marrow,late pro-B cell,6,314,1,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9142,9142,0.0,True
+Marrow::macrophage,Marrow,macrophage,6,483,30,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10411,10411,1.1102230246251565e-16,True
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,6,943,90,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9540,9540,1.1102230246251565e-16,True
+Marrow::monocyte,Marrow,monocyte,6,768,12,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9386,9386,2.220446049250313e-16,True
+Marrow::naive T cell,Marrow,naive T cell,6,724,114,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10508,10508,1.1102230246251565e-16,True
+Marrow::precursor B cell,Marrow,precursor B cell,6,330,2,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8577,8577,1.1102230246251565e-16,True
+Marrow::proerythroblast,Marrow,proerythroblast,6,1619,24,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8284,8284,2.220446049250313e-16,True
+Marrow::promonocyte,Marrow,promonocyte,6,1791,122,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11082,11082,1.1102230246251565e-16,True

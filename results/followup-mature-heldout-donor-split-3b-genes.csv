@@ -1,0 +1,688 @@
+mouse_gene_symbol,human_ortholog,direction,n_units_significant,n_units_up,n_units_down,mean_log2FC,min_FDR,max_abs_log2FC,units_list,biotype,chromosome
+AA467197,COXFA4L3,UP,1,1,0,2.3494100979283115,0.014666065081845824,2.3494100979283115,Marrow::hematopoietic precursor cell,protein_coding,2
+AB124611,C19orf38,UP,1,1,0,1.9660847499613612,0.004943368413413419,1.9660847499613612,Marrow::hematopoietic precursor cell,protein_coding,9
+Aars,,UP,1,1,0,1.6107477553291272,0.01778064914742456,1.6107477553291272,Marrow::granulocytopoietic cell,protein_coding,8
+Abcb10,ABCB10,UP,1,1,0,2.1745393896640643,0.00011972066010223458,2.1745393896640643,Marrow::granulocytopoietic cell,protein_coding,8
+Abcb4,ABCB4,UP,1,1,0,2.247795756854143,0.011091833465992922,2.247795756854143,Marrow::granulocytopoietic cell,protein_coding,5
+Abcg2,,UP,2,2,0,2.293383674995762,4.697732311986303e-09,2.8035105429889335,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,6
+Ablim1,ABLIM1,UP,1,1,0,2.228255917687238,0.03301429981069327,2.228255917687238,Marrow::hematopoietic precursor cell,protein_coding,19
+Acadl,ACADL,UP,1,1,0,1.0785523459059942,0.043329876703182744,1.0785523459059942,Marrow::erythroblast,protein_coding,1
+Acin1,ACIN1,UP,2,2,0,1.3835606952257775,0.0045766626540030214,1.4301808227528305,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,14
+Acnat2,,DOWN,1,0,1,-1.3226411063632248,0.008194372324742964,1.3226411063632248,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Acp1,,UP,1,1,0,1.5873410048916565,0.00010113897206791845,1.5873410048916565,Marrow::granulocytopoietic cell,protein_coding,12
+Actb,ACTB,UP,1,1,0,1.607323638460781,0.0006292871591351269,1.607323638460781,Marrow::hematopoietic precursor cell,protein_coding,5
+Actr3,ACTR3,DOWN,1,0,1,-0.9953566132884387,0.029333926394301175,0.9953566132884387,Marrow::granulocytopoietic cell,protein_coding,1
+Add2,ADD2,UP,1,1,0,2.602598468470132,0.00019586955173422308,2.602598468470132,Marrow::granulocytopoietic cell,protein_coding,6
+Add3,ADD3,UP,1,1,0,1.9873510148863216,0.04459117056227078,1.9873510148863216,Marrow::hematopoietic precursor cell,protein_coding,19
+Adpgk,ADPGK,DOWN,2,0,2,-1.1358030758656406,0.001096374836225787,1.5731372135068589,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,9
+Afmid,AFMID,UP,1,1,0,2.1106346037597485,0.011223834683517751,2.1106346037597485,Marrow::granulocytopoietic cell,protein_coding,11
+Agfg2,AGFG2,UP,1,1,0,2.4268444881723705,0.0011513587942179211,2.4268444881723705,Marrow::granulocytopoietic cell,protein_coding,5
+Agpat4,AGPAT4,UP,1,1,0,2.589005755571964,3.813272367603056e-05,2.589005755571964,Marrow::granulocytopoietic cell,protein_coding,17
+Agtr1a,,UP,1,1,0,2.7915517845222215,0.027188272480569403,2.7915517845222215,Marrow::granulocytopoietic cell,protein_coding,13
+Ahcy,,DOWN,1,0,1,-1.4368467345191307,0.04155285514680174,1.4368467345191307,Marrow::hematopoietic precursor cell,protein_coding,2
+Ahnak,AHNAK,UP,1,1,0,2.74406590483967,0.0024259912253556813,2.74406590483967,Marrow::hematopoietic precursor cell,protein_coding,19
+Akap13,AKAP13,UP,1,1,0,1.5121842172793458,0.0440365026769763,1.5121842172793458,Marrow::hematopoietic precursor cell,protein_coding,7
+Akap9,AKAP9,UP,5,5,0,2.177441670142011,0.00033152958072068655,2.606330324408996,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,5
+Alad,ALAD,UP,1,1,0,2.191384622651205,8.205873195613797e-08,2.191384622651205,Marrow::granulocytopoietic cell,protein_coding,4
+Alas1,ALAS1,DOWN,1,0,1,-1.6876449049946163,0.00011342929916287026,1.6876449049946163,Kidney::epithelial cell of proximal tubule,protein_coding,9
+Alas2,ALAS2,UP,4,4,0,2.295508905057044,2.823215563912454e-06,3.1937045724070217,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::proerythroblast,protein_coding,X
+Aldh1a1,,UP,2,2,0,2.2863654398131406,0.026294432533968935,2.3374304114305025,Kidney::epithelial cell of proximal tubule;Marrow::granulocytopoietic cell,protein_coding,19
+Angptl4,ANGPTL4,DOWN,1,0,1,-1.4384558928622542,0.0171177283630281,1.4384558928622542,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Ank1,ANK1,UP,1,1,0,1.97673338395186,0.0016548326222682048,1.97673338395186,Marrow::granulocytopoietic cell,protein_coding,8
+Ankhd1,ANKHD1,UP,1,1,0,2.3188650325701494,0.02502748212139643,2.3188650325701494,Marrow::granulocytopoietic cell,protein_coding,18
+Ankrd11,ANKRD11,UP,8,8,0,3.101706862666713,1.4988304517016005e-09,3.791636069598285,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,8
+Ankrd12,ANKRD12,UP,4,4,0,1.9109450982331353,3.554959517043707e-06,2.4547149228670295,Marrow::granulocyte;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,17
+Anp32e,ANP32E,UP,1,1,0,0.9306624002153888,0.04666954952251422,0.9306624002153888,Marrow::granulocytopoietic cell,protein_coding,3
+Anxa1,ANXA1,DOWN,2,1,1,-0.11375307773742638,0.01609022575224887,2.1510867040124646,Kidney::lymphocyte;Marrow::hematopoietic precursor cell,protein_coding,19
+Anxa2,ANXA2,UP,1,1,0,1.669598743425595,0.0015819686986756267,1.669598743425595,Marrow::hematopoietic precursor cell,protein_coding,9
+Apeh,APEH,UP,1,1,0,1.4333464159153824,0.04338767224844725,1.4333464159153824,Marrow::granulocytopoietic cell,protein_coding,9
+Apex1,APEX1,DOWN,1,0,1,-1.5679674003248854,0.024931516587655446,1.5679674003248854,Marrow::hematopoietic precursor cell,protein_coding,14
+Apob,APOB,UP,1,1,0,2.6134964757476213,0.0021693913542826402,2.6134964757476213,Kidney::epithelial cell of proximal tubule,protein_coding,12
+Apoe,APOE,DOWN,1,0,1,-1.1946513211143936,0.03736484817602784,1.1946513211143936,Marrow::hematopoietic precursor cell,protein_coding,7
+Apol10a,,UP,1,1,0,2.503375181618016,0.03346511001496412,2.503375181618016,Marrow::granulocytopoietic cell,protein_coding,15
+Apol11b,,UP,1,1,0,4.781349622933314,4.071677936217157e-06,4.781349622933314,Marrow::hematopoietic precursor cell,protein_coding,15
+Aqp1,AQP1,UP,1,1,0,1.9642384641096102,0.0009098241892266158,1.9642384641096102,Marrow::granulocytopoietic cell,protein_coding,6
+Arap2,ARAP2,UP,1,1,0,2.8850092434904235,0.0392674859654657,2.8850092434904235,Marrow::hematopoietic precursor cell,protein_coding,5
+Arc,ARC,DOWN,1,0,1,-2.8880673600655618,0.01468180967114415,2.8880673600655618,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,15
+Arf5,ARF5,UP,1,1,0,1.0249174161157888,0.038920956278179264,1.0249174161157888,Marrow::granulocytopoietic cell,protein_coding,6
+Arglu1,ARGLU1,UP,4,4,0,1.398568594851904,0.005011631980878026,1.659925471085973,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,8
+Arhgap30,ARHGAP30,UP,1,1,0,1.8866472098329539,0.013805879357824418,1.8866472098329539,Marrow::hematopoietic precursor cell,protein_coding,1
+Arid4a,ARID4A,UP,6,6,0,2.0013647720034498,0.0003797629526095449,2.7056185206598875,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Arid4b,ARID4B,UP,5,5,0,2.146910593877844,0.00017689140750128032,3.084659461863281,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,13
+Arl4a,ARL4A,UP,2,2,0,2.349370242354944,3.0218071682092203e-06,2.581459538252248,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,12
+Arl4c,ARL4C,UP,1,1,0,2.3596597488056137,0.04014404146201436,2.3596597488056137,Marrow::hematopoietic precursor cell,protein_coding,1
+Armc1,ARMC1,UP,1,1,0,1.2455764836589318,0.047114751329241054,1.2455764836589318,Marrow::granulocytopoietic cell,protein_coding,3
+Armc7,ARMC7,UP,1,1,0,2.960672857098134,0.040518481333261684,2.960672857098134,Marrow::hematopoietic precursor cell,protein_coding,11
+Arrb2,ARRB2,UP,1,1,0,1.5735432103645828,0.04177604757987508,1.5735432103645828,Marrow::hematopoietic precursor cell,protein_coding,11
+Asap1,ASAP1,UP,1,1,0,1.1957220456656168,0.03668364327161821,1.1957220456656168,Marrow::naive T cell,protein_coding,15
+Ascc1,ASCC1,UP,1,1,0,0.9546027185683473,0.020072670818747054,0.9546027185683473,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Ash1l,ASH1L,UP,5,5,0,2.3498750624580893,0.0006581454584847977,3.189353974481693,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,3
+Ass1,ASS1,UP,1,1,0,1.09554321097359,0.003923147837873647,1.09554321097359,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+Atp2a2,ATP2A2,DOWN,1,0,1,-0.9572472226106148,0.024441521289595276,0.9572472226106148,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+Atp2b1,ATP2B1,UP,2,2,0,1.7077277185292308,0.00013322992365303362,2.101652171492807,Marrow::hematopoietic precursor cell;Marrow::promonocyte,protein_coding,10
+Atp2b4,ATP2B4,UP,1,1,0,2.5191389238981263,3.379824963514781e-05,2.5191389238981263,Marrow::granulocytopoietic cell,protein_coding,1
+Atp5e,,DOWN,1,0,1,-0.8502174307402414,0.0004410303124165609,0.8502174307402414,Marrow::erythroblast,protein_coding,2
+Atpif1,,UP,1,1,0,1.1828976456229812,0.003917119377543797,1.1828976456229812,Marrow::granulocytopoietic cell,protein_coding,4
+Atrx,ATRX,UP,7,7,0,1.9547942899803117,8.778171575923818e-08,2.330268108809037,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,X
+Atxn7l3b,ATXN7L3B,UP,4,4,0,1.2033975289521706,1.260748225240007e-05,1.440822345248573,Marrow::granulocyte;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,10
+Baz1a,BAZ1A,UP,3,3,0,1.1241743596494889,0.001758613103959444,1.2184300359334872,Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Baz1b,BAZ1B,UP,1,1,0,1.2737975307491267,0.019501466256363904,1.2737975307491267,Marrow::erythroblast,protein_coding,5
+Baz2b,BAZ2B,UP,1,1,0,1.5742481148938723,0.03232534221592814,1.5742481148938723,Marrow::naive T cell,protein_coding,2
+Bcl11b,BCL11B,UP,1,1,0,4.241763250675608,0.0010239841153846447,4.241763250675608,Marrow::hematopoietic precursor cell,protein_coding,12
+Bcl2,BCL2,UP,1,1,0,1.797860345240373,0.01232277583457489,1.797860345240373,Marrow::hematopoietic precursor cell,protein_coding,1
+Bcl2a1b,,UP,2,2,0,3.3488962894295504,3.1235107450546794e-05,4.161662163934847,Lung::classical monocyte;Marrow::hematopoietic precursor cell,protein_coding,9
+Bcl2l1,BCL2L1,UP,1,1,0,2.3608112086294932,0.04462227509761802,2.3608112086294932,Marrow::hematopoietic precursor cell,protein_coding,2
+Bclaf1,BCLAF1,UP,1,1,0,1.349414279527587,0.03056899893485817,1.349414279527587,Marrow::erythroblast,protein_coding,10
+Bhlhe40,BHLHE40,DOWN,1,0,1,-1.4271616384839598,0.012204520765301274,1.4271616384839598,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,6
+Blvrb,BLVRB,UP,1,1,0,1.8209295776323409,3.0218071682092203e-06,1.8209295776323409,Marrow::granulocytopoietic cell,protein_coding,7
+Bod1l,BOD1L1,UP,6,6,0,1.7341442812065193,0.00010858972226090567,2.288957888512999,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,5
+Bola3,BOLA3,UP,1,1,0,1.5493955505244883,0.00217917203180804,1.5493955505244883,Marrow::granulocytopoietic cell,protein_coding,6
+Bpgm,BPGM,UP,1,1,0,1.3827621706901052,0.0453835997470415,1.3827621706901052,Marrow::granulocytopoietic cell,protein_coding,6
+Brca2,BRCA2,UP,1,1,0,1.9002465842476484,0.043329876703182744,1.9002465842476484,Marrow::erythroblast,protein_coding,5
+Brpf3,BRPF3,UP,1,1,0,1.6354191145549801,0.028357644055827986,1.6354191145549801,Marrow::granulocytopoietic cell,protein_coding,17
+Bsg,BSG,UP,1,1,0,1.2981123331463758,0.005119421732567818,1.2981123331463758,Marrow::granulocytopoietic cell,protein_coding,10
+Btg1,BTG1,UP,1,1,0,2.5353785413915446,1.4097767837173422e-05,2.5353785413915446,Marrow::hematopoietic precursor cell,protein_coding,10
+Btg2,BTG2,UP,2,2,0,2.1862002492879395,1.0674096243670761e-05,2.718688354365358,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,1
+Btrc,BTRC,UP,1,1,0,1.6948706330453864,0.04666954952251422,1.6948706330453864,Marrow::granulocytopoietic cell,protein_coding,19
+C5ar1,C5AR1,UP,1,1,0,3.651311095395794,0.01922217638696919,3.651311095395794,Marrow::hematopoietic precursor cell,protein_coding,7
+Calb1,CALB1,DOWN,1,0,1,-3.472026825303081,0.00511939130483955,3.472026825303081,Kidney::macrophage,protein_coding,4
+Calr,CALR,DOWN,2,0,2,-1.1493489216051231,0.00043665782367953155,1.6717587003667094,Marrow::hematopoietic precursor cell;Marrow::naive T cell,protein_coding,8
+Camk2n1,CAMK2N1,UP,1,1,0,4.005167433455162,0.013773599993499735,4.005167433455162,Marrow::hematopoietic precursor cell,protein_coding,4
+Camp,CAMP,DOWN,2,1,1,-3.393222318947027,9.101291764657539e-07,9.599775412445004,Kidney::lymphocyte;Marrow::hematopoietic precursor cell,protein_coding,9
+Car1,CA1,UP,1,1,0,2.7484789582425337,0.0001829357438562208,2.7484789582425337,Marrow::granulocytopoietic cell,protein_coding,3
+Car2,CA2,UP,4,4,0,1.8637335055367488,2.182623583382641e-06,2.0876381006443463,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::promonocyte,protein_coding,3
+Casp7,CASP7,DOWN,1,0,1,-1.4687261674450698,0.03984148705755496,1.4687261674450698,Marrow::granulocytopoietic cell,protein_coding,19
+Casp8ap2,CASP8AP2,UP,5,5,0,2.0042988260599652,0.003627903948478855,2.3527384901353012,Marrow::erythroblast;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,4
+Cbl,CBL,UP,2,2,0,3.2856928491410144,0.018443885859359747,4.289106654116937,Marrow::hematopoietic precursor cell;Marrow::proerythroblast,protein_coding,9
+Cbx1,,UP,4,4,0,2.484085586531836,0.00023053023549520296,3.2108706737075945,Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::naive T cell;Marrow::promonocyte,protein_coding,11
+Ccdc88a,CCDC88A,UP,2,2,0,1.9504946765351572,0.0007273871761170898,2.3328680651078577,Marrow::macrophage;Marrow::promonocyte,protein_coding,11
+Ccl28,CCL28,DOWN,1,0,1,-3.2342460016880636,9.047513252773656e-06,3.2342460016880636,Kidney::epithelial cell of proximal tubule,protein_coding,13
+Ccl4,,UP,1,1,0,2.74622158475715,0.03807338811078645,2.74622158475715,Lung::classical monocyte,protein_coding,11
+Ccl5,CCL5,UP,6,6,0,2.6531963078561605,1.3455801015868488e-06,3.391925989548647,Kidney::macrophage;Lung::classical monocyte;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::promonocyte,protein_coding,11
+Ccl6,,UP,1,1,0,2.4514649043497547,0.0004699408188854672,2.4514649043497547,Marrow::hematopoietic precursor cell,protein_coding,11
+Ccl9,,DOWN,1,0,1,-0.6069724878173031,0.04797091226546593,0.6069724878173031,Marrow::promonocyte,protein_coding,11
+Ccnd2,CCND2,UP,2,2,0,2.2101708963401787,1.260748225240007e-05,2.2178656306869984,Marrow::hematopoietic precursor cell;Marrow::naive T cell,protein_coding,6
+Cct5,CCT5,UP,1,1,0,0.9036635915826412,0.021597333945642457,0.9036635915826412,Marrow::erythroblast,protein_coding,15
+Cct6a,CCT6A,UP,2,2,0,4.236873961175288,0.0003515110536341402,4.595269898019503,Marrow::naive T cell;Marrow::promonocyte,protein_coding,5
+Cd160,CD160,UP,1,1,0,2.7188240147071743,0.005131783598577634,2.7188240147071743,Marrow::hematopoietic precursor cell,protein_coding,3
+Cd177,CD177,UP,1,1,0,3.037172664818499,0.0006472773568747084,3.037172664818499,Marrow::hematopoietic precursor cell,protein_coding,7
+Cd2,CD2,UP,1,1,0,2.676156415153353,0.0003764668126789316,2.676156415153353,Marrow::hematopoietic precursor cell,protein_coding,3
+Cd247,CD247,UP,1,1,0,2.745349364258738,0.0039988600149172,2.745349364258738,Marrow::hematopoietic precursor cell,protein_coding,1
+Cd24a,CD24,UP,2,2,0,1.3154525143005928,0.016270028860993126,1.4979507439867414,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,10
+Cd28,CD28,UP,1,1,0,2.872108618578093,0.011841966692362123,2.872108618578093,Marrow::hematopoietic precursor cell,protein_coding,1
+Cd3d,CD3D,UP,1,1,0,2.5233579031675304,0.00019777403954022104,2.5233579031675304,Marrow::hematopoietic precursor cell,protein_coding,9
+Cd3e,CD3E,UP,1,1,0,2.998625009786877,0.00038086797417491544,2.998625009786877,Marrow::hematopoietic precursor cell,protein_coding,9
+Cd3g,CD3G,UP,1,1,0,2.680611533466935,3.2656389966019377e-05,2.680611533466935,Marrow::hematopoietic precursor cell,protein_coding,9
+Cd52,CD52,UP,1,1,0,2.028131409351084,2.0535983482334534e-06,2.028131409351084,Marrow::hematopoietic precursor cell,protein_coding,4
+Cd7,CD7,UP,1,1,0,2.7502342989626185,6.054756771638744e-05,2.7502342989626185,Marrow::hematopoietic precursor cell,protein_coding,11
+Cd74,CD74,UP,1,1,0,4.537782962190701,1.121360230964942e-06,4.537782962190701,Marrow::monocyte,protein_coding,18
+Cd82,CD82,UP,1,1,0,1.9040904872681537,0.0038012610421619734,1.9040904872681537,Marrow::hematopoietic precursor cell,protein_coding,2
+Cd84,CD84,UP,1,1,0,1.8994306662656844,0.025065588267068988,1.8994306662656844,Marrow::hematopoietic precursor cell,protein_coding,1
+Cd8b1,,UP,1,1,0,2.652135599299197,0.0014109186554503814,2.652135599299197,Marrow::hematopoietic precursor cell,protein_coding,6
+Cdc25b,CDC25B,UP,1,1,0,1.3432896419946079,0.008915600613595418,1.3432896419946079,Marrow::granulocytopoietic cell,protein_coding,2
+Cdk12,CDK12,UP,6,6,0,2.2518619044123587,3.874231447085458e-06,2.3703587121852583,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,11
+Cdk4,CDK4,DOWN,1,0,1,-1.2089868904524204,0.02828527461139045,1.2089868904524204,Marrow::hematopoietic precursor cell,protein_coding,10
+Cdkn1b,CDKN1B,UP,1,1,0,2.7014884490415065,0.027733825877205055,2.7014884490415065,Marrow::hematopoietic precursor cell,protein_coding,6
+Cdkn2d,CDKN2D,UP,1,1,0,1.5190484765148196,0.04177604757987508,1.5190484765148196,Marrow::hematopoietic precursor cell,protein_coding,9
+Cdkn3,CDKN3,DOWN,1,0,1,-3.5922197139218808,0.027430775235664544,3.5922197139218808,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,14
+Cebpb,CEBPB,DOWN,2,0,2,-1.6334718915009374,0.02026575852878132,1.9628944844131553,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Marrow::granulocytopoietic cell,protein_coding,2
+Cebpd,CEBPD,DOWN,2,0,2,-2.455357064380781,5.035738637600479e-07,2.7916166494448227,Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+Cebpz,CEBPZ,UP,2,2,0,2.009057624672456,0.0007940474677146686,2.6509767580162147,Marrow::granulocyte;Marrow::proerythroblast,protein_coding,17
+Cenpe,CENPE,UP,3,3,0,2.140913925689373,1.2679860583174887e-05,3.32483018101914,Marrow::granulocytopoietic cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,3
+Cenpf,CENPF,UP,6,6,0,2.1390891752495693,1.168815802942395e-09,2.820122366840454,Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,1
+Cep76,CEP76,UP,1,1,0,1.938066074073565,0.011017451621291075,1.938066074073565,Marrow::granulocytopoietic cell,protein_coding,18
+Ces1d,,DOWN,1,0,1,-2.5412374360088252,0.04358739481680972,2.5412374360088252,Marrow::granulocytopoietic cell,protein_coding,8
+Ces2b,,DOWN,1,0,1,-2.5413014714304754,0.020507919605465677,2.5413014714304754,Kidney::epithelial cell of proximal tubule,protein_coding,8
+Ces2g,,UP,1,1,0,2.122441412780378,0.001181455812889535,2.122441412780378,Marrow::granulocytopoietic cell,protein_coding,8
+Chac2,CHAC2,UP,1,1,0,1.6011221954811297,0.0035260879364070784,1.6011221954811297,Marrow::granulocytopoietic cell,protein_coding,11
+Chd3,CHD3,UP,1,1,0,3.2550755454622684,0.00018125875187684982,3.2550755454622684,Marrow::hematopoietic precursor cell,protein_coding,11
+Chd7,CHD7,UP,3,3,0,2.7184226128943263,0.03232534221592814,4.1654118171143475,Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,4
+Chst10,CHST10,DOWN,1,0,1,-2.153872566513379,0.04644723649136562,2.153872566513379,Marrow::erythroblast,protein_coding,1
+Cir1,CIRSR,UP,1,1,0,1.3125589591337683,0.012223402615803564,1.3125589591337683,Marrow::granulocyte,protein_coding,2
+Cks2,CKS2,DOWN,1,0,1,-0.5304824334359226,0.04644723649136562,0.5304824334359226,Marrow::erythroblast,protein_coding,13
+Clcn3,CLCN3,UP,2,2,0,1.9957892020910544,7.93604494879098e-05,2.2539976888917854,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,8
+Cldn13,CLDN4,UP,2,2,0,4.007004718220212,9.523674388265827e-10,5.38904971649561,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,5
+Clec4a2,,UP,1,1,0,2.916338498524038,0.003548353404177578,2.916338498524038,Marrow::hematopoietic precursor cell,protein_coding,6
+Clip1,CLIP1,UP,1,1,0,1.8043510841763921,0.02828336929637277,1.8043510841763921,Marrow::granulocyte,protein_coding,5
+Cln8,CLN8,UP,1,1,0,2.112520781936837,0.004410189386804595,2.112520781936837,Marrow::granulocytopoietic cell,protein_coding,8
+Clspn,CLSPN,UP,1,1,0,2.10609851183803,0.0005785158381978422,2.10609851183803,Marrow::granulocytopoietic cell,protein_coding,4
+Clu,CLU,DOWN,2,0,2,-1.1876374423023706,0.0012201186327730363,1.1976847155543897,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,14
+Cmtm6,CMTM6,DOWN,1,0,1,-1.2419216139397506,0.04591516113201387,1.2419216139397506,Marrow::granulocytopoietic cell,protein_coding,9
+Cmtm7,CMTM7,DOWN,1,0,1,-1.4040426542262654,0.04459117056227078,1.4040426542262654,Marrow::hematopoietic precursor cell,protein_coding,9
+Cnn2,CNN2,UP,1,1,0,1.4979603429121202,0.009166114574835562,1.4979603429121202,Marrow::hematopoietic precursor cell,protein_coding,10
+Cnot4,CNOT4,UP,4,4,0,2.229755752019413,1.3145123930433468e-05,3.094130027963917,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,6
+Cnot6,CNOT6,UP,1,1,0,2.9736831154536336,0.007576968186782183,2.9736831154536336,Marrow::granulocytopoietic cell,protein_coding,11
+Cnot6l,CNOT6L,UP,1,1,0,2.2353288999082372,0.021945769415832567,2.2353288999082372,Marrow::hematopoietic precursor cell,protein_coding,5
+Cntln,CNTLN,UP,1,1,0,2.258413865268479,0.013428727268821878,2.258413865268479,Marrow::granulocytopoietic cell,protein_coding,4
+Coro1a,CORO1A,UP,1,1,0,1.1687787421700886,0.01922217638696919,1.1687787421700886,Marrow::hematopoietic precursor cell,protein_coding,7
+Cotl1,,UP,2,1,1,0.04241224539707511,0.009120529115680537,1.3524138743145326,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,8
+Cpeb4,CPEB4,UP,1,1,0,3.454873674407775,0.03741848491372322,3.454873674407775,Marrow::granulocyte,protein_coding,11
+Cpne2,CPNE2,DOWN,1,0,1,-1.2739770607378025,0.04879520357523201,1.2739770607378025,Marrow::granulocytopoietic cell,protein_coding,8
+Cpne3,CPNE3,UP,3,3,0,0.9137254374686057,0.006757749239796898,1.0399484840934394,Marrow::granulocyte;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,4
+Cpox,CPOX,UP,3,3,0,2.29048025403362,2.5819285575949895e-12,3.016239676370705,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,16
+Crebbp,CREBBP,UP,2,2,0,2.8080473680159663,0.0056008862452298375,3.0643210700703225,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,16
+Creg1,CREG1,UP,1,1,0,1.2255203439824782,0.011396401072822712,1.2255203439824782,Marrow::granulocytopoietic cell,protein_coding,1
+Crip2,CRIP2,UP,1,1,0,2.3116129429107053,0.0005642582152569136,2.3116129429107053,Marrow::granulocytopoietic cell,protein_coding,12
+Ctcf,CTCF,UP,2,2,0,1.1683849551247725,0.003681362221885172,1.2385568206902515,Marrow::granulocytopoietic cell;Marrow::promonocyte,protein_coding,8
+Ctsd,CTSD,DOWN,1,0,1,-1.1595535279196587,0.006538719149218172,1.1595535279196587,Kidney::kidney collecting duct principal cell,protein_coding,7
+Ctse,CTSE,UP,2,2,0,2.8293792462860354,0.0001276233407900479,3.491682643923658,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,1
+Ctss,CTSS,UP,1,1,0,2.0467193147795446,0.02559664514630313,2.0467193147795446,Marrow::hematopoietic precursor cell,protein_coding,3
+Ctsw,CTSW,UP,1,1,0,2.251750703024292,0.014051742156347692,2.251750703024292,Marrow::hematopoietic precursor cell,protein_coding,19
+Cx3cr1,CX3CR1,UP,2,2,0,2.3918328274544023,0.005526710913517683,2.8011791855583645,Marrow::monocyte;Marrow::promonocyte,protein_coding,9
+Cxcr2,CXCR2,UP,1,1,0,3.2236125290742565,0.027141359539400414,3.2236125290742565,Marrow::hematopoietic precursor cell,protein_coding,1
+Cxcr3,CXCR3,UP,1,1,0,2.5111407022699743,0.00804907499122767,2.5111407022699743,Marrow::hematopoietic precursor cell,protein_coding,X
+Cxcr6,CXCR6,UP,1,1,0,2.23640991477218,0.03157633783627861,2.23640991477218,Marrow::hematopoietic precursor cell,protein_coding,9
+Cyba,CYBA,UP,1,1,0,1.4408835838232388,0.00289075346059673,1.4408835838232388,Marrow::hematopoietic precursor cell,protein_coding,8
+Cybb,CYBB,UP,1,1,0,3.2688063783077927,1.9759348150936525e-05,3.2688063783077927,Marrow::hematopoietic precursor cell,protein_coding,X
+Cycs,,DOWN,1,0,1,-0.9374879126438267,0.027304601667618496,0.9374879126438267,Kidney::kidney collecting duct principal cell,protein_coding,6
+Cyp24a1,CYP24A1,UP,2,2,0,2.107602816887739,0.00028348549635214145,2.9064474266442293,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+Cyp2a5,,UP,1,1,0,1.5189353596988056,0.00029755995938345823,1.5189353596988056,Kidney::epithelial cell of proximal tubule,protein_coding,7
+Cyp2d9,,DOWN,1,0,1,-1.8631824701748625,0.041264285241852675,1.8631824701748625,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+Cyp4f18,CYP4F3,UP,1,1,0,3.5541843567179896,0.04119008515711856,3.5541843567179896,Marrow::hematopoietic precursor cell,protein_coding,8
+Dap,DAP,DOWN,1,0,1,-1.1364515618633737,0.023309113586003564,1.1364515618633737,Marrow::granulocytopoietic cell,protein_coding,15
+Dctd,DCTD,DOWN,1,0,1,-2.5850546818169486,0.02559664514630313,2.5850546818169486,Marrow::hematopoietic precursor cell,protein_coding,8
+Dcun1d1,,UP,1,1,0,1.5096974575138025,0.010524510716556702,1.5096974575138025,Marrow::granulocytopoietic cell,protein_coding,3
+Ddit4,DDIT4,DOWN,1,0,1,-2.0607806195775806,0.009221119280510002,2.0607806195775806,Kidney::epithelial cell of proximal tubule,protein_coding,10
+Ddx46,DDX46,UP,5,5,0,1.7987408387314656,1.0034286933965633e-05,1.902408170257639,Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,13
+Defb1,,DOWN,1,0,1,-1.5357983734127527,7.2289980563518375e-06,1.5357983734127527,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,8
+Dek,DEK,UP,2,2,0,1.0918944323136608,0.00019190688703920328,1.4165295001988967,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,13
+Derl1,DERL1,DOWN,1,0,1,-0.8006487599463155,0.04399594281681819,0.8006487599463155,Marrow::naive T cell,protein_coding,15
+Dhrs11,DHRS11,UP,1,1,0,1.9353484800886567,0.0004970285735658655,1.9353484800886567,Marrow::granulocytopoietic cell,protein_coding,11
+Dnajb2,DNAJB2,UP,1,1,0,1.9957380782259089,0.0016025270401579497,1.9957380782259089,Marrow::granulocytopoietic cell,protein_coding,1
+Dnajb4,DNAJB4,UP,1,1,0,1.7165222405061018,0.012677492022588228,1.7165222405061018,Marrow::granulocytopoietic cell,protein_coding,3
+Dynll1,DYNLL1,DOWN,1,0,1,-0.909592283985775,0.012199508593940433,0.909592283985775,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+Dynlrb1,DYNLRB1,DOWN,1,0,1,-0.8574766208104925,0.03530618264895274,0.8574766208104925,Marrow::erythroblast,protein_coding,2
+Dyrk3,DYRK3,UP,1,1,0,1.798400692637054,0.03495205576495452,1.798400692637054,Marrow::granulocytopoietic cell,protein_coding,1
+E2f2,E2F2,UP,2,2,0,2.572466261983533,0.00020797699264952146,3.551830869985961,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,4
+E2f4,E2F4,UP,1,1,0,1.4380162126691804,0.011677345206880883,1.4380162126691804,Marrow::granulocytopoietic cell,protein_coding,8
+Eef1d,EEF1D,UP,1,1,0,0.9498304120010128,0.04654524780816812,0.9498304120010128,Marrow::granulocytopoietic cell,protein_coding,15
+Egr1,EGR1,DOWN,2,0,2,-1.5769307160986772,0.00016000382128075606,1.8957305861864282,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Marrow::granulocytopoietic cell,protein_coding,18
+Ehbp1l1,EHBP1L1,UP,1,1,0,1.33240310404463,0.012665288569835278,1.33240310404463,Marrow::granulocytopoietic cell,protein_coding,19
+Eif2ak1,EIF2AK1,UP,1,1,0,1.5999826104291341,0.007945816930539735,1.5999826104291341,Marrow::granulocytopoietic cell,protein_coding,5
+Eif3a,EIF3A,UP,4,4,0,1.2094816299757047,0.00013473140912678485,1.4370833832949401,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,19
+Eif3c,,UP,1,1,0,1.3715606605909911,0.021137085886014095,1.3715606605909911,Marrow::erythroblast,protein_coding,7
+Eif4ebp2,EIF4EBP2,UP,5,5,0,2.6421937040065155,0.001908641662726408,3.2124458046074214,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,10
+Eif4ebp3,EIF4EBP3,DOWN,1,0,1,-1.738966260660534,6.012250502175268e-06,1.738966260660534,Kidney::epithelial cell of proximal tubule,protein_coding,18
+Eif5,EIF5,UP,1,1,0,1.3727192081363437,0.00010276834242643481,1.3727192081363437,Marrow::granulocyte,protein_coding,12
+Eif5b,EIF5B,UP,6,6,0,1.6060264915974358,0.00012559888696681625,2.4077180951041783,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,1
+Endod1,ENDOD1,UP,1,1,0,2.2553349643632568,0.0025114419287973217,2.2553349643632568,Marrow::granulocytopoietic cell,protein_coding,9
+Eomes,EOMES,UP,1,1,0,2.8210165527467073,0.01624696405389749,2.8210165527467073,Marrow::hematopoietic precursor cell,protein_coding,9
+Epor,EPOR,UP,1,1,0,2.1652152070432904,0.002010514642515829,2.1652152070432904,Marrow::granulocytopoietic cell,protein_coding,9
+Epsti1,EPSTI1,UP,1,1,0,2.2381025875073663,0.009166114574835562,2.2381025875073663,Marrow::hematopoietic precursor cell,protein_coding,14
+Ermap,ERMAP,UP,1,1,0,2.310862420298622,1.1684921188286666e-05,2.310862420298622,Marrow::granulocytopoietic cell,protein_coding,4
+Erp29,ERP29,DOWN,1,0,1,-1.1826650900024727,0.041880059746578754,1.1826650900024727,Marrow::hematopoietic precursor cell,protein_coding,5
+Esco2,ESCO2,UP,2,2,0,1.2609492174719144,0.0069201814138626664,1.3345094688518822,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,14
+Esf1,ESF1,UP,2,2,0,1.8296870336024078,0.012872151402456827,2.101557599461131,Marrow::granulocytopoietic cell;Marrow::promonocyte,protein_coding,2
+Ets1,ETS1,UP,1,1,0,3.180549259166646,2.7126981901170747e-05,3.180549259166646,Marrow::hematopoietic precursor cell,protein_coding,9
+Evi5,EVI5,UP,2,2,0,1.8617681392832965,0.0009850901670883708,1.9680142029128194,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,5
+Evl,EVL,UP,1,1,0,2.0884142602551194,0.014051742156347692,2.0884142602551194,Marrow::hematopoietic precursor cell,protein_coding,12
+Ezh2,EZH2,UP,2,2,0,1.022955218250103,0.030474078637880295,1.1925164306936125,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,6
+Fam107b,FAM107B,DOWN,1,0,1,-1.2856467980245494,0.0012374555540115991,1.2856467980245494,Marrow::granulocytopoietic cell,protein_coding,2
+Fam111a,,UP,3,3,0,0.8372089244860431,0.02005395369494986,0.9958027232411926,Marrow::erythroblast;Marrow::naive T cell;Marrow::promonocyte,protein_coding,19
+Fam53b,FAM53B,UP,2,2,0,2.3050658227054424,0.00013265341425590849,2.974990597863691,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,7
+Fancl,FANCL,UP,1,1,0,1.8740731237123387,0.046425360957600345,1.8740731237123387,Marrow::granulocytopoietic cell,protein_coding,11
+Fbxo7,FBXO7,UP,1,1,0,1.3740616055019912,0.04266966941745402,1.3740616055019912,Marrow::granulocytopoietic cell,protein_coding,10
+Fcer1g,FCER1G,UP,1,1,0,1.8755636784317773,0.00014921296286041338,1.8755636784317773,Marrow::hematopoietic precursor cell,protein_coding,1
+Fech,FECH,UP,2,2,0,2.3694220587278343,0.00010789102560361633,2.709221562919168,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,18
+Fgr,FGR,UP,1,1,0,3.006872808041679,0.04459117056227078,3.006872808041679,Marrow::hematopoietic precursor cell,protein_coding,4
+Fhdc1,FHDC1,UP,1,1,0,1.9731778269024656,0.02650567972490291,1.9731778269024656,Marrow::granulocytopoietic cell,protein_coding,3
+Fkbp4,FKBP4,DOWN,1,0,1,-1.4308468813489215,0.008504152207869087,1.4308468813489215,Marrow::hematopoietic precursor cell,protein_coding,6
+Foxn3,FOXN3,UP,1,1,0,2.695001395283215,0.02508786527366681,2.695001395283215,Marrow::granulocytopoietic cell,protein_coding,12
+Foxp1,FOXP1,UP,1,1,0,1.1398790312158182,0.03712697775647069,1.1398790312158182,Marrow::naive T cell,protein_coding,6
+Fpr2,,UP,1,1,0,4.104435577553175,0.0007301041786946169,4.104435577553175,Marrow::hematopoietic precursor cell,protein_coding,17
+Fth1,,UP,2,1,1,0.2437788059662489,0.017617120600017272,1.0277552017104328,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,19
+Fus,FUS,UP,2,2,0,1.346140118613306,0.00010767925834901088,1.8860801107416472,Marrow::erythroblast;Marrow::promonocyte,protein_coding,7
+Fyb,,UP,3,3,0,2.469120318619773,1.121360230964942e-06,2.95935148972591,Marrow::hematopoietic precursor cell;Marrow::monocyte;Marrow::promonocyte,protein_coding,15
+Fyn,FYN,UP,1,1,0,2.1459792788267937,0.01746264994687355,2.1459792788267937,Marrow::hematopoietic precursor cell,protein_coding,10
+G0s2,G0S2,UP,1,1,0,2.9901554790845397,0.009166114574835562,2.9901554790845397,Marrow::hematopoietic precursor cell,protein_coding,1
+Galnt10,GALNT10,UP,1,1,0,2.281811836711858,0.03406299667495582,2.281811836711858,Marrow::granulocytopoietic cell,protein_coding,11
+Gapvd1,GAPVD1,UP,1,1,0,1.6281138635030836,0.004395370882049127,1.6281138635030836,Marrow::granulocyte,protein_coding,2
+Gata1,GATA1,UP,1,1,0,2.4758454132155254,1.3741122873937883e-05,2.4758454132155254,Marrow::granulocytopoietic cell,protein_coding,X
+Gata3,GATA3,UP,1,1,0,2.7780295920125755,0.015030708982913775,2.7780295920125755,Marrow::hematopoietic precursor cell,protein_coding,2
+Gatad2b,GATAD2B,UP,1,1,0,2.4716809483460866,0.04404525972601261,2.4716809483460866,Marrow::granulocytopoietic cell,protein_coding,3
+Gch1,GCH1,UP,1,1,0,1.6902880398511078,0.0052746985790573,1.6902880398511078,Marrow::granulocytopoietic cell,protein_coding,14
+Gclc,GCLC,UP,1,1,0,2.5332199721523927,0.005668566555022171,2.5332199721523927,Marrow::granulocytopoietic cell,protein_coding,9
+Gclm,GCLM,UP,2,2,0,1.8734826345206574,0.00011017326962000738,2.233899499956713,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,3
+Gda,GDA,UP,1,1,0,2.34420495614267,0.02828527461139045,2.34420495614267,Marrow::hematopoietic precursor cell,protein_coding,19
+Gdf15,GDF15,DOWN,1,0,1,-1.7053712351261556,0.0287033901196668,1.7053712351261556,Kidney::kidney collecting duct principal cell,protein_coding,8
+Gfi1b,GFI1B,UP,1,1,0,2.841986823999551,0.0004775418765061191,2.841986823999551,Marrow::granulocytopoietic cell,protein_coding,2
+Ggnbp2,GGNBP2,UP,1,1,0,1.127636271831969,0.004479721920648425,1.127636271831969,Marrow::erythroblast,protein_coding,11
+Gimap3,,UP,1,1,0,2.9888069650364844,3.2656389966019377e-05,2.9888069650364844,Marrow::hematopoietic precursor cell,protein_coding,6
+Gimap4,GIMAP4,UP,1,1,0,2.8087377648591887,1.0612104270666318e-05,2.8087377648591887,Marrow::hematopoietic precursor cell,protein_coding,6
+Gimap5,,UP,1,1,0,1.9024123165456273,0.03900834908901253,1.9024123165456273,Marrow::hematopoietic precursor cell,protein_coding,6
+Gimap6,GIMAP6,UP,1,1,0,1.9447160971981003,0.006041321902881898,1.9447160971981003,Marrow::hematopoietic precursor cell,protein_coding,6
+Gimap7,GIMAP7,UP,1,1,0,3.3158523708761507,5.515840844635105e-06,3.3158523708761507,Marrow::hematopoietic precursor cell,protein_coding,6
+Glipr2,GLIPR2,UP,2,1,1,0.5977993433299882,0.00014938426061188664,2.5283982765695003,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,4
+Glrx,GLRX,DOWN,1,0,1,-1.1817345480940316,0.019998192636049735,1.1817345480940316,Marrow::granulocytopoietic cell,protein_coding,13
+Glrx5,GLRX5,UP,1,1,0,1.6740806728740885,0.0002155175235677119,1.6740806728740885,Marrow::granulocytopoietic cell,protein_coding,12
+Gnai3,GNAI3,DOWN,1,0,1,-1.393187181599419,0.005083311139895133,1.393187181599419,Marrow::granulocytopoietic cell,protein_coding,3
+Gpc3,GPC3,UP,1,1,0,3.567063396313454,0.00505223239611724,3.567063396313454,Kidney::epithelial cell of proximal tubule,protein_coding,X
+Gpr183,GPR183,UP,1,1,0,2.8707590089969117,0.041065594041668256,2.8707590089969117,Marrow::hematopoietic precursor cell,protein_coding,14
+Grap,GRAP,UP,1,1,0,2.8531422574989915,0.00609959658170545,2.8531422574989915,Marrow::hematopoietic precursor cell,protein_coding,11
+Grina,GRINA,UP,2,2,0,1.5324956487969867,0.01134810013008004,1.8693517711796843,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,15
+Gsk3b,GSK3B,UP,2,2,0,1.6529406714984018,0.04797091226546593,2.1099458748113094,Marrow::erythroblast;Marrow::promonocyte,protein_coding,16
+Gsn,GSN,DOWN,1,0,1,-1.1962827711987944,0.017049002954729175,1.1962827711987944,Marrow::granulocytopoietic cell,protein_coding,2
+Gsta2,,UP,2,2,0,2.5261663279337627,6.649975649825003e-12,3.315319584553587,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,9
+Gsta3,GSTA5,UP,1,1,0,1.1268359173347136,0.025516485458584176,1.1268359173347136,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,1
+Gsta4,,UP,1,1,0,3.1799731672086144,4.0782967568545e-05,3.1799731672086144,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,9
+Gsto1,GSTO1,DOWN,1,0,1,-1.5306573147006106,0.012207709827622235,1.5306573147006106,Marrow::hematopoietic precursor cell,protein_coding,19
+Gstt1,,UP,1,1,0,0.9098586542859199,0.03666669285801373,0.9098586542859199,Kidney::epithelial cell of proximal tubule,protein_coding,10
+Gypa,,UP,2,2,0,3.1386335193620267,2.5523269763170503e-07,4.193319501151332,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,8
+Gypc,GYPC,UP,1,1,0,1.5191185151849844,0.007939721817248618,1.5191185151849844,Marrow::granulocytopoietic cell,protein_coding,18
+Gzma,GZMA,UP,1,1,0,3.9653243904029396,0.03807338811078645,3.9653243904029396,Lung::classical monocyte,protein_coding,13
+H1f0,H1-0,UP,1,1,0,1.7079547132591884,0.03311789622966661,1.7079547132591884,Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,15
+H2-Aa,,UP,1,1,0,6.0957556287014665,3.9516766961586196e-16,6.0957556287014665,Marrow::monocyte,protein_coding,17
+H2-Ab1,,UP,1,1,0,5.7567946117622695,2.15750554901337e-17,5.7567946117622695,Marrow::monocyte,protein_coding,17
+H2-Eb1,,UP,1,1,0,5.340519796880839,3.272704908165883e-14,5.340519796880839,Marrow::monocyte,protein_coding,17
+H2-Q4,,UP,1,1,0,2.021013839576248,0.04062159426696158,2.021013839576248,Marrow::hematopoietic precursor cell,protein_coding,17
+Hace1,HACE1,UP,1,1,0,1.6976212929079408,0.049674089861845114,1.6976212929079408,Marrow::granulocytopoietic cell,protein_coding,10
+Hagh,HAGH,UP,1,1,0,1.6428901447607918,0.002042781584098266,1.6428901447607918,Marrow::granulocytopoietic cell,protein_coding,17
+Hba-a1,,UP,8,8,0,2.9587565854840046,1.2242016361145842e-06,4.6851394196696505,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,11
+Hba-a2,,UP,1,1,0,2.5172528089258686,0.0002878761945669676,2.5172528089258686,Marrow::hematopoietic precursor cell,protein_coding,11
+Hbq1b,,UP,1,1,0,1.7048402206577282,0.0027605219298459808,1.7048402206577282,Marrow::granulocytopoietic cell,protein_coding,11
+Hcst,HCST,UP,1,1,0,2.0152625155165795,0.00041292219839029624,2.0152625155165795,Marrow::hematopoietic precursor cell,protein_coding,7
+Hdc,HDC,DOWN,2,0,2,-1.3304028743546248,0.004330058336511402,1.600069244872945,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,2
+Hebp1,HEBP1,UP,1,1,0,2.0233606669414304,0.0007414719538336901,2.0233606669414304,Marrow::granulocytopoietic cell,protein_coding,6
+Hemgn,,UP,2,2,0,2.420506054687052,1.8769103622493006e-07,2.5796570468753095,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,4
+Herc1,HERC1,UP,2,2,0,1.7135032337707736,0.0011513587942179211,1.8134825837931345,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,9
+Herpud1,HERPUD1,DOWN,3,0,3,-1.0166791217307083,0.009500191117482371,1.2230077494387015,Kidney::epithelial cell of proximal tubule;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Hipk2,HIPK2,UP,1,1,0,2.596445486027345,0.004201593749962025,2.596445486027345,Marrow::granulocytopoietic cell,protein_coding,6
+Hmbs,HMBS,UP,2,2,0,1.813991584924658,1.578845263205762e-06,1.9046820130446254,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,9
+Hmgcs2,HMGCS2,UP,1,1,0,3.045560895900248,0.028922027400247838,3.045560895900248,Kidney::epithelial cell of proximal tubule,protein_coding,3
+Hmmr,HMMR,UP,1,1,0,1.5348374439563806,0.0005174345203777086,1.5348374439563806,Marrow::granulocytopoietic cell,protein_coding,11
+Hnrnpd,HNRNPD,UP,1,1,0,1.0601432426829966,0.001588246029675307,1.0601432426829966,Marrow::promonocyte,protein_coding,5
+Hsd11b1,HSD11B1,UP,1,1,0,2.3775983652103636,0.0020548983140717967,2.3775983652103636,Marrow::hematopoietic precursor cell,protein_coding,1
+Hsd11b2,HSD11B2,UP,1,1,0,1.5740749606822364,0.0012700195250735862,1.5740749606822364,Kidney::kidney collecting duct principal cell,protein_coding,8
+Hsp90aa1,HSP90AA1,UP,3,2,1,0.4343721096587834,0.007505985736093835,1.1435495185361555,Kidney::kidney proximal convoluted tubule epithelial cell;Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,12
+Hsp90b1,HSP90B1,DOWN,1,0,1,-0.8633919734291117,0.042685678861826885,0.8633919734291117,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Hspa1b,,DOWN,1,0,1,-2.683304587623491,0.03611790401653636,2.683304587623491,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Hspa5,HSPA5,DOWN,3,1,2,-0.11495923869307186,0.001328597956255993,1.3894355087523678,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Marrow::granulocyte;Marrow::naive T cell,protein_coding,2
+Hspa8,,DOWN,3,0,3,-0.9510361259316448,0.006138708914783581,0.989511390718411,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,9
+Hspb1,HSPB1,DOWN,1,0,1,-1.9414246636311674,0.01544316200798753,1.9414246636311674,Kidney::epithelial cell of proximal tubule,protein_coding,5
+Htra2,HTRA2,DOWN,1,0,1,-1.8145986629552011,0.032380643282224515,1.8145986629552011,Marrow::hematopoietic precursor cell,protein_coding,6
+Hvcn1,HVCN1,DOWN,2,0,2,-1.2124225934665975,0.0009764446130093797,1.5305441122899854,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,5
+Icam4,ICAM4,UP,1,1,0,1.5651712730279899,0.004760080757234148,1.5651712730279899,Marrow::granulocytopoietic cell,protein_coding,9
+Id2,ID2,UP,2,2,0,1.6231936942780822,0.00010586757853847404,2.088887243936343,Kidney::kidney proximal convoluted tubule epithelial cell;Marrow::hematopoietic precursor cell,protein_coding,12
+Id3,ID3,UP,1,1,0,2.804732533013128,0.0007571220031779537,2.804732533013128,Kidney::kidney collecting duct principal cell,protein_coding,4
+Idh2,IDH2,DOWN,1,0,1,-1.953840172130448,0.0026920540195842684,1.953840172130448,Marrow::hematopoietic precursor cell,protein_coding,7
+Ifi203,,UP,1,1,0,2.152205853110971,0.003157104586161679,2.152205853110971,Marrow::hematopoietic precursor cell,protein_coding,1
+Ifi27l2a,,UP,1,1,0,3.378257497126794,8.19416824901481e-05,3.378257497126794,Marrow::hematopoietic precursor cell,protein_coding,12
+Ifit1,,UP,1,1,0,3.047020247148074,0.03741543123697258,3.047020247148074,Marrow::granulocyte,protein_coding,19
+Ifitm6,,DOWN,1,0,1,-3.17765786424494,0.04978820939215301,3.17765786424494,Kidney::lymphocyte,protein_coding,7
+Ifrd2,IFRD2,UP,1,1,0,1.7425745678826272,0.0007031310470753887,1.7425745678826272,Marrow::granulocytopoietic cell,protein_coding,9
+Ift140,IFT140,UP,1,1,0,2.291447571955851,0.00032255281485286057,2.291447571955851,Marrow::granulocytopoietic cell,protein_coding,17
+Igfbp4,IGFBP4,DOWN,1,0,1,-2.1976632501457227,0.0014109186554503814,2.1976632501457227,Marrow::hematopoietic precursor cell,protein_coding,11
+Iigp1,,UP,1,1,0,3.0478284000322438,0.002108201025347237,3.0478284000322438,Kidney::macrophage,protein_coding,18
+Il18r1,IL18R1,UP,1,1,0,3.662189115298071,0.018717984288946454,3.662189115298071,Marrow::hematopoietic precursor cell,protein_coding,1
+Il2rb,IL2RB,UP,1,1,0,2.3305224057912315,0.01662389286450365,2.3305224057912315,Marrow::hematopoietic precursor cell,protein_coding,15
+Il6ra,IL6R,UP,1,1,0,1.4592775952991675,0.005798449239617641,1.4592775952991675,Marrow::promonocyte,protein_coding,3
+Il7r,IL7R,UP,1,1,0,3.7861153137456527,5.515840844635105e-06,3.7861153137456527,Marrow::hematopoietic precursor cell,protein_coding,15
+Inhba,INHBA,UP,1,1,0,1.7332786540673133,0.0045766626540030214,1.7332786540673133,Marrow::granulocyte,protein_coding,13
+Ipcef1,IPCEF1,UP,1,1,0,2.1789015650734984,0.018432106644701244,2.1789015650734984,Marrow::granulocyte,protein_coding,10
+Isca1,,UP,1,1,0,1.4698605566981606,0.012677492022588228,1.4698605566981606,Marrow::granulocytopoietic cell,protein_coding,13
+Isg15,ISG15,UP,2,2,0,3.238783026836421,3.3261975063510537e-07,4.5233820076491815,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,4
+Isg20,ISG20,UP,2,2,0,2.4859647839880332,2.1360827762227207e-05,2.9951892626935854,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,7
+Isoc2a,,UP,1,1,0,1.7085876208794755,0.013776971458124279,1.7085876208794755,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,7
+Itgal,ITGAL,UP,1,1,0,2.352946582288626,0.0075976085192351345,2.352946582288626,Marrow::hematopoietic precursor cell,protein_coding,7
+Itgav,ITGAV,DOWN,1,0,1,-1.472125951176788,0.004758522271182356,1.472125951176788,Kidney::kidney collecting duct principal cell,protein_coding,2
+Itgb2,,UP,1,1,0,2.6245395062972574,1.0612104270666318e-05,2.6245395062972574,Marrow::hematopoietic precursor cell,protein_coding,10
+Itgb2l,,UP,1,1,0,3.9106184898957004,0.009166114574835562,3.9106184898957004,Marrow::hematopoietic precursor cell,protein_coding,16
+Itgb7,ITGB7,UP,1,1,0,2.3882104333454373,0.009146375396900743,2.3882104333454373,Marrow::hematopoietic precursor cell,protein_coding,15
+Itsn1,ITSN1,UP,1,1,0,2.1068327212665405,0.014378510785157436,2.1068327212665405,Marrow::granulocytopoietic cell,protein_coding,16
+Itsn2,ITSN2,UP,1,1,0,1.8930932625946035,0.023561428004097426,1.8930932625946035,Marrow::promonocyte,protein_coding,12
+Jak1,JAK1,UP,1,1,0,1.4913948191958042,0.03271205799761235,1.4913948191958042,Marrow::hematopoietic precursor cell,protein_coding,4
+Jund,JUND,UP,2,2,0,1.6088923293673887,0.0015518387194769785,1.920058961767061,Marrow::hematopoietic precursor cell;Marrow::promonocyte,protein_coding,8
+Kcnn4,KCNN4,UP,1,1,0,1.8056394833217804,0.0006255178722083424,1.8056394833217804,Marrow::granulocytopoietic cell,protein_coding,7
+Kctd12,KCTD12,UP,1,1,0,2.250591704873099,0.04216811523203977,2.250591704873099,Marrow::hematopoietic precursor cell,protein_coding,14
+Kctd14,KCTD14,UP,1,1,0,1.9327957740061725,0.006662993037169834,1.9327957740061725,Marrow::granulocytopoietic cell,protein_coding,7
+Keg1,,DOWN,2,0,2,-1.5112877614529716,7.52904843533522e-08,1.5539256193527704,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+Kel,KEL,UP,1,1,0,1.9108879010131727,0.0006255178722083424,1.9108879010131727,Marrow::granulocytopoietic cell,protein_coding,6
+Kif20b,KIF20B,UP,3,3,0,1.9478289107864164,9.619932208052617e-06,2.375284028052168,Marrow::granulocytopoietic cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,19
+Kif5b,KIF5B,UP,7,7,0,1.453709370119789,2.019758954982182e-08,1.9798479822843653,Marrow::granulocyte;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,18
+Kl,KL,DOWN,1,0,1,-1.3036393506347244,0.041922481909967224,1.3036393506347244,Kidney::kidney collecting duct principal cell,protein_coding,5
+Klf1,KLF1,UP,1,1,0,2.1074551713155953,3.544469667675032e-06,2.1074551713155953,Marrow::granulocytopoietic cell,protein_coding,8
+Klf13,KLF13,UP,1,1,0,1.6727148534045224,0.01232277583457489,1.6727148534045224,Marrow::hematopoietic precursor cell,protein_coding,7
+Klf2,KLF2,UP,3,3,0,1.7757854537139455,0.0007098405297131028,2.5120648683058073,Marrow::granulocyte;Marrow::hematopoietic precursor cell;Marrow::monocyte,protein_coding,8
+Klf3,KLF3,UP,2,2,0,3.100465020751259,2.336016503673638e-09,3.1797396697048623,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,5
+Klf4,KLF4,UP,1,1,0,1.469938948575762,0.0121235186511284,1.469938948575762,Marrow::macrophage,protein_coding,4
+Klf5,KLF5,UP,1,1,0,1.9468427061854152,0.005074442850692679,1.9468427061854152,Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,14
+Klf6,KLF6,UP,3,3,0,1.8367531132076056,0.0003874123487606671,2.8761516015188415,Marrow::granulocyte;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,13
+Klk1,,DOWN,5,0,5,-1.906076345797489,2.5465628252704272e-11,3.4927951999002373,Kidney::epithelial cell of proximal tubule;Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell;Kidney::macrophage,protein_coding,7
+Klra7,,UP,1,1,0,5.317104682053095,0.00014921296286041338,5.317104682053095,Marrow::hematopoietic precursor cell,protein_coding,6
+Klrd1,KLRD1,UP,1,1,0,3.0290907944249845,0.0009217351588833951,3.0290907944249845,Marrow::hematopoietic precursor cell,protein_coding,6
+Klrk1,KLRK1,UP,1,1,0,2.8614610572753856,0.0006325130512514538,2.8614610572753856,Marrow::hematopoietic precursor cell,protein_coding,6
+Kpna2,,UP,2,1,1,0.11096090314219809,0.0015567008376745487,1.034812358502049,Marrow::erythroblast;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,11
+Lars2,LARS2,DOWN,1,0,1,-4.444497199675176,1.3504567137352897e-58,4.444497199675176,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,9
+Lasp1,LASP1,DOWN,1,0,1,-1.342478336553981,0.027154300985936002,1.342478336553981,Marrow::granulocytopoietic cell,protein_coding,11
+Lck,LCK,UP,1,1,0,2.437684250350349,0.0030977304023763553,2.437684250350349,Marrow::hematopoietic precursor cell,protein_coding,4
+Lcp1,LCP1,DOWN,2,0,2,-1.076381726177288,0.006509210575715384,1.3582655148281255,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,14
+Lfng,LFNG,UP,1,1,0,2.3112045128724934,0.03760161007696938,2.3112045128724934,Marrow::hematopoietic precursor cell,protein_coding,5
+Lgals3,LGALS3,UP,1,1,0,2.56095500328426,0.00016675534948519955,2.56095500328426,Marrow::hematopoietic precursor cell,protein_coding,14
+Lime1,LIME1,UP,1,1,0,2.457971934422575,0.0007098405297131028,2.457971934422575,Marrow::hematopoietic precursor cell,protein_coding,2
+Litaf,LITAF,DOWN,2,0,2,-1.1607693861502941,0.010376445096474844,1.3595055646592265,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,16
+Lmna,LMNA,UP,2,2,0,2.6539746269498776,0.00011972394551692882,3.3521946453064833,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,3
+Lpin2,LPIN2,UP,1,1,0,2.5148906577736208,0.00270403976005979,2.5148906577736208,Marrow::granulocyte,protein_coding,17
+Lrrfip1,LRRFIP1,UP,2,2,0,1.3425637972117388,0.0058846018608359925,1.6398957241252594,Marrow::hematopoietic precursor cell;Marrow::promonocyte,protein_coding,1
+Lsp1,LSP1,UP,1,1,0,1.8261163320017597,0.0008855287082566094,1.8261163320017597,Marrow::hematopoietic precursor cell,protein_coding,7
+Ltb,LTB,UP,1,1,0,2.1190070685765203,0.000711583980154212,2.1190070685765203,Marrow::hematopoietic precursor cell,protein_coding,17
+Ltb4r1,,DOWN,1,0,1,-0.7165152793133692,0.03668463338713492,0.7165152793133692,Marrow::naive T cell,protein_coding,14
+Ltf,LTF,UP,3,1,2,0.17648022684153405,0.00013265341425590849,2.628371677477713,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,9
+Luc7l3,LUC7L3,UP,5,5,0,1.122730903807924,0.0007411932560924787,1.4277121846188596,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,11
+Ly6a,,UP,1,1,0,2.2515288196445544,0.0020601134259719866,2.2515288196445544,Marrow::hematopoietic precursor cell,protein_coding,15
+Ly6c1,,DOWN,1,0,1,-2.192989646772936,0.011431345722680621,2.192989646772936,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+Ly6c2,,UP,1,1,0,1.7522443405056307,0.01012630842962908,1.7522443405056307,Marrow::hematopoietic precursor cell,protein_coding,15
+Lysmd3,LYSMD3,UP,1,1,0,4.050702469266843,0.0369235400355428,4.050702469266843,Marrow::granulocytopoietic cell,protein_coding,13
+Lyst,LYST,UP,4,4,0,2.9207242264737343,0.0004504856588861809,3.766282782123078,Marrow::granulocyte;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,13
+Lyz1,,UP,2,1,1,0.49945149744290007,4.794540363732787e-06,2.6208660234843086,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,10
+Lyz2,,UP,2,1,1,0.38636436519181017,4.1350009920266405e-06,2.4026289244039183,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,10
+Map4k5,MAP4K5,UP,1,1,0,2.1448490062626506,0.013554952548853964,2.1448490062626506,Marrow::granulocytopoietic cell,protein_coding,12
+Mboat2,MBOAT2,UP,1,1,0,2.234300242363305,0.03786521668378881,2.234300242363305,Marrow::granulocytopoietic cell,protein_coding,12
+Mcm6,MCM6,UP,1,1,0,1.0608650263996973,0.01674668983333771,1.0608650263996973,Marrow::erythroblast,protein_coding,1
+Memo1,MEMO1,UP,2,2,0,1.4995817419893451,0.004201593749962025,1.5209203526856805,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,17
+Metap2,METAP2,UP,2,2,0,1.375594859927864,0.000977023090236571,1.4598384896604548,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,10
+Mettl7a1,,UP,1,1,0,2.4187872185717474,0.011353097416356733,2.4187872185717474,Marrow::granulocyte,protein_coding,15
+Mfhas1,MFHAS1,UP,1,1,0,2.169368246668243,0.03326145869111121,2.169368246668243,Marrow::granulocytopoietic cell,protein_coding,8
+Mfsd2b,MFSD2B,UP,1,1,0,1.9099584670668586,0.03183629646933303,1.9099584670668586,Marrow::granulocytopoietic cell,protein_coding,12
+Mgll,MGLL,UP,1,1,0,1.7643257496185338,0.000940589645296841,1.7643257496185338,Marrow::granulocytopoietic cell,protein_coding,6
+Mgp,MGP,DOWN,2,0,2,-3.55303534770053,0.0028910428720383074,3.8206779518696323,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+Mgst1,MGST1,UP,1,1,0,1.872537634076755,0.003923147837873647,1.872537634076755,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+Mgst3,MGST3,UP,2,2,0,2.208682433638269,3.033087391248622e-05,2.6166823133704056,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,1
+Mis18bp1,MIS18BP1,UP,1,1,0,1.230955765786453,0.03782758056749426,1.230955765786453,Marrow::granulocytopoietic cell,protein_coding,12
+Mki67,MKI67,UP,1,1,0,1.080960432106684,0.01112719189649687,1.080960432106684,Marrow::granulocytopoietic cell,protein_coding,7
+Mknk2,MKNK2,DOWN,1,0,1,-1.3707756743695325,0.0021693913542826402,1.3707756743695325,Kidney::epithelial cell of proximal tubule,protein_coding,10
+Mkrn1,MKRN1,UP,1,1,0,2.0789663024077236,0.004889478170002338,2.0789663024077236,Marrow::hematopoietic precursor cell,protein_coding,6
+Mllt10,MLLT10,UP,2,2,0,1.5950960035430422,0.007432137980080232,1.628704466518431,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,2
+Mllt3,MLLT3,UP,1,1,0,1.7861708966341312,0.00024852572662209787,1.7861708966341312,Marrow::granulocyte,protein_coding,4
+Mmp8,MMP8,UP,1,1,0,3.8374877248141215,2.9971886759933e-07,3.8374877248141215,Marrow::hematopoietic precursor cell,protein_coding,9
+Mmp9,MMP9,UP,1,1,0,2.715154926516261,0.001882283725841586,2.715154926516261,Marrow::hematopoietic precursor cell,protein_coding,2
+Mns1,MNS1,UP,2,2,0,1.6314668952247795,1.3741122873937883e-05,2.1433933187401495,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,9
+Mospd1,MOSPD1,UP,1,1,0,2.1545071100902993,0.007758836013723096,2.1545071100902993,Marrow::granulocyte,protein_coding,X
+Mpo,MPO,DOWN,7,0,7,-1.5868803880648714,0.0036324702197099456,2.4227647513625374,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast,protein_coding,11
+Mpst,MPST,UP,1,1,0,1.0882433746618183,0.04713640011704961,1.0882433746618183,Marrow::granulocytopoietic cell,protein_coding,15
+Ms4a4b,,UP,1,1,0,3.3672242790802374,1.0349867389778216e-06,3.3672242790802374,Marrow::hematopoietic precursor cell,protein_coding,19
+Ms4a4c,,UP,1,1,0,3.038293172480483,0.001237802992000064,3.038293172480483,Marrow::hematopoietic precursor cell,protein_coding,19
+Ms4a6b,,UP,1,1,0,2.8522466402958297,3.7305368007416054e-05,2.8522466402958297,Marrow::hematopoietic precursor cell,protein_coding,19
+Mt1,MT1B,DOWN,6,0,6,-1.7536071176545758,4.477699770096201e-16,2.3609256112316945,Kidney::epithelial cell of proximal tubule;Kidney::fenestrated cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell;Marrow::hematopoietic precursor cell,protein_coding,8
+Mt2,,DOWN,4,0,4,-1.8619868522738166,1.4491102982721663e-10,2.6187607310421006,Kidney::fenestrated cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Mta3,MTA3,UP,1,1,0,1.8062443743869678,0.038783063773213895,1.8062443743869678,Marrow::granulocytopoietic cell,protein_coding,17
+Mtdh,MTDH,UP,5,5,0,1.3346566087657648,4.082401944357771e-05,1.506844197411689,Marrow::granulocyte;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,15
+Mtfr1,MTFR1,UP,1,1,0,1.7958765632842901,0.003878490353613212,1.7958765632842901,Marrow::granulocytopoietic cell,protein_coding,3
+Muc13,MUC13,DOWN,1,0,1,-2.369656451617566,0.005334420420037712,2.369656451617566,Marrow::hematopoietic precursor cell,protein_coding,16
+Mxd1,MXD1,UP,1,1,0,2.474545678150473,0.032380643282224515,2.474545678150473,Marrow::hematopoietic precursor cell,protein_coding,6
+Mycbp2,MYCBP2,UP,4,4,0,1.635882030053815,0.0031073310422976255,1.8435693649214435,Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,14
+Myef2,,UP,1,1,0,2.2217148453692803,0.0030278188908034465,2.2217148453692803,Marrow::granulocytopoietic cell,protein_coding,2
+Mylk3,MYLK3,UP,1,1,0,2.800271023229267,0.011539123308515737,2.800271023229267,Marrow::granulocytopoietic cell,protein_coding,8
+N4bp2l2,N4BP2L2,UP,1,1,0,1.3342323491856596,0.035254115890228116,1.3342323491856596,Marrow::naive T cell,protein_coding,5
+Nadk,NADK,DOWN,1,0,1,-1.3646796271703407,0.007888252147146975,1.3646796271703407,Marrow::granulocytopoietic cell,protein_coding,4
+Narf,NARF,UP,1,1,0,1.5294553984174746,0.02508786527366681,1.5294553984174746,Marrow::granulocytopoietic cell,protein_coding,11
+Nasp,NASP,UP,1,1,0,0.9742984105911019,0.02005395369494986,0.9742984105911019,Marrow::erythroblast,protein_coding,4
+Ncapd3,NCAPD3,UP,1,1,0,1.673037759332537,0.0018583991255870832,1.673037759332537,Marrow::granulocytopoietic cell,protein_coding,9
+Ncapg,NCAPG,UP,2,2,0,1.8782592369885045,0.00010767925834901088,2.401666122042512,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,5
+Ncl,NCL,UP,2,2,0,1.2024387202509004,0.012483487950616287,1.2122286131929387,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,1
+Ncoa7,NCOA7,UP,1,1,0,1.957492954182152,0.002404924416364273,1.957492954182152,Marrow::granulocytopoietic cell,protein_coding,10
+Ncor1,NCOR1,UP,5,5,0,1.2136329080251278,0.00012710894447763154,1.4030862959026522,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,11
+Ncr1,NCR1,UP,1,1,0,2.8526792192551103,0.01746264994687355,2.8526792192551103,Marrow::hematopoietic precursor cell,protein_coding,7
+Ndufs5,NDUFS5,DOWN,5,0,5,-3.2302801750993964,7.466853307150719e-07,3.7121075438697257,Kidney::epithelial cell of proximal tubule;Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Nfkbia,NFKBIA,UP,3,2,1,0.2939192063137758,0.003878252701414403,1.8931719822526871,Kidney::kidney distal convoluted tubule epithelial cell;Marrow::hematopoietic precursor cell;Marrow::naive T cell,protein_coding,12
+Nipbl,NIPBL,UP,6,6,0,1.892645400275233,2.9686840586696537e-06,2.213853623119116,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,15
+Nktr,NKTR,UP,4,4,0,1.9243150413419556,0.0007551627153498488,2.3146924433191436,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,9
+Nmnat3,NMNAT3,UP,1,1,0,2.8213376750208496,0.007888252147146975,2.8213376750208496,Marrow::granulocytopoietic cell,protein_coding,9
+Nos1ap,NOS1AP,UP,1,1,0,2.6566128521489083,0.03741848491372322,2.6566128521489083,Marrow::granulocyte,protein_coding,1
+Nr1h4,NR1H4,DOWN,1,0,1,-1.0704736117269087,0.01649396501088018,1.0704736117269087,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Nrip3,NRIP3,UP,1,1,0,4.162912697650548,0.02469411915980086,4.162912697650548,Marrow::granulocytopoietic cell,protein_coding,7
+Nt5c3,NT5C3A,UP,2,2,0,1.1742030386288929,0.02542014557829858,1.1906231226673203,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,6
+Nucks1,NUCKS1,UP,2,2,0,0.9307062407260467,0.006197064079837263,1.0093999010399886,Marrow::naive T cell;Marrow::promonocyte,protein_coding,1
+Oaz1,OAZ1,UP,1,1,0,1.3265976071757484,0.007399666603584998,1.3265976071757484,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Odc1,ODC1,UP,1,1,0,1.3766863323882987,0.008320656190446456,1.3766863323882987,Marrow::granulocytopoietic cell,protein_coding,12
+Olfml2b,OLFML2B,DOWN,2,0,2,-1.4470627566010799,0.010524510716556702,1.7024941044700577,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,1
+Orm1,,UP,1,1,0,3.2345891648799867,0.02559664514630313,3.2345891648799867,Marrow::hematopoietic precursor cell,protein_coding,4
+Ormdl3,ORMDL3,UP,1,1,0,1.8130018226167801,0.009454049292264307,1.8130018226167801,Marrow::granulocytopoietic cell,protein_coding,11
+Oxct1,OXCT1,DOWN,1,0,1,-1.2467389881242497,0.021281443106341988,1.2467389881242497,Kidney::kidney collecting duct principal cell,protein_coding,15
+Pabpc4,PABPC4,UP,1,1,0,1.4901922466516553,0.025583784513715593,1.4901922466516553,Marrow::granulocytopoietic cell,protein_coding,4
+Pabpn1,PABPN1,UP,3,3,0,1.4011567527757656,0.0005571554668817813,1.5553554556304485,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::promonocyte,protein_coding,14
+Pafah1b1,PAFAH1B1,UP,1,1,0,1.216578372361142,0.015565885824585101,1.216578372361142,Marrow::erythroblast,protein_coding,11
+Parvb,PARVB,UP,1,1,0,2.35350583591512,0.04722283828269308,2.35350583591512,Marrow::granulocytopoietic cell,protein_coding,15
+Pbrm1,PBRM1,UP,2,2,0,1.4664649079107477,0.007339104150216418,1.5705528988646975,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,14
+Pbxip1,PBXIP1,UP,1,1,0,2.05408896745031,0.012445415143192327,2.05408896745031,Marrow::hematopoietic precursor cell,protein_coding,3
+Pck2,PCK2,UP,1,1,0,1.3613053719284431,0.02469411915980086,1.3613053719284431,Marrow::granulocytopoietic cell,protein_coding,14
+Pcm1,PCM1,UP,1,1,0,1.4891691300156937,0.029624269859403723,1.4891691300156937,Marrow::promonocyte,protein_coding,8
+Pcolce,PCOLCE,DOWN,1,0,1,-1.7070501264418767,0.0010514211909723537,1.7070501264418767,Kidney::kidney collecting duct principal cell,protein_coding,5
+Pcyt1a,PCYT1A,UP,1,1,0,1.462715341759585,0.040954335363605036,1.462715341759585,Marrow::granulocytopoietic cell,protein_coding,16
+Pde2a,PDE2A,UP,1,1,0,3.112078425993026,0.006377572579744927,3.112078425993026,Marrow::hematopoietic precursor cell,protein_coding,7
+Pdia4,PDIA4,DOWN,1,0,1,-1.2198125527169696,0.00019775403600477085,1.2198125527169696,Marrow::naive T cell,protein_coding,6
+Pdia6,PDIA6,DOWN,2,0,2,-1.0952310800933258,0.013103157636122452,1.4397826485062932,Marrow::hematopoietic precursor cell;Marrow::naive T cell,protein_coding,12
+Pdss2,PDSS2,DOWN,1,0,1,-2.8302199291310384,0.04958662570629809,2.8302199291310384,Kidney::epithelial cell of proximal tubule,protein_coding,10
+Pdzk1ip1,PDZK1IP1,UP,1,1,0,1.9067230248717222,0.00027396236414817693,1.9067230248717222,Marrow::granulocytopoietic cell,protein_coding,4
+Pebp1,,DOWN,1,0,1,-1.1847566863121626,0.04707471662416685,1.1847566863121626,Marrow::hematopoietic precursor cell,protein_coding,5
+Pgd,PGD,DOWN,4,0,4,-0.8874376937307016,0.019619590025237707,1.3079755010973355,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,4
+Pglyrp1,PGLYRP1,UP,1,1,0,2.7397454692933274,9.987504043550605e-06,2.7397454692933274,Marrow::hematopoietic precursor cell,protein_coding,7
+Phf14,PHF14,UP,1,1,0,1.3612483664093948,0.04721163184587047,1.3612483664093948,Marrow::promonocyte,protein_coding,6
+Phf20l1,PHF20L1,UP,1,1,0,1.2956550966226397,0.02416090802897287,1.2956550966226397,Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,15
+Phgdh,PHGDH,DOWN,1,0,1,-1.6329546647753421,0.007251248513007305,1.6329546647753421,Marrow::hematopoietic precursor cell,protein_coding,3
+Pi4k2b,PI4K2B,UP,1,1,0,2.0783667559390753,0.019998192636049735,2.0783667559390753,Marrow::granulocytopoietic cell,protein_coding,5
+Picalm,PICALM,UP,1,1,0,1.1791296975412002,0.04461894890050151,1.1791296975412002,Marrow::granulocytopoietic cell,protein_coding,7
+Pigq,PIGQ,UP,1,1,0,1.5898305244504944,0.002442165416654337,1.5898305244504944,Marrow::granulocytopoietic cell,protein_coding,17
+Pilra,,UP,1,1,0,3.3617742319379604,0.01012630842962908,3.3617742319379604,Marrow::hematopoietic precursor cell,protein_coding,5
+Pim1,PIM1,UP,3,3,0,2.3717233837269847,4.03922087047274e-05,2.977444610297363,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,17
+Pir,PIR,UP,1,1,0,2.0290093534651357,0.01788879172950553,2.0290093534651357,Marrow::granulocytopoietic cell,protein_coding,X
+Pkn2,PKN2,UP,2,2,0,1.8002066496406057,0.00034653073299347685,1.9651858745894912,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,3
+Pla2g12a,PLA2G12A,UP,1,1,0,2.0400182508621607,0.03840964949317356,2.0400182508621607,Marrow::granulocytopoietic cell,protein_coding,3
+Plaur,PLAUR,UP,1,1,0,3.0504705304618365,0.03870527149402479,3.0504705304618365,Marrow::hematopoietic precursor cell,protein_coding,7
+Plbd1,PLBD1,UP,1,1,0,3.135417587145415,0.017679467371798402,3.135417587145415,Marrow::hematopoietic precursor cell,protein_coding,6
+Plek2,PLEK2,UP,1,1,0,1.7042477627002963,0.02469411915980086,1.7042477627002963,Marrow::granulocytopoietic cell,protein_coding,12
+Pnn,PNN,UP,2,2,0,1.0526544385849663,0.009213609672728475,1.0762987267908641,Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Pnpo,PNPO,UP,1,1,0,2.4892826742129563,4.8464929926235464e-05,2.4892826742129563,Marrow::granulocytopoietic cell,protein_coding,11
+Ppig,PPIG,UP,2,2,0,1.0716051571846479,0.0035202313163598203,1.3877138545286352,Marrow::erythroblast;Marrow::promonocyte,protein_coding,2
+Ppox,PPOX,UP,1,1,0,1.531445745056028,0.0006255178722083424,1.531445745056028,Marrow::granulocytopoietic cell,protein_coding,1
+Ppp1r12a,PPP1R12A,UP,6,6,0,1.5974715243744801,0.00012559888696681625,2.095038459039169,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,10
+Ppp1r15a,PPP1R15A,UP,2,2,0,1.97326912667652,0.0009273752858658019,2.047578365920858,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,7
+Ppp1r18,PPP1R18,UP,1,1,0,1.662193767078035,0.0226634692691524,1.662193767078035,Marrow::hematopoietic precursor cell,protein_coding,17
+Ppp2r5b,PPP2R5B,UP,1,1,0,2.0554030620516186,0.006884568908801286,2.0554030620516186,Marrow::granulocytopoietic cell,protein_coding,19
+Ppwd1,PPWD1,UP,1,1,0,1.9532829891487173,0.031240359602563716,1.9532829891487173,Marrow::promonocyte,protein_coding,13
+Prdx2,PRDX2,UP,1,1,0,2.158977011549968,1.6055116586974133e-07,2.158977011549968,Marrow::granulocytopoietic cell,protein_coding,8
+Prdx3,PRDX3,UP,1,1,0,1.381010617505177,0.006338277012672949,1.381010617505177,Marrow::granulocytopoietic cell,protein_coding,19
+Prdx5,PRDX5,UP,1,1,0,1.655362413016118,0.009632447597611058,1.655362413016118,Marrow::hematopoietic precursor cell,protein_coding,19
+Prkca,PRKCA,UP,1,1,0,2.266139907323482,0.04459117056227078,2.266139907323482,Marrow::hematopoietic precursor cell,protein_coding,11
+Prkcb,PRKCB,UP,1,1,0,2.370400924585576,0.0041562757997598496,2.370400924585576,Marrow::hematopoietic precursor cell,protein_coding,7
+Prpf38b,PRPF38B,UP,1,1,0,1.1109270090724563,0.00494658329604549,1.1109270090724563,Marrow::promonocyte,protein_coding,3
+Prpf40a,PRPF40A,UP,10,10,0,2.210993133001076,4.699220182137888e-11,2.6859204224537208,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::monocyte;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,2
+Prpf4b,PRP4K,UP,5,5,0,1.7766358572432466,0.00013322992365303362,2.0178092815961013,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,13
+Prrc2c,PRRC2C,UP,6,6,0,2.2196016125846225,1.7947295567330378e-10,2.659824854235016,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,1
+Psip1,PSIP1,UP,2,2,0,1.2841089396901875,0.0005107561019127362,1.31594617846564,Marrow::erythroblast;Marrow::granulocytopoietic cell,protein_coding,4
+Ptbp1,PTBP1,DOWN,3,0,3,-0.9422119642738177,0.012351338222699413,1.0717052021721956,Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,10
+Ptdss2,PTDSS2,UP,1,1,0,1.7250087416033384,0.015540876169232075,1.7250087416033384,Marrow::granulocytopoietic cell,protein_coding,7
+Ptprc,PTPRC,UP,1,1,0,2.069153164517462,0.0005921892197379448,2.069153164517462,Marrow::hematopoietic precursor cell,protein_coding,1
+Ptpre,PTPRE,UP,1,1,0,1.119989570378049,0.03668364327161821,1.119989570378049,Marrow::naive T cell,protein_coding,7
+Rab3il1,RAB3IL1,UP,1,1,0,1.9136668684477611,0.01788879172950553,1.9136668684477611,Marrow::granulocytopoietic cell,protein_coding,19
+Rac2,RAC2,UP,1,1,0,1.1059953605849622,0.04293377720664782,1.1059953605849622,Marrow::hematopoietic precursor cell,protein_coding,15
+Rad23a,RAD23A,UP,1,1,0,1.6634773748689167,0.0007414719538336901,1.6634773748689167,Marrow::granulocytopoietic cell,protein_coding,8
+Rad50,RAD50,UP,4,4,0,1.9641271868515755,0.0022596641251018644,2.2007402946782633,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,11
+Ralbp1,RALBP1,UP,4,4,0,1.1581210486816347,0.00029005804839405254,1.2245832652824,Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,17
+Ranbp10,RANBP10,UP,1,1,0,1.823996047133838,0.0030667042597979878,1.823996047133838,Marrow::granulocytopoietic cell,protein_coding,8
+Rapgef6,RAPGEF6,UP,1,1,0,2.1476354945105625,0.01812707619863721,2.1476354945105625,Marrow::hematopoietic precursor cell,protein_coding,11
+Rb1cc1,RB1CC1,UP,1,1,0,1.4463589342045868,0.019619590025237707,1.4463589342045868,Marrow::granulocyte,protein_coding,1
+Rbbp7,RBBP7,UP,1,1,0,1.1372647597545766,0.014609970871353682,1.1372647597545766,Marrow::erythroblast,protein_coding,X
+Rbm25,RBM25,UP,7,7,0,1.417192734048918,1.0034286933965633e-05,1.6618975973634467,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Rbm27,RBM27,UP,2,2,0,1.7533967909486288,0.030346641646107644,1.8381562420945303,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,18
+Rbm39,RBM39,UP,6,6,0,1.0508751613880059,0.0003851694746602498,1.6871083689393676,Marrow::erythroblast;Marrow::granulocyte;Marrow::macrophage;Marrow::monocyte;Marrow::naive T cell;Marrow::promonocyte,protein_coding,2
+Rbms1,RBMS1,UP,3,3,0,2.2470113713028943,0.0015765006183850341,3.4275828543099345,Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::promonocyte,protein_coding,2
+Rcan1,RCAN1,DOWN,1,0,1,-2.542847770229623,0.003241000611880761,2.542847770229623,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,16
+Rdx,RDX,UP,2,2,0,1.0326878088568308,0.006533167527361536,1.1273341667921206,Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,9
+Rel,REL,UP,1,1,0,2.8930153572885824,0.029624269859403723,2.8930153572885824,Marrow::promonocyte,protein_coding,11
+Rest,REST,UP,4,4,0,3.1071757214572857,0.000605749847942362,3.4302589709552995,Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,5
+Retnlg,,UP,1,1,0,2.919996766773506,3.3846875637951237e-06,2.919996766773506,Marrow::hematopoietic precursor cell,protein_coding,16
+Rexo1,REXO1,UP,2,2,0,1.4599803964037597,0.007097909447912219,1.61356579061904,Marrow::naive T cell;Marrow::promonocyte,protein_coding,10
+Rfc1,RFC1,UP,4,4,0,1.4376539443559622,0.0019011380285972367,1.624730028663392,Marrow::erythroblast;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,5
+Rgs3,RGS3,UP,1,1,0,3.614700383850599,0.015030708982913775,3.614700383850599,Marrow::hematopoietic precursor cell,protein_coding,4
+Rhag,RHAG,UP,1,1,0,1.7801963834362178,0.0006201413142995767,1.7801963834362178,Marrow::granulocytopoietic cell,protein_coding,17
+Rhd,,UP,3,3,0,3.035457364318878,5.121573722392515e-07,5.827435854132945,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,4
+Rif1,RIF1,UP,1,1,0,1.9139254671713877,0.04476306884704721,1.9139254671713877,Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,2
+Rnasel,RNASEL,UP,1,1,0,2.1989509256284583,0.013837923376210527,2.1989509256284583,Marrow::granulocytopoietic cell,protein_coding,1
+Rnf123,RNF123,UP,1,1,0,1.8704424940417825,0.0014377926605067418,1.8704424940417825,Marrow::granulocytopoietic cell,protein_coding,9
+Rnf125,RNF125,UP,1,1,0,2.093541563008765,0.044982622926386634,2.093541563008765,Marrow::naive T cell,protein_coding,18
+Rock1,ROCK1,UP,7,7,0,1.3943754752982613,0.0006106010519374717,2.060445743245477,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,18
+Rrbp1,RRBP1,UP,1,1,0,1.2564694652183,0.0018618368418729732,1.2564694652183,Marrow::promonocyte,protein_coding,2
+Rsad2,RSAD2,UP,2,2,0,2.8936439629209207,0.00018125875187684982,3.529970620926891,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,12
+Rsbn1l,RSBN1L,UP,2,2,0,1.6133084273109117,0.00381612167088996,1.922056200929724,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,5
+Rtf1,RTF1,UP,5,5,0,1.330422516636864,0.00019405557149914878,1.478622555173843,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,2
+Rtn3,RTN3,DOWN,1,0,1,-0.6386997505740264,0.04848825366316934,0.6386997505740264,Marrow::naive T cell,protein_coding,19
+Runx3,RUNX3,UP,1,1,0,1.7417186201125734,0.024804446286519743,1.7417186201125734,Marrow::hematopoietic precursor cell,protein_coding,4
+S100a1,S100A1,DOWN,1,0,1,-1.1799981901550072,0.0006638521101898766,1.1799981901550072,Kidney::kidney collecting duct principal cell,protein_coding,3
+S100a11,S100A11,DOWN,2,1,1,-0.20317557683201926,0.004575614666621379,1.9704563366596985,Kidney::lymphocyte;Marrow::hematopoietic precursor cell,protein_coding,3
+S100a4,S100A4,UP,1,1,0,1.6948623512923404,0.006631100814034192,1.6948623512923404,Marrow::hematopoietic precursor cell,protein_coding,3
+S100a6,S100A6,UP,1,1,0,2.7674696113373813,2.1035631505403366e-09,2.7674696113373813,Marrow::hematopoietic precursor cell,protein_coding,3
+S100a8,S100A8,UP,1,1,0,2.7368170473722984,3.1235107450546794e-05,2.7368170473722984,Marrow::hematopoietic precursor cell,protein_coding,3
+S100a9,,DOWN,3,1,2,-1.139725521798429,7.030184275404666e-05,3.0536140107164536,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell;Marrow::hematopoietic precursor cell,protein_coding,3
+S100g,S100G,DOWN,1,0,1,-2.940274352357375,6.202697251329429e-09,2.940274352357375,Kidney::macrophage,protein_coding,X
+Samd11,SAMD11,UP,1,1,0,1.759965310918041,0.008958952591703042,1.759965310918041,Marrow::granulocytopoietic cell,protein_coding,4
+Samd14,SAMD14,UP,1,1,0,1.734625998502454,0.007888252147146975,1.734625998502454,Marrow::granulocytopoietic cell,protein_coding,11
+Samd3,SAMD3,UP,1,1,0,3.391869717868179,0.003910098828817546,3.391869717868179,Marrow::hematopoietic precursor cell,protein_coding,10
+Samd9l,SAMD9L,UP,1,1,0,3.4598202341169872,0.01405053262518067,3.4598202341169872,Marrow::hematopoietic precursor cell,protein_coding,6
+Sat1,SAT1,UP,1,1,0,1.5662352235759405,0.01922217638696919,1.5662352235759405,Marrow::hematopoietic precursor cell,protein_coding,X
+Scaf11,SCAF11,UP,4,4,0,1.5451318536311105,0.00019775403600477085,1.705499623439872,Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::naive T cell;Marrow::promonocyte,protein_coding,15
+Scoc,SCOC,UP,1,1,0,1.7305594235347987,0.0026358284923850765,1.7305594235347987,Marrow::granulocytopoietic cell,protein_coding,8
+Sdf2l1,SDF2L1,DOWN,1,0,1,-1.5781435143230513,0.040518481333261684,1.5781435143230513,Marrow::hematopoietic precursor cell,protein_coding,16
+Sec62,SEC62,UP,1,1,0,1.1197086071465152,0.011353097416356733,1.1197086071465152,Marrow::granulocyte,protein_coding,3
+Sertad2,SERTAD2,UP,1,1,0,2.392523989394574,0.0003272284452931391,2.392523989394574,Marrow::granulocytopoietic cell,protein_coding,11
+Sf3b1,SF3B1,UP,1,1,0,1.1631789052918995,0.00029747781431419137,1.1631789052918995,Marrow::promonocyte,protein_coding,1
+Sh2d1a,SH2D1A,UP,1,1,0,3.3207197778787383,4.280575394304735e-05,3.3207197778787383,Marrow::hematopoietic precursor cell,protein_coding,X
+Sh2d2a,SH2D2A,UP,1,1,0,2.4717308579281707,0.026955435235343054,2.4717308579281707,Marrow::hematopoietic precursor cell,protein_coding,3
+Sh3glb1,SH3GLB1,UP,1,1,0,1.3911983553340215,0.008828981147752983,1.3911983553340215,Marrow::granulocytopoietic cell,protein_coding,3
+Shisa5,SHISA5,UP,1,1,0,1.74399125720222,0.01232277583457489,1.74399125720222,Marrow::hematopoietic precursor cell,protein_coding,9
+Skap1,SKAP1,UP,1,1,0,3.000388590624279,0.0004936214185677865,3.000388590624279,Marrow::hematopoietic precursor cell,protein_coding,11
+Slc11a2,SLC11A2,UP,1,1,0,2.510348427999877,0.0011482404922855984,2.510348427999877,Marrow::granulocytopoietic cell,protein_coding,15
+Slc16a1,SLC16A1,UP,1,1,0,2.1928837628957414,0.0013140805259608131,2.1928837628957414,Marrow::granulocytopoietic cell,protein_coding,3
+Slc16a10,SLC16A10,UP,1,1,0,1.877988478102593,0.0023945934992758732,1.877988478102593,Marrow::granulocytopoietic cell,protein_coding,10
+Slc24a5,SLC24A5,UP,1,1,0,3.385660904829959,0.0026358284923850765,3.385660904829959,Marrow::granulocytopoietic cell,protein_coding,2
+Slc25a37,SLC25A37,UP,2,2,0,2.049993586909283,0.00012181242039719204,2.226816441121883,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,14
+Slc25a38,SLC25A38,UP,1,1,0,1.5547004124688226,0.00950341749242258,1.5547004124688226,Marrow::granulocytopoietic cell,protein_coding,9
+Slc25a39,SLC25A39,UP,1,1,0,1.7025061411275801,0.001096374836225787,1.7025061411275801,Marrow::granulocytopoietic cell,protein_coding,11
+Slc26a4,SLC26A4,DOWN,1,0,1,-1.2753545373356046,0.006538719149218172,1.2753545373356046,Kidney::kidney collecting duct principal cell,protein_coding,12
+Slc29a1,SLC29A1,UP,1,1,0,1.8447072474437542,0.03304110588253784,1.8447072474437542,Marrow::granulocytopoietic cell,protein_coding,17
+Slc30a9,SLC30A9,UP,1,1,0,1.458540623394962,0.02339680580879747,1.458540623394962,Marrow::granulocytopoietic cell,protein_coding,5
+Slc38a5,SLC38A5,UP,1,1,0,2.5105711360099727,3.813272367603056e-05,2.5105711360099727,Marrow::granulocytopoietic cell,protein_coding,X
+Slc3a2,SLC3A2,UP,1,1,0,1.8467860521428114,4.03922087047274e-05,1.8467860521428114,Marrow::granulocytopoietic cell,protein_coding,19
+Slc43a1,SLC43A1,UP,1,1,0,2.028538852313728,0.00019190688703920328,2.028538852313728,Marrow::granulocytopoietic cell,protein_coding,2
+Slc4a1,SLC4A1,UP,2,2,0,3.0547125038412175,7.170690168934758e-06,4.294058921349698,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,11
+Slc5a3,,DOWN,1,0,1,-0.9268049924221389,0.0043491494259230105,0.9268049924221389,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+Slc6a9,SLC6A9,UP,1,1,0,1.618119155445754,0.018339931042506644,1.618119155445754,Marrow::granulocytopoietic cell,protein_coding,4
+Slc7a5,SLC7A5,UP,1,1,0,2.0516848697999834,0.012688089851327165,2.0516848697999834,Marrow::granulocytopoietic cell,protein_coding,8
+Slfn1,,UP,1,1,0,3.863511454968136,0.00013265341425590849,3.863511454968136,Marrow::hematopoietic precursor cell,protein_coding,11
+Slfn2,,UP,1,1,0,2.720669126057359,2.5523269763170503e-07,2.720669126057359,Marrow::hematopoietic precursor cell,protein_coding,11
+Sltm,SLTM,UP,1,1,0,1.7039689647885443,0.0022348431476643935,1.7039689647885443,Marrow::granulocytopoietic cell,protein_coding,9
+Smad7,SMAD7,UP,1,1,0,2.682527427956793,0.024213571819018585,2.682527427956793,Marrow::hematopoietic precursor cell,protein_coding,18
+Smap1,SMAP1,UP,3,3,0,1.4437541404899166,0.0005974678967090942,1.6247421281081016,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,1
+Smarca5,SMARCA5,UP,3,3,0,1.2567714213049268,1.9806626098522863e-05,1.6138544568074646,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::naive T cell,protein_coding,8
+Smc1a,SMC1A,UP,5,5,0,1.3883289831307775,1.9806626098522863e-05,1.6425215947466894,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,X
+Smc2,SMC2,UP,6,6,0,1.3711348053401127,1.3950488010553016e-08,1.700629208934807,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,4
+Smc3,SMC3,UP,6,6,0,1.429025457049881,2.118282413824218e-05,1.6857317631797812,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,19
+Smc4,SMC4,UP,5,5,0,0.9395325014193251,1.7271351273719872e-06,1.403171206611739,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,3
+Smc6,SMC6,UP,7,7,0,1.6344924474967555,1.4988304517016005e-09,1.8541217136968917,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Smchd1,SMCHD1,UP,1,1,0,1.189043838566769,0.0012510280198519252,1.189043838566769,Marrow::promonocyte,protein_coding,17
+Smg6,SMG6,UP,1,1,0,2.361155104299644,0.014573032544556927,2.361155104299644,Marrow::granulocytopoietic cell,protein_coding,11
+Smox,SMOX,UP,1,1,0,2.028292050577661,0.0017598262281450856,2.028292050577661,Marrow::granulocytopoietic cell,protein_coding,2
+Snca,SNCA,UP,1,1,0,1.9527792661414127,0.00013533425985955496,1.9527792661414127,Marrow::granulocytopoietic cell,protein_coding,6
+Snx20,SNX20,UP,1,1,0,2.212631597527687,0.030943923295017987,2.212631597527687,Marrow::hematopoietic precursor cell,protein_coding,8
+Snx22,SNX22,UP,1,1,0,2.4583197842924536,0.005101844877712367,2.4583197842924536,Marrow::granulocytopoietic cell,protein_coding,9
+Socs3,SOCS3,DOWN,1,0,1,-1.5222816994934238,0.01468180967114415,1.5222816994934238,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,11
+Sorbs1,SORBS1,UP,1,1,0,3.0404679598826627,0.049054112100661504,3.0404679598826627,Marrow::granulocytopoietic cell,protein_coding,19
+Sowaha,SOWAHA,UP,2,2,0,2.6102495199325966,0.00017035829873134902,2.908920895289985,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,11
+Sox6,SOX6,UP,2,2,0,3.5171979973930614,6.683292158990681e-08,4.36218230025473,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,7
+Sp140,,UP,1,1,0,1.881977902370351,0.03774553744065731,1.881977902370351,Marrow::hematopoietic precursor cell,protein_coding,1
+Specc1,SPECC1,UP,1,1,0,2.18053117223086,0.0013379959273353836,2.18053117223086,Marrow::granulocyte,protein_coding,11
+Sphk1,SPHK1,UP,1,1,0,2.298781930874872,0.030578682537327245,2.298781930874872,Marrow::granulocytopoietic cell,protein_coding,11
+Spire1,SPIRE1,UP,1,1,0,2.371760278658667,0.0016955761435168157,2.371760278658667,Marrow::granulocytopoietic cell,protein_coding,18
+Spns3,SPNS3,UP,1,1,0,2.319760366363919,6.012250502175268e-06,2.319760366363919,Kidney::epithelial cell of proximal tubule,protein_coding,11
+Spp1,SPP1,DOWN,1,0,1,-1.5314256196091591,0.0007571220031779537,1.5314256196091591,Kidney::kidney collecting duct principal cell,protein_coding,5
+Spp2,SPP2,UP,1,1,0,1.3364565151060057,0.011959083646344848,1.3364565151060057,Kidney::epithelial cell of proximal tubule,protein_coding,1
+Sprr1a,,DOWN,1,0,1,-9.189819475588388,0.007612994499916413,9.189819475588388,Kidney::kidney collecting duct principal cell,protein_coding,3
+Spsb3,SPSB3,UP,1,1,0,1.3101747987757073,0.0414913068319955,1.3101747987757073,Marrow::granulocytopoietic cell,protein_coding,17
+Srek1,,UP,1,1,0,1.6822775037046753,0.04340865312470037,1.6822775037046753,Marrow::granulocytopoietic cell,protein_coding,13
+Srm,SRM,DOWN,1,0,1,-1.7817137118196142,0.012058228119443454,1.7817137118196142,Marrow::hematopoietic precursor cell,protein_coding,4
+Srrm1,SRRM1,UP,5,5,0,1.4874295370971573,5.321084475589103e-07,2.001645377412843,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,4
+Srrm2,SRRM2,UP,9,9,0,1.4259513145345575,1.7324300453262414e-08,1.7347926266914921,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,17
+Srsf11,SRSF11,UP,2,2,0,1.2186814203589273,0.0007526317874647912,1.5307390352265198,Marrow::granulocytopoietic cell;Marrow::naive T cell,protein_coding,3
+Ssb,SSB,UP,1,1,0,1.0567221307107408,0.0043316523814591916,1.0567221307107408,Marrow::erythroblast,protein_coding,2
+St3gal5,ST3GAL5,UP,1,1,0,4.63484950570777,4.359905423144539e-05,4.63484950570777,Marrow::hematopoietic precursor cell,protein_coding,6
+Stard10,STARD10,DOWN,1,0,1,-1.2898810747935565,0.03760564204122925,1.2898810747935565,Marrow::erythroblast,protein_coding,7
+Stfa2l1,,UP,1,1,0,4.221053705213383,0.001882283725841586,4.221053705213383,Marrow::hematopoietic precursor cell,protein_coding,16
+Stk17b,STK17B,UP,1,1,0,2.320450352032749,0.0009917784097307496,2.320450352032749,Marrow::hematopoietic precursor cell,protein_coding,1
+Stmn1,STMN1,DOWN,1,0,1,-1.599041972324859,0.00945760986445163,1.599041972324859,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Stom,STOM,DOWN,1,0,1,-1.0682332689587495,0.0022596641251018644,1.0682332689587495,Marrow::naive T cell,protein_coding,2
+Stt3a,STT3A,DOWN,1,0,1,-1.0920668270787504,0.006242503288379779,1.0920668270787504,Marrow::naive T cell,protein_coding,9
+Syne1,SYNE1,UP,2,2,0,2.4779898888330387,0.004589480113841763,3.559972352773656,Marrow::hematopoietic precursor cell;Marrow::naive T cell,protein_coding,10
+Tac2,TAC3,DOWN,1,0,1,-1.2679590729734809,0.043329876703182744,1.2679590729734809,Marrow::erythroblast,protein_coding,10
+Taf3,TAF3,UP,1,1,0,2.0246277756267395,0.021838149194156213,2.0246277756267395,Marrow::granulocytopoietic cell,protein_coding,2
+Tal1,TAL1,UP,1,1,0,2.2323429254472584,1.234089283101015e-05,2.2323429254472584,Marrow::granulocytopoietic cell,protein_coding,4
+Taok3,TAOK3,UP,1,1,0,1.3431298507896106,0.001908641662726408,1.3431298507896106,Marrow::promonocyte,protein_coding,5
+Tax1bp1,TAX1BP1,UP,3,3,0,1.1481509561836853,0.0090166814615625,1.4295105813458342,Marrow::erythroblast;Marrow::granulocyte;Marrow::naive T cell,protein_coding,6
+Tbcel,TBCEL,UP,2,2,0,2.1953394981426384,2.541007831838936e-05,2.5485687283451997,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,9
+Tcn2,TCN2,DOWN,2,0,2,-0.857072226351739,0.038530264494659766,0.9189848957819461,Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,11
+Tcof1,TCOF1,UP,1,1,0,1.365730533622189,0.002421228958317554,1.365730533622189,Marrow::promonocyte,protein_coding,18
+Tfdp2,TFDP2,UP,2,2,0,2.26367907722457,2.7575093765648174e-07,2.4856401971239097,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,9
+Tfrc,TFRC,UP,1,1,0,2.434782166263198,2.669023000828897e-06,2.434782166263198,Marrow::granulocytopoietic cell,protein_coding,16
+Thoc2,THOC2,UP,3,3,0,2.0240682146871625,0.0009098241892266158,2.1656453035732537,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,X
+Thy1,THY1,UP,1,1,0,2.6948015377364523,0.0009440814567609941,2.6948015377364523,Marrow::hematopoietic precursor cell,protein_coding,9
+Tinagl1,TINAGL1,UP,1,1,0,1.2870813735720061,0.048789042103868675,1.2870813735720061,Marrow::granulocytopoietic cell,protein_coding,4
+Tln1,TLN1,UP,1,1,0,0.9849635703374002,0.03120389724384293,0.9849635703374002,Marrow::naive T cell,protein_coding,4
+Tmcc2,TMCC2,UP,1,1,0,1.7538889293608413,0.0025114419287973217,1.7538889293608413,Marrow::granulocytopoietic cell,protein_coding,1
+Tmem120b,TMEM120B,UP,1,1,0,2.141628586407649,0.035971463474594095,2.141628586407649,Marrow::granulocytopoietic cell,protein_coding,5
+Tmem9,TMEM9,UP,1,1,0,2.0327959474366226,0.004563859629250736,2.0327959474366226,Marrow::granulocytopoietic cell,protein_coding,1
+Tmod1,TMOD1,UP,1,1,0,2.2687310549023776,1.4715128780087914e-05,2.2687310549023776,Marrow::granulocytopoietic cell,protein_coding,4
+Tmsb4x,TMSB4X,UP,1,1,0,1.556758231306118,0.00015413486256000492,1.556758231306118,Marrow::hematopoietic precursor cell,protein_coding,X
+Tnfrsf12a,TNFRSF12A,DOWN,3,0,3,-2.3988505395348834,0.0007759368327439001,2.6960262020543713,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Tnfrsf18,TNFRSF18,UP,1,1,0,2.2398177679413704,0.0075976085192351345,2.2398177679413704,Marrow::hematopoietic precursor cell,protein_coding,4
+Tnfrsf4,TNFRSF4,UP,1,1,0,4.463038901614099,0.012191954851068427,4.463038901614099,Marrow::hematopoietic precursor cell,protein_coding,4
+Tnfsf9,TNFSF9,DOWN,1,0,1,-2.8233640746948825,0.0006549775071580066,2.8233640746948825,Kidney::macrophage,protein_coding,17
+Tom1l1,TOM1L1,UP,1,1,0,2.138713904686616,0.001096374836225787,2.138713904686616,Marrow::granulocytopoietic cell,protein_coding,11
+Top1,TOP1,UP,5,5,0,1.2671237052993938,3.6398763478885886e-05,1.4895965941718539,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast,protein_coding,2
+Top2a,TOP2A,UP,2,2,0,0.8595715931198964,0.02772934155152949,1.023438117827186,Marrow::granulocytopoietic cell;Marrow::promonocyte,protein_coding,11
+Tpr,TPR,UP,9,9,0,1.8788546288334211,1.5058950840042917e-08,2.476816634842634,Marrow::erythroblast;Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,1
+Tpt1,,DOWN,5,0,5,-0.9001971555491766,1.6423320270700597e-05,1.2916964022451018,Marrow::erythroblast;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::precursor B cell;Marrow::promonocyte,protein_coding,14
+Traf1,TRAF1,UP,1,1,0,3.1344357046468616,0.01662389286450365,3.1344357046468616,Marrow::hematopoietic precursor cell,protein_coding,2
+Trim10,TRIM10,UP,2,2,0,2.95675198369571,0.0001358031150190806,4.026586959069777,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,17
+Trim12c,,UP,1,1,0,2.603457653895027,0.015774414904503598,2.603457653895027,Marrow::hematopoietic precursor cell,protein_coding,7
+Trip11,TRIP11,UP,2,2,0,3.7642309457935488,0.013994684458014123,3.7790158181399036,Marrow::naive T cell;Marrow::promonocyte,protein_coding,12
+Tsc22d1,TSC22D1,DOWN,1,0,1,-0.8721670317147089,0.01468180967114415,0.8721670317147089,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,14
+Tspan31,TSPAN31,DOWN,1,0,1,-1.1139722224540665,0.04419173235652844,1.1139722224540665,Marrow::naive T cell,protein_coding,10
+Tspan33,TSPAN33,UP,2,2,0,2.5629847763544715,0.0013707250808192137,3.1165370094144063,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,6
+Tspan4,TSPAN4,DOWN,1,0,1,-1.7747498899747958,0.03761377792734504,1.7747498899747958,Marrow::hematopoietic precursor cell,protein_coding,7
+Tspan8,TSPAN8,UP,1,1,0,1.5178941135691246,0.027154300985936002,1.5178941135691246,Marrow::granulocytopoietic cell,protein_coding,10
+Tspo2,TSPO2,UP,1,1,0,1.702151713391582,0.0006606934470968459,1.702151713391582,Marrow::granulocytopoietic cell,protein_coding,17
+Ttc14,TTC14,UP,4,4,0,2.3463193023434408,0.004089817602083111,3.1272898859882314,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,3
+Ttll12,TTLL12,UP,1,1,0,2.389092809590161,0.01855314474864448,2.389092809590161,Marrow::granulocytopoietic cell,protein_coding,15
+Tuba1a,TUBA1A,DOWN,1,0,1,-1.2092878030739942,0.03913266949040915,1.2092878030739942,Marrow::granulocytopoietic cell,protein_coding,15
+Tubb2a,TUBB2A,UP,1,1,0,1.6075611198328457,0.02469411915980086,1.6075611198328457,Marrow::granulocytopoietic cell,protein_coding,13
+Txk,TXK,UP,1,1,0,3.503201239937029,0.00609959658170545,3.503201239937029,Marrow::hematopoietic precursor cell,protein_coding,5
+Tyrobp,TYROBP,UP,1,1,0,1.6844002059533263,0.0003826322831300168,1.6844002059533263,Marrow::hematopoietic precursor cell,protein_coding,7
+Ubac1,UBAC1,UP,1,1,0,2.0011174020599327,1.3648022689650235e-05,2.0011174020599327,Marrow::granulocytopoietic cell,protein_coding,2
+Ube2l6,UBE2L6,UP,2,2,0,1.7513064514875438,0.0016005961788966648,2.2453626844967465,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell,protein_coding,2
+Ube2o,UBE2O,UP,2,2,0,1.663163489078699,0.0061440427591535,1.8939352938033402,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,11
+Ubn1,UBN1,UP,2,2,0,1.6093322593005874,0.0032613008650745844,1.776237223657409,Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,16
+Ubp1,UBP1,UP,1,1,0,1.4439514970555019,0.025177914373123857,1.4439514970555019,Marrow::granulocytopoietic cell,protein_coding,9
+Umod,UMOD,DOWN,1,0,1,-0.720117706015666,0.01468180967114415,0.720117706015666,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,7
+Upf3b,UPF3B,UP,3,3,0,1.8246056455594974,0.0007603085980645256,2.3919776526278804,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::megakaryocyte-erythroid progenitor cell,protein_coding,X
+Urod,UROD,UP,1,1,0,1.897950852443354,1.087595161836779e-06,1.897950852443354,Marrow::granulocytopoietic cell,protein_coding,4
+Uros,UROS,UP,1,1,0,1.8132416064267394,0.004520492204707334,1.8132416064267394,Marrow::granulocytopoietic cell,protein_coding,7
+Vangl1,VANGL1,UP,1,1,0,2.6650034015822213,0.02469411915980086,2.6650034015822213,Marrow::granulocytopoietic cell,protein_coding,3
+Vasp,VASP,UP,1,1,0,1.4333214451599015,0.007251248513007305,1.4333214451599015,Marrow::hematopoietic precursor cell,protein_coding,7
+Vdac1,VDAC1,DOWN,1,0,1,-1.263317206565189,0.0348046310457555,1.263317206565189,Marrow::hematopoietic precursor cell,protein_coding,11
+Vopp1,VOPP1,UP,1,1,0,1.9649454810695892,0.013402108803391008,1.9649454810695892,Marrow::granulocytopoietic cell,protein_coding,6
+Wasf2,WASF2,UP,8,8,0,3.071286927478414,2.5804006333116704e-10,3.770398171514545,Marrow::granulocyte;Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::macrophage;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell;Marrow::proerythroblast;Marrow::promonocyte,protein_coding,4
+Wbp4,WBP4,UP,1,1,0,1.0555830956078094,0.026026165781569223,1.0555830956078094,Marrow::promonocyte,protein_coding,14
+Wdr76,WDR76,UP,4,4,0,1.6025091080141292,0.019091730561823946,1.7103135126198272,Marrow::erythroblast;Marrow::granulocytopoietic cell;Marrow::naive T cell;Marrow::promonocyte,protein_coding,2
+Wdr81,WDR81,UP,1,1,0,2.370737635263343,0.018306323530467496,2.370737635263343,Marrow::granulocytopoietic cell,protein_coding,11
+Wnk1,WNK1,UP,1,1,0,1.8136675343801807,0.012191954851068427,1.8136675343801807,Marrow::hematopoietic precursor cell,protein_coding,6
+Xcl1,,UP,1,1,0,2.1883421883652177,0.006369642658434174,2.1883421883652177,Marrow::hematopoietic precursor cell,protein_coding,1
+Xpo7,XPO7,UP,1,1,0,1.7423567910240798,0.001344727704414499,1.7423567910240798,Marrow::granulocyte,protein_coding,14
+Xrn2,XRN2,UP,1,1,0,0.9603366946212146,0.02666112009243846,0.9603366946212146,Marrow::promonocyte,protein_coding,2
+Yod1,YOD1,UP,2,2,0,2.711480724010882,0.03364000420142254,2.940805089388139,Marrow::granulocyte;Marrow::granulocytopoietic cell,protein_coding,1
+Zap70,ZAP70,UP,1,1,0,2.8425755591257413,0.00862655208971849,2.8425755591257413,Marrow::hematopoietic precursor cell,protein_coding,1
+Zbtb7a,ZBTB7A,UP,4,4,0,1.7510537133027528,0.0022897011528275825,2.079057119770987,Marrow::granulocytopoietic cell;Marrow::hematopoietic precursor cell;Marrow::megakaryocyte-erythroid progenitor cell;Marrow::naive T cell,protein_coding,10
+Zc3h13,ZC3H13,UP,2,2,0,1.5946872343122542,0.003821105506056316,1.6416518345724744,Marrow::granulocytopoietic cell;Marrow::promonocyte,protein_coding,14
+Zfand3,ZFAND3,DOWN,1,0,1,-1.3515375297024212,0.030001322651991794,1.3515375297024212,Marrow::granulocytopoietic cell,protein_coding,17
+Zfp292,ZNF292,UP,2,2,0,2.1800649226308,0.0022596641251018644,2.6381645055695624,Marrow::naive T cell;Marrow::promonocyte,protein_coding,4
+Zfp422,ZNF22,DOWN,1,0,1,-1.835335053596147,0.006915148259695077,1.835335053596147,Marrow::hematopoietic precursor cell,protein_coding,6
+Zfp644,ZNF644,UP,1,1,0,2.156087903397344,0.046117098101661175,2.156087903397344,Marrow::granulocytopoietic cell,protein_coding,5
+Zfp800,ZNF800,UP,2,2,0,2.471845455838543,0.0007946025636221036,2.5476624345857974,Marrow::granulocytopoietic cell;Marrow::promonocyte,protein_coding,6
+Zfpm1,ZFPM1,UP,1,1,0,1.4187581161956244,0.012665288569835278,1.4187581161956244,Marrow::granulocytopoietic cell,protein_coding,8

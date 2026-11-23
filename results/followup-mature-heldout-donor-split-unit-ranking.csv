@@ -1,0 +1,21 @@
+unit,tissue,cell_ontology_class,n_mice_total,n_cells_total,n_de_uniform_before_clean,p1m_floor10_eligible,design_actual,sex_term_status,sex_term_reason,n_tested_genes,n_bh_pvalues,bh_max_abs_discrepancy,bh_pass
+Kidney::B cell,Kidney,B cell,6,116,2,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",4772,4772,1.1102230246251565e-16,True
+Kidney::T cell,Kidney,T cell,6,267,2,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7241,7241,1.1102230246251565e-16,True
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,6,2211,21,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11847,11847,1.1102230246251565e-16,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,6,414,4,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9865,9865,2.220446049250313e-16,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,6,373,15,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10939,10939,1.1102230246251565e-16,True
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,6,152,3,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8777,8777,1.1102230246251565e-16,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,6,319,17,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9502,9502,2.220446049250313e-16,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,6,484,21,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10534,10534,1.1102230246251565e-16,True
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,6,1730,28,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11746,11746,2.220446049250313e-16,True
+Kidney::lymphocyte,Kidney,lymphocyte,6,175,7,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8377,8376,1.1102230246251565e-16,True
+Kidney::macrophage,Kidney,macrophage,6,752,19,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10979,10979,1.1102230246251565e-16,True
+Lung::B cell,Lung,B cell,6,590,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8814,8814,1.1102230246251565e-16,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",6,303,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7557,7557,0.0,True
+Lung::NK cell,Lung,NK cell,6,220,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",6798,6798,1.1102230246251565e-16,True
+Lung::T cell,Lung,T cell,6,118,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",6263,6263,1.1102230246251565e-16,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,6,423,0,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9029,9028,0.0,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,6,874,0,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10547,10547,0.0,True
+Lung::classical monocyte,Lung,classical monocyte,6,6656,9,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",12033,12033,1.1102230246251565e-16,True
+Lung::intermediate monocyte,Lung,intermediate monocyte,6,1543,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9889,9889,0.0,True
+Lung::vein endothelial cell,Lung,vein endothelial cell,6,128,0,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",6670,6670,0.0,True

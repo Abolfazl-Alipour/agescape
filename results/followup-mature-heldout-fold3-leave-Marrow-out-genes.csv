@@ -1,0 +1,112 @@
+mouse_gene_symbol,human_ortholog,direction,n_units_significant,n_units_up,n_units_down,mean_log2FC,min_FDR,max_abs_log2FC,units_list,biotype,chromosome
+Acnat2,,DOWN,1,0,1,-1.252395505181518,0.011003545471158956,1.252395505181518,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Ahnak,AHNAK,UP,1,1,0,1.8160692844804596,0.02730929619515792,1.8160692844804596,Kidney::kidney collecting duct principal cell,protein_coding,19
+Alas1,ALAS1,DOWN,1,0,1,-1.5964354312392546,0.00034240952265837953,1.5964354312392546,Kidney::epithelial cell of proximal tubule,protein_coding,9
+Angptl4,ANGPTL4,DOWN,2,0,2,-2.5451046046102013,0.004157444155737893,3.6355576634594207,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Anxa1,ANXA1,DOWN,1,0,1,-2.183494756975175,0.00026047548041795393,2.183494756975175,Kidney::lymphocyte,protein_coding,19
+Apob,APOB,UP,1,1,0,2.5092230648580887,0.004227926832218284,2.5092230648580887,Kidney::epithelial cell of proximal tubule,protein_coding,12
+Apoe,APOE,UP,2,2,0,1.3556753442609673,0.0006081879630080986,1.4035529745200632,Lung::intermediate monocyte;Lung::non-classical monocyte,protein_coding,7
+Arc,ARC,DOWN,1,0,1,-2.7129344224814926,0.01704562406360323,2.7129344224814926,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,15
+Ascc1,ASCC1,UP,1,1,0,0.8866337186481917,0.04395028087525237,0.8866337186481917,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Ash1l,ASH1L,UP,1,1,0,1.2915153917949997,0.044095795021509,1.2915153917949997,Lung::bronchial smooth muscle cell,protein_coding,3
+Atp4a,ATP4A,UP,1,1,0,2.377754813018218,0.0336759585783885,2.377754813018218,Kidney::kidney collecting duct principal cell,protein_coding,7
+Bcl2a1b,,UP,1,1,0,2.2428096218282656,1.3556254610926073e-05,2.2428096218282656,Lung::classical monocyte,protein_coding,9
+Bhlhe40,BHLHE40,DOWN,1,0,1,-1.5141673184893139,0.003807677533738596,1.5141673184893139,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,6
+Btg2,BTG2,DOWN,1,0,1,-1.070538990066181,0.04967827161925072,1.070538990066181,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,1
+Calb1,CALB1,DOWN,1,0,1,-3.4657638145080303,0.0004671559241702456,3.4657638145080303,Kidney::macrophage,protein_coding,4
+Camp,CAMP,DOWN,1,0,1,-10.005359004861253,4.779086594126857e-09,10.005359004861253,Kidney::lymphocyte,protein_coding,9
+Ccl28,CCL28,DOWN,1,0,1,-2.9006807953066014,0.004484482227002402,2.9006807953066014,Kidney::epithelial cell of proximal tubule,protein_coding,13
+Ccl5,CCL5,UP,1,1,0,3.0047454870879524,0.005086798831857479,3.0047454870879524,Kidney::macrophage,protein_coding,11
+Cd74,CD74,UP,2,2,0,1.7361411831902833,0.01059627778769254,1.8925147473435002,Lung::bronchial smooth muscle cell;Lung::vein endothelial cell,protein_coding,18
+Cebpb,CEBPB,DOWN,1,0,1,-2.067994034974503,0.007876605120753177,2.067994034974503,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,2
+Cebpd,CEBPD,DOWN,2,0,2,-2.597334122868874,4.384936564921928e-08,2.918470820751156,Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,16
+Clu,CLU,DOWN,2,0,2,-1.1793873439605846,0.002867477924980227,1.275821132465675,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,14
+Cox7c,COX7C,DOWN,1,0,1,-0.8227965029986081,0.039272342114615076,0.8227965029986081,Kidney::kidney collecting duct principal cell,protein_coding,13
+Cpe,CPE,DOWN,1,0,1,-1.9991827246862344,0.04395028087525237,1.9991827246862344,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Csprs,,UP,1,1,0,2.5518197660155386,0.023817739688823034,2.5518197660155386,Lung::bronchial smooth muscle cell,protein_coding,GL456221.1
+Ctsd,CTSD,DOWN,1,0,1,-1.0374526243222426,0.04981749134824987,1.0374526243222426,Kidney::kidney collecting duct principal cell,protein_coding,7
+Cxcl15,,DOWN,1,0,1,-4.528575860111825,0.03421910056468021,4.528575860111825,Lung::classical monocyte,protein_coding,5
+Cycs,,DOWN,1,0,1,-0.9144019164146877,0.020833229661746448,0.9144019164146877,Kidney::kidney collecting duct principal cell,protein_coding,6
+Cyp24a1,CYP24A1,UP,2,2,0,2.2526475691493193,4.3104603625790187e-05,2.9567317777823137,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,2
+Cyp2d9,,DOWN,1,0,1,-2.068190275521125,0.014348622928492776,2.068190275521125,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+Ddit4,DDIT4,DOWN,3,0,3,-1.9773446497749176,0.000796643349326064,2.4716385439407027,Kidney::epithelial cell of proximal tubule;Kidney::macrophage;Lung::classical monocyte,protein_coding,10
+Defb1,,DOWN,2,0,2,-2.17604905316709,1.9369032722924534e-06,2.777911179753638,Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::macrophage,protein_coding,8
+Dio1,DIO1,DOWN,1,0,1,-2.127249093222537,0.03916879915720057,2.127249093222537,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Dpep2,DPEP2,DOWN,1,0,1,-1.4989638007990174,0.0016917240234423955,1.4989638007990174,Lung::non-classical monocyte,protein_coding,8
+Dynll1,DYNLL1,DOWN,1,0,1,-0.8864098876275123,0.004038749988673788,0.8864098876275123,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,5
+Egr1,EGR1,DOWN,1,0,1,-1.2888124478522174,4.4532763475664444e-05,1.2888124478522174,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,18
+Eif4ebp3,EIF4EBP3,DOWN,1,0,1,-1.7274387792680999,6.325972767264663e-08,1.7274387792680999,Kidney::epithelial cell of proximal tubule,protein_coding,18
+Fabp4,FABP4,DOWN,1,0,1,-2.345632984774954,0.04395028087525237,2.345632984774954,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,3
+Fcgr4,,UP,1,1,0,1.2348547389424807,0.011389039658968954,1.2348547389424807,Lung::classical monocyte,protein_coding,1
+Fos,FOS,UP,1,1,0,2.159228277273175,0.000507978479984602,2.159228277273175,Kidney::B cell,protein_coding,12
+Gbp5,GBP5,UP,1,1,0,3.443622778175557,0.00040992814203812534,3.443622778175557,Lung::bronchial smooth muscle cell,protein_coding,3
+Gdf15,GDF15,DOWN,1,0,1,-1.8776847934418763,0.019282430058195712,1.8776847934418763,Kidney::kidney collecting duct principal cell,protein_coding,8
+Gpc3,GPC3,UP,1,1,0,3.394603923579998,0.025463064499454405,3.394603923579998,Kidney::epithelial cell of proximal tubule,protein_coding,X
+Grina,GRINA,DOWN,1,0,1,-2.607113229940731,0.021806260262089622,2.607113229940731,Kidney::lymphocyte,protein_coding,15
+Gsta2,,UP,1,1,0,1.5500448508350935,0.0017979200139067657,1.5500448508350935,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,9
+H2-Ab1,,UP,1,1,0,1.4505598515582472,0.023817739688823034,1.4505598515582472,Lung::bronchial smooth muscle cell,protein_coding,17
+H2-Eb1,,UP,1,1,0,1.427085671924667,0.023817739688823034,1.427085671924667,Lung::bronchial smooth muscle cell,protein_coding,17
+Herpud1,HERPUD1,DOWN,3,0,3,-1.0345217971009728,0.0018758706798316829,1.3095137368916374,Kidney::epithelial cell of proximal tubule;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Hsd11b2,HSD11B2,UP,1,1,0,1.5855815965152613,0.0005439919231257127,1.5855815965152613,Kidney::kidney collecting duct principal cell,protein_coding,8
+Hsp90aa1,HSP90AA1,DOWN,1,0,1,-0.8395534744588473,0.009355386351576397,0.8395534744588473,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,12
+Hsp90b1,HSP90B1,DOWN,1,0,1,-0.8600324110022604,0.022108012491158402,0.8600324110022604,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Hspa1b,,DOWN,1,0,1,-3.0115932927189197,0.02315326965375188,3.0115932927189197,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Hspa5,HSPA5,DOWN,1,0,1,-1.1519166721344691,0.0005474819380208622,1.1519166721344691,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,2
+Hspa8,,DOWN,2,0,2,-0.927952736991255,0.021172279790322514,0.9838570048997376,Kidney::kidney collecting duct principal cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,9
+Hspb1,HSPB1,DOWN,1,0,1,-2.091692799265198,0.018928286046757448,2.091692799265198,Kidney::epithelial cell of proximal tubule,protein_coding,5
+Iapp,IAPP,DOWN,1,0,1,-6.538931130783636,0.018620535353373317,6.538931130783636,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+Id2,ID2,UP,1,1,0,1.1204544043371267,0.00011947046339338697,1.1204544043371267,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,12
+Id3,ID3,UP,1,1,0,2.6166428439874836,0.01208951118441861,2.6166428439874836,Kidney::kidney collecting duct principal cell,protein_coding,4
+Ifitm2,,DOWN,1,0,1,-1.9178442845190642,0.048384631147807576,1.9178442845190642,Kidney::lymphocyte,protein_coding,7
+Iigp1,,UP,1,1,0,2.831188743614419,0.009756972841464002,2.831188743614419,Kidney::macrophage,protein_coding,18
+Isoc2a,,UP,1,1,0,1.7056000961367812,0.010848792306339214,1.7056000961367812,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,7
+Itgav,ITGAV,DOWN,1,0,1,-1.3390331149399297,0.0247360639176699,1.3390331149399297,Kidney::kidney collecting duct principal cell,protein_coding,2
+Junb,JUNB,UP,2,2,0,1.3278182437626294,0.014335180882166152,1.3799925398882167,Kidney::B cell;Lung::non-classical monocyte,protein_coding,8
+Jund,JUND,UP,1,1,0,1.5188084392759547,0.020535569448649243,1.5188084392759547,Kidney::B cell,protein_coding,8
+Kcne1,KCNE1,UP,1,1,0,2.729861018278896,0.031515505331540634,2.729861018278896,Kidney::kidney collecting duct principal cell,protein_coding,16
+Keg1,,DOWN,2,0,2,-1.4117082266302794,0.00019345193039034414,1.412195608440426,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,19
+Kl,KL,DOWN,1,0,1,-1.2301666656043466,0.04981749134824987,1.2301666656043466,Kidney::kidney collecting duct principal cell,protein_coding,5
+Klk1,,DOWN,3,0,3,-2.335991870620319,5.473966929483209e-15,3.502170175629288,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::macrophage,protein_coding,7
+Klk1b5,,DOWN,1,0,1,-2.3858352500312168,0.039272342114615076,2.3858352500312168,Kidney::kidney collecting duct principal cell,protein_coding,7
+Lars2,LARS2,DOWN,1,0,1,-4.294526466783329,2.8741982914639466e-52,4.294526466783329,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,9
+Lgals1,LGALS1,UP,1,1,0,2.0401653372323363,0.0037814746585953588,2.0401653372323363,Lung::B cell,protein_coding,15
+Lgals3,LGALS3,DOWN,1,0,1,-2.7060805904219327,0.009780022234114122,2.7060805904219327,Lung::mature NK T cell,protein_coding,14
+Litaf,LITAF,DOWN,1,0,1,-2.0478065377258607,0.048384631147807576,2.0478065377258607,Kidney::lymphocyte,protein_coding,16
+Ltf,LTF,DOWN,1,0,1,-8.761018099446577,0.005181519615872081,8.761018099446577,Kidney::lymphocyte,protein_coding,9
+Ly6c1,,DOWN,1,0,1,-2.3682808691080335,0.001911133613549071,2.3682808691080335,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,15
+Lyz1,,UP,1,1,0,1.2187993946427287,0.01539286892880827,1.2187993946427287,Lung::non-classical monocyte,protein_coding,10
+Lyz2,,UP,1,1,0,0.8341409504454286,0.034020947293748924,0.8341409504454286,Lung::non-classical monocyte,protein_coding,10
+Manf,MANF,DOWN,1,0,1,-1.4772838417749594,0.02730929619515792,1.4772838417749594,Kidney::kidney collecting duct principal cell,protein_coding,9
+Mgp,MGP,DOWN,2,0,2,-3.3620365853384566,0.000796643349326064,3.7242224182931065,Kidney::epithelial cell of proximal tubule;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,6
+Mknk2,MKNK2,DOWN,1,0,1,-1.3446115010347826,0.0003917179866036698,1.3446115010347826,Kidney::epithelial cell of proximal tubule,protein_coding,10
+Mt1,MT1B,DOWN,6,0,6,-1.6275054013473376,3.53900959595167e-18,2.3252453661699577,Kidney::epithelial cell of proximal tubule;Kidney::fenestrated cell;Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Mt2,,DOWN,4,0,4,-1.9010072913235583,2.6594642034161223e-12,2.793490195792244,Kidney::fenestrated cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,8
+Ndufs5,NDUFS5,DOWN,5,0,5,-3.201473066051059,4.144714000767059e-08,3.7146456503979004,Kidney::epithelial cell of proximal tubule;Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney loop of Henle thick ascending limb epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Nfkbia,NFKBIA,DOWN,1,0,1,-1.806871927279501,0.013009885519399182,1.806871927279501,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,12
+Nkg7,NKG7,UP,1,1,0,1.9729710176478552,0.005413749446932566,1.9729710176478552,Lung::classical monocyte,protein_coding,7
+Nr1h4,NR1H4,DOWN,1,0,1,-0.9849902289660583,0.02315326965375188,0.9849902289660583,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,10
+Oxct1,OXCT1,DOWN,1,0,1,-1.1622682275036103,0.039272342114615076,1.1622682275036103,Kidney::kidney collecting duct principal cell,protein_coding,15
+Prr13,,DOWN,1,0,1,-1.8268598531160418,0.02638260478338017,1.8268598531160418,Kidney::lymphocyte,protein_coding,15
+Rcan1,RCAN1,DOWN,1,0,1,-2.5577794907187337,0.0004958302860190556,2.5577794907187337,Kidney::kidney distal convoluted tubule epithelial cell,protein_coding,16
+Retnlg,,DOWN,1,0,1,-5.441190014115809,0.009607231982702684,5.441190014115809,Kidney::macrophage,protein_coding,16
+S100a11,S100A11,DOWN,2,0,2,-1.5112211613991242,6.178129459264625e-05,1.9929673837959725,Kidney::lymphocyte;Lung::non-classical monocyte,protein_coding,3
+S100a4,S100A4,DOWN,1,0,1,-1.1826255225741225,0.004463059704639962,1.1826255225741225,Lung::non-classical monocyte,protein_coding,3
+S100a8,S100A8,DOWN,2,0,2,-3.95729561033699,0.0012015595683754268,4.104922444905737,"Lung::CD8-positive, alpha-beta T cell;Lung::NK cell",protein_coding,3
+S100a9,,DOWN,3,0,3,-3.753315719381035,7.674536326083236e-08,4.077795808571832,Lung::B cell;Lung::NK cell;Lung::T cell,protein_coding,3
+S100g,S100G,DOWN,1,0,1,-3.101494618861602,3.120183836360791e-10,3.101494618861602,Kidney::macrophage,protein_coding,X
+Samd9l,SAMD9L,UP,1,1,0,1.8515936967127207,0.023817739688823034,1.8515936967127207,Lung::bronchial smooth muscle cell,protein_coding,6
+Sbno2,SBNO2,DOWN,1,0,1,-2.471027935172983,0.029759580255917708,2.471027935172983,Kidney::kidney loop of Henle thick ascending limb epithelial cell,protein_coding,10
+Sgms2,SGMS2,DOWN,1,0,1,-1.839082850620044,0.012257102061782751,1.839082850620044,Kidney::kidney collecting duct principal cell,protein_coding,3
+Slc14a2,SLC14A2,DOWN,1,0,1,-4.8746757541598225,0.04395028087525237,4.8746757541598225,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,18
+Slc7a11,SLC7A11,DOWN,1,0,1,-6.559469790183551,0.010325125637937695,6.559469790183551,Kidney::lymphocyte,protein_coding,3
+Smpdl3b,SMPDL3B,UP,1,1,0,1.601608234855994,0.03908841264067528,1.601608234855994,Lung::classical monocyte,protein_coding,4
+Spns3,SPNS3,UP,1,1,0,2.1274899599025,0.03259494297880674,2.1274899599025,Kidney::epithelial cell of proximal tubule,protein_coding,11
+Spp1,SPP1,DOWN,1,0,1,-1.5109239083754178,0.0003569536315775875,1.5109239083754178,Kidney::kidney collecting duct principal cell,protein_coding,5
+St3gal5,ST3GAL5,UP,1,1,0,2.300328598460123,0.04598620668926432,2.300328598460123,Lung::classical monocyte,protein_coding,6
+Stfa1,,DOWN,1,0,1,-8.300042967589969,0.021806260262089622,8.300042967589969,Kidney::lymphocyte,protein_coding,16
+Stmn1,STMN1,DOWN,1,0,1,-1.6174156508559934,0.009355386351576397,1.6174156508559934,Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,4
+Tnfrsf12a,TNFRSF12A,DOWN,3,0,3,-2.3217971508913973,0.0002490397332760283,2.8503543388221195,Kidney::kidney collecting duct principal cell;Kidney::kidney distal convoluted tubule epithelial cell;Kidney::kidney proximal convoluted tubule epithelial cell,protein_coding,17
+Tnfsf9,TNFSF9,DOWN,1,0,1,-2.7770306320721483,3.88321842727554e-05,2.7770306320721483,Kidney::macrophage,protein_coding,17
+Top2a,TOP2A,UP,1,1,0,3.8224700285735067,0.014916261262660251,3.8224700285735067,Lung::T cell,protein_coding,11
+Vim,VIM,UP,1,1,0,2.1491647701247025,0.03944331357900826,2.1491647701247025,Kidney::B cell,protein_coding,2
+Xbp1,XBP1,DOWN,1,0,1,-0.9608356176088961,0.02610308272996936,0.9608356176088961,Kidney::epithelial cell of proximal tubule,protein_coding,11

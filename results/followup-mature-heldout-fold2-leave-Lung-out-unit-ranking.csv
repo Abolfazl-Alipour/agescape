@@ -1,0 +1,25 @@
+unit,tissue,cell_ontology_class,n_mice_total,n_cells_total,n_de_uniform_before_clean,p1m_floor10_eligible,design_actual,sex_term_status,sex_term_reason,n_tested_genes,n_bh_pvalues,bh_max_abs_discrepancy,bh_pass
+Marrow::granulocyte,Marrow,granulocyte,7,5616,497,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10149,10149,2.220446049250313e-16,True
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,7,3538,1577,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11336,11336,2.220446049250313e-16,True
+Marrow::promonocyte,Marrow,promonocyte,7,1852,267,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11128,11128,2.220446049250313e-16,True
+Marrow::erythroblast,Marrow,erythroblast,7,1364,240,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9332,9332,2.220446049250313e-16,True
+Marrow::proerythroblast,Marrow,proerythroblast,7,1894,300,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8577,8577,2.220446049250313e-16,True
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,7,1038,344,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9730,9730,2.220446049250313e-16,True
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,7,846,252,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11025,11024,2.220446049250313e-16,True
+Marrow::monocyte,Marrow,monocyte,7,782,36,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9420,9420,1.1102230246251565e-16,True
+Marrow::naive T cell,Marrow,naive T cell,7,765,324,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10562,10562,2.220446049250313e-16,True
+Marrow::macrophage,Marrow,macrophage,7,493,77,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10438,10438,1.1102230246251565e-16,True
+Marrow::late pro-B cell,Marrow,late pro-B cell,7,323,3,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9231,9231,1.1102230246251565e-16,True
+Marrow::precursor B cell,Marrow,precursor B cell,7,337,8,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8669,8668,1.1102230246251565e-16,True
+Marrow::naive B cell,Marrow,naive B cell,7,159,2,False,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7269,7268,1.1102230246251565e-16,True
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,7,2594,21,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",12085,12084,1.1102230246251565e-16,True
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,7,1917,36,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11867,11867,1.1102230246251565e-16,True
+Kidney::macrophage,Kidney,macrophage,7,815,12,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11069,11065,1.1102230246251565e-16,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,7,447,28,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",11173,11173,1.1102230246251565e-16,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,7,541,20,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10721,10721,1.1102230246251565e-16,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,7,463,3,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",10041,10039,0.0,True
+Kidney::T cell,Kidney,T cell,7,292,1,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",7526,7526,0.0,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,7,343,14,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9646,9646,2.220446049250313e-16,True
+Kidney::lymphocyte,Kidney,lymphocyte,7,195,13,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",8673,8664,1.1102230246251565e-16,True
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,7,167,1,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",9098,9098,1.1102230246251565e-16,True
+Kidney::B cell,Kidney,B cell,7,132,5,True,~ sex + age_group,kept,"sex varies and the intercept, sex, and age columns are full rank",5139,5139,1.1102230246251565e-16,True

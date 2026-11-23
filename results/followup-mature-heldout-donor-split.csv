@@ -1,0 +1,24 @@
+unit,tissue,cell_type,held_out_mouse,held_out_age,held_out_score,derive_mean_18m,derive_mean_30m,derive_n_18m,derive_n_30m,direction_match
+Kidney::T cell,Kidney,T cell,30-M-5,30m,-0.12612566237156586,-0.16638474996062413,0.15497951844358152,2,3,True
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-5,30m,-0.27559142687499816,-0.47114065498686525,-0.31379867879620443,3,3,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-5,30m,-0.177754010324483,-0.6284658075386983,-0.3051667558006254,3,3,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-5,30m,-1.3454013207664475,-1.8356981540654,-1.061485281046543,3,3,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-5,30m,-1.8677757091695515,-1.9923133823138173,-1.451028823345456,3,3,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-5,30m,-1.580690516161222,-1.7304094178292477,-1.2681339550312798,3,3,True
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-5,30m,0.255469047668756,-0.5429893471350985,0.11633531304755544,3,3,True
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-5,30m,0.3580889833685883,-0.7809337811684405,0.29689216403871255,1,3,True
+Kidney::macrophage,Kidney,macrophage,30-M-5,30m,0.524157319320578,0.2992217768104591,0.5349383811307254,3,3,True
+Lung::B cell,Lung,B cell,18-M-53,18m,0.6554980669764432,0.6487048546971885,0.7459182854369688,3,3,True
+Lung::B cell,Lung,B cell,30-M-5,30m,0.747024212824201,0.6504031577670022,0.7453653217433527,4,2,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-53,18m,-0.0010412027203445806,0.07580763497952625,0.329366794258196,2,3,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-5,30m,0.4583465278493507,0.050191355746235976,0.26487692746261865,3,2,True
+Lung::NK cell,Lung,NK cell,18-M-53,18m,0.32900194582227105,0.44322382894562934,0.5549650693453064,3,3,True
+Lung::NK cell,Lung,NK cell,30-M-5,30m,0.5610627230647982,0.41466835816478975,0.5519162424855605,4,2,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-53,18m,-0.05486381533656082,-0.2502500053662535,0.11286699492586211,2,4,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-5,30m,0.1398973945494688,-0.18512127535635595,0.1038568617179932,3,3,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-53,18m,-0.14711020627164095,-0.018765577017230656,0.2559447752437394,3,3,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-5,30m,0.4494670917095962,-0.05085173433083323,0.15918361701081096,4,2,True
+Lung::classical monocyte,Lung,classical monocyte,18-M-53,18m,-0.371166133421605,-0.22221272022302915,0.019612899349171264,3,4,True
+Lung::classical monocyte,Lung,classical monocyte,30-M-5,30m,0.22661931070983865,-0.2594510735226731,-0.0493892377710512,4,3,True
+Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-53,18m,-0.09242214521250447,-0.04843581347650949,0.1906737961806868,2,3,True
+Lung::vein endothelial cell,Lung,vein endothelial cell,18-M-53,18m,-0.11566498968925809,-0.19429636890526647,0.13505610334609808,2,2,True

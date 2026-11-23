@@ -1,0 +1,335 @@
+unit,tissue,cell_type,mouse_id,age,age_months,sex,n_cells,score,n_up_detected,n_down_detected
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-F-50,18m,18,female,35,-0.35280117586785265,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-F-51,18m,18,female,44,-0.32442853903700175,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-M-52,18m,18,male,320,-0.5975206879570725,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,21-F-54,21m,21,female,31,-0.4800070153131685,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,21-F-55,21m,21,female,47,-0.46319161324686775,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-2,30m,30,male,833,-0.43202608515622676,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-3,30m,30,male,456,-0.45716911234719837,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-4,30m,30,male,523,-0.4129925284785485,1119,795
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-5,30m,30,male,383,-0.5075215779983788,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-F-50,18m,18,female,441,-0.3386350445031978,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-F-51,18m,18,female,573,-0.32935691691673963,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-M-52,18m,18,male,99,-0.43996123835556955,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,21-F-54,21m,21,female,406,-0.46782670577043617,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,21-F-55,21m,21,female,450,-0.4644969177576508,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-2,30m,30,male,133,-0.35228225454330797,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-3,30m,30,male,220,-0.3452885563375532,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-4,30m,30,male,264,-0.2325073164419973,1119,795
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-5,30m,30,male,187,-0.38838565768117017,1119,795
+Kidney::macrophage,Kidney,macrophage,18-F-50,18m,18,female,56,-0.5130863686868443,1119,795
+Kidney::macrophage,Kidney,macrophage,18-F-51,18m,18,female,102,-0.617158902436904,1119,795
+Kidney::macrophage,Kidney,macrophage,18-M-52,18m,18,male,105,-0.8932812779658801,1119,795
+Kidney::macrophage,Kidney,macrophage,21-F-54,21m,21,female,62,-0.7473598766271288,1119,795
+Kidney::macrophage,Kidney,macrophage,21-F-55,21m,21,female,43,-0.7486433173621052,1119,795
+Kidney::macrophage,Kidney,macrophage,24-M-58,24m,24,male,69,-0.8446148852675781,1119,795
+Kidney::macrophage,Kidney,macrophage,24-M-59,24m,24,male,214,-0.89173468384271,1119,795
+Kidney::macrophage,Kidney,macrophage,30-M-2,30m,30,male,185,-0.7507520403398851,1119,795
+Kidney::macrophage,Kidney,macrophage,30-M-3,30m,30,male,170,-0.7591028155672899,1119,795
+Kidney::macrophage,Kidney,macrophage,30-M-4,30m,30,male,134,-0.5607336649765107,1119,795
+Kidney::macrophage,Kidney,macrophage,30-M-5,30m,30,male,63,-0.6748637875313006,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-F-50,18m,18,female,34,-0.36737370461746877,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-F-51,18m,18,female,53,-0.3441212482360836,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-M-52,18m,18,male,30,-0.5906115689743152,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,21-F-54,21m,21,female,37,-0.4936674008348545,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,21-F-55,21m,21,female,23,-0.47008310917126006,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-2,30m,30,male,95,-0.3202544317034588,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-3,30m,30,male,90,-0.34242766201360464,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-4,30m,30,male,71,-0.28319890085352917,1119,795
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-5,30m,30,male,74,-0.43218006922896346,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-F-50,18m,18,female,59,-0.3260667692100303,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-F-51,18m,18,female,81,-0.3150966925594807,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-M-52,18m,18,male,105,-0.5012736560542135,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,21-F-54,21m,21,female,126,-0.44084673125762897,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,21-F-55,21m,21,female,102,-0.42279099238130513,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-2,30m,30,male,137,-0.33768779716295216,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-3,30m,30,male,58,-0.3390812292951657,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-4,30m,30,male,44,-0.3439075378564982,1119,795
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-5,30m,30,male,57,-0.4049509673638698,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,18-F-50,18m,18,female,25,-0.16684017231758008,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,18-F-51,18m,18,female,40,-0.23087260517809383,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,18-M-52,18m,18,male,122,-0.36954338127517716,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,21-F-54,21m,21,female,106,-0.37641979314260143,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,21-F-55,21m,21,female,62,-0.3817552130637525,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-2,30m,30,male,69,-0.21087948509382382,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-3,30m,30,male,67,-0.2206626668840519,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-4,30m,30,male,91,-0.1741069307644718,1119,795
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-5,30m,30,male,49,-0.28393479627777785,1119,795
+Kidney::T cell,Kidney,T cell,18-F-51,18m,18,female,31,-0.11249466135717068,1119,795
+Kidney::T cell,Kidney,T cell,18-M-52,18m,18,male,23,-0.41692200887772235,1119,795
+Kidney::T cell,Kidney,T cell,21-F-55,21m,21,female,32,-0.2965889867753284,1119,795
+Kidney::T cell,Kidney,T cell,24-M-58,24m,24,male,617,-0.2609080222179967,1119,795
+Kidney::T cell,Kidney,T cell,24-M-59,24m,24,male,352,-0.30485475083672386,1119,795
+Kidney::T cell,Kidney,T cell,30-M-2,30m,30,male,37,-0.2215483318743674,1119,795
+Kidney::T cell,Kidney,T cell,30-M-3,30m,30,male,117,-0.23329802315137838,1119,795
+Kidney::T cell,Kidney,T cell,30-M-4,30m,30,male,48,-0.125638325761265,1119,795
+Kidney::T cell,Kidney,T cell,30-M-5,30m,30,male,25,-0.261179389185376,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-F-50,18m,18,female,65,-0.4320354334513872,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-F-51,18m,18,female,74,-0.37545827244729346,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-M-52,18m,18,male,57,-0.5458982676595654,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,21-F-54,21m,21,female,105,-0.5143204672401238,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,21-F-55,21m,21,female,68,-0.48668934882675785,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-2,30m,30,male,42,-0.4456960413346218,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-3,30m,30,male,48,-0.3700124828881912,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-4,30m,30,male,33,-0.37487587950325274,1119,795
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-5,30m,30,male,24,-0.4375871243241305,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,18-M-52,18m,18,male,54,-0.9575482766838364,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,21-F-54,21m,21,female,27,-0.7351985899450773,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,21-F-55,21m,21,female,29,-0.7577576981875163,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,24-M-58,24m,24,male,120,-0.5366751068669648,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,24-M-59,24m,24,male,860,-0.3712696792846224,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-2,30m,30,male,22,-0.6038059523826877,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-3,30m,30,male,29,-0.5444518038116775,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-4,30m,30,male,39,-0.5006617808438096,1119,795
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-5,30m,30,male,20,-0.6351128973133813,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,18-F-51,18m,18,female,29,-0.08746379356318057,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,18-M-52,18m,18,male,28,-0.3782304244375365,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,21-F-54,21m,21,female,35,-0.31116616349330006,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,21-F-55,21m,21,female,23,-0.3557556253426939,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,30-M-2,30m,30,male,36,-0.13780947811256405,1119,795
+Kidney::kidney cortex artery cell,Kidney,kidney cortex artery cell,30-M-3,30m,30,male,32,-0.16819218191384788,1119,795
+Kidney::B cell,Kidney,B cell,18-M-52,18m,18,male,30,-0.3291142391635291,1119,795
+Kidney::B cell,Kidney,B cell,21-F-55,21m,21,female,33,-0.412474002358878,1119,795
+Kidney::B cell,Kidney,B cell,24-M-58,24m,24,male,1922,-0.28465815811514994,1119,795
+Kidney::B cell,Kidney,B cell,24-M-59,24m,24,male,1000,-0.34544942821590696,1119,795
+Kidney::B cell,Kidney,B cell,30-M-3,30m,30,male,29,-0.2670659118804338,1119,795
+Kidney::B cell,Kidney,B cell,30-M-4,30m,30,male,29,-0.1459052000273231,1119,795
+Lung::classical monocyte,Lung,classical monocyte,18-F-50,18m,18,female,39,-0.9278560307372812,1119,795
+Lung::classical monocyte,Lung,classical monocyte,18-F-51,18m,18,female,123,-0.9112776518429924,1119,795
+Lung::classical monocyte,Lung,classical monocyte,18-M-52,18m,18,male,472,-1.206960140310514,1119,795
+Lung::classical monocyte,Lung,classical monocyte,18-M-53,18m,18,male,344,-1.1898791389175356,1119,795
+Lung::classical monocyte,Lung,classical monocyte,21-F-54,21m,21,female,104,-1.0889828358906048,1119,795
+Lung::classical monocyte,Lung,classical monocyte,21-F-55,21m,21,female,138,-1.082814732120634,1119,795
+Lung::classical monocyte,Lung,classical monocyte,30-M-2,30m,30,male,5383,-0.612382824467811,1119,795
+Lung::classical monocyte,Lung,classical monocyte,30-M-3,30m,30,male,543,-1.1328681940846652,1119,795
+Lung::classical monocyte,Lung,classical monocyte,30-M-4,30m,30,male,96,-0.9561384824684656,1119,795
+Lung::classical monocyte,Lung,classical monocyte,30-M-5,30m,30,male,61,-0.8436263622753668,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,18-F-51,18m,18,female,37,-0.7610406953890907,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-52,18m,18,male,23,-1.0788557978693527,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-53,18m,18,male,30,-1.0871805252414022,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-2,30m,30,male,1346,-0.5803587548019186,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-3,30m,30,male,104,-0.9518130253971107,1119,795
+Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-4,30m,30,male,28,-0.8441602180444956,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-F-50,18m,18,female,46,-0.2257945537801973,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-F-51,18m,18,female,193,-0.19476387882916857,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-52,18m,18,male,288,-0.4169984401964755,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-53,18m,18,male,226,-0.3853836301567233,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,21-F-54,21m,21,female,339,-0.36657288939059773,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,21-F-55,21m,21,female,331,-0.3892996393075576,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-3,30m,30,male,137,-0.25255639365381244,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-4,30m,30,male,196,-0.1398687821728979,1119,795
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-5,30m,30,male,89,-0.17163522006601495,1119,795
+Lung::B cell,Lung,B cell,18-F-50,18m,18,female,92,-0.15635809225685304,1119,795
+Lung::B cell,Lung,B cell,18-F-51,18m,18,female,179,-0.13353945469679918,1119,795
+Lung::B cell,Lung,B cell,18-M-52,18m,18,male,110,-0.27629016233934867,1119,795
+Lung::B cell,Lung,B cell,18-M-53,18m,18,male,116,-0.2969812650500412,1119,795
+Lung::B cell,Lung,B cell,21-F-54,21m,21,female,156,-0.34006942086977376,1119,795
+Lung::B cell,Lung,B cell,21-F-55,21m,21,female,257,-0.36190059030201405,1119,795
+Lung::B cell,Lung,B cell,30-M-3,30m,30,male,78,-0.21303438144671627,1119,795
+Lung::B cell,Lung,B cell,30-M-4,30m,30,male,127,-0.1344569950560528,1119,795
+Lung::B cell,Lung,B cell,30-M-5,30m,30,male,85,-0.12375070585341374,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,18-F-51,18m,18,female,90,-0.7764592934517058,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-52,18m,18,male,50,-0.8745790089626237,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-53,18m,18,male,44,-0.9131358364695661,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,21-F-54,21m,21,female,39,-0.8671101908039827,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,21-F-55,21m,21,female,51,-0.8727964785192495,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-2,30m,30,male,145,-0.5810502832775668,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-3,30m,30,male,40,-0.6691585996713416,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-4,30m,30,male,83,-0.7207542847705719,1119,795
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-5,30m,30,male,22,-0.7547467436300503,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,18-F-50,18m,18,female,40,-0.6817388493447112,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,18-F-51,18m,18,female,62,-0.6169630341846939,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,18-M-52,18m,18,male,45,-0.7985630466592262,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,18-M-53,18m,18,male,39,-0.7767445303069189,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,21-F-54,21m,21,female,74,-0.7803111796908719,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,21-F-55,21m,21,female,120,-0.7662114640571077,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-3,30m,30,male,155,-0.6965358174034466,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-4,30m,30,male,67,-0.6373242329527602,1119,795
+Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-5,30m,30,male,65,-0.5741825695096516,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-F-51,18m,18,female,57,-0.09646543011660413,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-52,18m,18,male,79,-0.2763795019203986,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-53,18m,18,male,85,-0.26829827787845906,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",21-F-54,21m,21,female,196,-0.28678447248215067,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",21-F-55,21m,21,female,137,-0.3018457014810061,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-3,30m,30,male,76,-0.20525572302730377,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-4,30m,30,male,77,-0.054948164528917154,1119,795
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-5,30m,30,male,38,-0.06922752731372261,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,18-F-51,18m,18,female,96,-0.21676339691199864,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,18-M-53,18m,18,male,41,-0.3287543068171329,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,21-F-55,21m,21,female,33,-0.35829686357975377,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,30-M-3,30m,30,male,146,-0.22292673123245044,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,30-M-4,30m,30,male,23,-0.1435576873694886,1119,795
+Lung::mature NK T cell,Lung,mature NK T cell,30-M-5,30m,30,male,21,-0.18271722858361228,1119,795
+Lung::NK cell,Lung,NK cell,18-F-50,18m,18,female,27,-0.3335062733977139,1119,795
+Lung::NK cell,Lung,NK cell,18-F-51,18m,18,female,55,-0.2780096607104967,1119,795
+Lung::NK cell,Lung,NK cell,18-M-52,18m,18,male,35,-0.4619973799036663,1119,795
+Lung::NK cell,Lung,NK cell,18-M-53,18m,18,male,41,-0.438805136720229,1119,795
+Lung::NK cell,Lung,NK cell,21-F-54,21m,21,female,117,-0.4588338712053224,1119,795
+Lung::NK cell,Lung,NK cell,21-F-55,21m,21,female,109,-0.45906842119004576,1119,795
+Lung::NK cell,Lung,NK cell,30-M-3,30m,30,male,81,-0.35446930430229817,1119,795
+Lung::NK cell,Lung,NK cell,30-M-4,30m,30,male,21,-0.29411495243055286,1119,795
+Lung::NK cell,Lung,NK cell,30-M-5,30m,30,male,26,-0.2625556145622656,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",18-F-51,18m,18,female,33,-0.07510367745339663,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",18-M-53,18m,18,male,23,-0.3146909157105756,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",21-F-54,21m,21,female,50,-0.27984843948753757,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",21-F-55,21m,21,female,57,-0.3040827597183936,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",30-M-3,30m,30,male,76,-0.2833391266867218,1119,795
+"Lung::CD4-positive, alpha-beta T cell",Lung,"CD4-positive, alpha-beta T cell",30-M-4,30m,30,male,22,-0.03192938040664339,1119,795
+Lung::T cell,Lung,T cell,18-F-51,18m,18,female,27,-0.21798055755678525,1119,795
+Lung::T cell,Lung,T cell,21-F-54,21m,21,female,45,-0.41466496188008195,1119,795
+Lung::T cell,Lung,T cell,21-F-55,21m,21,female,38,-0.3808492522901745,1119,795
+Lung::T cell,Lung,T cell,30-M-3,30m,30,male,38,-0.2360951230266073,1119,795
+Lung::T cell,Lung,T cell,30-M-4,30m,30,male,23,-0.1525740388627861,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,18-F-51,18m,18,female,30,-0.26153448756678466,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,18-M-52,18m,18,male,30,-0.45690575366751673,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,18-M-53,18m,18,male,30,-0.3633211630264719,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,21-F-54,21m,21,female,51,-0.3895405358536326,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,21-F-55,21m,21,female,56,-0.37927547978672105,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,30-M-3,30m,30,male,24,-0.2557112762199625,1119,795
+Lung::vein endothelial cell,Lung,vein endothelial cell,30-M-4,30m,30,male,30,-0.1293605100316333,1119,795
+Marrow::granulocyte,Marrow,granulocyte,18-F-50,18m,18,female,226,-1.1176121131242822,1119,795
+Marrow::granulocyte,Marrow,granulocyte,18-F-51,18m,18,female,276,-1.1294185387382636,1119,795
+Marrow::granulocyte,Marrow,granulocyte,18-M-52,18m,18,male,802,-1.2346648303062282,1119,795
+Marrow::granulocyte,Marrow,granulocyte,18-M-53,18m,18,male,269,-1.5868336429026764,1119,795
+Marrow::granulocyte,Marrow,granulocyte,21-F-54,21m,21,female,735,-1.2645058723613447,1119,795
+Marrow::granulocyte,Marrow,granulocyte,21-F-55,21m,21,female,784,-1.2436666909172618,1119,795
+Marrow::granulocyte,Marrow,granulocyte,24-M-58,24m,24,male,720,-0.5540186066526608,1119,795
+Marrow::granulocyte,Marrow,granulocyte,24-M-59,24m,24,male,308,-1.090034436952508,1119,795
+Marrow::granulocyte,Marrow,granulocyte,24-M-60,24m,24,male,765,-0.10007894652998317,1119,795
+Marrow::granulocyte,Marrow,granulocyte,24-M-61,24m,24,male,718,-0.4134003732041931,1119,795
+Marrow::granulocyte,Marrow,granulocyte,30-M-2,30m,30,male,2126,-0.8008678036582544,1119,795
+Marrow::granulocyte,Marrow,granulocyte,30-M-3,30m,30,male,1023,-0.6296376664280685,1119,795
+Marrow::granulocyte,Marrow,granulocyte,30-M-5,30m,30,male,894,-0.8514205713900028,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-F-50,18m,18,female,402,-0.5910273036341949,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-F-51,18m,18,female,394,-0.6535148579831593,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-M-52,18m,18,male,312,-1.1727255611216345,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-M-53,18m,18,male,163,-1.5906729893350189,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,21-F-54,21m,21,female,482,-0.7990251544039952,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,21-F-55,21m,21,female,409,-0.9537960088646387,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,24-M-58,24m,24,male,468,-0.047980183118511155,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,24-M-59,24m,24,male,347,-0.6075399463625901,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,24-M-60,24m,24,male,491,0.69157589165798,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,24-M-61,24m,24,male,372,0.430120634094719,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-2,30m,30,male,1232,-0.23029892579859945,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-3,30m,30,male,538,0.2588027475911483,1119,795
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-5,30m,30,male,497,0.22475594800601928,1119,795
+Marrow::promonocyte,Marrow,promonocyte,18-F-50,18m,18,female,118,-1.267243290505334,1119,795
+Marrow::promonocyte,Marrow,promonocyte,18-F-51,18m,18,female,176,-1.2853762684122336,1119,795
+Marrow::promonocyte,Marrow,promonocyte,18-M-52,18m,18,male,172,-1.549935982735768,1119,795
+Marrow::promonocyte,Marrow,promonocyte,18-M-53,18m,18,male,61,-1.5780840758675836,1119,795
+Marrow::promonocyte,Marrow,promonocyte,21-F-54,21m,21,female,119,-1.378168239087539,1119,795
+Marrow::promonocyte,Marrow,promonocyte,21-F-55,21m,21,female,123,-1.3310862742861238,1119,795
+Marrow::promonocyte,Marrow,promonocyte,24-M-58,24m,24,male,76,-1.0985177818009113,1119,795
+Marrow::promonocyte,Marrow,promonocyte,24-M-59,24m,24,male,68,-1.213457263218684,1119,795
+Marrow::promonocyte,Marrow,promonocyte,24-M-60,24m,24,male,51,-1.1137845584461088,1119,795
+Marrow::promonocyte,Marrow,promonocyte,24-M-61,24m,24,male,81,-1.2045965489576125,1119,795
+Marrow::promonocyte,Marrow,promonocyte,30-M-2,30m,30,male,889,-0.9859566370785469,1119,795
+Marrow::promonocyte,Marrow,promonocyte,30-M-3,30m,30,male,293,-1.0515129514798083,1119,795
+Marrow::promonocyte,Marrow,promonocyte,30-M-5,30m,30,male,143,-1.0808024441445407,1119,795
+Marrow::erythroblast,Marrow,erythroblast,18-F-50,18m,18,female,35,0.9064417890655525,1119,795
+Marrow::erythroblast,Marrow,erythroblast,18-M-52,18m,18,male,72,0.6857787458328868,1119,795
+Marrow::erythroblast,Marrow,erythroblast,18-M-53,18m,18,male,24,0.8077971895569842,1119,795
+Marrow::erythroblast,Marrow,erythroblast,21-F-55,21m,21,female,35,1.05552596845488,1119,795
+Marrow::erythroblast,Marrow,erythroblast,24-M-58,24m,24,male,172,1.1163393437016857,1119,795
+Marrow::erythroblast,Marrow,erythroblast,24-M-59,24m,24,male,34,1.1627609879942504,1119,795
+Marrow::erythroblast,Marrow,erythroblast,24-M-60,24m,24,male,259,1.170683575597024,1119,795
+Marrow::erythroblast,Marrow,erythroblast,24-M-61,24m,24,male,230,1.1194105519512272,1119,795
+Marrow::erythroblast,Marrow,erythroblast,30-M-2,30m,30,male,631,1.060330264851494,1119,795
+Marrow::erythroblast,Marrow,erythroblast,30-M-3,30m,30,male,341,1.0909045893065696,1119,795
+Marrow::erythroblast,Marrow,erythroblast,30-M-5,30m,30,male,244,1.184668170063567,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,18-F-50,18m,18,female,20,-1.1262641141229905,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,18-F-51,18m,18,female,20,-1.2411911205939166,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,18-M-52,18m,18,male,590,-1.428800837951604,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,18-M-53,18m,18,male,275,-1.6458237208749753,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,21-F-54,21m,21,female,381,-1.2495603937142343,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,21-F-55,21m,21,female,380,-1.265037895785539,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,24-M-58,24m,24,male,130,-1.1299599439656913,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,24-M-59,24m,24,male,122,-1.187748048195418,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,24-M-60,24m,24,male,145,-1.069288647059684,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,24-M-61,24m,24,male,247,-1.1337806961022436,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,30-M-2,30m,30,male,543,-1.08245031613159,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,30-M-3,30m,30,male,173,-1.1182849482152761,1119,795
+Marrow::proerythroblast,Marrow,proerythroblast,30-M-5,30m,30,male,273,-1.1624034302087574,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-F-50,18m,18,female,69,-1.4962163429181177,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-F-51,18m,18,female,77,-1.493687703891584,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-M-52,18m,18,male,181,-1.8504074675641413,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-M-53,18m,18,male,95,-1.9656558460470963,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,21-F-54,21m,21,female,115,-1.6921930336064577,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,21-F-55,21m,21,female,127,-1.656838907628759,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,24-M-58,24m,24,male,113,-1.3272346172558993,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,24-M-59,24m,24,male,102,-1.4346602116000837,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,24-M-60,24m,24,male,42,-1.4082844300885433,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,24-M-61,24m,24,male,47,-1.4176975977905768,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-2,30m,30,male,393,-1.0990759918500546,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-3,30m,30,male,132,-1.2361941474114964,1119,795
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-5,30m,30,male,91,-1.4052686322377905,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-F-50,18m,18,female,103,-0.4527028998427307,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-F-51,18m,18,female,101,-0.49173140066789434,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-M-52,18m,18,male,102,-0.7701359512045083,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,21-F-54,21m,21,female,164,-0.575681858564344,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,21-F-55,21m,21,female,168,-0.5743901076019566,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,24-M-58,24m,24,male,156,-0.34893859650629344,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,24-M-59,24m,24,male,139,-0.470928376156468,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,24-M-60,24m,24,male,107,-0.3412197330824893,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,24-M-61,24m,24,male,62,-0.2834525672511713,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-2,30m,30,male,145,-0.34781155378028905,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-3,30m,30,male,180,-0.3129404276035097,1119,795
+Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-5,30m,30,male,196,-0.3357971208959025,1119,795
+Marrow::monocyte,Marrow,monocyte,18-F-50,18m,18,female,149,-1.2026980355776509,1119,795
+Marrow::monocyte,Marrow,monocyte,18-F-51,18m,18,female,178,-1.2405507689294895,1119,795
+Marrow::monocyte,Marrow,monocyte,18-M-52,18m,18,male,68,-1.5067356163483265,1119,795
+Marrow::monocyte,Marrow,monocyte,21-F-54,21m,21,female,221,-1.3052116900268376,1119,795
+Marrow::monocyte,Marrow,monocyte,21-F-55,21m,21,female,171,-1.3123699851751514,1119,795
+Marrow::monocyte,Marrow,monocyte,24-M-58,24m,24,male,153,-1.0177458425259158,1119,795
+Marrow::monocyte,Marrow,monocyte,24-M-59,24m,24,male,132,-1.2107887816454528,1119,795
+Marrow::monocyte,Marrow,monocyte,24-M-60,24m,24,male,67,-1.1520630280386694,1119,795
+Marrow::monocyte,Marrow,monocyte,24-M-61,24m,24,male,84,-1.217137047971255,1119,795
+Marrow::monocyte,Marrow,monocyte,30-M-2,30m,30,male,52,-1.0091640973447908,1119,795
+Marrow::monocyte,Marrow,monocyte,30-M-3,30m,30,male,50,-1.1302196648560083,1119,795
+Marrow::monocyte,Marrow,monocyte,30-M-5,30m,30,male,271,-1.1155019044778771,1119,795
+Marrow::naive T cell,Marrow,naive T cell,18-F-50,18m,18,female,90,-1.3988592345551987,1119,795
+Marrow::naive T cell,Marrow,naive T cell,18-F-51,18m,18,female,123,-1.3749370853941612,1119,795
+Marrow::naive T cell,Marrow,naive T cell,18-M-52,18m,18,male,143,-1.7368351824262205,1119,795
+Marrow::naive T cell,Marrow,naive T cell,18-M-53,18m,18,male,41,-1.8573840416989473,1119,795
+Marrow::naive T cell,Marrow,naive T cell,21-F-54,21m,21,female,83,-1.578835563642339,1119,795
+Marrow::naive T cell,Marrow,naive T cell,21-F-55,21m,21,female,83,-1.5443902642945655,1119,795
+Marrow::naive T cell,Marrow,naive T cell,24-M-58,24m,24,male,88,-1.2364843991696184,1119,795
+Marrow::naive T cell,Marrow,naive T cell,24-M-59,24m,24,male,57,-1.4505946008401114,1119,795
+Marrow::naive T cell,Marrow,naive T cell,24-M-61,24m,24,male,23,-1.266476673463011,1119,795
+Marrow::naive T cell,Marrow,naive T cell,30-M-2,30m,30,male,237,-0.969224229913205,1119,795
+Marrow::naive T cell,Marrow,naive T cell,30-M-3,30m,30,male,87,-1.2148829174306484,1119,795
+Marrow::naive T cell,Marrow,naive T cell,30-M-5,30m,30,male,44,-1.3099580652737393,1119,795
+Marrow::macrophage,Marrow,macrophage,18-F-50,18m,18,female,32,-1.1435610144636525,1119,795
+Marrow::macrophage,Marrow,macrophage,18-F-51,18m,18,female,87,-1.0689434747173672,1119,795
+Marrow::macrophage,Marrow,macrophage,18-M-52,18m,18,male,71,-1.3158302585313195,1119,795
+Marrow::macrophage,Marrow,macrophage,21-F-54,21m,21,female,61,-1.1853042388190527,1119,795
+Marrow::macrophage,Marrow,macrophage,21-F-55,21m,21,female,41,-1.0355463266139153,1119,795
+Marrow::macrophage,Marrow,macrophage,24-M-58,24m,24,male,49,-0.9094893714076666,1119,795
+Marrow::macrophage,Marrow,macrophage,24-M-59,24m,24,male,37,-0.9462295679343196,1119,795
+Marrow::macrophage,Marrow,macrophage,30-M-2,30m,30,male,208,-0.6955367048727079,1119,795
+Marrow::macrophage,Marrow,macrophage,30-M-3,30m,30,male,51,-0.8438000767177225,1119,795
+Marrow::macrophage,Marrow,macrophage,30-M-5,30m,30,male,34,-0.9474880514489212,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,18-F-50,18m,18,female,24,-0.6669959094049818,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,18-F-51,18m,18,female,65,-0.6718623738086784,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,21-F-54,21m,21,female,36,-0.917277465820376,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,21-F-55,21m,21,female,60,-0.8632484731426819,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,24-M-58,24m,24,male,33,-0.5477306053450355,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,30-M-2,30m,30,male,57,-0.5042948329907975,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,30-M-3,30m,30,male,68,-0.55172638480813,1119,795
+Marrow::late pro-B cell,Marrow,late pro-B cell,30-M-5,30m,30,male,85,-0.49797429598227905,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,18-F-50,18m,18,female,37,-0.6686138121356129,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,18-F-51,18m,18,female,69,-0.6910498383628809,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,18-M-52,18m,18,male,63,-0.8840634727978061,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,21-F-54,21m,21,female,79,-0.764197950096501,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,21-F-55,21m,21,female,26,-0.7458919582629615,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,24-M-58,24m,24,male,41,-0.5594501150115689,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,24-M-60,24m,24,male,21,-0.5812567130306985,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,30-M-2,30m,30,male,36,-0.5193007694796463,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,30-M-3,30m,30,male,72,-0.5358434006404811,1119,795
+Marrow::precursor B cell,Marrow,precursor B cell,30-M-5,30m,30,male,53,-0.6060529291645669,1119,795
+Marrow::naive B cell,Marrow,naive B cell,18-F-50,18m,18,female,26,-1.066971529610572,1119,795
+Marrow::naive B cell,Marrow,naive B cell,21-F-54,21m,21,female,50,-1.1598594541929044,1119,795
+Marrow::naive B cell,Marrow,naive B cell,21-F-55,21m,21,female,47,-1.12625853926854,1119,795
+Marrow::naive B cell,Marrow,naive B cell,30-M-2,30m,30,male,57,-0.6286284406012019,1119,795
+Marrow::naive B cell,Marrow,naive B cell,30-M-3,30m,30,male,22,-0.803850608347092,1119,795
+Marrow::naive B cell,Marrow,naive B cell,30-M-5,30m,30,male,28,-0.9630293659885483,1119,795

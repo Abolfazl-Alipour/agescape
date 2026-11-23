@@ -1,0 +1,50 @@
+fold,held_out_tissue,unit,tissue,cell_type,mouse_id,age,sex,n_cells,score
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-F-50,18m,female,35,-0.34796207893239395
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-F-51,18m,female,44,-0.32877755752791804
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,18-M-52,18m,male,320,-0.5554076354306015
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-2,30m,male,833,-0.43351083300136795
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-3,30m,male,456,-0.4566884319824751
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-4,30m,male,523,-0.41174715506712145
+1,Kidney,Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-5,30m,male,383,-0.5121725989171961
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-F-50,18m,female,441,-0.34198354007749
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-F-51,18m,female,573,-0.33151277411178337
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,18-M-52,18m,male,99,-0.3981565976724637
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-2,30m,male,133,-0.3679246201656674
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-3,30m,male,220,-0.35179139660448877
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-4,30m,male,264,-0.23514971673268925
+1,Kidney,Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-5,30m,male,187,-0.4010726522178669
+1,Kidney,Kidney::macrophage,Kidney,macrophage,18-F-50,18m,female,56,-0.5711154579967725
+1,Kidney,Kidney::macrophage,Kidney,macrophage,18-F-51,18m,female,102,-0.6791486168340184
+1,Kidney,Kidney::macrophage,Kidney,macrophage,18-M-52,18m,male,105,-0.9372731233389455
+1,Kidney,Kidney::macrophage,Kidney,macrophage,30-M-2,30m,male,185,-0.8147290795584028
+1,Kidney,Kidney::macrophage,Kidney,macrophage,30-M-3,30m,male,170,-0.8218632382253026
+1,Kidney,Kidney::macrophage,Kidney,macrophage,30-M-4,30m,male,134,-0.6186263382364503
+1,Kidney,Kidney::macrophage,Kidney,macrophage,30-M-5,30m,male,63,-0.731737102949412
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-F-50,18m,female,34,-0.3358415790113207
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-F-51,18m,female,53,-0.3126201570386007
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,18-M-52,18m,male,30,-0.5236666740309204
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-2,30m,male,95,-0.30773251536283697
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-3,30m,male,90,-0.3399456948425956
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-4,30m,male,71,-0.2705570031120297
+1,Kidney,Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-5,30m,male,74,-0.4247934515901126
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-F-50,18m,female,59,-0.3114354320188022
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-F-51,18m,female,81,-0.29799256235745997
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,18-M-52,18m,male,105,-0.4570779360895556
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-2,30m,male,137,-0.31774294560244276
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-3,30m,male,58,-0.32517970848519395
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-4,30m,male,44,-0.3317263157465957
+1,Kidney,Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-5,30m,male,57,-0.3906394058390916
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,18-F-50,18m,female,25,-0.17764207225825412
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,18-F-51,18m,female,40,-0.2515610679562581
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,18-M-52,18m,male,122,-0.37347754920789145
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-2,30m,male,69,-0.22821378072110377
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-3,30m,male,67,-0.24094543168131577
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-4,30m,male,91,-0.18602010208726072
+1,Kidney,Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-5,30m,male,49,-0.2998385746175902
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-F-50,18m,female,65,-0.4051061908517939
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-F-51,18m,female,74,-0.34753443248683147
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,18-M-52,18m,male,57,-0.49008092675283454
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-2,30m,male,42,-0.42442884603796305
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-3,30m,male,48,-0.3457556703766542
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-4,30m,male,33,-0.3402807813521549
+1,Kidney,Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-5,30m,male,24,-0.4134708057822738

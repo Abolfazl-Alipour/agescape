@@ -1,0 +1,16 @@
+{
+  "run_started_utc": "2026-11-23T04:44:40.921137+00:00",
+  "model": "Muse Spark (subagent)",
+  "seed": 20261122,
+  "null_iterations": 2000,
+  "cross_organ_units_tested": 26,
+  "cross_organ_both_pass_predicted": 0,
+  "cross_organ_both_pass_either_direction": 0,
+  "cross_organ_composite_pass": 0,
+  "cross_organ_empirical_pass": 22,
+  "intermediate_age_mice": 14,
+  "donor_split_checks": 23,
+  "donor_split_direction_matches": 23,
+  "facs_arm": "NOT RUN: no FACS files locally; TMS FACS has no 30m mice",
+  "runtime_s": 529.8633315563202
+}

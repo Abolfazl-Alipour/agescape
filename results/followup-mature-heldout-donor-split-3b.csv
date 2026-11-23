@@ -1,0 +1,33 @@
+unit,tissue,cell_type,held_out_mouse,held_out_age,held_out_score,derive_mean_18m,derive_mean_30m,direction_match
+Kidney::B cell,Kidney,B cell,30-M-4,30m,0.09520401765377806,-0.1706901743654463,-0.03144341746823831,True
+Kidney::T cell,Kidney,T cell,30-M-4,30m,0.3385106918653047,0.1302131245861866,0.17940024715293776,True
+Kidney::epithelial cell of proximal tubule,Kidney,epithelial cell of proximal tubule,30-M-4,30m,-0.8963101049538711,-1.0069461201154633,-0.9258569084350462,True
+Kidney::fenestrated cell,Kidney,fenestrated cell,30-M-4,30m,-0.3356630310097646,-0.47126461044484436,-0.4004111058976934,True
+Kidney::kidney collecting duct principal cell,Kidney,kidney collecting duct principal cell,30-M-4,30m,-1.0377915887861149,-1.3449008739154802,-1.0627345404815032,True
+Kidney::kidney distal convoluted tubule epithelial cell,Kidney,kidney distal convoluted tubule epithelial cell,30-M-4,30m,-1.1571517422503683,-1.3852941732857913,-1.2031309802079158,True
+Kidney::kidney loop of Henle thick ascending limb epithelial cell,Kidney,kidney loop of Henle thick ascending limb epithelial cell,30-M-4,30m,-1.062604489737892,-1.2510158578648227,-1.0909878325431102,True
+Kidney::kidney proximal convoluted tubule epithelial cell,Kidney,kidney proximal convoluted tubule epithelial cell,30-M-4,30m,-0.7481035072314013,-1.0593233723877222,-0.8210591207827238,True
+Kidney::lymphocyte,Kidney,lymphocyte,30-M-4,30m,-0.09706254603347997,-0.5902004222560426,-0.23869097625251814,True
+Kidney::macrophage,Kidney,macrophage,30-M-4,30m,-0.19670896385311187,-0.40924102025302317,-0.3609086379691335,True
+Lung::B cell,Lung,B cell,18-M-53,18m,-0.005398791800181213,0.12123181691346958,0.1757156251592498,True
+Lung::B cell,Lung,B cell,30-M-4,30m,0.2054758125801044,0.08957416473505689,0.1608355314488225,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-53,18m,0.23704048365643082,0.35253298312741177,0.49073165576990047,True
+"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-4,30m,0.527617072789736,0.3140354833037515,0.4722889472599827,True
+Lung::NK cell,Lung,NK cell,18-M-53,18m,0.16957559777243114,0.30801918556995544,0.3812009946310179,True
+Lung::NK cell,Lung,NK cell,30-M-4,30m,0.3934690170891215,0.27340828862057437,0.3750669834019661,True
+Lung::T cell,Lung,T cell,30-M-4,30m,0.2940041316025874,0.21692150552776024,0.217970974901035,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-53,18m,-0.5450321044548145,-0.567743106330758,-0.34784687228732375,True
+Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-4,30m,-0.40814226537470555,-0.5601727723721102,-0.32774840792486315,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-53,18m,-0.48810998742404244,-0.3565988118474171,-0.24346635459787383,True
+Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-4,30m,-0.217502175243649,-0.38947660574157345,-0.25644844427498625,True
+Lung::classical monocyte,Lung,classical monocyte,18-M-53,18m,-0.47240956089236974,-0.3024755152940745,-0.23329530807535864,True
+Lung::classical monocyte,Lung,classical monocyte,30-M-4,30m,-0.1983785249158696,-0.3449590266936483,-0.24493423579518833,True
+Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-53,18m,-0.3971022593751308,-0.21507157229346474,-0.0949969211623316,True
+Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-4,30m,-0.05680477050868582,-0.2757484679873534,-0.1140929964891545,True
+Marrow::erythroblast,Marrow,erythroblast,18-M-53,18m,0.74556912796618,0.7854951713186666,1.1318144916201558,True
+Marrow::granulocyte,Marrow,granulocyte,18-M-53,18m,-0.6723408291637953,-0.48613995278877287,-0.14038756459916982,True
+Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-M-53,18m,-0.73357402918625,-0.4361087730803801,0.4447872597147624,True
+Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-M-53,18m,-1.1760487038339569,-1.01290157806551,-0.7051040845470471,True
+Marrow::naive T cell,Marrow,naive T cell,18-M-53,18m,-1.6072370077039448,-1.4360389417136048,-1.0717485019188238,True
+Marrow::proerythroblast,Marrow,proerythroblast,18-M-53,18m,-0.6768914029940662,-0.6050885889956116,-0.404538321365912,True
+Marrow::promonocyte,Marrow,promonocyte,18-M-53,18m,-0.9531981926446078,-0.8183571115474249,-0.5289255732486343,True

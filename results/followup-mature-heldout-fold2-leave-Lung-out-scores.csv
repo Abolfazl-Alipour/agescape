@@ -1,0 +1,56 @@
+fold,held_out_tissue,unit,tissue,cell_type,mouse_id,age,sex,n_cells,score
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,18-F-50,18m,female,39,-0.930111795284799
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,18-F-51,18m,female,123,-0.919459873886024
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,18-M-52,18m,male,472,-1.1854411675473346
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,18-M-53,18m,male,344,-1.175594227659141
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,30-M-2,30m,male,5383,-0.5888694870685197
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,30-M-3,30m,male,543,-1.1359933388490486
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,30-M-4,30m,male,96,-0.9625769135137805
+2,Lung,Lung::classical monocyte,Lung,classical monocyte,30-M-5,30m,male,61,-0.8466046544586623
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,18-F-51,18m,female,37,-0.7726726182947923
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-52,18m,male,23,-1.0612092829988182
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,18-M-53,18m,male,30,-1.0779113066637345
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-2,30m,male,1346,-0.5630758771127677
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-3,30m,male,104,-0.9612242750073825
+2,Lung,Lung::intermediate monocyte,Lung,intermediate monocyte,30-M-4,30m,male,28,-0.8505313794480553
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-F-50,18m,female,46,-0.23294746794438081
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-F-51,18m,female,193,-0.20927374170188529
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-52,18m,male,288,-0.40317414246130245
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,18-M-53,18m,male,226,-0.3821798940240666
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-3,30m,male,137,-0.26345752289425795
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-4,30m,male,196,-0.15193278623915507
+2,Lung,Lung::bronchial smooth muscle cell,Lung,bronchial smooth muscle cell,30-M-5,30m,male,89,-0.18140528981940718
+2,Lung,Lung::B cell,Lung,B cell,18-F-50,18m,female,92,-0.1689632559833123
+2,Lung,Lung::B cell,Lung,B cell,18-F-51,18m,female,179,-0.14554546259374712
+2,Lung,Lung::B cell,Lung,B cell,18-M-52,18m,male,110,-0.26053699668790686
+2,Lung,Lung::B cell,Lung,B cell,18-M-53,18m,male,116,-0.2906123321751819
+2,Lung,Lung::B cell,Lung,B cell,30-M-3,30m,male,78,-0.22342542164941537
+2,Lung,Lung::B cell,Lung,B cell,30-M-4,30m,male,127,-0.149704196556383
+2,Lung,Lung::B cell,Lung,B cell,30-M-5,30m,male,85,-0.1326777310157805
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,18-F-51,18m,female,90,-0.7847246190236488
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-52,18m,male,50,-0.8555724943475091
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,18-M-53,18m,male,44,-0.9038949026043717
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-2,30m,male,145,-0.5583258436346628
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-3,30m,male,40,-0.6721988377234156
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-4,30m,male,83,-0.7286094619144889
+2,Lung,Lung::alveolar macrophage,Lung,alveolar macrophage,30-M-5,30m,male,22,-0.7614203606358658
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,18-F-50,18m,female,40,-0.690576221324996
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,18-F-51,18m,female,62,-0.6351875358031636
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,18-M-52,18m,male,45,-0.780911112299786
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,18-M-53,18m,male,39,-0.766842799548868
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-3,30m,male,155,-0.711628498092058
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-4,30m,male,67,-0.6536836928964411
+2,Lung,Lung::non-classical monocyte,Lung,non-classical monocyte,30-M-5,30m,male,65,-0.5850143945710058
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-F-51,18m,female,57,-0.11114309294581526
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-52,18m,male,79,-0.2644553158983577
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",18-M-53,18m,male,85,-0.2667158446927338
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-3,30m,male,76,-0.21927487175282323
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-4,30m,male,77,-0.07157160033558774
+2,Lung,"Lung::CD8-positive, alpha-beta T cell",Lung,"CD8-positive, alpha-beta T cell",30-M-5,30m,male,38,-0.07995326913806866
+2,Lung,Lung::NK cell,Lung,NK cell,18-F-50,18m,female,27,-0.35084609653381293
+2,Lung,Lung::NK cell,Lung,NK cell,18-F-51,18m,female,55,-0.29469508458858895
+2,Lung,Lung::NK cell,Lung,NK cell,18-M-52,18m,male,35,-0.4516316594862546
+2,Lung,Lung::NK cell,Lung,NK cell,18-M-53,18m,male,41,-0.4385676086844399
+2,Lung,Lung::NK cell,Lung,NK cell,30-M-3,30m,male,81,-0.36872401552992273
+2,Lung,Lung::NK cell,Lung,NK cell,30-M-4,30m,male,21,-0.3106888589983696
+2,Lung,Lung::NK cell,Lung,NK cell,30-M-5,30m,male,26,-0.2781190444159152

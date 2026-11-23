@@ -1,0 +1,73 @@
+fold,held_out_tissue,unit,tissue,cell_type,mouse_id,age,sex,n_cells,score
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,18-F-50,18m,female,226,-0.47247579299471565
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,18-F-51,18m,female,276,-0.5426484098766524
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,18-M-52,18m,male,802,-0.6365368467406771
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,18-M-53,18m,male,269,-0.6459776154698338
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,30-M-2,30m,male,2126,-0.6619448238582917
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,30-M-3,30m,male,1023,-0.4691819112020388
+3,Marrow,Marrow::granulocyte,Marrow,granulocyte,30-M-5,30m,male,894,-0.5142299643120327
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-F-50,18m,female,402,-0.34465807953837446
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-F-51,18m,female,394,-0.326684098142318
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-M-52,18m,male,312,-0.542891556575543
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,18-M-53,18m,male,163,-0.7463315087154339
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-2,30m,male,1232,-0.695814019071961
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-3,30m,male,538,-0.4131043198796518
+3,Marrow,Marrow::granulocytopoietic cell,Marrow,granulocytopoietic cell,30-M-5,30m,male,497,-0.29282328343268405
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,18-F-50,18m,female,118,-0.3672174752182924
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,18-F-51,18m,female,176,-0.3407583878508471
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,18-M-52,18m,male,172,-0.6002336937763282
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,18-M-53,18m,male,61,-0.6828887720185937
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,30-M-2,30m,male,889,-0.6427574610194808
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,30-M-3,30m,male,293,-0.298044040367897
+3,Marrow,Marrow::promonocyte,Marrow,promonocyte,30-M-5,30m,male,143,-0.23796529573567726
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,18-F-50,18m,female,35,-0.6683978695309443
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,18-M-52,18m,male,72,-0.9253729314286043
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,18-M-53,18m,male,24,-0.9990096399638388
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,30-M-2,30m,male,631,-0.8569301082644514
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,30-M-3,30m,male,341,-0.6709858569102108
+3,Marrow,Marrow::erythroblast,Marrow,erythroblast,30-M-5,30m,male,244,-0.5896678487668405
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,18-F-50,18m,female,20,-0.5115202465324109
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,18-F-51,18m,female,20,-0.7476838215181547
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,18-M-52,18m,male,590,-0.7195155063979854
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,18-M-53,18m,male,275,-0.7369277931445277
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,30-M-2,30m,male,543,-0.7877222159252533
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,30-M-3,30m,male,173,-0.6123571181882452
+3,Marrow,Marrow::proerythroblast,Marrow,proerythroblast,30-M-5,30m,male,273,-0.5820031151771139
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-F-50,18m,female,69,-0.6595850372591272
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-F-51,18m,female,77,-0.6322738911260131
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-M-52,18m,male,181,-0.8567467583059738
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,18-M-53,18m,male,95,-0.9237708941178493
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-2,30m,male,393,-0.8164717497970801
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-3,30m,male,132,-0.6172909758099774
+3,Marrow,Marrow::megakaryocyte-erythroid progenitor cell,Marrow,megakaryocyte-erythroid progenitor cell,30-M-5,30m,male,91,-0.6013472397409731
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-F-50,18m,female,103,-0.08747982776568497
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-F-51,18m,female,101,-0.04838700032617815
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,18-M-52,18m,male,102,-0.38926457628405053
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-2,30m,male,145,-0.25443836735756453
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-3,30m,male,180,0.27860971521115285
+3,Marrow,Marrow::hematopoietic precursor cell,Marrow,hematopoietic precursor cell,30-M-5,30m,male,196,0.2937303067801307
+3,Marrow,Marrow::monocyte,Marrow,monocyte,18-F-50,18m,female,149,0.04530741550122874
+3,Marrow,Marrow::monocyte,Marrow,monocyte,18-F-51,18m,female,178,-0.05098571028669485
+3,Marrow,Marrow::monocyte,Marrow,monocyte,18-M-52,18m,male,68,-0.4490117460112468
+3,Marrow,Marrow::monocyte,Marrow,monocyte,30-M-2,30m,male,52,-0.16322868375750543
+3,Marrow,Marrow::monocyte,Marrow,monocyte,30-M-3,30m,male,50,-0.2269719056719839
+3,Marrow,Marrow::monocyte,Marrow,monocyte,30-M-5,30m,male,271,0.18063738836357146
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,18-F-50,18m,female,90,-0.7040129899552694
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,18-F-51,18m,female,123,-0.7249090922423935
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,18-M-52,18m,male,143,-0.9733985980981696
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,18-M-53,18m,male,41,-1.0918579846081071
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,30-M-2,30m,male,237,-0.9245291688826516
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,30-M-3,30m,male,87,-0.7041001828173488
+3,Marrow,Marrow::naive T cell,Marrow,naive T cell,30-M-5,30m,male,44,-0.6494382343423792
+3,Marrow,Marrow::macrophage,Marrow,macrophage,18-F-50,18m,female,32,-0.5571079861295347
+3,Marrow,Marrow::macrophage,Marrow,macrophage,18-F-51,18m,female,87,-0.607252430620532
+3,Marrow,Marrow::macrophage,Marrow,macrophage,18-M-52,18m,male,71,-0.7685262248832438
+3,Marrow,Marrow::macrophage,Marrow,macrophage,30-M-2,30m,male,208,-0.8237897234856904
+3,Marrow,Marrow::macrophage,Marrow,macrophage,30-M-3,30m,male,51,-0.6025188805950845
+3,Marrow,Marrow::macrophage,Marrow,macrophage,30-M-5,30m,male,34,-0.45876705575076726
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,18-F-50,18m,female,37,-0.19114851463567528
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,18-F-51,18m,female,69,-0.06727496706086744
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,18-M-52,18m,male,63,-0.3431003232483638
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,30-M-2,30m,male,36,-0.46683959291417176
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,30-M-3,30m,male,72,-0.08721870886105698
+3,Marrow,Marrow::precursor B cell,Marrow,precursor B cell,30-M-5,30m,male,53,-0.07677632857389716
