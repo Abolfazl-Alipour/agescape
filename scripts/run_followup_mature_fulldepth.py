@@ -73,6 +73,11 @@ DEPTH_STRATA = (
 )
 N_SHARDS = 16
 CHUNK_ROWS = 16000
+
+# Donor-row export (added 2026-11-22, export only): when True, the frozen
+# pipeline also writes the per-donor Part 1 and Part 2 tables to results/.
+# No computation changes; the model outputs are identical with or without it.
+EXPORT_DONOR_ROWS = False
 SUBCHUNK_ROWS = 1000
 MAX_WORKERS = 6
 SHARD_WORKERS = 3
@@ -1182,6 +1187,8 @@ def _build_part2_table_and_fit(meta: dict[str, Any], part2_ckpt: dict[str, Any])
             d_rows.append(rec)
 
     df_d = pd.DataFrame(d_rows)
+    if EXPORT_DONOR_ROWS:
+        write_clean_csv(df_d, RESULTS_DIR / f"followup-mature-fulldepth-{ds_name}-donor-part2.csv")
     model_rows: list[dict[str, Any]] = []
     rob_rows: list[dict[str, Any]] = []
 
@@ -1673,6 +1680,8 @@ def run_pass2_part1_and_export(meta: dict[str, Any], ds_name: str, part2_mod_df:
         df1_rows.append(rec)
 
     df1 = pd.DataFrame(df1_rows)
+    if EXPORT_DONOR_ROWS:
+        write_clean_csv(df1, RESULTS_DIR / f"followup-mature-fulldepth-{ds_name}-donor-part1.csv")
 
     cross_chk: dict[str, Any] = {
         "checked": False,
@@ -2673,8 +2682,12 @@ def main() -> int:
     parser.add_argument("--dataset", choices=["gao", "yazar", "all"], default="all")
     parser.add_argument("--stage", choices=["parts12", "part3", "all"], default="all")
     parser.add_argument("--reuse-pass1", action="store_true", help="Reuse cached Pass 1 shards and Part 2 summary if complete")
+    parser.add_argument("--export-donor-rows", action="store_true",
+                        help="Also write per-donor Part 1 and Part 2 tables (export only; no analysis change)")
     parser.add_argument("--model", default=None, help="Model label recorded in runtime log and QC JSON")
     args = parser.parse_args()
+    global EXPORT_DONOR_ROWS
+    EXPORT_DONOR_ROWS = bool(args.export_donor_rows)
     run_t0 = time.perf_counter()
     run_started = datetime.now(timezone.utc).isoformat()
 
