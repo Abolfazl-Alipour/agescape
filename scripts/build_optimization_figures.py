@@ -15,11 +15,17 @@ exported per-donor file and asserted equal to the committed slope.
 
 Fig 1: mature-to-old cell-fraction age slopes (forest) plus donor
   scatterplots with fitted lines for the five headline fraction rows.
-Fig 2: donor scatterplots with fitted lines: (a) stratified scatter versus
-  age in Gao heart and Yazar blood, (b) pooled center shift versus age in
-  Yazar blood, (c) Shannon entropy versus age in Gao heart and Yazar blood.
-  Scatter and Shannon values are standardized within cell type (cell-type
-  mean subtracted, divided by cell-type SD), matching the stratified model.
+Fig 2: donor scatterplots of partial residuals with fitted lines:
+  (a) stratified scatter versus age in Gao heart, (b) stratified scatter
+  versus age in Yazar blood, (c) pooled center shift versus age in
+  Yazar blood, (d) Shannon entropy versus age in Gao heart,
+  (e) Shannon entropy versus age in Yazar blood. Points are partial
+  residuals (each plotted value after removing the fitted model
+  covariates), so every plotted cloud matches its fitted line; the raw
+  clouds run the other way in the Gao scatter and Yazar pooled
+  center-shift panels. Scatter and Shannon values are standardized
+  within cell type (cell-type mean subtracted, divided by cell-type SD),
+  matching the stratified model. The file is fig2-narrowing-panels.
 Fig 3: core 48-unit transport verdicts, cleaned versus unfiltered
   mature-to-old signature, in plain words.
 Fig 4: mature interneuron Mount Sinai versus Human Brain Collection Core age
@@ -135,10 +141,10 @@ def fig1_composition():
     human_comp = pd.read_csv(RESULTS / "followup-mature-composition-human.csv")
     headline = [
         ("lung", "Lung_Integrated", "club cell", "Lung club cell"),
-        ("lung", "Lung_Integrated", "multiciliated epithelial cell", "Lung multiciliated epithelial"),
-        ("brain", "MSSM_DLPFC", "L6b glutamatergic neuron of the primary motor cortex", "L6b glutamatergic neuron"),
+        ("lung", "Lung_Integrated", "multiciliated epithelial cell", "Lung multiciliated\nepithelial"),
+        ("brain", "MSSM_DLPFC", "L6b glutamatergic neuron of the primary motor cortex", "L6b glutamatergic\nneuron"),
         ("brain", "MSSM_DLPFC", "oligodendrocyte", "Oligodendrocyte"),
-        ("brain", "MSSM_DLPFC", "oligodendrocyte precursor cell", "Oligodendrocyte precursor"),
+        ("brain", "MSSM_DLPFC", "oligodendrocyte precursor cell", "Oligodendrocyte\nprecursor"),
     ]
     donor_panels = []
     for organ, cohort, ct, label in headline:
@@ -240,16 +246,26 @@ def fig1_composition():
     print("fig1-composition rebuilt: forest + 5 donor panels; slopes refit and asserted")
 
 
-def _load_stratified(ds, metric, table_csv, donor_csv, out_col, n_cells_min=None):
-    """Load donor rows for a stratified-global endpoint and standardize
-    within cell type (group mean subtracted, divided by group SD), matching
-    the stratified model. Returns (plot frame, committed slope, committed p)."""
+def _fit_stratified_partial_residuals(ds, metric, table_csv, donor_csv, out_col, n_cells_min=None):
+    """Refit the stratified-global model exactly as
+    scripts/run_followup_mature_fulldepth.py does
+    (fit_stratified_global_with_batch): per-group standardization, sex and
+    depth centered within group, cell-type stratum dummies, batch fixed
+    effects (reference: ENCODE v4 (Snyder) for Gao, largest batch for
+    Yazar; batches with fewer than 2 donors dropped). Return partial
+    residuals: each plotted value with every fitted covariate except age
+    removed, so a plain OLS of the plotted points on age reproduces the
+    committed adjusted slope. Returns (frame, committed slope, committed
+    p); frame has columns age_years and y_plot. The committed p is used
+    for labels: the refit is plain OLS, while the committed p comes from
+    the donor-clustered fit, so refit p-values are not asserted."""
     t = pd.read_csv(table_csv)
     r = t[(t["is_stratified_global"] == True) & (t["metric"] == metric)
           & (t["depth_mode"] == "full_depth") & (t["model_spec"] == "stratified_global_primary")]
     assert len(r) == 1, (ds, metric)
     cslope = float(r.iloc[0]["slope_sd_per_decade"])
     cp = float(r.iloc[0]["pvalue"])
+    n_donors_committed = int(r.iloc[0]["n_donors"])
     g = t[(t["is_pooled"] == False) & (t["is_stratified_global"] == False)
           & (t["model_spec"] == "primary") & (t["depth_mode"] == "full_depth")
           & (t["metric"] == metric) & (t["yazar_pool_fe_status"] == "evaluated")]
@@ -258,17 +274,139 @@ def _load_stratified(ds, metric, table_csv, donor_csv, out_col, n_cells_min=None
     st = d[(d["group"].isin(elig)) & d[out_col].notna()].copy()
     if n_cells_min is not None:
         st = st[st["n_cells"] >= n_cells_min].copy()
-    # standardize within cell type
-    st["y_std"] = np.nan
-    for grp, idx in st.groupby("group").groups.items():
-        vals = st.loc[idx, out_col]
-        st.loc[idx, "y_std"] = (vals - vals.mean()) / vals.std(ddof=1)
-    return st, cslope, cp
+    parts = []
+    for gk, cpart in st.groupby("group"):
+        if len(cpart) < 6 or cpart["age_per_decade"].nunique() < 2:
+            continue
+        sd_y = float(cpart[out_col].std(ddof=1))
+        if not np.isfinite(sd_y) or sd_y <= 0:
+            continue
+        cp_ = cpart.copy()
+        cp_["y_std"] = (cp_[out_col] - cp_[out_col].mean()) / sd_y
+        cp_["sex_c"] = cp_["sex_male"] - cp_["sex_male"].mean()
+        cp_["depth_c"] = cp_["_depth"] - cp_["_depth"].mean()
+        cp_["_gkey"] = str(gk)
+        parts.append(cp_)
+    df = pd.concat(parts, ignore_index=True)
+    vc = df[["donor_id", "study_or_pool"]].drop_duplicates()["study_or_pool"].value_counts()
+    df = df[df["study_or_pool"].isin(vc[vc >= 2].index.tolist())].copy()
+    vc2 = df[["donor_id", "study_or_pool"]].drop_duplicates()["study_or_pool"].value_counts()
+    lv_sorted = [k for k, _ in sorted(vc2.items(), key=lambda kv: (-int(kv[1]), str(kv[0])))]
+    is_gao = ds == "gao"
+    ref = "ENCODE v4 (Snyder)" if (is_gao and "ENCODE v4 (Snyder)" in lv_sorted) else lv_sorted[0]
+    batch_cols = []
+    for lv in lv_sorted:
+        if lv != ref:
+            cn = f"batch_{str(lv).replace(' ', '_')}"
+            df[cn] = (df["study_or_pool"].astype(str) == str(lv)).astype(float)
+            batch_cols.append(cn)
+    g_dum = pd.get_dummies(df["_gkey"], prefix="g", drop_first=True, dtype=float)
+    design = [np.ones(len(df), dtype=float), df["age_per_decade"].to_numpy(dtype=float)]
+    Xdf = pd.DataFrame({"age_per_decade": df["age_per_decade"].to_numpy(dtype=float)})
+    cov_cols = []
+    for cc in ["sex_c", "depth_c"]:
+        vals = df[cc].to_numpy(dtype=float)
+        if np.unique(vals).size >= 2 and np.linalg.matrix_rank(np.column_stack([*design, vals])) == len(design) + 1:
+            design.append(vals)
+            Xdf[cc] = vals
+            cov_cols.append(cc)
+    for gc in g_dum.columns:
+        vals = g_dum[gc].to_numpy(dtype=float)
+        if np.linalg.matrix_rank(np.column_stack([*design, vals])) == len(design) + 1:
+            design.append(vals)
+            Xdf[gc] = vals
+            cov_cols.append(gc)
+    for bc in batch_cols:
+        vals = df[bc].to_numpy(dtype=float)
+        if np.linalg.matrix_rank(np.column_stack([*design, vals])) == len(design) + 1:
+            design.append(vals)
+            Xdf[bc] = vals
+            cov_cols.append(bc)
+    X = sm.add_constant(Xdf, has_constant="add")
+    fit = sm.OLS(df["y_std"], X).fit()
+    slope = float(fit.params["age_per_decade"])
+    assert abs(slope - cslope) < 1e-6, (ds, metric, slope, cslope)
+    assert df["donor_id"].nunique() == n_donors_committed, (ds, metric)
+    idx = [list(fit.model.exog_names).index(c) for c in cov_cols]
+    y_plot = df["y_std"].to_numpy(dtype=float) - fit.model.exog[:, idx] @ fit.params[cov_cols].to_numpy(dtype=float)
+    # Display-only centering: the level of a partial residual is arbitrary
+    # (intercept at age zero / reference batch), so center the cloud at
+    # zero. This vertical shift changes no slope and no number.
+    y_plot = y_plot - y_plot.mean()
+    out = pd.DataFrame({"age_years": df["age_years"].to_numpy(dtype=float), "y_plot": y_plot})
+    check = sm.OLS(out["y_plot"], sm.add_constant(out["age_years"])).fit()
+    assert abs(float(check.params["age_years"]) - cslope / 10.0) < 1e-9, (ds, metric)
+    print(f"  partial-residual check {ds} {metric}: refit {slope:+.6f} SD/decade, "
+          f"plotted OLS {float(check.params['age_years']):+.6f} SD/year (committed {cslope / 10.0:+.6f})")
+    return out, cslope, cp
+
+
+def _fit_pooled_partial_residuals():
+    """Refit the Yazar pooled center-shift primary model exactly as
+    fit_ols_model_row does (sex, depth, batch indicators with the largest
+    batch as reference; batches with fewer than 2 donors dropped; outcome
+    divided by its SD) and return partial residuals in SD units, so a
+    plain OLS of the plotted points on age reproduces the committed
+    adjusted slope (+0.0400 SD per decade). Returns (frame, slope, p)."""
+    cd = pd.read_csv(RESULTS / "followup-mature-fulldepth-yazar-cell-drift.csv")
+    prow = cd[(cd["is_pooled"] == True) & (cd["metric"] == "center_shift")
+              & (cd["depth_mode"] == "full_depth") & (cd["model_spec"] == "primary")].iloc[0]
+    cslope = float(prow["slope_sd_per_decade"])
+    cp = float(prow["pvalue"])
+    d1y = pd.read_csv(RESULTS / "followup-mature-fulldepth-yazar-donor-part1.csv")
+    pool = d1y[(d1y["group"] == "All_Cells") & d1y["center_shift"].notna()].copy()
+    vc = pool["study_or_pool"].value_counts()
+    pool = pool[pool["study_or_pool"].isin(vc[vc >= 2].index.tolist())].copy()
+    vc2 = pool["study_or_pool"].value_counts()
+    lv_sorted = [k for k, _ in sorted(vc2.items(), key=lambda kv: (-int(kv[1]), str(kv[0])))]
+    ref = lv_sorted[0]
+    batch_cols = []
+    for lv in lv_sorted:
+        if lv != ref:
+            cn = f"batch_{str(lv).replace(' ', '_')}"
+            pool[cn] = (pool["study_or_pool"].astype(str) == str(lv)).astype(float)
+            batch_cols.append(cn)
+    design = [np.ones(len(pool), dtype=float), pool["age_per_decade"].to_numpy(dtype=float)]
+    Xdf = pd.DataFrame({"age_per_decade": pool["age_per_decade"].to_numpy(dtype=float)})
+    cov_cols = []
+    for cc in ["sex_male", "_depth"]:
+        vals = pool[cc].to_numpy(dtype=float)
+        if np.linalg.matrix_rank(np.column_stack([*design, vals])) == len(design) + 1:
+            design.append(vals)
+            Xdf[cc] = vals
+            cov_cols.append(cc)
+    for bc in batch_cols:
+        vals = pool[bc].to_numpy(dtype=float)
+        if np.linalg.matrix_rank(np.column_stack([*design, vals])) == len(design) + 1:
+            design.append(vals)
+            Xdf[bc] = vals
+            cov_cols.append(bc)
+    X = sm.add_constant(Xdf, has_constant="add")
+    y = pool["center_shift"].to_numpy(dtype=float)
+    outcome_sd = float(np.std(y, ddof=1))
+    fit = sm.OLS(y, X).fit()
+    slope_sd = float(fit.params["age_per_decade"]) / outcome_sd
+    assert abs(slope_sd - cslope) < 1e-6, (slope_sd, cslope)
+    assert pool["donor_id"].nunique() == int(prow["n_donors"])
+    assert len(cov_cols) == len(str(prow["covariates_active"]).split(";")), cov_cols
+    idx = [list(fit.model.exog_names).index(c) for c in cov_cols]
+    y_plot = (y - fit.model.exog[:, idx] @ fit.params[cov_cols].to_numpy(dtype=float)) / outcome_sd
+    # Display-only centering: the raw center-shift mean is 0.58 against an
+    # SD of 0.011, so the uncentered partial residual sits near +67 SD; the
+    # level is arbitrary (intercept at age zero), so center the cloud at
+    # zero. This vertical shift changes no slope and no number.
+    y_plot = y_plot - y_plot.mean()
+    out = pd.DataFrame({"age_years": pool["age_years"].to_numpy(dtype=float), "y_plot": y_plot})
+    check = sm.OLS(out["y_plot"], sm.add_constant(out["age_years"])).fit()
+    assert abs(float(check.params["age_years"]) - cslope / 10.0) < 1e-9
+    print(f"  partial-residual check yazar pooled center shift: refit {slope_sd:+.6f} SD/decade, "
+          f"plotted OLS {float(check.params['age_years']):+.6f} SD/year (committed {cslope / 10.0:+.6f})")
+    return out, cslope, cp
 
 
 def _scatter_panel(ax, st, slope_sd_per_decade, color, title, ylabel):
     x = st["age_years"].to_numpy(dtype=float)
-    yv = st["y_std"].to_numpy(dtype=float)
+    yv = st["y_plot"].to_numpy(dtype=float)
     ax.scatter(x, yv, s=12, color=color, alpha=0.45, linewidths=0, zorder=3)
     _fitted_line(ax, x, yv, slope_sd_per_decade / 10.0, color, lw=2.0)
     ax.set_title(title, fontsize=12)
@@ -295,33 +433,35 @@ def fig2_mature_drift():
                      & (drift_h["n_donors"] == 407)].iloc[0]
     assert abs(glob_h["slope"] - (-0.0071)) < 0.001, glob_h["slope"]
 
-    gao_scat, gao_scat_slope, gao_scat_p = _load_stratified(
+    # Partial residuals: every plotted cloud matches its fitted line.
+    # The three Sim 2021 donors (GSM4742854_Adult1 age 35, GSM4742855_Adult2
+    # age 42, GSM4742856_Adult3 age 42) are kept in the Gao scatter panel;
+    # the batch fixed effects absorb their study offset, as the model does.
+    gao_scat, gao_scat_slope, gao_scat_p = _fit_stratified_partial_residuals(
         "gao", "scatter", RESULTS / "followup-mature-fulldepth-gao-cell-drift.csv",
         RESULTS / "followup-mature-fulldepth-gao-donor-part1.csv", "scatter")
-    yaz_scat, yaz_scat_slope, yaz_scat_p = _load_stratified(
+    yaz_scat, yaz_scat_slope, yaz_scat_p = _fit_stratified_partial_residuals(
         "yazar", "scatter", RESULTS / "followup-mature-fulldepth-yazar-cell-drift.csv",
         RESULTS / "followup-mature-fulldepth-yazar-donor-part1.csv", "scatter")
-    gao_sh, gao_sh_slope, gao_sh_p = _load_stratified(
+    gao_sh, gao_sh_slope, gao_sh_p = _fit_stratified_partial_residuals(
         "gao", "shannon", RESULTS / "followup-mature-fulldepth-gao-spread.csv",
         RESULTS / "followup-mature-fulldepth-gao-donor-part2.csv", "full_shannon",
         n_cells_min=20)
-    yaz_sh, yaz_sh_slope, yaz_sh_p = _load_stratified(
+    yaz_sh, yaz_sh_slope, yaz_sh_p = _fit_stratified_partial_residuals(
         "yazar", "shannon", RESULTS / "followup-mature-fulldepth-yazar-spread.csv",
         RESULTS / "followup-mature-fulldepth-yazar-donor-part2.csv", "full_shannon",
         n_cells_min=20)
+    # stratified Yazar center shift, not plotted as a panel: its value is
+    # annotated in panel (c) to explain the pooled-vs-stratified difference
+    _, strat_cs_slope, strat_cs_p = _fit_stratified_partial_residuals(
+        "yazar", "center_shift", RESULTS / "followup-mature-fulldepth-yazar-cell-drift.csv",
+        RESULTS / "followup-mature-fulldepth-yazar-donor-part1.csv", "center_shift")
+    assert abs(strat_cs_slope - (-0.004388)) < 1e-6, strat_cs_slope
+    assert abs(strat_cs_p - 0.265942) < 1e-6, strat_cs_p
     # pooled Yazar center shift (committed +0.0400 SD/decade, p 2.99e-05)
-    cd = pd.read_csv(RESULTS / "followup-mature-fulldepth-yazar-cell-drift.csv")
-    prow = cd[(cd["is_pooled"] == True) & (cd["metric"] == "center_shift")
-              & (cd["depth_mode"] == "full_depth") & (cd["model_spec"] == "primary")].iloc[0]
-    assert abs(float(prow["slope_sd_per_decade"]) - 0.0400) < 0.0005
-    assert abs(float(prow["pvalue"]) - 2.99e-05) / 2.99e-05 < 0.01
-    d1y = pd.read_csv(RESULTS / "followup-mature-fulldepth-yazar-donor-part1.csv")
-    pool = d1y[(d1y["group"] == "All_Cells") & d1y["center_shift"].notna()].copy()
-    pool["y_std"] = (pool["center_shift"] - pool["center_shift"].mean()) / pool["center_shift"].std(ddof=1)
-    pool_slope = float(prow["slope_sd_per_decade"])
-    pool_p = float(prow["pvalue"])
+    pool, pool_slope, pool_p = _fit_pooled_partial_residuals()
 
-    fig = plt.figure(figsize=(10.5, 10.5))
+    fig = plt.figure(figsize=(10.5, 11.0))
     gs = fig.add_gridspec(3, 2, height_ratios=[1, 1, 1], hspace=0.65, wspace=0.30)
     ax_gs = fig.add_subplot(gs[0, 0])
     ax_ys = fig.add_subplot(gs[0, 1])
@@ -334,27 +474,35 @@ def fig2_mature_drift():
     ax_gs.text(0.05, 0.95, f"slope {gao_scat_slope:+.4f} SD per decade\np {gao_scat_p:.3g}",
                transform=ax_gs.transAxes, fontsize=10, va="top", ha="left")
     _scatter_panel(ax_ys, yaz_scat, yaz_scat_slope, HUMAN,
-                   "(a) Scatter, Yazar blood", "Scatter, within cell type (SD)")
+                   "(b) Scatter, Yazar blood", "Scatter, within cell type (SD)")
     ax_ys.text(0.05, 0.95, f"slope {yaz_scat_slope:+.4f} SD per decade\np {yaz_scat_p:.3g}",
                transform=ax_ys.transAxes, fontsize=10, va="top", ha="left")
     _scatter_panel(ax_pool, pool, pool_slope, HUMAN,
-                   "(b) Pooled center shift, Yazar blood", "Center shift, standardized (SD)")
+                   "(c) Pooled center shift, Yazar blood", "Center shift, pooled across cell types (SD)")
     ax_pool.text(0.05, 0.95, f"slope {pool_slope:+.4f} SD per decade\np {pool_p:.3g}",
                  transform=ax_pool.transAxes, fontsize=10, va="top", ha="left")
+    ax_pool.text(0.98, 0.05,
+                 "Within-cell-type slope -0.0044 SD per decade (p 0.27, not significant):\n"
+                 "the pooled rise is a composition effect, not within-cell drift.",
+                 transform=ax_pool.transAxes, fontsize=10, va="bottom", ha="right")
     _scatter_panel(ax_gh, gao_sh, gao_sh_slope, MOUSE,
-                   "(c) Shannon entropy, Gao heart", "Shannon entropy, within cell type (SD)")
-    ax_gh.text(0.05, 0.95, f"slope {gao_sh_slope:+.4f} SD per decade\np {gao_sh_p:.3g}",
+                   "(d) Shannon entropy, Gao heart", "Shannon entropy, within cell type (SD)")
+    ax_gh.text(0.05, 0.95, f"slope {gao_sh_slope:+.4f} SD per decade\np {gao_sh_p:.3g}, not significant",
                transform=ax_gh.transAxes, fontsize=10, va="top", ha="left")
     _scatter_panel(ax_yh, yaz_sh, yaz_sh_slope, HUMAN,
-                   "(c) Shannon entropy, Yazar blood", "Shannon entropy, within cell type (SD)")
+                   "(e) Shannon entropy, Yazar blood", "Shannon entropy, within cell type (SD)")
     ax_yh.text(0.05, 0.95, f"slope {yaz_sh_slope:+.4f} SD per decade\np {yaz_sh_p:.3g}",
                transform=ax_yh.transAxes, fontsize=10, va="top", ha="left")
-    fig.suptitle("Donor scatterplots with fitted lines (slopes from the stratified model)",
-                 fontsize=12)
-    fig.tight_layout()
-    fig.subplots_adjust(top=0.93)
-    save(fig, "fig2-mature-drift")
-    print("fig2-mature-drift rebuilt: 5 donor panels; slopes asserted from tables")
+    fig.suptitle("Partial residuals after removing model covariates, with fitted adjusted slopes",
+                 fontsize=12, y=0.985)
+    fig.text(0.5, 0.01,
+             "Points are partial residuals: each point shows the value after removing the fitted effects of sex, depth, cell type, and study batch\n"
+             "(pooled center-shift panel: sex, depth, and batch only), so each plotted cloud matches its fitted line.\n"
+             "The raw clouds run the other way in the Gao scatter and Yazar pooled center-shift panels.",
+             ha="center", va="bottom", fontsize=10)
+    fig.tight_layout(rect=[0, 0.05, 1, 0.96])
+    save(fig, "fig2-narrowing-panels")
+    print("fig2-narrowing-panels rebuilt: 5 partial-residual panels (a) to (e); slopes asserted from tables")
 
 
 def fig3_transport():
@@ -365,6 +513,13 @@ def fig3_transport():
             p1["fail_both"]) == (2, 13, 4, 29)
     assert (p0["both_pass"], p0["empirical_only"], p0["composite_only"],
             p0["fail_both"]) == (3, 15, 5, 25)
+    # Rescue check, verified at unit level: the unfiltered signature passes
+    # both tests in 0 of the 29 core units where the cleaned signature
+    # passes neither, so cleaning did not throw away the signal.
+    comp = pd.read_csv(RESULTS / "followup-mature-p1m-block5-p0m-comparison.csv")
+    assert len(comp) == 48, len(comp)
+    assert int(comp["p1m_fails_both_strict"].sum()) == 29
+    assert int(comp["strict_p0m_rescue"].sum()) == 0
     cats = ["Passes\nboth tests", "Passes the\nrandom-signature\ntest only",
             "Passes the\ncomposite\ntest only", "Passes\nneither test"]
     # Color encodes the signature (cleaned = slate blue, unfiltered = amber);
@@ -388,8 +543,10 @@ def fig3_transport():
     ax.set_yticks([0, 10, 20, 30])
     ax.set_yticklabels(["0", "10", "20", "30"])
     ax.set_ylim(0, 34)
-    ax.legend(frameon=False, loc="upper right", fontsize=11)
-    ax.set_title("Whether the mouse signature's age signal appears in human cohorts",
+    ax.legend(frameon=False, loc="upper left", fontsize=11)
+    ax.set_title("Whether the mouse signature's age signal appears in human cohorts\n"
+                 "Rescue check: the unfiltered signature passes both tests in 0 of the 29 units\n"
+                 "where the cleaned signature passes neither, so cleaning did not throw away the signal",
                  fontsize=12)
     fig.tight_layout()
     save(fig, "fig3-transport")
@@ -401,6 +558,21 @@ def fig4_interneuron():
     tr = genes[genes["gene"] == "TRMT11"]
     assert set(tr["short_type"]) == {"VIP", "pvalb", "sst"}
     assert (tr["tier"] == "both_FDR").all()
+    # ring counts: same-direction genes passing FDR correction in both cohorts
+    both_counts = genes[genes["tier"] == "both_FDR"].groupby("short_type").size().to_dict()
+    assert both_counts.get("VIP", 0) == 4, both_counts
+    assert both_counts.get("pvalb", 0) == 8, both_counts
+    assert both_counts.get("sst", 0) == 41, both_counts
+    assert both_counts.get("GABA", 0) == 0, both_counts
+    # TRMT11 slopes: 0.00205 to 0.00406 log counts per 10,000 per year
+    assert abs(tr["slope_mssm"].min() - 0.00205) < 1e-4, tr["slope_mssm"].min()
+    assert abs(tr["slope_hbcc"].max() - 0.00406) < 1e-4, tr["slope_hbcc"].max()
+    # ONE common axis scale across all four panels: the largest absolute
+    # slope in any panel is 0.01186 (SST), so 0.012 covers every panel.
+    assert genes[["slope_mssm", "slope_hbcc"]].abs().max().max() < 0.012
+    lim = 0.012
+    titles = {"VIP": "VIP interneurons", "pvalb": "PVALB interneurons",
+              "sst": "SST interneurons", "GABA": "Broad GABAergic neurons"}
     fig, axes = plt.subplots(2, 2, figsize=(9.0, 7.6))
     for ax, short in zip(axes.ravel(), ("VIP", "pvalb", "sst", "GABA")):
         part = genes[genes["short_type"] == short]
@@ -412,22 +584,23 @@ def fig4_interneuron():
                    s=28, facecolors="none", edgecolors="#147d82", linewidths=1.2)
         ax.axhline(0, color="#dddddd", lw=1.0)
         ax.axvline(0, color="#dddddd", lw=1.0)
-        lim = max(np.abs(part[["slope_mssm", "slope_hbcc"]].to_numpy()).max(), 1e-6) * 1.05
         ax.set_xlim(-lim, lim)
         ax.set_ylim(-lim, lim)
         ax.set_xticks([-lim, -lim / 2, 0, lim / 2, lim])
         ax.set_xticklabels([f"{t:.3f}" for t in [-lim, -lim / 2, 0, lim / 2, lim]])
         ax.set_yticks([-lim, -lim / 2, 0, lim / 2, lim])
         ax.set_yticklabels([f"{t:.3f}" for t in [-lim, -lim / 2, 0, lim / 2, lim]])
-        ax.set_title("Broad GABAergic neurons" if short == "GABA" else f"{short} interneurons",
-                     fontsize=12)
+        ax.set_title(titles[short], fontsize=12)
         ax.set_xlabel("Mount Sinai brain samples (MSSM) age slope", fontsize=11)
         ax.set_ylabel("Human Brain Collection Core (HBCC) age slope", fontsize=11)
         t = tr[tr["short_type"] == short]
         if len(t):
             row = t.iloc[0]
+            # SST label goes down-right of the point: the ring cluster sits
+            # up-right of TRMT11 there, and the down-right area is clear.
+            xytext = (12, -24) if short == "sst" else (10, 8)
             ax.annotate("TRMT11", (row["slope_mssm"], row["slope_hbcc"]),
-                        textcoords="offset points", xytext=(10, 8), fontsize=11,
+                        textcoords="offset points", xytext=xytext, fontsize=11,
                         fontweight="bold", color="#147d82",
                         arrowprops=dict(arrowstyle="-", color="#147d82", lw=1.0))
     fig.suptitle("Genes passing false discovery rate correction in Mount Sinai brain samples (MSSM);\n"
