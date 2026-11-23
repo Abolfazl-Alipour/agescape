@@ -1,0 +1,20 @@
+# Debiased naive CD4 T cell residual-dispersion slopes, Yazar blood, mature 30-plus
+# Transcription only, not new analysis.
+# Source: reports/followup-mature-block1.md, section 5.7 (lines 228-230).
+# Primary slope and calibration values are copied verbatim from that report.
+# slope units: residual dispersion units per decade. p values are two-sided.
+# calibration_bias_fraction is the share of the primary slope accounted for
+# by the finite-cell calibration curve (56.4 percent).
+arm,slope_per_decade,p_value,calibration_bias_fraction,note
+primary,0.00071,5.174e-08,0,Primary model; q 8.279e-07; n 777 donors
+reweighted,0.00080,1.165e-06,0,Composition-reweighted arm
+induced_by_calibration,0.000401,8.40e-07,0.564,Finite-cell calibration curve slope; accounts for 56.4 percent of the primary slope
+debiased,0.000313,0.000638,0.564,Primary slope minus calibration curve; still significant
+debiased_plus_depth,0.000295,0.00106,0.564,Debiased slope after depth adjustment
+debiased_plus_logN,0.000286,0.00660,0.564,Debiased slope after adding log eligible cell count
+debiased_plus_N_plus_depth,0.00024,0.01893,0.564,Debiased slope after adding cell count and depth
+overlap_weights,0.00054,0.01236,0,Li and Li (2019) overlap weights before adjustment
+overlap_weights_plus_logN,0.00024,0.1722,0,Overlap weights after adding log eligible cell count; null
+overlap_weights_plus_N_plus_depth,0.00016,0.3464,0,Overlap weights after adding cell count and depth; null
+unadjusted,0.00003,0.8142,0,Unadjusted arm; null
+rarefied_1500,0.00008,0.7971,0,Rarefied at 1500 molecules arm; null
