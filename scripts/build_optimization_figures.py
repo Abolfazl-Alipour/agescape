@@ -14,7 +14,7 @@ regression slope, drawn through the data center; the slope is refit from the
 exported per-donor file and asserted equal to the committed slope.
 
 Fig 1: mature-to-old cell-fraction age slopes (forest) plus donor
-  scatterplots with fitted lines for the five headline fraction rows.
+  scatterplots with fitted lines for the three headline fraction rows.
 Fig 2: donor scatterplots of partial residuals with fitted lines:
   (a) stratified scatter versus age in Gao heart, (b) stratified scatter
   versus age in Yazar blood, (c) pooled center shift versus age in
@@ -137,12 +137,10 @@ def fig1_composition():
         ("Human", "brain", "oligodendrocyte"): "Brain oligodendrocyte",
         ("Human", "brain", "oligodendrocyte precursor cell"): "Brain oligodendrocyte precursor",
     }
-    # --- donor data for the five headline rows ---
+    # --- donor data for the three headline rows ---
     clr = pd.read_csv(RESULTS / "followup-mature-composition-donor-clr.csv")
     human_comp = pd.read_csv(RESULTS / "followup-mature-composition-human.csv")
     headline = [
-        ("lung", "Lung_Integrated", "club cell", "Lung club cell"),
-        ("lung", "Lung_Integrated", "multiciliated epithelial cell", "Lung multiciliated\nepithelial"),
         ("brain", "MSSM_DLPFC", "L6b glutamatergic neuron of the primary motor cortex", "L6b glutamatergic\nneuron"),
         ("brain", "MSSM_DLPFC", "oligodendrocyte", "Oligodendrocyte"),
         ("brain", "MSSM_DLPFC", "oligodendrocyte precursor cell", "Oligodendrocyte\nprecursor"),
@@ -169,10 +167,10 @@ def fig1_composition():
             "q": float(crow["q_refit_family"]), "p": float(crow["pvalue"]),
         })
     # Donor-panel q values must be the refit family (caption and body),
-    # in headline order: club, multiciliated, L6b, oligodendrocyte, OPC.
+    # in headline order: L6b, oligodendrocyte, OPC.
     assert np.allclose([d["q"] for d in donor_panels],
-                       [0.0109024836707222, 0.0257859415153316, 0.0109024836707222,
-                        0.0109024836707222, 0.0109024836707222])
+                       [0.0109024836707222, 0.0109024836707222,
+                        0.0109024836707222])
 
     # Forest is stacked (mouse on top, human below) with heights in the
     # ratio of the row counts (9 to 5), so both panels have the same row
@@ -181,8 +179,8 @@ def fig1_composition():
     gs = fig.add_gridspec(3, 1, height_ratios=[9, 5, 8], hspace=0.55)
     ax_mouse = fig.add_subplot(gs[0, 0])
     ax_human = fig.add_subplot(gs[1, 0])
-    gs_bot = gs[2, 0].subgridspec(1, 5, wspace=0.35)
-    ax_donor = [fig.add_subplot(gs_bot[0, i]) for i in range(5)]
+    gs_bot = gs[2, 0].subgridspec(1, 3, wspace=0.35)
+    ax_donor = [fig.add_subplot(gs_bot[0, i]) for i in range(3)]
 
     for ax, species, color, xlabel in (
             (ax_mouse, "Mouse", MOUSE, "CLR slope per month"),
@@ -249,7 +247,7 @@ def fig1_composition():
     ax_donor[0].set_ylabel("CLR value (sex-adjusted)", fontsize=11)
     fig.subplots_adjust(left=0.21, right=0.98, top=0.92, bottom=0.08)
     save(fig, "fig1-composition")
-    print("fig1-composition rebuilt: forest + 5 donor panels; slopes refit and asserted")
+    print("fig1-composition rebuilt: forest + 3 donor panels; slopes refit and asserted")
 
 
 def _fit_stratified_partial_residuals(ds, metric, table_csv, donor_csv, out_col, n_cells_min=None):
