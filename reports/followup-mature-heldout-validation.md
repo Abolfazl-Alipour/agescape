@@ -63,7 +63,7 @@ never saw. Pass bar per unit: both tests q below 0.05 in the predicted
   has almost no power here: 6 to 8 mice, 3 to 5 residual degrees of freedom.
 - Scale check: median observed slope 0.160 against median random-slope
   standard deviation 0.016, a 10-fold gap. That is why the empirical p hits
-  its floor (0.0005, i.e. 1 of 2,001) for 22 units while the composite test
+  its floor (0.0005, i.e. 1 of 2,001) for 20 units while the composite test
   fails: the empirical test asks whether the gene set carries more age signal
   than a random set of the same size, and it does by an order of magnitude.
 - 10 units untestable, all for the same reason: fewer than 3 mice per side

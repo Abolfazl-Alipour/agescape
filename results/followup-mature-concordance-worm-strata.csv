@@ -1,0 +1,2 @@
+species,tissue,cohort,n_units,n_pairs,n_donors_in_stratum,n_genes,observed_mean_pearson,joint_null_mean,joint_null_sd,joint_null_ci95_low,joint_null_ci95_high,joint_p_greater,n_permutations
+C. elegans,Whole animal,Gao_GSE229022,13,78,9,10791,0.2760037370019323,0.12089050982680831,0.060051223006692904,0.03202586353204401,0.2532261367493273,0.014985014985014986,1000

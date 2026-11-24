@@ -5,23 +5,23 @@ Gao_Heart,family_b_genes_concordance,2026-11-21T21:36:46.757703+00:00,2026-11-21
 Gao_Heart,family_c_transport,2026-11-21T21:36:52.961317+00:00,2026-11-21T21:37:44.048810+00:00,51.088,4226.93,Gemini 4 Neon (XHigh),ok,"P1m_tested=14, P0m_tested=14, seed=20261105, draws=2000"
 Gao_Heart,cohort_total,2026-11-21T21:35:48.026889+00:00,2026-11-21T21:37:44.671869+00:00,116.645,4226.93,Gemini 4 Neon (XHigh),ok,rows=68
 Yazar_Blood,stream_h5ad_30plus,2026-11-21T21:37:55.734668+00:00,2026-11-21T21:41:47.590995+00:00,231.856,5829.86,Gemini 4 Neon (XHigh),ok,"932 mature donors, cells_30=1181668, bit_parity_yazar_cache=PASS"
-Perez_Blood_Controls,download_h5ad,2026-11-21T22:37:50.508016+00:00,2026-11-21T22:39:45.926831+00:00,115.419,243.83,Gemini 4 Neon (XHigh),ok,bytes=12218105530
-Perez_Blood_Controls,stream_h5ad_30plus,2026-11-21T22:39:45.944162+00:00,2026-11-21T22:41:50.460787+00:00,124.517,1998.79,Gemini 4 Neon (XHigh),ok,"61 mature donors, cells_30=317848"
-Yazar_Blood,family_a_fractions,2026-11-21T22:45:41.635730+00:00,2026-11-21T22:45:41.743650+00:00,0.108,2977.47,Gemini 4 Neon (XHigh),ok,"pool_fe=28, unadj=28"
-Yazar_Blood,family_b_pool_fe,2026-11-21T22:46:10.541801+00:00,2026-11-21T22:46:42.421288+00:00,31.88,5041.33,Gemini 4 Neon (XHigh),ok,"ct_tests=134133, ct_sig=908, pool_sig=5445, conc_r=0.0794"
-Yazar_Blood,family_b_unadjusted,2026-11-21T22:46:42.424905+00:00,2026-11-21T22:47:07.572249+00:00,25.147,5041.33,Gemini 4 Neon (XHigh),ok,"unadj_ct_tests=160346, unadj_ct_sig=7887, conc_r=0.2297"
-Guilliams_Liver_Sorted,download_h5ad,2026-11-21T22:47:21.060159+00:00,2026-11-21T22:47:38.744848+00:00,17.685,243.68,Gemini 4 Neon (XHigh),ok,bytes=1026110286
-Guilliams_Liver_Sorted,stream_h5ad_30plus,2026-11-21T22:47:38.754396+00:00,2026-11-21T22:47:59.892632+00:00,21.138,2550.48,Gemini 4 Neon (XHigh),ok,"mature_donors=9, cells_30=78596"
-Perez_Blood_Controls,arm_cohort_multihot,2026-11-21T22:49:27.375786+00:00,2026-11-21T22:50:10.559784+00:00,43.184,639.54,Gemini 4 Neon (XHigh),ok,"ct_sig=3, untestable_bc=0"
-Perez_Blood_Controls,arm_cohort_level_ge2,2026-11-21T22:50:10.563675+00:00,2026-11-21T22:50:39.569812+00:00,29.006,643.44,Gemini 4 Neon (XHigh),ok,"ct_sig=3, untestable_bc=0"
-Perez_Blood_Controls,arm_unadjusted,2026-11-21T22:50:39.574286+00:00,2026-11-21T22:51:14.529461+00:00,34.955,643.44,Gemini 4 Neon (XHigh),ok,"ct_sig=2186, untestable_bc=0"
-Perez_Blood_Controls,cohort_total,2026-11-21T22:49:25.994648+00:00,2026-11-21T22:51:14.540639+00:00,108.546,643.44,Gemini 4 Neon (XHigh),ok,rows=126
-Guilliams_Liver_Sorted,arm_primary,2026-11-21T22:51:18.193587+00:00,2026-11-21T22:51:29.777427+00:00,11.584,368.35,Gemini 4 Neon (XHigh),ok,"n=9, ct_sig=1"
-Guilliams_Liver_Sorted,arm_no_malignant_resection,2026-11-21T22:51:29.782119+00:00,2026-11-21T22:51:39.520281+00:00,9.738,370.46,Gemini 4 Neon (XHigh),ok,"n=7, ct_sig=0"
-Guilliams_Liver_Sorted,arm_no_any_tumor,2026-11-21T22:51:39.525010+00:00,2026-11-21T22:51:47.830755+00:00,8.306,370.46,Gemini 4 Neon (XHigh),ok,"n=6, ct_sig=0"
-Guilliams_Liver_Sorted,arm_female_only,2026-11-21T22:51:47.834600+00:00,2026-11-21T22:51:56.225457+00:00,8.391,370.46,Gemini 4 Neon (XHigh),ok,"n=7, ct_sig=0"
-Guilliams_Liver_Sorted,arm_adjust_citeseq,2026-11-21T22:51:56.228573+00:00,2026-11-21T22:52:05.751280+00:00,9.523,384.05,Gemini 4 Neon (XHigh),ok,"n=9, ct_sig=0"
-Guilliams_Liver_Sorted,cohort_total,2026-11-21T22:51:17.355212+00:00,2026-11-21T22:52:05.761978+00:00,48.407,384.05,Gemini 4 Neon (XHigh),ok,rows=137
-Yazar_Blood,family_c_pool_fe,2026-11-21T22:47:07.575563+00:00,2026-11-21T22:54:34.719189+00:00,447.144,5041.33,Gemini 4 Neon (XHigh),ok,"P1m_ct=16, P0m_ct=16, seed=20261105"
-Yazar_Blood,cohort_total,2026-11-21T22:43:08.094207+00:00,2026-11-21T22:54:34.755375+00:00,686.661,5041.33,Gemini 4 Neon (XHigh),ok,rows=90
-Batch_A_All,finalize_and_verify,2026-11-21T22:55:26.211380+00:00,2026-11-21T22:55:26.237136+00:00,0.026,242.8,Gemini 4 Neon (XHigh),ok,"summary_rows=30, bh_rows=866, max_bh_diff=1.110e-16, sha256_checked=36"
+Perez_Blood_Controls,download_h5ad,2026-11-21T22:37:50.508016+00:00,2026-11-21T22:39:45.926831+00:00,115.419,243.83,direct execution (no model),ok,bytes=12218105530
+Perez_Blood_Controls,stream_h5ad_30plus,2026-11-21T22:39:45.944162+00:00,2026-11-21T22:41:50.460787+00:00,124.517,1998.79,direct execution (no model),ok,"61 mature donors, cells_30=317848"
+Yazar_Blood,family_a_fractions,2026-11-21T22:45:41.635730+00:00,2026-11-21T22:45:41.743650+00:00,0.108,2977.47,direct execution (no model),ok,"pool_fe=28, unadj=28"
+Yazar_Blood,family_b_pool_fe,2026-11-21T22:46:10.541801+00:00,2026-11-21T22:46:42.421288+00:00,31.88,5041.33,direct execution (no model),ok,"ct_tests=134133, ct_sig=908, pool_sig=5445, conc_r=0.0794"
+Yazar_Blood,family_b_unadjusted,2026-11-21T22:46:42.424905+00:00,2026-11-21T22:47:07.572249+00:00,25.147,5041.33,direct execution (no model),ok,"unadj_ct_tests=160346, unadj_ct_sig=7887, conc_r=0.2297"
+Guilliams_Liver_Sorted,download_h5ad,2026-11-21T22:47:21.060159+00:00,2026-11-21T22:47:38.744848+00:00,17.685,243.68,direct execution (no model),ok,bytes=1026110286
+Guilliams_Liver_Sorted,stream_h5ad_30plus,2026-11-21T22:47:38.754396+00:00,2026-11-21T22:47:59.892632+00:00,21.138,2550.48,direct execution (no model),ok,"mature_donors=9, cells_30=78596"
+Perez_Blood_Controls,arm_cohort_multihot,2026-11-21T22:49:27.375786+00:00,2026-11-21T22:50:10.559784+00:00,43.184,639.54,direct execution (no model),ok,"ct_sig=3, untestable_bc=0"
+Perez_Blood_Controls,arm_cohort_level_ge2,2026-11-21T22:50:10.563675+00:00,2026-11-21T22:50:39.569812+00:00,29.006,643.44,direct execution (no model),ok,"ct_sig=3, untestable_bc=0"
+Perez_Blood_Controls,arm_unadjusted,2026-11-21T22:50:39.574286+00:00,2026-11-21T22:51:14.529461+00:00,34.955,643.44,direct execution (no model),ok,"ct_sig=2186, untestable_bc=0"
+Perez_Blood_Controls,cohort_total,2026-11-21T22:49:25.994648+00:00,2026-11-21T22:51:14.540639+00:00,108.546,643.44,direct execution (no model),ok,rows=126
+Guilliams_Liver_Sorted,arm_primary,2026-11-21T22:51:18.193587+00:00,2026-11-21T22:51:29.777427+00:00,11.584,368.35,direct execution (no model),ok,"n=9, ct_sig=1"
+Guilliams_Liver_Sorted,arm_no_malignant_resection,2026-11-21T22:51:29.782119+00:00,2026-11-21T22:51:39.520281+00:00,9.738,370.46,direct execution (no model),ok,"n=7, ct_sig=0"
+Guilliams_Liver_Sorted,arm_no_any_tumor,2026-11-21T22:51:39.525010+00:00,2026-11-21T22:51:47.830755+00:00,8.306,370.46,direct execution (no model),ok,"n=6, ct_sig=0"
+Guilliams_Liver_Sorted,arm_female_only,2026-11-21T22:51:47.834600+00:00,2026-11-21T22:51:56.225457+00:00,8.391,370.46,direct execution (no model),ok,"n=7, ct_sig=0"
+Guilliams_Liver_Sorted,arm_adjust_citeseq,2026-11-21T22:51:56.228573+00:00,2026-11-21T22:52:05.751280+00:00,9.523,384.05,direct execution (no model),ok,"n=9, ct_sig=0"
+Guilliams_Liver_Sorted,cohort_total,2026-11-21T22:51:17.355212+00:00,2026-11-21T22:52:05.761978+00:00,48.407,384.05,direct execution (no model),ok,rows=137
+Yazar_Blood,family_c_pool_fe,2026-11-21T22:47:07.575563+00:00,2026-11-21T22:54:34.719189+00:00,447.144,5041.33,direct execution (no model),ok,"P1m_ct=16, P0m_ct=16, seed=20261105"
+Yazar_Blood,cohort_total,2026-11-21T22:43:08.094207+00:00,2026-11-21T22:54:34.755375+00:00,686.661,5041.33,direct execution (no model),ok,rows=90
+Batch_A_All,finalize_and_verify,2026-11-21T22:55:26.211380+00:00,2026-11-21T22:55:26.237136+00:00,0.026,242.8,direct execution (no model),ok,"summary_rows=30, bh_rows=866, max_bh_diff=1.110e-16, sha256_checked=36"
