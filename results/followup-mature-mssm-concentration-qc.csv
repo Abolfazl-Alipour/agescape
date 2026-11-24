@@ -1,0 +1,26 @@
+cell_type,n_donors_30plus_with_cells,n_cells_before_depth_gate,n_donors_ge20_before_depth_gate,n_cells_ge1500,n_cells_excluded_lt1500,n_donors_ge20_after_depth_gate,eligible_slope_6donors_20cells,n_young_reference_donors_ge20,E1_reference_available,E1_n_markers_full,E2_strata_reference_available,E2_strata_n_markers_full,tested_measures
+B cell,36,98,2,93,5,2,False,0,False,0,,0;0;0;0,
+GABAergic neuron,205,13224,153,13219,5,153,True,8,True,2,s4_9000_18000,0;0;0;11850,E1;E2_stratum;scatter;shannon
+L2/3 intratelencephalic projecting glutamatergic neuron,206,88208,195,88163,45,195,True,8,True,1,s3_4500_9000;s4_9000_18000,0;0;14578;11592,E1;E2_stratum;scatter;shannon
+L2/3-6 intratelencephalic projecting glutamatergic neuron,208,58541,193,58536,5,193,True,8,True,1,,0;0;0;0,E1;scatter;shannon
+L5 extratelencephalic projecting glutamatergic cortical neuron,90,184,0,184,0,0,False,0,False,0,,0;0;0;0,
+L5/6 near-projecting glutamatergic neuron,187,4177,87,4175,2,87,True,2,False,0,,0;0;0;0,scatter;shannon
+L6 corticothalamic-projecting glutamatergic cortical neuron,196,7528,125,7526,2,125,True,6,True,3,,0;0;0;0,E1;scatter;shannon
+L6 intratelencephalic projecting glutamatergic neuron,197,10299,123,10299,0,123,True,2,True,1,,0;0;0;0,E1;scatter;shannon
+L6b glutamatergic neuron of the primary motor cortex,193,4319,74,4319,0,74,True,1,False,0,,0;0;0;0,scatter;shannon
+T cell,144,821,7,778,43,7,True,1,False,0,,0;0;0;0,
+VIP GABAergic cortical interneuron,206,39254,193,39232,22,193,True,8,True,2,s4_9000_18000,0;0;0;11800,E1;E2_stratum;scatter;shannon
+astrocyte,209,104723,203,104411,312,203,True,8,True,5,s2_2500_4500;s3_4500_9000;s4_9000_18000,0;17421;15287;13246,E1;E2_stratum;scatter;shannon
+endothelial cell,197,4639,89,4543,96,87,True,6,True,2,,0;0;0;0,E1;scatter;shannon
+lamp5 GABAergic cortical interneuron,202,14854,175,14850,4,175,True,7,True,2,,0;0;0;0,E1;scatter;shannon
+microglial cell,208,37615,196,36837,778,196,True,8,True,8,s1_1500_2500;s2_2500_4500;s3_4500_9000,19748;18248;16740;0,E1;E2_stratum;scatter;shannon
+natural killer cell,139,548,2,528,20,2,False,0,False,0,,0;0;0;0,
+oligodendrocyte,209,309375,206,309065,310,206,True,8,True,9,s1_1500_2500;s2_2500_4500;s3_4500_9000;s4_9000_18000,19857;18551;16971;15118,E1;E2_stratum;scatter;shannon
+oligodendrocyte precursor cell,209,55491,205,55383,108,205,True,8,True,5,s2_2500_4500;s3_4500_9000;s4_9000_18000,0;18033;15726;14069,E1;E2_stratum;scatter;shannon
+pericyte,201,3947,84,3910,37,82,True,6,True,3,,0;0;0;0,E1;scatter;shannon
+perivascular macrophage,181,1801,24,1775,26,24,True,2,False,0,,0;0;0;0,scatter;shannon
+plasma cell,6,15,0,15,0,0,False,0,False,0,,0;0;0;0,
+pvalb GABAergic cortical interneuron,205,30768,185,30761,7,185,True,8,True,0,s4_9000_18000,0;0;0;11724,E2_stratum;scatter;shannon
+smooth muscle cell,158,788,7,779,9,7,True,2,False,0,,0;0;0;0,
+sst GABAergic cortical interneuron,205,30759,174,30742,17,174,True,8,True,4,s3_4500_9000;s4_9000_18000,0;0;15813;13377,E1;E2_stratum;scatter;shannon
+vascular leptomeningeal cell,196,3817,41,3781,36,41,True,4,True,2,,0;0;0;0,E1;scatter;shannon
