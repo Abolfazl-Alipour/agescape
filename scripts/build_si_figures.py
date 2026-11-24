@@ -534,30 +534,23 @@ def build_s6():
                 return r
         raise AssertionError(f"not found: {path} {gene_set} {role}")
 
-    e1g = get("results/followup-mature-fulldepth-gao-ectopic.csv", "E1", "primary_full_depth")
-    e1y = get("results/followup-mature-fulldepth-yazar-ectopic.csv", "E1", "primary_full_depth")
     e2g = get("results/followup-mature-fulldepth-gao-ectopic.csv", "E2_stratum",
               "primary_depth_matched_e2")
     e2y = get("results/followup-mature-fulldepth-yazar-ectopic.csv", "E2_stratum",
               "primary_depth_matched_e2")
-    for r, slope, p in [(e1g, -0.063, 0.468), (e1y, -0.019, 0.073),
-                        (e2g, -0.127, 0.031), (e2y, -0.033, 0.0031)]:
+    for r, slope, p in [(e2g, -0.127, 0.031), (e2y, -0.033, 0.0031)]:
         assert abs(float(r["slope_sd_per_decade"]) - slope) < 5e-4, (r, slope)
         assert abs(float(r["pvalue"]) - p) < 5e-4, (r, p)
 
     pts = [
-        ("Gao heart cohort\noff-program count",
-         e1g, "slope -0.063, p 0.47", MOUSE),
-        ("Gao heart cohort\noff-program stratum count",
+        ("Gao heart cohort\nstricter off-program count",
          e2g, "slope -0.127, p 0.031", MOUSE),
-        ("Yazar blood cohort\noff-program count",
-         e1y, "slope -0.019, p 0.073", HUMAN),
-        ("Yazar blood cohort\noff-program stratum count",
+        ("Yazar blood cohort\nstricter off-program count",
          e2y, "slope -0.033, p 0.0031", HUMAN),
     ]
     fig, ax = plt.subplots(figsize=(9, 5.6))
     style_ax(ax)
-    ys = [3, 2, 1, 0]
+    ys = [1, 0]
     for (lab, r, txt, col), y in zip(pts, ys):
         slope = float(r["slope_sd_per_decade"])
         lo = float(r["ci95_low_sd"])
@@ -572,16 +565,14 @@ def build_s6():
     ax.set_yticklabels([p[0] for p in pts])
     ax.set_xticks([-0.25, -0.20, -0.15, -0.10, -0.05, 0, 0.05, 0.10])
     ax.set_xlim(-0.28, 0.14)
-    ax.set_ylim(-0.6, 3.6)
+    ax.set_ylim(-0.6, 1.6)
     ax.set_xlabel("Change per decade of age (standard deviations)")
-    ax.set_title("Off-program stratum count falls with age; off-program count shows no clear change",
-                 fontsize=12)
+    ax.set_title("Stricter off-program count falls with age in both cohorts", fontsize=12)
     ax.text(0.0, -0.30,
-            "Off-program: genes a cell expresses that belong to other cell types.\n"
-            "Off-program count: Gao 104 donors, Yazar 925 donors. Off-program stratum count: Gao 103 donors, "
-            "Yazar 919 donors.",
+            "Stricter count: genes silent in young cells of the same type, matched by depth.\n"
+            "Gao 103 donors, Yazar 919 donors.",
             transform=ax.transAxes, fontsize=10, va="top", ha="left")
-    save(fig, "s6-ectopic-e1-e2")
+    save(fig, "s6-ectopic-e2")
 
 
 if __name__ == "__main__":
