@@ -26,7 +26,7 @@ Fig 2: donor scatterplots of partial residuals with fitted lines:
   center-shift panels. Scatter and Shannon values are standardized
   within cell type (cell-type mean subtracted, divided by cell-type SD),
   matching the stratified model. The file is fig2-narrowing-panels.
-Fig 3: core 48-unit transport verdicts, cleaned versus unfiltered
+Fig 3: core 48-unit transport verdicts, cleaned-only
   mature-to-old signature, in plain words.
 Fig 4: mature interneuron Mount Sinai versus Human Brain Collection Core age
   slopes, TRMT11 labeled (design unchanged, style only).
@@ -512,49 +512,31 @@ def fig2_mature_drift():
 def fig3_transport():
     s = pd.read_csv(RESULTS / "followup-mature-p1m-block5-summary.csv")
     p1 = s[s["gene_set"] == "P1m"].iloc[0]
-    p0 = s[s["gene_set"] == "P0m"].iloc[0]
     assert (p1["both_pass"], p1["empirical_only"], p1["composite_only"],
             p1["fail_both"]) == (2, 13, 4, 29)
-    assert (p0["both_pass"], p0["empirical_only"], p0["composite_only"],
-            p0["fail_both"]) == (3, 15, 5, 25)
-    # Rescue check, verified at unit level: the unfiltered signature passes
-    # both tests in 0 of the 29 core units where the cleaned signature
-    # passes neither, so cleaning did not throw away the signal.
-    comp = pd.read_csv(RESULTS / "followup-mature-p1m-block5-p0m-comparison.csv")
-    assert len(comp) == 48, len(comp)
-    assert int(comp["p1m_fails_both_strict"].sum()) == 29
-    assert int(comp["strict_p0m_rescue"].sum()) == 0
     cats = ["Passes\nboth tests", "Passes the\nrandom-signature\ntest only",
             "Passes the\ncomposite\ntest only", "Passes\nneither test"]
-    # Color encodes the signature (cleaned = slate blue, unfiltered = amber);
-    # the category is the x-axis label. This makes the legend correct: the
-    # two legend swatches are distinct colors, one per signature.
     fig, ax = plt.subplots(figsize=(10.5, 5.4))
     x = np.arange(len(cats))
-    w = 0.36
-    for off, row, label, color in (
-            (-w / 2, p1, "Cleaned mature-to-old signature (1,914 genes)", MOUSE),
-            (w / 2, p0, "Unfiltered mature-to-old signature (2,598 genes)", HUMAN)):
-        vals = [row["both_pass"], row["empirical_only"], row["composite_only"],
-                row["fail_both"]]
-        bars = ax.bar(x + off, vals, w, label=label, color=color, edgecolor="white",
-                      linewidth=1.0)
-        for b, v in zip(bars, vals):
-            ax.text(b.get_x() + b.get_width() / 2, v + 0.6, str(v),
-                    ha="center", fontsize=11)
+    vals = [p1["both_pass"], p1["empirical_only"], p1["composite_only"],
+            p1["fail_both"]]
+    bars = ax.bar(x, vals, 0.58,
+                  label="Cleaned mature-to-old signature (1,914 genes)",
+                  color=MOUSE, edgecolor="white", linewidth=1.0)
+    for b, v in zip(bars, vals):
+        ax.text(b.get_x() + b.get_width() / 2, v + 0.6, str(v),
+                ha="center", fontsize=11)
     ax.set_xticks(x, cats, fontsize=11)
     ax.set_ylabel("Core units (n = 48)", fontsize=11)
     ax.set_yticks([0, 10, 20, 30])
     ax.set_yticklabels(["0", "10", "20", "30"])
     ax.set_ylim(0, 34)
     ax.legend(frameon=False, loc="upper left", fontsize=11)
-    ax.set_title("Whether the mouse signature's age signal appears in human cohorts\n"
-                 "Rescue check: the unfiltered signature passes both tests in 0 of the 29 units\n"
-                 "where the cleaned signature passes neither, so cleaning did not throw away the signal",
+    ax.set_title("Whether the mouse signature's age signal appears in human cohorts",
                  fontsize=12)
     fig.tight_layout()
     save(fig, "fig3-transport")
-    print("fig3-transport rebuilt: cleaned 2/13/4/29, unfiltered 3/15/5/25 (plain words)")
+    print("fig3-transport rebuilt: cleaned-only 2/13/4/29 (plain words)")
 
 
 def fig4_interneuron():
