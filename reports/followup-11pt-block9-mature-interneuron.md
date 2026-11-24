@@ -1,5 +1,7 @@
 # Block 9 mature-only interneuron refit
 
+Correction (2026-11-24): the HBCC data exists at /home/reza/projects/agescape-revision-data/human-h5ads/5c97eeeb-7e52-44b3-b010-b832b1f5424c.h5ad. The mature refit was completed by Item 7, scripts/run_followup_mature_interneuron_replication.py; see reports/followup-mature-hbcc-provenance.md. The UNTESTABLE verdict below applied only to this block's scratch path, scratch/hbcc.h5ad, which was never filled in. It is not a claim that HBCC data is absent.
+
 ## Verdict
 
 INCONCLUSIVE. MSSM was refit for donors age 30 years and older, but every subtype is UNTESTABLE for mature-only MSSM-to-HBCC replication because `/home/reza/projects/agescape-revision/scratch/hbcc.h5ad` is absent. Under the frozen rule, any subtype UNTESTABLE in either cohort makes the block INCONCLUSIVE. No cross-cohort null is claimed. No gene among FBN1, GABRB1, IGF1R, PHF3, TRMT11, and ZBTB16 can be confirmed as a surviving mature-only cross-cohort shared gene. All six are UNTESTABLE in HBCC for VIP, pvalb, and sst. In the supplemental MSSM-only WLS fit, GABRB1, IGF1R, and TRMT11 pass FDR in all three subtypes; FBN1 and PHF3 pass in pvalb and sst but not VIP; ZBTB16 passes only in sst. These MSSM-only patterns are not substitutes for replication.
