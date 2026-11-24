@@ -15,7 +15,8 @@ def main():
     abstract = text.split(r"\section*{Abstract}", 1)[1].split(r"\section*{Introduction}", 1)[0]
     plain = re.sub(r"\\[a-zA-Z]+|[{}]", " ", abstract)
     words = re.findall(r"\b[\w'-]+\b", plain)
-    assert len(words) <= 300, f"Abstract has {len(words)} words"
+    # 2026-11-23: Reza dropped the 300-word abstract cap ("I don't care how
+    # long the abstract gets"). The count is still printed, not enforced.
     # 2026-11-09: Reza ordered p-values and Bayesian results INTO the abstract; the no-statistics rule is retired.
     assert "—" not in text and "–" not in text
     # No fifth main figure. Supporting figures (S1 Fig, S2 Fig, ...) are
