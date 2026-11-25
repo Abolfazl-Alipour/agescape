@@ -16,7 +16,7 @@ Date: 2026-11-25. Branch: `remove-zebrafish-nmr`, from master 43f9734. Ordered b
 
 ## The 605-test family recompute
 
-1. Method: Benjamini-Hochberg correction over the p-values in `results/rev3-composition-global-bh-624.csv`, dropping the 15 zebrafish and 4 naked mole rat rows. Script: `/tmp/recompute_605.py` (run on Beast in the worktree).
+1. Method: Benjamini-Hochberg correction over the p-values in `results/rev3-composition-global-bh-624.csv`, dropping the 15 zebrafish and 4 naked mole rat rows. Script: `scripts/recompute_605_family.py` (re-filed Nov 25 after the original /tmp/recompute_605.py was lost; it reproduces the committed 605 CSV exactly, max q diff 0.0, 45 passes, same rows).
 2. Verification: the same BH code reproduces the committed `q_global_bh_624` column to a maximum absolute difference of 2.2e-16 with 45 passes, and reproduces the committed `q_global_bh_431` column on the 431 core rows to the same tolerance. The new file `results/rev3-composition-global-bh-605.csv` (605 rows, new `q_global_bh_605` column) has 45 passes, the same 45 rows, zero gained, zero lost. Passes by species: fruit fly 26, mouse 11, human 6, worm 2. The 624 file is untouched as the historical record.
 3. Core mammalian family: 431 tests become 427 tests (136 mouse + 291 human). The 427-family BH was recomputed the same way and has the same 15 passes as the 431-family (all 15 are mouse/human rows; naked mole rat contributed 0 passes). The 32 retained / 12 not retained / 1 untestable (mouse bladder cell) reconciliation is unchanged.
 4. Values used in the tex:
