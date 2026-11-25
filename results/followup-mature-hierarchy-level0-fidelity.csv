@@ -1,0 +1,53 @@
+species,check,recomputed,committed,abs_diff,source,passed
+Mouse,within_tissue_mean,0.2097999520378178,0.2104673234508655,0.0006673714130476,results/followup-mature-concordance-mouse.csv,True
+Mouse,cross_tissue_mean,0.0604546581872375,0.0604398682277926,1.4789959444927447e-05,results/followup-mature-concordance-mouse.csv,True
+Mouse,n_units,59.0,59.0,0.0,results/followup-mature-concordance-mouse.csv,True
+Mouse,n_genes_primary,10633.0,10633.0,0.0,results/followup-mature-concordance-mouse.csv,True
+Mouse,n_within_pairs,260.0,260.0,0.0,results/followup-mature-concordance-mouse.csv,True
+Human,brain | HBCC_DLPFC mean,0.1849834289368076,0.1849834289368075,1.1102230246251563e-16,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | HBCC_DLPFC n_units,20.0,20.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | HBCC_DLPFC n_genes,24123.0,24123.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | HBCC_DLPFC n_donors,64.0,64.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | ImmuneAging_BAL mean,0.2544899765407406,0.2544899765407406,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | ImmuneAging_BAL n_units,26.0,26.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | ImmuneAging_BAL n_genes,16724.0,16724.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | ImmuneAging_BAL n_donors,8.0,8.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_LivingDonor mean,0.1181928358599646,0.1181928358599645,9.714451465470121e-17,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_LivingDonor n_units,6.0,6.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_LivingDonor n_genes,13213.0,13213.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_LivingDonor n_donors,19.0,19.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_SCR_v15 mean,0.1985189490165003,0.1985189490165003,5.551115123125783e-17,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_SCR_v15 n_units,9.0,9.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_SCR_v15 n_genes,14349.0,14349.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,kidney | Kidney_SCR_v15 n_donors,18.0,18.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_CellRef mean,0.1855744917323309,0.1855744917323309,5.551115123125783e-17,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_CellRef n_units,15.0,15.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_CellRef n_genes,11814.0,11814.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_CellRef n_donors,13.0,13.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_Integrated mean,0.1467672422605123,0.1467672422605123,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_Integrated n_units,31.0,31.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_Integrated n_genes,11270.0,11270.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,lung | Lung_Integrated n_donors,86.0,86.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | MSSM_DLPFC mean,0.1220138993482285,0.1220138993482285,5.551115123125783e-17,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | MSSM_DLPFC n_units,20.0,20.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | MSSM_DLPFC n_genes,22286.0,22286.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Human,brain | MSSM_DLPFC n_donors,208.0,208.0,0.0,results/followup-mature-concordance-human-strata.csv,True
+Fruit fly,head | AFCA mean,0.2580904212821753,0.2580904212821753,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,head | AFCA n_units,59.0,59.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,head | AFCA n_genes,3414.0,3414.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,head | AFCA n_donors,36.0,36.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,body | AFCA mean,0.1335945634327529,0.1335945634327529,2.775557561562892e-17,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,body | AFCA n_units,40.0,40.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,body | AFCA n_genes,4707.0,4707.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+Fruit fly,body | AFCA n_donors,36.0,36.0,0.0,results/followup-mature-concordance-fly-strata.csv,True
+C. elegans,Whole animal | Gao_GSE229022 mean,0.362094700428001,0.362094700428001,5.551115123125783e-17,results/followup-mature-concordance-worm-strata.csv,True
+C. elegans,Whole animal | Gao_GSE229022 n_units,10.0,10.0,0.0,results/followup-mature-concordance-worm-strata.csv,True
+C. elegans,Whole animal | Gao_GSE229022 n_genes,12723.0,12723.0,0.0,results/followup-mature-concordance-worm-strata.csv,True
+C. elegans,Whole animal | Gao_GSE229022 n_donors,9.0,9.0,0.0,results/followup-mature-concordance-worm-strata.csv,True
+Zebrafish,Testis fine cell types | GSE275361 mean,0.341484812401041,0.341484812401041,5.551115123125783e-17,results/reviewer-rev2-joint-concordance-zebrafish-strata.csv,True
+Zebrafish,Testis fine cell types | GSE275361 n_units,14.0,14.0,0.0,results/reviewer-rev2-joint-concordance-zebrafish-strata.csv,True
+Zebrafish,Testis fine cell types | GSE275361 n_genes,18923.0,18923.0,0.0,results/reviewer-rev2-joint-concordance-zebrafish-strata.csv,True
+Zebrafish,Testis fine cell types | GSE275361 n_donors,6.0,6.0,0.0,results/reviewer-rev2-joint-concordance-zebrafish-strata.csv,True
+Naked mole-rat,within_skin_mean_unfiltered,0.6146234361714419,0.6146234361714327,9.214851104388801e-15,results/reviewer-phase1-universality-permutations-nmr.csv,True
+Naked mole-rat,n_units,2.0,2.0,0.0,results/reviewer-phase1-universality-permutations-nmr.csv,True
+Naked mole-rat,n_genes_unfiltered,20273.0,20273.0,0.0,results/reviewer-phase1-universality-units.csv,True
