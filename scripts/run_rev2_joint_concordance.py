@@ -115,13 +115,25 @@ LOADERS = {"Human": human_strata, "Fruit fly": phase1.fly_strata,
            "C. elegans": phase1.worm_strata, "Zebrafish": phase1.zebrafish_strata}
 
 
-def load_strata(species: str, refresh: bool = False, mature_only: bool = False):
+def cache_directory(species: str, mature_only: bool = False) -> Path:
     directory = CACHE / SLUGS[species]
+    if mature_only and species == "C. elegans":
+        directory = directory / "mature-6plus"
+    return directory
+
+
+def load_strata(species: str, refresh: bool = False, mature_only: bool = False):
+    directory = cache_directory(species, mature_only=mature_only)
     directory.mkdir(parents=True, exist_ok=True)
     if refresh:
         for path in directory.glob("stratum-*.pkl"):
             path.unlink()
-    loader = human_strata(mature_only=mature_only) if species == "Human" else LOADERS[species]()
+    if species == "Human":
+        loader = human_strata(mature_only=mature_only)
+    elif species == "C. elegans":
+        loader = phase1.worm_strata(mature_only=mature_only)
+    else:
+        loader = LOADERS[species]()
     for index, (tissue, cohort, genes, units) in enumerate(loader):
         path = directory / f"stratum-{index}.pkl"
         if path.exists() and not refresh:
@@ -135,8 +147,8 @@ def load_strata(species: str, refresh: bool = False, mature_only: bool = False):
         gc.collect()
 
 
-def cached_strata(species: str):
-    directory = CACHE / SLUGS[species]
+def cached_strata(species: str, mature_only: bool = False):
+    directory = cache_directory(species, mature_only=mature_only)
     paths = sorted(directory.glob("stratum-*.pkl"),
                    key=lambda path: int(path.stem.split("-")[-1]))
     if not paths:
@@ -274,12 +286,12 @@ def main():
     parser.add_argument("--refresh-cache", action="store_true")
     parser.add_argument("--analysis-only", action="store_true")
     parser.add_argument("--mature-only", action="store_true",
-                        help="Restrict human cells to donors aged >=30 years before aggregation.")
+                        help="Use mature cells before aggregation: human >=30 years, fly >=30 days, worm >=6 days.")
     parser.add_argument("--output-suffix", default="",
                         help="Suffix appended to the output stem before the .csv extension.")
     args = parser.parse_args()
     seed = args.seed if args.seed is not None else 20261108 + sum(map(ord, args.species))
-    source = cached_strata(args.species) if args.analysis_only else load_strata(
+    source = cached_strata(args.species, mature_only=args.mature_only) if args.analysis_only else load_strata(
         args.species, refresh=args.refresh_cache, mature_only=args.mature_only)
     expected = {"Human": 7, "Fruit fly": 2, "C. elegans": 1, "Zebrafish": 1}[args.species]
     rows = []
@@ -311,7 +323,12 @@ def main():
         "random_seed": seed,
     })
     if args.mature_only:
-        summary["notes"] = ("Scope: mature 30-plus years; cells filtered before pseudobulk "
+        mature_scope = {
+            "Human": "30-plus years",
+            "Fruit fly": "30-plus days",
+            "C. elegans": "6-plus days",
+        }[args.species]
+        summary["notes"] = (f"Scope: mature {mature_scope}; cells filtered before pseudobulk "
                             "aggregation and detection filtering.")
     slug = SLUGS[args.species]
     output_stem = ("followup-mature-concordance" if args.mature_only

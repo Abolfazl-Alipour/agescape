@@ -99,10 +99,12 @@ def fly_strata():
         yield tissue, "AFCA", part.var_names.to_numpy(), [unit for unit in units if unit]
 
 
-def worm_strata():
+def worm_strata(mature_only=False):
     from scripts.run_gao_worm_aging import normal_obs
     atlas = ad.read_h5ad(INTERIM / "worm-gao-integrated.h5ad", backed="r")
     obs = normal_obs(atlas)
+    if mature_only:
+        obs = obs[obs["age"] >= 6].copy()
     part = atlas[obs.index].to_memory()
     part.obs = obs
     keep = ~technical_gene_mask(part.var_names)

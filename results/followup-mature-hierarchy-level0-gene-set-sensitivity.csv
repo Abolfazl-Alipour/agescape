@@ -1,0 +1,482 @@
+species,tissue_cohort,cell_type,n_donors_or_pools,n_genes_tested,n_significant_q05,frac_significant,gene_set,n_zero_se_genes,min_q
+Mouse,Fat | TMS,T cell,6,13667,1.0,7.316894709885125e-05,stratum_primary,968.0,0.0179412632986152
+Mouse,Fat | TMS,T cell,6,19955,1.0,5.011275369581559e-05,unfiltered,6304.0,0.0261957934531255
+Mouse,Fat | TMS,endothelial cell,6,13667,0.0,0.0,stratum_primary,74.0,0.6592516684331202
+Mouse,Fat | TMS,endothelial cell,6,19955,0.0,0.0,unfiltered,3990.0,0.6109719889555303
+Mouse,Fat | TMS,mesenchymal stem cell of adipose,6,13667,0.0,0.0,stratum_primary,33.0,0.3564377075521495
+Mouse,Fat | TMS,mesenchymal stem cell of adipose,6,19955,0.0,0.0,unfiltered,3210.0,0.5204298276288245
+Mouse,Fat | TMS,myeloid cell,6,13667,0.0,0.0,stratum_primary,118.0,0.6111386599124007
+Mouse,Fat | TMS,myeloid cell,6,19955,0.0,0.0,unfiltered,4119.0,0.6516211567624838
+Mouse,Heart_and_Aorta | TMS,endocardial cell,7,11990,0.0,0.0,stratum_primary,78.0,0.9113630574844476
+Mouse,Heart_and_Aorta | TMS,endocardial cell,7,19955,0.0,0.0,unfiltered,5926.0,1.0
+Mouse,Heart_and_Aorta | TMS,endothelial cell of coronary artery,9,11990,0.0,0.0,stratum_primary,42.0,0.1330539432895105
+Mouse,Heart_and_Aorta | TMS,endothelial cell of coronary artery,9,19955,0.0,0.0,unfiltered,4990.0,0.2214421549910077
+Mouse,Heart_and_Aorta | TMS,fibroblast of cardiac tissue,9,11990,0.0,0.0,stratum_primary,11.0,0.338881037958828
+Mouse,Heart_and_Aorta | TMS,fibroblast of cardiac tissue,9,19955,0.0,0.0,unfiltered,4371.0,0.5640009268113773
+Mouse,Heart_and_Aorta | TMS,leukocyte,8,11990,0.0,0.0,stratum_primary,131.0,0.2216316109649191
+Mouse,Heart_and_Aorta | TMS,leukocyte,8,19955,0.0,0.0,unfiltered,5600.0,0.3688622849712228
+Mouse,Kidney | TMS,B cell,6,11163,0.0,0.0,stratum_primary,457.0,0.0673412472177292
+Mouse,Kidney | TMS,B cell,6,19955,0.0,0.0,unfiltered,6209.0,0.1203793414162668
+Mouse,Kidney | TMS,T cell,9,11163,0.0,0.0,stratum_primary,287.0,0.3013414654719855
+Mouse,Kidney | TMS,T cell,9,19955,0.0,0.0,unfiltered,6072.0,0.5386785759646574
+Mouse,Kidney | TMS,epithelial cell of proximal tubule,9,11163,0.0,0.0,stratum_primary,16.0,0.6772285439964788
+Mouse,Kidney | TMS,epithelial cell of proximal tubule,9,19955,0.0,0.0,unfiltered,4719.0,0.0705587339125871
+Mouse,Kidney | TMS,fenestrated cell,9,11163,0.0,0.0,stratum_primary,95.0,0.2664899712884159
+Mouse,Kidney | TMS,fenestrated cell,9,19955,0.0,0.0,unfiltered,5960.0,0.0738687372150415
+Mouse,Kidney | TMS,kidney collecting duct principal cell,9,11163,0.0,0.0,stratum_primary,48.0,0.0883635124871404
+Mouse,Kidney | TMS,kidney collecting duct principal cell,9,19955,0.0,0.0,unfiltered,5310.0,0.0827108508736742
+Mouse,Kidney | TMS,kidney cortex artery cell,6,11163,0.0,0.0,stratum_primary,250.0,0.7126696527764567
+Mouse,Kidney | TMS,kidney cortex artery cell,6,19955,0.0,0.0,unfiltered,6859.0,0.7443977685283584
+Mouse,Kidney | TMS,kidney distal convoluted tubule epithelial cell,9,11163,0.0,0.0,stratum_primary,140.0,0.0737810848318472
+Mouse,Kidney | TMS,kidney distal convoluted tubule epithelial cell,9,19955,0.0,0.0,unfiltered,6281.0,0.0566605962073045
+Mouse,Kidney | TMS,kidney loop of Henle thick ascending limb epithelial cell,9,11163,0.0,0.0,stratum_primary,30.0,0.4086602853597903
+Mouse,Kidney | TMS,kidney loop of Henle thick ascending limb epithelial cell,9,19955,0.0,0.0,unfiltered,5475.0,0.0566411803094292
+Mouse,Kidney | TMS,kidney proximal convoluted tubule epithelial cell,9,11163,7.0,0.0006270715757412,stratum_primary,7.0,0.02468642440736
+Mouse,Kidney | TMS,kidney proximal convoluted tubule epithelial cell,9,19955,19.0,0.0009521423202204,unfiltered,4417.0,0.0255470674156246
+Mouse,Kidney | TMS,lymphocyte,9,11163,3.0,0.0002687449610319,stratum_primary,95.0,5.556645018507261e-05
+Mouse,Kidney | TMS,lymphocyte,9,19955,8.0,0.0004009020295665,unfiltered,5161.0,4.966534593940356e-05
+Mouse,Kidney | TMS,macrophage,11,11163,0.0,0.0,stratum_primary,33.0,0.1673046826450947
+Mouse,Kidney | TMS,macrophage,11,19955,0.0,0.0,unfiltered,4956.0,0.2990741684298903
+Mouse,Kidney | TMS,podocyte,7,11163,1.0,8.958165367732689e-05,stratum_primary,38.0,0.0089024883756701
+Mouse,Kidney | TMS,podocyte,7,19955,9.0,0.0004510147832623,unfiltered,5602.0,0.00795705256367
+Mouse,Limb_Muscle | TMS,B cell,8,11419,0.0,0.0,stratum_primary,202.0,0.2712419600776952
+Mouse,Limb_Muscle | TMS,B cell,8,19955,0.0,0.0,unfiltered,6508.0,0.1195869449754851
+Mouse,Limb_Muscle | TMS,T cell,8,11419,0.0,0.0,stratum_primary,251.0,0.822019978114102
+Mouse,Limb_Muscle | TMS,T cell,8,19955,0.0,0.0,unfiltered,6697.0,1.0
+Mouse,Limb_Muscle | TMS,endothelial cell,12,11419,674.0,0.0590244329626061,stratum_primary,2.0,0.0011512921634484
+Mouse,Limb_Muscle | TMS,endothelial cell,12,19955,390.0,0.019543973941368,unfiltered,4263.0,0.0020119130503207
+Mouse,Limb_Muscle | TMS,macrophage,12,11419,240.0,0.0210176022418775,stratum_primary,0.0,0.0030117956124102
+Mouse,Limb_Muscle | TMS,macrophage,12,19955,79.0,0.0039589075419694,unfiltered,4275.0,0.0052631912992071
+Mouse,Limb_Muscle | TMS,mesenchymal stem cell,12,11419,2032.0,0.1779490323145634,stratum_primary,0.0,1.1335893466798063e-05
+Mouse,Limb_Muscle | TMS,mesenchymal stem cell,12,19955,1545.0,0.077424204460035,unfiltered,3010.0,1.9809769168049338e-05
+Mouse,Limb_Muscle | TMS,skeletal muscle satellite cell,12,11419,60.0,0.0052544005604693,stratum_primary,112.0,0.0079849855906246
+Mouse,Limb_Muscle | TMS,skeletal muscle satellite cell,12,19955,27.0,0.001353044349787,unfiltered,5756.0,0.0139539703530007
+Mouse,Limb_Muscle | TMS,smooth muscle cell,12,11419,28.0,0.0024520535948857,stratum_primary,116.0,0.0039883418512537
+Mouse,Limb_Muscle | TMS,smooth muscle cell,12,19955,6.0,0.0003006765221748,unfiltered,5941.0,0.0069697312936131
+Mouse,Lung | TMS,B cell,9,9790,0.0,0.0,stratum_primary,16.0,0.6748056335837259
+Mouse,Lung | TMS,B cell,9,19955,0.0,0.0,unfiltered,6175.0,0.962821500787975
+Mouse,Lung | TMS,"CD4-positive, alpha-beta T cell",6,9790,0.0,0.0,stratum_primary,227.0,0.6323668081864702
+Mouse,Lung | TMS,"CD4-positive, alpha-beta T cell",6,19955,0.0,0.0,unfiltered,8514.0,0.9935206465384048
+Mouse,Lung | TMS,"CD8-positive, alpha-beta T cell",8,9790,0.0,0.0,stratum_primary,15.0,0.2820508018899509
+Mouse,Lung | TMS,"CD8-positive, alpha-beta T cell",8,19955,0.0,0.0,unfiltered,6788.0,0.5749053883262483
+Mouse,Lung | TMS,NK cell,9,9790,0.0,0.0,stratum_primary,57.0,0.1782318813802437
+Mouse,Lung | TMS,NK cell,9,19955,0.0,0.0,unfiltered,7377.0,0.3632908266540105
+Mouse,Lung | TMS,alveolar macrophage,9,9790,0.0,0.0,stratum_primary,35.0,0.8254361261257249
+Mouse,Lung | TMS,alveolar macrophage,9,19955,0.0,0.0,unfiltered,6822.0,0.1414247636080194
+Mouse,Lung | TMS,bronchial smooth muscle cell,9,9790,0.0,0.0,stratum_primary,23.0,0.3401103756004203
+Mouse,Lung | TMS,bronchial smooth muscle cell,9,19955,0.0,0.0,unfiltered,5322.0,0.3858142449914968
+Mouse,Lung | TMS,classical monocyte,10,9790,0.0,0.0,stratum_primary,0.0,0.1796734656429228
+Mouse,Lung | TMS,classical monocyte,10,19955,0.0,0.0,unfiltered,4606.0,0.0690585268354013
+Mouse,Lung | TMS,intermediate monocyte,6,9790,0.0,0.0,stratum_primary,12.0,0.2877836800428071
+Mouse,Lung | TMS,intermediate monocyte,6,19955,0.0,0.0,unfiltered,6802.0,0.4816113655403836
+Mouse,Lung | TMS,mature NK T cell,6,9790,0.0,0.0,stratum_primary,145.0,0.4948211288314602
+Mouse,Lung | TMS,mature NK T cell,6,19955,0.0,0.0,unfiltered,8166.0,1.0
+Mouse,Lung | TMS,non-classical monocyte,9,9790,0.0,0.0,stratum_primary,62.0,0.3223753407383137
+Mouse,Lung | TMS,non-classical monocyte,9,19955,0.0,0.0,unfiltered,7412.0,0.3467860529019319
+Mouse,Lung | TMS,vein endothelial cell,7,9790,0.0,0.0,stratum_primary,194.0,0.5084196779729719
+Mouse,Lung | TMS,vein endothelial cell,7,19955,0.0,0.0,unfiltered,7651.0,1.0
+Mouse,Marrow | TMS,erythroblast,11,10427,0.0,0.0,stratum_primary,104.0,0.1076738812277598
+Mouse,Marrow | TMS,erythroblast,11,19955,0.0,0.0,unfiltered,7164.0,0.2060642850196554
+Mouse,Marrow | TMS,granulocyte,13,10427,0.0,0.0,stratum_primary,8.0,0.8248751176302245
+Mouse,Marrow | TMS,granulocyte,13,19955,0.0,0.0,unfiltered,6042.0,1.0
+Mouse,Marrow | TMS,granulocytopoietic cell,13,10427,0.0,0.0,stratum_primary,0.0,0.8917018877422629
+Mouse,Marrow | TMS,granulocytopoietic cell,13,19955,0.0,0.0,unfiltered,5074.0,1.0
+Mouse,Marrow | TMS,hematopoietic precursor cell,12,10427,45.0,0.0043157188069435,stratum_primary,0.0,0.0446579460914105
+Mouse,Marrow | TMS,hematopoietic precursor cell,12,19955,0.0,0.0,unfiltered,5212.0,0.0854655523404715
+Mouse,Marrow | TMS,late pro-B cell,8,10427,0.0,0.0,stratum_primary,52.0,0.4763325557034166
+Mouse,Marrow | TMS,late pro-B cell,8,19955,0.0,0.0,unfiltered,6879.0,0.3509993894664189
+Mouse,Marrow | TMS,macrophage,10,10427,0.0,0.0,stratum_primary,0.0,0.4969596330612331
+Mouse,Marrow | TMS,macrophage,10,19955,0.0,0.0,unfiltered,6580.0,0.6802792829617134
+Mouse,Marrow | TMS,megakaryocyte-erythroid progenitor cell,13,10427,0.0,0.0,stratum_primary,24.0,0.0509239005535061
+Mouse,Marrow | TMS,megakaryocyte-erythroid progenitor cell,13,19955,0.0,0.0,unfiltered,7012.0,0.0974572202498528
+Mouse,Marrow | TMS,monocyte,12,10427,0.0,0.0,stratum_primary,15.0,0.1107000865030467
+Mouse,Marrow | TMS,monocyte,12,19955,0.0,0.0,unfiltered,6834.0,0.2118557807776252
+Mouse,Marrow | TMS,naive B cell,6,10427,0.0,0.0,stratum_primary,209.0,0.6602284011338764
+Mouse,Marrow | TMS,naive B cell,6,19955,0.0,0.0,unfiltered,8291.0,1.0
+Mouse,Marrow | TMS,naive T cell,12,10427,1.0,9.59048623765225e-05,stratum_primary,4.0,0.0134012384141362
+Mouse,Marrow | TMS,naive T cell,12,19955,1.0,5.011275369581559e-05,unfiltered,6410.0,0.0256470425389939
+Mouse,Marrow | TMS,precursor B cell,10,10427,0.0,0.0,stratum_primary,96.0,0.2378599686819424
+Mouse,Marrow | TMS,precursor B cell,10,19955,0.0,0.0,unfiltered,7545.0,0.4552120144862532
+Mouse,Marrow | TMS,proerythroblast,13,10427,0.0,0.0,stratum_primary,109.0,1.0
+Mouse,Marrow | TMS,proerythroblast,13,19955,0.0,0.0,unfiltered,7475.0,1.0
+Mouse,Marrow | TMS,promonocyte,13,10427,6.0,0.0005754291742591,stratum_primary,1.0,0.0277359776018752
+Mouse,Marrow | TMS,promonocyte,13,19955,0.0,0.0,unfiltered,6014.0,0.0530806016155578
+Mouse,Spleen | TMS,B cell,10,10977,0.0,0.0,stratum_primary,1.0,0.1350779716287575
+Mouse,Spleen | TMS,B cell,10,19955,1.0,5.011275369581559e-05,unfiltered,4303.0,0.0016434706395254
+Mouse,Spleen | TMS,NK cell,9,10977,0.0,0.0,stratum_primary,557.0,0.3069435480405827
+Mouse,Spleen | TMS,NK cell,9,19955,0.0,0.0,unfiltered,8553.0,0.5579902069007769
+Mouse,Spleen | TMS,T cell,9,10977,0.0,0.0,stratum_primary,37.0,0.3029617298507108
+Mouse,Spleen | TMS,T cell,9,19955,0.0,0.0,unfiltered,6117.0,0.5048557173398945
+Mouse,Spleen | TMS,granulocyte,6,10977,0.0,0.0,stratum_primary,258.0,0.174594231549693
+Mouse,Spleen | TMS,granulocyte,6,19955,0.0,0.0,unfiltered,7487.0,0.3173934490820921
+Mouse,Spleen | TMS,macrophage,10,10977,0.0,0.0,stratum_primary,16.0,0.418521204333308
+Mouse,Spleen | TMS,macrophage,10,19955,0.0,0.0,unfiltered,5733.0,0.7608263307343683
+Mouse,Spleen | TMS,mature NK T cell,9,10977,0.0,0.0,stratum_primary,47.0,0.3788131311127389
+Mouse,Spleen | TMS,mature NK T cell,9,19955,0.0,0.0,unfiltered,6405.0,0.6886413438420975
+Mouse,Spleen | TMS,plasma cell,10,10977,0.0,0.0,stratum_primary,63.0,0.327724913452821
+Mouse,Spleen | TMS,plasma cell,10,19955,0.0,0.0,unfiltered,6575.0,0.5766915660706293
+Mouse,Spleen | TMS,proerythroblast,9,10977,0.0,0.0,stratum_primary,22.0,1.0
+Mouse,Spleen | TMS,proerythroblast,9,19955,0.0,0.0,unfiltered,5857.0,0.7922912283359232
+Human,brain | HBCC_DLPFC,GABAergic neuron,51,33384,0.0,0.0,unfiltered,337.0,0.5933956610637577
+Human,brain | HBCC_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,59,33384,78.0,0.0023364485981308,unfiltered,10.0,1.1326056999928269e-05
+Human,brain | HBCC_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,58,33384,107.0,0.0032051282051282,unfiltered,29.0,0.0002891318387078
+Human,brain | HBCC_DLPFC,L5/6 near-projecting glutamatergic neuron,47,33384,3.0,8.986340762041697e-05,unfiltered,618.0,0.0015819499283661
+Human,brain | HBCC_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,50,33384,33.0,0.0009884974838245,unfiltered,348.0,0.0103133369797689
+Human,brain | HBCC_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,47,33384,4.0,0.0001198178768272,unfiltered,124.0,0.0200860591315943
+Human,brain | HBCC_DLPFC,L6b glutamatergic neuron of the primary motor cortex,39,33384,0.0,0.0,unfiltered,262.0,0.128336497299795
+Human,brain | HBCC_DLPFC,VIP GABAergic cortical interneuron,59,33384,0.0,0.0,unfiltered,92.0,0.0640101412040042
+Human,brain | HBCC_DLPFC,astrocyte,62,33384,0.0,0.0,unfiltered,138.0,0.0657403557270875
+Human,brain | HBCC_DLPFC,endothelial cell,59,33384,0.0,0.0,unfiltered,2004.0,0.2465325653686713
+Human,brain | HBCC_DLPFC,lamp5 GABAergic cortical interneuron,58,33384,0.0,0.0,unfiltered,326.0,0.0686745624766419
+Human,brain | HBCC_DLPFC,microglial cell,59,33384,16.0,0.0004792715073088,unfiltered,1244.0,0.0008076568865976
+Human,brain | HBCC_DLPFC,oligodendrocyte,64,33384,1.0,2.9954469206805657e-05,unfiltered,65.0,0.0139281932672657
+Human,brain | HBCC_DLPFC,oligodendrocyte precursor cell,63,33384,12.0,0.0003594536304816,unfiltered,216.0,0.0004827841891493
+Human,brain | HBCC_DLPFC,pericyte,49,33384,0.0,0.0,unfiltered,3268.0,0.3314832993699432
+Human,brain | HBCC_DLPFC,perivascular macrophage,7,33384,0.0,0.0,unfiltered,12759.0,0.3161623195546034
+Human,brain | HBCC_DLPFC,pvalb GABAergic cortical interneuron,59,33384,1.0,2.9954469206805657e-05,unfiltered,93.0,0.0102826461381608
+Human,brain | HBCC_DLPFC,smooth muscle cell,7,33384,0.0,0.0,unfiltered,11008.0,0.1681664624640554
+Human,brain | HBCC_DLPFC,sst GABAergic cortical interneuron,61,33384,0.0,0.0,unfiltered,134.0,0.132088631600569
+Human,brain | HBCC_DLPFC,vascular leptomeningeal cell,31,33384,0.0,0.0,unfiltered,5183.0,0.0686041196213339
+Human,lung | ImmuneAging_BAL,"CD16-negative, CD56-bright natural killer cell, human",8,35264,0.0,0.0,unfiltered,12551.0,0.1548026560472917
+Human,lung | ImmuneAging_BAL,"CD16-positive, CD56-dim natural killer cell, human",8,35264,0.0,0.0,unfiltered,9653.0,1.0
+Human,lung | ImmuneAging_BAL,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",8,35264,0.0,0.0,unfiltered,12332.0,1.0
+Human,lung | ImmuneAging_BAL,"CD4-positive, alpha-beta memory T cell",8,35264,0.0,0.0,unfiltered,10542.0,0.3818745848071517
+Human,lung | ImmuneAging_BAL,"CD8-positive, alpha-beta memory T cell",8,35264,0.0,0.0,unfiltered,9812.0,0.2944788788813959
+Human,lung | ImmuneAging_BAL,"central memory CD4-positive, alpha-beta T cell",8,35264,0.0,0.0,unfiltered,9678.0,1.0
+Human,lung | ImmuneAging_BAL,"central memory CD8-positive, alpha-beta T cell",7,35264,0.0,0.0,unfiltered,16288.0,0.6766622564243718
+Human,lung | ImmuneAging_BAL,classical monocyte,8,35264,0.0,0.0,unfiltered,9645.0,1.0
+Human,lung | ImmuneAging_BAL,conventional dendritic cell,8,35264,0.0,0.0,unfiltered,13375.0,1.0
+Human,lung | ImmuneAging_BAL,"effector memory CD4-positive, alpha-beta T cell",8,35264,0.0,0.0,unfiltered,12218.0,1.0
+Human,lung | ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell",8,35264,0.0,0.0,unfiltered,11822.0,1.0
+Human,lung | ImmuneAging_BAL,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",8,35264,0.0,0.0,unfiltered,11864.0,1.0
+Human,lung | ImmuneAging_BAL,gamma-delta T cell,8,35264,0.0,0.0,unfiltered,12718.0,1.0
+Human,lung | ImmuneAging_BAL,group 1 innate lymphoid cell,8,35264,0.0,0.0,unfiltered,13521.0,1.0
+Human,lung | ImmuneAging_BAL,group 3 innate lymphoid cell,8,35264,0.0,0.0,unfiltered,15875.0,0.3441380195796954
+Human,lung | ImmuneAging_BAL,immature innate lymphoid cell,8,35264,0.0,0.0,unfiltered,13304.0,1.0
+Human,lung | ImmuneAging_BAL,macrophage,8,35264,0.0,0.0,unfiltered,6798.0,0.9852887297052172
+Human,lung | ImmuneAging_BAL,mast cell,8,35264,0.0,0.0,unfiltered,12662.0,1.0
+Human,lung | ImmuneAging_BAL,memory B cell,8,35264,0.0,0.0,unfiltered,9628.0,0.839295160357468
+Human,lung | ImmuneAging_BAL,mucosal invariant T cell,8,35264,0.0,0.0,unfiltered,17253.0,1.0
+Human,lung | ImmuneAging_BAL,naive B cell,8,35264,0.0,0.0,unfiltered,13600.0,0.701431280677874
+Human,lung | ImmuneAging_BAL,"naive thymus-derived CD4-positive, alpha-beta T cell",8,35264,0.0,0.0,unfiltered,12668.0,1.0
+Human,lung | ImmuneAging_BAL,"naive thymus-derived CD8-positive, alpha-beta T cell",7,35264,0.0,0.0,unfiltered,14118.0,1.0
+Human,lung | ImmuneAging_BAL,non-classical monocyte,8,35264,0.0,0.0,unfiltered,12535.0,1.0
+Human,lung | ImmuneAging_BAL,plasmablast,8,35264,0.0,0.0,unfiltered,11333.0,0.2057212477360465
+Human,lung | ImmuneAging_BAL,progenitor cell,8,35264,0.0,0.0,unfiltered,11251.0,1.0
+Human,kidney | Kidney_LivingDonor,T cell,8,26583,0.0,0.0,unfiltered,10949.0,0.8806655846729797
+Human,kidney | Kidney_LivingDonor,epithelial cell of proximal tubule,19,26583,0.0,0.0,unfiltered,4110.0,0.3021293668961043
+Human,kidney | Kidney_LivingDonor,kidney capillary endothelial cell,10,26583,1.0,3.761802655832675e-05,unfiltered,9043.0,0.0117310987597983
+Human,kidney | Kidney_LivingDonor,kidney loop of Henle cortical thick ascending limb epithelial cell,14,26583,0.0,0.0,unfiltered,6581.0,0.1956240702941081
+Human,kidney | Kidney_LivingDonor,kidney loop of Henle descending limb epithelial cell,10,26583,0.0,0.0,unfiltered,10452.0,0.24059403595941
+Human,kidney | Kidney_LivingDonor,mononuclear phagocyte,8,26583,0.0,0.0,unfiltered,9742.0,0.6587969554334475
+Human,kidney | Kidney_SCR_v15,T cell,8,30426,0.0,0.0,unfiltered,15538.0,1.0
+Human,kidney | Kidney_SCR_v15,endothelial cell,18,30426,0.0,0.0,unfiltered,8625.0,0.5510594459872814
+Human,kidney | Kidney_SCR_v15,epithelial cell of proximal tubule,18,30426,0.0,0.0,unfiltered,7176.0,0.8198517632110399
+Human,kidney | Kidney_SCR_v15,kidney collecting duct intercalated cell,17,30426,0.0,0.0,unfiltered,8011.0,0.2567467149060446
+Human,kidney | Kidney_SCR_v15,kidney collecting duct principal cell,17,30426,0.0,0.0,unfiltered,8074.0,0.8161714387807425
+Human,kidney | Kidney_SCR_v15,kidney connecting tubule epithelial cell,12,30426,0.0,0.0,unfiltered,9159.0,1.0
+Human,kidney | Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,14,30426,0.0,0.0,unfiltered,9205.0,0.5340354571932588
+Human,kidney | Kidney_SCR_v15,kidney interstitial cell,16,30426,0.0,0.0,unfiltered,11058.0,1.0
+Human,kidney | Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,18,30426,0.0,0.0,unfiltered,7508.0,0.5228681161916727
+Human,lung | Lung_CellRef,alveolar adventitial fibroblast,8,29621,0.0,0.0,unfiltered,13590.0,0.4094298912833979
+Human,lung | Lung_CellRef,alveolar capillary type 1 endothelial cell,9,29621,0.0,0.0,unfiltered,12509.0,0.4763939930744443
+Human,lung | Lung_CellRef,alveolar capillary type 2 endothelial cell,6,29621,0.0,0.0,unfiltered,15944.0,0.7775138907130169
+Human,lung | Lung_CellRef,alveolar macrophage,9,29621,0.0,0.0,unfiltered,7579.0,0.3473690386864447
+Human,lung | Lung_CellRef,alveolar type 1 fibroblast cell,7,29621,0.0,0.0,unfiltered,14988.0,0.2489102162713815
+Human,lung | Lung_CellRef,ciliated cell,10,29621,0.0,0.0,unfiltered,10488.0,0.7967418615606737
+Human,lung | Lung_CellRef,endothelial cell of artery,10,29621,0.0,0.0,unfiltered,12639.0,0.7770492893298517
+Human,lung | Lung_CellRef,endothelial cell of respiratory system lymphatic vessel,8,29621,0.0,0.0,unfiltered,15015.0,1.0
+Human,lung | Lung_CellRef,lung secretory cell,9,29621,0.0,0.0,unfiltered,11981.0,1.0
+Human,lung | Lung_CellRef,pulmonary alveolar type 1 cell,9,29621,0.0,0.0,unfiltered,13297.0,1.0
+Human,lung | Lung_CellRef,pulmonary alveolar type 2 cell,10,29621,0.0,0.0,unfiltered,8296.0,1.0
+Human,lung | Lung_CellRef,secretory cell,6,29621,0.0,0.0,unfiltered,13824.0,1.0
+Human,lung | Lung_CellRef,vascular associated smooth muscle cell,10,29621,0.0,0.0,unfiltered,12774.0,0.2678800873440752
+Human,lung | Lung_CellRef,vein endothelial cell,10,29621,0.0,0.0,unfiltered,13073.0,0.9126581410400844
+Human,lung | Lung_CellRef,vein endothelial cell of respiratory system,10,29621,0.0,0.0,unfiltered,12373.0,1.0
+Human,lung | Lung_Integrated,B cell,8,53378,0.0,0.0,unfiltered,33736.0,0.7779454978690727
+Human,lung | Lung_Integrated,CD1c-positive myeloid dendritic cell,43,53378,0.0,0.0,unfiltered,31794.0,0.1399734876557909
+Human,lung | Lung_Integrated,"CD4-positive, alpha-beta T cell",23,53378,0.0,0.0,unfiltered,31297.0,0.4732140956909334
+Human,lung | Lung_Integrated,"CD8-positive, alpha-beta T cell",33,53378,10.0,0.0001873431001536,unfiltered,30046.0,0.0278424553873148
+Human,lung | Lung_Integrated,acinar cell,11,53378,0.0,0.0,unfiltered,33863.0,1.0
+Human,lung | Lung_Integrated,alveolar adventitial fibroblast,13,53378,0.0,0.0,unfiltered,29717.0,0.9861441343459688
+Human,lung | Lung_Integrated,alveolar macrophage,53,53378,5.0,9.367155007681069e-05,unfiltered,26099.0,0.0397814120157752
+Human,lung | Lung_Integrated,alveolar type 1 fibroblast cell,17,53378,0.0,0.0,unfiltered,27494.0,0.2464423201718462
+Human,lung | Lung_Integrated,bronchus fibroblast of lung,6,53378,0.0,0.0,unfiltered,36681.0,1.0
+Human,lung | Lung_Integrated,capillary endothelial cell,25,53378,0.0,0.0,unfiltered,27862.0,0.1600278512340265
+Human,lung | Lung_Integrated,classical monocyte,44,53378,0.0,0.0,unfiltered,30185.0,0.0587791401917665
+Human,lung | Lung_Integrated,club cell,28,53378,0.0,0.0,unfiltered,29205.0,1.0
+Human,lung | Lung_Integrated,elicited macrophage,42,53378,1.0,1.8734310015362134e-05,unfiltered,29415.0,0.0061500187044815
+Human,lung | Lung_Integrated,endothelial cell of lymphatic vessel,16,53378,0.0,0.0,unfiltered,31893.0,1.0
+Human,lung | Lung_Integrated,epithelial cell of lower respiratory tract,16,53378,0.0,0.0,unfiltered,30566.0,0.4044325574439997
+Human,lung | Lung_Integrated,lung macrophage,28,53378,0.0,0.0,unfiltered,34415.0,0.1805864770022207
+Human,lung | Lung_Integrated,lung pericyte,9,53378,0.0,0.0,unfiltered,31361.0,0.8340148788599939
+Human,lung | Lung_Integrated,mast cell,22,53378,0.0,0.0,unfiltered,32350.0,0.3808569102949204
+Human,lung | Lung_Integrated,multiciliated columnar cell of tracheobronchial tree,66,53378,4.0,7.493724006144853e-05,unfiltered,25462.0,0.0076454567294981
+Human,lung | Lung_Integrated,multiciliated epithelial cell,11,53378,0.0,0.0,unfiltered,33573.0,1.0
+Human,lung | Lung_Integrated,nasal mucosa goblet cell,25,53378,0.0,0.0,unfiltered,28025.0,1.0
+Human,lung | Lung_Integrated,natural killer cell,25,53378,0.0,0.0,unfiltered,32031.0,1.0
+Human,lung | Lung_Integrated,non-classical monocyte,34,53378,0.0,0.0,unfiltered,33276.0,0.3154403342732589
+Human,lung | Lung_Integrated,pulmonary alveolar epithelial cell,8,53378,0.0,0.0,unfiltered,37123.0,1.0
+Human,lung | Lung_Integrated,pulmonary alveolar type 1 cell,26,53378,0.0,0.0,unfiltered,28150.0,0.4820636147501159
+Human,lung | Lung_Integrated,pulmonary alveolar type 2 cell,47,53378,0.0,0.0,unfiltered,24687.0,0.0727962295242363
+Human,lung | Lung_Integrated,pulmonary artery endothelial cell,25,53378,0.0,0.0,unfiltered,31137.0,1.0
+Human,lung | Lung_Integrated,respiratory basal cell,27,53378,0.0,0.0,unfiltered,26750.0,0.6273863154939302
+Human,lung | Lung_Integrated,respiratory tract hillock cell,14,53378,1.0,1.8734310015362134e-05,unfiltered,30785.0,0.0409959374478765
+Human,lung | Lung_Integrated,tracheobronchial smooth muscle cell,13,53378,0.0,0.0,unfiltered,33197.0,1.0
+Human,lung | Lung_Integrated,vein endothelial cell,30,53378,0.0,0.0,unfiltered,30850.0,1.0
+Human,brain | MSSM_DLPFC,GABAergic neuron,153,33384,0.0,0.0,unfiltered,159.0,0.0679153504185665
+Human,brain | MSSM_DLPFC,L2/3 intratelencephalic projecting glutamatergic neuron,195,33384,1580.0,0.0473280613467529,unfiltered,2.0,4.6618128872087945e-17
+Human,brain | MSSM_DLPFC,L2/3-6 intratelencephalic projecting glutamatergic neuron,193,33384,1410.0,0.0422358015815959,unfiltered,11.0,1.8806894670033307e-13
+Human,brain | MSSM_DLPFC,L5/6 near-projecting glutamatergic neuron,87,33384,0.0,0.0,unfiltered,452.0,0.1434893807355427
+Human,brain | MSSM_DLPFC,L6 corticothalamic-projecting glutamatergic cortical neuron,125,33384,170.0,0.0050922597651569,unfiltered,181.0,5.977431604248307e-07
+Human,brain | MSSM_DLPFC,L6 intratelencephalic projecting glutamatergic neuron,123,33384,96.0,0.0028756290438533,unfiltered,84.0,7.10229061683878e-07
+Human,brain | MSSM_DLPFC,L6b glutamatergic neuron of the primary motor cortex,74,33384,0.0,0.0,unfiltered,301.0,0.1005334712397535
+Human,brain | MSSM_DLPFC,VIP GABAergic cortical interneuron,193,33384,117.0,0.0035046728971962,unfiltered,25.0,4.763106006818796e-08
+Human,brain | MSSM_DLPFC,astrocyte,203,33384,644.0,0.0192906781691828,unfiltered,34.0,1.0707728983668492e-12
+Human,brain | MSSM_DLPFC,endothelial cell,88,33384,0.0,0.0,unfiltered,3543.0,0.4834938582439397
+Human,brain | MSSM_DLPFC,lamp5 GABAergic cortical interneuron,175,33384,11.0,0.0003294991612748,unfiltered,155.0,0.0006503097546234
+Human,brain | MSSM_DLPFC,microglial cell,196,33384,1071.0,0.0320812365204888,unfiltered,392.0,5.480555603561106e-14
+Human,brain | MSSM_DLPFC,oligodendrocyte,206,33384,710.0,0.021267673136832,unfiltered,4.0,4.275574375706948e-09
+Human,brain | MSSM_DLPFC,oligodendrocyte precursor cell,205,33384,849.0,0.025431344356578,unfiltered,72.0,4.629319380594813e-19
+Human,brain | MSSM_DLPFC,pericyte,83,33384,0.0,0.0,unfiltered,3811.0,0.3123537355930562
+Human,brain | MSSM_DLPFC,perivascular macrophage,24,33384,0.0,0.0,unfiltered,7256.0,0.3662360913114917
+Human,brain | MSSM_DLPFC,pvalb GABAergic cortical interneuron,185,33384,168.0,0.0050323508267433,unfiltered,45.0,4.296905994187521e-07
+Human,brain | MSSM_DLPFC,smooth muscle cell,7,33384,0.0,0.0,unfiltered,12608.0,1.0
+Human,brain | MSSM_DLPFC,sst GABAergic cortical interneuron,174,33384,134.0,0.0040138988737119,unfiltered,56.0,2.2809391393922787e-05
+Human,brain | MSSM_DLPFC,vascular leptomeningeal cell,41,33384,0.0,0.0,unfiltered,2800.0,0.296155524610017
+Fruit fly,head | AFCA,Johnston organ neuron,36,15992,109.0,0.0068159079539769,unfiltered,4886.0,6.588624588974315e-08
+Fruit fly,head | AFCA,Johnston organ neuron,36,3810,226.0,0.0593175853018372,species_primary,0.0,1.5697010807899037e-08
+Fruit fly,head | AFCA,T neuron T2,24,15992,10.0,0.0006253126563281,unfiltered,6880.0,0.0020330628191232
+Fruit fly,head | AFCA,T neuron T2,24,3810,37.0,0.0097112860892388,species_primary,5.0,0.0004843652664369
+Fruit fly,head | AFCA,T neuron T2a,25,15992,14.0,0.0008754377188594,unfiltered,6361.0,0.0038012002952004
+Fruit fly,head | AFCA,T neuron T2a,25,3810,37.0,0.0097112860892388,species_primary,2.0,0.0009056136271081
+Fruit fly,head | AFCA,T neuron T3,26,15992,22.0,0.0013756878439219,unfiltered,6542.0,3.6616321800927455e-06
+Fruit fly,head | AFCA,T neuron T3,26,3810,33.0,0.0086614173228346,species_primary,3.0,8.723623440566134e-07
+Fruit fly,head | AFCA,T neuron T4/T5a-b,23,15992,17.0,0.0010630315157578,unfiltered,6472.0,0.0019029305548518
+Fruit fly,head | AFCA,T neuron T4/T5a-b,23,3810,35.0,0.0091863517060367,species_primary,2.0,0.0004533620193837
+Fruit fly,head | AFCA,T neuron T4/T5c-d,22,15992,0.0,0.0,unfiltered,6876.0,0.065971325246151
+Fruit fly,head | AFCA,T neuron T4/T5c-d,22,3810,36.0,0.0094488188976377,species_primary,5.0,0.0157172804644719
+Fruit fly,head | AFCA,adult brain cell body glial cell,28,15992,142.0,0.0088794397198599,unfiltered,5221.0,2.986351455488621e-06
+Fruit fly,head | AFCA,adult brain cell body glial cell,28,3810,248.0,0.0650918635170603,species_primary,0.0,7.114806806785672e-07
+Fruit fly,head | AFCA,adult brain perineurial glial cell,36,15992,298.0,0.0186343171585792,unfiltered,4090.0,5.305976504062673e-08
+Fruit fly,head | AFCA,adult brain perineurial glial cell,36,3810,399.0,0.1047244094488189,species_primary,0.0,1.2641177138868672e-08
+Fruit fly,head | AFCA,adult fat body_head,18,15992,36.0,0.0022511255627813,unfiltered,6373.0,0.0004086580718827
+Fruit fly,head | AFCA,adult fat body_head,18,3810,54.0,0.0141732283464566,species_primary,22.0,9.736038355884944e-05
+Fruit fly,head | AFCA,adult lamina epithelial/marginal glial cell,36,15992,219.0,0.0136943471735867,unfiltered,4653.0,9.983214902808989e-07
+Fruit fly,head | AFCA,adult lamina epithelial/marginal glial cell,36,3810,377.0,0.0989501312335958,species_primary,0.0,9.65499085136926e-07
+Fruit fly,head | AFCA,adult optic chiasma glial cell,29,15992,26.0,0.0016258129064532,unfiltered,5165.0,3.686317538879247e-05
+Fruit fly,head | AFCA,adult optic chiasma glial cell,29,3810,51.0,0.0133858267716535,species_primary,0.0,8.782434856884649e-06
+Fruit fly,head | AFCA,adult reticular neuropil associated glial cell_head,35,15992,292.0,0.0182591295647823,unfiltered,4595.0,1.732027663047742e-06
+Fruit fly,head | AFCA,adult reticular neuropil associated glial cell_head,35,3810,469.0,0.1230971128608924,species_primary,0.0,4.126454099682277e-07
+Fruit fly,head | AFCA,alpha'/beta' Kenyon cell,21,15992,4.0,0.0002501250625312,unfiltered,6942.0,0.0294454679969065
+Fruit fly,head | AFCA,alpha'/beta' Kenyon cell,21,3810,19.0,0.0049868766404199,species_primary,7.0,0.0070152096715991
+Fruit fly,head | AFCA,alpha/beta Kenyon cell,35,15992,130.0,0.0081290645322661,unfiltered,5547.0,2.049171205279125e-12
+Fruit fly,head | AFCA,alpha/beta Kenyon cell,35,3810,237.0,0.0622047244094488,species_primary,3.0,4.882029947544687e-13
+Fruit fly,head | AFCA,auditory sensory neuron,29,15992,50.0,0.0031265632816408,unfiltered,5317.0,3.317371270023703e-07
+Fruit fly,head | AFCA,auditory sensory neuron,29,3810,151.0,0.0396325459317585,species_primary,0.0,7.903442057772829e-08
+Fruit fly,head | AFCA,centrifugal neuron C2,23,15992,5.0,0.000312656328164,unfiltered,6453.0,0.0003894589725375
+Fruit fly,head | AFCA,centrifugal neuron C2,23,3810,17.0,0.0044619422572178,species_primary,1.0,9.278631099100544e-05
+Fruit fly,head | AFCA,centrifugal neuron C3,22,15992,46.0,0.0028764382191095,unfiltered,6347.0,4.05856263455743e-07
+Fruit fly,head | AFCA,centrifugal neuron C3,22,3810,70.0,0.0183727034120734,species_primary,0.0,9.66928691699838e-08
+Fruit fly,head | AFCA,columnar neuron T1,36,15992,242.0,0.0151325662831415,unfiltered,4352.0,1.6730657453796332e-08
+Fruit fly,head | AFCA,columnar neuron T1,36,3810,395.0,0.1036745406824147,species_primary,0.0,7.971961593167087e-09
+Fruit fly,head | AFCA,cone cell,36,15992,1847.0,0.1154952476238119,unfiltered,2992.0,2.8454246698641426e-13
+Fruit fly,head | AFCA,cone cell,36,3810,1479.0,0.3881889763779527,species_primary,0.0,6.779057023625804e-14
+Fruit fly,head | AFCA,distal medullary amacrine neuron Dm3,10,15992,0.0,0.0,unfiltered,8580.0,0.1748901669516608
+Fruit fly,head | AFCA,distal medullary amacrine neuron Dm3,10,3810,0.0,0.0,species_primary,81.0,0.0939812952510867
+Fruit fly,head | AFCA,distal medullary amacrine neuron Dm8,23,15992,3.0,0.0001875937968984,unfiltered,7366.0,3.906789131147863e-05
+Fruit fly,head | AFCA,distal medullary amacrine neuron Dm8,23,3810,17.0,0.0044619422572178,species_primary,17.0,9.307695466278988e-06
+Fruit fly,head | AFCA,ensheathing glial cell,36,15992,664.0,0.0415207603801901,unfiltered,4497.0,1.1827102431864068e-14
+Fruit fly,head | AFCA,ensheathing glial cell,36,3810,829.0,0.2175853018372703,species_primary,0.0,2.817737635405333e-15
+Fruit fly,head | AFCA,epithelial cell_head,36,15992,946.0,0.0591545772886443,unfiltered,3305.0,2.6860243165137304e-15
+Fruit fly,head | AFCA,epithelial cell_head,36,3810,861.0,0.2259842519685039,species_primary,0.0,6.399295051223933e-16
+Fruit fly,head | AFCA,gamma Kenyon cell,36,15992,189.0,0.0118184092046023,unfiltered,5193.0,6.389711201516803e-07
+Fruit fly,head | AFCA,gamma Kenyon cell,36,3810,319.0,0.0837270341207349,species_primary,1.0,1.522311135428903e-07
+Fruit fly,head | AFCA,hemocyte_head,24,15992,82.0,0.0051275637818909,unfiltered,5121.0,1.6968747497523065e-05
+Fruit fly,head | AFCA,hemocyte_head,24,3810,210.0,0.0551181102362204,species_primary,0.0,4.042704350022691e-06
+Fruit fly,head | AFCA,lamina intrinsic amacrine neuron Lai,10,15992,0.0,0.0,unfiltered,7959.0,0.0741700021768846
+Fruit fly,head | AFCA,lamina intrinsic amacrine neuron Lai,10,3810,0.0,0.0,species_primary,17.0,0.1695264343710806
+Fruit fly,head | AFCA,lamina monopolar neuron L1,34,15992,325.0,0.0203226613306653,unfiltered,5310.0,1.0333989926998583e-11
+Fruit fly,head | AFCA,lamina monopolar neuron L1,34,3810,492.0,0.1291338582677165,species_primary,0.0,2.4620123575453106e-12
+Fruit fly,head | AFCA,lamina monopolar neuron L2,35,15992,300.0,0.0187593796898449,unfiltered,4736.0,4.045159332192267e-11
+Fruit fly,head | AFCA,lamina monopolar neuron L2,35,3810,467.0,0.1225721784776903,species_primary,0.0,9.637354336951311e-12
+Fruit fly,head | AFCA,lamina monopolar neuron L3,32,15992,175.0,0.0109429714857428,unfiltered,5652.0,5.579502655654055e-10
+Fruit fly,head | AFCA,lamina monopolar neuron L3,32,3810,274.0,0.0719160104986876,species_primary,0.0,1.3292837117334888e-10
+Fruit fly,head | AFCA,lamina monopolar neuron L4,22,15992,37.0,0.0023136568284142,unfiltered,6584.0,4.676387203175961e-05
+Fruit fly,head | AFCA,lamina monopolar neuron L4,22,3810,82.0,0.021522309711286,species_primary,0.0,1.1141217636380946e-05
+Fruit fly,head | AFCA,lamina monopolar neuron L5,24,15992,30.0,0.0018759379689844,unfiltered,6778.0,0.0004431884091271
+Fruit fly,head | AFCA,lamina monopolar neuron L5,24,3810,42.0,0.011023622047244,species_primary,1.0,0.0007801337079978
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi1,36,15992,181.0,0.0113181590795397,unfiltered,5307.0,2.25255466537084e-09
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi1,36,3810,278.0,0.0729658792650918,species_primary,0.0,5.366579086457543e-10
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi15,6,15992,5.0,0.000312656328164,unfiltered,10347.0,0.0004224878122491
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi15,6,3810,1.0,0.000262467191601,species_primary,347.0,0.0040836773931129
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi4,31,15992,118.0,0.0073786893446723,unfiltered,5699.0,2.5041489010445987e-10
+Fruit fly,head | AFCA,medullary intrinsic neuron Mi4,31,3810,195.0,0.0511811023622047,species_primary,0.0,5.965987564394646e-11
+Fruit fly,head | AFCA,neuron 1,15,15992,0.0,0.0,unfiltered,8237.0,0.1195761434946848
+Fruit fly,head | AFCA,neuron 1,15,3810,5.0,0.0013123359580052,species_primary,64.0,0.0284883133263349
+Fruit fly,head | AFCA,neuron 2,17,15992,1.0,6.25312656328164e-05,unfiltered,8210.0,0.0225135562929643
+Fruit fly,head | AFCA,neuron 2,17,3810,4.0,0.0010498687664041,species_primary,67.0,0.0053637224534888
+Fruit fly,head | AFCA,neuron 3,16,15992,2.0,0.0001250625312656,unfiltered,7497.0,0.0081816680454641
+Fruit fly,head | AFCA,neuron 3,16,3810,3.0,0.0007874015748031,species_primary,15.0,0.0019492343204863
+Fruit fly,head | AFCA,neuron 4,11,15992,2.0,0.0001250625312656,unfiltered,8885.0,0.000111677093267
+Fruit fly,head | AFCA,neuron 4,11,3810,2.0,0.000524934383202,species_primary,108.0,0.0099226794569865
+Fruit fly,head | AFCA,neuron 8,8,15992,0.0,0.0,unfiltered,10393.0,0.1025370279319517
+Fruit fly,head | AFCA,neuron 8,8,3810,1.0,0.000262467191601,species_primary,347.0,0.0244288441983952
+Fruit fly,head | AFCA,olfactory receptor neuron,36,15992,480.0,0.0300150075037518,unfiltered,3804.0,1.0386716501436191e-11
+Fruit fly,head | AFCA,olfactory receptor neuron,36,3810,688.0,0.1805774278215223,species_primary,0.0,2.474574153981484e-12
+Fruit fly,head | AFCA,optic-lobe-associated cortex glial cell,26,15992,95.0,0.0059404702351175,unfiltered,5539.0,9.570838431598113e-07
+Fruit fly,head | AFCA,optic-lobe-associated cortex glial cell,26,3810,171.0,0.0448818897637795,species_primary,0.0,2.2801959995240626e-07
+Fruit fly,head | AFCA,outer photoreceptor cell,36,15992,4847.0,0.3030890445222611,unfiltered,2790.0,1.2228395574707551e-26
+Fruit fly,head | AFCA,outer photoreceptor cell,36,3810,2605.0,0.6837270341207349,species_primary,0.0,2.913343367911191e-27
+Fruit fly,head | AFCA,pericerebral adult fat mass,34,15992,1249.0,0.0781015507753876,unfiltered,3482.0,1.0119350089020024e-10
+Fruit fly,head | AFCA,pericerebral adult fat mass,34,3810,1170.0,0.3070866141732283,species_primary,0.0,2.4108756777867863e-11
+Fruit fly,head | AFCA,photoreceptor cell R7,30,15992,250.0,0.0156328164082041,unfiltered,5745.0,3.596212333782838e-09
+Fruit fly,head | AFCA,photoreceptor cell R7,30,3810,376.0,0.0986876640419947,species_primary,0.0,8.567764502071419e-10
+Fruit fly,head | AFCA,photoreceptor cell R8,34,15992,459.0,0.0287018509254627,unfiltered,5057.0,2.0607779850253132e-16
+Fruit fly,head | AFCA,photoreceptor cell R8,34,3810,677.0,0.1776902887139107,species_primary,0.0,4.909682418050552e-17
+Fruit fly,head | AFCA,pigment cell,35,15992,389.0,0.0243246623311655,unfiltered,4838.0,5.438737189170067e-09
+Fruit fly,head | AFCA,pigment cell,35,3810,453.0,0.1188976377952756,species_primary,0.0,1.2957471667544994e-09
+Fruit fly,head | AFCA,skeletal muscle of head,36,15992,800.0,0.0500250125062531,unfiltered,3085.0,1.1977317890816012e-14
+Fruit fly,head | AFCA,skeletal muscle of head,36,3810,938.0,0.2461942257217848,species_primary,0.0,2.853525585543335e-15
+Fruit fly,head | AFCA,subperineurial glial cell_head,22,15992,14.0,0.0008754377188594,unfiltered,5579.0,0.0116231984074417
+Fruit fly,head | AFCA,subperineurial glial cell_head,22,3810,43.0,0.0112860892388451,species_primary,0.0,0.0027691587001221
+Fruit fly,head | AFCA,transmedullary Y neuron TmY5a,23,15992,31.0,0.0019384692346173,unfiltered,6920.0,2.3381298398474392e-05
+Fruit fly,head | AFCA,transmedullary Y neuron TmY5a,23,3810,64.0,0.0167979002624671,species_primary,6.0,5.570456909591511e-06
+Fruit fly,head | AFCA,transmedullary Y neuron TmY8,11,15992,0.0,0.0,unfiltered,8778.0,0.2565903898226413
+Fruit fly,head | AFCA,transmedullary Y neuron TmY8,11,3810,0.0,0.0,species_primary,97.0,0.1833934564577783
+Fruit fly,head | AFCA,transmedullary neuron Tm1,31,15992,111.0,0.0069409704852426,unfiltered,5774.0,6.321451732250628e-07
+Fruit fly,head | AFCA,transmedullary neuron Tm1,31,3810,207.0,0.0543307086614173,species_primary,0.0,1.5060487181012314e-07
+Fruit fly,head | AFCA,transmedullary neuron Tm2,24,15992,34.0,0.0021260630315157,unfiltered,6330.0,3.5422904247048726e-05
+Fruit fly,head | AFCA,transmedullary neuron Tm2,24,3810,84.0,0.0220472440944881,species_primary,1.0,8.439298723190071e-06
+Fruit fly,head | AFCA,transmedullary neuron Tm20,12,15992,0.0,0.0,unfiltered,8715.0,0.1396393698297043
+Fruit fly,head | AFCA,transmedullary neuron Tm20,12,3810,0.0,0.0,species_primary,99.0,0.0563250945977315
+Fruit fly,head | AFCA,transmedullary neuron Tm3a,30,15992,35.0,0.0021885942971485,unfiltered,6384.0,9.86034716470983e-06
+Fruit fly,head | AFCA,transmedullary neuron Tm3a,30,3810,102.0,0.026771653543307,species_primary,3.0,2.349169753473265e-06
+Fruit fly,head | AFCA,transmedullary neuron Tm4,15,15992,0.0,0.0,unfiltered,8509.0,0.0684823895362116
+Fruit fly,head | AFCA,transmedullary neuron Tm4,15,3810,3.0,0.0007874015748031,species_primary,74.0,0.0163155267716962
+Fruit fly,head | AFCA,transmedullary neuron Tm9,19,15992,8.0,0.0005002501250625,unfiltered,7447.0,0.0035506438929619
+Fruit fly,head | AFCA,transmedullary neuron Tm9,19,3810,10.0,0.0026246719160104,species_primary,11.0,0.00084592003703
+Fruit fly,body | AFCA,16-cell germline cyst in germarium region 2a and 2b,12,15992,1.0,6.25312656328164e-05,unfiltered,5963.0,0.0161453529890503
+Fruit fly,body | AFCA,16-cell germline cyst in germarium region 2a and 2b,12,3810,10.0,0.0026246719160104,species_primary,104.0,0.0038465354482417
+Fruit fly,body | AFCA,adult alary muscle,26,15992,76.0,0.004752376188094,unfiltered,4674.0,2.3113847048545467e-07
+Fruit fly,body | AFCA,adult alary muscle,26,3810,150.0,0.0393700787401574,species_primary,92.0,5.506738197533655e-08
+Fruit fly,body | AFCA,adult fat body_body,36,15992,2904.0,0.1815907953976988,unfiltered,1549.0,8.453834072425844e-17
+Fruit fly,body | AFCA,adult fat body_body,36,3810,1685.0,0.442257217847769,species_primary,3.0,2.284334026660202e-16
+Fruit fly,body | AFCA,adult glial cell,22,15992,93.0,0.0058154077038519,unfiltered,5218.0,4.853988065352311e-09
+Fruit fly,body | AFCA,adult glial cell,22,3810,159.0,0.0417322834645669,species_primary,69.0,1.156434125124581e-09
+Fruit fly,body | AFCA,adult hindgut,11,15992,0.0,0.0,unfiltered,6910.0,0.2407362777179951
+Fruit fly,body | AFCA,adult hindgut,11,3810,0.0,0.0,species_primary,165.0,0.0573540031331641
+Fruit fly,body | AFCA,adult oenocyte,36,15992,945.0,0.0590920460230115,unfiltered,3085.0,1.0319368113945396e-15
+Fruit fly,body | AFCA,adult oenocyte,36,3810,953.0,0.2501312335958005,species_primary,15.0,2.458528796531513e-16
+Fruit fly,body | AFCA,adult peripheral nervous system,35,15992,62.0,0.0038769384692346,unfiltered,3739.0,4.5473084631354056e-10
+Fruit fly,body | AFCA,adult peripheral nervous system,35,3810,120.0,0.0314960629921259,species_primary,2.0,1.0833695125403885e-10
+Fruit fly,body | AFCA,adult salivary gland,13,15992,70.0,0.0043771885942971,unfiltered,6567.0,0.0017083720102006
+Fruit fly,body | AFCA,adult salivary gland,13,3810,152.0,0.0398950131233595,species_primary,133.0,0.0004070095897238
+Fruit fly,body | AFCA,adult tracheal cell,35,15992,347.0,0.0216983491745872,unfiltered,2875.0,3.0450705707205383e-15
+Fruit fly,body | AFCA,adult tracheal cell,35,3810,388.0,0.1018372703412073,species_primary,7.0,7.254701647351959e-16
+Fruit fly,body | AFCA,adult ventral nervous system,36,15992,566.0,0.035392696348174,unfiltered,1865.0,1.002745992436161e-10
+Fruit fly,body | AFCA,adult ventral nervous system,36,3810,758.0,0.1989501312335958,species_primary,0.0,2.388983386181699e-11
+Fruit fly,body | AFCA,cardia (1),22,15992,122.0,0.0076288144072036,unfiltered,5624.0,6.2378389640055295e-06
+Fruit fly,body | AFCA,cardia (1),22,3810,207.0,0.0543307086614173,species_primary,70.0,1.4861284675375854e-06
+Fruit fly,body | AFCA,cell body glial cell,32,15992,65.0,0.004064532266133,unfiltered,4602.0,2.422735861231828e-09
+Fruit fly,body | AFCA,cell body glial cell,32,3810,106.0,0.0278215223097112,species_primary,25.0,5.772025782449513e-10
+Fruit fly,body | AFCA,crop,35,15992,217.0,0.0135692846423211,unfiltered,3072.0,1.656910449023739e-12
+Fruit fly,body | AFCA,crop,35,3810,289.0,0.0758530183727034,species_primary,26.0,3.947491752614086e-13
+Fruit fly,body | AFCA,ejaculatory bulb,14,15992,514.0,0.0321410705352676,unfiltered,4862.0,1.164345192585506e-05
+Fruit fly,body | AFCA,ejaculatory bulb,14,3810,619.0,0.1624671916010498,species_primary,88.0,2.773983981835154e-06
+Fruit fly,body | AFCA,ejaculatory bulb epithelium,11,15992,169.0,0.0105677838919459,unfiltered,6258.0,1.2486887044496374e-05
+Fruit fly,body | AFCA,ejaculatory bulb epithelium,11,3810,275.0,0.0721784776902887,species_primary,154.0,2.9749274411912948e-06
+Fruit fly,body | AFCA,enteroblast,35,15992,479.0,0.029952476238119,unfiltered,4144.0,1.018275444828573e-09
+Fruit fly,body | AFCA,enteroblast,35,3810,591.0,0.1551181102362204,species_primary,16.0,2.4259813936948867e-10
+Fruit fly,body | AFCA,enterocyte of posterior adult midgut epithelium,10,15992,35.0,0.0021885942971485,unfiltered,6787.0,0.0025690497583059
+Fruit fly,body | AFCA,enterocyte of posterior adult midgut epithelium,10,3810,82.0,0.021522309711286,species_primary,247.0,0.0006120610041987
+Fruit fly,body | AFCA,enteroendocrine cell,9,15992,9.0,0.0005627813906953,unfiltered,7211.0,0.0368749421248651
+Fruit fly,body | AFCA,enteroendocrine cell,9,3810,24.0,0.0062992125984251,species_primary,66.0,0.0095616031377964
+Fruit fly,body | AFCA,eo support cell,23,15992,27.0,0.001688344172086,unfiltered,4872.0,0.0002731611926946
+Fruit fly,body | AFCA,eo support cell,23,3810,24.0,0.0062992125984251,species_primary,164.0,6.507904853469199e-05
+Fruit fly,body | AFCA,epithelial cell_body,34,15992,630.0,0.0393946973486743,unfiltered,1603.0,1.5702849474778924e-13
+Fruit fly,body | AFCA,epithelial cell_body,34,3810,646.0,0.1695538057742782,species_primary,15.0,3.7411115869752195e-14
+Fruit fly,body | AFCA,escort cell,11,15992,3.0,0.0001875937968984,unfiltered,7493.0,0.0219264353645115
+Fruit fly,body | AFCA,escort cell,11,3810,8.0,0.0020997375328083,species_primary,298.0,0.0052238443433459
+Fruit fly,body | AFCA,female reproductive system,17,15992,23.0,0.0014382191095547,unfiltered,5671.0,0.0001160537169285
+Fruit fly,body | AFCA,female reproductive system,17,3810,73.0,0.0191601049868766,species_primary,65.0,2.7649115901562025e-05
+Fruit fly,body | AFCA,follicle cell,18,15992,2375.0,0.1485117558779389,unfiltered,3276.0,4.84367275656984e-13
+Fruit fly,body | AFCA,follicle cell,18,3810,1639.0,0.4301837270341207,species_primary,19.0,1.153976563439913e-13
+Fruit fly,body | AFCA,follicle stem cell and prefollicle cell,10,15992,2.0,0.0001250625312656,unfiltered,7954.0,0.0320639040402234
+Fruit fly,body | AFCA,follicle stem cell and prefollicle cell,10,3810,24.0,0.0062992125984251,species_primary,332.0,0.0135966784587908
+Fruit fly,body | AFCA,germline cell,17,15992,72.0,0.0045022511255627,unfiltered,5123.0,0.0156933306949718
+Fruit fly,body | AFCA,germline cell,17,3810,375.0,0.0984251968503937,species_primary,1.0,0.0037388437936369
+Fruit fly,body | AFCA,hemocyte_body,35,15992,458.0,0.0286393196598299,unfiltered,4000.0,3.159777745877378e-13
+Fruit fly,body | AFCA,hemocyte_body,35,3810,503.0,0.132020997375328,species_primary,16.0,7.52798474974538e-14
+Fruit fly,body | AFCA,indirect flight muscle,32,15992,1573.0,0.0983616808404202,unfiltered,2301.0,2.498862422617613e-16
+Fruit fly,body | AFCA,indirect flight muscle,32,3810,1254.0,0.3291338582677165,species_primary,33.0,5.953392840278329e-17
+Fruit fly,body | AFCA,intestinal stem cell,30,15992,288.0,0.0180090045022511,unfiltered,4510.0,2.305360716518258e-07
+Fruit fly,body | AFCA,intestinal stem cell,30,3810,365.0,0.0958005249343832,species_primary,31.0,5.4923863994088066e-08
+Fruit fly,body | AFCA,male accessory gland main cell,18,15992,1268.0,0.0792896448224112,unfiltered,3603.0,5.939575646679149e-09
+Fruit fly,body | AFCA,male accessory gland main cell,18,3810,1009.0,0.2648293963254593,species_primary,66.0,1.4150689853581515e-09
+Fruit fly,body | AFCA,muscle cell,35,15992,858.0,0.0536518259129564,unfiltered,1557.0,1.7355498563709372e-13
+Fruit fly,body | AFCA,muscle cell,35,3810,867.0,0.2275590551181102,species_primary,3.0,4.1348455182424143e-14
+Fruit fly,body | AFCA,oviduct,18,15992,36.0,0.0022511255627813,unfiltered,5433.0,8.867039465299869e-05
+Fruit fly,body | AFCA,oviduct,18,3810,75.0,0.0196850393700787,species_primary,41.0,2.1125200326908767e-05
+Fruit fly,body | AFCA,perineurial glial sheath,24,15992,34.0,0.0021260630315157,unfiltered,4712.0,0.00200672500436
+Fruit fly,body | AFCA,perineurial glial sheath,24,3810,76.0,0.0199475065616797,species_primary,43.0,0.0004780904368816
+Fruit fly,body | AFCA,scolopidial neuron,19,15992,12.0,0.0007503751875937,unfiltered,6307.0,0.0004365719341544
+Fruit fly,body | AFCA,scolopidial neuron,19,3810,25.0,0.0065616797900262,species_primary,20.0,0.0001040106971691
+Fruit fly,body | AFCA,seminal vesicle & testis epithelia,12,15992,22.0,0.0013756878439219,unfiltered,5701.0,4.099626802144718e-05
+Fruit fly,body | AFCA,seminal vesicle & testis epithelia,12,3810,58.0,0.0152230971128608,species_primary,112.0,9.767119882548382e-06
+Fruit fly,body | AFCA,subperineurial glial cell_body,21,15992,44.0,0.0027513756878439,unfiltered,5456.0,9.407376061804816e-07
+Fruit fly,body | AFCA,subperineurial glial cell_body,21,3810,109.0,0.0286089238845144,species_primary,68.0,2.241252050742643e-07
+Fruit fly,body | AFCA,visceral muscle of the midgut,24,15992,14.0,0.0008754377188594,unfiltered,5750.0,0.0023313693288325
+Fruit fly,body | AFCA,visceral muscle of the midgut,24,3810,39.0,0.0102362204724409,species_primary,114.0,0.0005554350389477
+C. elegans,Whole animal | Gao_GSE229022,ARSC,9,26454,0.0,0.0,unfiltered,5108.0,0.1316462987820287
+C. elegans,Whole animal | Gao_GSE229022,ARSC,9,12723,0.0,0.0,species_primary,2.0,0.0658476333930559
+C. elegans,Whole animal | Gao_GSE229022,Embroynic_cells,9,26454,1667.0,0.0630150449837453,unfiltered,3962.0,0.0019446404863342
+C. elegans,Whole animal | Gao_GSE229022,Embroynic_cells,9,12723,2358.0,0.1853336477245932,species_primary,0.0,0.0009352710708259
+C. elegans,Whole animal | Gao_GSE229022,Germline,9,26454,278.0,0.0105088077417403,unfiltered,3820.0,0.0039391662767019
+C. elegans,Whole animal | Gao_GSE229022,Germline,9,12723,463.0,0.0363907883360842,species_primary,1.0,0.003789068763777
+C. elegans,Whole animal | Gao_GSE229022,Gonadal_sheath_cell,6,26454,0.0,0.0,unfiltered,13490.0,0.9127630699794675
+C. elegans,Whole animal | Gao_GSE229022,Gonadal_sheath_cell,6,12723,0.0,0.0,species_primary,1670.0,0.4389916284625676
+C. elegans,Whole animal | Gao_GSE229022,Hypodermis,9,26454,2.0,7.560293339381567e-05,unfiltered,5437.0,0.0290734683333975
+C. elegans,Whole animal | Gao_GSE229022,Hypodermis,9,12723,24.0,0.0018863475595378,species_primary,7.0,0.0139828282152346
+C. elegans,Whole animal | Gao_GSE229022,Intestine,9,26454,15.0,0.0005670220004536,unfiltered,8001.0,0.0131096041802743
+C. elegans,Whole animal | Gao_GSE229022,Intestine,9,12723,19.0,0.0014933584846341,species_primary,185.0,0.0063050387081587
+C. elegans,Whole animal | Gao_GSE229022,Muscle,9,26454,0.0,0.0,unfiltered,7402.0,0.0721979949151641
+C. elegans,Whole animal | Gao_GSE229022,Muscle,9,12723,4.0,0.0003143912599229,species_primary,74.0,0.034723485646996
+C. elegans,Whole animal | Gao_GSE229022,Neuron,9,26454,0.0,0.0,unfiltered,5491.0,0.5190044351859835
+C. elegans,Whole animal | Gao_GSE229022,Neuron,9,12723,0.0,0.0,species_primary,19.0,0.3491156033635392
+C. elegans,Whole animal | Gao_GSE229022,Pharynx,9,26454,0.0,0.0,unfiltered,10327.0,0.1378112116158616
+C. elegans,Whole animal | Gao_GSE229022,Pharynx,9,12723,0.0,0.0,species_primary,481.0,0.069483188033648
+C. elegans,Whole animal | Gao_GSE229022,Vulva_uterus,8,26454,0.0,0.0,unfiltered,10476.0,0.361018840391977
+C. elegans,Whole animal | Gao_GSE229022,Vulva_uterus,8,12723,0.0,0.0,species_primary,484.0,0.1736313111932835
+Zebrafish,Testis fine cell types | GSE275361,blood & SMC-like,6,30390,0.0,0.0,unfiltered,12315.0,1.0
+Zebrafish,Testis fine cell types | GSE275361,blood & SMC-like,6,18923,0.0,0.0,species_primary,3465.0,0.8814219055111516
+Zebrafish,Testis fine cell types | GSE275361,early round spermatids,6,30390,0.0,0.0,unfiltered,4597.0,0.2323109796468062
+Zebrafish,Testis fine cell types | GSE275361,early round spermatids,6,18923,0.0,0.0,species_primary,64.0,0.211737696259871
+Zebrafish,Testis fine cell types | GSE275361,elongating spermatids,6,30390,0.0,0.0,unfiltered,8067.0,0.3924366450665247
+Zebrafish,Testis fine cell types | GSE275361,elongating spermatids,6,18923,0.0,0.0,species_primary,681.0,0.3447809072753592
+Zebrafish,Testis fine cell types | GSE275361,immune,6,30390,0.0,0.0,unfiltered,12268.0,1.0
+Zebrafish,Testis fine cell types | GSE275361,immune,6,18923,0.0,0.0,species_primary,3736.0,0.8515111847311707
+Zebrafish,Testis fine cell types | GSE275361,late round spermatids,6,30390,0.0,0.0,unfiltered,7054.0,0.4173665437167161
+Zebrafish,Testis fine cell types | GSE275361,late round spermatids,6,18923,0.0,0.0,species_primary,420.0,0.2598824319431201
+Zebrafish,Testis fine cell types | GSE275361,middle round spermatids,6,30390,0.0,0.0,unfiltered,6714.0,0.5711466439679977
+Zebrafish,Testis fine cell types | GSE275361,middle round spermatids,6,18923,0.0,0.0,species_primary,382.0,0.490039373302552
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 1,6,30390,0.0,0.0,unfiltered,2069.0,0.0832141585264221
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 1,6,18923,0.0,0.0,species_primary,2.0,0.0669081740150455
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 2,6,30390,0.0,0.0,unfiltered,4143.0,0.1573120745796917
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 2,6,18923,0.0,0.0,species_primary,52.0,0.0979538133356863
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 3,6,30390,0.0,0.0,unfiltered,7274.0,0.3347116868497861
+Zebrafish,Testis fine cell types | GSE275361,spermatocytes 3,6,18923,0.0,0.0,species_primary,522.0,0.2084155725652683
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 1,6,30390,0.0,0.0,unfiltered,2806.0,0.1716005271110486
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 1,6,18923,0.0,0.0,species_primary,44.0,0.2446964000172776
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 2,6,30390,0.0,0.0,unfiltered,2848.0,0.1406825609716947
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 2,6,18923,0.0,0.0,species_primary,54.0,0.3288516889593782
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 3,6,30390,0.0,0.0,unfiltered,8128.0,1.0
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 3,6,18923,0.0,0.0,species_primary,1013.0,0.9775490418545728
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 4,6,30390,0.0,0.0,unfiltered,3101.0,0.2024037156483445
+Zebrafish,Testis fine cell types | GSE275361,spermatogonia 4,6,18923,0.0,0.0,species_primary,20.0,0.15581744676192
+Zebrafish,Testis fine cell types | GSE275361,spermatozoa,6,30390,0.0,0.0,unfiltered,7060.0,0.4692533810267183
+Zebrafish,Testis fine cell types | GSE275361,spermatozoa,6,18923,0.0,0.0,species_primary,450.0,0.3798481818992816
+Naked mole-rat,Skin | GSE152886,basal,5,15549,0.0,0.0,stratum_primary,162.0,0.4626423823548496
+Naked mole-rat,Skin | GSE152886,basal,5,15549,0.0,0.0,species_primary,162.0,0.4626423823548496
+Naked mole-rat,Skin | GSE152886,corneum,5,15549,0.0,0.0,stratum_primary,195.0,0.2701082764892647
+Naked mole-rat,Skin | GSE152886,corneum,5,15549,0.0,0.0,species_primary,195.0,0.2701082764892647
