@@ -1,0 +1,173 @@
+,n_gene_pairs
+hu_kidney | Kidney_LivingDonor | kidney capillary endothelial cell;ms_Kidney | TMS | fenestrated cell,464
+hu_kidney | Kidney_LivingDonor | mononuclear phagocyte;ms_Fat | TMS | myeloid cell,411
+hu_kidney | Kidney_LivingDonor | mononuclear phagocyte;ms_Heart_and_Aorta | TMS | leukocyte,388
+hu_kidney | Kidney_LivingDonor | mononuclear phagocyte;ms_Kidney | TMS | macrophage,375
+hu_kidney | Kidney_LivingDonor | mononuclear phagocyte;ms_Lung | TMS | intermediate monocyte,311
+hu_kidney | Kidney_LivingDonor | mononuclear phagocyte;ms_Spleen | TMS | macrophage,292
+hu_kidney | Kidney_SCR_v15 | B cell;ms_Kidney | TMS | B cell,377
+hu_kidney | Kidney_SCR_v15 | B cell;ms_Spleen | TMS | B cell,383
+hu_kidney | Kidney_SCR_v15 | T cell;ms_Lung | TMS | T cell,543
+hu_kidney | Kidney_SCR_v15 | T cell;ms_Spleen | TMS | T cell,835
+hu_kidney | Kidney_SCR_v15 | endothelial cell;ms_Kidney | TMS | fenestrated cell,950
+hu_kidney | Kidney_SCR_v15 | endothelial cell;ms_Kidney | TMS | kidney cortex artery cell,700
+hu_kidney | Kidney_SCR_v15 | epithelial cell of proximal tubule;ms_Kidney | TMS | epithelial cell of proximal tubule,969
+hu_kidney | Kidney_SCR_v15 | epithelial cell of proximal tubule;ms_Kidney | TMS | kidney proximal convoluted tubule epithelial cell,975
+hu_kidney | Kidney_SCR_v15 | epithelial cell of proximal tubule;ms_Kidney | TMS | podocyte,747
+hu_kidney | Kidney_SCR_v15 | kidney collecting duct intercalated cell;ms_Kidney | TMS | kidney collecting duct principal cell,927
+hu_kidney | Kidney_SCR_v15 | kidney collecting duct principal cell;ms_Kidney | TMS | kidney collecting duct principal cell,943
+hu_kidney | Kidney_SCR_v15 | kidney connecting tubule epithelial cell;ms_Kidney | TMS | kidney collecting duct principal cell,914
+hu_kidney | Kidney_SCR_v15 | kidney distal convoluted tubule epithelial cell;ms_Kidney | TMS | kidney distal convoluted tubule epithelial cell,937
+hu_kidney | Kidney_SCR_v15 | kidney interstitial cell;ms_Fat | TMS | endothelial cell,684
+hu_kidney | Kidney_SCR_v15 | kidney interstitial cell;ms_Limb_Muscle | TMS | mesenchymal stem cell,482
+hu_kidney | Kidney_SCR_v15 | kidney interstitial cell;ms_Limb_Muscle | TMS | smooth muscle cell,778
+hu_kidney | Kidney_SCR_v15 | kidney loop of Henle thick ascending limb epithelial cell;ms_Kidney | TMS | kidney loop of Henle thick ascending limb epithelial cell,974
+hu_lung | ImmuneAging_BAL | B cell;ms_Kidney | TMS | B cell,350
+hu_lung | ImmuneAging_BAL | B cell;ms_Lung | TMS | B cell,367
+hu_lung | ImmuneAging_BAL | B cell;ms_Marrow | TMS | granulocytopoietic cell,96
+hu_lung | ImmuneAging_BAL | B cell;ms_Spleen | TMS | B cell,366
+"hu_lung | ImmuneAging_BAL | CD16-negative, CD56-bright natural killer cell, human;ms_Fat | TMS | T cell",697
+"hu_lung | ImmuneAging_BAL | CD16-negative, CD56-bright natural killer cell, human;ms_Lung | TMS | NK cell",909
+"hu_lung | ImmuneAging_BAL | CD16-negative, CD56-bright natural killer cell, human;ms_Spleen | TMS | NK cell",822
+"hu_lung | ImmuneAging_BAL | CD16-positive, CD56-dim natural killer cell, human;ms_Lung | TMS | NK cell",927
+"hu_lung | ImmuneAging_BAL | CD16-positive, CD56-dim natural killer cell, human;ms_Spleen | TMS | NK cell",821
+"hu_lung | ImmuneAging_BAL | CD4-positive, CD25-positive, alpha-beta regulatory T cell;ms_Fat | TMS | T cell",647
+"hu_lung | ImmuneAging_BAL | CD4-positive, CD25-positive, alpha-beta regulatory T cell;ms_Limb_Muscle | TMS | T cell",644
+"hu_lung | ImmuneAging_BAL | CD4-positive, CD25-positive, alpha-beta regulatory T cell;ms_Spleen | TMS | T cell",825
+"hu_lung | ImmuneAging_BAL | CD4-positive, alpha-beta memory T cell;ms_Fat | TMS | T cell",685
+"hu_lung | ImmuneAging_BAL | CD4-positive, alpha-beta memory T cell;ms_Limb_Muscle | TMS | T cell",713
+"hu_lung | ImmuneAging_BAL | CD8-positive, alpha-beta memory T cell;ms_Fat | TMS | T cell",720
+"hu_lung | ImmuneAging_BAL | CD8-positive, alpha-beta memory T cell;ms_Limb_Muscle | TMS | T cell",728
+"hu_lung | ImmuneAging_BAL | central memory CD4-positive, alpha-beta T cell;ms_Fat | TMS | T cell",604
+"hu_lung | ImmuneAging_BAL | central memory CD4-positive, alpha-beta T cell;ms_Limb_Muscle | TMS | T cell",611
+hu_lung | ImmuneAging_BAL | classical monocyte;ms_Fat | TMS | myeloid cell,717
+hu_lung | ImmuneAging_BAL | classical monocyte;ms_Limb_Muscle | TMS | macrophage,619
+hu_lung | ImmuneAging_BAL | classical monocyte;ms_Marrow | TMS | monocyte,709
+hu_lung | ImmuneAging_BAL | conventional dendritic cell;ms_Fat | TMS | myeloid cell,607
+hu_lung | ImmuneAging_BAL | conventional dendritic cell;ms_Kidney | TMS | lymphocyte,199
+hu_lung | ImmuneAging_BAL | conventional dendritic cell;ms_Limb_Muscle | TMS | macrophage,631
+hu_lung | ImmuneAging_BAL | conventional dendritic cell;ms_Spleen | TMS | macrophage,434
+"hu_lung | ImmuneAging_BAL | effector memory CD4-positive, alpha-beta T cell;ms_Fat | TMS | T cell",680
+"hu_lung | ImmuneAging_BAL | effector memory CD4-positive, alpha-beta T cell;ms_Kidney | TMS | T cell",715
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell;ms_Kidney | TMS | T cell",788
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell;ms_Lung | TMS | mature NK T cell",839
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell;ms_Spleen | TMS | mature NK T cell",751
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell, terminally differentiated;ms_Fat | TMS | T cell",719
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell, terminally differentiated;ms_Kidney | TMS | T cell",812
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell, terminally differentiated;ms_Lung | TMS | mature NK T cell",865
+"hu_lung | ImmuneAging_BAL | effector memory CD8-positive, alpha-beta T cell, terminally differentiated;ms_Spleen | TMS | mature NK T cell",782
+hu_lung | ImmuneAging_BAL | group 3 innate lymphoid cell;ms_Fat | TMS | T cell,580
+hu_lung | ImmuneAging_BAL | immature innate lymphoid cell;ms_Fat | TMS | T cell,691
+hu_lung | ImmuneAging_BAL | immature innate lymphoid cell;ms_Lung | TMS | NK cell,882
+hu_lung | ImmuneAging_BAL | macrophage;ms_Fat | TMS | myeloid cell,735
+hu_lung | ImmuneAging_BAL | macrophage;ms_Limb_Muscle | TMS | macrophage,723
+hu_lung | ImmuneAging_BAL | mast cell;ms_Marrow | TMS | naive B cell,448
+hu_lung | ImmuneAging_BAL | memory B cell;ms_Kidney | TMS | B cell,739
+hu_lung | ImmuneAging_BAL | memory B cell;ms_Limb_Muscle | TMS | B cell,664
+hu_lung | ImmuneAging_BAL | memory B cell;ms_Lung | TMS | B cell,712
+hu_lung | ImmuneAging_BAL | memory B cell;ms_Spleen | TMS | B cell,735
+hu_lung | ImmuneAging_BAL | mucosal invariant T cell;ms_Fat | TMS | T cell,695
+hu_lung | ImmuneAging_BAL | mucosal invariant T cell;ms_Kidney | TMS | T cell,707
+hu_lung | ImmuneAging_BAL | naive B cell;ms_Kidney | TMS | B cell,818
+hu_lung | ImmuneAging_BAL | naive B cell;ms_Limb_Muscle | TMS | B cell,746
+hu_lung | ImmuneAging_BAL | naive B cell;ms_Lung | TMS | B cell,805
+hu_lung | ImmuneAging_BAL | naive B cell;ms_Spleen | TMS | B cell,824
+"hu_lung | ImmuneAging_BAL | naive thymus-derived CD4-positive, alpha-beta T cell;ms_Fat | TMS | T cell",537
+"hu_lung | ImmuneAging_BAL | naive thymus-derived CD4-positive, alpha-beta T cell;ms_Limb_Muscle | TMS | T cell",535
+"hu_lung | ImmuneAging_BAL | naive thymus-derived CD8-positive, alpha-beta T cell;ms_Fat | TMS | T cell",528
+"hu_lung | ImmuneAging_BAL | naive thymus-derived CD8-positive, alpha-beta T cell;ms_Limb_Muscle | TMS | T cell",530
+hu_lung | ImmuneAging_BAL | non-classical monocyte;ms_Fat | TMS | myeloid cell,724
+hu_lung | ImmuneAging_BAL | non-classical monocyte;ms_Limb_Muscle | TMS | macrophage,678
+hu_lung | ImmuneAging_BAL | non-classical monocyte;ms_Lung | TMS | classical monocyte,684
+hu_lung | ImmuneAging_BAL | non-classical monocyte;ms_Lung | TMS | intermediate monocyte,716
+hu_lung | ImmuneAging_BAL | plasmablast;ms_Marrow | TMS | granulocytopoietic cell,306
+hu_lung | ImmuneAging_BAL | plasmablast;ms_Marrow | TMS | late pro-B cell,310
+hu_lung | ImmuneAging_BAL | plasmablast;ms_Spleen | TMS | B cell,396
+hu_lung | ImmuneAging_BAL | plasmablast;ms_Spleen | TMS | plasma cell,403
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Marrow | TMS | erythroblast,478
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Marrow | TMS | hematopoietic precursor cell,437
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Marrow | TMS | macrophage,541
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Marrow | TMS | naive T cell,499
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Marrow | TMS | promonocyte,647
+hu_lung | ImmuneAging_BAL | progenitor cell;ms_Spleen | TMS | proerythroblast,518
+hu_lung | Lung_CellRef | alveolar adventitial fibroblast;ms_Fat | TMS | mesenchymal stem cell of adipose,823
+hu_lung | Lung_CellRef | alveolar adventitial fibroblast;ms_Heart_and_Aorta | TMS | fibroblast of cardiac tissue,850
+hu_lung | Lung_CellRef | alveolar adventitial fibroblast;ms_Limb_Muscle | TMS | mesenchymal stem cell,843
+hu_lung | Lung_CellRef | alveolar capillary type 1 endothelial cell;ms_Heart_and_Aorta | TMS | endothelial cell of coronary artery,966
+hu_lung | Lung_CellRef | alveolar capillary type 1 endothelial cell;ms_Lung | TMS | bronchial smooth muscle cell,991
+hu_lung | Lung_CellRef | alveolar capillary type 1 endothelial cell;ms_Lung | TMS | vein endothelial cell,913
+hu_lung | Lung_CellRef | alveolar capillary type 2 endothelial cell;ms_Lung | TMS | bronchial smooth muscle cell,867
+hu_lung | Lung_CellRef | alveolar type 1 fibroblast cell;ms_Heart_and_Aorta | TMS | fibroblast of cardiac tissue,671
+hu_lung | Lung_CellRef | classical monocyte;ms_Marrow | TMS | granulocyte,112
+hu_lung | Lung_CellRef | classical monocyte;ms_Spleen | TMS | granulocyte,105
+hu_lung | Lung_CellRef | endothelial cell of respiratory system lymphatic vessel;ms_Limb_Muscle | TMS | endothelial cell,726
+hu_lung | Lung_CellRef | vascular associated smooth muscle cell;ms_Fat | TMS | endothelial cell,715
+hu_lung | Lung_CellRef | vascular associated smooth muscle cell;ms_Limb_Muscle | TMS | smooth muscle cell,864
+hu_lung | Lung_CellRef | vein endothelial cell of respiratory system;ms_Limb_Muscle | TMS | endothelial cell,953
+hu_lung | Lung_Integrated | B cell;ms_Limb_Muscle | TMS | B cell,771
+hu_lung | Lung_Integrated | CD1c-positive myeloid dendritic cell;ms_Fat | TMS | myeloid cell,866
+hu_lung | Lung_Integrated | CD1c-positive myeloid dendritic cell;ms_Limb_Muscle | TMS | macrophage,884
+hu_lung | Lung_Integrated | CD1c-positive myeloid dendritic cell;ms_Marrow | TMS | monocyte,852
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Kidney | TMS | T cell",909
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Limb_Muscle | TMS | T cell",807
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Lung | TMS | CD4-positive, alpha-beta T cell",808
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Lung | TMS | CD8-positive, alpha-beta T cell",659
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Lung | TMS | T cell",823
+"hu_lung | Lung_Integrated | CD4-positive, alpha-beta T cell;ms_Spleen | TMS | T cell",973
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Kidney | TMS | T cell",912
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Lung | TMS | CD4-positive, alpha-beta T cell",747
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Lung | TMS | CD8-positive, alpha-beta T cell",663
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Lung | TMS | mature NK T cell",924
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Marrow | TMS | hematopoietic precursor cell",766
+"hu_lung | Lung_Integrated | CD8-positive, alpha-beta T cell;ms_Spleen | TMS | mature NK T cell",884
+hu_lung | Lung_Integrated | T cell;ms_Lung | TMS | T cell,313
+hu_lung | Lung_Integrated | T cell;ms_Marrow | TMS | granulocytopoietic cell,285
+hu_lung | Lung_Integrated | T cell;ms_Marrow | TMS | hematopoietic precursor cell,336
+hu_lung | Lung_Integrated | alveolar adventitial fibroblast;ms_Fat | TMS | mesenchymal stem cell of adipose,948
+hu_lung | Lung_Integrated | alveolar adventitial fibroblast;ms_Heart_and_Aorta | TMS | fibroblast of cardiac tissue,941
+hu_lung | Lung_Integrated | alveolar adventitial fibroblast;ms_Limb_Muscle | TMS | mesenchymal stem cell,969
+hu_lung | Lung_Integrated | alveolar macrophage;ms_Lung | TMS | alveolar macrophage,887
+hu_lung | Lung_Integrated | alveolar type 1 fibroblast cell;ms_Fat | TMS | mesenchymal stem cell of adipose,675
+hu_lung | Lung_Integrated | alveolar type 1 fibroblast cell;ms_Heart_and_Aorta | TMS | fibroblast of cardiac tissue,792
+hu_lung | Lung_Integrated | alveolar type 1 fibroblast cell;ms_Limb_Muscle | TMS | mesenchymal stem cell,731
+hu_lung | Lung_Integrated | bronchus fibroblast of lung;ms_Fat | TMS | mesenchymal stem cell of adipose,822
+hu_lung | Lung_Integrated | bronchus fibroblast of lung;ms_Heart_and_Aorta | TMS | fibroblast of cardiac tissue,826
+hu_lung | Lung_Integrated | bronchus fibroblast of lung;ms_Limb_Muscle | TMS | mesenchymal stem cell,842
+hu_lung | Lung_Integrated | capillary endothelial cell;ms_Heart_and_Aorta | TMS | endothelial cell of coronary artery,876
+hu_lung | Lung_Integrated | capillary endothelial cell;ms_Lung | TMS | bronchial smooth muscle cell,988
+hu_lung | Lung_Integrated | capillary endothelial cell;ms_Lung | TMS | vein endothelial cell,831
+hu_lung | Lung_Integrated | classical monocyte;ms_Lung | TMS | classical monocyte,916
+hu_lung | Lung_Integrated | classical monocyte;ms_Lung | TMS | intermediate monocyte,908
+hu_lung | Lung_Integrated | classical monocyte;ms_Marrow | TMS | monocyte,855
+hu_lung | Lung_Integrated | classical monocyte;ms_Marrow | TMS | proerythroblast,679
+hu_lung | Lung_Integrated | elicited macrophage;ms_Fat | TMS | myeloid cell,819
+hu_lung | Lung_Integrated | elicited macrophage;ms_Limb_Muscle | TMS | macrophage,846
+hu_lung | Lung_Integrated | endothelial cell of lymphatic vessel;ms_Heart_and_Aorta | TMS | endocardial cell,814
+hu_lung | Lung_Integrated | endothelial cell of lymphatic vessel;ms_Limb_Muscle | TMS | endothelial cell,939
+hu_lung | Lung_Integrated | lung macrophage;ms_Fat | TMS | myeloid cell,861
+hu_lung | Lung_Integrated | lung macrophage;ms_Heart_and_Aorta | TMS | leukocyte,862
+hu_lung | Lung_Integrated | lung macrophage;ms_Limb_Muscle | TMS | macrophage,869
+hu_lung | Lung_Integrated | lung pericyte;ms_Limb_Muscle | TMS | smooth muscle cell,775
+hu_lung | Lung_Integrated | mast cell;ms_Marrow | TMS | naive B cell,598
+hu_lung | Lung_Integrated | natural killer cell;ms_Lung | TMS | NK cell,940
+hu_lung | Lung_Integrated | natural killer cell;ms_Marrow | TMS | granulocytopoietic cell,762
+hu_lung | Lung_Integrated | natural killer cell;ms_Spleen | TMS | NK cell,871
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Fat | TMS | myeloid cell,843
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Kidney | TMS | macrophage,795
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Limb_Muscle | TMS | macrophage,842
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Lung | TMS | intermediate monocyte,911
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Lung | TMS | non-classical monocyte,937
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Marrow | TMS | monocyte,843
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Spleen | TMS | macrophage,608
+hu_lung | Lung_Integrated | non-classical monocyte;ms_Spleen | TMS | proerythroblast,641
+hu_lung | Lung_Integrated | pulmonary artery endothelial cell;ms_Fat | TMS | endothelial cell,944
+hu_lung | Lung_Integrated | pulmonary artery endothelial cell;ms_Heart_and_Aorta | TMS | endothelial cell of coronary artery,976
+hu_lung | Lung_Integrated | pulmonary artery endothelial cell;ms_Kidney | TMS | kidney cortex artery cell,852
+hu_lung | Lung_Integrated | pulmonary artery endothelial cell;ms_Limb_Muscle | TMS | endothelial cell,945
+hu_lung | Lung_Integrated | pulmonary artery endothelial cell;ms_Lung | TMS | bronchial smooth muscle cell,990
+hu_lung | Lung_Integrated | respiratory basal cell;ms_Kidney | TMS | podocyte,736
+hu_lung | Lung_Integrated | respiratory tract hillock cell;ms_Kidney | TMS | podocyte,706
+hu_lung | Lung_Integrated | tracheobronchial smooth muscle cell;ms_Limb_Muscle | TMS | smooth muscle cell,855
+hu_lung | Lung_Integrated | vein endothelial cell;ms_Heart_and_Aorta | TMS | endothelial cell of coronary artery,975
+hu_lung | Lung_Integrated | vein endothelial cell;ms_Limb_Muscle | TMS | endothelial cell,973
+hu_lung | Lung_Integrated | vein endothelial cell;ms_Lung | TMS | vein endothelial cell,956

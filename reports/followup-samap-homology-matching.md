@@ -218,3 +218,143 @@ not a change made here.
 - Beast disk: 14 GB free at 98% (was 17 to 18 GB at start). A 1 TB ZFS disk
   was added Nov 25 01:01 PT but is not yet mounted (needs Reza's sudo);
   no action taken here.
+
+## Retry with the full roster (Nov 25, 2026): GATE FAIL, 5 of 28
+
+Ordered by Reza Nov 25 03:54 PT after the Stage 1 gate failed. The retry
+adds exactly the 11 units needed to make all 28 name-matched pairs
+testable, and nothing else. No rule change, no gate change, no BLAST redo
+(the gene maps and BLAST tables are gene-level and unchanged by the roster
+expansion).
+
+### Roster added (11 units, append-only)
+
+New script `scripts/build_samap_inputs_retry.py` (subsample seed 20261125
++ 100, cap 3,000 cells per unit, same as Stage 1). It carries the Stage 1
+input cells over verbatim and appends only the new units; the script
+asserts every old cluster's cell count is unchanged after the append, and
+the assertion passed (0 mismatches on all 127 human and 59 mouse Stage 1
+clusters, verified independently by reading the retry files).
+
+Human (10 units, 5,555 cells): Yazar blood hematopoietic precursor cell
+(1,664 cells, 661 donors) and naive B cell (3,000 cells, capped, 776
+donors); Kidney LivingDonor B cell (61) and kidney distal convoluted
+tubule epithelial cell (105); Kidney SCR B cell (113); ImmuneAging BAL
+B cell (81); Lung CellRef B cell (67), classical monocyte (98),
+non-classical monocyte (4); Lung Integrated T cell (362). Mouse (1 unit,
+225 cells): Lung TMS T cell (225 cells, 10 donors).
+
+Inputs written (gitignored, on disk only): `data/samap/inputs/human-retry.h5ad`
+(311,605 cells x 58,191 genes, 137 clusters), `data/samap/inputs/mouse-retry.h5ad`
+(82,128 cells x 20,138 genes, 60 clusters), `data/samap/inputs/manifest-retry.csv`
+(11 added units). Prep via `scripts/build_samap_gene_maps.py
+--species hu ms --in-suffix=-retry --prep-suffix=-retry --counts-path
+data/samap/gene_map_counts_retry.csv` (new options; Stage 1 defaults
+unchanged): prepped human 311,605 cells x 20,354 genes (+23 Yazar-only
+genes matched in the FASTA), prepped mouse 82,128 cells x 15,792 genes
+(identical to Stage 1). Tracked copy of the counts:
+`results/samap-gene-map-counts-retry.csv`.
+
+Gene-space check: the homology graph gene set is identical between the
+Stage 1 and retry inputs (17,844 human / 15,588 mouse graph genes, 0 genes
+differing in either direction, computed by re-running SAMap's own
+`_calculate_blast_graph` + `_coarsen_blast_graph` on both input sets).
+The 23 new Yazar genes are not in the BLAST graph and are excluded from
+the homology computation, as are the other prepped genes without a
+reciprocal BLAST hit. Note on the two gene counts SAMap prints: the
+pre-run "genes matched" line (17,844 / 15,588) is the homology-graph gene
+count; the post-run `run_summary.json` `n_genes_matched` (20,354 / 15,792)
+is the full prepped gene count, because `SAMap.run()` reassigns
+`gns_dict` to the merged object's gene list at the end. Stage 1's
+20,331 is the same post-run quantity, so the gene space is unchanged.
+
+### SAMap retry run
+
+`scripts/run_samap_pair.py hu ms --outdir results/samap-hums-retry
+--override hu:<prepped/human-retry.h5ad> --override ms:<prepped/mouse-retry.h5ad>`,
+samap env, Nov 25 12:15 to 13:40 PT (~85 min). Iteration alignment
+scores improved across iterations (hu->ms 0.278 to 0.290, ms->hu 0.641
+to 0.678). 8,220 pairs scored (Stage 1: 7,493); top-1% threshold 0.2063
+(Stage 1: 0.2076). **26 pairs pass the full rule (Stage 1: 27)**: dropped
+Lung CellRef alveolar type 1 fibroblast to Heart fibroblast, and Lung
+Integrated B cell to Limb Muscle B cell; gained Lung Integrated classical
+monocyte to Marrow monocyte.
+
+Memory: peak RSS 37.77 GB (94.8% of 38 GB) during the iteration-2
+neighbourhood expansion; MemAvailable dipped to 775 to 831 MB, below the
+800 MB tripwire on the free-command reading. The process survived, RSS
+receded (35.8 GB then 10.5 GB), no OOM kill (dmesg clean), no other job on
+the box. Decision recorded: the run was NOT killed, because the peak is
+the same phase Stage 1 survived twice and the added units are 1.5% of
+cells, so a reduced added-units cap would not materially lower the peak.
+Disk: 9.8 GB free at the end, above the 5 GB stop line.
+
+Build incident: the first build attempt died at the mouse stage with no
+error in the log when the operator's SSH session dropped after a service
+restart (no OOM, process and tee both gone). Re-ran detached under
+setsid/nohup; the script is idempotent (fixed seeds), the human-retry
+file was rewritten identically, and the build completed. No data lost.
+
+### Validation: GATE FAIL, 5 of 28 (same five)
+
+`scripts/validate_samap_hums.py --matches
+results/samap-hums-retry/matches-retry.csv --out
+results/samap-hums-retry/validation-retry.csv` (new options; Stage 1
+defaults unchanged). Full per-pair diagnostics in
+`results/samap-hums-retry/validation-retry.csv`.
+
+**Recovered: 5 of 28. Gate (>= 14) FAILS. Work stops here per protocol.**
+
+The 5 recovered are the same five as Stage 1: kidney distal convoluted
+tubule (SCR, 0.844), kidney loop of Henle thick ascending limb (SCR,
+0.915), lung alveolar macrophage (Integrated, 0.374), lung non-classical
+monocyte (Integrated, 0.764), lung vein endothelial cell (Integrated,
+0.343). All 28 pairs are now testable (`in_matches_table` true for all
+28); **none of the 10 newly testable pairs passes**. 14 of the 28 scores
+moved by more than 0.001, but **no pair changed pass/fail status**.
+
+The 10 newly testable pairs and their scores: Kidney LivingDonor B cell
+0.007 (0 gene pairs); Kidney SCR B cell 0.216 (377 gene pairs, top 1% but
+score below 0.30 and not reciprocal best); Kidney LivingDonor distal
+convoluted tubule 0.003 (0 gene pairs); Lung BAL B cell 0.119 (367 gene
+pairs, not top 1%); Lung CellRef B cell 0.010 (0 gene pairs); Lung
+Integrated T cell 0.213 (313 gene pairs, top 1% but below 0.30 and not
+reciprocal best); Lung CellRef classical monocyte 0.019 (0 gene pairs);
+Lung CellRef non-classical monocyte 0.000 (0 gene pairs); Yazar blood
+hematopoietic precursor cell 0.094 (0 gene pairs); Yazar blood naive B
+cell 0.000 (0 gene pairs).
+
+The 3 reciprocal-best-only failures are unchanged (kidney proximal
+tubule SCR 0.693, kidney collecting duct principal SCR 0.519, lung CD8 T
+cell Integrated 0.362). Among the 28: score >= 0.30 in 8, reciprocal best
+in 5, gene pairs >= 40 in 13, top 1% in 11.
+
+### What this means
+
+The Stage 1 gate failure was not a roster problem. Making every pair
+testable added zero recoveries: the newly added cell types score near
+zero against their same-named mouse partners (B cells 0.007 to 0.216,
+Yazar blood 0.000 to 0.094, the new T cell pair 0.213). SAMap's alignment
+scores for these broad immune types are below 0.30 even when the clusters
+are present with hundreds of cells and, for B cells, hundreds of shared
+gene pairs. The rule and the gate were fixed before seeing results and
+were not changed; no validation was re-run with different thresholds.
+
+Per the task order, the gate failure stops the work: **no Stage 2** (no
+fly arms, no label-permutation control), **no worm arms, no Stage 3
+matched slope test, no MetaNeighbor check**. The match-rule tests still
+pass (6/6).
+
+### Retry deliverables
+
+- `scripts/build_samap_inputs_retry.py` (new), `scripts/build_samap_gene_maps.py`
+  (new `--in-suffix`, `--prep-suffix`, `--counts-path` options),
+  `scripts/validate_samap_hums.py` (new `--matches`, `--out` options)
+- `results/samap-hums-retry/` (alignment_scores.csv, gene_pair_counts.csv,
+  gene_pairs.csv, matches.csv, matches-retry.csv, run_summary.json,
+  validation-retry.csv)
+- `results/samap-gene-map-counts-retry.csv`
+- This report (this section); plain summary `/home/reza/samap-summary.md`
+- `data/samap/inputs/*retry*`, `data/samap/prepped/*retry*`,
+  `data/samap/gene_map_counts_retry.csv` (gitignored, on disk only)
+- Tests: `tests/test_samap_match_rule.py` 6/6 pass

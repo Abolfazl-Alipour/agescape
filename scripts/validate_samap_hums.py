@@ -14,11 +14,15 @@ For every pair this also reports the per-rule diagnostics (alignment score,
 reciprocal-best flag, gene-pair count, top-1% flag) so a gate failure can be
 attributed to a specific sub-rule instead of guessed at.
 
-Usage: python scripts/validate_samap_hums.py
-Writes results/samap-hums/validation.csv and prints the recovery count.
+Usage: python scripts/validate_samap_hums.py [--matches PATH] [--out PATH]
+Defaults read results/samap-hums/matches.csv and write
+results/samap-hums/validation.csv (Stage 1). For the retry, pass
+--matches results/samap-hums-retry/matches-retry.csv
+--out results/samap-hums-retry/validation-retry.csv.
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import pandas as pd
@@ -38,7 +42,16 @@ TISSUE_OF_COHORT = {
 
 
 def main():
-    matches = pd.read_csv(RESULTS / "samap-hums" / "matches.csv")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--matches", default=None,
+                        help="matches.csv to validate (default results/samap-hums/matches.csv)")
+    parser.add_argument("--out", default=None,
+                        help="validation output path (default results/samap-hums/validation.csv)")
+    args = parser.parse_args()
+    matches_path = Path(args.matches) if args.matches else RESULTS / "samap-hums" / "matches.csv"
+    out_path = Path(args.out) if args.out else RESULTS / "samap-hums" / "validation.csv"
+
+    matches = pd.read_csv(matches_path)
     matches["ms_cluster"] = matches.apply(
         lambda r: r["cluster1"] if r["sid1"] == "ms" else r["cluster2"], axis=1)
     matches["hu_cluster"] = matches.apply(
@@ -77,7 +90,7 @@ def main():
                 "n_gene_pairs": None, "top1pct": None, "passes": False,
             })
     out = pd.DataFrame(rows)
-    out_path = RESULTS / "samap-hums" / "validation.csv"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path, index=False)
     n_recovered = int(out["passes"].sum())
     print(f"Recovered {n_recovered} of 28 name-matched pairs (gate: >= {GATE})")

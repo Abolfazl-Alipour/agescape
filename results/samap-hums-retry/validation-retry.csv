@@ -1,0 +1,29 @@
+mouse_tissue,mouse_unit,human_cohort,human_unit,in_matches_table,score,reciprocal_best,n_gene_pairs,top1pct,passes
+Kidney,B cell,Kidney_LivingDonor,B cell,True,0.0074787652700149,False,0,False,False
+Kidney,B cell,Kidney_SCR_v15,B cell,True,0.2162891222432776,False,377,True,False
+Kidney,T cell,Kidney_LivingDonor,T cell,True,0.0251182739276355,False,0,False,False
+Kidney,T cell,Kidney_SCR_v15,T cell,True,0.0824946689008659,False,0,False,False
+Kidney,epithelial cell of proximal tubule,Kidney_LivingDonor,epithelial cell of proximal tubule,True,0.0082807887622642,False,0,False,False
+Kidney,epithelial cell of proximal tubule,Kidney_SCR_v15,epithelial cell of proximal tubule,True,0.6933901959558004,False,969,True,False
+Kidney,kidney collecting duct principal cell,Kidney_SCR_v15,kidney collecting duct principal cell,True,0.5185897301445788,False,943,True,False
+Kidney,kidney distal convoluted tubule epithelial cell,Kidney_LivingDonor,kidney distal convoluted tubule epithelial cell,True,0.0030943995022708,False,0,False,False
+Kidney,kidney distal convoluted tubule epithelial cell,Kidney_SCR_v15,kidney distal convoluted tubule epithelial cell,True,0.8440422769597197,True,937,True,True
+Kidney,kidney loop of Henle thick ascending limb epithelial cell,Kidney_SCR_v15,kidney loop of Henle thick ascending limb epithelial cell,True,0.9145676513235974,True,974,True,True
+Lung,B cell,ImmuneAging_BAL,B cell,True,0.1187424169717148,False,367,False,False
+Lung,B cell,Lung_CellRef,B cell,True,0.0098733905912818,False,0,False,False
+Lung,B cell,Lung_Integrated,B cell,True,0.0562419714816628,False,0,False,False
+Lung,"CD4-positive, alpha-beta T cell",Lung_Integrated,"CD4-positive, alpha-beta T cell",True,0.2572249969291064,False,808,True,False
+Lung,"CD8-positive, alpha-beta T cell",Lung_Integrated,"CD8-positive, alpha-beta T cell",True,0.3624627048132375,False,663,True,False
+Lung,T cell,Lung_Integrated,T cell,True,0.2133374469169659,False,313,True,False
+Lung,alveolar macrophage,Lung_CellRef,alveolar macrophage,True,0.0063166025596974,False,0,False,False
+Lung,alveolar macrophage,Lung_Integrated,alveolar macrophage,True,0.3735015838506658,True,887,True,True
+Lung,classical monocyte,ImmuneAging_BAL,classical monocyte,True,0.0837466099817683,False,0,False,False
+Lung,classical monocyte,Lung_CellRef,classical monocyte,True,0.0192462840774663,False,0,False,False
+Lung,classical monocyte,Lung_Integrated,classical monocyte,True,0.1976295332238231,False,916,False,False
+Lung,non-classical monocyte,ImmuneAging_BAL,non-classical monocyte,True,0.0266932553402554,False,0,False,False
+Lung,non-classical monocyte,Lung_Integrated,non-classical monocyte,True,0.7639136642258946,True,937,True,True
+Lung,vein endothelial cell,Lung_CellRef,vein endothelial cell,True,0.0918625008409738,False,0,False,False
+Lung,vein endothelial cell,Lung_Integrated,vein endothelial cell,True,0.3425897869731694,True,956,True,True
+Marrow,hematopoietic precursor cell,Yazar_Blood,hematopoietic precursor cell,True,0.0937843923185434,False,0,False,False
+Marrow,naive B cell,Yazar_Blood,naive B cell,True,0.0,False,0,False,False
+Lung,non-classical monocyte,Lung_CellRef,non-classical monocyte,True,0.0,False,0,False,False

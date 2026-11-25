@@ -1,0 +1,3 @@
+sid,species,fasta_proteins,fasta_genes,var_genes,mapped_to_gene_id,matched_in_fasta,pct_matched,prepped_genes,prepped_cells,dropped_duplicate_symbol
+hu,human,245535,23869,58191,58191,20354,34.98,20354,311605,0
+ms,mouse,66668,22301,20138,15792,15792,78.42,15792,82128,0

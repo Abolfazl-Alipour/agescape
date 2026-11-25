@@ -1,0 +1,21 @@
+{
+  "id1": "hu",
+  "id2": "ms",
+  "n_cells": {
+    "hu": 311605,
+    "ms": 82128
+  },
+  "n_clusters": {
+    "hu": 137,
+    "ms": 60
+  },
+  "n_genes_matched": {
+    "hu": 20354,
+    "ms": 15792
+  },
+  "n_pairs_scored": 8220,
+  "n_passing": 26,
+  "align_thr": 0.3,
+  "min_gene_pairs": 40,
+  "top_pct": 1.0
+}

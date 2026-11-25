@@ -13,6 +13,11 @@ A var gene counts as matched if its gene ID appears in the FASTA (i.e. the
 protein exists). Unmatched var genes are dropped from the prepped file and
 listed in the counts table. Duplicate var names after renaming keep the copy
 with the highest total counts; the drop is reported.
+
+Retry use: --in-suffix / --prep-suffix read/write suffixed input/prepped
+files (e.g. -retry) and --counts-path writes the counts table elsewhere, so
+a retry never overwrites the Stage 1 prepped files or counts. The names maps
+are FASTA-derived only, so re-running them writes identical content.
 """
 from __future__ import annotations
 
@@ -81,9 +86,17 @@ def parse_fasta(path, split_colon=False):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--species", choices=list(SPECIES), nargs="+", default=list(SPECIES))
+    parser.add_argument("--in-suffix", default="",
+                        help="suffix for input files, e.g. -retry reads <slug>-retry.h5ad")
+    parser.add_argument("--prep-suffix", default="",
+                        help="suffix for prepped files, e.g. -retry writes <slug>-retry.h5ad")
+    parser.add_argument("--counts-path", default=None,
+                        help="counts table path (default data/samap/gene_map_counts.csv)")
     args = parser.parse_args()
     PREP_DIR.mkdir(parents=True, exist_ok=True)
     MAP_DIR.mkdir(parents=True, exist_ok=True)
+    counts_path = Path(args.counts_path) if args.counts_path else (
+        REPO / "data" / "samap" / "gene_map_counts.csv")
     import anndata as ad
     count_rows = []
     for sid in args.species:
@@ -107,7 +120,7 @@ def main():
         names.to_csv(MAP_DIR / f"names_{sid}.csv", index=False)
         print(f"  names map: {len(names)} protein->gene rows", flush=True)
 
-        adata = ad.read_h5ad(IN_DIR / f"{slug}.h5ad")
+        adata = ad.read_h5ad(IN_DIR / f"{slug}{args.in_suffix}.h5ad")
         # cluster key = the concordance unit (tissue/cohort + cell type)
         adata.obs["cluster"] = (adata.obs["tissue"].astype(str) + " | "
                                 + adata.obs["cohort"].astype(str) + " | "
@@ -145,7 +158,7 @@ def main():
         sub = sub[:, dedup_idx].copy()
         sub.var_names = gene_keep[dedup_idx]
         sub.var["symbol"] = [gene_symbol.get(g, "") for g in sub.var_names]
-        sub.write_h5ad(PREP_DIR / f"{slug}.h5ad", compression="gzip")
+        sub.write_h5ad(PREP_DIR / f"{slug}{args.prep_suffix}.h5ad", compression="gzip")
         print(f"  prepped: {sub.n_obs} cells x {sub.n_vars} genes "
               f"(dropped {int((~matched).sum())} unmatched, {dropped_dup} duplicate-symbol)",
               flush=True)
@@ -161,7 +174,6 @@ def main():
             "dropped_duplicate_symbol": int(dropped_dup),
         })
     counts = pd.DataFrame(count_rows)
-    counts_path = REPO / "data" / "samap" / "gene_map_counts.csv"
     if counts_path.exists():
         old = pd.read_csv(counts_path)
         counts = pd.concat([old[~old["sid"].isin(args.species)], counts], ignore_index=True)
