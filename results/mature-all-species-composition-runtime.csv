@@ -1,0 +1,2 @@
+pipeline,start_utc,end_utc,duration_seconds,model_used,status
+mature_all_species_fractions,2026-11-25T01:54:30.289135+00:00,2026-11-25T01:54:36.912782+00:00,6.623647,kimi-code/k3.1-pro,completed

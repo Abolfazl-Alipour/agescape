@@ -1,0 +1,106 @@
+species,organ,cohort,cell_type,reason,n_units_mature,n_present_mature,total_cells_mature
+Human,brain,HBCC_DLPFC,plasma cell,cell type present in fewer than 6 mature donors,64,0.0,0.0
+Human,brain,RADC_DLPFC,B cell,cell type present in fewer than 6 mature donors,18,1.0,1.0
+Human,kidney,Kidney_NormalAdult,kidney loop of Henle thin ascending limb epithelial cell,cell type present in fewer than 6 mature donors,18,4.0,901.0
+Human,kidney,Kidney_NormalAdult,myofibroblast cell,cell type present in fewer than 6 mature donors,18,3.0,11.0
+Human,kidney,Kidney_SCR_v15,kidney loop of Henle thin descending limb epithelial cell,cell type present in fewer than 6 mature donors,18,4.0,19.0
+Human,kidney,Kidney_SCR_v15,mast cell,cell type present in fewer than 6 mature donors,18,5.0,10.0
+Human,kidney,Kidney_SN_v15,B cell,cell type present in fewer than 6 mature donors,8,3.0,267.0
+Human,kidney,Kidney_SN_v15,conventional dendritic cell,cell type present in fewer than 6 mature donors,8,3.0,41.0
+Human,kidney,Kidney_SN_v15,mast cell,cell type present in fewer than 6 mature donors,8,5.0,75.0
+Human,kidney,Kidney_SN_v15,neural cell,cell type present in fewer than 6 mature donors,8,5.0,26.0
+Human,kidney,Kidney_SN_v15,neutrophil,cell type present in fewer than 6 mature donors,8,4.0,22.0
+Human,kidney,Kidney_SN_v15,papillary tips cell,cell type present in fewer than 6 mature donors,8,5.0,303.0
+Human,kidney,Kidney_SN_v15,"plasmacytoid dendritic cell, human",cell type present in fewer than 6 mature donors,8,3.0,30.0
+Human,lung,Lung_CellRef,"CD8-positive, alpha-beta cytotoxic T cell",cell type present in fewer than 6 mature donors,13,5.0,386.0
+Human,lung,Lung_CellRef,airway submucosal gland collecting duct epithelial cell,cell type present in fewer than 6 mature donors,13,3.0,370.0
+Human,lung,Lung_CellRef,brush cell of tracheobronchial tree,cell type present in fewer than 6 mature donors,13,1.0,1.0
+Human,lung,Lung_CellRef,chondrocyte,cell type present in fewer than 6 mature donors,13,0.0,0.0
+Human,lung,Lung_CellRef,innate lymphoid cell,cell type present in fewer than 6 mature donors,13,1.0,1.0
+Human,lung,Lung_CellRef,ionocyte,cell type present in fewer than 6 mature donors,13,3.0,5.0
+Human,lung,Lung_CellRef,lung megakaryocyte,cell type present in fewer than 6 mature donors,13,3.0,5.0
+Human,lung,Lung_CellRef,mast cell,cell type present in fewer than 6 mature donors,13,5.0,41.0
+Human,lung,Lung_CellRef,mature conventional dendritic cell,cell type present in fewer than 6 mature donors,13,2.0,6.0
+Human,lung,Lung_CellRef,mesothelial cell of pleura,cell type present in fewer than 6 mature donors,13,2.0,3.0
+Human,lung,Lung_CellRef,mucus secreting cell of tracheobronchial tree submucosal gland,cell type present in fewer than 6 mature donors,13,3.0,338.0
+Human,lung,Lung_CellRef,myoepithelial cell,cell type present in fewer than 6 mature donors,13,3.0,271.0
+Human,lung,Lung_CellRef,neutrophil,cell type present in fewer than 6 mature donors,13,5.0,22.0
+Human,lung,Lung_CellRef,non-classical monocyte,cell type present in fewer than 6 mature donors,13,4.0,4.0
+Human,lung,Lung_CellRef,plasmacytoid dendritic cell,cell type present in fewer than 6 mature donors,13,3.0,4.0
+Human,lung,Lung_CellRef,regulatory T cell,cell type present in fewer than 6 mature donors,13,3.0,12.0
+Human,lung,Lung_CellRef,serous secreting cell,cell type present in fewer than 6 mature donors,13,3.0,968.0
+Mouse,Bladder,TMS,bladder cell,cell type present in fewer than 6 mature animals,4,4.0,1132.0
+Mouse,Bladder,TMS,bladder urothelial cell,cell type present in fewer than 6 mature animals,4,4.0,3807.0
+Mouse,Bladder,TMS,endothelial cell,cell type present in fewer than 6 mature animals,4,4.0,171.0
+Mouse,Bladder,TMS,leukocyte,cell type present in fewer than 6 mature animals,4,4.0,260.0
+Mouse,Fat,TMS,epithelial cell,cell type present in fewer than 6 mature animals,6,5.0,114.0
+Mouse,Fat,TMS,erythroblast,cell type present in fewer than 6 mature animals,6,5.0,54.0
+Mouse,Fat,TMS,lymphocyte,cell type present in fewer than 6 mature animals,6,3.0,54.0
+Mouse,Heart_and_Aorta,TMS,mast cell,cell type present in fewer than 6 mature animals,9,4.0,76.0
+Mouse,Kidney,TMS,kidney cell,cell type present in fewer than 6 mature animals,11,0.0,0.0
+Mouse,Kidney,TMS,kidney collecting duct epithelial cell,cell type present in fewer than 6 mature animals,11,0.0,0.0
+Mouse,Kidney,TMS,kidney proximal straight tubule epithelial cell,cell type present in fewer than 6 mature animals,11,0.0,0.0
+Mouse,Kidney,TMS,leukocyte,cell type present in fewer than 6 mature animals,11,0.0,0.0
+Mouse,Large_Intestine,TMS,enterocyte of epithelium of large intestine,cell type present in fewer than 6 mature animals,3,3.0,1102.0
+Mouse,Large_Intestine,TMS,epithelial cell of large intestine,cell type present in fewer than 6 mature animals,3,3.0,188.0
+Mouse,Large_Intestine,TMS,hematopoietic stem cell,cell type present in fewer than 6 mature animals,3,3.0,36.0
+Mouse,Large_Intestine,TMS,intestinal crypt stem cell,cell type present in fewer than 6 mature animals,3,3.0,313.0
+Mouse,Large_Intestine,TMS,large intestine goblet cell,cell type present in fewer than 6 mature animals,3,3.0,136.0
+Mouse,Liver,TMS,duct epithelial cell,cell type present in fewer than 6 mature animals,7,0.0,0.0
+Mouse,Liver,TMS,hepatic stellate cell,cell type present in fewer than 6 mature animals,7,3.0,9.0
+Mouse,Liver,TMS,plasmacytoid dendritic cell,cell type present in fewer than 6 mature animals,7,5.0,26.0
+Mouse,Lung,TMS,lung neuroendocrine cell,cell type present in fewer than 6 mature animals,10,0.0,0.0
+Mouse,Mammary_Gland,TMS,B cell,cell type present in fewer than 6 mature animals,4,4.0,901.0
+Mouse,Mammary_Gland,TMS,T cell,cell type present in fewer than 6 mature animals,4,4.0,1389.0
+Mouse,Mammary_Gland,TMS,basal cell,cell type present in fewer than 6 mature animals,4,4.0,1178.0
+Mouse,Mammary_Gland,TMS,endothelial cell,cell type present in fewer than 6 mature animals,4,4.0,394.0
+Mouse,Mammary_Gland,TMS,luminal epithelial cell of mammary gland,cell type present in fewer than 6 mature animals,4,4.0,1301.0
+Mouse,Mammary_Gland,TMS,macrophage,cell type present in fewer than 6 mature animals,4,4.0,352.0
+Mouse,Mammary_Gland,TMS,stromal cell,cell type present in fewer than 6 mature animals,4,4.0,2141.0
+Mouse,Pancreas,TMS,pancreatic PP cell,cell type present in fewer than 6 mature animals,8,5.0,152.0
+Mouse,Skin,TMS,T cell,cell type present in fewer than 6 mature animals,3,3.0,62.0
+Mouse,Skin,TMS,basal cell of epidermis,cell type present in fewer than 6 mature animals,3,3.0,1913.0
+Mouse,Skin,TMS,epidermal cell,cell type present in fewer than 6 mature animals,3,3.0,1457.0
+Mouse,Skin,TMS,keratinocyte stem cell,cell type present in fewer than 6 mature animals,3,3.0,407.0
+Mouse,Skin,TMS,stem cell of epidermis,cell type present in fewer than 6 mature animals,3,3.0,123.0
+Mouse,Thymus,TMS,DN3 thymocyte,cell type present in fewer than 6 mature animals,5,5.0,113.0
+Mouse,Thymus,TMS,DN4 thymocyte,cell type present in fewer than 6 mature animals,5,5.0,1715.0
+Mouse,Thymus,TMS,double negative T cell,cell type present in fewer than 6 mature animals,5,5.0,780.0
+Mouse,Thymus,TMS,immature T cell,cell type present in fewer than 6 mature animals,5,5.0,1376.0
+Mouse,Thymus,TMS,professional antigen presenting cell,cell type present in fewer than 6 mature animals,5,5.0,2442.0
+Mouse,Thymus,TMS,thymocyte,cell type present in fewer than 6 mature animals,5,5.0,1333.0
+Mouse,Tongue,TMS,Langerhans cell,cell type present in fewer than 6 mature animals,4,4.0,117.0
+Mouse,Tongue,TMS,basal cell of epidermis,cell type present in fewer than 6 mature animals,4,4.0,3582.0
+Mouse,Tongue,TMS,keratinocyte,cell type present in fewer than 6 mature animals,4,4.0,4737.0
+Mouse,Trachea,TMS,basal epithelial cell of tracheobronchial tree,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,blood cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,chondrocyte,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,endothelial cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,epithelial cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,fibroblast,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,granulocyte,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,macrophage,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,mesenchymal cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,mesenchymal progenitor cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,neuroendocrine cell,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Mouse,Trachea,TMS,smooth muscle cell of trachea,cell type present in fewer than 6 mature animals,0,0.0,0.0
+Naked mole-rat,Skin,GSE152886,basal,"no defensible mature-to-old window: after the established 2V exclusion, only three animals at 1.1 years and two at 11.3 years remain, with no intermediate ages; either group is below the six-animal floor",0,,
+Naked mole-rat,Skin,GSE152886,corneum,"no defensible mature-to-old window: after the established 2V exclusion, only three animals at 1.1 years and two at 11.3 years remain, with no intermediate ages; either group is below the six-animal floor",0,,
+Naked mole-rat,Skin,GSE152886,immune,"no defensible mature-to-old window: after the established 2V exclusion, only three animals at 1.1 years and two at 11.3 years remain, with no intermediate ages; either group is below the six-animal floor",0,,
+Naked mole-rat,Skin,GSE152886,intermediate,"no defensible mature-to-old window: after the established 2V exclusion, only three animals at 1.1 years and two at 11.3 years remain, with no intermediate ages; either group is below the six-animal floor",0,,
+Zebrafish,Testis,GSE275361,Sertoli & Leydig,cell type present in fewer than 6 mature fishs,4,4.0,148.0
+Zebrafish,Testis,GSE275361,blood & SMC-like,cell type present in fewer than 6 mature fishs,4,4.0,184.0
+Zebrafish,Testis,GSE275361,early round spermatids,cell type present in fewer than 6 mature fishs,4,4.0,1381.0
+Zebrafish,Testis,GSE275361,elongating spermatids,cell type present in fewer than 6 mature fishs,4,4.0,2686.0
+Zebrafish,Testis,GSE275361,immune,cell type present in fewer than 6 mature fishs,4,4.0,231.0
+Zebrafish,Testis,GSE275361,late round spermatids,cell type present in fewer than 6 mature fishs,4,4.0,3210.0
+Zebrafish,Testis,GSE275361,liver,cell type present in fewer than 6 mature fishs,4,0.0,0.0
+Zebrafish,Testis,GSE275361,middle round spermatids,cell type present in fewer than 6 mature fishs,4,4.0,1645.0
+Zebrafish,Testis,GSE275361,spermatocytes 1,cell type present in fewer than 6 mature fishs,4,4.0,1919.0
+Zebrafish,Testis,GSE275361,spermatocytes 2,cell type present in fewer than 6 mature fishs,4,4.0,1069.0
+Zebrafish,Testis,GSE275361,spermatocytes 3,cell type present in fewer than 6 mature fishs,4,4.0,358.0
+Zebrafish,Testis,GSE275361,spermatogonia 1,cell type present in fewer than 6 mature fishs,4,4.0,718.0
+Zebrafish,Testis,GSE275361,spermatogonia 2,cell type present in fewer than 6 mature fishs,4,4.0,601.0
+Zebrafish,Testis,GSE275361,spermatogonia 3,cell type present in fewer than 6 mature fishs,4,4.0,372.0
+Zebrafish,Testis,GSE275361,spermatogonia 4,cell type present in fewer than 6 mature fishs,4,4.0,1303.0
+Zebrafish,Testis,GSE275361,spermatozoa,cell type present in fewer than 6 mature fishs,4,4.0,4160.0

@@ -1,0 +1,55 @@
+check,value,status
+unique_test_keys,1,PASS
+finite_pvalues,1,PASS
+tests_equal_csv_rows,577,PASS
+pooled_bh_max_abs_difference,3.1433189384699745e-15,PASS
+species_bh_C. elegans,1.4016565685892601e-15,PASS
+species_bh_Fruit fly,5.637851296924623e-16,PASS
+species_bh_Human,4.6004866582904924e-15,PASS
+species_bh_Mouse,5.200700980978468e-15,PASS
+"stratum_bh_('C. elegans', 'Whole animal', 'Gao_GSE229022')",1.4016565685892601e-15,PASS
+"stratum_bh_('Fruit fly', 'body', 'AFCA')",3.0010716134398763e-16,PASS
+"stratum_bh_('Fruit fly', 'head', 'AFCA')",6.002143226879753e-16,PASS
+"stratum_bh_('Human', 'brain', 'HBCC_DLPFC')",0.0,PASS
+"stratum_bh_('Human', 'brain', 'MSSM_DLPFC')",2.983724378680108e-16,PASS
+"stratum_bh_('Human', 'brain', 'RADC_DLPFC')",6.661338147750939e-16,PASS
+"stratum_bh_('Human', 'brain', 'SEAAD_DLPFC')",7.008282842946301e-16,PASS
+"stratum_bh_('Human', 'kidney', 'Kidney_LivingDonor')",4.579669976578771e-16,PASS
+"stratum_bh_('Human', 'kidney', 'Kidney_NormalAdult')",2.4424906541753444e-15,PASS
+"stratum_bh_('Human', 'kidney', 'Kidney_SCR_v15')",8.326672684688674e-16,PASS
+"stratum_bh_('Human', 'kidney', 'Kidney_SN_v15')",2.220446049250313e-16,PASS
+"stratum_bh_('Human', 'lung', 'ImmuneAging_BAL')",6.661338147750939e-16,PASS
+"stratum_bh_('Human', 'lung', 'Lung_CellRef')",1.1102230246251565e-16,PASS
+"stratum_bh_('Human', 'lung', 'Lung_Integrated')",1.601149768326593e-15,PASS
+"stratum_bh_('Mouse', 'Fat', 'TMS')",3.885780586188048e-16,PASS
+"stratum_bh_('Mouse', 'Heart_and_Aorta', 'TMS')",0.0,PASS
+"stratum_bh_('Mouse', 'Kidney', 'TMS')",2.7755575615628914e-16,PASS
+"stratum_bh_('Mouse', 'Limb_Muscle', 'TMS')",3.9985376121265404e-16,PASS
+"stratum_bh_('Mouse', 'Liver', 'TMS')",1.1102230246251565e-16,PASS
+"stratum_bh_('Mouse', 'Lung', 'TMS')",9.159339953157541e-16,PASS
+"stratum_bh_('Mouse', 'Marrow', 'TMS')",2.7755575615628914e-16,PASS
+"stratum_bh_('Mouse', 'Pancreas', 'TMS')",0.0,PASS
+"stratum_bh_('Mouse', 'Spleen', 'TMS')",1.1102230246251565e-16,PASS
+age_floor_C. elegans,6.0,PASS
+presence_floor_C. elegans,9,PASS
+unit_floor_C. elegans,9,PASS
+age_floor_Fruit fly,30.0,PASS
+presence_floor_Fruit fly,6,PASS
+unit_floor_Fruit fly,36,PASS
+age_floor_Human,30.0,PASS
+presence_floor_Human,6,PASS
+unit_floor_Human,8,PASS
+age_floor_Mouse,18.0,PASS
+presence_floor_Mouse,6,PASS
+unit_floor_Mouse,6,PASS
+mammalian_key_count,399,PASS
+mammalian_effect_max_abs_difference,0.0,PASS
+mammalian_pvalue_max_abs_difference,0.0,PASS
+fly_key_count_matches_624,162,PASS
+fly_effect_max_abs_difference_to_624,0.0,PASS
+fly_pvalue_max_abs_difference_to_624,0.0,PASS
+full_range_624_pass_count,45,PASS
+mature_399_pass_count,10,PASS
+saved_mature_399_pass_flag_count,10,PASS
+saved_mature_399_pass_flag_keys,10,PASS
+locked_624_sha256_unchanged,3f26242585017bd3a68a4a7c4dcb1d2684da0e9f662c37ed7e07e1bd6f054d96,PASS

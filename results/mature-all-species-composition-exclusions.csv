@@ -1,0 +1,10 @@
+species,organ,cohort,scope,inferential_unit,n_units_mature,available_ages_mature,n_cell_types_candidates,reason
+Mouse,Bladder,TMS,tissue_or_cohort,animal,4,18;24,4,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Large_Intestine,TMS,tissue_or_cohort,animal,3,30,5,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Mammary_Gland,TMS,tissue_or_cohort,animal,4,18;21,7,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Skin,TMS,tissue_or_cohort,animal,3,18;21,5,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Thymus,TMS,tissue_or_cohort,animal,5,18;21;24,6,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Tongue,TMS,tissue_or_cohort,animal,4,18;24,3,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Mouse,Trachea,TMS,tissue_or_cohort,animal,0,,12,zero eligible tests: no cell type met the 6-unit presence rule and produced an estimable age model
+Zebrafish,Testis,GSE275361,species_primary_fine_arm,fish,4,12;20;22,16,"12 months is the prespecified mature cutoff because the source atlas describes 5-month testes as approaching peak spermatogenesis and 12-month testes as closest to peak fertility; only four fish at 12, 20, and 22 months have comparable fine labels, below the six-fish floor, so no fine cell type is eligible; the separate broad-label reconciliation arm is not substituted for the primary fine-label arm"
+Naked mole-rat,Skin,GSE152886,species,animal,0,not defined; all available ages: 1.1;11.3,4,"no defensible mature-to-old window: after the established 2V exclusion, only three animals at 1.1 years and two at 11.3 years remain, with no intermediate ages; either group is below the six-animal floor"
