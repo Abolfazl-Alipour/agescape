@@ -108,19 +108,50 @@ def _refit_clr_slope(sub):
 
 def fig1_composition():
     v = pd.read_csv(RESULTS / "mature-only-composition-verdicts.csv")
+    pooled = pd.read_csv(RESULTS / "mature-all-species-composition.csv")
+    assert len(pooled) == 577, len(pooled)
+    assert int((pooled["q_pooled_mature_bh"] < 0.05).sum()) == 39
     assert len(v) == 15, len(v)
     assert (v["verdict"] == "DIES").sum() == 9
     assert (v["verdict"] == "SURVIVES").sum() == 5
     assert (v["verdict"] == "UNTESTABLE").sum() == 1
-    # manuscript numbers: club -0.080, multiciliated -0.047, L6b +0.020,
-    # oligodendrocyte +0.017, OPC -0.012; donor-panel q values are the
-    # refit family on the 399-row mature scan (0.01090, 0.02579), matching
-    # the caption and body, not the original 431-test family.
-    surv = v[v["verdict"] == "SURVIVES"]
-    assert np.allclose(surv["mature_q_global_bh_orig_family"].values,
-                       [0.011776868326018252, 0.027853986950145068,
-                        0.011776868326018252, 0.011776868326018252,
-                        0.011776868326018252])
+    # Join verdicts with the primary pooled mature 577-test family
+    # (q_pooled_mature_bh) on (species, organ, cohort, cell_type).
+    v = v.merge(
+        pooled[["species", "organ", "cohort", "cell_type", "q_pooled_mature_bh"]],
+        on=["species", "organ", "cohort", "cell_type"],
+        how="left",
+        validate="one_to_one",
+    )
+    expected_pooled_q = {
+        ("Mouse", "Lung", "TMS", "pulmonary interstitial fibroblast"): (0.151733561188, 1e-6),
+        ("Mouse", "Lung", "TMS", "T cell"): (0.177469401013, 1e-6),
+        ("Mouse", "Kidney", "TMS", "kidney capillary endothelial cell"): (0.253280792500, 1e-6),
+        ("Mouse", "Liver", "TMS", "B cell"): (0.289595584675, 1e-6),
+        ("Mouse", "Limb_Muscle", "TMS", "skeletal muscle cell"): (0.500117471668, 1e-6),
+        ("Mouse", "Spleen", "TMS", "plasma cell"): (0.516743537949, 1e-6),
+        ("Mouse", "Kidney", "TMS", "kidney mesangial cell"): (0.570376900626, 1e-6),
+        ("Mouse", "Marrow", "TMS", "precursor B cell"): (0.623620537683, 1e-6),
+        ("Mouse", "Marrow", "TMS", "late pro-B cell"): (0.804763819344, 1e-6),
+        ("Human", "lung", "Lung_Integrated", "club cell"): (0.0042366415, 1e-9),
+        ("Human", "lung", "Lung_Integrated", "multiciliated epithelial cell"): (0.0124298147, 1e-9),
+        ("Human", "brain", "MSSM_DLPFC", "L6b glutamatergic neuron of the primary motor cortex"): (0.0042106693, 1e-9),
+        ("Human", "brain", "MSSM_DLPFC", "oligodendrocyte"): (0.0045046424, 1e-9),
+        ("Human", "brain", "MSSM_DLPFC", "oligodendrocyte precursor cell"): (0.0042366415, 1e-9),
+    }
+    testable = v[v["verdict"] != "UNTESTABLE"]
+    assert len(testable) == 14, len(testable)
+    assert testable["q_pooled_mature_bh"].notna().all()
+    seen_keys = set()
+    for _, row in testable.iterrows():
+        key = (row["species"], row["organ"], row["cohort"], row["cell_type"])
+        assert key in expected_pooled_q, key
+        seen_keys.add(key)
+        exp_q, tol = expected_pooled_q[key]
+        obs_q = float(row["q_pooled_mature_bh"])
+        assert abs(obs_q - exp_q) < tol, (key, obs_q, exp_q)
+        assert (obs_q < 0.05) == (row["verdict"] == "SURVIVES"), (key, obs_q, row["verdict"])
+    assert seen_keys == set(expected_pooled_q.keys())
     short = {
         ("Mouse", "Kidney", "kidney capillary endothelial cell"): "Kidney capillary endothelial",
         ("Mouse", "Kidney", "kidney mesangial cell"): "Kidney mesangial",
@@ -153,6 +184,11 @@ def fig1_composition():
                           & (human_comp["cell_type"] == ct)]
         assert len(crow) == 1, (organ, cohort, ct)
         crow = crow.iloc[0]
+        prow = pooled[(pooled["species"] == "Human") & (pooled["organ"] == organ)
+                      & (pooled["cohort"] == cohort) & (pooled["cell_type"] == ct)]
+        assert len(prow) == 1, (organ, cohort, ct)
+        prow = prow.iloc[0]
+        assert abs(float(prow["effect"]) - float(crow["effect"])) < 1e-12
         eff, se, pv, model = _refit_clr_slope(sub)
         assert abs(eff - float(crow["effect"])) < 1e-9, (ct, eff, crow["effect"])
         assert abs(se - float(crow["se"])) < 1e-9, (ct, se, crow["se"])
@@ -164,13 +200,13 @@ def fig1_composition():
         sub["y_plot"] = sub["clr_value"] - beta_sex * sub["sex_male"]
         donor_panels.append({
             "label": label, "sub": sub, "slope": float(crow["effect"]),
-            "q": float(crow["q_refit_family"]), "p": float(crow["pvalue"]),
+            "q": float(prow["q_pooled_mature_bh"]), "p": float(crow["pvalue"]),
         })
-    # Donor-panel q values must be the refit family (caption and body),
+    # Donor-panel q values come from the primary pooled mature 577-test family,
     # in headline order: L6b, oligodendrocyte, OPC.
     assert np.allclose([d["q"] for d in donor_panels],
-                       [0.0109024836707222, 0.0109024836707222,
-                        0.0109024836707222])
+                       [0.0042106693, 0.0045046424, 0.0042366415],
+                       rtol=1e-8, atol=1e-9)
 
     # Forest is stacked (mouse on top, human below) with heights in the
     # ratio of the row counts (9 to 5), so both panels have the same row
@@ -194,7 +230,7 @@ def fig1_composition():
         hi = part["mature_effect"] + 1.96 * part["mature_se"]
         for yi, l, h in zip(y, lo, hi):
             ax.plot([l, h], [yi, yi], color=color, lw=2.0, alpha=0.85)
-        survived = part["verdict"] == "SURVIVES"
+        survived = part["q_pooled_mature_bh"] < 0.05
         ax.scatter(part.loc[survived, "mature_effect"], y[survived.values],
                    color=color, s=70, zorder=3)
         ax.scatter(part.loc[~survived, "mature_effect"], y[(~survived).values],
@@ -242,12 +278,17 @@ def fig1_composition():
         ax.set_xticks([30, 50, 70, 90])
         ax.set_xticklabels(["30", "50", "70", "90"])
         ax.tick_params(axis="y", labelsize=10)
-        ax.text(0.05, 0.95, f"slope {d['slope']:+.3f} per year\nrefit-family q {d['q']:.3f}",
+        ax.text(0.05, 0.95, f"slope {d['slope']:+.3f} per year\npooled-family q {d['q']:.5f}",
                 transform=ax.transAxes, fontsize=10, va="top", ha="left")
     ax_donor[0].set_ylabel("CLR value (sex-adjusted)", fontsize=11)
-    fig.subplots_adjust(left=0.21, right=0.98, top=0.92, bottom=0.08)
+    fig.subplots_adjust(left=0.265, right=0.98, top=0.92, bottom=0.08)
     save(fig, "fig1-composition")
-    print("fig1-composition rebuilt: forest + 3 donor panels; slopes refit and asserted")
+    print("fig1-composition rebuilt: forest + 3 donor panels; pooled-family q and slopes asserted")
+    for _, row in testable.sort_values(["species", "q_pooled_mature_bh"], ascending=[False, True]).iterrows():
+        print(f"  fig1 forest: {row['species']} | {row['organ']} | {row['cohort']} | {row['cell_type']} | "
+              f"slope {row['mature_effect']:+.6f} | pooled q {row['q_pooled_mature_bh']:.10f}")
+    for d in donor_panels:
+        print(f"  fig1 donor: {d['label'].replace(chr(10), ' ')} | slope {d['slope']:+.6f} | pooled q {d['q']:.10f}")
 
 
 def _fit_stratified_partial_residuals(ds, metric, table_csv, donor_csv, out_col, n_cells_min=None):

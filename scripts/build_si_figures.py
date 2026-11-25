@@ -20,6 +20,7 @@ import csv
 import math
 import os
 from collections import Counter
+from pathlib import Path
 
 import matplotlib
 
@@ -27,7 +28,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-REPO = os.path.expanduser("~/workspace/agescape-repo")
+REPO = str(Path(__file__).resolve().parent.parent)
 OUT = os.path.join(REPO, "report", "plos-one", "figures-si")
 os.makedirs(OUT, exist_ok=True)
 
@@ -128,8 +129,21 @@ def build_s1():
 def build_s2():
     mouse = rows("results/followup-mature-composition-mouse.csv")
     human = rows("results/followup-mature-composition-human.csv")
+    pooled = rows("results/mature-all-species-composition.csv")
     assert len(mouse) == 114, len(mouse)
     assert len(human) == 285, len(human)
+    assert len(pooled) == 577, len(pooled)
+    assert sum(1 for r in pooled if float(r["q_pooled_mature_bh"]) < 0.05) == 39
+
+    pooled_by_key = {
+        (r["species"], r["organ"], r["cohort"], r["cell_type"]): r
+        for r in pooled
+    }
+    assert len(pooled_by_key) == 577, len(pooled_by_key)
+    for r in mouse + human:
+        key = (r["species"], r["organ"], r["cohort"], r["cell_type"])
+        assert key in pooled_by_key, key
+        assert abs(float(r["effect"]) - float(pooled_by_key[key]["effect"])) < 1e-12, key
 
     def find(df, cell, cohort, organ):
         hits = [r for r in df if r["cell_type"] == cell and r["cohort"] == cohort
@@ -137,52 +151,70 @@ def build_s2():
         assert len(hits) == 1, (cell, cohort, organ, len(hits))
         return hits[0]
 
-    # (short key label, cell_type, cohort, organ, expected slope, species)
+    # (label, cell_type, cohort, organ, expected slope, expected pooled q, expected rank, species)
     targets = [
-        ("Human lung club cell", "club cell", "Lung_Integrated", "lung", -0.080407, "human"),
-        ("Human lung multiciliated epithelial cell", "multiciliated epithelial cell",
-         "Lung_Integrated", "lung", -0.047002, "human"),
-        ("Mount Sinai brain samples (MSSM) L6b glutamatergic neuron",
-         "L6b glutamatergic neuron of the primary motor cortex", "MSSM_DLPFC", "brain", 0.019765, "human"),
-        ("Mount Sinai brain samples (MSSM) oligodendrocyte", "oligodendrocyte",
-         "MSSM_DLPFC", "brain", 0.017269, "human"),
-        ("Mount Sinai brain samples (MSSM) oligodendrocyte precursor cell",
-         "oligodendrocyte precursor cell", "MSSM_DLPFC", "brain", -0.011896, "human"),
-        ("Mouse limb-muscle macrophage", "macrophage", "TMS", "Limb_Muscle", -0.142945, "mouse"),
+        ("Mouse limb-muscle macrophage", "macrophage", "TMS", "Limb_Muscle",
+         -0.142945, 0.01243, 8, "mouse"),
         ("Mouse limb-muscle mesenchymal stem cell", "mesenchymal stem cell",
-         "TMS", "Limb_Muscle", -0.100457, "mouse"),
-        ("Human lung conventional dendritic cell", "conventional dendritic cell",
-         "Lung_Integrated", "lung", 0.022897, "human"),
+         "TMS", "Limb_Muscle", -0.100457, 0.00812, 15, "mouse"),
+        ("Human lung club cell", "club cell", "Lung_Integrated", "lung",
+         -0.080407, 0.00424, 6, "human"),
+        ("Human lung multiciliated epithelial cell", "multiciliated epithelial cell",
+         "Lung_Integrated", "lung", -0.047002, 0.01243, 21, "human"),
         ("Human lung multiciliated columnar cell of tracheobronchial tree",
          "multiciliated columnar cell of tracheobronchial tree", "Lung_Integrated",
-         "lung", -0.038079, "human"),
+         "lung", -0.038079, 0.02488, 26, "human"),
         ("Seattle Alzheimer brain atlas (SEA-AD) L5 extratelencephalic projecting "
          "glutamatergic cortical neuron",
          "L5 extratelencephalic projecting glutamatergic cortical neuron",
-         "SEAAD_DLPFC", "brain", -0.021299, "human"),
+         "SEAAD_DLPFC", "brain", -0.021299, 0.02488, 51, "human"),
+        ("Mount Sinai brain samples (MSSM) sst GABAergic cortical interneuron",
+         "sst GABAergic cortical interneuron", "MSSM_DLPFC", "brain",
+         -0.012646, 0.04678, 77, "human"),
+        ("Mount Sinai brain samples (MSSM) oligodendrocyte precursor cell",
+         "oligodendrocyte precursor cell", "MSSM_DLPFC", "brain",
+         -0.011896, 0.00424, 81, "human"),
+        ("Mount Sinai brain samples (MSSM) GABAergic neuron",
+         "GABAergic neuron", "MSSM_DLPFC", "brain",
+         -0.011759, 0.02944, 82, "human"),
+        ("Mount Sinai brain samples (MSSM) oligodendrocyte", "oligodendrocyte",
+         "MSSM_DLPFC", "brain", 0.017269, 0.00450, 219, "human"),
+        ("Mount Sinai brain samples (MSSM) L6b glutamatergic neuron",
+         "L6b glutamatergic neuron of the primary motor cortex", "MSSM_DLPFC",
+         "brain", 0.019765, 0.00421, 227, "human"),
+        ("Human lung conventional dendritic cell", "conventional dendritic cell",
+         "Lung_Integrated", "lung", 0.022897, 0.01449, 237, "human"),
+        ("Human kidney cortex collecting duct epithelial cell",
+         "kidney cortex collecting duct epithelial cell", "Kidney_LivingDonor",
+         "kidney", 0.080346, 0.04085, 282, "human"),
     ]
-    # Same-scan rows live in the secondary-checks file, not the main files:
-    # all five of them are among the ten targets below.
+    # Same-scan rows live in the secondary-checks file: all five of them are
+    # among the 13 targets below.
     sec = rows("results/followup-mature-composition-secondary-checks.csv")
     assert len(sec) == 5, len(sec)
     assert all(r["status"] == "SCAN_FINDING" for r in sec)
     sec_keys = {(r["cell_type"], r["cohort"]) for r in sec}
 
-    # The single scan family is the refit family: exactly these 10 rows
-    # have q below 0.05 under it, in either file.
+    # The primary scan family is the pooled mature 577-test family
+    # (q_pooled_mature_bh below 0.05; 39 passes overall, 13 mammalian:
+    # 2 mouse and 11 human).
     passing = set()
     for r in mouse + human:
-        if float(r["q_refit_family"]) < 0.05:
+        pr = pooled_by_key[(r["species"], r["organ"], r["cohort"], r["cell_type"])]
+        if float(pr["q_pooled_mature_bh"]) < 0.05:
             passing.add((r["cell_type"], r["cohort"], r["organ"]))
     found = {}
-    for label, cell, cohort, organ, expected, species in targets:
+    for label, cell, cohort, organ, expected, exp_q, _exp_rank, species in targets:
         df = mouse if species == "mouse" else human
         r = find(df, cell, cohort, organ)
+        pr = pooled_by_key[(r["species"], organ, cohort, cell)]
+        q_val = float(pr["q_pooled_mature_bh"])
         assert abs(float(r["effect"]) - expected) < 5e-7, (label, r["effect"], expected)
-        assert float(r["q_refit_family"]) < 0.05, (label, r["q_refit_family"])
-        found[label] = (float(r["effect"]), species)
-    assert passing == {(c, co, o) for (_, c, co, o, _, _) in targets}, passing
-    assert sec_keys <= {(c, co) for (_, c, co, _, _, _) in targets}
+        assert q_val < 0.05, (label, q_val)
+        assert abs(q_val - exp_q) < 5e-6, (label, q_val, exp_q)
+        found[label] = (float(r["effect"]), species, q_val)
+    assert passing == {(c, co, o) for (_, c, co, o, _, _, _, _) in targets}, passing
+    assert sec_keys <= {(c, co) for (_, c, co, _, _, _, _, _) in targets}
 
     # Rank within each species panel, most negative first (1 = most negative).
     # The printed number next to each highlighted dot IS its rank on that
@@ -193,38 +225,89 @@ def build_s2():
         for i, r in enumerate(ordered, start=1):
             ranks[(r["cell_type"], r["cohort"], r["organ"])] = i
     numbers = {}
-    for label, cell, cohort, organ, _expected, _species in targets:
-        numbers[label] = ranks[(cell, cohort, organ)]
+    for label, cell, cohort, organ, _expected, _exp_q, exp_rank, _species in targets:
+        rk = ranks[(cell, cohort, organ)]
+        assert rk == exp_rank, (label, rk, exp_rank)
+        numbers[label] = rk
 
-    fig = plt.figure(figsize=(11, 8.8))
-    gs = fig.add_gridspec(2, 1, height_ratios=[3.1, 1.5], hspace=0.55)
+    n_mouse_pass = sum(1 for t in targets if t[7] == "mouse")
+    n_human_pass = sum(1 for t in targets if t[7] == "human")
+    assert (n_mouse_pass, n_human_pass) == (2, 11)
+    n_other_mouse = len(mouse) - n_mouse_pass
+    n_other_human = len(human) - n_human_pass
+    assert (n_other_mouse, n_other_human) == (112, 274)
+
+    print("S2 highlighted rows (pooled 577-test family, 13 mammalian passes):")
+    for label, cell, cohort, organ, _expected, _exp_q, _exp_rank, species in targets:
+        val, sp, qv = found[label]
+        print(f"  {sp:5s} rank={numbers[label]:3d} | {organ:11s} | {cohort:18s} | {cell} | "
+              f"effect={val:+.6f} | pooled_q={qv:.10f}")
+
+    # Explicit per-rank offsets (in points) so clustered labels (21/26,
+    # 77/81/82, 219/227/237, and 282) never collide with one another,
+    # the x=0 axis line, the legend, or the curve.
+    # Tuple: (dx_pt, dy_pt, ha, va, draw_leader)
+    label_offsets = {
+        ("mouse", 8): (-10, 7, "right", "center", True),
+        ("mouse", 15): (8, 1, "left", "center", False),
+        ("human", 6): (7, -1, "left", "center", False),
+        ("human", 21): (-10, 8, "right", "center", True),
+        ("human", 26): (8, -2, "left", "center", False),
+        ("human", 51): (8, 0, "left", "center", False),
+        ("human", 77): (-14, -12, "right", "center", True),
+        ("human", 81): (-20, 2, "right", "center", True),
+        ("human", 82): (-14, 17, "right", "center", True),
+        ("human", 219): (14, -10, "left", "center", True),
+        ("human", 227): (18, 1, "left", "center", True),
+        ("human", 237): (14, 10, "left", "center", True),
+        ("human", 282): (0, -14, "center", "top", True),
+    }
+
+    fig = plt.figure(figsize=(11.8, 9.8))
+    gs = fig.add_gridspec(2, 1, height_ratios=[2.9, 2.05], hspace=0.58)
     gs_top = gs[0].subgridspec(1, 2, wspace=0.28)
     ax_m = fig.add_subplot(gs_top[0])
     ax_h = fig.add_subplot(gs_top[1])
     panels = [
         (ax_m, mouse, "mouse", "Mouse rows sorted by slope (1 = most negative)",
          "CLR slope per month", [-0.50, -0.25, 0.00, 0.25], (-0.60, 0.30),
-         [1, 30, 60, 90, 114], (0, 122), "Other 112 mouse rows", 0.012),
+         [1, 30, 60, 90, 114], (0, 122), f"Other {n_other_mouse} mouse rows"),
         (ax_h, human, "human", "Human rows sorted by slope (1 = most negative)",
          "CLR slope per year", [-0.10, -0.05, 0.00, 0.05, 0.10], (-0.13, 0.12),
-         [1, 100, 200, 285], (0, 300), "Other 277 human rows", 0.0035),
+         [1, 100, 200, 285], (0, 300), f"Other {n_other_human} human rows"),
     ]
-    for ax, df, species, ylabel, xlabel, xticks, xlim, yticks, ylim, other_label, dx in panels:
+    panel_annots = {"mouse": [], "human": []}
+    for ax, df, species, ylabel, xlabel, xticks, xlim, yticks, ylim, other_label in panels:
         style_ax(ax)
         slopes = sorted(float(r["effect"]) for r in df)
         n = len(df)
         ax.scatter(slopes, range(1, n + 1), s=14, color="#8a8a8a", zorder=2,
                    label=other_label)
-        for label, cell, cohort, organ, _expected, sp in targets:
+        for label, cell, cohort, organ, _expected, _exp_q, _exp_rank, sp in targets:
             if sp != species:
                 continue
-            val, _ = found[label]
+            val, _, _ = found[label]
             rank = numbers[label]
             col = MOUSE if species == "mouse" else HUMAN
             ax.scatter([val], [rank], s=90, color=col, edgecolor="white",
                        linewidth=1.0, zorder=4)
-            ax.text(val + dx, rank, str(rank), fontsize=10, fontweight="bold",
-                    color=col, va="center", ha="left", zorder=5)
+            dx_pt, dy_pt, ha, va, leader = label_offsets[(species, rank)]
+            arrowprops = (dict(arrowstyle="-", color=col, lw=0.8, shrinkA=0, shrinkB=4)
+                          if leader else None)
+            ann = ax.annotate(
+                str(rank),
+                xy=(val, rank),
+                xytext=(dx_pt, dy_pt),
+                textcoords="offset points",
+                fontsize=9.5,
+                fontweight="bold",
+                color=col,
+                va=va,
+                ha=ha,
+                arrowprops=arrowprops,
+                zorder=5,
+            )
+            panel_annots[species].append((rank, ann))
         ax.axvline(0, color="black", linewidth=1.0, zorder=1)
         ax.set_title("Mouse: 114 rows" if species == "mouse" else "Human: 285 rows",
                      fontsize=12)
@@ -235,21 +318,25 @@ def build_s2():
         ax.set_yticks(yticks)
         ax.set_ylim(*ylim)
         ax.legend(loc="lower right", frameon=False)
-    fig.suptitle("All 399 cell-type fraction slopes, split by species; the 10 that clear the bar are highlighted",
+    fig.suptitle("All 399 cell-type fraction slopes, split by species; the 13 that clear the bar are highlighted",
                  fontsize=12, y=0.98)
-    fig.text(0.5, 0.335,
-             "The 10 highlighted rows clear the bar: q below 0.05 in the refit family. "
-             "Numbers are each row's rank in its own panel (1 = most negative).\n"
-             "Mouse slopes are per month; human slopes are per year. "
-             "MSSM: Mount Sinai brain samples. SEA-AD: Seattle Alzheimer brain atlas.",
-             ha="center", va="top", fontsize=10)
+    footnote = fig.text(
+        0.5, 0.395,
+        "The 13 highlighted rows clear the bar: q below 0.05 in the pooled 577-test family. "
+        "Numbers are each row's rank in its own panel (1 = most negative).\n"
+        "Mouse slopes are per month; human slopes are per year. "
+        "MSSM: Mount Sinai brain samples. SEA-AD: Seattle Alzheimer brain atlas.",
+        ha="center", va="top", fontsize=10,
+    )
 
     axk = fig.add_subplot(gs[1])
     axk.axis("off")
-    axk.set_xlim(0, 11)
+    axk.set_xlim(0, 13.05)
     axk.set_ylim(0, 10)
-    axk.text(0, 9.6, "The 10 highlighted rows (number = rank in its panel):",
-             fontsize=11, fontweight="bold", va="top", ha="left")
+    key_header = axk.text(
+        0, 9.85, "The 13 highlighted rows (number = rank in its panel):",
+        fontsize=11, fontweight="bold", va="top", ha="left",
+    )
     # Short key labels; MSSM and SEA-AD are expanded in the note above the key.
     short = {
         "Mouse limb-muscle macrophage": "Mouse limb-muscle macrophage",
@@ -261,32 +348,71 @@ def build_s2():
         "Seattle Alzheimer brain atlas (SEA-AD) L5 extratelencephalic projecting "
         "glutamatergic cortical neuron":
             "SEA-AD L5 extratelencephalic projecting glutamatergic cortical neuron",
+        "Mount Sinai brain samples (MSSM) sst GABAergic cortical interneuron":
+            "MSSM sst GABAergic cortical interneuron",
         "Mount Sinai brain samples (MSSM) oligodendrocyte precursor cell":
             "MSSM oligodendrocyte precursor cell",
+        "Mount Sinai brain samples (MSSM) GABAergic neuron":
+            "MSSM GABAergic neuron",
         "Mount Sinai brain samples (MSSM) oligodendrocyte": "MSSM oligodendrocyte",
         "Mount Sinai brain samples (MSSM) L6b glutamatergic neuron":
             "MSSM L6b glutamatergic neuron",
         "Human lung conventional dendritic cell": "Human lung conventional dendritic cell",
+        "Human kidney cortex collecting duct epithelial cell":
+            "Kidney cortex collecting duct epithelial cell",
     }
     import textwrap
     # Key order: mouse ranks first, then human ranks, each most negative first.
+    # 3-column layout (5, 4, 4 entries) so all 13 fit legibly with no overlap.
     keyed = sorted(found.items(), key=lambda kv: (kv[1][1] != "mouse", numbers[kv[0]]))
-    left = keyed[:5]
-    right = keyed[5:]
-    for j, col_items in enumerate([left, right]):
-        x0 = 0.1 + j * 5.6
-        y = 8.2
-        for lab, (val, species) in col_items:
+    col_slices = [keyed[:5], keyed[5:9], keyed[9:]]
+    col_xs = [0.0, 4.35, 8.70]
+    key_texts = []
+    for x0, col_items in zip(col_xs, col_slices):
+        y = 8.70
+        for lab, (val, species, _qv) in col_items:
             num = numbers[lab]
             sign = "+" if val > 0 else ""
             unit = "per month" if species == "mouse" else "per year"
             text = f"{num}. {short[lab]}, {sign}{val:.3f} {unit}"
-            lines = textwrap.wrap(text, width=66)
+            lines = textwrap.wrap(text, width=39)
             for k, ln in enumerate(lines):
-                axk.text(x0 + (0.35 if k > 0 else 0), y, ln,
-                         fontsize=9.5, va="top", ha="left")
-                y -= 0.8
-            y -= 0.75
+                t = axk.text(x0 + (0.24 if k > 0 else 0), y, ln,
+                             fontsize=8.8, va="top", ha="left")
+                key_texts.append((text, t))
+                y -= 0.66
+            y -= 0.28
+
+    # Verify rendered text bounding boxes: no overlaps and no overflow.
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    # 1. Check rank label text bounding boxes do not overlap within either panel.
+    for sp, ann_list in panel_annots.items():
+        boxes = [(rk, matplotlib.text.Text.get_window_extent(ann, renderer))
+                 for rk, ann in ann_list]
+        for i in range(len(boxes)):
+            for j in range(i + 1, len(boxes)):
+                assert not boxes[i][1].overlaps(boxes[j][1]), (
+                    f"Overlapping rank labels in {sp}: {boxes[i][0]} and {boxes[j][0]}"
+                )
+    # 2. Check footnote sits cleanly above the key header and below the x-labels.
+    fn_box = footnote.get_window_extent(renderer)
+    hdr_box = key_header.get_window_extent(renderer)
+    xlab_y0 = min(ax_m.xaxis.label.get_window_extent(renderer).y0,
+                  ax_h.xaxis.label.get_window_extent(renderer).y0)
+    assert fn_box.y0 > hdr_box.y1 + 2.0, (fn_box, hdr_box)
+    assert fn_box.y1 < xlab_y0 - 2.0, (fn_box, xlab_y0)
+    # 3. Check all key text boxes are non-overlapping and stay within axk.
+    axk_box = axk.get_window_extent(renderer)
+    kboxes = [(lbl, t.get_window_extent(renderer)) for lbl, t in key_texts]
+    for lbl, b in kboxes:
+        assert b.x0 >= axk_box.x0 - 2.0 and b.x1 <= axk_box.x1 + 2.0, (lbl, b, axk_box)
+        assert b.y0 >= axk_box.y0 - 2.0 and b.y1 <= hdr_box.y0 + 1.0, (lbl, b, axk_box, hdr_box)
+    for i in range(len(kboxes)):
+        for j in range(i + 1, len(kboxes)):
+            assert not kboxes[i][1].overlaps(kboxes[j][1]), (
+                f"Overlapping key texts: {kboxes[i][0]} vs {kboxes[j][0]}"
+            )
     save(fig, "s2-fraction-scan")
 
 
