@@ -4,6 +4,12 @@ import pandas as pd
 from scripts import run_rev2_joint_concordance as joint
 
 
+def test_mature_worm_cache_is_separate_from_full_range_cache():
+    assert joint.cache_directory("C. elegans", mature_only=False).name == "worm"
+    assert joint.cache_directory("C. elegans", mature_only=True).name == "mature-6plus"
+    assert joint.cache_directory("Fruit fly", mature_only=True).name == "fly"
+
+
 def test_detection_mask_uses_donor_and_unit_floors():
     units = [
         {"expression": np.array([[1, 1, 0], [1, 0, 0], [1, 0, 0]])},
