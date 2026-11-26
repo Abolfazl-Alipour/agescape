@@ -31,7 +31,7 @@ age coefficient, donor as the unit for mouse and human, pool as the unit for
 fly and worm, mature windows only: mouse 18 months and older, human 30 years
 and older, fly 30 days and older, worm 6 days and older):
 
-1. results/followup-mature-propeller.csv: the 399 mammalian scan rows
+1. results/followup-mature-propeller.csv: 577 mammalian rows (444 human, 133 mouse), of which the 399 mammalian scan rows were matched
    (mature inputs from scripts/prepare_mature_propeller.py plus the 9 HRCA
    retina suites from scripts/prepare_mature_propeller_hrca.py).
 2. results/followup-mature-fly-worm-propeller.csv: the 178 fly and worm scan
