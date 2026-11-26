@@ -1,0 +1,57 @@
+check,species,organ,cohort,cell_type,subset,n_pools,effect,se,pvalue,sign_matches_scan,note
+study_evidence,Fruit fly,head,AFCA,,all,36,,,,,"raw file dataset counts {'AFCA': 189670, 'FCA': 100311}; FCA cells are all age 5 and excluded by the mature filter; after dataset==AFCA and age>=30, 36 pools, every cell dataset AFCA; no study/batch column exists in the AFCA obs"
+study_evidence,Fruit fly,body,AFCA,,all,36,,,,,"raw file dataset counts {'AFCA': 179679, 'FCA': 96594}; FCA cells are all age 5 and excluded by the mature filter; after dataset==AFCA and age>=30, 36 pools, every cell dataset AFCA; no study/batch column exists in the AFCA obs"
+study_evidence,C. elegans,Whole animal,Gao_GSE229022,,all,9,,,,,"single integrated file from one GEO series (GSE229022); no study/dataset/batch column in obs (checked: []); mature pools are wild-type N2 only (genotypes in mature set: ['N2D12', 'N2D14', 'N2D6']); orig.ident values are sample IDs inside the one study"
+sex_analog,Fruit fly,body,AFCA,16-cell germline cyst in germarium region 2a and 2b,male_only,18,0.017755276349231776,0.004224526639680597,0.0006743888896410438,True,scan effect +0.0243 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,16-cell germline cyst in germarium region 2a and 2b,female_only,18,0.030777326760115853,0.010948594721376659,0.012551201748957852,True,scan effect +0.0243 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult Malpighian tubule principal cell of lower ureter,male_only,18,-0.02259638311555974,0.006576819963973207,0.0033940788138186006,True,scan effect -0.0255 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult Malpighian tubule principal cell of lower ureter,female_only,18,-0.028434054676369516,0.009268785416625468,0.007360827231254286,True,scan effect -0.0255 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult differentiating enterocyte,male_only,18,0.029038818853824304,0.006869012251726905,0.0006405828380595078,True,scan effect +0.0249 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult differentiating enterocyte,female_only,18,0.02068141302961496,0.011150931857445964,0.08216504935973433,True,scan effect +0.0249 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult fat body_body,male_only,18,-0.01741947604034614,0.003684310324550022,0.00022742226057998507,True,scan effect -0.0185 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult fat body_body,female_only,18,-0.019538579098253808,0.002667676831406359,1.7089546881550212e-06,True,scan effect -0.0185 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult ventral nervous system,male_only,18,-0.01682217951359704,0.0025296095312118292,5.5794245248656955e-06,True,scan effect -0.0081 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,adult ventral nervous system,female_only,18,0.0005913746553124835,0.0027964192371748675,0.8351862783431948,False,scan effect -0.0081 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,ejaculatory bulb,male_only,18,-0.02339786415009098,0.00581488831176966,0.0009816992026084465,True,scan effect -0.0161 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,ejaculatory bulb,female_only,18,-0.008721882212645943,0.0036040744282845507,0.027789206054591706,True,scan effect -0.0161 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,enteroendocrine cell,male_only,18,0.035253055325451164,0.013879889452704859,0.021846104006154575,True,scan effect +0.0378 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,enteroendocrine cell,female_only,18,0.04042737947180817,0.015978146870922392,0.02227807887900517,True,scan effect +0.0378 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,escort cell,male_only,18,0.017755276349231776,0.004224526639680597,0.0006743888896410438,True,scan effect +0.0121 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,escort cell,female_only,18,0.00644890861500219,0.00535804874892038,0.246253013264713,True,scan effect +0.0121 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,follicle stem cell and prefollicle cell,male_only,18,0.017755276349231776,0.004224526639680597,0.0006743888896410438,True,scan effect +0.0142 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,follicle stem cell and prefollicle cell,female_only,18,0.01062307846013965,0.0036554907970486727,0.010310469875475445,True,scan effect +0.0142 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,hemocyte_body,male_only,18,-0.018312514746705463,0.002974568640244053,1.3806039143611771e-05,True,scan effect -0.0110 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,hemocyte_body,female_only,18,-0.0036709013674838427,0.003758927218105552,0.34331150007236716,True,scan effect -0.0110 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,male accessory gland main cell,male_only,18,-0.018014488655818006,0.007044244589122765,0.0210881099794679,True,scan effect -0.0134 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,male accessory gland main cell,female_only,18,-0.008721882212645943,0.0036040744282845507,0.027789206054591706,True,scan effect -0.0134 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,posterior midgut*,male_only,18,8.64135475643242e-05,0.010413166661286723,0.993481430099335,False,scan effect -0.0340 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,posterior midgut*,female_only,18,-0.06811971884229849,0.00977496910157282,3.164609526000342e-06,True,scan effect -0.0340 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,prefollicle cell/stalk follicle cell,male_only,18,0.017755276349231776,0.004224526639680597,0.0006743888896410438,True,scan effect +0.0179 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,prefollicle cell/stalk follicle cell,female_only,18,0.018069869438363875,0.00496972601411923,0.0022235641159917656,True,scan effect +0.0179 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,stalk follicle cell,male_only,18,0.017755276349231776,0.004224526639680597,0.0006743888896410438,True,scan effect +0.0219 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,body,AFCA,stalk follicle cell,female_only,18,0.02611605403977562,0.007327521843497978,0.002588229678488792,True,scan effect +0.0219 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,T neuron T3,male_only,18,0.01745902192984687,0.004611329924632437,0.0016194932701262955,True,scan effect +0.0113 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,T neuron T3,female_only,18,0.005170121742708048,0.002892247169107048,0.09279848415056399,True,scan effect +0.0113 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,centrifugal neuron C2,male_only,18,0.015493661676973325,0.005567584499402762,0.013303972467495607,True,scan effect +0.0102 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,centrifugal neuron C2,female_only,18,0.004829119828517823,0.002470880566788828,0.06835831015344171,True,scan effect +0.0102 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,distal medullary amacrine neuron Dm8,male_only,18,0.016569131533440494,0.003963726434568406,0.0007071988251005333,True,scan effect +0.0104 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,distal medullary amacrine neuron Dm8,female_only,18,0.0043019472653225005,0.0029297328415125853,0.16138711264646152,True,scan effect +0.0104 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,epithelial cell_head,male_only,18,0.013557884354750511,0.0016285003350962504,3.2935200101978317e-07,True,scan effect +0.0137 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,epithelial cell_head,female_only,18,0.013766950148339984,0.0031234403962426167,0.00044021886610719294,True,scan effect +0.0137 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,neuron 1,male_only,18,0.013637328057871342,0.003919410018663787,0.0030951041647435265,True,scan effect +0.0088 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,neuron 1,female_only,18,0.003954625215870571,0.0034459969664795897,0.2680044087523172,True,scan effect +0.0088 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,ocellus retinula cell,male_only,18,-0.009334256507319137,0.008838110690281058,0.30659249763329155,True,scan effect -0.0214 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,ocellus retinula cell,female_only,18,-0.03354761959266488,0.008215746827904564,0.0008663219349019598,True,scan effect -0.0214 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,olfactory receptor neuron,male_only,18,-0.012505781797980349,0.0020898190255002618,1.908585676187262e-05,True,scan effect -0.0063 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,olfactory receptor neuron,female_only,18,-7.030539829168923e-05,0.0014679404426718883,0.9623935384979654,True,scan effect -0.0063 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,photoreceptor cell R7,male_only,18,-0.021505617960548257,0.0033484916223630056,8.43704886049728e-06,True,scan effect -0.0124 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,photoreceptor cell R7,female_only,18,-0.003286134197953785,0.0027302273672628564,0.24624580495895637,True,scan effect -0.0124 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,pigment cell,male_only,18,0.014992026288640662,0.004293855359942749,0.0030171856327248316,True,scan effect +0.0120 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,pigment cell,female_only,18,0.00898533979072248,0.002892075171537816,0.006781384934448358,True,scan effect +0.0120 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,skeletal muscle of head,male_only,18,0.008027500782923757,0.0014401618038126505,4.1937593877468065e-05,True,scan effect +0.0113 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,skeletal muscle of head,female_only,18,0.014509565511105507,0.002424941516063279,1.9110268607790936e-05,True,scan effect +0.0113 per day; female_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,transmedullary neuron Tm29,male_only,18,-0.02078363846299834,0.007410753586213131,0.012722059656746325,True,scan effect -0.0192 per day; male_only refit on 18 pools
+sex_analog,Fruit fly,head,AFCA,transmedullary neuron Tm29,female_only,18,-0.01752894600517193,0.00712506491450294,0.025644605732114543,True,scan effect -0.0192 per day; female_only refit on 18 pools
+platform_analog,C. elegans,Whole animal,Gao_GSE229022,ARSC,platform_adjusted,9,0.22749177722349334,0.05291310594563481,0.005096437327543485,True,"scan effect +0.2275 per day; platform balanced 1 vs 2 pools within each age (6, 12, 14 days); residual df 6"
+platform_analog,C. elegans,Whole animal,Gao_GSE229022,ARSC,platform_0,3,0.2757854866468747,0.200008951936078,0.39945434201206786,True,"scan effect +0.2275 per day; 3 pools, residual df 1; FRAGILE: 3 pools, 1 residual df"
+platform_analog,C. elegans,Whole animal,Gao_GSE229022,ARSC,platform_1,6,0.20334492251180256,0.02935629754685966,0.002280165978907124,True,"scan effect +0.2275 per day; 6 pools, residual df 4"
