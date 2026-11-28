@@ -19,7 +19,7 @@ def main():
     # long the abstract gets"). The count is still printed, not enforced.
     # 2026-11-09: Reza ordered p-values and Bayesian results INTO the abstract; the no-statistics rule is retired.
     assert "—" not in text and "–" not in text
-    # No fifth main figure. Supporting figures (S1 Fig, S2 Fig, ...) are
+    # Three main figures (transport Figure D1 is listed as a file in Appendix D, 2026-11-28). Supporting figures (S1 Fig, S2 Fig, ...) are
     # allowed only in the Supporting Information section, where they are
     # listed as files (figures-si/...) with captions, not as \includegraphics.
     assert "Figure 5" not in text
@@ -35,7 +35,7 @@ def main():
     assert cited == listed, f"Citation mismatch: uncited={listed-cited}, missing={cited-listed}"
 
     figures = re.findall(r"\\includegraphics\[[^]]*\]\{([^}]+)\}", main_body)
-    assert len(figures) == 4, f"Expected four main figures, found {len(figures)}"
+    assert len(figures) == 3, f"Expected three main figures, found {len(figures)}"
     for figure in figures:
         assert (SOURCE.parent / figure).is_file(), f"Missing figure {figure}"
     assert r"\includegraphics" not in si_section, "SI figures must be listed as files, not embedded"
@@ -74,7 +74,7 @@ def main():
         pages = len(PdfReader(str(PDF)).pages)
     except ImportError:
         pass
-    print(f"PASS: abstract {len(words)} words; four figures; {len(listed)} cited references")
+    print(f"PASS: abstract {len(words)} words; three figures; {len(listed)} cited references")
     print(f"PASS: {len(si_files)} SI figures listed and present; section order, no forbidden dashes, no listed process residue")
     print(f"PDF pages: {pages if pages is not None else 'pypdf unavailable'}")
 
